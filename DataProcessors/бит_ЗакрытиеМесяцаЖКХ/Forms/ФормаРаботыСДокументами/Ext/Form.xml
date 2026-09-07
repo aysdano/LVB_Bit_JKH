@@ -1,0 +1,574 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.18">
+	<Width>60</Width>
+	<Height>80</Height>
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<ChildItems>
+			<Button name="ФормаЗакрыть" id="6">
+				<Type>CommandBarButton</Type>
+				<Representation>PictureAndText</Representation>
+				<DefaultButton>true</DefaultButton>
+				<CommandName>Form.StandardCommand.Close</CommandName>
+				<ExtendedTooltip name="ФормаЗакрытьExtendedTooltip" id="30"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<Table name="ДеревоДокументов" id="1">
+			<Representation>Tree</Representation>
+			<ChangeRowOrder>false</ChangeRowOrder>
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<InitialTreeView>ExpandAllLevels</InitialTreeView>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<FileDragMode>AsFile</FileDragMode>
+			<DataPath>ДеревоДокументов</DataPath>
+			<SearchStringLocation>None</SearchStringLocation>
+			<ViewStatusLocation>None</ViewStatusLocation>
+			<SearchControlLocation>None</SearchControlLocation>
+			<ContextMenu name="ДеревоДокументовКонтекстноеМеню" id="2">
+				<Autofill>false</Autofill>
+				<ChildItems>
+					<Button name="ДеревоДокументовКонтекстноеМенюУстановитьПометкуНаУдаление" id="19">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.УстановитьПометкуНаУдаление</CommandName>
+						<Picture>
+							<xr:Ref>StdPicture.MarkToDelete</xr:Ref>
+							<xr:LoadTransparent>true</xr:LoadTransparent>
+						</Picture>
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Пометить на удаление</v8:content>
+							</v8:item>
+						</Title>
+						<ExtendedTooltip name="ДеревоДокументовКонтекстноеМенюУстановитьПометкуНаУдалениеExtendedTooltip" id="31"/>
+					</Button>
+					<Button name="ДеревоДокументовКонтекстноеМенюПровести" id="17">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.Провести</CommandName>
+						<Picture>
+							<xr:Ref>StdPicture.Post</xr:Ref>
+							<xr:LoadTransparent>true</xr:LoadTransparent>
+						</Picture>
+						<ExtendedTooltip name="ДеревоДокументовКонтекстноеМенюПровестиExtendedTooltip" id="32"/>
+					</Button>
+					<Button name="ДеревоДокументовКонтекстноеМенюРазпровести" id="18">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.Разпровести</CommandName>
+						<Picture>
+							<xr:Ref>StdPicture.UndoPosting</xr:Ref>
+							<xr:LoadTransparent>true</xr:LoadTransparent>
+						</Picture>
+						<ExtendedTooltip name="ДеревоДокументовКонтекстноеМенюРазпровестиExtendedTooltip" id="33"/>
+					</Button>
+					<Button name="ДеревоДокументовКонтекстноеМенюПоказатьДвижения" id="20">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.ПоказатьДвижения</CommandName>
+						<Picture>
+							<xr:Ref>CommonPicture.ЖурналПроводок</xr:Ref>
+							<xr:LoadTransparent>false</xr:LoadTransparent>
+						</Picture>
+						<ExtendedTooltip name="ДеревоДокументовКонтекстноеМенюПоказатьДвиженияExtendedTooltip" id="34"/>
+					</Button>
+				</ChildItems>
+			</ContextMenu>
+			<AutoCommandBar name="ДеревоДокументовКоманднаяПанель" id="3">
+				<Autofill>false</Autofill>
+				<ChildItems>
+					<Button name="ДеревоДокументовОбновитьДеревоФормы" id="7">
+						<Type>CommandBarButton</Type>
+						<Representation>PictureAndText</Representation>
+						<CommandName>Form.Command.ОбновитьДеревоФормы</CommandName>
+						<Picture>
+							<xr:Ref>StdPicture.Refresh</xr:Ref>
+							<xr:LoadTransparent>true</xr:LoadTransparent>
+						</Picture>
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Обновить дерево</v8:content>
+							</v8:item>
+						</Title>
+						<ExtendedTooltip name="ДеревоДокументовОбновитьДеревоФормыExtendedTooltip" id="35"/>
+					</Button>
+					<Button name="ДеревоДокументовУстановитьПометкуНаУдаление" id="13">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.УстановитьПометкуНаУдаление</CommandName>
+						<Picture>
+							<xr:Ref>StdPicture.MarkToDelete</xr:Ref>
+							<xr:LoadTransparent>true</xr:LoadTransparent>
+						</Picture>
+						<ExtendedTooltip name="ДеревоДокументовУстановитьПометкуНаУдалениеExtendedTooltip" id="36"/>
+					</Button>
+					<ButtonGroup name="ДеревоДокументовПроведение" id="14">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Дерево документов проведение</v8:content>
+							</v8:item>
+						</Title>
+						<ToolTip>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Дерево документов проведение</v8:content>
+							</v8:item>
+						</ToolTip>
+						<ExtendedTooltip name="ДеревоДокументовПроведениеExtendedTooltip" id="37"/>
+						<ChildItems>
+							<Button name="ДеревоДокументовПровести" id="11">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Command.Провести</CommandName>
+								<Picture>
+									<xr:Ref>StdPicture.Post</xr:Ref>
+									<xr:LoadTransparent>true</xr:LoadTransparent>
+								</Picture>
+								<ExtendedTooltip name="ДеревоДокументовПровестиExtendedTooltip" id="38"/>
+							</Button>
+							<Button name="ДеревоДокументовРазпровести" id="12">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Command.Разпровести</CommandName>
+								<Picture>
+									<xr:Ref>StdPicture.UndoPosting</xr:Ref>
+									<xr:LoadTransparent>true</xr:LoadTransparent>
+								</Picture>
+								<ExtendedTooltip name="ДеревоДокументовРазпровестиExtendedTooltip" id="39"/>
+							</Button>
+						</ChildItems>
+					</ButtonGroup>
+					<Button name="ДеревоДокументовПоказатьДвижения" id="8">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.ПоказатьДвижения</CommandName>
+						<Picture>
+							<xr:Ref>CommonPicture.ЖурналПроводок</xr:Ref>
+							<xr:LoadTransparent>false</xr:LoadTransparent>
+						</Picture>
+						<ExtendedTooltip name="ДеревоДокументовПоказатьДвиженияExtendedTooltip" id="40"/>
+					</Button>
+				</ChildItems>
+			</AutoCommandBar>
+			<ExtendedTooltip name="ДеревоДокументовExtendedTooltip" id="41"/>
+			<SearchStringAddition name="ДеревоДокументовСтрокаПоиска" id="48">
+				<AdditionSource>
+					<Item>ДеревоДокументов</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ДеревоДокументовСтрокаПоискаКонтекстноеМеню" id="49"/>
+				<ExtendedTooltip name="ДеревоДокументовСтрокаПоискаРасширеннаяПодсказка" id="50"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="ДеревоДокументовСостояниеПросмотра" id="51">
+				<AdditionSource>
+					<Item>ДеревоДокументов</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ДеревоДокументовСостояниеПросмотраКонтекстноеМеню" id="52"/>
+				<ExtendedTooltip name="ДеревоДокументовСостояниеПросмотраРасширеннаяПодсказка" id="53"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="ДеревоДокументовУправлениеПоиском" id="54">
+				<AdditionSource>
+					<Item>ДеревоДокументов</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="ДеревоДокументовУправлениеПоискомКонтекстноеМеню" id="55"/>
+				<ExtendedTooltip name="ДеревоДокументовУправлениеПоискомРасширеннаяПодсказка" id="56"/>
+			</SearchControlAddition>
+			<Events>
+				<Event name="Selection">ДеревоДокументовВыбор</Event>
+				<Event name="BeforeAddRow">ДеревоДокументовПередНачаломДобавления</Event>
+				<Event name="BeforeDeleteRow">ДеревоДокументовПередУдалением</Event>
+				<Event name="OnActivateRow">ДеревоДокументовПриАктивизацииСтроки</Event>
+			</Events>
+			<ChildItems>
+				<PictureField name="ДеревоДокументовКартинка" id="9">
+					<DataPath>ДеревоДокументов.Картинка</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content> </v8:content>
+						</v8:item>
+					</Title>
+					<EditMode>EnterOnInput</EditMode>
+					<HorizontalStretch>false</HorizontalStretch>
+					<FileDragMode>AsFile</FileDragMode>
+					<ContextMenu name="ДеревоДокументовКартинкаКонтекстноеМеню" id="10"/>
+					<ExtendedTooltip name="ДеревоДокументовКартинкаExtendedTooltip" id="42"/>
+				</PictureField>
+				<InputField name="ДеревоДокументовДокумент" id="4">
+					<DataPath>ДеревоДокументов.Документ</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ДеревоДокументовДокументКонтекстноеМеню" id="5"/>
+					<ExtendedTooltip name="ДеревоДокументовДокументExtendedTooltip" id="43"/>
+				</InputField>
+				<InputField name="ДеревоДокументовАдрес" id="15">
+					<DataPath>ДеревоДокументов.Адрес</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<EditMode>EnterOnInput</EditMode>
+					<Width>40</Width>
+					<HorizontalStretch>false</HorizontalStretch>
+					<ContextMenu name="ДеревоДокументовАдресКонтекстноеМеню" id="16"/>
+					<ExtendedTooltip name="ДеревоДокументовАдресExtendedTooltip" id="44"/>
+				</InputField>
+			</ChildItems>
+		</Table>
+		<Table name="ТаблицаДокументовРеализации" id="21">
+			<Height>1</Height>
+			<UseAlternationRowColor>true</UseAlternationRowColor>
+			<EnableStartDrag>true</EnableStartDrag>
+			<FileDragMode>AsFile</FileDragMode>
+			<DataPath>ТаблицаДокументовРеализации</DataPath>
+			<RowPictureDataPath>ТаблицаДокументовРеализации.DefaultPicture</RowPictureDataPath>
+			<SearchStringLocation>None</SearchStringLocation>
+			<ViewStatusLocation>None</ViewStatusLocation>
+			<SearchControlLocation>None</SearchControlLocation>
+			<AutoRefresh>false</AutoRefresh>
+			<AutoRefreshPeriod>60</AutoRefreshPeriod>
+			<Period>
+				<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+				<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+				<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+			</Period>
+			<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+			<RestoreCurrentRow>false</RestoreCurrentRow>
+			<TopLevelParent xsi:nil="true"/>
+			<ShowRoot>true</ShowRoot>
+			<AllowRootChoice>false</AllowRootChoice>
+			<UpdateOnDataChange>Auto</UpdateOnDataChange>
+			<AllowGettingCurrentRowURL>true</AllowGettingCurrentRowURL>
+			<ContextMenu name="ТаблицаДокументовРеализацииКонтекстноеМеню" id="22"/>
+			<AutoCommandBar name="ТаблицаДокументовРеализацииКоманднаяПанель" id="23"/>
+			<ExtendedTooltip name="ТаблицаДокументовРеализацииExtendedTooltip" id="45"/>
+			<SearchStringAddition name="ТаблицаДокументовРеализацииСтрокаПоиска" id="57">
+				<AdditionSource>
+					<Item>ТаблицаДокументовРеализации</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ТаблицаДокументовРеализацииСтрокаПоискаКонтекстноеМеню" id="58"/>
+				<ExtendedTooltip name="ТаблицаДокументовРеализацииСтрокаПоискаРасширеннаяПодсказка" id="59"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="ТаблицаДокументовРеализацииСостояниеПросмотра" id="60">
+				<AdditionSource>
+					<Item>ТаблицаДокументовРеализации</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ТаблицаДокументовРеализацииСостояниеПросмотраКонтекстноеМеню" id="61"/>
+				<ExtendedTooltip name="ТаблицаДокументовРеализацииСостояниеПросмотраРасширеннаяПодсказка" id="62"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="ТаблицаДокументовРеализацииУправлениеПоиском" id="63">
+				<AdditionSource>
+					<Item>ТаблицаДокументовРеализации</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="ТаблицаДокументовРеализацииУправлениеПоискомКонтекстноеМеню" id="64"/>
+				<ExtendedTooltip name="ТаблицаДокументовРеализацииУправлениеПоискомРасширеннаяПодсказка" id="65"/>
+			</SearchControlAddition>
+			<Events>
+				<Event name="Selection">ТаблицаДокументовРеализацииВыбор</Event>
+			</Events>
+			<ChildItems>
+				<LabelField name="ТаблицаДокументовРеализацииДокументРеализации" id="26">
+					<DataPath>ТаблицаДокументовРеализации.ДокументРеализации</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Документ распределения расходов на оказание услуг</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ТаблицаДокументовРеализацииДокументРеализацииКонтекстноеМеню" id="27"/>
+					<ExtendedTooltip name="ТаблицаДокументовРеализацииДокументРеализацииExtendedTooltip" id="46"/>
+				</LabelField>
+				<LabelField name="ТаблицаДокументовРеализацииСчетФактура" id="28">
+					<DataPath>ТаблицаДокументовРеализации.СчетФактура</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Счет-фактура выданный</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ТаблицаДокументовРеализацииСчетФактураКонтекстноеМеню" id="29"/>
+					<ExtendedTooltip name="ТаблицаДокументовРеализацииСчетФактураExtendedTooltip" id="47"/>
+				</LabelField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="мКэшЗначений" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>М кэш значений</v8:content>
+				</v8:item>
+			</Title>
+			<Type/>
+		</Attribute>
+		<Attribute name="ДеревоДокументов" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дерево документов</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTree</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Документ" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Документ</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:DocumentRef.бит_РаспределениеАванса</v8:Type>
+						<v8:Type>cfg:DocumentRef.бит_НачисленияПоСчетчикам</v8:Type>
+						<v8:Type>cfg:DocumentRef.бит_РазовыеПоУслугамЖКХ</v8:Type>
+						<v8:Type>cfg:DocumentRef.бит_НачисленияПоСчетчикамГрупповыеСИндивидуальными</v8:Type>
+						<v8:Type>cfg:DocumentRef.бит_НачислениеЛьготПоЛицевымСчетам</v8:Type>
+						<v8:Type>cfg:DocumentRef.бит_НачислениеПоЛицевымСчетам</v8:Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Картинка" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Картинка</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>v8ui:Picture</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Адрес" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Адрес</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>256</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="Организация" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Организация</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.Организации</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ДатаЗакрытия" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дата закрытия</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:dateTime</v8:Type>
+				<v8:DateQualifiers>
+					<v8:DateFractions>DateTime</v8:DateFractions>
+				</v8:DateQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ТаблицаДокументовРеализации" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Таблица документов реализации</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>true</ManualQuery>
+				<DynamicDataRead>false</DynamicDataRead>
+				<QueryText>ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	АктОбОказанииПроизводственныхУслуг.Ссылка КАК ДокументРеализации,
+	АктОбОказанииПроизводственныхУслуг.бит_ДокументОснование КАК ДокументОснование,
+	СчетФактураВыданный.Ссылка КАК СчетФактура
+ИЗ
+	Документ.АктОбОказанииПроизводственныхУслуг КАК АктОбОказанииПроизводственныхУслуг
+		ЛЕВОЕ СОЕДИНЕНИЕ Документ.СчетФактураВыданный КАК СчетФактураВыданный
+		ПО (СчетФактураВыданный.ДокументОснование = АктОбОказанииПроизводственныхУслуг.Ссылка)
+ГДЕ
+	АктОбОказанииПроизводственныхУслуг.Дата МЕЖДУ &amp;ДатаНачала И &amp;ДатаКонец
+	И АктОбОказанииПроизводственныхУслуг.Организация = &amp;Организация
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	РеализацияТоваровУслуг.Ссылка,
+	РеализацияТоваровУслуг.бит_ДокументОснование,
+	СчетФактураВыданный.Ссылка
+ИЗ
+	Документ.РеализацияТоваровУслуг КАК РеализацияТоваровУслуг
+		ЛЕВОЕ СОЕДИНЕНИЕ Документ.СчетФактураВыданный КАК СчетФактураВыданный
+		ПО (СчетФактураВыданный.ДокументОснование = РеализацияТоваровУслуг.Ссылка)
+ГДЕ
+	РеализацияТоваровУслуг.Дата МЕЖДУ &amp;ДатаНачала И &amp;ДатаКонец
+	И РеализацияТоваровУслуг.Организация = &amp;Организация</QueryText>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+		<ConditionalAppearance>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>ДеревоДокументовДокумент</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">ДеревоДокументов.Документ</dcsset:left>
+						<dcsset:comparisonType>Contains</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:string">Документы</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>Шрифт</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Font" ref="sys:SystemFont" kind="WindowsFont"/>
+					</dcscor:item>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:use>false</dcscor:use>
+						<dcscor:parameter>ТолькоПросмотр</dcscor:parameter>
+						<dcscor:value xsi:type="xs:boolean">true</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+		</ConditionalAppearance>
+	</Attributes>
+	<Commands>
+		<Command name="ОбновитьДеревоФормы" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обновить дерево формы</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обновить дерево формы</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОбновитьДеревоФормы</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ПоказатьДвижения" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Показать движения</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Показать движения</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПоказатьДвижения</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="Провести" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Провести</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Провести</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Провести</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="Разпровести" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Разпровести</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Разпровести</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Разпровести</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="УстановитьПометкуНаУдаление" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Установить пометку на удаление</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Установить пометку на удаление</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>УстановитьПометкуНаУдаление</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+	</Commands>
+	<Parameters>
+		<Parameter name="Организация">
+			<Type>
+				<v8:Type>cfg:CatalogRef.Организации</v8:Type>
+			</Type>
+		</Parameter>
+		<Parameter name="ДатаЗакрытия">
+			<Type>
+				<v8:Type>xs:dateTime</v8:Type>
+				<v8:DateQualifiers>
+					<v8:DateFractions>DateTime</v8:DateFractions>
+				</v8:DateQualifiers>
+			</Type>
+		</Parameter>
+	</Parameters>
+</Form>

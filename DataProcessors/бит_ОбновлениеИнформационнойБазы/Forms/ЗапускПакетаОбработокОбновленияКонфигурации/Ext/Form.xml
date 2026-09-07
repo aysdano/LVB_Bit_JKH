@@ -1,0 +1,214 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.18">
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<LabelField name="НадписьИнформация" id="1">
+			<DataPath>НадписьИнформация</DataPath>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обработка предназначена для пакетного запуска набора обработок, которые должны запускаться после обновления конфигурации до начала работы. Целесообразно использовать данную обработку в случае, когда последовательно запускать отдельные обработки вручную.</v8:content>
+				</v8:item>
+			</Title>
+			<ContextMenu name="НадписьИнформацияКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="НадписьИнформацияРасширеннаяПодсказка" id="3"/>
+		</LabelField>
+		<Table name="СписокОбработок" id="4">
+			<Representation>Tree</Representation>
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<FileDragMode>AsFile</FileDragMode>
+			<DataPath>СписокОбработок</DataPath>
+			<ContextMenu name="СписокОбработокКонтекстноеМеню" id="5"/>
+			<AutoCommandBar name="СписокОбработокКоманднаяПанель" id="6">
+				<Autofill>false</Autofill>
+				<ChildItems>
+					<Button name="СписокОбработокЗапустить" id="29">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.Запустить</CommandName>
+						<ExtendedTooltip name="СписокОбработокЗапуститьРасширеннаяПодсказка" id="30"/>
+					</Button>
+				</ChildItems>
+			</AutoCommandBar>
+			<ExtendedTooltip name="СписокОбработокРасширеннаяПодсказка" id="7"/>
+			<SearchStringAddition name="СписокОбработокСтрокаПоиска" id="8">
+				<AdditionSource>
+					<Item>СписокОбработок</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокОбработокСтрокаПоискаКонтекстноеМеню" id="9"/>
+				<ExtendedTooltip name="СписокОбработокСтрокаПоискаРасширеннаяПодсказка" id="10"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="СписокОбработокСостояниеПросмотра" id="11">
+				<AdditionSource>
+					<Item>СписокОбработок</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокОбработокСостояниеПросмотраКонтекстноеМеню" id="12"/>
+				<ExtendedTooltip name="СписокОбработокСостояниеПросмотраРасширеннаяПодсказка" id="13"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="СписокОбработокУправлениеПоиском" id="14">
+				<AdditionSource>
+					<Item>СписокОбработок</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокОбработокУправлениеПоискомКонтекстноеМеню" id="15"/>
+				<ExtendedTooltip name="СписокОбработокУправлениеПоискомРасширеннаяПодсказка" id="16"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<CheckBoxField name="СписокОбработокПометка" id="26">
+					<DataPath>СписокОбработок.Пометка</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="СписокОбработокПометкаКонтекстноеМеню" id="27"/>
+					<ExtendedTooltip name="СписокОбработокПометкаРасширеннаяПодсказка" id="28"/>
+					<Events>
+						<Event name="OnChange">СписокОбработокПометкаПриИзменении</Event>
+					</Events>
+				</CheckBoxField>
+				<InputField name="СписокОбработокПредставление" id="17">
+					<DataPath>СписокОбработок.Представление</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="СписокОбработокПредставлениеКонтекстноеМеню" id="18"/>
+					<ExtendedTooltip name="СписокОбработокПредставлениеРасширеннаяПодсказка" id="19"/>
+				</InputField>
+				<InputField name="СписокОбработокНаименование" id="20">
+					<DataPath>СписокОбработок.Наименование</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="СписокОбработокНаименованиеКонтекстноеМеню" id="21"/>
+					<ExtendedTooltip name="СписокОбработокНаименованиеРасширеннаяПодсказка" id="22"/>
+				</InputField>
+				<InputField name="СписокОбработокОписаниеОбработки" id="23">
+					<DataPath>СписокОбработок.ОписаниеОбработки</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="СписокОбработокОписаниеОбработкиКонтекстноеМеню" id="24"/>
+					<ExtendedTooltip name="СписокОбработокОписаниеОбработкиРасширеннаяПодсказка" id="25"/>
+				</InputField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.бит_ОбновлениеИнформационнойБазы</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<Attribute name="НадписьИнформация" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Надпись информация</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="СписокИменОбработок" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Список имен обработок</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueListType</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="СписокОбработок" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Список обработок</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTree</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Представление" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Представление</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Наименование" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Наименование</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ОписаниеОбработки" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Описание обработки</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Пометка" id="4">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Пометка</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="Запустить" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Запустить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Запустить</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Запустить</Action>
+		</Command>
+	</Commands>
+</Form>

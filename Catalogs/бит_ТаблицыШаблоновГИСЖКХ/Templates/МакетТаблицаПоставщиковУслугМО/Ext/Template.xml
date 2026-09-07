@@ -1,0 +1,543 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<DataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcscom="http://v8.1c.ru/8.1/data-composition-system/common" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataSource>
+		<name>ИсточникДанных1</name>
+		<dataSourceType>Local</dataSourceType>
+	</dataSource>
+	<dataSet xsi:type="DataSetQuery">
+		<name>НаборДанных1</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Услуга</dataPath>
+			<field>Услуга</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Поставщик</dataPath>
+			<field>Поставщик</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ЛицевойСчет</dataPath>
+			<field>ЛицевойСчет</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПоставщикУслуг</dataPath>
+			<field>ПоставщикУслуг</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Поставщик услуг</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КраткоеНаименование</dataPath>
+			<field>КраткоеНаименование</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Краткое наименование</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПолноеНаимменование</dataPath>
+			<field>ПолноеНаимменование</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Полное наимменование</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ИНН</dataPath>
+			<field>ИНН</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>ИНН</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КПП</dataPath>
+			<field>КПП</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>КПП</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>УслугаСсылка</dataPath>
+			<field>УслугаСсылка</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Услуга ссылка</v8:content>
+				</v8:item>
+			</title>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Справочник</dataPath>
+			<field>Справочник</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Справочник</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Приоритет</dataPath>
+			<field>Приоритет</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Приоритет</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Услуга1</dataPath>
+			<field>Услуга1</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Услуга1</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Услуга2</dataPath>
+			<field>Услуга2</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Услуга2</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Услуга3</dataPath>
+			<field>Услуга3</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Услуга3</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Услуга4</dataPath>
+			<field>Услуга4</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Услуга4</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<dataSource>ИсточникДанных1</dataSource>
+		<query>ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	бит_ЛицевыеСчета.Идентификатор КАК НомерЗаписи,
+	бит_ЛицевыеСчета.Ссылка КАК ЛицевойСчет,
+	бит_ЛицевыеСчета.Наименование КАК НомерЛС,
+	бит_ЛицевыеСчета.Здание КАК Здание,
+	бит_ЛицевыеСчета.Квартира КАК Квартира,
+	бит_ЛицевыеСчета.ТипЛицевогоСчетаГИСЖКХ КАК ТипЛицевогоСчетаГИСЖКХ,
+	ВЫБОР
+		КОГДА бит_СписокЗданий.ТипыДомовГИСЖКХ = ЗНАЧЕНИЕ(Перечисление.бит_ТипыДомовГИСЖКХ.МКД)
+				ИЛИ бит_СписокЗданий.ТипыДомовГИСЖКХ = ЗНАЧЕНИЕ(Перечисление.бит_ТипыДомовГИСЖКХ.ПустаяСсылка)
+			ТОГДА "1"
+		ИНАЧЕ "2"
+	КОНЕЦ КАК ТипДома
+ПОМЕСТИТЬ ВТ_ЛицевыеСчета
+ИЗ
+	Справочник.бит_ЛицевыеСчета КАК бит_ЛицевыеСчета
+		ЛЕВОЕ СОЕДИНЕНИЕ Справочник.бит_СписокЗданий КАК бит_СписокЗданий
+		ПО бит_ЛицевыеСчета.Здание = бит_СписокЗданий.Ссылка
+ГДЕ
+	бит_ЛицевыеСчета.Архивный = ЛОЖЬ
+	И НЕ бит_ЛицевыеСчета.ПометкаУдаления
+	И НЕ бит_СписокЗданий.ПометкаУдаления
+{ГДЕ
+	(бит_ЛицевыеСчета.Ссылка В (&amp;СписокЛС)),
+	(бит_ЛицевыеСчета.Организация = &amp;ОтборОрганизация),
+	(бит_СписокЗданий.Улица В (&amp;СписокУлиц)),
+	(бит_ЛицевыеСчета.Здание В (&amp;СписокЗданий)),
+	(ВЫБОР
+			КОГДА &amp;ТипДомаГИСЖКХ = ЗНАЧЕНИЕ(Перечисление.бит_ТипыДомовГИСЖКХ.МКД)
+				ТОГДА бит_СписокЗданий.ТипыДомовГИСЖКХ = ЗНАЧЕНИЕ(Перечисление.бит_ТипыДомовГИСЖКХ.МКД)
+						ИЛИ бит_СписокЗданий.ТипыДомовГИСЖКХ = ЗНАЧЕНИЕ(Перечисление.бит_ТипыДомовГИСЖКХ.ПустаяСсылка)
+			ИНАЧЕ бит_СписокЗданий.ТипыДомовГИСЖКХ В (&amp;ТипДомаГИСЖКХ)
+		КОНЕЦ)}
+
+ИНДЕКСИРОВАТЬ ПО
+	ЛицевойСчет
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ РАЗРЕШЕННЫЕ РАЗЛИЧНЫЕ
+	бит_СведенияПоУслугамЛССрезПоследних.Услуга КАК Услуга,
+	бит_СведенияПоУслугамЛССрезПоследних.Поставщик КАК Поставщик
+ПОМЕСТИТЬ ВТ_СведенияПоУслугамЛС
+ИЗ
+	РегистрСведений.бит_СведенияПоУслугамЛС.СрезПоследних(
+			&amp;Период,
+			ЛицевойСчет В
+				(ВЫБРАТЬ
+					ВТ_ЛицевыеСчета.ЛицевойСчет
+				ИЗ
+					ВТ_ЛицевыеСчета КАК ВТ_ЛицевыеСчета)) КАК бит_СведенияПоУслугамЛССрезПоследних
+ГДЕ
+	бит_СведенияПоУслугамЛССрезПоследних.Использовать = ЗНАЧЕНИЕ(Перечисление.ДаНет.Да)
+
+СГРУППИРОВАТЬ ПО
+	бит_СведенияПоУслугамЛССрезПоследних.Услуга,
+	бит_СведенияПоУслугамЛССрезПоследних.Поставщик
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ РАЗРЕШЕННЫЕ РАЗЛИЧНЫЕ
+	бит_ПолучателиДенежныхСредствСрезПоследних.ПолучательДенежныхСредств КАК ПоставщикУслуг,
+	бит_ПолучателиДенежныхСредствСрезПоследних.Услуга КАК Услуга
+ПОМЕСТИТЬ ВТ_ПолучателиДенежныхСредств
+ИЗ
+	РегистрСведений.бит_ПолучателиДенежныхСредств.СрезПоследних(
+			&amp;Период,
+			(Услуга, Поставщик) В
+				(ВЫБРАТЬ
+					ВТ_СведенияПоУслугамЛС.Услуга,
+					ВТ_СведенияПоУслугамЛС.Поставщик
+				ИЗ
+					ВТ_СведенияПоУслугамЛС КАК ВТ_СведенияПоУслугамЛС)) КАК бит_ПолучателиДенежныхСредствСрезПоследних
+
+СГРУППИРОВАТЬ ПО
+	бит_ПолучателиДенежныхСредствСрезПоследних.Услуга,
+	бит_ПолучателиДенежныхСредствСрезПоследних.ПолучательДенежныхСредств
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ВЫБОР
+		КОГДА ВТ_ПолучателиДенежныхСредств.ПоставщикУслуг ССЫЛКА Справочник.Организации
+			ТОГДА ВТ_ПолучателиДенежныхСредств.ПоставщикУслуг.НаименованиеСокращенное
+		КОГДА ВТ_ПолучателиДенежныхСредств.ПоставщикУслуг ССЫЛКА Справочник.Контрагенты
+			ТОГДА ВТ_ПолучателиДенежныхСредств.ПоставщикУслуг.Наименование
+		ИНАЧЕ ""
+	КОНЕЦ КАК КраткоеНаименование,
+	ВЫБОР
+		КОГДА ВТ_ПолучателиДенежныхСредств.ПоставщикУслуг ССЫЛКА Справочник.Организации
+			ТОГДА ВТ_ПолучателиДенежныхСредств.ПоставщикУслуг.НаименованиеПолное
+		КОГДА ВТ_ПолучателиДенежныхСредств.ПоставщикУслуг ССЫЛКА Справочник.Контрагенты
+			ТОГДА ВТ_ПолучателиДенежныхСредств.ПоставщикУслуг.НаименованиеПолное
+		ИНАЧЕ ""
+	КОНЕЦ КАК ПолноеНаимменование,
+	ВТ_ПолучателиДенежныхСредств.ПоставщикУслуг.ИНН КАК ИНН,
+	ВТ_ПолучателиДенежныхСредств.ПоставщикУслуг.КПП КАК КПП,
+	ВТ_ПолучателиДенежныхСредств.Услуга.НаименованиеГИСЖКХ КАК Услуга1,
+	ВЫРАЗИТЬ("" КАК СТРОКА(150)) КАК Услуга2,
+	ВЫРАЗИТЬ("" КАК СТРОКА(150)) КАК Услуга3,
+	ВЫРАЗИТЬ("" КАК СТРОКА(150)) КАК Услуга4,
+	ВТ_ПолучателиДенежныхСредств.ПоставщикУслуг КАК ПоставщикУслуг,
+	ВЫБОР
+		КОГДА ВТ_ПолучателиДенежныхСредств.ПоставщикУслуг ССЫЛКА Справочник.Организации
+			ТОГДА "Организация"
+		КОГДА ВТ_ПолучателиДенежныхСредств.ПоставщикУслуг ССЫЛКА Справочник.Контрагенты
+			ТОГДА "Контрагент"
+		ИНАЧЕ ""
+	КОНЕЦ КАК Справочник,
+	ВТ_ПолучателиДенежныхСредств.Услуга КАК УслугаСсылка,
+	ВТ_ПолучателиДенежныхСредств.Услуга.Приоритет КАК Приоритет
+ИЗ
+	ВТ_ПолучателиДенежныхСредств КАК ВТ_ПолучателиДенежныхСредств</query>
+	</dataSet>
+	<calculatedField>
+		<dataPath>Телефон</dataPath>
+		<expression>ВЫБОР
+КОГДА Справочник = "Организация"
+ТОГДА УправлениеКонтактнойИнформацией.ПредставлениеКонтактнойИнформацииОбъекта(ПоставщикУслуг, ЗНАЧЕНИЕ(Справочник.ВидыКонтактнойИнформации.ТелефонОрганизации),,&amp;Период)
+КОГДА Справочник = "Контрагент"
+ТОГДА УправлениеКонтактнойИнформацией.ПредставлениеКонтактнойИнформацииОбъекта(ПоставщикУслуг, ЗНАЧЕНИЕ(Справочник.ВидыКонтактнойИнформации.ТелефонКонтрагента),,&amp;Период)
+ИНАЧЕ
+        ""
+КОНЕЦ</expression>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Телефон</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:string</v8:Type>
+			<v8:StringQualifiers>
+				<v8:Length>20</v8:Length>
+				<v8:AllowedLength>Variable</v8:AllowedLength>
+			</v8:StringQualifiers>
+		</valueType>
+	</calculatedField>
+	<calculatedField>
+		<dataPath>ЭлектроннаяПочта</dataPath>
+		<expression>ВЫБОР
+КОГДА Справочник = "Организация"
+ТОГДА УправлениеКонтактнойИнформацией.ПредставлениеКонтактнойИнформацииОбъекта(ПоставщикУслуг, ЗНАЧЕНИЕ(Справочник.ВидыКонтактнойИнформации.EmailОрганизации),,&amp;Период)
+КОГДА Справочник = "Контрагент"
+ТОГДА УправлениеКонтактнойИнформацией.ПредставлениеКонтактнойИнформацииОбъекта(ПоставщикУслуг, ЗНАЧЕНИЕ(Справочник.ВидыКонтактнойИнформации.EmailКонтрагенты),,&amp;Период)
+ИНАЧЕ
+        ""
+КОНЕЦ</expression>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Электронная почта</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:string</v8:Type>
+			<v8:StringQualifiers>
+				<v8:Length>254</v8:Length>
+				<v8:AllowedLength>Variable</v8:AllowedLength>
+			</v8:StringQualifiers>
+		</valueType>
+	</calculatedField>
+	<calculatedField>
+		<dataPath>ФактАдрес</dataPath>
+		<expression>ВЫБОР
+КОГДА Справочник = "Организация"
+ТОГДА УправлениеКонтактнойИнформацией.ПредставлениеКонтактнойИнформацииОбъекта(ПоставщикУслуг, ЗНАЧЕНИЕ(Справочник.ВидыКонтактнойИнформации.ФактАдресОрганизации),,&amp;Период)
+КОГДА Справочник = "Контрагент"
+ТОГДА УправлениеКонтактнойИнформацией.ПредставлениеКонтактнойИнформацииОбъекта(ПоставщикУслуг, ЗНАЧЕНИЕ(Справочник.ВидыКонтактнойИнформации.ФактАдресКонтрагента),,&amp;Период)
+ИНАЧЕ
+        ""
+КОНЕЦ</expression>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Факт адрес</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:string</v8:Type>
+			<v8:StringQualifiers>
+				<v8:Length>0</v8:Length>
+				<v8:AllowedLength>Variable</v8:AllowedLength>
+			</v8:StringQualifiers>
+		</valueType>
+	</calculatedField>
+	<calculatedField>
+		<dataPath>ЮрАдрес</dataPath>
+		<expression>ВЫБОР
+КОГДА Справочник = "Организация"
+ТОГДА УправлениеКонтактнойИнформацией.ПредставлениеКонтактнойИнформацииОбъекта(ПоставщикУслуг, ЗНАЧЕНИЕ(Справочник.ВидыКонтактнойИнформации.ЮрАдресОрганизации),,&amp;Период)
+КОГДА Справочник = "Контрагент"
+ТОГДА УправлениеКонтактнойИнформацией.ПредставлениеКонтактнойИнформацииОбъекта(ПоставщикУслуг, ЗНАЧЕНИЕ(Справочник.ВидыКонтактнойИнформации.ЮрАдресКонтрагента),,&amp;Период)
+ИНАЧЕ
+        ""
+КОНЕЦ</expression>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Юр адрес</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:string</v8:Type>
+			<v8:StringQualifiers>
+				<v8:Length>0</v8:Length>
+				<v8:AllowedLength>Variable</v8:AllowedLength>
+			</v8:StringQualifiers>
+		</valueType>
+	</calculatedField>
+	<calculatedField>
+		<dataPath>БанковскиеРеквизиты</dataPath>
+		<expression>ВЫБОР
+КОГДА Справочник = "Организация" ИЛИ Справочник = "Контрагент"
+ТОГДА бит_ОбщегоНазначения.БанковскиеРеквизитыДляПечати(ПоставщикУслуг)
+ИНАЧЕ
+        ""
+КОНЕЦ</expression>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Банковские реквизиты</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:string</v8:Type>
+			<v8:StringQualifiers>
+				<v8:Length>0</v8:Length>
+				<v8:AllowedLength>Variable</v8:AllowedLength>
+			</v8:StringQualifiers>
+		</valueType>
+	</calculatedField>
+	<parameter>
+		<name>Период</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Период</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+		<use>Always</use>
+	</parameter>
+	<parameter>
+		<name>ОтборОрганизация</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Отбор организация</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.Организации</v8:Type>
+		</valueType>
+		<value xsi:nil="true"/>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<parameter>
+		<name>СписокЗданий</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Список зданий</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.бит_СписокЗданий</v8:Type>
+		</valueType>
+		<useRestriction>true</useRestriction>
+		<valueListAllowed>true</valueListAllowed>
+	</parameter>
+	<parameter>
+		<name>СписокЛС</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Список ЛС</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.бит_ЛицевыеСчета</v8:Type>
+		</valueType>
+		<useRestriction>true</useRestriction>
+		<valueListAllowed>true</valueListAllowed>
+	</parameter>
+	<parameter>
+		<name>СписокУлиц</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Список улиц</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.бит_СписокУлиц</v8:Type>
+		</valueType>
+		<useRestriction>true</useRestriction>
+		<valueListAllowed>true</valueListAllowed>
+	</parameter>
+	<parameter>
+		<name>ТипДомаГИСЖКХ</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Тип дома ГИСЖКХ</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:EnumRef.бит_ТипыДомовГИСЖКХ</v8:Type>
+		</valueType>
+		<value xsi:nil="true"/>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<settingsVariant>
+		<dcsset:name>Основной</dcsset:name>
+		<dcsset:presentation xsi:type="xs:string">Основной</dcsset:presentation>
+		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+			<dcsset:selection>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>КраткоеНаименование</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ПолноеНаимменование</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ЮрАдрес</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ФактАдрес</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ИНН</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>КПП</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>БанковскиеРеквизиты</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Телефон</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ЭлектроннаяПочта</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Приоритет</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ПоставщикУслуг</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Услуга1</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Услуга2</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Услуга3</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Услуга4</dcsset:field>
+				</dcsset:item>
+			</dcsset:selection>
+			<dcsset:dataParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>СписокЗданий</dcscor:parameter>
+					<dcscor:value xsi:nil="true"/>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>СписокЛС</dcscor:parameter>
+					<dcscor:value xsi:nil="true"/>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>СписокУлиц</dcscor:parameter>
+					<dcscor:value xsi:nil="true"/>
+				</dcscor:item>
+			</dcsset:dataParameters>
+			<dcsset:item xsi:type="dcsset:StructureItemGroup">
+				<dcsset:order>
+					<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+				</dcsset:order>
+				<dcsset:selection>
+					<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+				</dcsset:selection>
+			</dcsset:item>
+		</dcsset:settings>
+	</settingsVariant>
+</DataCompositionSchema>

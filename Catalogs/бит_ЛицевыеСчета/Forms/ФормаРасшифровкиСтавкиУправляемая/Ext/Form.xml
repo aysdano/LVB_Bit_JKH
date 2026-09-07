@@ -1,0 +1,471 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.18">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Расшифровка начисления</v8:content>
+		</v8:item>
+	</Title>
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<LabelDecoration name="НадписьНачислено" id="20">
+			<Title formatted="false">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Начислено = Ставка * Норма + СверхСтавка * СверхНорма.</v8:content>
+				</v8:item>
+			</Title>
+			<ContextMenu name="НадписьНачисленоКонтекстноеМеню" id="21"/>
+			<ExtendedTooltip name="НадписьНачисленоExtendedTooltip" id="51"/>
+		</LabelDecoration>
+		<Table name="ТаблицаРасшифровки" id="1">
+			<Representation>List</Representation>
+			<ReadOnly>true</ReadOnly>
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<FileDragMode>AsFile</FileDragMode>
+			<DataPath>ТаблицаРасшифровки</DataPath>
+			<SearchStringLocation>None</SearchStringLocation>
+			<ViewStatusLocation>None</ViewStatusLocation>
+			<SearchControlLocation>None</SearchControlLocation>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="ТаблицаРасшифровкиКонтекстноеМеню" id="2"/>
+			<AutoCommandBar name="ТаблицаРасшифровкиКоманднаяПанель" id="3">
+				<Autofill>false</Autofill>
+			</AutoCommandBar>
+			<ExtendedTooltip name="ТаблицаРасшифровкиExtendedTooltip" id="52"/>
+			<SearchStringAddition name="ТаблицаРасшифровкиСтрокаПоиска" id="69">
+				<AdditionSource>
+					<Item>ТаблицаРасшифровки</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ТаблицаРасшифровкиСтрокаПоискаКонтекстноеМеню" id="70"/>
+				<ExtendedTooltip name="ТаблицаРасшифровкиСтрокаПоискаРасширеннаяПодсказка" id="71"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="ТаблицаРасшифровкиСостояниеПросмотра" id="72">
+				<AdditionSource>
+					<Item>ТаблицаРасшифровки</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ТаблицаРасшифровкиСостояниеПросмотраКонтекстноеМеню" id="73"/>
+				<ExtendedTooltip name="ТаблицаРасшифровкиСостояниеПросмотраРасширеннаяПодсказка" id="74"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="ТаблицаРасшифровкиУправлениеПоиском" id="75">
+				<AdditionSource>
+					<Item>ТаблицаРасшифровки</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="ТаблицаРасшифровкиУправлениеПоискомКонтекстноеМеню" id="76"/>
+				<ExtendedTooltip name="ТаблицаРасшифровкиУправлениеПоискомРасширеннаяПодсказка" id="77"/>
+			</SearchControlAddition>
+			<Events>
+				<Event name="Selection">ТаблицаРасшифровкиВыбор</Event>
+			</Events>
+			<ChildItems>
+				<InputField name="ТаблицаРасшифровкиУслуга" id="4">
+					<DataPath>ТаблицаРасшифровки.Услуга</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ТаблицаРасшифровкиУслугаКонтекстноеМеню" id="5"/>
+					<ExtendedTooltip name="ТаблицаРасшифровкиУслугаExtendedTooltip" id="53"/>
+				</InputField>
+				<InputField name="ТаблицаРасшифровкиСпособРасчета" id="6">
+					<DataPath>ТаблицаРасшифровки.СпособРасчета</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ТаблицаРасшифровкиСпособРасчетаКонтекстноеМеню" id="7"/>
+					<ExtendedTooltip name="ТаблицаРасшифровкиСпособРасчетаExtendedTooltip" id="54"/>
+				</InputField>
+				<InputField name="ТаблицаРасшифровкиСтавка" id="8">
+					<DataPath>ТаблицаРасшифровки.Ставка</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ТаблицаРасшифровкиСтавкаКонтекстноеМеню" id="9"/>
+					<ExtendedTooltip name="ТаблицаРасшифровкиСтавкаExtendedTooltip" id="55"/>
+				</InputField>
+				<InputField name="ТаблицаРасшифровкиСверхномСтавка" id="10">
+					<DataPath>ТаблицаРасшифровки.СверхномСтавка</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ТаблицаРасшифровкиСверхномСтавкаКонтекстноеМеню" id="11"/>
+					<ExtendedTooltip name="ТаблицаРасшифровкиСверхномСтавкаExtendedTooltip" id="56"/>
+				</InputField>
+				<InputField name="ТаблицаРасшифровкиНорма" id="12">
+					<DataPath>ТаблицаРасшифровки.Норма</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ТаблицаРасшифровкиНормаКонтекстноеМеню" id="13"/>
+					<ExtendedTooltip name="ТаблицаРасшифровкиНормаExtendedTooltip" id="57"/>
+				</InputField>
+				<InputField name="ТаблицаРасшифровкиСверхНорма" id="14">
+					<DataPath>ТаблицаРасшифровки.СверхНорма</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ТаблицаРасшифровкиСверхНормаКонтекстноеМеню" id="15"/>
+					<ExtendedTooltip name="ТаблицаРасшифровкиСверхНормаExtendedTooltip" id="58"/>
+				</InputField>
+				<InputField name="ТаблицаРасшифровкиФакт" id="16">
+					<DataPath>ТаблицаРасшифровки.Факт</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ТаблицаРасшифровкиФактКонтекстноеМеню" id="17"/>
+					<ExtendedTooltip name="ТаблицаРасшифровкиФактExtendedTooltip" id="59"/>
+				</InputField>
+				<InputField name="ТаблицаРасшифровкиНачислено" id="18">
+					<DataPath>ТаблицаРасшифровки.Начислено</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<EditMode>EnterOnInput</EditMode>
+					<Font ref="style:ШрифтВажнойНадписи" kind="StyleItem"/>
+					<ContextMenu name="ТаблицаРасшифровкиНачисленоКонтекстноеМеню" id="19"/>
+					<ExtendedTooltip name="ТаблицаРасшифровкиНачисленоExtendedTooltip" id="60"/>
+				</InputField>
+			</ChildItems>
+		</Table>
+		<Table name="ТаблицаСчетчиков" id="22">
+			<Representation>List</Representation>
+			<CommandBarLocation>None</CommandBarLocation>
+			<ReadOnly>true</ReadOnly>
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<FileDragMode>AsFile</FileDragMode>
+			<DataPath>ТаблицаСчетчиков</DataPath>
+			<SearchStringLocation>None</SearchStringLocation>
+			<ViewStatusLocation>None</ViewStatusLocation>
+			<SearchControlLocation>None</SearchControlLocation>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="ТаблицаСчетчиковКонтекстноеМеню" id="23"/>
+			<AutoCommandBar name="ТаблицаСчетчиковКоманднаяПанель" id="24"/>
+			<ExtendedTooltip name="ТаблицаСчетчиковExtendedTooltip" id="61"/>
+			<SearchStringAddition name="ТаблицаСчетчиковСтрокаПоиска" id="78">
+				<AdditionSource>
+					<Item>ТаблицаСчетчиков</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ТаблицаСчетчиковСтрокаПоискаКонтекстноеМеню" id="79"/>
+				<ExtendedTooltip name="ТаблицаСчетчиковСтрокаПоискаРасширеннаяПодсказка" id="80"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="ТаблицаСчетчиковСостояниеПросмотра" id="81">
+				<AdditionSource>
+					<Item>ТаблицаСчетчиков</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ТаблицаСчетчиковСостояниеПросмотраКонтекстноеМеню" id="82"/>
+				<ExtendedTooltip name="ТаблицаСчетчиковСостояниеПросмотраРасширеннаяПодсказка" id="83"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="ТаблицаСчетчиковУправлениеПоиском" id="84">
+				<AdditionSource>
+					<Item>ТаблицаСчетчиков</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="ТаблицаСчетчиковУправлениеПоискомКонтекстноеМеню" id="85"/>
+				<ExtendedTooltip name="ТаблицаСчетчиковУправлениеПоискомРасширеннаяПодсказка" id="86"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<InputField name="ТаблицаСчетчиковУслуга" id="27">
+					<DataPath>ТаблицаСчетчиков.Услуга</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ТаблицаСчетчиковУслугаКонтекстноеМеню" id="28"/>
+					<ExtendedTooltip name="ТаблицаСчетчиковУслугаExtendedTooltip" id="62"/>
+				</InputField>
+				<InputField name="ТаблицаСчетчиковСпособРасчета" id="29">
+					<DataPath>ТаблицаСчетчиков.СпособРасчета</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ТаблицаСчетчиковСпособРасчетаКонтекстноеМеню" id="30"/>
+					<ExtendedTooltip name="ТаблицаСчетчиковСпособРасчетаExtendedTooltip" id="63"/>
+				</InputField>
+				<InputField name="ТаблицаСчетчиковСтавка" id="39">
+					<DataPath>ТаблицаСчетчиков.Ставка</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ТаблицаСчетчиковСтавкаКонтекстноеМеню" id="40"/>
+					<ExtendedTooltip name="ТаблицаСчетчиковСтавкаExtendedTooltip" id="64"/>
+				</InputField>
+				<InputField name="ТаблицаСчетчиковСверхномСтавка" id="47">
+					<DataPath>ТаблицаСчетчиков.СверхномСтавка</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ТаблицаСчетчиковСверхномСтавкаКонтекстноеМеню" id="48"/>
+					<ExtendedTooltip name="ТаблицаСчетчиковСверхномСтавкаExtendedTooltip" id="65"/>
+				</InputField>
+				<InputField name="ТаблицаСчетчиковНорма" id="45">
+					<DataPath>ТаблицаСчетчиков.Норма</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ТаблицаСчетчиковНормаКонтекстноеМеню" id="46"/>
+					<ExtendedTooltip name="ТаблицаСчетчиковНормаExtendedTooltip" id="66"/>
+				</InputField>
+				<InputField name="ТаблицаСчетчиковСверхНорма" id="49">
+					<DataPath>ТаблицаСчетчиков.СверхНорма</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ТаблицаСчетчиковСверхНормаКонтекстноеМеню" id="50"/>
+					<ExtendedTooltip name="ТаблицаСчетчиковСверхНормаExtendedTooltip" id="67"/>
+				</InputField>
+				<InputField name="ТаблицаСчетчиковНачислено" id="41">
+					<DataPath>ТаблицаСчетчиков.Начислено</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<EditMode>EnterOnInput</EditMode>
+					<Font ref="style:ШрифтВажнойНадписи" kind="StyleItem"/>
+					<ContextMenu name="ТаблицаСчетчиковНачисленоКонтекстноеМеню" id="42"/>
+					<ExtendedTooltip name="ТаблицаСчетчиковНачисленоExtendedTooltip" id="68"/>
+				</InputField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="ТаблицаРасшифровки" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Таблица расшифровки</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Услуга" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Услуга</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.бит_УслугиЖКХ</v8:Type>
+					</Type>
+				</Column>
+				<Column name="СпособРасчета" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Способ расчета</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:EnumRef.бит_СпособыРасчетаПоУслугам</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Ставка" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Основная ставка</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>15</v8:Digits>
+							<v8:FractionDigits>2</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="СверхномСтавка" id="4">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Сверхнормативная ставка</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>15</v8:Digits>
+							<v8:FractionDigits>2</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="Норма" id="5">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Норма</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>15</v8:Digits>
+							<v8:FractionDigits>4</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="СверхНорма" id="6">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Сверх норма</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>15</v8:Digits>
+							<v8:FractionDigits>4</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="Факт" id="7">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Факт</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>15</v8:Digits>
+							<v8:FractionDigits>4</v8:FractionDigits>
+							<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="Начислено" id="8">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Начисления</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>15</v8:Digits>
+							<v8:FractionDigits>2</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="ТаблицаСчетчиков" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Таблица счетчиков</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Услуга" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Услуга</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.бит_УслугиЖКХ</v8:Type>
+					</Type>
+				</Column>
+				<Column name="СпособРасчета" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Способ расчета</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:EnumRef.бит_СпособыРасчетаПоУслугам</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Ставка" id="8">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Ставка</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>17</v8:Digits>
+							<v8:FractionDigits>4</v8:FractionDigits>
+							<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="Начислено" id="9">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Начислено</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>15</v8:Digits>
+							<v8:FractionDigits>2</v8:FractionDigits>
+							<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="Норма" id="11">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Норма</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>15</v8:Digits>
+							<v8:FractionDigits>2</v8:FractionDigits>
+							<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="СверхномСтавка" id="12">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Сверхном ставка</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>17</v8:Digits>
+							<v8:FractionDigits>4</v8:FractionDigits>
+							<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="СверхНорма" id="13">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Сверх норма</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>15</v8:Digits>
+							<v8:FractionDigits>2</v8:FractionDigits>
+							<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+	</Attributes>
+</Form>

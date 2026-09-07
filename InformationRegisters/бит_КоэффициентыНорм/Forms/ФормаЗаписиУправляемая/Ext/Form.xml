@@ -1,0 +1,221 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.18">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+		<ChildItems>
+			<Button name="ФормаЗаписатьИЗакрыть" id="53">
+				<Type>CommandBarButton</Type>
+				<DefaultButton>true</DefaultButton>
+				<CommandName>Form.StandardCommand.WriteAndClose</CommandName>
+				<ExtendedTooltip name="ФормаЗаписатьИЗакрытьРасширеннаяПодсказка" id="54"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="BeforeClose">ПередЗакрытием</Event>
+		<Event name="BeforeWrite">ПередЗаписью</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="Группа1" id="22">
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="23"/>
+			<ChildItems>
+				<UsualGroup name="Группа2" id="24">
+					<Group>Vertical</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="Группа2РасширеннаяПодсказка" id="25"/>
+					<ChildItems>
+						<InputField name="Период" id="1">
+							<DataPath>Запись.Period</DataPath>
+							<ContextMenu name="ПериодКонтекстноеМеню" id="2"/>
+							<ExtendedTooltip name="ПериодРасширеннаяПодсказка" id="3"/>
+						</InputField>
+						<InputField name="Работа" id="10">
+							<DataPath>Запись.Работа</DataPath>
+							<ContextMenu name="РаботаКонтекстноеМеню" id="11"/>
+							<ExtendedTooltip name="РаботаРасширеннаяПодсказка" id="12"/>
+						</InputField>
+						<InputField name="ЕдиницаИзмерения" id="13">
+							<DataPath>Запись.ЕдиницаИзмерения</DataPath>
+							<AutoMarkIncomplete>true</AutoMarkIncomplete>
+							<ContextMenu name="ЕдиницаИзмеренияКонтекстноеМеню" id="14"/>
+							<ExtendedTooltip name="ЕдиницаИзмеренияРасширеннаяПодсказка" id="15"/>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="Группа3" id="26">
+					<Group>Vertical</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="Группа3РасширеннаяПодсказка" id="27"/>
+					<ChildItems>
+						<InputField name="Подразделение" id="4">
+							<DataPath>Запись.Подразделение</DataPath>
+							<DropListButton>false</DropListButton>
+							<ChoiceButtonRepresentation>ShowInInputField</ChoiceButtonRepresentation>
+							<CreateButton>false</CreateButton>
+							<AutoMarkIncomplete>true</AutoMarkIncomplete>
+							<ChoiceHistoryOnInput>DontUse</ChoiceHistoryOnInput>
+							<ContextMenu name="ПодразделениеКонтекстноеМеню" id="5"/>
+							<ExtendedTooltip name="ПодразделениеРасширеннаяПодсказка" id="6"/>
+							<Events>
+								<Event name="OnChange">ПодразделениеПриИзменении</Event>
+								<Event name="StartChoice">ПодразделениеНачалоВыбора</Event>
+							</Events>
+						</InputField>
+						<InputField name="ВидОбъекта" id="7">
+							<DataPath>Запись.ВидОбъекта</DataPath>
+							<AutoMarkIncomplete>true</AutoMarkIncomplete>
+							<ContextMenu name="ВидОбъектаКонтекстноеМеню" id="8"/>
+							<ExtendedTooltip name="ВидОбъектаРасширеннаяПодсказка" id="9"/>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<InputField name="Норма" id="16">
+			<DataPath>Запись.Норма</DataPath>
+			<Visible>false</Visible>
+			<Enabled>false</Enabled>
+			<ContextMenu name="НормаКонтекстноеМеню" id="17"/>
+			<ExtendedTooltip name="НормаРасширеннаяПодсказка" id="18"/>
+		</InputField>
+		<InputField name="Коэффициент" id="19">
+			<DataPath>Запись.Коэффициент</DataPath>
+			<Visible>false</Visible>
+			<ContextMenu name="КоэффициентКонтекстноеМеню" id="20"/>
+			<ExtendedTooltip name="КоэффициентРасширеннаяПодсказка" id="21"/>
+		</InputField>
+		<Table name="ТаблицаНормТруда" id="28">
+			<Representation>List</Representation>
+			<CommandBarLocation>None</CommandBarLocation>
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<FileDragMode>AsFile</FileDragMode>
+			<DataPath>ТаблицаНормТруда</DataPath>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="ТаблицаНормТрудаКонтекстноеМеню" id="29"/>
+			<AutoCommandBar name="ТаблицаНормТрудаКоманднаяПанель" id="30"/>
+			<ExtendedTooltip name="ТаблицаНормТрудаРасширеннаяПодсказка" id="31"/>
+			<SearchStringAddition name="ТаблицаНормТрудаСтрокаПоиска" id="32">
+				<AdditionSource>
+					<Item>ТаблицаНормТруда</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ТаблицаНормТрудаСтрокаПоискаКонтекстноеМеню" id="35"/>
+				<ExtendedTooltip name="ТаблицаНормТрудаСтрокаПоискаРасширеннаяПодсказка" id="36"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="ТаблицаНормТрудаСостояниеПросмотра" id="37">
+				<AdditionSource>
+					<Item>ТаблицаНормТруда</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ТаблицаНормТрудаСостояниеПросмотраКонтекстноеМеню" id="40"/>
+				<ExtendedTooltip name="ТаблицаНормТрудаСостояниеПросмотраРасширеннаяПодсказка" id="41"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="ТаблицаНормТрудаУправлениеПоиском" id="42">
+				<AdditionSource>
+					<Item>ТаблицаНормТруда</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="ТаблицаНормТрудаУправлениеПоискомКонтекстноеМеню" id="45"/>
+				<ExtendedTooltip name="ТаблицаНормТрудаУправлениеПоискомРасширеннаяПодсказка" id="46"/>
+			</SearchControlAddition>
+			<Events>
+				<Event name="BeforeAddRow">ТаблицаНормТрудаПередНачаломДобавления</Event>
+				<Event name="BeforeDeleteRow">ТаблицаНормТрудаПередУдалением</Event>
+				<Event name="BeforeRowChange">ТаблицаНормТрудаПередНачаломИзменения</Event>
+			</Events>
+			<ChildItems>
+				<InputField name="ТаблицаНормТрудаНорма" id="47">
+					<DataPath>ТаблицаНормТруда.Норма</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Норма труда</v8:content>
+						</v8:item>
+					</Title>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ТаблицаНормТрудаНормаКонтекстноеМеню" id="48"/>
+					<ExtendedTooltip name="ТаблицаНормТрудаНормаРасширеннаяПодсказка" id="49"/>
+				</InputField>
+				<InputField name="ТаблицаНормТрудаКоэффициент" id="50">
+					<DataPath>ТаблицаНормТруда.Коэффициент</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Коэффициент</v8:content>
+						</v8:item>
+					</Title>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ТаблицаНормТрудаКоэффициентКонтекстноеМеню" id="51"/>
+					<ExtendedTooltip name="ТаблицаНормТрудаКоэффициентРасширеннаяПодсказка" id="52"/>
+				</InputField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Запись" id="1">
+			<Type>
+				<v8:Type>cfg:InformationRegisterRecordManager.бит_КоэффициентыНорм</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="ТаблицаНормТруда" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Таблица норм труда</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Норма" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Норма</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.бит_НормыТруда</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Коэффициент" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Коэффициент</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>10</v8:Digits>
+							<v8:FractionDigits>2</v8:FractionDigits>
+							<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="мКэшЗначений" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>М кэш значений</v8:content>
+				</v8:item>
+			</Title>
+			<Type/>
+		</Attribute>
+	</Attributes>
+</Form>

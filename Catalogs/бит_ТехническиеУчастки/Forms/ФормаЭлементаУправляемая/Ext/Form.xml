@@ -1,0 +1,182 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.18">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<InputField name="Владелец" id="5">
+			<DataPath>Объект.Owner</DataPath>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Район/Город</v8:content>
+				</v8:item>
+			</Title>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="ВладелецКонтекстноеМеню" id="6"/>
+			<ExtendedTooltip name="ВладелецExtendedTooltip" id="8"/>
+		</InputField>
+		<UsualGroup name="КодНаименование" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Код наименование</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Код наименование</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="КодНаименованиеExtendedTooltip" id="9"/>
+			<ChildItems>
+				<InputField name="Код" id="1">
+					<DataPath>Объект.Code</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="КодКонтекстноеМеню" id="2"/>
+					<ExtendedTooltip name="КодExtendedTooltip" id="11"/>
+				</InputField>
+				<InputField name="Наименование" id="3">
+					<DataPath>Объект.Description</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="НаименованиеКонтекстноеМеню" id="4"/>
+					<ExtendedTooltip name="НаименованиеExtendedTooltip" id="10"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<InputField name="Подразделение" id="12">
+			<DataPath>Объект.Подразделение</DataPath>
+			<ContextMenu name="ПодразделениеКонтекстноеМеню" id="13"/>
+			<ExtendedTooltip name="ПодразделениеРасширеннаяПодсказка" id="14"/>
+		</InputField>
+		<InputField name="Ответственный" id="15">
+			<DataPath>Объект.Ответственный</DataPath>
+			<ContextMenu name="ОтветственныйКонтекстноеМеню" id="16"/>
+			<ExtendedTooltip name="ОтветственныйРасширеннаяПодсказка" id="17"/>
+		</InputField>
+		<UsualGroup name="Группа1" id="24">
+			<Group>AlwaysHorizontal</Group>
+			<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="25"/>
+			<ChildItems>
+				<InputField name="АдресУчастка" id="18">
+					<DataPath>Объект.АдресУчастка</DataPath>
+					<ContextMenu name="АдресУчасткаКонтекстноеМеню" id="19"/>
+					<ExtendedTooltip name="АдресУчасткаРасширеннаяПодсказка" id="20"/>
+				</InputField>
+				<InputField name="ВремяРаботыУчастка" id="21">
+					<DataPath>Объект.ВремяРаботыУчастка</DataPath>
+					<ContextMenu name="ВремяРаботыУчасткаКонтекстноеМеню" id="22"/>
+					<ExtendedTooltip name="ВремяРаботыУчасткаРасширеннаяПодсказка" id="23"/>
+				</InputField>
+				<InputField name="ТелефоныУчастка" id="26">
+					<DataPath>Объект.ТелефоныУчастка</DataPath>
+					<ContextMenu name="ТелефоныУчасткаКонтекстноеМеню" id="27"/>
+					<ExtendedTooltip name="ТелефоныУчасткаРасширеннаяПодсказка" id="28"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="Группа2" id="29">
+			<Group>AlwaysHorizontal</Group>
+			<ExtendedTooltip name="Группа2РасширеннаяПодсказка" id="30"/>
+			<ChildItems>
+				<InputField name="АдресПаспортиста" id="31">
+					<DataPath>Объект.АдресПаспортиста</DataPath>
+					<ContextMenu name="АдресПаспортистаКонтекстноеМеню" id="32"/>
+					<ExtendedTooltip name="АдресПаспортистаРасширеннаяПодсказка" id="33"/>
+				</InputField>
+				<InputField name="ВремяРаботыПаспортиста" id="34">
+					<DataPath>Объект.ВремяРаботыПаспортиста</DataPath>
+					<ContextMenu name="ВремяРаботыПаспортистаКонтекстноеМеню" id="35"/>
+					<ExtendedTooltip name="ВремяРаботыПаспортистаРасширеннаяПодсказка" id="36"/>
+				</InputField>
+				<InputField name="ТелефоныПаспортиста" id="37">
+					<DataPath>Объект.ТелефоныПаспортиста</DataPath>
+					<ContextMenu name="ТелефоныПаспортистаКонтекстноеМеню" id="38"/>
+					<ExtendedTooltip name="ТелефоныПаспортистаРасширеннаяПодсказка" id="39"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="Группа3" id="40">
+			<Group>AlwaysHorizontal</Group>
+			<ExtendedTooltip name="Группа3РасширеннаяПодсказка" id="41"/>
+			<ChildItems>
+				<InputField name="АдресАДС" id="45">
+					<DataPath>Объект.АдресАДС</DataPath>
+					<ContextMenu name="АдресАДСКонтекстноеМеню" id="46"/>
+					<ExtendedTooltip name="АдресАДСРасширеннаяПодсказка" id="47"/>
+				</InputField>
+				<InputField name="ТелефоныАДС" id="42">
+					<DataPath>Объект.ТелефоныАДС</DataPath>
+					<ContextMenu name="ТелефоныАДСКонтекстноеМеню" id="43"/>
+					<ExtendedTooltip name="ТелефоныАДСРасширеннаяПодсказка" id="44"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="Группа4" id="48">
+			<Group>AlwaysHorizontal</Group>
+			<ExtendedTooltip name="Группа4РасширеннаяПодсказка" id="49"/>
+			<ChildItems>
+				<InputField name="ГазоваяСлужбаАдрес" id="50">
+					<DataPath>Объект.ГазоваяСлужбаАдрес</DataPath>
+					<ContextMenu name="ГазоваяСлужбаАдресКонтекстноеМеню" id="51"/>
+					<ExtendedTooltip name="ГазоваяСлужбаАдресРасширеннаяПодсказка" id="52"/>
+				</InputField>
+				<InputField name="ГазоваяСлужбаВремяРаботы" id="56">
+					<DataPath>Объект.ГазоваяСлужбаВремяРаботы</DataPath>
+					<ContextMenu name="ГазоваяСлужбаВремяРаботыКонтекстноеМеню" id="57"/>
+					<ExtendedTooltip name="ГазоваяСлужбаВремяРаботыРасширеннаяПодсказка" id="58"/>
+				</InputField>
+				<InputField name="ГазоваяСлужбаТелефоны" id="53">
+					<DataPath>Объект.ГазоваяСлужбаТелефоны</DataPath>
+					<ContextMenu name="ГазоваяСлужбаТелефоныКонтекстноеМеню" id="54"/>
+					<ExtendedTooltip name="ГазоваяСлужбаТелефоныРасширеннаяПодсказка" id="55"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:CatalogObject.бит_ТехническиеУчастки</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+	</Attributes>
+	<CommandInterface>
+		<NavigationPanel>
+			<Item>
+				<Command>InformationRegister.бит_си_НастройкиИсточников.StandardCommand.OpenByValue.Объект</Command>
+				<Type>Auto</Type>
+				<DefaultVisible>false</DefaultVisible>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+			<Item>
+				<Command>InformationRegister.бит_icq_Пользователи.StandardCommand.OpenByValue.ОбъектПользователя</Command>
+				<Type>Auto</Type>
+				<DefaultVisible>false</DefaultVisible>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+			<Item>
+				<Command>InformationRegister.бит_си_СвязанныеОбъекты.StandardCommand.OpenByValue.Объект</Command>
+				<Type>Auto</Type>
+				<DefaultVisible>false</DefaultVisible>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+		</NavigationPanel>
+	</CommandInterface>
+</Form>

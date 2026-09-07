@@ -1,0 +1,1633 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.18">
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<AutoTime>CurrentOrLast</AutoTime>
+	<UsePostingMode>Auto</UsePostingMode>
+	<RepostOnWrite>true</RepostOnWrite>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="BeforeWrite">ПередЗаписью</Event>
+		<Event name="BeforeWriteAtServer">ПередЗаписьюНаСервере</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="Шапка" id="82">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Шапка</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Шапка</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ШапкаExtendedTooltip" id="218"/>
+			<ChildItems>
+				<UsualGroup name="Лево" id="84">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Лево</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Лево</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Vertical</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ЛевоExtendedTooltip" id="219"/>
+					<ChildItems>
+						<UsualGroup name="НомерДата" id="83">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Номер дата</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Номер дата</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Horizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="НомерДатаExtendedTooltip" id="220"/>
+							<ChildItems>
+								<InputField name="Номер" id="1">
+									<DataPath>Объект.Number</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="НомерКонтекстноеМеню" id="2"/>
+									<ExtendedTooltip name="НомерExtendedTooltip" id="221"/>
+								</InputField>
+								<InputField name="Дата" id="3">
+									<DataPath>Объект.Date</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ДатаКонтекстноеМеню" id="4"/>
+									<ExtendedTooltip name="ДатаExtendedTooltip" id="222"/>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+						<InputField name="Организация" id="5">
+							<DataPath>Объект.Организация</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ОрганизацияКонтекстноеМеню" id="6"/>
+							<ExtendedTooltip name="ОрганизацияExtendedTooltip" id="223"/>
+						</InputField>
+						<InputField name="ТСЖ" id="7">
+							<DataPath>Объект.ТСЖ</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<DropListButton>false</DropListButton>
+							<ChoiceButton>true</ChoiceButton>
+							<ChoiceButtonRepresentation>ShowInInputField</ChoiceButtonRepresentation>
+							<CreateButton>false</CreateButton>
+							<TextEdit>false</TextEdit>
+							<ChoiceHistoryOnInput>DontUse</ChoiceHistoryOnInput>
+							<ContextMenu name="ТСЖКонтекстноеМеню" id="8"/>
+							<ExtendedTooltip name="ТСЖExtendedTooltip" id="224"/>
+							<Events>
+								<Event name="OnChange">ТСЖПриИзменении</Event>
+								<Event name="StartChoice">ТСЖНачалоВыбора</Event>
+								<Event name="ChoiceProcessing">ТСЖОбработкаВыбора</Event>
+							</Events>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="Право" id="85">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Право</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Право</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Vertical</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ПравоExtendedTooltip" id="225"/>
+					<ChildItems>
+						<LabelDecoration name="Декорация1" id="86">
+							<ContextMenu name="Декорация1КонтекстноеМеню" id="87"/>
+							<ExtendedTooltip name="Декорация1ExtendedTooltip" id="226"/>
+						</LabelDecoration>
+						<LabelDecoration name="Декорация2" id="88">
+							<ContextMenu name="Декорация2КонтекстноеМеню" id="89"/>
+							<ExtendedTooltip name="Декорация2ExtendedTooltip" id="227"/>
+						</LabelDecoration>
+						<InputField name="ФормаСобрания" id="13">
+							<DataPath>Объект.ФормаСобрания</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ФормаСобранияКонтекстноеМеню" id="14"/>
+							<ExtendedTooltip name="ФормаСобранияExtendedTooltip" id="228"/>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<Pages name="ОсновнаяПанель" id="90">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Основная панель</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Основная панель</v8:content>
+				</v8:item>
+			</ToolTip>
+			<PagesRepresentation>TabsOnTop</PagesRepresentation>
+			<ExtendedTooltip name="ОсновнаяПанельExtendedTooltip" id="229"/>
+			<ChildItems>
+				<Page name="РеквизитыСобрания" id="91">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Реквизиты собрания</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Реквизиты собрания</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="РеквизитыСобранияExtendedTooltip" id="230"/>
+					<ChildItems>
+						<UsualGroup name="Область" id="143">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Область</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Область</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Horizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ОбластьExtendedTooltip" id="231"/>
+							<ChildItems>
+								<UsualGroup name="ЛеваяЧасть" id="144">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Левая часть</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Левая часть</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Group>Vertical</Group>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ЛеваяЧастьExtendedTooltip" id="232"/>
+									<ChildItems>
+										<InputField name="ДатаНачала" id="15">
+											<DataPath>Объект.ДатаНачала</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ДатаНачалаКонтекстноеМеню" id="16"/>
+											<ExtendedTooltip name="ДатаНачалаExtendedTooltip" id="233"/>
+										</InputField>
+										<InputField name="ДатаОкончания" id="17">
+											<DataPath>Объект.ДатаОкончания</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ДатаОкончанияКонтекстноеМеню" id="18"/>
+											<ExtendedTooltip name="ДатаОкончанияExtendedTooltip" id="234"/>
+										</InputField>
+										<InputField name="ПредседательСобрания" id="207">
+											<DataPath>Объект.ПредседательСобрания</DataPath>
+											<Width>40</Width>
+											<HorizontalStretch>false</HorizontalStretch>
+											<DropListButton>false</DropListButton>
+											<ChoiceButton>true</ChoiceButton>
+											<ChoiceButtonRepresentation>ShowInInputField</ChoiceButtonRepresentation>
+											<CreateButton>false</CreateButton>
+											<TextEdit>false</TextEdit>
+											<ChoiceHistoryOnInput>DontUse</ChoiceHistoryOnInput>
+											<ContextMenu name="ПредседательСобранияКонтекстноеМеню" id="208"/>
+											<ExtendedTooltip name="ПредседательСобранияExtendedTooltip" id="235"/>
+											<Events>
+												<Event name="StartChoice">ПредседательСобранияНачалоВыбора</Event>
+											</Events>
+										</InputField>
+										<InputField name="СекретарьСобрания" id="209">
+											<DataPath>Объект.СекретарьСобрания</DataPath>
+											<Width>40</Width>
+											<HorizontalStretch>false</HorizontalStretch>
+											<DropListButton>false</DropListButton>
+											<ChoiceButton>true</ChoiceButton>
+											<ChoiceButtonRepresentation>ShowInInputField</ChoiceButtonRepresentation>
+											<CreateButton>false</CreateButton>
+											<TextEdit>false</TextEdit>
+											<ChoiceHistoryOnInput>DontUse</ChoiceHistoryOnInput>
+											<ContextMenu name="СекретарьСобранияКонтекстноеМеню" id="210"/>
+											<ExtendedTooltip name="СекретарьСобранияExtendedTooltip" id="236"/>
+											<Events>
+												<Event name="StartChoice">СекретарьСобранияНачалоВыбора</Event>
+											</Events>
+										</InputField>
+										<InputField name="МестоПроведенияCобрания" id="19">
+											<DataPath>Объект.МестоПроведенияCобрания</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="МестоПроведенияCобранияКонтекстноеМеню" id="20"/>
+											<ExtendedTooltip name="МестоПроведенияCобранияExtendedTooltip" id="237"/>
+										</InputField>
+										<UsualGroup name="ГруппаТекст" id="155">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Текст сообщения</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа текст</v8:content>
+												</v8:item>
+											</ToolTip>
+											<Group>Vertical</Group>
+											<ExtendedTooltip name="ГруппаТекстExtendedTooltip" id="238"/>
+											<ChildItems>
+												<InputField name="ТекстСообщения" id="21">
+													<DataPath>Объект.ТекстСообщения</DataPath>
+													<TitleLocation>None</TitleLocation>
+													<EditMode>EnterOnInput</EditMode>
+													<MultiLine>true</MultiLine>
+													<ExtendedEdit>true</ExtendedEdit>
+													<ContextMenu name="ТекстСообщенияКонтекстноеМеню" id="22"/>
+													<ExtendedTooltip name="ТекстСообщенияExtendedTooltip" id="239"/>
+												</InputField>
+											</ChildItems>
+										</UsualGroup>
+									</ChildItems>
+								</UsualGroup>
+								<UsualGroup name="ПраваяЧасть" id="145">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Список зданий</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Правая часть</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Group>Vertical</Group>
+									<ExtendedTooltip name="ПраваяЧастьExtendedTooltip" id="240"/>
+									<ChildItems>
+										<Table name="СписокЗданий" id="146">
+											<AutoInsertNewRow>true</AutoInsertNewRow>
+											<EnableStartDrag>true</EnableStartDrag>
+											<EnableDrag>true</EnableDrag>
+											<FileDragMode>AsFile</FileDragMode>
+											<DataPath>Объект.СписокЗданий</DataPath>
+											<SearchStringLocation>None</SearchStringLocation>
+											<ViewStatusLocation>None</ViewStatusLocation>
+											<SearchControlLocation>None</SearchControlLocation>
+											<RowFilter xsi:nil="true"/>
+											<ContextMenu name="СписокЗданийКонтекстноеМеню" id="147">
+												<Autofill>false</Autofill>
+											</ContextMenu>
+											<AutoCommandBar name="СписокЗданийКоманднаяПанель" id="148">
+												<Autofill>false</Autofill>
+											</AutoCommandBar>
+											<ExtendedTooltip name="СписокЗданийExtendedTooltip" id="241"/>
+											<SearchStringAddition name="СписокЗданийСтрокаПоиска" id="290">
+												<AdditionSource>
+													<Item>СписокЗданий</Item>
+													<Type>SearchStringRepresentation</Type>
+												</AdditionSource>
+												<ContextMenu name="СписокЗданийСтрокаПоискаКонтекстноеМеню" id="291"/>
+												<ExtendedTooltip name="СписокЗданийСтрокаПоискаРасширеннаяПодсказка" id="292"/>
+											</SearchStringAddition>
+											<ViewStatusAddition name="СписокЗданийСостояниеПросмотра" id="293">
+												<AdditionSource>
+													<Item>СписокЗданий</Item>
+													<Type>ViewStatusRepresentation</Type>
+												</AdditionSource>
+												<ContextMenu name="СписокЗданийСостояниеПросмотраКонтекстноеМеню" id="294"/>
+												<ExtendedTooltip name="СписокЗданийСостояниеПросмотраРасширеннаяПодсказка" id="295"/>
+											</ViewStatusAddition>
+											<SearchControlAddition name="СписокЗданийУправлениеПоиском" id="296">
+												<AdditionSource>
+													<Item>СписокЗданий</Item>
+													<Type>SearchControl</Type>
+												</AdditionSource>
+												<ContextMenu name="СписокЗданийУправлениеПоискомКонтекстноеМеню" id="297"/>
+												<ExtendedTooltip name="СписокЗданийУправлениеПоискомРасширеннаяПодсказка" id="298"/>
+											</SearchControlAddition>
+											<ChildItems>
+												<CheckBoxField name="СписокЗданийИспользовать" id="153">
+													<DataPath>Объект.СписокЗданий.Использовать</DataPath>
+													<TitleLocation>None</TitleLocation>
+													<EditMode>EnterOnInput</EditMode>
+													<CheckBoxType>Auto</CheckBoxType>
+													<ContextMenu name="СписокЗданийИспользоватьКонтекстноеМеню" id="154"/>
+													<ExtendedTooltip name="СписокЗданийИспользоватьExtendedTooltip" id="242"/>
+													<Events>
+														<Event name="OnChange">СписокЗданийИспользоватьПриИзменении</Event>
+													</Events>
+												</CheckBoxField>
+												<InputField name="СписокЗданийЗдание" id="151">
+													<DataPath>Объект.СписокЗданий.Здание</DataPath>
+													<ReadOnly>true</ReadOnly>
+													<EditMode>EnterOnInput</EditMode>
+													<ContextMenu name="СписокЗданийЗданиеКонтекстноеМеню" id="152"/>
+													<ExtendedTooltip name="СписокЗданийЗданиеExtendedTooltip" id="243"/>
+												</InputField>
+											</ChildItems>
+										</Table>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</Page>
+				<Page name="СписокВопросов" id="92">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Список вопросов</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Список вопросов</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="СписокВопросовExtendedTooltip" id="244"/>
+					<ChildItems>
+						<Table name="Вопросы" id="93">
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<FileDragMode>AsFile</FileDragMode>
+							<DataPath>Объект.СписокВопросов</DataPath>
+							<SearchStringLocation>None</SearchStringLocation>
+							<ViewStatusLocation>None</ViewStatusLocation>
+							<SearchControlLocation>None</SearchControlLocation>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="ВопросыКонтекстноеМеню" id="94"/>
+							<AutoCommandBar name="ВопросыКоманднаяПанель" id="95"/>
+							<ExtendedTooltip name="ВопросыExtendedTooltip" id="245"/>
+							<SearchStringAddition name="ВопросыСтрокаПоиска" id="299">
+								<AdditionSource>
+									<Item>Вопросы</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ВопросыСтрокаПоискаКонтекстноеМеню" id="300"/>
+								<ExtendedTooltip name="ВопросыСтрокаПоискаРасширеннаяПодсказка" id="301"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ВопросыСостояниеПросмотра" id="302">
+								<AdditionSource>
+									<Item>Вопросы</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ВопросыСостояниеПросмотраКонтекстноеМеню" id="303"/>
+								<ExtendedTooltip name="ВопросыСостояниеПросмотраРасширеннаяПодсказка" id="304"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ВопросыУправлениеПоиском" id="305">
+								<AdditionSource>
+									<Item>Вопросы</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ВопросыУправлениеПоискомКонтекстноеМеню" id="306"/>
+								<ExtendedTooltip name="ВопросыУправлениеПоискомРасширеннаяПодсказка" id="307"/>
+							</SearchControlAddition>
+							<Events>
+								<Event name="BeforeDeleteRow">ВопросыПередУдалением</Event>
+								<Event name="OnActivateRow">ВопросыПриАктивизацииСтроки</Event>
+								<Event name="OnStartEdit">ВопросыПриНачалеРедактирования</Event>
+							</Events>
+							<ChildItems>
+								<LabelField name="ВопросыНомерСтроки" id="96">
+									<DataPath>Объект.СписокВопросов.LineNumber</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<Width>1</Width>
+									<HorizontalStretch>false</HorizontalStretch>
+									<ContextMenu name="ВопросыНомерСтрокиКонтекстноеМеню" id="97"/>
+									<ExtendedTooltip name="ВопросыНомерСтрокиExtendedTooltip" id="246"/>
+								</LabelField>
+								<InputField name="ВопросыВопрос" id="100">
+									<DataPath>Объект.СписокВопросов.Вопрос</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ВопросыВопросКонтекстноеМеню" id="101"/>
+									<ExtendedTooltip name="ВопросыВопросExtendedTooltip" id="247"/>
+									<Events>
+										<Event name="OnChange">ВопросыВопросПриИзменении</Event>
+									</Events>
+								</InputField>
+								<InputField name="ВопросыУчастники" id="211">
+									<DataPath>Объект.СписокВопросов.Участники</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Участники голосования</v8:content>
+										</v8:item>
+									</Title>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ВопросыУчастникиКонтекстноеМеню" id="212"/>
+									<ExtendedTooltip name="ВопросыУчастникиExtendedTooltip" id="248"/>
+									<Events>
+										<Event name="OnChange">ВопросыУчастникиПриИзменении</Event>
+									</Events>
+								</InputField>
+								<InputField name="ВопросыКритерийОценкиГолоса" id="213">
+									<DataPath>Объект.СписокВопросов.КритерийОценкиГолосов</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Критерий оценки голосов</v8:content>
+										</v8:item>
+									</Title>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ВопросыКритерийОценкиГолосаКонтекстноеМеню" id="214"/>
+									<ExtendedTooltip name="ВопросыКритерийОценкиГолосаExtendedTooltip" id="249"/>
+									<Events>
+										<Event name="OnChange">ВопросыКритерийОценкиГолосаПриИзменении</Event>
+									</Events>
+								</InputField>
+								<InputField name="ВопросыКворум" id="102">
+									<DataPath>Объект.СписокВопросов.Кворум</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ВопросыКворумКонтекстноеМеню" id="103"/>
+									<ExtendedTooltip name="ВопросыКворумExtendedTooltip" id="250"/>
+									<Events>
+										<Event name="OnChange">ВопросыКворумПриИзменении</Event>
+									</Events>
+								</InputField>
+								<ColumnGroup name="ВопросыГруппаПредставление" id="156">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Вопросы группа представление</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Вопросы группа представление</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ExtendedTooltip name="ВопросыГруппаПредставлениеExtendedTooltip" id="251"/>
+									<ChildItems>
+										<InputField name="ВопросыПредставлениеВСлучаеПринятияРешения" id="104">
+											<DataPath>Объект.СписокВопросов.ПредставлениеВСлучаеПринятияРешения</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ВопросыПредставлениеВСлучаеПринятияРешенияКонтекстноеМеню" id="105"/>
+											<ExtendedTooltip name="ВопросыПредставлениеВСлучаеПринятияРешенияExtendedTooltip" id="252"/>
+										</InputField>
+										<InputField name="ВопросыПредставлениеВСлучаеОтклоненияРешения" id="106">
+											<DataPath>Объект.СписокВопросов.ПредставлениеВСлучаеОтклоненияРешения</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ВопросыПредставлениеВСлучаеОтклоненияРешенияКонтекстноеМеню" id="107"/>
+											<ExtendedTooltip name="ВопросыПредставлениеВСлучаеОтклоненияРешенияExtendedTooltip" id="253"/>
+										</InputField>
+									</ChildItems>
+								</ColumnGroup>
+							</ChildItems>
+						</Table>
+						<Table name="ВариантыВыбораГолосования" id="108">
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<FileDragMode>AsFile</FileDragMode>
+							<DataPath>Объект.ВариантыВыбораГолосования</DataPath>
+							<SearchStringLocation>None</SearchStringLocation>
+							<ViewStatusLocation>None</ViewStatusLocation>
+							<SearchControlLocation>None</SearchControlLocation>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="ВариантыВыбораГолосованияКонтекстноеМеню" id="109"/>
+							<AutoCommandBar name="ВариантыВыбораГолосованияКоманднаяПанель" id="110"/>
+							<ExtendedTooltip name="ВариантыВыбораГолосованияРасширеннаяПодсказка" id="254"/>
+							<SearchStringAddition name="ВариантыВыбораГолосованияСтрокаПоиска" id="308">
+								<AdditionSource>
+									<Item>ВариантыВыбораГолосования</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ВариантыВыбораГолосованияСтрокаПоискаКонтекстноеМеню" id="309"/>
+								<ExtendedTooltip name="ВариантыВыбораГолосованияСтрокаПоискаРасширеннаяПодсказка" id="310"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ВариантыВыбораГолосованияСостояниеПросмотра" id="311">
+								<AdditionSource>
+									<Item>ВариантыВыбораГолосования</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ВариантыВыбораГолосованияСостояниеПросмотраКонтекстноеМеню" id="312"/>
+								<ExtendedTooltip name="ВариантыВыбораГолосованияСостояниеПросмотраРасширеннаяПодсказка" id="313"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ВариантыВыбораГолосованияУправлениеПоиском" id="314">
+								<AdditionSource>
+									<Item>ВариантыВыбораГолосования</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ВариантыВыбораГолосованияУправлениеПоискомКонтекстноеМеню" id="315"/>
+								<ExtendedTooltip name="ВариантыВыбораГолосованияУправлениеПоискомРасширеннаяПодсказка" id="316"/>
+							</SearchControlAddition>
+							<Events>
+								<Event name="OnStartEdit">ВариантыВыбораГолосованияПриНачалеРедактирования</Event>
+							</Events>
+							<ChildItems>
+								<LabelField name="ВариантыВыбораГолосованияНомерСтроки" id="111">
+									<DataPath>Объект.ВариантыВыбораГолосования.LineNumber</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<Width>1</Width>
+									<HorizontalStretch>false</HorizontalStretch>
+									<ContextMenu name="ВариантыВыбораГолосованияНомерСтрокиКонтекстноеМеню" id="112"/>
+									<ExtendedTooltip name="ВариантыВыбораГолосованияНомерСтрокиРасширеннаяПодсказка" id="255"/>
+								</LabelField>
+								<InputField name="ВариантыВыбораГолосованияВариантРешения" id="115">
+									<DataPath>Объект.ВариантыВыбораГолосования.ВариантРешения</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ВариантыВыбораГолосованияВариантРешенияКонтекстноеМеню" id="116"/>
+									<ExtendedTooltip name="ВариантыВыбораГолосованияВариантРешенияРасширеннаяПодсказка" id="256"/>
+									<Events>
+										<Event name="OnChange">ВариантыВыбораГолосованияВариантРешенияПриИзменении</Event>
+									</Events>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+				<Page name="Голосование" id="117">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Голосование</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Голосование</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ГолосованиеExtendedTooltip" id="257"/>
+					<ChildItems>
+						<Pages name="ПанельГолосования" id="118">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Панель голосования</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Панель голосования</v8:content>
+								</v8:item>
+							</ToolTip>
+							<PagesRepresentation>TabsOnTop</PagesRepresentation>
+							<ExtendedTooltip name="ПанельГолосованияExtendedTooltip" id="258"/>
+							<ChildItems>
+								<Page name="УчастникиГолосования" id="119">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Участники</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Участники голосования</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ExtendedTooltip name="УчастникиГолосованияExtendedTooltip" id="259"/>
+									<ChildItems>
+										<UsualGroup name="ГруппаТекстУчастники" id="206">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа текст Участники</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа текст Участники</v8:content>
+												</v8:item>
+											</ToolTip>
+											<Group>Horizontal</Group>
+											<Representation>StrongSeparation</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="ГруппаТекстУчастникиРасширеннаяПодсказка" id="260"/>
+											<ChildItems>
+												<LabelDecoration name="ТекстУчастники" id="203">
+													<HorizontalStretch>true</HorizontalStretch>
+													<Font ref="sys:DefaultGUIFont" height="9" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+													<Title formatted="false">
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Текст участники</v8:content>
+														</v8:item>
+													</Title>
+													<ContextMenu name="ТекстУчастникиКонтекстноеМеню" id="204"/>
+													<ExtendedTooltip name="ТекстУчастникиРасширеннаяПодсказка" id="261"/>
+												</LabelDecoration>
+											</ChildItems>
+										</UsualGroup>
+										<Table name="ДеревоУчастниковГолосования" id="157">
+											<Representation>Tree</Representation>
+											<AutoInsertNewRow>true</AutoInsertNewRow>
+											<EnableStartDrag>true</EnableStartDrag>
+											<EnableDrag>true</EnableDrag>
+											<FileDragMode>AsFile</FileDragMode>
+											<DataPath>ДеревоУчастниковГолосования</DataPath>
+											<SearchStringLocation>None</SearchStringLocation>
+											<ViewStatusLocation>None</ViewStatusLocation>
+											<SearchControlLocation>None</SearchControlLocation>
+											<ContextMenu name="ДеревоУчастниковГолосованияКонтекстноеМеню" id="158">
+												<Autofill>false</Autofill>
+												<ChildItems>
+													<ButtonGroup name="ДеревоУчастниковГолосованияКонтекстноеМенюГруппаОбновить" id="182">
+														<Title>
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>Дерево участников голосования контекстное меню группа обновить</v8:content>
+															</v8:item>
+														</Title>
+														<ToolTip>
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>Дерево участников голосования контекстное меню группа обновить</v8:content>
+															</v8:item>
+														</ToolTip>
+														<ExtendedTooltip name="ДеревоУчастниковГолосованияКонтекстноеМенюГруппаОбновитьExtendedTooltip" id="262"/>
+														<ChildItems>
+															<Button name="ДеревоУчастниковГолосованияКонтекстноеМенюОбновитьВсе" id="181">
+																<Type>CommandBarButton</Type>
+																<CommandName>Form.Command.ОбновитьГолосование</CommandName>
+																<ExtendedTooltip name="ДеревоУчастниковГолосованияКонтекстноеМенюОбновитьВсеExtendedTooltip" id="263"/>
+															</Button>
+															<Button name="ДеревоУчастниковГолосованияКонтекстноеМенюЗаполнитьРешенияПоВпоросуТекущейСтроки" id="192">
+																<Type>CommandBarButton</Type>
+																<CommandName>Form.Command.ЗаполнитьРешенияПоВпоросуТекущейСтроки</CommandName>
+																<ExtendedTooltip name="ДеревоУчастниковГолосованияКонтекстноеМенюЗаполнитьРешенияПоВпоросуТекущейСтрокиExtendedTooltip" id="264"/>
+															</Button>
+															<Button name="ДеревоУчастниковГолосованияКонтекстноеМенюОчиститьРешенияПоВопросуТекущейСтроки" id="193">
+																<Type>CommandBarButton</Type>
+																<CommandName>Form.Command.ОчиститьРешенияПоВопросуТекущейСтроки</CommandName>
+																<ExtendedTooltip name="ДеревоУчастниковГолосованияКонтекстноеМенюОчиститьРешенияПоВопросуТекущейСтрокиExtendedTooltip" id="265"/>
+															</Button>
+															<Button name="ДеревоУчастниковГолосованияКонтекстноеМенюУстновитьЗначениеГолосовПоВопросуТекущейСтроки" id="217">
+																<Type>CommandBarButton</Type>
+																<CommandName>Form.Command.УстновитьЗначениеГолосовПоВопросуТекущейСтроки</CommandName>
+																<ExtendedTooltip name="ДеревоУчастниковГолосованияКонтекстноеМенюУстновитьЗначениеГолосовПоВопросуТекущейСтрокиExtendedTooltip" id="266"/>
+															</Button>
+														</ChildItems>
+													</ButtonGroup>
+												</ChildItems>
+											</ContextMenu>
+											<AutoCommandBar name="ДеревоУчастниковГолосованияКоманднаяПанель" id="159">
+												<Autofill>false</Autofill>
+												<ChildItems>
+													<Button name="ДеревоУчастниковГолосованияОбновитьГолосование" id="186">
+														<Type>CommandBarButton</Type>
+														<CommandName>Form.Command.ОбновитьГолосование</CommandName>
+														<Title>
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>Обновить</v8:content>
+															</v8:item>
+														</Title>
+														<ExtendedTooltip name="ДеревоУчастниковГолосованияОбновитьГолосованиеExtendedTooltip" id="267"/>
+													</Button>
+													<Button name="ДеревоУчастниковГолосованияУстановитьФлажки" id="194">
+														<Type>CommandBarButton</Type>
+														<CommandName>Form.Command.УстановитьФлажки</CommandName>
+														<ExtendedTooltip name="ДеревоУчастниковГолосованияУстановитьФлажкиExtendedTooltip" id="268"/>
+													</Button>
+													<Button name="ДеревоУчастниковГолосованияСнятьФлажки" id="195">
+														<Type>CommandBarButton</Type>
+														<CommandName>Form.Command.СнятьФлажки</CommandName>
+														<ExtendedTooltip name="ДеревоУчастниковГолосованияСнятьФлажкиExtendedTooltip" id="269"/>
+													</Button>
+													<Popup name="ДеревоУчастниковГолосованияГруппаРешения" id="190">
+														<Title>
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>Заполнение</v8:content>
+															</v8:item>
+														</Title>
+														<ToolTip>
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>Дерево участников голосования группа решения</v8:content>
+															</v8:item>
+														</ToolTip>
+														<ExtendedTooltip name="ДеревоУчастниковГолосованияГруппаРешенияExtendedTooltip" id="270"/>
+														<ChildItems>
+															<Button name="ДеревоУчастниковГолосованияЗаполнитьРешение" id="189">
+																<Type>CommandBarButton</Type>
+																<CommandName>Form.Command.ЗаполнитьРешение</CommandName>
+																<Title>
+																	<v8:item>
+																		<v8:lang>ru</v8:lang>
+																		<v8:content>Заполнить решения (Все)</v8:content>
+																	</v8:item>
+																</Title>
+																<ExtendedTooltip name="ДеревоУчастниковГолосованияЗаполнитьРешениеExtendedTooltip" id="271"/>
+															</Button>
+															<Button name="ДеревоУчастниковГолосованияОчисититьПринятиеРешения" id="191">
+																<Type>CommandBarButton</Type>
+																<CommandName>Form.Command.ОчисититьПринятиеРешения</CommandName>
+																<Title>
+																	<v8:item>
+																		<v8:lang>ru</v8:lang>
+																		<v8:content>Очистить решения (Все)</v8:content>
+																	</v8:item>
+																</Title>
+																<ExtendedTooltip name="ДеревоУчастниковГолосованияОчисититьПринятиеРешенияExtendedTooltip" id="272"/>
+															</Button>
+															<ButtonGroup name="ДеревоУчастниковГолосованияГруппа" id="215">
+																<Title>
+																	<v8:item>
+																		<v8:lang>ru</v8:lang>
+																		<v8:content>Дерево участников голосования группа</v8:content>
+																	</v8:item>
+																</Title>
+																<ToolTip>
+																	<v8:item>
+																		<v8:lang>ru</v8:lang>
+																		<v8:content>Дерево участников голосования группа</v8:content>
+																	</v8:item>
+																</ToolTip>
+																<ExtendedTooltip name="ДеревоУчастниковГолосованияГруппаExtendedTooltip" id="273"/>
+																<ChildItems>
+																	<Button name="ДеревоУчастниковГолосованияУстновитьЗначениеГолосов" id="216">
+																		<Type>CommandBarButton</Type>
+																		<CommandName>Form.Command.УстновитьЗначениеГолосов</CommandName>
+																		<Title>
+																			<v8:item>
+																				<v8:lang>ru</v8:lang>
+																				<v8:content>Уст. значение голосов (для критерия: по кол-ву голосов)</v8:content>
+																			</v8:item>
+																		</Title>
+																		<ExtendedTooltip name="ДеревоУчастниковГолосованияУстновитьЗначениеГолосовExtendedTooltip" id="274"/>
+																	</Button>
+																</ChildItems>
+															</ButtonGroup>
+														</ChildItems>
+													</Popup>
+												</ChildItems>
+											</AutoCommandBar>
+											<ExtendedTooltip name="ДеревоУчастниковГолосованияExtendedTooltip" id="275"/>
+											<SearchStringAddition name="ДеревоУчастниковГолосованияСтрокаПоиска" id="317">
+												<AdditionSource>
+													<Item>ДеревоУчастниковГолосования</Item>
+													<Type>SearchStringRepresentation</Type>
+												</AdditionSource>
+												<ContextMenu name="ДеревоУчастниковГолосованияСтрокаПоискаКонтекстноеМеню" id="318"/>
+												<ExtendedTooltip name="ДеревоУчастниковГолосованияСтрокаПоискаРасширеннаяПодсказка" id="319"/>
+											</SearchStringAddition>
+											<ViewStatusAddition name="ДеревоУчастниковГолосованияСостояниеПросмотра" id="320">
+												<AdditionSource>
+													<Item>ДеревоУчастниковГолосования</Item>
+													<Type>ViewStatusRepresentation</Type>
+												</AdditionSource>
+												<ContextMenu name="ДеревоУчастниковГолосованияСостояниеПросмотраКонтекстноеМеню" id="321"/>
+												<ExtendedTooltip name="ДеревоУчастниковГолосованияСостояниеПросмотраРасширеннаяПодсказка" id="322"/>
+											</ViewStatusAddition>
+											<SearchControlAddition name="ДеревоУчастниковГолосованияУправлениеПоиском" id="323">
+												<AdditionSource>
+													<Item>ДеревоУчастниковГолосования</Item>
+													<Type>SearchControl</Type>
+												</AdditionSource>
+												<ContextMenu name="ДеревоУчастниковГолосованияУправлениеПоискомКонтекстноеМеню" id="324"/>
+												<ExtendedTooltip name="ДеревоУчастниковГолосованияУправлениеПоискомРасширеннаяПодсказка" id="325"/>
+											</SearchControlAddition>
+											<Events>
+												<Event name="OnChange">ДеревоУчастниковГолосованияПриИзменении</Event>
+											</Events>
+											<ChildItems>
+												<CheckBoxField name="ДеревоУчастниковГолосованияИспользовать" id="172">
+													<DataPath>ДеревоУчастниковГолосования.Использовать</DataPath>
+													<TitleLocation>None</TitleLocation>
+													<EditMode>EnterOnInput</EditMode>
+													<FixingInTable>Left</FixingInTable>
+													<CheckBoxType>Auto</CheckBoxType>
+													<ContextMenu name="ДеревоУчастниковГолосованияИспользоватьКонтекстноеМеню" id="173"/>
+													<ExtendedTooltip name="ДеревоУчастниковГолосованияИспользоватьExtendedTooltip" id="276"/>
+												</CheckBoxField>
+												<InputField name="ДеревоУчастниковГолосованияПредставлениеЗданияУчастника" id="174">
+													<DataPath>ДеревоУчастниковГолосования.Представление</DataPath>
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Вопрос \ Здание \ Участники голосования</v8:content>
+														</v8:item>
+													</Title>
+													<EditMode>EnterOnInput</EditMode>
+													<OpenButton>true</OpenButton>
+													<TextEdit>false</TextEdit>
+													<ContextMenu name="ДеревоУчастниковГолосованияПредставлениеЗданияУчастникаКонтекстноеМеню" id="175"/>
+													<ExtendedTooltip name="ДеревоУчастниковГолосованияПредставлениеЗданияУчастникаExtendedTooltip" id="277"/>
+													<Events>
+														<Event name="Opening">ДеревоУчастниковГолосованияПредставлениеЗданияУчастникаОткрытие</Event>
+													</Events>
+												</InputField>
+												<InputField name="ДеревоУчастниковГолосованияРешение" id="164">
+													<DataPath>ДеревоУчастниковГолосования.Решение</DataPath>
+													<EditMode>EnterOnInput</EditMode>
+													<ChoiceButton>true</ChoiceButton>
+													<ContextMenu name="ДеревоУчастниковГолосованияРешениеКонтекстноеМеню" id="165"/>
+													<ExtendedTooltip name="ДеревоУчастниковГолосованияРешениеExtendedTooltip" id="278"/>
+													<Events>
+														<Event name="StartChoice">ДеревоУчастниковГолосованияРешениеНачалоВыбора</Event>
+													</Events>
+												</InputField>
+												<InputField name="ДеревоУчастниковГолосованияКоличествоГолосов" id="162">
+													<DataPath>ДеревоУчастниковГолосования.ЗначениеГолоса</DataPath>
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Значение голоса</v8:content>
+														</v8:item>
+													</Title>
+													<EditMode>EnterOnInput</EditMode>
+													<HorizontalStretch>false</HorizontalStretch>
+													<ContextMenu name="ДеревоУчастниковГолосованияКоличествоГолосовКонтекстноеМеню" id="163"/>
+													<ExtendedTooltip name="ДеревоУчастниковГолосованияКоличествоГолосовExtendedTooltip" id="279"/>
+													<Events>
+														<Event name="OnChange">ДеревоУчастниковГолосованияКоличествоГолосовПриИзменении</Event>
+													</Events>
+												</InputField>
+											</ChildItems>
+										</Table>
+									</ChildItems>
+								</Page>
+								<Page name="РезультатыГолосования" id="120">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Результаты</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Результаты голосования</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ExtendedTooltip name="РезультатыГолосованияExtendedTooltip" id="280"/>
+									<ChildItems>
+										<UsualGroup name="ГруппаТекстРезультаты" id="205">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа текст результаты</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа текст результаты</v8:content>
+												</v8:item>
+											</ToolTip>
+											<Group>Horizontal</Group>
+											<Representation>StrongSeparation</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="ГруппаТекстРезультатыExtendedTooltip" id="281"/>
+											<ChildItems>
+												<LabelDecoration name="ТекстРезультаты" id="201">
+													<HorizontalStretch>true</HorizontalStretch>
+													<Font ref="sys:DefaultGUIFont" height="9" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+													<Title formatted="false">
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Текст результаты</v8:content>
+														</v8:item>
+													</Title>
+													<ContextMenu name="ТекстРезультатыКонтекстноеМеню" id="202"/>
+													<ExtendedTooltip name="ТекстРезультатыExtendedTooltip" id="282"/>
+												</LabelDecoration>
+											</ChildItems>
+										</UsualGroup>
+										<Table name="ДеревоРзельтатовГолосования" id="132">
+											<Representation>Tree</Representation>
+											<AutoInsertNewRow>true</AutoInsertNewRow>
+											<EnableStartDrag>true</EnableStartDrag>
+											<EnableDrag>true</EnableDrag>
+											<FileDragMode>AsFile</FileDragMode>
+											<DataPath>ДеревоРзельтатовГолосования</DataPath>
+											<SearchStringLocation>None</SearchStringLocation>
+											<ViewStatusLocation>None</ViewStatusLocation>
+											<SearchControlLocation>None</SearchControlLocation>
+											<ContextMenu name="ДеревоРзельтатовГолосованияКонтекстноеМеню" id="133">
+												<Autofill>false</Autofill>
+											</ContextMenu>
+											<AutoCommandBar name="ДеревоРзельтатовГолосованияКоманднаяПанель" id="134">
+												<Autofill>false</Autofill>
+												<ChildItems>
+													<Button name="ДеревоРзельтатовГолосованияОбновитьРешения" id="196">
+														<Type>CommandBarButton</Type>
+														<CommandName>Form.Command.ОбновитьРешения</CommandName>
+														<Title>
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>Обновить</v8:content>
+															</v8:item>
+														</Title>
+														<ExtendedTooltip name="ДеревоРзельтатовГолосованияОбновитьРешенияExtendedTooltip" id="283"/>
+													</Button>
+												</ChildItems>
+											</AutoCommandBar>
+											<ExtendedTooltip name="ДеревоРзельтатовГолосованияExtendedTooltip" id="284"/>
+											<SearchStringAddition name="ДеревоРзельтатовГолосованияСтрокаПоиска" id="326">
+												<AdditionSource>
+													<Item>ДеревоРзельтатовГолосования</Item>
+													<Type>SearchStringRepresentation</Type>
+												</AdditionSource>
+												<ContextMenu name="ДеревоРзельтатовГолосованияСтрокаПоискаКонтекстноеМеню" id="327"/>
+												<ExtendedTooltip name="ДеревоРзельтатовГолосованияСтрокаПоискаРасширеннаяПодсказка" id="328"/>
+											</SearchStringAddition>
+											<ViewStatusAddition name="ДеревоРзельтатовГолосованияСостояниеПросмотра" id="329">
+												<AdditionSource>
+													<Item>ДеревоРзельтатовГолосования</Item>
+													<Type>ViewStatusRepresentation</Type>
+												</AdditionSource>
+												<ContextMenu name="ДеревоРзельтатовГолосованияСостояниеПросмотраКонтекстноеМеню" id="330"/>
+												<ExtendedTooltip name="ДеревоРзельтатовГолосованияСостояниеПросмотраРасширеннаяПодсказка" id="331"/>
+											</ViewStatusAddition>
+											<SearchControlAddition name="ДеревоРзельтатовГолосованияУправлениеПоиском" id="332">
+												<AdditionSource>
+													<Item>ДеревоРзельтатовГолосования</Item>
+													<Type>SearchControl</Type>
+												</AdditionSource>
+												<ContextMenu name="ДеревоРзельтатовГолосованияУправлениеПоискомКонтекстноеМеню" id="333"/>
+												<ExtendedTooltip name="ДеревоРзельтатовГолосованияУправлениеПоискомРасширеннаяПодсказка" id="334"/>
+											</SearchControlAddition>
+											<ChildItems>
+												<InputField name="ДеревоРзельтатовГолосованияВопрос" id="135">
+													<DataPath>ДеревоРзельтатовГолосования.Вопрос</DataPath>
+													<ReadOnly>true</ReadOnly>
+													<EditMode>EnterOnInput</EditMode>
+													<ContextMenu name="ДеревоРзельтатовГолосованияВопросКонтекстноеМеню" id="136"/>
+													<ExtendedTooltip name="ДеревоРзельтатовГолосованияВопросExtendedTooltip" id="285"/>
+												</InputField>
+												<InputField name="ДеревоРзельтатовГолосованияКоличествоГолосов" id="139">
+													<DataPath>ДеревоРзельтатовГолосования.ЗначениеГолоса</DataPath>
+													<ReadOnly>true</ReadOnly>
+													<EditMode>EnterOnInput</EditMode>
+													<ContextMenu name="ДеревоРзельтатовГолосованияКоличествоГолосовКонтекстноеМеню" id="140"/>
+													<ExtendedTooltip name="ДеревоРзельтатовГолосованияКоличествоГолосовExtendedTooltip" id="286"/>
+												</InputField>
+												<InputField name="ДеревоРзельтатовГолосованияПроцентГолосов" id="141">
+													<DataPath>ДеревоРзельтатовГолосования.ПроцентГолосов</DataPath>
+													<ReadOnly>true</ReadOnly>
+													<EditMode>EnterOnInput</EditMode>
+													<ContextMenu name="ДеревоРзельтатовГолосованияПроцентГолосовКонтекстноеМеню" id="142"/>
+													<ExtendedTooltip name="ДеревоРзельтатовГолосованияПроцентГолосовExtendedTooltip" id="287"/>
+												</InputField>
+											</ChildItems>
+										</Table>
+									</ChildItems>
+								</Page>
+							</ChildItems>
+						</Pages>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+		<InputField name="Ответственный" id="9">
+			<DataPath>Объект.Ответственный</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="ОтветственныйКонтекстноеМеню" id="10"/>
+			<ExtendedTooltip name="ОтветственныйExtendedTooltip" id="288"/>
+		</InputField>
+		<InputField name="Комментарий" id="11">
+			<DataPath>Объект.Комментарий</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="КомментарийКонтекстноеМеню" id="12"/>
+			<ExtendedTooltip name="КомментарийExtendedTooltip" id="289"/>
+		</InputField>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DocumentObject.бит_СобраниеТСЖ</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+			<UseAlways>
+				<Field>Объект.RegisterRecords</Field>
+			</UseAlways>
+		</Attribute>
+		<Attribute name="ДеревоУчастниковГолосования" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дерево участников голосования</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTree</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="ЗначениеГолоса" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Значение голоса</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>15</v8:Digits>
+							<v8:FractionDigits>2</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="Решение" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Решение</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>999</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ЗданиеУчастник" id="4">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Здание Участник</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.бит_Проживающие</v8:Type>
+						<v8:Type>cfg:CatalogRef.бит_СписокЗданий</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ИдентификаторВопроса" id="5">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Идентификатор вопроса</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>v8:UUID</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ИдентификаторРешения" id="6">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Идентификатор решения</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>v8:UUID</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Использовать" id="7">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Использовать</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Представление" id="8">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Представление</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="УровеньВопрос" id="9">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Уровень вопрос</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="УровеньЗдание" id="10">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Уровень здание</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="УровеньУчастник" id="11">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Уровень участник</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Квартира" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Квартира</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.бит_Квартиры</v8:Type>
+					</Type>
+				</Column>
+				<Column name="КритерийОценкиГолосов" id="12">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Критерий оценки голосов</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:EnumRef.бит_КритерииОценкиГолосов</v8:Type>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="ДеревоРзельтатовГолосования" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дерево рзельтатов голосования</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTree</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Вопрос" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Вопрос</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ЗначениеГолоса" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Значение голоса</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>15</v8:Digits>
+							<v8:FractionDigits>2</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="ПроцентГолосов" id="4">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Процент голосов</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>5</v8:Digits>
+							<v8:FractionDigits>2</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="ИдентификаторВопроса" id="5">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Идентификатор вопроса</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>v8:UUID</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ИдентификаторРешения" id="6">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Идентификатор решения</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>v8:UUID</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ПринятоеРешение" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Принятое решение</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="ИзменилсяСписокЗданий" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Изменился список зданий</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ИзменилосьПредставлениеВопроса" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Изменилось представление вопроса</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ИзменилосьПредставлениеРешения" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Изменилось представление решения</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ТаблицаРезультатовНеАктуальна" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Таблица результатов не актуальна</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ТаблицаУчастниковНеАктуальна" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Таблица участников не актуальна</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="НесовпадаетКолГолосов" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Несовпадает кол голосов</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<ConditionalAppearance>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>ДеревоУчастниковГолосованияИспользовать</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ДеревоУчастниковГолосованияРешение</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ДеревоУчастниковГолосованияКоличествоГолосов</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">ДеревоУчастниковГолосования.УровеньУчастник</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:boolean">false</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ТолькоПросмотр</dcscor:parameter>
+						<dcscor:value xsi:type="xs:boolean">true</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>ДеревоРзельтатовГолосования</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">ДеревоРзельтатовГолосования.ПринятоеРешение</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:boolean">true</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ЦветФона</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">web:HoneyDew</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>ДеревоУчастниковГолосованияКоличествоГолосов</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">ДеревоУчастниковГолосования.КритерийОценкиГолосов</dcsset:left>
+						<dcsset:comparisonType>NotEqual</dcsset:comparisonType>
+						<dcsset:right xsi:type="dcscor:DesignTimeValue">Перечисление.бит_КритерииОценкиГолосов.ПоКоличествуГолосов</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ТолькоПросмотр</dcscor:parameter>
+						<dcscor:value xsi:type="xs:boolean">true</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+		</ConditionalAppearance>
+	</Attributes>
+	<Commands>
+		<Command name="ОбновитьГолосование" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обновить голосование</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обновить голосование</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.Refresh</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ОбновитьВсе</Action>
+			<Representation>TextPicture</Representation>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ОчисититьПринятиеРешения" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Очиситить решения</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Очиситить принятие решения</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОчисититьПринятиеРешения</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="УстановитьФлажки" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Установить флажки</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Установить флажки</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.CheckAll</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>УстановитьФлажки</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="СнятьФлажки" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Снять флажки</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Снять флажки</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.UncheckAll</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>СнятьФлажки</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ЗаполнитьРешение" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить решение</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить решение</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЗаполнитьРешение</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ЗаполнитьРешенияПоВпоросуТекущейСтроки" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить решения (тек. вопрос)</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить решения по впоросу текущей строки</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЗаполнитьРешенияПоВпоросуТекущейСтроки</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ОчиститьРешенияПоВопросуТекущейСтроки" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Очистить решения (тек. вопрос)</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Очистить решения по вопросу текущей строки</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОчиститьРешенияПоВопросуТекущейСтроки</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ОбновитьРешения" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обновить решения</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обновить решения</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.Refresh</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ОбновитьРешения</Action>
+			<Representation>TextPicture</Representation>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="УстновитьЗначениеГолосов" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Устновить значение голосов</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Устновить значение голосов</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>УстновитьЗначениеГолосов</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="УстновитьЗначениеГолосовПоВопросуТекущейСтроки" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Устновить значение голосов (тек. вопрос)</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Устновить значение голосов по вопросу текущей строки</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>УстновитьЗначениеГолосовПоВопросуТекущейСтроки</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+	</Commands>
+	<CommandInterface>
+		<NavigationPanel>
+			<Item>
+				<Command>4:be6441d1-0ad8-4852-806c-533aee06a33f</Command>
+				<Type>Auto</Type>
+				<DefaultVisible>false</DefaultVisible>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+			<Item>
+				<Command>InformationRegister.бит_си_СвязанныеОбъекты.StandardCommand.OpenByValue.Объект</Command>
+				<Type>Auto</Type>
+				<DefaultVisible>false</DefaultVisible>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+		</NavigationPanel>
+	</CommandInterface>
+</Form>

@@ -1,0 +1,160 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.18">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="AfterWrite">ПослеЗаписи</Event>
+		<Event name="OnOpen">ПриОткрытии</Event>
+	</Events>
+	<ChildItems>
+		<InputField name="Период" id="1">
+			<DataPath>Запись.Period</DataPath>
+			<ContextMenu name="ПериодКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="ПериодРасширеннаяПодсказка" id="3"/>
+		</InputField>
+		<InputField name="ФизЛицо" id="4">
+			<DataPath>Запись.ФизЛицо</DataPath>
+			<ContextMenu name="ФизЛицоКонтекстноеМеню" id="5"/>
+			<ExtendedTooltip name="ФизЛицоРасширеннаяПодсказка" id="6"/>
+			<Events>
+				<Event name="OnChange">ФизЛицоПриИзменении</Event>
+			</Events>
+		</InputField>
+		<InputField name="ОтношениеКВоинскойОбязанности" id="7">
+			<DataPath>Запись.ОтношениеКВоинскойОбязанности</DataPath>
+			<ContextMenu name="ОтношениеКВоинскойОбязанностиКонтекстноеМеню" id="8"/>
+			<ExtendedTooltip name="ОтношениеКВоинскойОбязанностиРасширеннаяПодсказка" id="9"/>
+		</InputField>
+		<UsualGroup name="ДанныеВоенногоБилета" id="46">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Данные военного билета</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Данные военного билета</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Vertical</Group>
+			<ExtendedTooltip name="ДанныеВоенногоБилетаРасширеннаяПодсказка" id="47"/>
+			<ChildItems>
+				<InputField name="КатегорияЗапаса" id="13">
+					<DataPath>Запись.КатегорияЗапаса</DataPath>
+					<ContextMenu name="КатегорияЗапасаКонтекстноеМеню" id="14"/>
+					<ExtendedTooltip name="КатегорияЗапасаРасширеннаяПодсказка" id="15"/>
+				</InputField>
+				<InputField name="Звание" id="16">
+					<DataPath>Запись.Звание</DataPath>
+					<ContextMenu name="ЗваниеКонтекстноеМеню" id="17"/>
+					<ExtendedTooltip name="ЗваниеРасширеннаяПодсказка" id="18"/>
+				</InputField>
+				<InputField name="Состав" id="19">
+					<DataPath>Запись.Состав</DataPath>
+					<ContextMenu name="СоставКонтекстноеМеню" id="20"/>
+					<ExtendedTooltip name="СоставРасширеннаяПодсказка" id="21"/>
+				</InputField>
+				<UsualGroup name="Группа1" id="48">
+					<Group>Horizontal</Group>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="49"/>
+					<ChildItems>
+						<InputField name="ВУС" id="22">
+							<DataPath>Запись.ВУС</DataPath>
+							<ContextMenu name="ВУСКонтекстноеМеню" id="23"/>
+							<ExtendedTooltip name="ВУСРасширеннаяПодсказка" id="24"/>
+						</InputField>
+						<InputField name="Годность" id="25">
+							<DataPath>Запись.Годность</DataPath>
+							<ContextMenu name="ГодностьКонтекстноеМеню" id="26"/>
+							<ExtendedTooltip name="ГодностьРасширеннаяПодсказка" id="27"/>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+				<InputField name="Военкомат" id="28">
+					<DataPath>Запись.Военкомат</DataPath>
+					<ContextMenu name="ВоенкоматКонтекстноеМеню" id="29"/>
+					<ExtendedTooltip name="ВоенкоматРасширеннаяПодсказка" id="30"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ОтметкиОПриеме" id="50">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>IX. Отметки о приеме на воинский учет и снятии с воинского учета</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отметки о приеме</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Vertical</Group>
+			<ExtendedTooltip name="ОтметкиОПриемеРасширеннаяПодсказка" id="51"/>
+			<ChildItems>
+				<InputField name="ОтметкаОПриемеНаВоинскийУчетИСнятииСВоинскогоУчета" id="43">
+					<DataPath>Запись.ОтметкаОПриемеНаВоинскийУчетИСнятииСВоинскогоУчета</DataPath>
+					<ContextMenu name="ОтметкаОПриемеНаВоинскийУчетИСнятииСВоинскогоУчетаКонтекстноеМеню" id="44"/>
+					<ExtendedTooltip name="ОтметкаОПриемеНаВоинскийУчетИСнятииСВоинскогоУчетаРасширеннаяПодсказка" id="45"/>
+				</InputField>
+				<InputField name="КемПринятНаВоинскийУчетИлиСнятСВоинскогоУчета" id="40">
+					<DataPath>Запись.КемПринятНаВоинскийУчетИлиСнятСВоинскогоУчета</DataPath>
+					<ContextMenu name="КемПринятНаВоинскийУчетИлиСнятСВоинскогоУчетаКонтекстноеМеню" id="41"/>
+					<ExtendedTooltip name="КемПринятНаВоинскийУчетИлиСнятСВоинскогоУчетаРасширеннаяПодсказка" id="42"/>
+				</InputField>
+				<InputField name="КогдаПринятНаВоинскийУчетИлиСнятСВоинскогоУчета" id="37">
+					<DataPath>Запись.КогдаПринятНаВоинскийУчетИлиСнятСВоинскогоУчета</DataPath>
+					<ContextMenu name="КогдаПринятНаВоинскийУчетИлиСнятСВоинскогоУчетаКонтекстноеМеню" id="38"/>
+					<ExtendedTooltip name="КогдаПринятНаВоинскийУчетИлиСнятСВоинскогоУчетаРасширеннаяПодсказка" id="39"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ОбщийВоинскийУчет" id="52">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Общий воинский учет</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content> Общий воинский учет</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Vertical</Group>
+			<ExtendedTooltip name="ОбщийВоинскийУчетРасширеннаяПодсказка" id="53"/>
+			<ChildItems>
+				<InputField name="ОтношениеКВоинскомуУчету" id="10">
+					<DataPath>Запись.ОтношениеКВоинскомуУчету</DataPath>
+					<ContextMenu name="ОтношениеКВоинскомуУчетуКонтекстноеМеню" id="11"/>
+					<ExtendedTooltip name="ОтношениеКВоинскомуУчетуРасширеннаяПодсказка" id="12"/>
+				</InputField>
+				<CheckBoxField name="НаличиеМобпредписания" id="31">
+					<DataPath>Запись.НаличиеМобпредписания</DataPath>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="НаличиеМобпредписанияКонтекстноеМеню" id="32"/>
+					<ExtendedTooltip name="НаличиеМобпредписанияРасширеннаяПодсказка" id="33"/>
+				</CheckBoxField>
+				<InputField name="НомерКомандыПартии" id="34">
+					<DataPath>Запись.НомерКомандыПартии</DataPath>
+					<ContextMenu name="НомерКомандыПартииКонтекстноеМеню" id="35"/>
+					<ExtendedTooltip name="НомерКомандыПартииРасширеннаяПодсказка" id="36"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Запись" id="1">
+			<Type>
+				<v8:Type>cfg:InformationRegisterRecordManager.бит_ВоинскийУчет</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+	</Attributes>
+</Form>

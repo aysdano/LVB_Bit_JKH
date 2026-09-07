@@ -1,0 +1,611 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.18">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="Шапка" id="35">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Шапка</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Шапка</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Vertical</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ШапкаExtendedTooltip" id="59"/>
+			<ChildItems>
+				<UsualGroup name="КодМакет" id="36">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Код макет</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Код макет</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Horizontal</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="КодМакетExtendedTooltip" id="60"/>
+					<ChildItems>
+						<InputField name="МакетКвитанции" id="5">
+							<DataPath>Объект.МакетКвитанции</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="МакетКвитанцииКонтекстноеМеню" id="6"/>
+							<ExtendedTooltip name="МакетКвитанцииExtendedTooltip" id="61"/>
+						</InputField>
+						<InputField name="Код" id="1">
+							<DataPath>Объект.Code</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="КодКонтекстноеМеню" id="2"/>
+							<ExtendedTooltip name="КодExtendedTooltip" id="62"/>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+				<InputField name="Наименование" id="3">
+					<DataPath>Объект.Description</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="НаименованиеКонтекстноеМеню" id="4"/>
+					<ExtendedTooltip name="НаименованиеExtendedTooltip" id="63"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="Настройки" id="37">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настройки</v8:content>
+				</v8:item>
+			</Title>
+			<TitleFont ref="sys:DefaultGUIFont" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настройки</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Vertical</Group>
+			<ExtendedTooltip name="НастройкиExtendedTooltip" id="64"/>
+			<ChildItems>
+				<InputField name="НастройкаСтавки" id="50">
+					<DataPath>Объект.НастройкаСтавки</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Настройка ставки\тарифа</v8:content>
+						</v8:item>
+					</Title>
+					<HorizontalStretch>false</HorizontalStretch>
+					<ContextMenu name="НастройкаСтавкиКонтекстноеМеню" id="51"/>
+					<ExtendedTooltip name="НастройкаСтавкиExtendedTooltip" id="65"/>
+				</InputField>
+				<CheckBoxField name="БезОтрывнойЧасти" id="33">
+					<DataPath>Объект.БезОтрывнойЧасти</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Без извещения (отрывной части)</v8:content>
+						</v8:item>
+					</Title>
+					<TitleLocation>Right</TitleLocation>
+					<EditMode>EnterOnInput</EditMode>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="БезОтрывнойЧастиКонтекстноеМеню" id="34"/>
+					<ExtendedTooltip name="БезОтрывнойЧастиExtendedTooltip" id="66"/>
+				</CheckBoxField>
+				<UsualGroup name="НастройкиШтрихКода" id="52">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Настройки штрих кода</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Настройки штрих кода</v8:content>
+						</v8:item>
+					</ToolTip>
+					<HorizontalStretch>true</HorizontalStretch>
+					<Group>Vertical</Group>
+					<Representation>StrongSeparation</Representation>
+					<ExtendedTooltip name="НастройкиШтрихКодаExtendedTooltip" id="67"/>
+					<ChildItems>
+						<CheckBoxField name="ФормироватьШтрихКод" id="31">
+							<DataPath>Объект.ФормироватьШтрихКод</DataPath>
+							<TitleLocation>Right</TitleLocation>
+							<EditMode>EnterOnInput</EditMode>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ФормироватьШтрихКодКонтекстноеМеню" id="32"/>
+							<ExtendedTooltip name="ФормироватьШтрихКодExtendedTooltip" id="68"/>
+						</CheckBoxField>
+						<InputField name="ПолеСуммыШК" id="53">
+							<DataPath>Объект.ПолеСуммыШК</DataPath>
+							<HorizontalStretch>false</HorizontalStretch>
+							<ListChoiceMode>true</ListChoiceMode>
+							<ChoiceList>
+								<xr:Item>
+									<xr:Presentation/>
+									<xr:CheckState>0</xr:CheckState>
+									<xr:Value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Итого к оплате с учетом предоплаты</v8:content>
+											</v8:item>
+										</Presentation>
+										<Value xsi:type="xs:string">ИтогоКОплатеСУчетомПредоплаты</Value>
+									</xr:Value>
+								</xr:Item>
+								<xr:Item>
+									<xr:Presentation/>
+									<xr:CheckState>0</xr:CheckState>
+									<xr:Value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Итого к оплате с учетом пени</v8:content>
+											</v8:item>
+										</Presentation>
+										<Value xsi:type="xs:string">ИтогоКОплатеСУчетомПени</Value>
+									</xr:Value>
+								</xr:Item>
+								<xr:Item>
+									<xr:Presentation/>
+									<xr:CheckState>0</xr:CheckState>
+									<xr:Value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>К оплате</v8:content>
+											</v8:item>
+										</Presentation>
+										<Value xsi:type="xs:string">КОплате</Value>
+									</xr:Value>
+								</xr:Item>
+								<xr:Item>
+									<xr:Presentation/>
+									<xr:CheckState>0</xr:CheckState>
+									<xr:Value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>К оплате за месяц</v8:content>
+											</v8:item>
+										</Presentation>
+										<Value xsi:type="xs:string">КОплатеЗаМесяц</Value>
+									</xr:Value>
+								</xr:Item>
+							</ChoiceList>
+							<ContextMenu name="ПолеСуммыШККонтекстноеМеню" id="54"/>
+							<ExtendedTooltip name="ПолеСуммыШКExtendedTooltip" id="69"/>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="НастройкаНаименованияОрганизации" id="39">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Настройка наименований объектов в квитанции:</v8:content>
+						</v8:item>
+					</Title>
+					<TitleFont ref="sys:DefaultGUIFont" kind="WindowsFont"/>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Настройка наименования организации</v8:content>
+						</v8:item>
+					</ToolTip>
+					<HorizontalStretch>true</HorizontalStretch>
+					<Group>Vertical</Group>
+					<Representation>StrongSeparation</Representation>
+					<ExtendedTooltip name="НастройкаНаименованияОрганизацииExtendedTooltip" id="70"/>
+					<ChildItems>
+						<CheckBoxField name="ИспользоватьСокращенноеНаименованиеОрганизации" id="40">
+							<DataPath>Объект.ИспользоватьСокращенноеНаименованиеОрганизации</DataPath>
+							<TitleLocation>Right</TitleLocation>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ИспользоватьСокращенноеНаименованиеОрганизацииКонтекстноеМеню" id="41"/>
+							<ExtendedTooltip name="ИспользоватьСокращенноеНаименованиеОрганизацииExtendedTooltip" id="71"/>
+						</CheckBoxField>
+						<CheckBoxField name="ИспользоватьСокращенноеНаименованиеУслуги" id="42">
+							<DataPath>Объект.ИспользоватьСокращенноеНаименованиеУслуги</DataPath>
+							<TitleLocation>Right</TitleLocation>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ИспользоватьСокращенноеНаименованиеУслугиКонтекстноеМеню" id="43"/>
+							<ExtendedTooltip name="ИспользоватьСокращенноеНаименованиеУслугиExtendedTooltip" id="72"/>
+						</CheckBoxField>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="НастройкаИтоговыхПолей" id="44">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Настройка итоговых полей</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Настройка итоговых полей</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Horizontal</Group>
+					<Representation>None</Representation>
+					<ChildItemsWidth>Equal</ChildItemsWidth>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="НастройкаИтоговыхПолейExtendedTooltip" id="73"/>
+					<ChildItems>
+						<UsualGroup name="НастройкаПоляКОплатеВТаблице" id="38">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Настройка поля "К оплате"</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Настройка поля к оплате в таблице</v8:content>
+								</v8:item>
+							</ToolTip>
+							<HorizontalStretch>true</HorizontalStretch>
+							<VerticalStretch>true</VerticalStretch>
+							<Group>Vertical</Group>
+							<Representation>StrongSeparation</Representation>
+							<ExtendedTooltip name="НастройкаПоляКОплатеВТаблицеExtendedTooltip" id="74"/>
+							<ChildItems>
+								<CheckBoxField name="СальдоВТаблице" id="17">
+									<DataPath>Объект.СальдоКОплате</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Сальдо</v8:content>
+										</v8:item>
+									</Title>
+									<TitleLocation>Right</TitleLocation>
+									<EditMode>EnterOnInput</EditMode>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="СальдоВТаблицеКонтекстноеМеню" id="18"/>
+									<ExtendedTooltip name="СальдоВТаблицеExtendedTooltip" id="75"/>
+									<Events>
+										<Event name="OnChange">СальдоВТаблицеПриИзменении</Event>
+									</Events>
+								</CheckBoxField>
+								<UsualGroup name="Группа1" id="93">
+									<ToolTipRepresentation>None</ToolTipRepresentation>
+									<Group>Horizontal</Group>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="94"/>
+									<ChildItems>
+										<LabelDecoration name="Декорация1" id="98">
+											<Enabled>false</Enabled>
+											<ToolTipRepresentation>None</ToolTipRepresentation>
+											<ContextMenu name="Декорация1КонтекстноеМеню" id="99"/>
+											<ExtendedTooltip name="Декорация1РасширеннаяПодсказка" id="100"/>
+										</LabelDecoration>
+										<CheckBoxField name="СальдоКОплатеБезУчетаДолга" id="95">
+											<DataPath>Объект.СальдоКОплатеБезУчетаДолга</DataPath>
+											<TitleLocation>Right</TitleLocation>
+											<CheckBoxType>Auto</CheckBoxType>
+											<ContextMenu name="СальдоКОплатеБезУчетаДолгаКонтекстноеМеню" id="96"/>
+											<ExtendedTooltip name="СальдоКОплатеБезУчетаДолгаРасширеннаяПодсказка" id="97"/>
+										</CheckBoxField>
+									</ChildItems>
+								</UsualGroup>
+								<CheckBoxField name="НачисленияВТаблице" id="19">
+									<DataPath>Объект.НачисленияКОплате</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Начисления</v8:content>
+										</v8:item>
+									</Title>
+									<TitleLocation>Right</TitleLocation>
+									<EditMode>EnterOnInput</EditMode>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="НачисленияВТаблицеКонтекстноеМеню" id="20"/>
+									<ExtendedTooltip name="НачисленияВТаблицеExtendedTooltip" id="76"/>
+								</CheckBoxField>
+								<CheckBoxField name="ЛьготаВТаблице" id="21">
+									<DataPath>Объект.ЛьготаКОплате</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Льгота</v8:content>
+										</v8:item>
+									</Title>
+									<TitleLocation>Right</TitleLocation>
+									<EditMode>EnterOnInput</EditMode>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="ЛьготаВТаблицеКонтекстноеМеню" id="22"/>
+									<ExtendedTooltip name="ЛьготаВТаблицеExtendedTooltip" id="77"/>
+								</CheckBoxField>
+								<CheckBoxField name="РазовыеВТаблице" id="23">
+									<DataPath>Объект.РазовыеКОплате</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Перерасчет</v8:content>
+										</v8:item>
+									</Title>
+									<TitleLocation>Right</TitleLocation>
+									<EditMode>EnterOnInput</EditMode>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="РазовыеВТаблицеКонтекстноеМеню" id="24"/>
+									<ExtendedTooltip name="РазовыеВТаблицеExtendedTooltip" id="78"/>
+								</CheckBoxField>
+								<CheckBoxField name="ОплатаВТаблице" id="25">
+									<DataPath>Объект.ОплатаКОплате</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Оплата
+</v8:content>
+										</v8:item>
+									</Title>
+									<TitleLocation>Right</TitleLocation>
+									<EditMode>EnterOnInput</EditMode>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="ОплатаВТаблицеКонтекстноеМеню" id="26"/>
+									<ExtendedTooltip name="ОплатаВТаблицеExtendedTooltip" id="79"/>
+								</CheckBoxField>
+								<CheckBoxField name="СубсидияПИКОплате" id="55">
+									<DataPath>Объект.СубсидияПИКОплате</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Субсидия ПИ</v8:content>
+										</v8:item>
+									</Title>
+									<TitleLocation>Right</TitleLocation>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="СубсидияПИКОплатеКонтекстноеМеню" id="56"/>
+									<ExtendedTooltip name="СубсидияПИКОплатеExtendedTooltip" id="80"/>
+								</CheckBoxField>
+								<UsualGroup name="СПлюсомВТаблице" id="47">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>С плюсом в таблице</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>С плюсом в таблице</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Group>Vertical</Group>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="СПлюсомВТаблицеExtendedTooltip" id="81"/>
+									<ChildItems>
+										<CheckBoxField name="ТолькоСПлюсомВТаблице" id="29">
+											<DataPath>Объект.СУчетомПереплатыКОплате</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>С учетом переплаты</v8:content>
+												</v8:item>
+											</Title>
+											<TitleLocation>Right</TitleLocation>
+											<EditMode>EnterOnInput</EditMode>
+											<CheckBoxType>Auto</CheckBoxType>
+											<ContextMenu name="ТолькоСПлюсомВТаблицеКонтекстноеМеню" id="30"/>
+											<ExtendedTooltip name="ТолькоСПлюсомВТаблицеExtendedTooltip" id="82"/>
+										</CheckBoxField>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="НастройкаПоляКОплатеВШапке" id="45">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Настройка поля "К оплате" за месяц</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Настройка поля к оплате в шапке</v8:content>
+								</v8:item>
+							</ToolTip>
+							<HorizontalStretch>true</HorizontalStretch>
+							<VerticalStretch>true</VerticalStretch>
+							<Group>Vertical</Group>
+							<Representation>StrongSeparation</Representation>
+							<ExtendedTooltip name="НастройкаПоляКОплатеВШапкеExtendedTooltip" id="83"/>
+							<ChildItems>
+								<CheckBoxField name="СальдоВШапке" id="7">
+									<DataPath>Объект.СальдоЗаМесяц</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Сальдо</v8:content>
+										</v8:item>
+									</Title>
+									<TitleLocation>Right</TitleLocation>
+									<EditMode>EnterOnInput</EditMode>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="СальдоВШапкеКонтекстноеМеню" id="8"/>
+									<ExtendedTooltip name="СальдоВШапкеExtendedTooltip" id="84"/>
+								</CheckBoxField>
+								<CheckBoxField name="НачисленияВШапке" id="9">
+									<DataPath>Объект.НачисленияЗаМесяц</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Начисления</v8:content>
+										</v8:item>
+									</Title>
+									<TitleLocation>Right</TitleLocation>
+									<EditMode>EnterOnInput</EditMode>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="НачисленияВШапкеКонтекстноеМеню" id="10"/>
+									<ExtendedTooltip name="НачисленияВШапкеExtendedTooltip" id="85"/>
+								</CheckBoxField>
+								<CheckBoxField name="ЛьготаВШапке" id="11">
+									<DataPath>Объект.ЛьготаЗаМесяц</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Льгота</v8:content>
+										</v8:item>
+									</Title>
+									<TitleLocation>Right</TitleLocation>
+									<EditMode>EnterOnInput</EditMode>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="ЛьготаВШапкеКонтекстноеМеню" id="12"/>
+									<ExtendedTooltip name="ЛьготаВШапкеExtendedTooltip" id="86"/>
+								</CheckBoxField>
+								<CheckBoxField name="РазовыеВШапке" id="13">
+									<DataPath>Объект.РазовыеЗаМесяц</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Перерасчет</v8:content>
+										</v8:item>
+									</Title>
+									<TitleLocation>Right</TitleLocation>
+									<EditMode>EnterOnInput</EditMode>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="РазовыеВШапкеКонтекстноеМеню" id="14"/>
+									<ExtendedTooltip name="РазовыеВШапкеExtendedTooltip" id="87"/>
+								</CheckBoxField>
+								<CheckBoxField name="ОплатаВШапке" id="15">
+									<DataPath>Объект.ОплатаЗаМесяц</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Оплата
+</v8:content>
+										</v8:item>
+									</Title>
+									<TitleLocation>Right</TitleLocation>
+									<EditMode>EnterOnInput</EditMode>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="ОплатаВШапкеКонтекстноеМеню" id="16"/>
+									<ExtendedTooltip name="ОплатаВШапкеExtendedTooltip" id="88"/>
+								</CheckBoxField>
+								<CheckBoxField name="СубсидияПИЗаМесяц" id="57">
+									<DataPath>Объект.СубсидияПИЗаМесяц</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Субсидия ПИ</v8:content>
+										</v8:item>
+									</Title>
+									<TitleLocation>Right</TitleLocation>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="СубсидияПИЗаМесяцКонтекстноеМеню" id="58"/>
+									<ExtendedTooltip name="СубсидияПИЗаМесяцExtendedTooltip" id="89"/>
+								</CheckBoxField>
+								<UsualGroup name="СПлюсомВШапке" id="46">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>С плюсом в шапке</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>С плюсом в шапке</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Group>Vertical</Group>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="СПлюсомВШапкеExtendedTooltip" id="90"/>
+									<ChildItems>
+										<CheckBoxField name="ТолькоСПлюсомВШапке" id="27">
+											<DataPath>Объект.СУчетомПереплатыЗаМесяц</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>С учетом переплаты</v8:content>
+												</v8:item>
+											</Title>
+											<TitleLocation>Right</TitleLocation>
+											<EditMode>EnterOnInput</EditMode>
+											<CheckBoxType>Auto</CheckBoxType>
+											<ContextMenu name="ТолькоСПлюсомВШапкеКонтекстноеМеню" id="28"/>
+											<ExtendedTooltip name="ТолькоСПлюсомВШапкеExtendedTooltip" id="91"/>
+										</CheckBoxField>
+										<CheckBoxField name="СальдоВключаетОплату" id="48">
+											<DataPath>Объект.СальдоВключаетОплату</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Сальдо включает текущую оплату</v8:content>
+												</v8:item>
+											</Title>
+											<TitleLocation>Right</TitleLocation>
+											<CheckBoxType>Auto</CheckBoxType>
+											<ContextMenu name="СальдоВключаетОплатуКонтекстноеМеню" id="49"/>
+											<ExtendedTooltip name="СальдоВключаетОплатуExtendedTooltip" id="92"/>
+										</CheckBoxField>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:CatalogObject.бит_НастройкиПечатиМакетовСчетИзвещений</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+	</Attributes>
+	<CommandInterface>
+		<NavigationPanel>
+			<Item>
+				<Command>InformationRegister.бит_си_НастройкиИсточников.StandardCommand.OpenByValue.Объект</Command>
+				<Type>Auto</Type>
+				<DefaultVisible>false</DefaultVisible>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+			<Item>
+				<Command>InformationRegister.бит_icq_Пользователи.StandardCommand.OpenByValue.ОбъектПользователя</Command>
+				<Type>Auto</Type>
+				<DefaultVisible>false</DefaultVisible>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+			<Item>
+				<Command>InformationRegister.бит_си_СвязанныеОбъекты.StandardCommand.OpenByValue.Объект</Command>
+				<Type>Auto</Type>
+				<DefaultVisible>false</DefaultVisible>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+		</NavigationPanel>
+	</CommandInterface>
+</Form>

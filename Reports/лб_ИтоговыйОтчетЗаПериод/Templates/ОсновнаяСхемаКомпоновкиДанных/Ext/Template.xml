@@ -1,0 +1,739 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<DataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcscom="http://v8.1c.ru/8.1/data-composition-system/common" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataSource>
+		<name>ИсточникДанных1</name>
+		<dataSourceType>Local</dataSourceType>
+	</dataSource>
+	<dataSet xsi:type="DataSetQuery">
+		<name>НаборДанных1</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ОбъектУчета</dataPath>
+			<field>ОбъектУчета</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ВидСвойства</dataPath>
+			<field>ВидСвойства</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СтатусКвартиры</dataPath>
+			<field>СтатусКвартиры</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ТипКвартиры</dataPath>
+			<field>ТипКвартиры</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Квартира</dataPath>
+			<field>Квартира</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СпособРасчета</dataPath>
+			<field>СпособРасчета</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>РежимПотребления</dataPath>
+			<field>РежимПотребления</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ВО</dataPath>
+			<field>ВО</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>ВО</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Услуга</dataPath>
+			<field>Услуга</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ГВ</dataPath>
+			<field>ГВ</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>ГВ</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Эл</dataPath>
+			<field>Эл</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ХВ</dataPath>
+			<field>ХВ</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>ХВ</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Поставщик</dataPath>
+			<field>Поставщик</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ВидВодоразбора</dataPath>
+			<field>ВидВодоразбора</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Теплоисточник</dataPath>
+			<field>Теплоисточник</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ЛицевойСчет</dataPath>
+			<field>ЛицевойСчет</field>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Адрес</dataPath>
+			<field>Адрес</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ФизЛицо</dataPath>
+			<field>ФизЛицо</field>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>НормативЭЭ</dataPath>
+			<field>НормативЭЭ</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СтоимостьКубаХВнаГВ</dataPath>
+			<field>СтоимостьКубаХВнаГВ</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ОДН_ГВ_М</dataPath>
+			<field>ОДН_ГВ_М</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>НормативХВ</dataPath>
+			<field>НормативХВ</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>НормативГВ</dataPath>
+			<field>НормативГВ</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>НормативВО</dataPath>
+			<field>НормативВО</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>НормативНаПодогрев</dataPath>
+			<field>НормативНаПодогрев</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ОДН_ЭЭ_кВт</dataPath>
+			<field>ОДН_ЭЭ_кВт</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>МОП</dataPath>
+			<field>МОП</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Подвал</dataPath>
+			<field>Подвал</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Период</dataPath>
+			<field>Период</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Чердак</dataPath>
+			<field>Чердак</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Жилая</dataPath>
+			<field>Жилая</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Нежилая</dataPath>
+			<field>Нежилая</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СтоимостьКубаХВ</dataPath>
+			<field>СтоимостьКубаХВ</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СтоимостьКВтч</dataPath>
+			<field>СтоимостьКВтч</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СтоимостьКубаВО</dataPath>
+			<field>СтоимостьКубаВО</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ЖилаяПлощадь</dataPath>
+			<field>ЖилаяПлощадь</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СтоимостьГКалл</dataPath>
+			<field>СтоимостьГКалл</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ВысотаПотолков</dataPath>
+			<field>ВысотаПотолков</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>НежилаяПлощадь</dataPath>
+			<field>НежилаяПлощадь</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Нежилая площадь</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Этажность</dataPath>
+			<field>Этажность</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ГодПостройки</dataPath>
+			<field>ГодПостройки</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ОДН_ГВ_Р</dataPath>
+			<field>ОДН_ГВ_Р</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СпособНачисленияОДН</dataPath>
+			<field>СпособНачисленияОДН</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Здание</dataPath>
+			<field>Здание</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Здание</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ОДН_ХВ_М</dataPath>
+			<field>ОДН_ХВ_М</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ОДН_ХВ_Р</dataPath>
+			<field>ОДН_ХВ_Р</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ОДН_ЭЭ_Р</dataPath>
+			<field>ОДН_ЭЭ_Р</field>
+		</field>
+		<dataSource>ИсточникДанных1</dataSource>
+		<query>ВЫБРАТЬ
+	КОЛИЧЕСТВО(бит_ПроживающиеПоЛССрезПоследних.ФизЛицо) КАК ФизЛицо,
+	бит_ПроживающиеПоЛССрезПоследних.ЛицевойСчет КАК ЛицевойСчет,
+	бит_СписокЗданий.Ссылка КАК Ссылка
+ПОМЕСТИТЬ ФизЛица
+ИЗ
+	РегистрСведений.бит_ПроживающиеПоЛС.СрезПоследних(, ) КАК бит_ПроживающиеПоЛССрезПоследних
+		ЛЕВОЕ СОЕДИНЕНИЕ Справочник.бит_СписокЗданий КАК бит_СписокЗданий
+		ПО бит_ПроживающиеПоЛССрезПоследних.ЛицевойСчет.Здание = бит_СписокЗданий.Ссылка
+ГДЕ
+	бит_ПроживающиеПоЛССрезПоследних.Период &lt;= &amp;Период
+
+СГРУППИРОВАТЬ ПО
+	бит_ПроживающиеПоЛССрезПоследних.ЛицевойСчет,
+	бит_СписокЗданий.Ссылка
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	СУММА(ФизЛица.ФизЛицо) КАК ФизЛицо,
+	КОЛИЧЕСТВО(ФизЛица.ЛицевойСчет) КАК ЛицевойСчет,
+	бит_СписокЗданий.Ссылка КАК Здание
+ПОМЕСТИТЬ Проживающие
+ИЗ
+	ФизЛица КАК ФизЛица
+		ЛЕВОЕ СОЕДИНЕНИЕ Справочник.бит_СписокЗданий КАК бит_СписокЗданий
+		ПО ФизЛица.Ссылка = бит_СписокЗданий.Ссылка
+
+СГРУППИРОВАТЬ ПО
+	бит_СписокЗданий.Ссылка
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	СУММА(бит_СведенияОКвартиреСрезПоследних.ОбщаяПлощадь - бит_СведенияОКвартиреСрезПоследних.ЖилаяПлощадь) КАК НежилаяПлощадь,
+	СУММА(бит_СведенияОКвартиреСрезПоследних.ЖилаяПлощадь) КАК ЖилаяПлощадь,
+	бит_СписокЗданий.Ссылка КАК Здание
+ПОМЕСТИТЬ Площади
+ИЗ
+	Справочник.бит_СписокЗданий КАК бит_СписокЗданий
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.бит_СведенияОКвартире.СрезПоследних КАК бит_СведенияОКвартиреСрезПоследних
+		ПО бит_СписокЗданий.Ссылка = бит_СведенияОКвартиреСрезПоследних.Квартира.Владелец
+ГДЕ
+	бит_СведенияОКвартиреСрезПоследних.Период &lt;= &amp;Период
+
+СГРУППИРОВАТЬ ПО
+	бит_СписокЗданий.Ссылка
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	лб_ОДН_факт.ОДН_ХВ_М КАК ОДН_ХВ_М,
+	лб_ОДН_факт.ОДН_ХВ_Р КАК ОДН_ХВ_Р,
+	лб_ОДН_факт.ОДН_ГВ_М КАК ОДН_ГВ_М,
+	лб_ОДН_факт.ОДН_ГВ_Р КАК ОДН_ГВ_Р,
+	лб_ОДН_факт.ОДН_ЭЭ_кВт КАК ОДН_ЭЭ_кВт,
+	лб_ОДН_факт.ОДН_ЭЭ_Р КАК ОДН_ЭЭ_Р,
+	лб_ОДН_факт.Адрес КАК Здание
+ПОМЕСТИТЬ Фактические
+ИЗ
+	Справочник.бит_СписокЗданий КАК бит_СписокЗданий
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрНакопления.лб_ОДН_факт КАК лб_ОДН_факт
+		ПО (лб_ОДН_факт.Адрес = бит_СписокЗданий.Ссылка)
+ГДЕ
+	ВЫБОР
+			КОГДА МЕСЯЦ(лб_ОДН_факт.Период) = 1
+					ИЛИ МЕСЯЦ(лб_ОДН_факт.Период) = 2
+				ТОГДА МЕСЯЦ(лб_ОДН_факт.Период) = МЕСЯЦ(&amp;Период) + 10
+						И ГОД(лб_ОДН_факт.Период) = ГОД(&amp;Период) - 1
+			ИНАЧЕ МЕСЯЦ(лб_ОДН_факт.Период) = МЕСЯЦ(&amp;Период) - 2
+					И ГОД(лб_ОДН_факт.Период) = ГОД(&amp;Период)
+		КОНЕЦ
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	лб_НормативыОДНСрезПоследних.НормативХВ КАК НормативХВ,
+	лб_НормативыОДНСрезПоследних.НормативГВ КАК НормативГВ,
+	лб_НормативыОДНСрезПоследних.НормативВО КАК НормативВО,
+	лб_НормативыОДНСрезПоследних.НормативЭЭ КАК НормативЭЭ,
+	лб_НормативыОДНСрезПоследних.НормативНаПодогрев КАК НормативНаПодогрев,
+	лб_НормативыОДНСрезПоследних.МОП КАК МОП,
+	лб_НормативыОДНСрезПоследних.Подвал КАК Подвал,
+	лб_НормативыОДНСрезПоследних.Период КАК Период,
+	лб_НормативыОДНСрезПоследних.Чердак КАК Чердак,
+	лб_НормативыОДНСрезПоследних.Жилая КАК Жилая,
+	лб_НормативыОДНСрезПоследних.Нежилая КАК Нежилая,
+	лб_НормативыОДНСрезПоследних.СтоимостьКубаХВ КАК СтоимостьКубаХВ,
+	лб_НормативыОДНСрезПоследних.СтоимостьКВтч КАК СтоимостьКВтч,
+	лб_НормативыОДНСрезПоследних.СтоимостьКубаВО КАК СтоимостьКубаВО,
+	лб_НормативыОДНСрезПоследних.СтоимостьГКалл КАК СтоимостьГКалл,
+	лб_НормативыОДНСрезПоследних.СтоимостьКубаХВнаГВ КАК СтоимостьКубаХВнаГВ,
+	лб_НормативыОДНСрезПоследних.ВысотаПотолков КАК ВысотаПотолков,
+	лб_НормативыОДНСрезПоследних.Этажность КАК Этажность,
+	лб_НормативыОДНСрезПоследних.ГодПостройки КАК ГодПостройки,
+	лб_НормативыОДНСрезПоследних.Теплоисточник КАК Теплоисточник,
+	лб_НормативыОДНСрезПоследних.ВидВодоразбора КАК ВидВодоразбора,
+	лб_НормативыОДНСрезПоследних.СпособНачисленияОДН КАК СпособНачисленияОДН,
+	бит_СписокЗданий.Ссылка КАК Ссылка
+ПОМЕСТИТЬ норм
+ИЗ
+	РегистрСведений.лб_НормативыОДН.СрезПоследних КАК лб_НормативыОДНСрезПоследних
+		ЛЕВОЕ СОЕДИНЕНИЕ Справочник.бит_СписокЗданий КАК бит_СписокЗданий
+		ПО лб_НормативыОДНСрезПоследних.Адрес = бит_СписокЗданий.Ссылка
+ГДЕ
+	лб_НормативыОДНСрезПоследних.Период &lt;= &amp;Период
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	Площади.НежилаяПлощадь КАК НежилаяПлощадь,
+	Площади.ЖилаяПлощадь КАК ЖилаяПлощадь,
+	Площади.Здание КАК Здание,
+	Проживающие.ФизЛицо КАК ФизЛицо,
+	Проживающие.ЛицевойСчет КАК ЛицевойСчет,
+	Проживающие.Здание КАК ЗданиеДоп
+ПОМЕСТИТЬ ВТ1
+ИЗ
+	Площади КАК Площади
+		ЛЕВОЕ СОЕДИНЕНИЕ Проживающие КАК Проживающие
+		ПО (Проживающие.Здание = Площади.Здание)
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	норм.НормативХВ КАК НормативХВ,
+	норм.НормативГВ КАК НормативГВ,
+	норм.НормативВО КАК НормативВО,
+	норм.НормативЭЭ КАК НормативЭЭ,
+	норм.НормативНаПодогрев КАК НормативНаПодогрев,
+	норм.МОП КАК МОП,
+	норм.Подвал КАК Подвал,
+	норм.Период КАК Период,
+	норм.Чердак КАК Чердак,
+	норм.Жилая КАК Жилая,
+	норм.Нежилая КАК Нежилая,
+	норм.СтоимостьКубаХВ КАК СтоимостьКубаХВ,
+	норм.СтоимостьКВтч КАК СтоимостьКВтч,
+	норм.СтоимостьКубаВО КАК СтоимостьКубаВО,
+	норм.СтоимостьГКалл КАК СтоимостьГКалл,
+	норм.СтоимостьКубаХВнаГВ КАК СтоимостьКубаХВнаГВ,
+	норм.ВысотаПотолков КАК ВысотаПотолков,
+	норм.Этажность КАК Этажность,
+	норм.ГодПостройки КАК ГодПостройки,
+	норм.Теплоисточник КАК Теплоисточник,
+	норм.ВидВодоразбора КАК ВидВодоразбора,
+	норм.СпособНачисленияОДН КАК СпособНачисленияОДН,
+	норм.Ссылка КАК Ссылка,
+	ВТ1.НежилаяПлощадь КАК НежилаяПлощадь,
+	ВТ1.ЖилаяПлощадь КАК ЖилаяПлощадь,
+	ВТ1.Здание КАК Здание,
+	ВТ1.ФизЛицо КАК ФизЛицо,
+	ВТ1.ЛицевойСчет КАК ЛицевойСчет
+ПОМЕСТИТЬ ВТ2
+ИЗ
+	ВТ1 КАК ВТ1
+		ЛЕВОЕ СОЕДИНЕНИЕ норм КАК норм
+		ПО ВТ1.Здание = норм.Ссылка
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ВТ2.НормативХВ КАК НормативХВ,
+	ВТ2.НормативГВ КАК НормативГВ,
+	ВТ2.НормативВО КАК НормативВО,
+	ВТ2.НормативЭЭ КАК НормативЭЭ,
+	ВТ2.НормативНаПодогрев КАК НормативНаПодогрев,
+	ВТ2.МОП КАК МОП,
+	ВТ2.Подвал КАК Подвал,
+	ВТ2.Период КАК Период,
+	ВТ2.Чердак КАК Чердак,
+	ВТ2.Жилая КАК Жилая,
+	ВТ2.Нежилая КАК Нежилая,
+	ВТ2.СтоимостьКубаХВ КАК СтоимостьКубаХВ,
+	ВТ2.СтоимостьКВтч КАК СтоимостьКВтч,
+	ВТ2.СтоимостьКубаВО КАК СтоимостьКубаВО,
+	ВТ2.СтоимостьГКалл КАК СтоимостьГКалл,
+	ВТ2.СтоимостьКубаХВнаГВ КАК СтоимостьКубаХВнаГВ,
+	ВТ2.ВысотаПотолков КАК ВысотаПотолков,
+	ВТ2.Этажность КАК Этажность,
+	ВТ2.ГодПостройки КАК ГодПостройки,
+	ВТ2.Теплоисточник КАК Теплоисточник,
+	ВТ2.ВидВодоразбора КАК ВидВодоразбора,
+	ВТ2.СпособНачисленияОДН КАК СпособНачисленияОДН,
+	ВТ2.НежилаяПлощадь КАК НежилаяПлощадь,
+	ВТ2.ЖилаяПлощадь КАК ЖилаяПлощадь,
+	ВТ2.Здание КАК Здание,
+	ВТ2.ФизЛицо КАК ФизЛицо,
+	ВТ2.ЛицевойСчет КАК ЛицевойСчет,
+	Фактические.ОДН_ХВ_М КАК ОДН_ХВ_М,
+	Фактические.ОДН_ХВ_Р КАК ОДН_ХВ_Р,
+	Фактические.ОДН_ГВ_М КАК ОДН_ГВ_М,
+	Фактические.ОДН_ГВ_Р КАК ОДН_ГВ_Р,
+	Фактические.ОДН_ЭЭ_кВт КАК ОДН_ЭЭ_кВт,
+	Фактические.ОДН_ЭЭ_Р КАК ОДН_ЭЭ_Р
+ПОМЕСТИТЬ БезТарифов
+ИЗ
+	ВТ2 КАК ВТ2
+		ЛЕВОЕ СОЕДИНЕНИЕ Фактические КАК Фактические
+		ПО ВТ2.Здание = Фактические.Здание
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	бит_ЗначенияСвойствОбъектовУчетаПериодическиеСрезПоследних.Значение КАК Значение,
+	бит_СведенияОКвартиреСрезПоследних.ТипКвартиры КАК ТипКвартиры,
+	бит_СведенияОКвартиреСрезПоследних.СтатусКвартиры КАК СтатусКвартиры,
+	бит_СписокЗданий.Ссылка КАК Ссылка
+ПОМЕСТИТЬ ДляТарифа
+ИЗ
+	Справочник.бит_СписокЗданий КАК бит_СписокЗданий
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.бит_ЗначенияСвойствОбъектовУчетаПериодические.СрезПоследних КАК бит_ЗначенияСвойствОбъектовУчетаПериодическиеСрезПоследних
+		ПО бит_СписокЗданий.Ссылка = бит_ЗначенияСвойствОбъектовУчетаПериодическиеСрезПоследних.ОбъектУчета
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.бит_СведенияОКвартире.СрезПоследних КАК бит_СведенияОКвартиреСрезПоследних
+		ПО бит_СписокЗданий.Ссылка = бит_СведенияОКвартиреСрезПоследних.Квартира.Владелец
+ГДЕ
+	бит_ЗначенияСвойствОбъектовУчетаПериодическиеСрезПоследних.ВидСвойства.Наименование = "Основной режим потребления (Омск)"
+	И бит_СведенияОКвартиреСрезПоследних.Квартира.Наименование = "1"
+	И бит_ЗначенияСвойствОбъектовУчетаПериодическиеСрезПоследних.Период &lt;= &amp;Период
+	И бит_СведенияОКвартиреСрезПоследних.Период &lt;= &amp;Период
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	бит_СтавкиНаУслугиСрезПоследних.ОсновнаяСтавка КАК ХВ,
+	ДляТарифа.Ссылка КАК Ссылка
+ПОМЕСТИТЬ УслугаХВ
+{ВЫБРАТЬ
+	ХВ}
+ИЗ
+	ДляТарифа КАК ДляТарифа
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.бит_СтавкиНаУслуги.СрезПоследних КАК бит_СтавкиНаУслугиСрезПоследних
+		ПО ДляТарифа.ТипКвартиры = бит_СтавкиНаУслугиСрезПоследних.ТипКвартиры
+			И ДляТарифа.СтатусКвартиры = бит_СтавкиНаУслугиСрезПоследних.СтатусКвартиры
+			И ДляТарифа.Значение = бит_СтавкиНаУслугиСрезПоследних.РежимПотребления
+ГДЕ
+	бит_СтавкиНаУслугиСрезПоследних.Период &lt;= &amp;Период
+	И бит_СтавкиНаУслугиСрезПоследних.Услуга.Наименование = "ОДН ХВ"
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	бит_СтавкиНаУслугиСрезПоследних.ОсновнаяСтавка КАК ГВ,
+	ДляТарифа.Ссылка КАК Ссылка
+ПОМЕСТИТЬ УслугаГВ
+{ВЫБРАТЬ
+	ГВ}
+ИЗ
+	ДляТарифа КАК ДляТарифа
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.бит_СтавкиНаУслуги.СрезПоследних КАК бит_СтавкиНаУслугиСрезПоследних
+		ПО ДляТарифа.ТипКвартиры = бит_СтавкиНаУслугиСрезПоследних.ТипКвартиры
+			И ДляТарифа.СтатусКвартиры = бит_СтавкиНаУслугиСрезПоследних.СтатусКвартиры
+			И ДляТарифа.Значение = бит_СтавкиНаУслугиСрезПоследних.РежимПотребления
+ГДЕ
+	бит_СтавкиНаУслугиСрезПоследних.Период &lt;= &amp;Период
+	И бит_СтавкиНаУслугиСрезПоследних.Услуга.Наименование = "ОДН ГВ"
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	бит_СтавкиНаУслугиСрезПоследних.ОсновнаяСтавка КАК ВО,
+	ДляТарифа.Ссылка КАК Ссылка
+ПОМЕСТИТЬ УслугаВО
+{ВЫБРАТЬ
+	ВО}
+ИЗ
+	ДляТарифа КАК ДляТарифа
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.бит_СтавкиНаУслуги.СрезПоследних КАК бит_СтавкиНаУслугиСрезПоследних
+		ПО ДляТарифа.ТипКвартиры = бит_СтавкиНаУслугиСрезПоследних.ТипКвартиры
+			И ДляТарифа.СтатусКвартиры = бит_СтавкиНаУслугиСрезПоследних.СтатусКвартиры
+			И ДляТарифа.Значение = бит_СтавкиНаУслугиСрезПоследних.РежимПотребления
+ГДЕ
+	бит_СтавкиНаУслугиСрезПоследних.Период &lt;= &amp;Период
+	И бит_СтавкиНаУслугиСрезПоследних.Услуга.Наименование = "ОДН ВО"
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	бит_СтавкиНаУслугиСрезПоследних.ОсновнаяСтавка КАК Эл,
+	УслугаВО.ВО КАК ВО,
+	УслугаГВ.ГВ КАК ГВ,
+	УслугаХВ.ХВ КАК ХВ,
+	ДляТарифа.Ссылка КАК Ссылка
+ПОМЕСТИТЬ Тарифы
+{ВЫБРАТЬ
+	Эл}
+ИЗ
+	ДляТарифа КАК ДляТарифа
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.бит_СтавкиНаУслуги.СрезПоследних КАК бит_СтавкиНаУслугиСрезПоследних
+		ПО ДляТарифа.ТипКвартиры = бит_СтавкиНаУслугиСрезПоследних.ТипКвартиры
+			И ДляТарифа.СтатусКвартиры = бит_СтавкиНаУслугиСрезПоследних.СтатусКвартиры
+			И ДляТарифа.Значение = бит_СтавкиНаУслугиСрезПоследних.РежимПотребления
+		ЛЕВОЕ СОЕДИНЕНИЕ УслугаХВ КАК УслугаХВ
+		ПО ДляТарифа.Ссылка = УслугаХВ.Ссылка
+		ЛЕВОЕ СОЕДИНЕНИЕ УслугаГВ КАК УслугаГВ
+		ПО ДляТарифа.Ссылка = УслугаГВ.Ссылка
+		ЛЕВОЕ СОЕДИНЕНИЕ УслугаВО КАК УслугаВО
+		ПО ДляТарифа.Ссылка = УслугаВО.Ссылка
+ГДЕ
+	бит_СтавкиНаУслугиСрезПоследних.Период &lt;= &amp;Период
+	И бит_СтавкиНаУслугиСрезПоследних.Услуга.Наименование = "ОДН ГВ"
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	БезТарифов.НормативХВ КАК НормативХВ,
+	БезТарифов.НормативГВ КАК НормативГВ,
+	БезТарифов.НормативВО КАК НормативВО,
+	БезТарифов.НормативЭЭ КАК НормативЭЭ,
+	БезТарифов.НормативНаПодогрев КАК НормативНаПодогрев,
+	БезТарифов.МОП КАК МОП,
+	БезТарифов.Подвал КАК Подвал,
+	БезТарифов.Период КАК Период,
+	БезТарифов.Чердак КАК Чердак,
+	БезТарифов.Жилая КАК Жилая,
+	БезТарифов.Нежилая КАК Нежилая,
+	БезТарифов.СтоимостьКубаХВ КАК СтоимостьКубаХВ,
+	БезТарифов.СтоимостьКВтч КАК СтоимостьКВтч,
+	БезТарифов.СтоимостьКубаВО КАК СтоимостьКубаВО,
+	БезТарифов.СтоимостьГКалл КАК СтоимостьГКалл,
+	БезТарифов.СтоимостьКубаХВнаГВ КАК СтоимостьКубаХВнаГВ,
+	БезТарифов.ВысотаПотолков КАК ВысотаПотолков,
+	БезТарифов.Этажность КАК Этажность,
+	БезТарифов.ГодПостройки КАК ГодПостройки,
+	БезТарифов.Теплоисточник КАК Теплоисточник,
+	БезТарифов.ВидВодоразбора КАК ВидВодоразбора,
+	БезТарифов.СпособНачисленияОДН КАК СпособНачисленияОДН,
+	БезТарифов.НежилаяПлощадь КАК НежилаяПлощадь,
+	БезТарифов.ЖилаяПлощадь КАК ЖилаяПлощадь,
+	БезТарифов.Здание КАК Здание,
+	БезТарифов.ФизЛицо КАК ФизЛицо,
+	БезТарифов.ЛицевойСчет КАК ЛицевойСчет,
+	БезТарифов.ОДН_ХВ_М КАК ОДН_ХВ_М,
+	БезТарифов.ОДН_ХВ_Р КАК ОДН_ХВ_Р,
+	БезТарифов.ОДН_ГВ_М КАК ОДН_ГВ_М,
+	БезТарифов.ОДН_ГВ_Р КАК ОДН_ГВ_Р,
+	БезТарифов.ОДН_ЭЭ_кВт КАК ОДН_ЭЭ_кВт,
+	БезТарифов.ОДН_ЭЭ_Р КАК ОДН_ЭЭ_Р,
+	Тарифы.Эл КАК Эл,
+	Тарифы.ВО КАК ВО,
+	Тарифы.ГВ КАК ГВ,
+	Тарифы.ХВ КАК ХВ
+ИЗ
+	БезТарифов КАК БезТарифов
+		ЛЕВОЕ СОЕДИНЕНИЕ Тарифы КАК Тарифы
+		ПО БезТарифов.Здание = Тарифы.Ссылка</query>
+	</dataSet>
+	<parameter>
+		<name>Период</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Период</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>false</useRestriction>
+	</parameter>
+	<settingsVariant>
+		<dcsset:name>Основной</dcsset:name>
+		<dcsset:presentation xsi:type="xs:string">Основной</dcsset:presentation>
+		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+			<dcsset:selection>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ВидВодоразбора</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ВО</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ВысотаПотолков</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ГВ</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ГодПостройки</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Жилая</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ЖилаяПлощадь</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Здание</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ЛицевойСчет</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>МОП</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Нежилая</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>НежилаяПлощадь</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>НормативВО</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>НормативГВ</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>НормативНаПодогрев</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>НормативХВ</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>НормативЭЭ</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ОДН_ГВ_М</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ОДН_ГВ_Р</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ОДН_ХВ_М</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ОДН_ХВ_Р</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ОДН_ЭЭ_кВт</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ОДН_ЭЭ_Р</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Период</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Подвал</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>СпособНачисленияОДН</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>СтоимостьГКалл</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>СтоимостьКВтч</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>СтоимостьКубаВО</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>СтоимостьКубаХВ</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>СтоимостьКубаХВнаГВ</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Теплоисточник</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ФизЛицо</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ХВ</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Чердак</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Эл</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Этажность</dcsset:field>
+				</dcsset:item>
+			</dcsset:selection>
+			<dcsset:dataParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Период</dcscor:parameter>
+					<dcscor:value xsi:type="v8:StandardBeginningDate">
+						<v8:variant xsi:type="v8:StandardBeginningDateVariant">Custom</v8:variant>
+						<v8:date>0001-01-01T00:00:00</v8:date>
+					</dcscor:value>
+				</dcscor:item>
+			</dcsset:dataParameters>
+			<dcsset:item xsi:type="dcsset:StructureItemTable">
+				<dcsset:row>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+					</dcsset:order>
+					<dcsset:selection>
+						<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+					</dcsset:selection>
+				</dcsset:row>
+				<dcsset:selection>
+					<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+				</dcsset:selection>
+			</dcsset:item>
+		</dcsset:settings>
+	</settingsVariant>
+</DataCompositionSchema>

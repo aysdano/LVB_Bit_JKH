@@ -1,0 +1,130 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.18">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<ChildItems>
+		<UsualGroup name="Группа1" id="17">
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="21"/>
+			<ChildItems>
+				<InputField name="Тип" id="5">
+					<DataPath>Объект.Тип</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ТипКонтекстноеМеню" id="6"/>
+					<ExtendedTooltip name="ТипРасширеннаяПодсказка" id="22"/>
+				</InputField>
+				<InputField name="Наименование" id="3">
+					<DataPath>Объект.Description</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="НаименованиеКонтекстноеМеню" id="4"/>
+					<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="23"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<InputField name="ВидОбъектаКонтактнойИнформации" id="7">
+			<DataPath>Объект.ВидОбъектаКонтактнойИнформации</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="ВидОбъектаКонтактнойИнформацииКонтекстноеМеню" id="8"/>
+			<ExtendedTooltip name="ВидОбъектаКонтактнойИнформацииРасширеннаяПодсказка" id="24"/>
+		</InputField>
+		<UsualGroup name="Группа2" id="18">
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="Группа2РасширеннаяПодсказка" id="25"/>
+			<ChildItems>
+				<UsualGroup name="Группа3" id="19">
+					<Group>Vertical</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="Группа3РасширеннаяПодсказка" id="26"/>
+					<ChildItems>
+						<CheckBoxField name="РедактированиеВДиалоге" id="9">
+							<DataPath>Объект.РедактированиеВДиалоге</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="РедактированиеВДиалогеКонтекстноеМеню" id="10"/>
+							<ExtendedTooltip name="РедактированиеВДиалогеРасширеннаяПодсказка" id="27"/>
+						</CheckBoxField>
+						<CheckBoxField name="МожноРедактироватьТолькоВДиалоге" id="11">
+							<DataPath>Объект.МожноРедактироватьТолькоВДиалоге</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="МожноРедактироватьТолькоВДиалогеКонтекстноеМеню" id="12"/>
+							<ExtendedTooltip name="МожноРедактироватьТолькоВДиалогеРасширеннаяПодсказка" id="28"/>
+						</CheckBoxField>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="Группа4" id="20">
+					<Group>Vertical</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="Группа4РасширеннаяПодсказка" id="29"/>
+					<ChildItems>
+						<InputField name="Порядок" id="13">
+							<DataPath>Объект.Порядок</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ПорядокКонтекстноеМеню" id="14"/>
+							<ExtendedTooltip name="ПорядокРасширеннаяПодсказка" id="30"/>
+						</InputField>
+						<InputField name="НомерКартинки" id="15">
+							<DataPath>Объект.НомерКартинки</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="НомерКартинкиКонтекстноеМеню" id="16"/>
+							<ExtendedTooltip name="НомерКартинкиРасширеннаяПодсказка" id="31"/>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:CatalogObject.бит_ВидыКонтактнойИнформации</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+	</Attributes>
+	<CommandInterface>
+		<NavigationPanel>
+			<Item>
+				<Command>InformationRegister.бит_КонтактнаяИнформация.StandardCommand.OpenByValue.Вид</Command>
+				<Type>Auto</Type>
+				<DefaultVisible>false</DefaultVisible>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+			<Item>
+				<Command>InformationRegister.бит_си_НастройкиИсточников.StandardCommand.OpenByValue.Объект</Command>
+				<Type>Auto</Type>
+				<DefaultVisible>false</DefaultVisible>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+			<Item>
+				<Command>InformationRegister.бит_icq_Пользователи.StandardCommand.OpenByValue.ОбъектПользователя</Command>
+				<Type>Auto</Type>
+				<DefaultVisible>false</DefaultVisible>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+			<Item>
+				<Command>InformationRegister.бит_си_СвязанныеОбъекты.StandardCommand.OpenByValue.Объект</Command>
+				<Type>Auto</Type>
+				<DefaultVisible>false</DefaultVisible>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+		</NavigationPanel>
+	</CommandInterface>
+</Form>

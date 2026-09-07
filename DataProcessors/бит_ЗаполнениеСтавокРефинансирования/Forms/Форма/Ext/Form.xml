@@ -1,0 +1,186 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.18">
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="ChoiceProcessing">ОбработкаВыбора</Event>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="Группа1" id="42">
+			<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="43"/>
+			<ChildItems>
+				<InputField name="Дата" id="34">
+					<DataPath>Объект.Дата</DataPath>
+					<ContextMenu name="ДатаКонтекстноеМеню" id="35"/>
+					<ExtendedTooltip name="ДатаРасширеннаяПодсказка" id="36"/>
+					<Events>
+						<Event name="ChoiceProcessing">ДатаОбработкаВыбора</Event>
+					</Events>
+				</InputField>
+				<Button name="Сформировать" id="40">
+					<Type>UsualButton</Type>
+					<CommandName>Form.Command.Сформировать</CommandName>
+					<ExtendedTooltip name="СформироватьРасширеннаяПодсказка" id="41"/>
+				</Button>
+			</ChildItems>
+		</UsualGroup>
+		<InputField name="Организация" id="1">
+			<DataPath>Объект.Организация</DataPath>
+			<ContextMenu name="ОрганизацияКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="ОрганизацияРасширеннаяПодсказка" id="3"/>
+		</InputField>
+		<InputField name="ПериодНачисления" id="4">
+			<DataPath>Объект.ПериодНачисления</DataPath>
+			<ContextMenu name="ПериодНачисленияКонтекстноеМеню" id="5"/>
+			<ExtendedTooltip name="ПериодНачисленияРасширеннаяПодсказка" id="6"/>
+			<Events>
+				<Event name="ChoiceProcessing">ПериодНачисленияОбработкаВыбора</Event>
+			</Events>
+		</InputField>
+		<Table name="ТаблицаУслуг" id="7">
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<DataPath>Объект.ТаблицаУслуг</DataPath>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="ТаблицаУслугКонтекстноеМеню" id="8"/>
+			<AutoCommandBar name="ТаблицаУслугКоманднаяПанель" id="9">
+				<ChildItems>
+					<Button name="ТаблицаУслугПодбор" id="32">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.Подбор</CommandName>
+						<ExtendedTooltip name="ТаблицаУслугПодборРасширеннаяПодсказка" id="33"/>
+					</Button>
+					<Button name="ТаблицаУслугВсе" id="44">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.Все</CommandName>
+						<ExtendedTooltip name="ТаблицаУслугВсеРасширеннаяПодсказка" id="45"/>
+					</Button>
+				</ChildItems>
+			</AutoCommandBar>
+			<ExtendedTooltip name="ТаблицаУслугРасширеннаяПодсказка" id="10"/>
+			<SearchStringAddition name="ТаблицаУслугСтрокаПоиска" id="11">
+				<AdditionSource>
+					<Item>ТаблицаУслуг</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ТаблицаУслугСтрокаПоискаКонтекстноеМеню" id="12"/>
+				<ExtendedTooltip name="ТаблицаУслугСтрокаПоискаРасширеннаяПодсказка" id="13"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="ТаблицаУслугСостояниеПросмотра" id="14">
+				<AdditionSource>
+					<Item>ТаблицаУслуг</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ТаблицаУслугСостояниеПросмотраКонтекстноеМеню" id="15"/>
+				<ExtendedTooltip name="ТаблицаУслугСостояниеПросмотраРасширеннаяПодсказка" id="16"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="ТаблицаУслугУправлениеПоиском" id="17">
+				<AdditionSource>
+					<Item>ТаблицаУслуг</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="ТаблицаУслугУправлениеПоискомКонтекстноеМеню" id="18"/>
+				<ExtendedTooltip name="ТаблицаУслугУправлениеПоискомРасширеннаяПодсказка" id="19"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<LabelField name="ТаблицаУслугНомерСтроки" id="20">
+					<DataPath>Объект.ТаблицаУслуг.LineNumber</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ТаблицаУслугНомерСтрокиКонтекстноеМеню" id="21"/>
+					<ExtendedTooltip name="ТаблицаУслугНомерСтрокиРасширеннаяПодсказка" id="22"/>
+				</LabelField>
+				<InputField name="ТаблицаУслугУслуга" id="23">
+					<DataPath>Объект.ТаблицаУслуг.Услуга</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ТаблицаУслугУслугаКонтекстноеМеню" id="24"/>
+					<ExtendedTooltip name="ТаблицаУслугУслугаРасширеннаяПодсказка" id="25"/>
+				</InputField>
+				<CheckBoxField name="ТаблицаУслугНачислять" id="26">
+					<DataPath>Объект.ТаблицаУслуг.Начислять</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ТаблицаУслугНачислятьКонтекстноеМеню" id="27"/>
+					<ExtendedTooltip name="ТаблицаУслугНачислятьРасширеннаяПодсказка" id="28"/>
+					<Events>
+						<Event name="OnChange">ТаблицаУслугНачислятьПриИзменении</Event>
+					</Events>
+				</CheckBoxField>
+				<InputField name="ТаблицаУслугСтавка" id="37">
+					<DataPath>Объект.ТаблицаУслуг.Ставка</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Ставка рефинансирования</v8:content>
+						</v8:item>
+					</Title>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ТаблицаУслугСтавкаКонтекстноеМеню" id="38"/>
+					<ExtendedTooltip name="ТаблицаУслугСтавкаРасширеннаяПодсказка" id="39"/>
+				</InputField>
+				<InputField name="ТаблицаУслугПроцент" id="29">
+					<DataPath>Объект.ТаблицаУслуг.Процент</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ТаблицаУслугПроцентКонтекстноеМеню" id="30"/>
+					<ExtendedTooltip name="ТаблицаУслугПроцентРасширеннаяПодсказка" id="31"/>
+				</InputField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.бит_ЗаполнениеСтавокРефинансирования</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="Подбор" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подбор</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подбор</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Подбор</Action>
+		</Command>
+		<Command name="Сформировать" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сформировать</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сформировать</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Сформировать</Action>
+		</Command>
+		<Command name="Все" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Все</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Все</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Все</Action>
+		</Command>
+	</Commands>
+</Form>

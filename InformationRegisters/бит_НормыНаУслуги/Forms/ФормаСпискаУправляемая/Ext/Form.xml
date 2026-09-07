@@ -1,0 +1,199 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.18">
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<ChildItems>
+		<Table name="Список" id="1">
+			<Representation>List</Representation>
+			<CommandBarLocation>None</CommandBarLocation>
+			<DefaultItem>true</DefaultItem>
+			<UseAlternationRowColor>true</UseAlternationRowColor>
+			<InitialTreeView>ExpandTopLevel</InitialTreeView>
+			<EnableStartDrag>true</EnableStartDrag>
+			<FileDragMode>AsFile</FileDragMode>
+			<DataPath>Список</DataPath>
+			<RowPictureDataPath>Список.DefaultPicture</RowPictureDataPath>
+			<SearchStringLocation>None</SearchStringLocation>
+			<ViewStatusLocation>None</ViewStatusLocation>
+			<SearchControlLocation>None</SearchControlLocation>
+			<AutoRefresh>false</AutoRefresh>
+			<AutoRefreshPeriod>60</AutoRefreshPeriod>
+			<Period>
+				<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+				<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+				<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+			</Period>
+			<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+			<RestoreCurrentRow>false</RestoreCurrentRow>
+			<TopLevelParent xsi:nil="true"/>
+			<ShowRoot>true</ShowRoot>
+			<AllowRootChoice>false</AllowRootChoice>
+			<UpdateOnDataChange>Auto</UpdateOnDataChange>
+			<AllowGettingCurrentRowURL>true</AllowGettingCurrentRowURL>
+			<ContextMenu name="СписокКонтекстноеМеню" id="2"/>
+			<AutoCommandBar name="СписокКоманднаяПанель" id="3">
+				<Autofill>false</Autofill>
+			</AutoCommandBar>
+			<ExtendedTooltip name="СписокРасширеннаяПодсказка" id="40"/>
+			<SearchStringAddition name="СписокСтрокаПоиска" id="41">
+				<AdditionSource>
+					<Item>Список</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокСтрокаПоискаКонтекстноеМеню" id="42"/>
+				<ExtendedTooltip name="СписокСтрокаПоискаРасширеннаяПодсказка" id="43"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="СписокСостояниеПросмотра" id="44">
+				<AdditionSource>
+					<Item>Список</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокСостояниеПросмотраКонтекстноеМеню" id="45"/>
+				<ExtendedTooltip name="СписокСостояниеПросмотраРасширеннаяПодсказка" id="46"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="СписокУправлениеПоиском" id="47">
+				<AdditionSource>
+					<Item>Список</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокУправлениеПоискомКонтекстноеМеню" id="48"/>
+				<ExtendedTooltip name="СписокУправлениеПоискомРасширеннаяПодсказка" id="49"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<LabelField name="Период" id="4">
+					<DataPath>Список.Period</DataPath>
+					<DefaultItem>true</DefaultItem>
+					<ContextMenu name="ПериодКонтекстноеМеню" id="5"/>
+					<ExtendedTooltip name="ПериодРасширеннаяПодсказка" id="50"/>
+				</LabelField>
+				<LabelField name="Услуга" id="6">
+					<DataPath>Список.Услуга</DataPath>
+					<ContextMenu name="УслугаКонтекстноеМеню" id="7"/>
+					<ExtendedTooltip name="УслугаРасширеннаяПодсказка" id="51"/>
+				</LabelField>
+				<LabelField name="СпособРасчетаПоУслуге" id="8">
+					<DataPath>Список.СпособРасчетаПоУслуге</DataPath>
+					<ContextMenu name="СпособРасчетаПоУслугеКонтекстноеМеню" id="9"/>
+					<ExtendedTooltip name="СпособРасчетаПоУслугеРасширеннаяПодсказка" id="52"/>
+				</LabelField>
+				<LabelField name="РежимПотребления" id="10">
+					<DataPath>Список.РежимПотребления</DataPath>
+					<ContextMenu name="РежимПотребленияКонтекстноеМеню" id="11"/>
+					<ExtendedTooltip name="РежимПотребленияРасширеннаяПодсказка" id="53"/>
+				</LabelField>
+				<LabelField name="СтатусКвартиры" id="12">
+					<DataPath>Список.СтатусКвартиры</DataPath>
+					<ContextMenu name="СтатусКвартирыКонтекстноеМеню" id="13"/>
+					<ExtendedTooltip name="СтатусКвартирыРасширеннаяПодсказка" id="54"/>
+				</LabelField>
+				<LabelField name="ТипКвартиры" id="14">
+					<DataPath>Список.ТипКвартиры</DataPath>
+					<ContextMenu name="ТипКвартирыКонтекстноеМеню" id="15"/>
+					<ExtendedTooltip name="ТипКвартирыРасширеннаяПодсказка" id="55"/>
+				</LabelField>
+				<LabelField name="НормативПотребленияПоКу" id="32">
+					<DataPath>Список.НормативПотребленияПоКу</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Норматив потребления по КУ</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="НормативПотребленияПоКуКонтекстноеМеню" id="33"/>
+					<ExtendedTooltip name="НормативПотребленияПоКуРасширеннаяПодсказка" id="56"/>
+				</LabelField>
+				<LabelField name="НормативОДН" id="68">
+					<DataPath>Список.НормативОДН</DataPath>
+					<ContextMenu name="НормативОДНКонтекстноеМеню" id="69"/>
+					<ExtendedTooltip name="НормативОДНРасширеннаяПодсказка" id="70"/>
+				</LabelField>
+				<LabelField name="НаОдного" id="16">
+					<DataPath>Список.НаОдного</DataPath>
+					<ContextMenu name="НаОдногоКонтекстноеМеню" id="17"/>
+					<ExtendedTooltip name="НаОдногоРасширеннаяПодсказка" id="57"/>
+				</LabelField>
+				<LabelField name="НаДвоих" id="18">
+					<DataPath>Список.НаДвоих</DataPath>
+					<ContextMenu name="НаДвоихКонтекстноеМеню" id="19"/>
+					<ExtendedTooltip name="НаДвоихРасширеннаяПодсказка" id="58"/>
+				</LabelField>
+				<LabelField name="НаСемью" id="20">
+					<DataPath>Список.НаСемью</DataPath>
+					<ContextMenu name="НаСемьюКонтекстноеМеню" id="21"/>
+					<ExtendedTooltip name="НаСемьюРасширеннаяПодсказка" id="59"/>
+				</LabelField>
+				<LabelField name="НаСемью4" id="34">
+					<DataPath>Список.НаСемью4</DataPath>
+					<ContextMenu name="НаСемью4КонтекстноеМеню" id="35"/>
+					<ExtendedTooltip name="НаСемью4РасширеннаяПодсказка" id="60"/>
+				</LabelField>
+				<LabelField name="НаСемью5" id="36">
+					<DataPath>Список.НаСемью5</DataPath>
+					<ContextMenu name="НаСемью5КонтекстноеМеню" id="37"/>
+					<ExtendedTooltip name="НаСемью5РасширеннаяПодсказка" id="61"/>
+				</LabelField>
+				<LabelField name="НаСемью6" id="38">
+					<DataPath>Список.НаСемью6</DataPath>
+					<ContextMenu name="НаСемью6КонтекстноеМеню" id="39"/>
+					<ExtendedTooltip name="НаСемью6РасширеннаяПодсказка" id="62"/>
+				</LabelField>
+				<LabelField name="НаЛицевойСчет" id="30">
+					<DataPath>Список.НаЛицевойСчет</DataPath>
+					<ContextMenu name="НаЛицевойСчетКонтекстноеМеню" id="31"/>
+					<ExtendedTooltip name="НаЛицевойСчетРасширеннаяПодсказка" id="63"/>
+				</LabelField>
+				<LabelField name="ДопНормаНаСемью" id="22">
+					<DataPath>Список.ДопНормаНаСемью</DataPath>
+					<ContextMenu name="ДопНормаНаСемьюКонтекстноеМеню" id="23"/>
+					<ExtendedTooltip name="ДопНормаНаСемьюРасширеннаяПодсказка" id="64"/>
+				</LabelField>
+				<LabelField name="ДопНормаНаКаждого" id="24">
+					<DataPath>Список.ДопНормаНаКаждого</DataPath>
+					<ContextMenu name="ДопНормаНаКаждогоКонтекстноеМеню" id="25"/>
+					<ExtendedTooltip name="ДопНормаНаКаждогоРасширеннаяПодсказка" id="65"/>
+				</LabelField>
+				<CheckBoxField name="ИспользоватьДопНормуНаОдного" id="26">
+					<DataPath>Список.ИспользоватьДопНормуНаОдного</DataPath>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ИспользоватьДопНормуНаОдногоКонтекстноеМеню" id="27"/>
+					<ExtendedTooltip name="ИспользоватьДопНормуНаОдногоРасширеннаяПодсказка" id="66"/>
+				</CheckBoxField>
+				<CheckBoxField name="ИспользоватьДопНормуНаЛьготника" id="28">
+					<DataPath>Список.ИспользоватьДопНормуНаЛьготника</DataPath>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ИспользоватьДопНормуНаЛьготникаКонтекстноеМеню" id="29"/>
+					<ExtendedTooltip name="ИспользоватьДопНормуНаЛьготникаРасширеннаяПодсказка" id="67"/>
+				</CheckBoxField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Список" id="1">
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>false</ManualQuery>
+				<DynamicDataRead>true</DynamicDataRead>
+				<MainTable>InformationRegister.бит_НормыНаУслуги</MainTable>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+	</Attributes>
+</Form>

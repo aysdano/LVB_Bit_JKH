@@ -1,0 +1,1332 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<DataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcscom="http://v8.1c.ru/8.1/data-composition-system/common" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataSource>
+		<name>ИсточникДанных1</name>
+		<dataSourceType>Local</dataSourceType>
+	</dataSource>
+	<dataSet xsi:type="DataSetQuery">
+		<name>НаборДанных2</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ЛицевойСчет</dataPath>
+			<field>ЛицевойСчет</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ИтогоКОплатеВсего</dataPath>
+			<field>ИтогоКОплатеВсего</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>УслугаЖКХ</dataPath>
+			<field>УслугаЖКХ</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Услуга ЖКХ</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПорядокРасчетов</dataPath>
+			<field>ПорядокРасчетов</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Порядок расчетов</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ОбъемКомУслугИнд</dataPath>
+			<field>ОбъемКомУслугИнд</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Объем ком услуг инд</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ОбъемКомУслугОбщ</dataPath>
+			<field>ОбъемКомУслугОбщ</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Объем ком услуг общ</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ИтогоКОплатеВсегоОбщегоИмущества</dataPath>
+			<field>ИтогоКОплатеВсегоОбщегоИмущества</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Итого к оплате всего общего имущества</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ГрафаОтчетаПоГЦЖС</dataPath>
+			<field>ГрафаОтчетаПоГЦЖС</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ОДН</dataPath>
+			<field>ОДН</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>ОДН</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СуммаКОплате</dataPath>
+			<field>СуммаКОплате</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сумма к оплате</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Тариф</dataPath>
+			<field>Тариф</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Тариф</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>НормативИнд</dataPath>
+			<field>НормативИнд</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Норматив инд</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>НормативОбщ</dataPath>
+			<field>НормативОбщ</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Норматив общ</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СуммарныйОбъемОбщ</dataPath>
+			<field>СуммарныйОбъемОбщ</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Суммарный объем общ</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СуммарныйОбъемИнд</dataPath>
+			<field>СуммарныйОбъемИнд</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Суммарный объем инд</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СпособОпределенияОбъемовИнд</dataPath>
+			<field>СпособОпределенияОбъемовИнд</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Способ определения объемов инд</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СпособОпределенияОбъемовОбщ</dataPath>
+			<field>СпособОпределенияОбъемовОбщ</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Способ определения объемов общ</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Перерасчеты</dataPath>
+			<field>Перерасчеты</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Перерасчеты</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПроцентыЗаРассрочку</dataPath>
+			<field>ПроцентыЗаРассрочку</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Проценты за рассрочку</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СуммаПересчетов</dataPath>
+			<field>СуммаПересчетов</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сумма пересчетов</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПлатежныйДокумент</dataPath>
+			<field>ПлатежныйДокумент</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Платежный документ</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ТекПоказанияИнд</dataPath>
+			<field>ТекПоказанияИнд</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Тек показания инд</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ТекПоказанияОбщ</dataPath>
+			<field>ТекПоказанияОбщ</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Тек показания общ</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Льготы</dataPath>
+			<field>Льготы</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Льготы</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПроцентыЗаРассрочкуСумма</dataPath>
+			<field>ПроцентыЗаРассрочкуСумма</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Проценты за рассрочку сумма</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>НомерПлатежногоДокумента</dataPath>
+			<field>НомерПлатежногоДокумента</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Номер платежного документа</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ОснованиеПересчетов</dataPath>
+			<field>ОснованиеПересчетов</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Основание пересчетов</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Услуга</dataPath>
+			<field>Услуга</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Услуга</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>НачисленоОбщДом</dataPath>
+			<field>НачисленоОбщДом</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>НачисленоИнд</dataPath>
+			<field>НачисленоИнд</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Приоритет</dataPath>
+			<field>Приоритет</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Приоритет</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>НачисленоИндЗаМесяц</dataPath>
+			<field>НачисленоИндЗаМесяц</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Начислено инд за месяц</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>НачисленоОбщДомЗаМесяц</dataPath>
+			<field>НачисленоОбщДомЗаМесяц</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Начислено общ дом за месяц</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>АвансНаНачалоПериода</dataPath>
+			<field>АвансНаНачалоПериода</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ИтогоКОплате</dataPath>
+			<field>ИтогоКОплате</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ИтогПени</dataPath>
+			<field>ИтогПени</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ЗакрытиеВхДолга</dataPath>
+			<field>ЗакрытиеВхДолга</field>
+		</field>
+		<dataSource>ИсточникДанных1</dataSource>
+		<query>ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	бит_ЛицевыеСчета.Ссылка КАК ЛицевойСчет
+ПОМЕСТИТЬ ВТ_ЛицевыеСчетаОбщая
+ИЗ
+	Справочник.бит_ЛицевыеСчета КАК бит_ЛицевыеСчета
+		ЛЕВОЕ СОЕДИНЕНИЕ Справочник.бит_СписокЗданий КАК бит_СписокЗданий
+		ПО бит_ЛицевыеСчета.Здание = бит_СписокЗданий.Ссылка
+ГДЕ
+	бит_ЛицевыеСчета.Архивный = ЛОЖЬ
+	И НЕ бит_ЛицевыеСчета.ПометкаУдаления
+	И НЕ бит_СписокЗданий.ПометкаУдаления
+{ГДЕ
+	(бит_ЛицевыеСчета.Ссылка В (&amp;СписокЛС)),
+	(бит_ЛицевыеСчета.Организация = &amp;ОтборОрганизация),
+	(бит_СписокЗданий.Улица В (&amp;СписокУлиц)),
+	(бит_ЛицевыеСчета.Здание В (&amp;СписокЗданий)),
+	(ВЫБОР
+			КОГДА &amp;ТипДомаГИСЖКХ = ЗНАЧЕНИЕ(Перечисление.бит_ТипыДомовГИСЖКХ.МКД)
+				ТОГДА бит_СписокЗданий.ТипыДомовГИСЖКХ = ЗНАЧЕНИЕ(Перечисление.бит_ТипыДомовГИСЖКХ.МКД)
+						ИЛИ бит_СписокЗданий.ТипыДомовГИСЖКХ = ЗНАЧЕНИЕ(Перечисление.бит_ТипыДомовГИСЖКХ.ПустаяСсылка)
+			ИНАЧЕ бит_СписокЗданий.ТипыДомовГИСЖКХ В (&amp;ТипДомаГИСЖКХ)
+		КОНЕЦ)}
+
+ИНДЕКСИРОВАТЬ ПО
+	ЛицевойСчет
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	бит_ПлатежныеДокументыГИСЖКХ.Ссылка КАК ПлатежныйДокумент,
+	бит_ПлатежныеДокументыГИСЖКХ.ЛицевойСчет КАК ЛицевойСчет,
+	бит_ПлатежныеДокументыГИСЖКХ.НомерПД КАК НомерПлатежногоДокумента
+ПОМЕСТИТЬ ВТ_ВсеПлатежныеДокументы
+ИЗ
+	Справочник.бит_ПлатежныеДокументыГИСЖКХ КАК бит_ПлатежныеДокументыГИСЖКХ
+ГДЕ
+	НЕ бит_ПлатежныеДокументыГИСЖКХ.Отозван
+	И НЕ бит_ПлатежныеДокументыГИСЖКХ.ПометкаУдаления
+	И НЕ бит_ПлатежныеДокументыГИСЖКХ.ЭтоГруппа
+	И &amp;ДолговойПД = ЗНАЧЕНИЕ(Перечисление.ДаНет.Нет)
+	И бит_ПлатежныеДокументыГИСЖКХ.ШаблонИзвещений = &amp;ШаблонИзвещений
+	И бит_ПлатежныеДокументыГИСЖКХ.РасчетныйПериод МЕЖДУ НАЧАЛОПЕРИОДА(&amp;Период, МЕСЯЦ) И КОНЕЦПЕРИОДА(&amp;Период, МЕСЯЦ)
+{ГДЕ
+	(бит_ПлатежныеДокументыГИСЖКХ.ЛицевойСчет В (&amp;СписокЛС))}
+
+ИНДЕКСИРОВАТЬ ПО
+	ПлатежныйДокумент,
+	ЛицевойСчет
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ВТ_ВсеПлатежныеДокументы.ПлатежныйДокумент КАК ПлатежныйДокумент,
+	ВТ_ВсеПлатежныеДокументы.ЛицевойСчет КАК ЛицевойСчет,
+	ВТ_ВсеПлатежныеДокументы.НомерПлатежногоДокумента КАК НомерПлатежногоДокумента
+ПОМЕСТИТЬ ВТ_ИтогПДЛС
+ИЗ
+	ВТ_ВсеПлатежныеДокументы КАК ВТ_ВсеПлатежныеДокументы
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ ВТ_ЛицевыеСчетаОбщая КАК ВТ_ЛицевыеСчетаОбщая
+		ПО ВТ_ВсеПлатежныеДокументы.ЛицевойСчет = ВТ_ЛицевыеСчетаОбщая.ЛицевойСчет
+
+ИНДЕКСИРОВАТЬ ПО
+	ПлатежныйДокумент
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ВТ_ИтогПДЛС.ПлатежныйДокумент КАК ПлатежныйДокумент,
+	ВТ_ИтогПДЛС.ЛицевойСчет КАК ЛицевойСчет,
+	ПРЕДСТАВЛЕНИЕ(ВТ_ИтогПДЛС.НомерПлатежногоДокумента) КАК НомерПлатежногоДокумента,
+	бит_ПлатежныеДокументыГИСЖКХТаблицаПлатежиГИСЖКХ36.Услуга КАК УслугаЖКХ,
+	бит_ПлатежныеДокументыГИСЖКХТаблицаПлатежиГИСЖКХ36.Услуга.НаименованиеГИСЖКХ КАК Услуга,
+	бит_ПлатежныеДокументыГИСЖКХТаблицаПлатежиГИСЖКХ36.Услуга.Приоритет КАК Приоритет,
+	ВЫБОР
+		КОГДА бит_ПлатежныеДокументыГИСЖКХТаблицаПлатежиГИСЖКХ36.ГрафаОтчетаПоГЦЖС В (&amp;ЗапрещенныеГрафыГЦЖС)
+				ИЛИ бит_ПлатежныеДокументыГИСЖКХТаблицаПлатежиГИСЖКХ36.ГрафаОтчетаПоГЦЖС = ЗНАЧЕНИЕ(Перечисление.бит_ГрафыОтчетаПоГЦЖС.ПустаяСсылка)
+				ИЛИ бит_ПлатежныеДокументыГИСЖКХТаблицаПлатежиГИСЖКХ36.ГрафаОтчетаПоГЦЖС ЕСТЬ NULL
+			ТОГДА ""
+		ИНАЧЕ ВЫБОР
+				КОГДА бит_ПлатежныеДокументыГИСЖКХТаблицаПлатежиГИСЖКХ36.СпособРасчета В (&amp;ПриборУчета)
+						И бит_ПлатежныеДокументыГИСЖКХТаблицаПлатежиГИСЖКХ36.ГрафаОтчетаПоГЦЖС = ЗНАЧЕНИЕ(Перечисление.бит_ГрафыОтчетаПоГЦЖС.Водопровод)
+						И бит_ПлатежныеДокументыГИСЖКХТаблицаПлатежиГИСЖКХ36.ОбъемКомУслугИнд &lt;&gt; 0
+					ТОГДА "Иное"
+				КОГДА бит_ПлатежныеДокументыГИСЖКХТаблицаПлатежиГИСЖКХ36.СпособРасчета В (&amp;ПриборУчета)
+					ТОГДА "Прибор учета"
+				КОГДА бит_ПлатежныеДокументыГИСЖКХТаблицаПлатежиГИСЖКХ36.СпособРасчета В (&amp;Норматив)
+						И бит_ПлатежныеДокументыГИСЖКХТаблицаПлатежиГИСЖКХ36.ОбъемКомУслугИнд &lt;&gt; 0
+					ТОГДА "Норматив"
+				ИНАЧЕ ""
+			КОНЕЦ
+	КОНЕЦ КАК СпособОпределенияОбъемовИнд,
+	ВЫБОР
+		КОГДА бит_ПлатежныеДокументыГИСЖКХТаблицаПлатежиГИСЖКХ36.ГрафаОтчетаПоГЦЖС В (&amp;ГрафыГЦЖССодержание)
+				ИЛИ бит_ПлатежныеДокументыГИСЖКХТаблицаПлатежиГИСЖКХ36.ГрафаОтчетаПоГЦЖС ЕСТЬ NULL
+			ТОГДА ""
+		КОГДА бит_ПлатежныеДокументыГИСЖКХТаблицаПлатежиГИСЖКХ36.СпособРасчета В (&amp;ПоСчетчикам)
+			ТОГДА бит_ПлатежныеДокументыГИСЖКХТаблицаПлатежиГИСЖКХ36.ОбъемКомУслугИнд
+		КОГДА бит_ПлатежныеДокументыГИСЖКХТаблицаПлатежиГИСЖКХ36.ОбъемКомУслугИнд = 0
+			ТОГДА ""
+		ИНАЧЕ бит_ПлатежныеДокументыГИСЖКХТаблицаПлатежиГИСЖКХ36.ОбъемКомУслугИнд
+	КОНЕЦ КАК ОбъемКомУслугИнд,
+	ВЫБОР
+		КОГДА бит_ПлатежныеДокументыГИСЖКХТаблицаПлатежиГИСЖКХ36.ОбъемКомУслугОбщ = 0
+			ТОГДА ""
+		КОГДА (бит_ПлатежныеДокументыГИСЖКХТаблицаПлатежиГИСЖКХ36.ГрафаОтчетаПоГЦЖС В (&amp;ЗапрещенныеГрафыГЦЖС)
+				ИЛИ бит_ПлатежныеДокументыГИСЖКХТаблицаПлатежиГИСЖКХ36.ГрафаОтчетаПоГЦЖС = ЗНАЧЕНИЕ(Перечисление.бит_ГрафыОтчетаПоГЦЖС.ПустаяСсылка))
+				И НЕ бит_ПлатежныеДокументыГИСЖКХТаблицаПлатежиГИСЖКХ36.Услуга.ОбщедомовыеНачисления
+			ТОГДА ""
+		ИНАЧЕ ВЫБОР
+				КОГДА бит_ПлатежныеДокументыГИСЖКХТаблицаПлатежиГИСЖКХ36.СпособРасчета = ЗНАЧЕНИЕ(Перечисление.бит_СпособыРасчетаПоУслугам.ПустаяСсылка)
+					ТОГДА ""
+				КОГДА бит_ПлатежныеДокументыГИСЖКХТаблицаПлатежиГИСЖКХ36.ОбъемКомУслугИнд = 0
+					ТОГДА ВЫБОР
+							КОГДА бит_ПлатежныеДокументыГИСЖКХТаблицаПлатежиГИСЖКХ36.СпособРасчета В (&amp;ПриборУчета)
+									И бит_ПлатежныеДокументыГИСЖКХТаблицаПлатежиГИСЖКХ36.ГрафаОтчетаПоГЦЖС = ЗНАЧЕНИЕ(Перечисление.бит_ГрафыОтчетаПоГЦЖС.Водопровод)
+								ТОГДА "Иное"
+							КОГДА бит_ПлатежныеДокументыГИСЖКХТаблицаПлатежиГИСЖКХ36.СпособРасчета В (&amp;ПриборУчета)
+								ТОГДА "Прибор учета"
+							КОГДА бит_ПлатежныеДокументыГИСЖКХТаблицаПлатежиГИСЖКХ36.СпособРасчета В (&amp;Норматив)
+								ТОГДА "Норматив"
+							ИНАЧЕ ""
+						КОНЕЦ
+				ИНАЧЕ "Прибор учета"
+			КОНЕЦ
+	КОНЕЦ КАК СпособОпределенияОбъемовОбщ,
+	ВЫБОР
+		КОГДА бит_ПлатежныеДокументыГИСЖКХТаблицаПлатежиГИСЖКХ36.ОбъемКомУслугОбщ = 0
+				ИЛИ (бит_ПлатежныеДокументыГИСЖКХТаблицаПлатежиГИСЖКХ36.ГрафаОтчетаПоГЦЖС В (&amp;ГрафыГЦЖССодержание)
+					ИЛИ бит_ПлатежныеДокументыГИСЖКХТаблицаПлатежиГИСЖКХ36.ГрафаОтчетаПоГЦЖС = ЗНАЧЕНИЕ(Перечисление.бит_ГрафыОтчетаПоГЦЖС.ПустаяСсылка))
+			ТОГДА ""
+		ИНАЧЕ бит_ПлатежныеДокументыГИСЖКХТаблицаПлатежиГИСЖКХ36.ОбъемКомУслугОбщ
+	КОНЕЦ КАК ОбъемКомУслугОбщ,
+	ВЫБОР
+		КОГДА бит_ПлатежныеДокументыГИСЖКХТаблицаПлатежиГИСЖКХ36.Тариф = 0
+			ТОГДА ""
+		ИНАЧЕ бит_ПлатежныеДокументыГИСЖКХТаблицаПлатежиГИСЖКХ36.Тариф
+	КОНЕЦ КАК Тариф,
+	ВЫБОР
+		КОГДА бит_ПлатежныеДокументыГИСЖКХТаблицаПлатежиГИСЖКХ36.Перерасчеты = 0
+			ТОГДА ""
+		ИНАЧЕ бит_ПлатежныеДокументыГИСЖКХТаблицаПлатежиГИСЖКХ36.Перерасчеты
+	КОНЕЦ КАК Перерасчеты,
+	ВЫБОР
+		КОГДА бит_ПлатежныеДокументыГИСЖКХТаблицаПлатежиГИСЖКХ36.Льготы = 0
+			ТОГДА ""
+		ИНАЧЕ бит_ПлатежныеДокументыГИСЖКХТаблицаПлатежиГИСЖКХ36.Льготы
+	КОНЕЦ КАК Льготы,
+	ВЫБОР
+		КОГДА бит_ПлатежныеДокументыГИСЖКХТаблицаПлатежиГИСЖКХ36.ГрафаОтчетаПоГЦЖС В (&amp;ГрафыГЦЖССодержание)
+				ИЛИ бит_ПлатежныеДокументыГИСЖКХТаблицаПлатежиГИСЖКХ36.ГрафаОтчетаПоГЦЖС = ЗНАЧЕНИЕ(Перечисление.бит_ГрафыОтчетаПоГЦЖС.ПустаяСсылка)
+			ТОГДА ""
+		ИНАЧЕ бит_ПлатежныеДокументыГИСЖКХТаблицаПлатежиГИСЖКХ36.ПорядокРасчетов
+	КОНЕЦ КАК ПорядокРасчетов,
+	ВЫБОР
+		КОГДА бит_ПлатежныеДокументыГИСЖКХТаблицаПлатежиГИСЖКХ36.НормативИнд = 0
+				ИЛИ бит_ПлатежныеДокументыГИСЖКХТаблицаПлатежиГИСЖКХ36.ГрафаОтчетаПоГЦЖС В (&amp;ГрафыГЦЖССодержание)
+				ИЛИ бит_ПлатежныеДокументыГИСЖКХТаблицаПлатежиГИСЖКХ36.ГрафаОтчетаПоГЦЖС = ЗНАЧЕНИЕ(Перечисление.бит_ГрафыОтчетаПоГЦЖС.ПустаяСсылка)
+			ТОГДА ""
+		ИНАЧЕ бит_ПлатежныеДокументыГИСЖКХТаблицаПлатежиГИСЖКХ36.НормативИнд
+	КОНЕЦ КАК НормативИнд,
+	ВЫБОР
+		КОГДА бит_ПлатежныеДокументыГИСЖКХТаблицаПлатежиГИСЖКХ36.НормативОбщ = 0
+				ИЛИ (бит_ПлатежныеДокументыГИСЖКХТаблицаПлатежиГИСЖКХ36.ГрафаОтчетаПоГЦЖС В (&amp;ГрафыГЦЖССодержание)
+					ИЛИ бит_ПлатежныеДокументыГИСЖКХТаблицаПлатежиГИСЖКХ36.ГрафаОтчетаПоГЦЖС = ЗНАЧЕНИЕ(Перечисление.бит_ГрафыОтчетаПоГЦЖС.ПустаяСсылка))
+					И НЕ бит_ПлатежныеДокументыГИСЖКХТаблицаПлатежиГИСЖКХ36.Услуга.ОбщедомовыеНачисления
+			ТОГДА ""
+		ИНАЧЕ бит_ПлатежныеДокументыГИСЖКХТаблицаПлатежиГИСЖКХ36.НормативОбщ
+	КОНЕЦ КАК НормативОбщ,
+	ВЫБОР
+		КОГДА бит_ПлатежныеДокументыГИСЖКХТаблицаПлатежиГИСЖКХ36.ТекПоказанияИнд = 0
+				ИЛИ бит_ПлатежныеДокументыГИСЖКХТаблицаПлатежиГИСЖКХ36.ГрафаОтчетаПоГЦЖС В (&amp;ГрафыГЦЖССодержание)
+				ИЛИ бит_ПлатежныеДокументыГИСЖКХТаблицаПлатежиГИСЖКХ36.ГрафаОтчетаПоГЦЖС = ЗНАЧЕНИЕ(Перечисление.бит_ГрафыОтчетаПоГЦЖС.ПустаяСсылка)
+			ТОГДА ""
+		ИНАЧЕ бит_ПлатежныеДокументыГИСЖКХТаблицаПлатежиГИСЖКХ36.ТекПоказанияИнд
+	КОНЕЦ КАК ТекПоказанияИнд,
+	ВЫБОР
+		КОГДА бит_ПлатежныеДокументыГИСЖКХТаблицаПлатежиГИСЖКХ36.ТекПоказанияОбщ = 0
+				ИЛИ бит_ПлатежныеДокументыГИСЖКХТаблицаПлатежиГИСЖКХ36.ГрафаОтчетаПоГЦЖС В (&amp;ГрафыГЦЖССодержание)
+				ИЛИ бит_ПлатежныеДокументыГИСЖКХТаблицаПлатежиГИСЖКХ36.ГрафаОтчетаПоГЦЖС = ЗНАЧЕНИЕ(Перечисление.бит_ГрафыОтчетаПоГЦЖС.ПустаяСсылка)
+			ТОГДА ""
+		ИНАЧЕ бит_ПлатежныеДокументыГИСЖКХТаблицаПлатежиГИСЖКХ36.ТекПоказанияОбщ
+	КОНЕЦ КАК ТекПоказанияОбщ,
+	ВЫБОР
+		КОГДА бит_ПлатежныеДокументыГИСЖКХТаблицаПлатежиГИСЖКХ36.СуммарныйОбъемИнд = 0
+				ИЛИ бит_ПлатежныеДокументыГИСЖКХТаблицаПлатежиГИСЖКХ36.ГрафаОтчетаПоГЦЖС В (&amp;ГрафыГЦЖССодержание)
+				ИЛИ бит_ПлатежныеДокументыГИСЖКХТаблицаПлатежиГИСЖКХ36.ГрафаОтчетаПоГЦЖС = ЗНАЧЕНИЕ(Перечисление.бит_ГрафыОтчетаПоГЦЖС.ПустаяСсылка)
+			ТОГДА ""
+		ИНАЧЕ бит_ПлатежныеДокументыГИСЖКХТаблицаПлатежиГИСЖКХ36.СуммарныйОбъемИнд
+	КОНЕЦ КАК СуммарныйОбъемИнд,
+	ВЫБОР
+		КОГДА бит_ПлатежныеДокументыГИСЖКХТаблицаПлатежиГИСЖКХ36.СуммарныйОбъемОбщ = 0
+				ИЛИ (бит_ПлатежныеДокументыГИСЖКХТаблицаПлатежиГИСЖКХ36.ГрафаОтчетаПоГЦЖС В (&amp;ГрафыГЦЖССодержание)
+					ИЛИ бит_ПлатежныеДокументыГИСЖКХТаблицаПлатежиГИСЖКХ36.ГрафаОтчетаПоГЦЖС = ЗНАЧЕНИЕ(Перечисление.бит_ГрафыОтчетаПоГЦЖС.ПустаяСсылка))
+					И НЕ бит_ПлатежныеДокументыГИСЖКХТаблицаПлатежиГИСЖКХ36.Услуга.ОбщедомовыеНачисления
+			ТОГДА ""
+		ИНАЧЕ бит_ПлатежныеДокументыГИСЖКХТаблицаПлатежиГИСЖКХ36.СуммарныйОбъемОбщ
+	КОНЕЦ КАК СуммарныйОбъемОбщ,
+	бит_ПлатежныеДокументыГИСЖКХТаблицаПлатежиГИСЖКХ36.ОснованиеПересчетов КАК ОснованиеПересчетов,
+	ВЫБОР
+		КОГДА бит_ПлатежныеДокументыГИСЖКХТаблицаПлатежиГИСЖКХ36.СуммаПересчетов = 0
+			ТОГДА ""
+		ИНАЧЕ бит_ПлатежныеДокументыГИСЖКХТаблицаПлатежиГИСЖКХ36.СуммаПересчетов
+	КОНЕЦ КАК СуммаПересчетов,
+	ВЫБОР
+		КОГДА бит_ПлатежныеДокументыГИСЖКХТаблицаПлатежиГИСЖКХ36.ГрафаОтчетаПоГЦЖС В (&amp;НетРассрочки)
+				ИЛИ бит_ПлатежныеДокументыГИСЖКХТаблицаПлатежиГИСЖКХ36.ГрафаОтчетаПоГЦЖС = ЗНАЧЕНИЕ(Перечисление.бит_ГрафыОтчетаПоГЦЖС.ПустаяСсылка)
+			ТОГДА ""
+		ИНАЧЕ 0
+	КОНЕЦ КАК ПроцентыЗаРассрочкуСумма,
+	ВЫБОР
+		КОГДА бит_ПлатежныеДокументыГИСЖКХТаблицаПлатежиГИСЖКХ36.ГрафаОтчетаПоГЦЖС В (&amp;НетРассрочки)
+				ИЛИ бит_ПлатежныеДокументыГИСЖКХТаблицаПлатежиГИСЖКХ36.ГрафаОтчетаПоГЦЖС = ЗНАЧЕНИЕ(Перечисление.бит_ГрафыОтчетаПоГЦЖС.ПустаяСсылка)
+			ТОГДА ""
+		ИНАЧЕ 0
+	КОНЕЦ КАК ПроцентыЗаРассрочку,
+	ВЫБОР
+		КОГДА бит_ПлатежныеДокументыГИСЖКХТаблицаПлатежиГИСЖКХ36.ГрафаОтчетаПоГЦЖС В (&amp;НетРассрочки)
+				ИЛИ бит_ПлатежныеДокументыГИСЖКХТаблицаПлатежиГИСЖКХ36.ГрафаОтчетаПоГЦЖС = ЗНАЧЕНИЕ(Перечисление.бит_ГрафыОтчетаПоГЦЖС.ПустаяСсылка)
+			ТОГДА ""
+		ИНАЧЕ 0
+	КОНЕЦ КАК СуммаКОплате,
+	ВЫБОР
+		КОГДА бит_ПлатежныеДокументыГИСЖКХТаблицаПлатежиГИСЖКХ36.ИтогоКОплатеВсего = 0
+			ТОГДА 0
+		ИНАЧЕ бит_ПлатежныеДокументыГИСЖКХТаблицаПлатежиГИСЖКХ36.ИтогоКОплатеВсего
+	КОНЕЦ КАК ИтогоКОплатеВсего,
+	ВЫБОР
+		КОГДА бит_ПлатежныеДокументыГИСЖКХТаблицаПлатежиГИСЖКХ36.Услуга.ОбщедомовыеНачисления
+				И бит_ПлатежныеДокументыГИСЖКХТаблицаПлатежиГИСЖКХ36.ИтогоКОплатеВсего &lt;&gt; 0
+			ТОГДА бит_ПлатежныеДокументыГИСЖКХТаблицаПлатежиГИСЖКХ36.ИтогоКОплатеВсего
+		ИНАЧЕ ""
+	КОНЕЦ КАК ИтогоКОплатеВсегоОбщегоИмущества,
+	бит_ПлатежныеДокументыГИСЖКХТаблицаПлатежиГИСЖКХ36.Услуга.ОбщедомовыеНачисления КАК ОДН,
+	бит_ПлатежныеДокументыГИСЖКХТаблицаПлатежиГИСЖКХ36.ГрафаОтчетаПоГЦЖС КАК ГрафаОтчетаПоГЦЖС,
+	ВЫБОР
+		КОГДА бит_ПлатежныеДокументыГИСЖКХТаблицаПлатежиГИСЖКХ36.НачисленоИнд = 0
+				ИЛИ (бит_ПлатежныеДокументыГИСЖКХТаблицаПлатежиГИСЖКХ36.ГрафаОтчетаПоГЦЖС В (&amp;ГрафыГЦЖССодержание)
+					ИЛИ бит_ПлатежныеДокументыГИСЖКХТаблицаПлатежиГИСЖКХ36.ГрафаОтчетаПоГЦЖС = ЗНАЧЕНИЕ(Перечисление.бит_ГрафыОтчетаПоГЦЖС.ПустаяСсылка))
+			ТОГДА ""
+		ИНАЧЕ бит_ПлатежныеДокументыГИСЖКХТаблицаПлатежиГИСЖКХ36.НачисленоИнд
+	КОНЕЦ КАК НачисленоИнд,
+	ВЫБОР
+		КОГДА бит_ПлатежныеДокументыГИСЖКХТаблицаПлатежиГИСЖКХ36.НачисленоОбщДом = 0
+				ИЛИ (бит_ПлатежныеДокументыГИСЖКХТаблицаПлатежиГИСЖКХ36.ГрафаОтчетаПоГЦЖС В (&amp;ГрафыГЦЖССодержание)
+					ИЛИ бит_ПлатежныеДокументыГИСЖКХТаблицаПлатежиГИСЖКХ36.ГрафаОтчетаПоГЦЖС = ЗНАЧЕНИЕ(Перечисление.бит_ГрафыОтчетаПоГЦЖС.ПустаяСсылка))
+			ТОГДА ""
+		ИНАЧЕ бит_ПлатежныеДокументыГИСЖКХТаблицаПлатежиГИСЖКХ36.НачисленоОбщДом
+	КОНЕЦ КАК НачисленоОбщДом,
+	ВЫБОР
+		КОГДА бит_ПлатежныеДокументыГИСЖКХТаблицаПлатежиГИСЖКХ36.НачисленоИнд = 0
+			ТОГДА ""
+		ИНАЧЕ бит_ПлатежныеДокументыГИСЖКХТаблицаПлатежиГИСЖКХ36.НачисленоИнд
+	КОНЕЦ КАК НачисленоИндЗаМесяц,
+	ВЫБОР
+		КОГДА бит_ПлатежныеДокументыГИСЖКХТаблицаПлатежиГИСЖКХ36.НачисленоОбщДом = 0
+				ИЛИ бит_ПлатежныеДокументыГИСЖКХТаблицаПлатежиГИСЖКХ36.ГрафаОтчетаПоГЦЖС = ЗНАЧЕНИЕ(Перечисление.бит_ГрафыОтчетаПоГЦЖС.ПустаяСсылка)
+			ТОГДА ""
+		ИНАЧЕ бит_ПлатежныеДокументыГИСЖКХТаблицаПлатежиГИСЖКХ36.НачисленоОбщДом
+	КОНЕЦ КАК НачисленоОбщДомЗаМесяц,
+	бит_ПлатежныеДокументыГИСЖКХТаблицаПлатежиГИСЖКХ36.АвансНаНачалоПериода КАК АвансНаНачалоПериода,
+	бит_ПлатежныеДокументыГИСЖКХТаблицаПлатежиГИСЖКХ36.ЗакрытиеВхДолга КАК ЗакрытиеВхДолга,
+	бит_ПлатежныеДокументыГИСЖКХТаблицаПлатежиГИСЖКХ36.ИтогоКОплате КАК ИтогоКОплате,
+	бит_ПлатежныеДокументыГИСЖКХТаблицаПлатежиГИСЖКХ36.ИтогПени КАК ИтогПени
+ПОМЕСТИТЬ ВТ_Итог
+ИЗ
+	ВТ_ИтогПДЛС КАК ВТ_ИтогПДЛС
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ Справочник.бит_ПлатежныеДокументыГИСЖКХ.ТаблицаПлатежиГИСЖКХ36 КАК бит_ПлатежныеДокументыГИСЖКХТаблицаПлатежиГИСЖКХ36
+		ПО ВТ_ИтогПДЛС.ПлатежныйДокумент = бит_ПлатежныеДокументыГИСЖКХТаблицаПлатежиГИСЖКХ36.Ссылка
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ВТ_Итог.ЛицевойСчет КАК ЛицевойСчет,
+	&amp;УслугаСодержания КАК УслугаЖКХ,
+	СУММА(ВТ_Итог.ИтогоКОплатеВсего) КАК ИтогоКОплатеВсего
+ПОМЕСТИТЬ ВТ_СуммаСодержания
+ИЗ
+	ВТ_Итог КАК ВТ_Итог
+ГДЕ
+	ВТ_Итог.ОДН
+	И ВТ_Итог.ГрафаОтчетаПоГЦЖС = ЗНАЧЕНИЕ(Перечисление.бит_ГрафыОтчетаПоГЦЖС.Техобслуживание)
+	И &amp;УслугаСодержания &lt;&gt; ЗНАЧЕНИЕ(Справочник.бит_УслугиЖКХ.ПустаяСсылка)
+
+СГРУППИРОВАТЬ ПО
+	ВТ_Итог.ЛицевойСчет
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ВТ_Итог.ПлатежныйДокумент КАК ПлатежныйДокумент,
+	ВТ_Итог.ЛицевойСчет КАК ЛицевойСчет,
+	ВТ_Итог.НомерПлатежногоДокумента КАК НомерПлатежногоДокумента,
+	ВТ_Итог.УслугаЖКХ КАК УслугаЖКХ,
+	ВТ_Итог.Услуга КАК Услуга,
+	ВТ_Итог.ГрафаОтчетаПоГЦЖС КАК ГрафаОтчетаПоГЦЖС,
+	ВЫБОР
+		КОГДА ВТ_Итог.ГрафаОтчетаПоГЦЖС = ЗНАЧЕНИЕ(Перечисление.бит_ГрафыОтчетаПоГЦЖС.ПустаяСсылка)
+			ТОГДА ""
+		ИНАЧЕ ВТ_Итог.СпособОпределенияОбъемовИнд
+	КОНЕЦ КАК СпособОпределенияОбъемовИнд,
+	ВЫБОР
+		КОГДА ВТ_Итог.ГрафаОтчетаПоГЦЖС = ЗНАЧЕНИЕ(Перечисление.бит_ГрафыОтчетаПоГЦЖС.ПустаяСсылка)
+			ТОГДА ""
+		ИНАЧЕ ВТ_Итог.СпособОпределенияОбъемовОбщ
+	КОНЕЦ КАК СпособОпределенияОбъемовОбщ,
+	ВЫБОР
+		КОГДА ВТ_Итог.ГрафаОтчетаПоГЦЖС = ЗНАЧЕНИЕ(Перечисление.бит_ГрафыОтчетаПоГЦЖС.ПустаяСсылка)
+			ТОГДА ""
+		ИНАЧЕ ВТ_Итог.НачисленоИнд
+	КОНЕЦ КАК НачисленоИнд,
+	ВТ_Итог.ОбъемКомУслугИнд КАК ОбъемКомУслугИнд,
+	ВЫБОР
+		КОГДА ВТ_Итог.ГрафаОтчетаПоГЦЖС = ЗНАЧЕНИЕ(Перечисление.бит_ГрафыОтчетаПоГЦЖС.ПустаяСсылка)
+			ТОГДА ""
+		ИНАЧЕ ВТ_Итог.ОбъемКомУслугОбщ
+	КОНЕЦ КАК ОбъемКомУслугОбщ,
+	ВТ_Итог.Тариф КАК Тариф,
+	ВТ_Итог.Перерасчеты КАК Перерасчеты,
+	ВТ_Итог.Льготы КАК Льготы,
+	ВТ_Итог.ПорядокРасчетов КАК ПорядокРасчетов,
+	ВТ_Итог.НормативИнд КАК НормативИнд,
+	ВТ_Итог.НормативОбщ КАК НормативОбщ,
+	ВТ_Итог.ТекПоказанияИнд КАК ТекПоказанияИнд,
+	ВТ_Итог.ТекПоказанияОбщ КАК ТекПоказанияОбщ,
+	ВТ_Итог.СуммарныйОбъемИнд КАК СуммарныйОбъемИнд,
+	ВТ_Итог.СуммарныйОбъемОбщ КАК СуммарныйОбъемОбщ,
+	ВТ_Итог.ОснованиеПересчетов КАК ОснованиеПересчетов,
+	ВТ_Итог.СуммаПересчетов КАК СуммаПересчетов,
+	ВТ_Итог.ПроцентыЗаРассрочкуСумма КАК ПроцентыЗаРассрочкуСумма,
+	ВТ_Итог.ПроцентыЗаРассрочку КАК ПроцентыЗаРассрочку,
+	ВТ_Итог.СуммаКОплате КАК СуммаКОплате,
+	ВТ_Итог.ИтогоКОплатеВсего + ЕСТЬNULL(ВТ_СуммаСодержания.ИтогоКОплатеВсего, 0) КАК ИтогоКОплатеВсего,
+	ВТ_Итог.ИтогоКОплатеВсегоОбщегоИмущества КАК ИтогоКОплатеВсегоОбщегоИмущества,
+	ВТ_Итог.ОДН КАК ОДН,
+	ВТ_Итог.НачисленоОбщДом КАК НачисленоОбщДом,
+	ВТ_Итог.НачисленоОбщДомЗаМесяц КАК НачисленоОбщДомЗаМесяц,
+	ВТ_Итог.НачисленоИндЗаМесяц КАК НачисленоИндЗаМесяц,
+	ВТ_Итог.Приоритет КАК Приоритет,
+	ВТ_Итог.АвансНаНачалоПериода КАК АвансНаНачалоПериода,
+	ВТ_Итог.ИтогоКОплате КАК ИтогоКОплате,
+	ВТ_Итог.ИтогПени КАК ИтогПени,
+	ВТ_Итог.ЗакрытиеВхДолга КАК ЗакрытиеВхДолга
+ИЗ
+	ВТ_Итог КАК ВТ_Итог
+		ЛЕВОЕ СОЕДИНЕНИЕ ВТ_СуммаСодержания КАК ВТ_СуммаСодержания
+		ПО ВТ_Итог.ЛицевойСчет = ВТ_СуммаСодержания.ЛицевойСчет
+			И ВТ_Итог.УслугаЖКХ = ВТ_СуммаСодержания.УслугаЖКХ</query>
+	</dataSet>
+	<calculatedField>
+		<dataPath>ЕдИзм</dataPath>
+		<expression>бит_ОтчетыВызовСервера.ПолучитьЕдиницуИзмерения(УслугаЖКХ, ЛицевойСчет)</expression>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Ед изм</v8:content>
+			</v8:item>
+		</title>
+	</calculatedField>
+	<calculatedField>
+		<dataPath>Субсидии</dataPath>
+		<expression>бит_ОтчетыВызовСервера.ПолучитьСуммуСубсидий(&amp;Период, УслугаЖКХ, ЛицевойСчет)</expression>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Субсидии</v8:content>
+			</v8:item>
+		</title>
+	</calculatedField>
+	<calculatedField>
+		<dataPath>ПовышающийКоэффициент</dataPath>
+		<expression>бит_ОтчетыВызовСервера.ПолучитьПовышающийКоэффициент(УслугаЖКХ)</expression>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Повышающий коэффициент</v8:content>
+			</v8:item>
+		</title>
+	</calculatedField>
+	<calculatedField>
+		<dataPath>НачисленоЗаРасчетныйПериод</dataPath>
+		<expression>бит_ОтчетыВызовСервера.ПолучитьНачисленоЗаРасчетныйПериод(НачисленоИндЗаМесяц, НачисленоОбщДомЗаМесяц)</expression>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Начислено за расчетный период</v8:content>
+			</v8:item>
+		</title>
+	</calculatedField>
+	<parameter>
+		<name>Период</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Период</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+		<use>Always</use>
+	</parameter>
+	<parameter>
+		<name>ШаблонИзвещений</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Шаблон извещений</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.бит_ШаблоныИзвещений</v8:Type>
+		</valueType>
+		<value xsi:nil="true"/>
+		<useRestriction>true</useRestriction>
+		<use>Always</use>
+	</parameter>
+	<parameter>
+		<name>ЗапрещенныеГрафыГЦЖС</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Запрещенные графы ГЦЖС</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:EnumRef.бит_ГрафыОтчетаПоГЦЖС</v8:Type>
+		</valueType>
+		<value xsi:type="dcscor:DesignTimeValue">Перечисление.бит_ГрафыОтчетаПоГЦЖС.Техобслуживание</value>
+		<value xsi:type="dcscor:DesignTimeValue">Перечисление.бит_ГрафыОтчетаПоГЦЖС.ПлатаЗаНайм</value>
+		<value xsi:type="dcscor:DesignTimeValue">Перечисление.бит_ГрафыОтчетаПоГЦЖС.КапитальныйРемонт</value>
+		<value xsi:type="dcscor:DesignTimeValue">Перечисление.бит_ГрафыОтчетаПоГЦЖС.ВывозБытовыхОтходов</value>
+		<value xsi:nil="true"/>
+		<useRestriction>true</useRestriction>
+		<valueListAllowed>true</valueListAllowed>
+		<use>Always</use>
+	</parameter>
+	<parameter>
+		<name>Норматив</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Норматив</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:EnumRef.бит_СпособыРасчетаПоУслугам</v8:Type>
+		</valueType>
+		<value xsi:type="dcscor:DesignTimeValue">Перечисление.бит_СпособыРасчетаПоУслугам.ПоЕдиницамПотребленияНаЛицевойСчет</value>
+		<value xsi:type="dcscor:DesignTimeValue">Перечисление.бит_СпособыРасчетаПоУслугам.ПоЕдиницамПотребления</value>
+		<value xsi:type="dcscor:DesignTimeValue">Перечисление.бит_СпособыРасчетаПоУслугам.ПоЖилойПлощади</value>
+		<value xsi:type="dcscor:DesignTimeValue">Перечисление.бит_СпособыРасчетаПоУслугам.ПоОбщейПлощади</value>
+		<value xsi:type="dcscor:DesignTimeValue">Перечисление.бит_СпособыРасчетаПоУслугам.ПоОтапливаемойПлощади</value>
+		<value xsi:type="dcscor:DesignTimeValue">Перечисление.бит_СпособыРасчетаПоУслугам.ПоПроживающим</value>
+		<value xsi:type="dcscor:DesignTimeValue">Перечисление.бит_СпособыРасчетаПоУслугам.ПоПроживающимСНормативом</value>
+		<useRestriction>true</useRestriction>
+		<valueListAllowed>true</valueListAllowed>
+		<use>Always</use>
+	</parameter>
+	<parameter>
+		<name>ПриборУчета</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Прибор учета</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:EnumRef.бит_СпособыРасчетаПоУслугам</v8:Type>
+		</valueType>
+		<value xsi:type="dcscor:DesignTimeValue">Перечисление.бит_СпособыРасчетаПоУслугам.ПоГрупповымСчетчикам</value>
+		<value xsi:type="dcscor:DesignTimeValue">Перечисление.бит_СпособыРасчетаПоУслугам.ПоГрупповымСчетчикамСНаличиемИндивидуальных</value>
+		<value xsi:type="dcscor:DesignTimeValue">Перечисление.бит_СпособыРасчетаПоУслугам.ПоРаспределению</value>
+		<value xsi:type="dcscor:DesignTimeValue">Перечисление.бит_СпособыРасчетаПоУслугам.РасчетПоСчетчикам</value>
+		<value xsi:type="dcscor:DesignTimeValue">Перечисление.бит_СпособыРасчетаПоУслугам.ПоИндивидуальнымСчетчикам</value>
+		<useRestriction>true</useRestriction>
+		<valueListAllowed>true</valueListAllowed>
+		<use>Always</use>
+	</parameter>
+	<parameter>
+		<name>ГрафыГЦЖССодержание</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Графы ГЦЖССодержание</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:EnumRef.бит_ГрафыОтчетаПоГЦЖС</v8:Type>
+		</valueType>
+		<value xsi:type="dcscor:DesignTimeValue">Перечисление.бит_ГрафыОтчетаПоГЦЖС.Техобслуживание</value>
+		<value xsi:type="dcscor:DesignTimeValue">Перечисление.бит_ГрафыОтчетаПоГЦЖС.ПлатаЗаНайм</value>
+		<value xsi:type="dcscor:DesignTimeValue">Перечисление.бит_ГрафыОтчетаПоГЦЖС.КапитальныйРемонт</value>
+		<useRestriction>true</useRestriction>
+		<valueListAllowed>true</valueListAllowed>
+		<use>Always</use>
+	</parameter>
+	<parameter>
+		<name>УслугаСодержания</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Услуга содержания</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.бит_УслугиЖКХ</v8:Type>
+		</valueType>
+		<value xsi:nil="true"/>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<parameter>
+		<name>ДолговойПД</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Долговой ПД</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:EnumRef.ДаНет</v8:Type>
+		</valueType>
+		<value xsi:nil="true"/>
+		<useRestriction>true</useRestriction>
+		<use>Always</use>
+	</parameter>
+	<parameter>
+		<name>ПоСчетчикам</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>По счетчикам</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:EnumRef.бит_СпособыРасчетаПоУслугам</v8:Type>
+		</valueType>
+		<value xsi:type="dcscor:DesignTimeValue">Перечисление.бит_СпособыРасчетаПоУслугам.РасчетПоСчетчикам</value>
+		<value xsi:type="dcscor:DesignTimeValue">Перечисление.бит_СпособыРасчетаПоУслугам.ПоГрупповымСчетчикам</value>
+		<value xsi:type="dcscor:DesignTimeValue">Перечисление.бит_СпособыРасчетаПоУслугам.ПоИндивидуальнымСчетчикам</value>
+		<useRestriction>true</useRestriction>
+		<valueListAllowed>true</valueListAllowed>
+		<use>Always</use>
+	</parameter>
+	<parameter>
+		<name>НетРассрочки</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Нет рассрочки</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:EnumRef.бит_ГрафыОтчетаПоГЦЖС</v8:Type>
+		</valueType>
+		<value xsi:type="dcscor:DesignTimeValue">Перечисление.бит_ГрафыОтчетаПоГЦЖС.Техобслуживание</value>
+		<value xsi:type="dcscor:DesignTimeValue">Перечисление.бит_ГрафыОтчетаПоГЦЖС.ПлатаЗаНайм</value>
+		<value xsi:type="dcscor:DesignTimeValue">Перечисление.бит_ГрафыОтчетаПоГЦЖС.КапитальныйРемонт</value>
+		<value xsi:nil="true"/>
+		<useRestriction>true</useRestriction>
+		<valueListAllowed>true</valueListAllowed>
+		<use>Always</use>
+	</parameter>
+	<parameter>
+		<name>ОтборОрганизация</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Отбор организация</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.Организации</v8:Type>
+		</valueType>
+		<value xsi:nil="true"/>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<parameter>
+		<name>СписокЗданий</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Список зданий</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.бит_СписокЗданий</v8:Type>
+		</valueType>
+		<useRestriction>true</useRestriction>
+		<valueListAllowed>true</valueListAllowed>
+	</parameter>
+	<parameter>
+		<name>СписокЛС</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Список ЛС</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.бит_ЛицевыеСчета</v8:Type>
+		</valueType>
+		<useRestriction>true</useRestriction>
+		<valueListAllowed>true</valueListAllowed>
+	</parameter>
+	<parameter>
+		<name>СписокУлиц</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Список улиц</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.бит_СписокУлиц</v8:Type>
+		</valueType>
+		<useRestriction>true</useRestriction>
+		<valueListAllowed>true</valueListAllowed>
+	</parameter>
+	<parameter>
+		<name>ТипДомаГИСЖКХ</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Тип дома ГИСЖКХ</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:EnumRef.бит_ТипыДомовГИСЖКХ</v8:Type>
+		</valueType>
+		<value xsi:nil="true"/>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<parameter>
+		<name>ПоляСвертки</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Поля свертки</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:string</v8:Type>
+			<v8:StringQualifiers>
+				<v8:Length>0</v8:Length>
+				<v8:AllowedLength>Variable</v8:AllowedLength>
+			</v8:StringQualifiers>
+		</valueType>
+		<value xsi:type="xs:string">УслугаЖКХГрафаОтчетаГЦЖС</value>
+		<value xsi:type="xs:string">ЛицевойСчет</value>
+		<useRestriction>false</useRestriction>
+		<valueListAllowed>true</valueListAllowed>
+	</parameter>
+	<parameter>
+		<name>ПоляСуммирования</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Поля суммирования</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:string</v8:Type>
+			<v8:StringQualifiers>
+				<v8:Length>0</v8:Length>
+				<v8:AllowedLength>Variable</v8:AllowedLength>
+			</v8:StringQualifiers>
+		</valueType>
+		<value xsi:type="xs:string">ИтогоКОплатеВсего</value>
+		<value xsi:type="xs:string">ИтогоКОплатеВсегоОбщегоИмущества</value>
+		<value xsi:type="xs:string">НачисленоИнд</value>
+		<value xsi:type="xs:string">НачисленоОбщДом</value>
+		<value xsi:type="xs:string">ОбъемКомУслугИнд</value>
+		<value xsi:type="xs:string">ОбъемКомУслугОбщ</value>
+		<value xsi:type="xs:string">СуммаКОплате</value>
+		<value xsi:type="xs:string">СуммаПересчетов</value>
+		<value xsi:type="xs:string">СуммарныйОбъемИнд</value>
+		<value xsi:type="xs:string">СуммарныйОбъемОбщ</value>
+		<useRestriction>false</useRestriction>
+		<valueListAllowed>true</valueListAllowed>
+	</parameter>
+	<parameter>
+		<name>ЗначенияСвертки</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Значения свертки</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:EnumRef.бит_ГрафыОтчетаПоГЦЖС</v8:Type>
+		</valueType>
+		<value xsi:type="dcscor:DesignTimeValue">Перечисление.бит_ГрафыОтчетаПоГЦЖС.Водопровод</value>
+		<useRestriction>false</useRestriction>
+		<valueListAllowed>true</valueListAllowed>
+	</parameter>
+	<parameter>
+		<name>ПроизводитьСвертку</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Производить свертку</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:boolean</v8:Type>
+		</valueType>
+		<value xsi:type="xs:boolean">true</value>
+		<useRestriction>false</useRestriction>
+	</parameter>
+	<parameter>
+		<name>ЗначенияСверткиГорячегоВодоснабжения</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Значения свертки горячего водоснабжения</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:EnumRef.бит_ГрафыОтчетаПоГЦЖС</v8:Type>
+		</valueType>
+		<value xsi:type="dcscor:DesignTimeValue">Перечисление.бит_ГрафыОтчетаПоГЦЖС.ГорячееВодоснобжение</value>
+		<useRestriction>false</useRestriction>
+		<valueListAllowed>true</valueListAllowed>
+	</parameter>
+	<parameter>
+		<name>ЗначенияСверткиХолодногоВодоснабжения</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Значения свертки холодного водоснабжения</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:EnumRef.бит_ГрафыОтчетаПоГЦЖС</v8:Type>
+		</valueType>
+		<value xsi:type="dcscor:DesignTimeValue">Перечисление.бит_ГрафыОтчетаПоГЦЖС.ХолодноеВодоснабжение</value>
+		<useRestriction>false</useRestriction>
+		<valueListAllowed>true</valueListAllowed>
+	</parameter>
+	<parameter>
+		<name>ПроизводитьСверткуГорячегоВодоснабжения</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Производить свертку горячего водоснабжения</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:boolean</v8:Type>
+		</valueType>
+		<value xsi:type="xs:boolean">true</value>
+		<useRestriction>false</useRestriction>
+	</parameter>
+	<parameter>
+		<name>ПроизводитьСверткуХолодногоВодоснабжения</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Производить свертку холодного водоснабжения</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:boolean</v8:Type>
+		</valueType>
+		<value xsi:type="xs:boolean">true</value>
+		<useRestriction>false</useRestriction>
+	</parameter>
+	<settingsVariant>
+		<dcsset:name>Основной</dcsset:name>
+		<dcsset:presentation xsi:type="xs:string">Основной</dcsset:presentation>
+		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+			<dcsset:selection>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>НомерПлатежногоДокумента</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Услуга</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>СпособОпределенияОбъемовИнд</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ОбъемКомУслугИнд</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>СпособОпределенияОбъемовОбщ</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ОбъемКомУслугОбщ</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Тариф</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>НачисленоИнд</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>НачисленоОбщДом</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Перерасчеты</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Льготы</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ПорядокРасчетов</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>НормативИнд</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>НормативОбщ</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ТекПоказанияИнд</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ТекПоказанияОбщ</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>СуммарныйОбъемИнд</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>СуммарныйОбъемОбщ</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ОснованиеПересчетов</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>СуммаПересчетов</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ПроцентыЗаРассрочку</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ПроцентыЗаРассрочкуСумма</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>СуммаКОплате</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ИтогоКОплатеВсего</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ИтогоКОплатеВсегоОбщегоИмущества</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>НачисленоЗаРасчетныйПериод</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ЗакрытиеВхДолга</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ЕдИзм</dcsset:field>
+				</dcsset:item>
+			</dcsset:selection>
+			<dcsset:dataParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>ПоляСвертки</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">УслугаЖКХГрафаОтчетаГЦЖС</dcscor:value>
+					<dcscor:value xsi:type="xs:string">Лицевойсчет</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ПоляСуммирования</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">ИтогоКОплатеВсего</dcscor:value>
+					<dcscor:value xsi:type="xs:string">ИтогоКОплатеВсегоОбщегоИмущества</dcscor:value>
+					<dcscor:value xsi:type="xs:string">НачисленоОбщДом</dcscor:value>
+					<dcscor:value xsi:type="xs:string">ОбъемКомУслугИнд</dcscor:value>
+					<dcscor:value xsi:type="xs:string">НачисленоИнд</dcscor:value>
+					<dcscor:value xsi:type="xs:string">ОбъемКомУслугОбщ</dcscor:value>
+					<dcscor:value xsi:type="xs:string">СуммаКОплате</dcscor:value>
+					<dcscor:value xsi:type="xs:string">СуммаПересчетов</dcscor:value>
+					<dcscor:value xsi:type="xs:string">СуммарныйОбъемИнд</dcscor:value>
+					<dcscor:value xsi:type="xs:string">СуммарныйОбъемОбщ</dcscor:value>
+				</dcscor:item>
+			</dcsset:dataParameters>
+			<dcsset:item xsi:type="dcsset:StructureItemGroup">
+				<dcsset:order>
+					<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+				</dcsset:order>
+				<dcsset:selection>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>НомерПлатежногоДокумента</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>Услуга</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>ЕдИзм</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>СпособОпределенияОбъемовИнд</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>ОбъемКомУслугИнд</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>СпособОпределенияОбъемовОбщ</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>ОбъемКомУслугОбщ</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>Тариф</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>НачисленоИнд</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>НачисленоОбщДом</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>НачисленоЗаРасчетныйПериод</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>ПовышающийКоэффициент</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>Субсидии</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>Перерасчеты</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>Льготы</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>ПорядокРасчетов</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>НормативИнд</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>НормативОбщ</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>ТекПоказанияИнд</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>ТекПоказанияОбщ</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>СуммарныйОбъемИнд</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>СуммарныйОбъемОбщ</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>ОснованиеПересчетов</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>СуммаПересчетов</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>ПроцентыЗаРассрочку</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>ПроцентыЗаРассрочкуСумма</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>СуммаКОплате</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>ИтогоКОплатеВсего</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>ИтогоКОплатеВсегоОбщегоИмущества</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>Приоритет</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>ЛицевойСчет</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>УслугаЖКХ.ГрафаОтчетаГЦЖС</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>НачисленоИндЗаМесяц</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>НачисленоОбщДомЗаМесяц</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>АвансНаНачалоПериода</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>ИтогоКОплате</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>ИтогПени</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>ЗакрытиеВхДолга</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+			</dcsset:item>
+		</dcsset:settings>
+	</settingsVariant>
+</DataCompositionSchema>

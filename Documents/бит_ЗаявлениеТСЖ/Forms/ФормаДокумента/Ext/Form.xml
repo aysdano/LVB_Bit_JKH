@@ -1,0 +1,410 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.18">
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<AutoTime>CurrentOrLast</AutoTime>
+	<UsePostingMode>Auto</UsePostingMode>
+	<RepostOnWrite>true</RepostOnWrite>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<ChildItems>
+			<Popup name="ГруппаПечать" id="66">
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Печать</v8:content>
+					</v8:item>
+				</Title>
+				<Picture>
+					<xr:Ref>StdPicture.Print</xr:Ref>
+					<xr:LoadTransparent>true</xr:LoadTransparent>
+				</Picture>
+				<ExtendedTooltip name="ГруппаПечатьРасширеннаяПодсказка" id="67"/>
+				<ChildItems>
+					<Button name="ФормаПечать" id="32">
+						<Type>CommandBarButton</Type>
+						<Visible>false</Visible>
+						<CommandName>Form.Command.Печать</CommandName>
+						<ExtendedTooltip name="ФормаПечатьExtendedTooltip" id="37"/>
+					</Button>
+				</ChildItems>
+			</Popup>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="ChoiceProcessing">ОбработкаВыбора</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="Шапка" id="23">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Шапка</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Шапка</v8:content>
+				</v8:item>
+			</ToolTip>
+			<HorizontalStretch>false</HorizontalStretch>
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ШапкаExtendedTooltip" id="38"/>
+			<ChildItems>
+				<UsualGroup name="Лево" id="24">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Лево</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Лево</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Vertical</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ЛевоExtendedTooltip" id="39"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаДатаНомер" id="22">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа дата номер</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа дата номер</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Horizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаДатаНомерExtendedTooltip" id="40"/>
+							<ChildItems>
+								<InputField name="Номер" id="1">
+									<DataPath>Объект.Number</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="НомерКонтекстноеМеню" id="2"/>
+									<ExtendedTooltip name="НомерExtendedTooltip" id="41"/>
+								</InputField>
+								<InputField name="Дата" id="3">
+									<DataPath>Объект.Date</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ДатаКонтекстноеМеню" id="4"/>
+									<ExtendedTooltip name="ДатаExtendedTooltip" id="42"/>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+						<InputField name="Организация" id="26">
+							<DataPath>Объект.Организация</DataPath>
+							<ContextMenu name="ОрганизацияКонтекстноеМеню" id="27"/>
+							<ExtendedTooltip name="ОрганизацияExtendedTooltip" id="43"/>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="Право" id="25">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Право</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Право</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Vertical</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ПравоExtendedTooltip" id="44"/>
+					<ChildItems>
+						<InputField name="ВидОперации" id="5">
+							<DataPath>Объект.ВидОперации</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<HorizontalStretch>true</HorizontalStretch>
+							<ContextMenu name="ВидОперацииКонтекстноеМеню" id="6"/>
+							<ExtendedTooltip name="ВидОперацииExtendedTooltip" id="45"/>
+							<Events>
+								<Event name="OnChange">ВидОперацииПриИзменении</Event>
+							</Events>
+						</InputField>
+						<InputField name="ТСЖ" id="7">
+							<DataPath>Объект.ТСЖ</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<TextEdit>false</TextEdit>
+							<ContextMenu name="ТСЖКонтекстноеМеню" id="8"/>
+							<ExtendedTooltip name="ТСЖExtendedTooltip" id="46"/>
+							<Events>
+								<Event name="StartChoice">ТСЖНачалоВыбора</Event>
+								<Event name="Opening">ТСЖОткрытие</Event>
+							</Events>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<Table name="СписокЧленовТСЖ" id="9">
+			<Representation>List</Representation>
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<FileDragMode>AsFile</FileDragMode>
+			<DataPath>Объект.СписокЧленовТСЖ</DataPath>
+			<SearchStringLocation>None</SearchStringLocation>
+			<ViewStatusLocation>None</ViewStatusLocation>
+			<SearchControlLocation>None</SearchControlLocation>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="СписокЧленовТСЖКонтекстноеМеню" id="10"/>
+			<AutoCommandBar name="СписокЧленовТСЖКоманднаяПанель" id="11">
+				<ChildItems>
+					<Button name="СписокЧленовТСЖПодборПоЛС" id="36">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.ПодборПоЛС</CommandName>
+						<ExtendedTooltip name="СписокЧленовТСЖПодборПоЛСExtendedTooltip" id="47"/>
+					</Button>
+				</ChildItems>
+			</AutoCommandBar>
+			<ExtendedTooltip name="СписокЧленовТСЖExtendedTooltip" id="48"/>
+			<SearchStringAddition name="СписокЧленовТСЖСтрокаПоиска" id="57">
+				<AdditionSource>
+					<Item>СписокЧленовТСЖ</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокЧленовТСЖСтрокаПоискаКонтекстноеМеню" id="58"/>
+				<ExtendedTooltip name="СписокЧленовТСЖСтрокаПоискаРасширеннаяПодсказка" id="59"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="СписокЧленовТСЖСостояниеПросмотра" id="60">
+				<AdditionSource>
+					<Item>СписокЧленовТСЖ</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокЧленовТСЖСостояниеПросмотраКонтекстноеМеню" id="61"/>
+				<ExtendedTooltip name="СписокЧленовТСЖСостояниеПросмотраРасширеннаяПодсказка" id="62"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="СписокЧленовТСЖУправлениеПоиском" id="63">
+				<AdditionSource>
+					<Item>СписокЧленовТСЖ</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокЧленовТСЖУправлениеПоискомКонтекстноеМеню" id="64"/>
+				<ExtendedTooltip name="СписокЧленовТСЖУправлениеПоискомРасширеннаяПодсказка" id="65"/>
+			</SearchControlAddition>
+			<Events>
+				<Event name="OnStartEdit">СписокЧленовТСЖПриНачалеРедактирования</Event>
+			</Events>
+			<ChildItems>
+				<LabelField name="СписокЧленовТСЖНомерСтроки" id="12">
+					<DataPath>Объект.СписокЧленовТСЖ.LineNumber</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="СписокЧленовТСЖНомерСтрокиКонтекстноеМеню" id="13"/>
+					<ExtendedTooltip name="СписокЧленовТСЖНомерСтрокиExtendedTooltip" id="49"/>
+				</LabelField>
+				<InputField name="СписокЧленовТСЖЛицевойСчет" id="14">
+					<DataPath>Объект.СписокЧленовТСЖ.ЛицевойСчет</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<TextEdit>false</TextEdit>
+					<ContextMenu name="СписокЧленовТСЖЛицевойСчетКонтекстноеМеню" id="15"/>
+					<ExtendedTooltip name="СписокЧленовТСЖЛицевойСчетExtendedTooltip" id="50"/>
+					<Events>
+						<Event name="StartChoice">СписокЧленовТСЖЛицевойСчетНачалоВыбора</Event>
+						<Event name="ChoiceProcessing">СписокЧленовТСЖЛицевойСчетОбработкаВыбора</Event>
+					</Events>
+				</InputField>
+				<InputField name="СписокЧленовТСЖПроживающие" id="16">
+					<DataPath>Объект.СписокЧленовТСЖ.Проживающий</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<TextEdit>false</TextEdit>
+					<ContextMenu name="СписокЧленовТСЖПроживающиеКонтекстноеМеню" id="17"/>
+					<ExtendedTooltip name="СписокЧленовТСЖПроживающиеExtendedTooltip" id="51"/>
+					<Events>
+						<Event name="StartChoice">СписокЧленовТСЖПроживающийНачалоВыбора</Event>
+						<Event name="ChoiceProcessing">СписокЧленовТСЖПроживающиеОбработкаВыбора</Event>
+					</Events>
+				</InputField>
+				<InputField name="СписокЧленовТСЖКоличествоГолосов" id="33">
+					<DataPath>Объект.СписокЧленовТСЖ.КоличествоГолосов</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="СписокЧленовТСЖКоличествоГолосовКонтекстноеМеню" id="34"/>
+					<ExtendedTooltip name="СписокЧленовТСЖКоличествоГолосовExtendedTooltip" id="52"/>
+				</InputField>
+				<InputField name="СписокЧленовТСЖДатаВступления" id="18">
+					<DataPath>Объект.СписокЧленовТСЖ.ДатаВступления</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="СписокЧленовТСЖДатаВступленияКонтекстноеМеню" id="19"/>
+					<ExtendedTooltip name="СписокЧленовТСЖДатаВступленияExtendedTooltip" id="53"/>
+				</InputField>
+				<InputField name="СписокЧленовТСЖДатаВыхода" id="20">
+					<DataPath>Объект.СписокЧленовТСЖ.ДатаВыхода</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="СписокЧленовТСЖДатаВыходаКонтекстноеМеню" id="21"/>
+					<ExtendedTooltip name="СписокЧленовТСЖДатаВыходаExtendedTooltip" id="54"/>
+					<Events>
+						<Event name="OnChange">СписокЧленовТСЖДатаВыходаПриИзменении</Event>
+					</Events>
+				</InputField>
+			</ChildItems>
+		</Table>
+		<InputField name="Ответственный" id="28">
+			<DataPath>Объект.Ответственный</DataPath>
+			<ContextMenu name="ОтветственныйКонтекстноеМеню" id="29"/>
+			<ExtendedTooltip name="ОтветственныйExtendedTooltip" id="55"/>
+		</InputField>
+		<InputField name="Комментарий" id="30">
+			<DataPath>Объект.Комментарий</DataPath>
+			<ContextMenu name="КомментарийКонтекстноеМеню" id="31"/>
+			<ExtendedTooltip name="КомментарийExtendedTooltip" id="56"/>
+		</InputField>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DocumentObject.бит_ЗаявлениеТСЖ</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+			<UseAlways>
+				<Field>Объект.RegisterRecords</Field>
+			</UseAlways>
+		</Attribute>
+		<ConditionalAppearance>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>СписокЧленовТСЖДатаВыхода</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">Объект.ВидОперации</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="dcscor:DesignTimeValue">Перечисление.бит_ВидыОперацииЗаявлениеТСЖ.ВступлениеВТСЖ</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>Видимость</dcscor:parameter>
+						<dcscor:value xsi:type="xs:boolean">false</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>СписокЧленовТСЖДатаВступления</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">Объект.ВидОперации</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="dcscor:DesignTimeValue">Перечисление.бит_ВидыОперацииЗаявлениеТСЖ.ВыходИзТСЖ</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ТолькоПросмотр</dcscor:parameter>
+						<dcscor:value xsi:type="xs:boolean">true</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>СписокЧленовТСЖКоличествоГолосов</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">Объект.ВидОперации</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="dcscor:DesignTimeValue">Перечисление.бит_ВидыОперацииЗаявлениеТСЖ.ВыходИзТСЖ</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>Видимость</dcscor:parameter>
+						<dcscor:value xsi:type="xs:boolean">false</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+		</ConditionalAppearance>
+	</Attributes>
+	<Commands>
+		<Command name="Печать" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Печать</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Печать</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Печать</Action>
+			<Representation>TextPicture</Representation>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ПодборПоЛС" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить по ЛС</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подбор по ЛС</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПодборПоЛС</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+	</Commands>
+	<CommandInterface>
+		<NavigationPanel>
+			<Item>
+				<Command>InformationRegister.бит_ЧленыТСЖ.StandardCommand.OpenByRecorder</Command>
+				<Type>Auto</Type>
+				<DefaultVisible>false</DefaultVisible>
+			</Item>
+			<Item>
+				<Command>4:be6441d1-0ad8-4852-806c-533aee06a33f</Command>
+				<Type>Auto</Type>
+				<DefaultVisible>false</DefaultVisible>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+			<Item>
+				<Command>InformationRegister.бит_си_СвязанныеОбъекты.StandardCommand.OpenByValue.Объект</Command>
+				<Type>Auto</Type>
+				<DefaultVisible>false</DefaultVisible>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+			<Item>
+				<Command>CommonCommand.бит_СтруктураПодчиненности</Command>
+				<Type>Auto</Type>
+				<DefaultVisible>false</DefaultVisible>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+		</NavigationPanel>
+	</CommandInterface>
+</Form>

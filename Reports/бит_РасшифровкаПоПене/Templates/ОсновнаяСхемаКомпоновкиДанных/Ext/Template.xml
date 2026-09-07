@@ -1,0 +1,440 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<DataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcscom="http://v8.1c.ru/8.1/data-composition-system/common" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataSource>
+		<name>ИсточникДанных1</name>
+		<dataSourceType>Local</dataSourceType>
+	</dataSource>
+	<dataSet xsi:type="DataSetQuery">
+		<name>НаборДанных1</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Здание</dataPath>
+			<field>Здание</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ЛицевойСчет</dataPath>
+			<field>ЛицевойСчет</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Район</dataPath>
+			<field>Район</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Улица</dataPath>
+			<field>Улица</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Услуга</dataPath>
+			<field>Услуга</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>УслугаЖКХ</dataPath>
+			<field>УслугаЖКХ</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Участок</dataPath>
+			<field>Участок</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Поставщик</dataPath>
+			<field>Поставщик</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Квартира</dataPath>
+			<field>Квартира</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПолучательДенежныхСредств</dataPath>
+			<field>ПолучательДенежныхСредств</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>НачисленияПени</dataPath>
+			<field>НачисленияПени</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ОплатаПени</dataPath>
+			<field>ОплатаПени</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СуммаПени</dataPath>
+			<field>СуммаПени</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>НачисленияУслуг</dataPath>
+			<field>НачисленияУслуг</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ОплатаУслуг</dataPath>
+			<field>ОплатаУслуг</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СуммаУслуг</dataPath>
+			<field>СуммаУслуг</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДокументыНачислений</dataPath>
+			<field>ДокументыНачислений</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДокументыОплаты</dataPath>
+			<field>ДокументыОплаты</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДокументыРегистрации</dataPath>
+			<field>ДокументыРегистрации</field>
+			<role>
+				<dcscom:periodNumber>1</dcscom:periodNumber>
+				<dcscom:periodType>Main</dcscom:periodType>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Организация</dataPath>
+			<field>Организация</field>
+		</field>
+		<dataSource>ИсточникДанных1</dataSource>
+		<query>ВЫБРАТЬ
+	бит_СведенияПоУслугамЛССрезПоследних.ЛицевойСчет,
+	бит_СведенияПоУслугамЛССрезПоследних.Услуга,
+	бит_СведенияПоУслугамЛССрезПоследних.Поставщик,
+	бит_СведенияПоУслугамЛССрезПоследних.ЛицевойСчет.Здание.Улица КАК Улица,
+	бит_СведенияПоУслугамЛССрезПоследних.ЛицевойСчет.Здание.Район КАК Район,
+	бит_СведенияПоУслугамЛССрезПоследних.ЛицевойСчет.Здание.Участок КАК Участок,
+	бит_СведенияПоУслугамЛССрезПоследних.ЛицевойСчет.Здание КАК Здание,
+	бит_СведенияПоУслугамЛССрезПоследних.ЛицевойСчет.Квартира КАК Квартира,
+	бит_ПолучателиДенежныхСредствСрезПоследних.ПолучательДенежныхСредств,
+	бит_СведенияПоУслугамЛССрезПоследних.ЛицевойСчет.Организация КАК Организация
+ПОМЕСТИТЬ Поставщики
+ИЗ
+	РегистрСведений.бит_СведенияПоУслугамЛС.СрезПоследних(
+			&amp;КонецПериода {(&amp;КонецПериода)},
+			ЛицевойСчет В
+				(ВЫБРАТЬ
+					ЛицевыеСчета.Ссылка
+				ИЗ
+					Справочник.бит_ЛицевыеСчета КАК ЛицевыеСчета)) КАК бит_СведенияПоУслугамЛССрезПоследних
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.бит_ПолучателиДенежныхСредств.СрезПоследних(&amp;КонецПериода {(&amp;КонецПериода)}, ) КАК бит_ПолучателиДенежныхСредствСрезПоследних
+		ПО бит_СведенияПоУслугамЛССрезПоследних.Услуга = бит_ПолучателиДенежныхСредствСрезПоследних.Услуга
+			И бит_СведенияПоУслугамЛССрезПоследних.Поставщик = бит_ПолучателиДенежныхСредствСрезПоследних.Поставщик
+ГДЕ
+	бит_СведенияПоУслугамЛССрезПоследних.Использовать = ЗНАЧЕНИЕ(Перечисление.ДаНет.Да)
+
+СГРУППИРОВАТЬ ПО
+	бит_СведенияПоУслугамЛССрезПоследних.ЛицевойСчет,
+	бит_СведенияПоУслугамЛССрезПоследних.Услуга,
+	бит_СведенияПоУслугамЛССрезПоследних.Поставщик,
+	бит_СведенияПоУслугамЛССрезПоследних.ЛицевойСчет.Здание.Улица,
+	бит_СведенияПоУслугамЛССрезПоследних.ЛицевойСчет.Здание.Район,
+	бит_СведенияПоУслугамЛССрезПоследних.ЛицевойСчет.Здание.Участок,
+	бит_СведенияПоУслугамЛССрезПоследних.ЛицевойСчет.Здание,
+	бит_СведенияПоУслугамЛССрезПоследних.ЛицевойСчет.Квартира,
+	бит_ПолучателиДенежныхСредствСрезПоследних.ПолучательДенежныхСредств,
+	бит_СведенияПоУслугамЛССрезПоследних.ЛицевойСчет.Организация
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	Поставщики.Организация,
+	Поставщики.Поставщик КАК Поставщик,
+	Поставщики.Услуга КАК Услуга,
+	Поставщики.ЛицевойСчет КАК ЛицевойСчет,
+	ЕСТЬNULL(Обороты.Оплата, 0) КАК ОплатаПени,
+	ЕСТЬNULL(Обороты.Начисления, 0) КАК НачисленияПени,
+	ЕСТЬNULL(Обороты.СуммаПени, 0) КАК СуммаПени,
+	ЕСТЬNULL(Обороты.ОплатаУслуг, 0) КАК ОплатаУслуг,
+	ЕСТЬNULL(Обороты.НачислениеУслуг, 0) КАК НачисленияУслуг,
+	ЕСТЬNULL(Обороты.СуммаОборот, 0) КАК СуммаУслуг,
+	Поставщики.Улица,
+	Поставщики.Район,
+	Поставщики.Участок,
+	Поставщики.Здание,
+	Поставщики.Квартира,
+	Поставщики.ПолучательДенежныхСредств,
+	Обороты.ДокументРегистрации КАК ДокументыРегистрации,
+	Обороты.ДокументОплаты КАК ДокументыОплаты,
+	Обороты.ДокументНачислений КАК ДокументыНачислений
+ИЗ
+	Поставщики КАК Поставщики
+		ЛЕВОЕ СОЕДИНЕНИЕ (ВЫБРАТЬ
+			бит_НачислениеПениПоУслугамЖКХОбороты.ЛицевойСчет КАК ЛицевойСчет,
+			бит_НачислениеПениПоУслугамЖКХОбороты.УслугаЖКХ КАК УслугаЖКХ,
+			СУММА(ВЫБОР
+					КОГДА бит_НачислениеПениПоУслугамЖКХОбороты.Регистратор ССЫЛКА Документ.бит_ОплатаКУ
+						ТОГДА -бит_НачислениеПениПоУслугамЖКХОбороты.СуммаПениОборот
+				КОНЕЦ) КАК Оплата,
+			СУММА(ВЫБОР
+					КОГДА бит_НачислениеПениПоУслугамЖКХОбороты.Регистратор ССЫЛКА Документ.бит_НачислениеПениПоЛицевымСчетам
+						ТОГДА бит_НачислениеПениПоУслугамЖКХОбороты.СуммаПениОборот
+				КОНЕЦ) КАК Начисления,
+			бит_НачислениеПениПоУслугамЖКХОбороты.Регистратор КАК ДокументРегистрации,
+			СУММА(бит_НачислениеПениПоУслугамЖКХОбороты.СуммаПениОборот) КАК СуммаПени,
+			ВЫБОР
+				КОГДА бит_НачислениеПениПоУслугамЖКХОбороты.Регистратор ССЫЛКА Документ.бит_ОплатаКУ
+					ТОГДА бит_НачислениеПениПоУслугамЖКХОбороты.Регистратор
+			КОНЕЦ КАК ДокументОплаты,
+			ВЫБОР
+				КОГДА бит_НачислениеПениПоУслугамЖКХОбороты.Регистратор ССЫЛКА Документ.бит_НачислениеПениПоЛицевымСчетам
+						ИЛИ бит_НачислениеПениПоУслугамЖКХОбороты.Регистратор ССЫЛКА Документ.бит_ВводНачальныхОстатковПениПоКУ
+					ТОГДА бит_НачислениеПениПоУслугамЖКХОбороты.Регистратор
+			КОНЕЦ КАК ДокументНачислений,
+			0 КАК ОплатаУслуг,
+			0 КАК НачислениеУслуг,
+			0 КАК СуммаОборот
+		ИЗ
+			РегистрНакопления.бит_НачислениеПениПоУслугамЖКХ.Обороты(
+					&amp;НачалоПериода {(&amp;НачалоПериода)},
+					&amp;КонецПериода {(&amp;КонецПериода)},
+					Регистратор,
+					ЛицевойСчет В
+							(ВЫБРАТЬ РАЗЛИЧНЫЕ
+								Поставщики.ЛицевойСчет
+							ИЗ
+								Поставщики)
+						И УслугаЖКХ В
+							(ВЫБРАТЬ РАЗЛИЧНЫЕ
+								Поставщики.Услуга
+							ИЗ
+								Поставщики)) КАК бит_НачислениеПениПоУслугамЖКХОбороты
+		
+		СГРУППИРОВАТЬ ПО
+			бит_НачислениеПениПоУслугамЖКХОбороты.ЛицевойСчет,
+			бит_НачислениеПениПоУслугамЖКХОбороты.УслугаЖКХ,
+			бит_НачислениеПениПоУслугамЖКХОбороты.Регистратор,
+			ВЫБОР
+				КОГДА бит_НачислениеПениПоУслугамЖКХОбороты.Регистратор ССЫЛКА Документ.бит_ОплатаКУ
+					ТОГДА бит_НачислениеПениПоУслугамЖКХОбороты.Регистратор
+			КОНЕЦ,
+			ВЫБОР
+				КОГДА бит_НачислениеПениПоУслугамЖКХОбороты.Регистратор ССЫЛКА Документ.бит_НачислениеПениПоЛицевымСчетам
+						ИЛИ бит_НачислениеПениПоУслугамЖКХОбороты.Регистратор ССЫЛКА Документ.бит_ВводНачальныхОстатковПениПоКУ
+					ТОГДА бит_НачислениеПениПоУслугамЖКХОбороты.Регистратор
+			КОНЕЦ
+		
+		ОБЪЕДИНИТЬ ВСЕ
+		
+		ВЫБРАТЬ
+			бит_НачисленияПоУслугамЖКХОбороты.ЛицевойСчет,
+			бит_НачисленияПоУслугамЖКХОбороты.УслугаЖКХ,
+			0,
+			0,
+			бит_НачисленияПоУслугамЖКХОбороты.Регистратор,
+			0,
+			ВЫБОР
+				КОГДА бит_НачисленияПоУслугамЖКХОбороты.Регистратор ССЫЛКА Документ.бит_ОплатаКУ
+					ТОГДА бит_НачисленияПоУслугамЖКХОбороты.Регистратор
+			КОНЕЦ,
+			ВЫБОР
+				КОГДА бит_НачисленияПоУслугамЖКХОбороты.Регистратор ССЫЛКА Документ.бит_НачислениеПоЛицевымСчетам
+						ИЛИ бит_НачисленияПоУслугамЖКХОбороты.Регистратор ССЫЛКА Документ.бит_НачисленияПоСчетчикам
+						ИЛИ бит_НачисленияПоУслугамЖКХОбороты.Регистратор ССЫЛКА Документ.бит_НачисленияПоСчетчикамГрупповыеСИндивидуальными
+					ТОГДА бит_НачисленияПоУслугамЖКХОбороты.Регистратор
+			КОНЕЦ,
+			СУММА(ВЫБОР
+					КОГДА бит_НачисленияПоУслугамЖКХОбороты.Регистратор ССЫЛКА Документ.бит_ОплатаКУ
+						ТОГДА -бит_НачисленияПоУслугамЖКХОбороты.СуммаОборот
+				КОНЕЦ),
+			СУММА(ВЫБОР
+					КОГДА бит_НачисленияПоУслугамЖКХОбороты.Регистратор ССЫЛКА Документ.бит_НачислениеПоЛицевымСчетам
+							ИЛИ бит_НачисленияПоУслугамЖКХОбороты.Регистратор ССЫЛКА Документ.бит_НачисленияПоСчетчикам
+							ИЛИ бит_НачисленияПоУслугамЖКХОбороты.Регистратор ССЫЛКА Документ.бит_НачисленияПоСчетчикамГрупповыеСИндивидуальными
+						ТОГДА бит_НачисленияПоУслугамЖКХОбороты.СуммаОборот
+				КОНЕЦ),
+			СУММА(бит_НачисленияПоУслугамЖКХОбороты.СуммаОборот)
+		ИЗ
+			РегистрНакопления.бит_НачисленияПоУслугамЖКХ.Обороты(
+					&amp;НачалоПериода,
+					&amp;КонецПериода,
+					Регистратор,
+					ЛицевойСчет В
+							(ВЫБРАТЬ РАЗЛИЧНЫЕ
+								Поставщики.ЛицевойСчет
+							ИЗ
+								Поставщики)
+						И УслугаЖКХ В
+							(ВЫБРАТЬ РАЗЛИЧНЫЕ
+								Поставщики.Услуга
+							ИЗ
+								Поставщики)) КАК бит_НачисленияПоУслугамЖКХОбороты
+		
+		СГРУППИРОВАТЬ ПО
+			бит_НачисленияПоУслугамЖКХОбороты.ЛицевойСчет,
+			бит_НачисленияПоУслугамЖКХОбороты.УслугаЖКХ,
+			бит_НачисленияПоУслугамЖКХОбороты.Регистратор,
+			ВЫБОР
+				КОГДА бит_НачисленияПоУслугамЖКХОбороты.Регистратор ССЫЛКА Документ.бит_НачислениеПоЛицевымСчетам
+						ИЛИ бит_НачисленияПоУслугамЖКХОбороты.Регистратор ССЫЛКА Документ.бит_НачисленияПоСчетчикам
+						ИЛИ бит_НачисленияПоУслугамЖКХОбороты.Регистратор ССЫЛКА Документ.бит_НачисленияПоСчетчикамГрупповыеСИндивидуальными
+					ТОГДА бит_НачисленияПоУслугамЖКХОбороты.Регистратор
+			КОНЕЦ,
+			ВЫБОР
+				КОГДА бит_НачисленияПоУслугамЖКХОбороты.Регистратор ССЫЛКА Документ.бит_ОплатаКУ
+					ТОГДА бит_НачисленияПоУслугамЖКХОбороты.Регистратор
+			КОНЕЦ) КАК Обороты
+		ПО Поставщики.ЛицевойСчет = Обороты.ЛицевойСчет
+			И Поставщики.Услуга = Обороты.УслугаЖКХ
+ГДЕ
+	Поставщики.Организация = &amp;Организация
+
+УПОРЯДОЧИТЬ ПО
+	ЛицевойСчет,
+	Услуга
+;
+
+////////////////////////////////////////////////////////////////////////////////
+УНИЧТОЖИТЬ Поставщики</query>
+	</dataSet>
+	<calculatedField>
+		<dataPath>АдресДома</dataPath>
+		<expression>Строка(Улица)+", д."+строка(Здание)</expression>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Адрес дома</v8:content>
+			</v8:item>
+		</title>
+	</calculatedField>
+	<calculatedField>
+		<dataPath>СуммаОбщая</dataPath>
+		<expression>СуммаУслуг+СуммаПени</expression>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Сумма общая</v8:content>
+			</v8:item>
+		</title>
+	</calculatedField>
+	<totalField>
+		<dataPath>НачисленияПени</dataPath>
+		<expression>Сумма(НачисленияПени)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ОплатаПени</dataPath>
+		<expression>Сумма(ОплатаПени)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>СуммаПени</dataPath>
+		<expression>Сумма(СуммаПени)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>НачисленияУслуг</dataPath>
+		<expression>Сумма(НачисленияУслуг)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ОплатаУслуг</dataPath>
+		<expression>Сумма(ОплатаУслуг)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>СуммаУслуг</dataPath>
+		<expression>Сумма(СуммаУслуг)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>СуммаОбщая</dataPath>
+		<expression>Сумма(СуммаОбщая)</expression>
+	</totalField>
+	<parameter>
+		<name>КонецПериода</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Конец периода</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<parameter>
+		<name>НачалоПериода</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Начало периода</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<parameter>
+		<name>Организация</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Организация</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.Организации</v8:Type>
+		</valueType>
+		<value xsi:type="dcscor:DesignTimeValue">Справочник.Организации.ПустаяСсылка</value>
+		<useRestriction>false</useRestriction>
+	</parameter>
+	<settingsVariant>
+		<dcsset:name>Основной</dcsset:name>
+		<dcsset:presentation xsi:type="xs:string">Основной</dcsset:presentation>
+		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+			<dcsset:selection>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>НачисленияПени</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ОплатаПени</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>СуммаПени</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>НачисленияУслуг</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ОплатаУслуг</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>СуммаУслуг</dcsset:field>
+				</dcsset:item>
+			</dcsset:selection>
+			<dcsset:item xsi:type="dcsset:StructureItemGroup">
+				<dcsset:groupItems>
+					<dcsset:item xsi:type="dcsset:GroupItemField">
+						<dcsset:field>ЛицевойСчет</dcsset:field>
+						<dcsset:groupType>Items</dcsset:groupType>
+						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+						<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+						<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+					</dcsset:item>
+				</dcsset:groupItems>
+				<dcsset:order>
+					<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+				</dcsset:order>
+				<dcsset:selection>
+					<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+				</dcsset:selection>
+				<dcsset:item xsi:type="dcsset:StructureItemGroup">
+					<dcsset:groupItems>
+						<dcsset:item xsi:type="dcsset:GroupItemField">
+							<dcsset:field>ДокументРегистрации</dcsset:field>
+							<dcsset:groupType>Items</dcsset:groupType>
+							<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+							<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+							<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+						</dcsset:item>
+					</dcsset:groupItems>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+					</dcsset:order>
+					<dcsset:selection>
+						<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+					</dcsset:selection>
+				</dcsset:item>
+			</dcsset:item>
+		</dcsset:settings>
+	</settingsVariant>
+</DataCompositionSchema>

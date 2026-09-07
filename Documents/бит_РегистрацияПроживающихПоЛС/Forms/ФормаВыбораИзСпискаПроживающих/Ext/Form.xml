@@ -1,0 +1,181 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.18">
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+		<Event name="OnClose">ПриЗакрытии</Event>
+	</Events>
+	<ChildItems>
+		<Table name="мТаблицаФизЛицДолей" id="1">
+			<UseAlternationRowColor>true</UseAlternationRowColor>
+			<EnableStartDrag>true</EnableStartDrag>
+			<FileDragMode>AsFile</FileDragMode>
+			<DataPath>мТаблицаФизЛицДолей</DataPath>
+			<RowPictureDataPath>мТаблицаФизЛицДолей.DefaultPicture</RowPictureDataPath>
+			<SearchStringLocation>None</SearchStringLocation>
+			<ViewStatusLocation>None</ViewStatusLocation>
+			<SearchControlLocation>None</SearchControlLocation>
+			<AutoRefresh>false</AutoRefresh>
+			<AutoRefreshPeriod>60</AutoRefreshPeriod>
+			<Period>
+				<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+				<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+				<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+			</Period>
+			<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+			<RestoreCurrentRow>false</RestoreCurrentRow>
+			<TopLevelParent xsi:nil="true"/>
+			<ShowRoot>true</ShowRoot>
+			<AllowRootChoice>false</AllowRootChoice>
+			<UpdateOnDataChange>Auto</UpdateOnDataChange>
+			<AllowGettingCurrentRowURL>true</AllowGettingCurrentRowURL>
+			<ContextMenu name="мТаблицаФизЛицДолейКонтекстноеМеню" id="2"/>
+			<AutoCommandBar name="мТаблицаФизЛицДолейКоманднаяПанель" id="3">
+				<Autofill>false</Autofill>
+				<ChildItems>
+					<Button name="мТаблицаФизЛицДолейВыбрать" id="8">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.Выбрать</CommandName>
+						<ExtendedTooltip name="мТаблицаФизЛицДолейВыбратьРасширеннаяПодсказка" id="14"/>
+					</Button>
+					<Button name="мТаблицаФизЛицДолейНайти" id="9">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Item.мТаблицаФизЛицДолей.StandardCommand.Find</CommandName>
+						<ExtendedTooltip name="мТаблицаФизЛицДолейНайтиРасширеннаяПодсказка" id="15"/>
+					</Button>
+					<Button name="мТаблицаФизЛицДолейОтменитьПоиск" id="10">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Item.мТаблицаФизЛицДолей.StandardCommand.CancelSearch</CommandName>
+						<ExtendedTooltip name="мТаблицаФизЛицДолейОтменитьПоискРасширеннаяПодсказка" id="16"/>
+					</Button>
+					<Button name="мТаблицаФизЛицДолейНастройкаСписка" id="11">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Item.мТаблицаФизЛицДолей.StandardCommand.ListSettings</CommandName>
+						<ExtendedTooltip name="мТаблицаФизЛицДолейНастройкаСпискаРасширеннаяПодсказка" id="17"/>
+					</Button>
+					<Button name="мТаблицаФизЛицДолейВывестиСписок" id="12">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Item.мТаблицаФизЛицДолей.StandardCommand.OutputList</CommandName>
+						<ExtendedTooltip name="мТаблицаФизЛицДолейВывестиСписокРасширеннаяПодсказка" id="18"/>
+					</Button>
+					<Button name="мТаблицаФизЛицДолейОбновить" id="13">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Item.мТаблицаФизЛицДолей.StandardCommand.Refresh</CommandName>
+						<ExtendedTooltip name="мТаблицаФизЛицДолейОбновитьРасширеннаяПодсказка" id="19"/>
+					</Button>
+				</ChildItems>
+			</AutoCommandBar>
+			<ExtendedTooltip name="мТаблицаФизЛицДолейРасширеннаяПодсказка" id="20"/>
+			<SearchStringAddition name="мТаблицаФизЛицДолейСтрокаПоиска" id="21">
+				<AdditionSource>
+					<Item>мТаблицаФизЛицДолей</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="мТаблицаФизЛицДолейСтрокаПоискаКонтекстноеМеню" id="22"/>
+				<ExtendedTooltip name="мТаблицаФизЛицДолейСтрокаПоискаРасширеннаяПодсказка" id="23"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="мТаблицаФизЛицДолейСостояниеПросмотра" id="24">
+				<AdditionSource>
+					<Item>мТаблицаФизЛицДолей</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="мТаблицаФизЛицДолейСостояниеПросмотраКонтекстноеМеню" id="25"/>
+				<ExtendedTooltip name="мТаблицаФизЛицДолейСостояниеПросмотраРасширеннаяПодсказка" id="26"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="мТаблицаФизЛицДолейУправлениеПоиском" id="27">
+				<AdditionSource>
+					<Item>мТаблицаФизЛицДолей</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="мТаблицаФизЛицДолейУправлениеПоискомКонтекстноеМеню" id="28"/>
+				<ExtendedTooltip name="мТаблицаФизЛицДолейУправлениеПоискомРасширеннаяПодсказка" id="29"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<LabelField name="мТаблицаФизЛицДолейФизЛицо" id="6">
+					<DataPath>мТаблицаФизЛицДолей.ФизЛицо</DataPath>
+					<ContextMenu name="мТаблицаФизЛицДолейФизЛицоКонтекстноеМеню" id="7"/>
+					<ExtendedTooltip name="мТаблицаФизЛицДолейФизЛицоРасширеннаяПодсказка" id="30"/>
+				</LabelField>
+				<LabelField name="мТаблицаФизЛицДолейДоляПлощади" id="4">
+					<DataPath>мТаблицаФизЛицДолей.ДоляПлощади</DataPath>
+					<ContextMenu name="мТаблицаФизЛицДолейДоляПлощадиКонтекстноеМеню" id="5"/>
+					<ExtendedTooltip name="мТаблицаФизЛицДолейДоляПлощадиРасширеннаяПодсказка" id="31"/>
+				</LabelField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="мТаблицаФизЛицДолей" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>М таблица физ лиц долей</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<UseAlways>
+				<Field>мТаблицаФизЛицДолей.ДоляПлощади</Field>
+				<Field>мТаблицаФизЛицДолей.ФизЛицо</Field>
+			</UseAlways>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>true</ManualQuery>
+				<DynamicDataRead>false</DynamicDataRead>
+				<QueryText>ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	ПроживающиеПоЛССрезПоследних.ФизЛицо КАК ФизЛицо,
+	ПроживающиеПоЛССрезПоследних.ДоляПлощади
+ИЗ
+	РегистрСведений.бит_ПроживающиеПоЛС.СрезПоследних(&amp;Момент, ЛицевойСчет = &amp;ЛицевойСчет) КАК ПроживающиеПоЛССрезПоследних
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.бит_ОтветственныеЛицаПоКУ.СрезПоследних(&amp;Момент, ЛицевойСчет = &amp;ЛицевойСчет) КАК ОтветственныеЛицаПоКУСрезПоследних
+		ПО ПроживающиеПоЛССрезПоследних.ЛицевойСчет = ОтветственныеЛицаПоКУСрезПоследних.ЛицевойСчет
+			И ПроживающиеПоЛССрезПоследних.ФизЛицо = ОтветственныеЛицаПоКУСрезПоследних.ФизЛицо
+ГДЕ
+	(ПроживающиеПоЛССрезПоследних.ДатаСнятияСРегистрации &gt; &amp;Момент
+			ИЛИ ПроживающиеПоЛССрезПоследних.ДатаСнятияСРегистрации = ДАТАВРЕМЯ(1, 1, 1))</QueryText>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="Выбрать" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выбрать</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выбрать</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.ChooseValue</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>Выбрать</Action>
+			<Representation>TextPicture</Representation>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+	</Commands>
+</Form>

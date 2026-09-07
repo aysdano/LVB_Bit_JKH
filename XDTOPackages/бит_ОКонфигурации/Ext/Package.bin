@@ -1,0 +1,127 @@
+﻿<package xmlns="http://v8.1c.ru/8.1/xdto" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" targetNamespace="http://www.1cbit.ru/BITAboutConfig">
+	<valueType base="xsd:string" name="БазовыйТипСвойств" variety="Atomic">
+		<enumeration>Строка</enumeration>
+		<enumeration>Число</enumeration>
+		<enumeration>Булево</enumeration>
+		<enumeration>Дата</enumeration>
+		<enumeration>Картинка</enumeration>
+		<enumeration>ДвоичныеДанные</enumeration>
+		<enumeration>URL</enumeration>
+		<enumeration>УникальныйИдентификатор</enumeration>
+	</valueType>
+	<valueType base="xsd:string" name="ПоложениеЛоготипа" variety="Atomic">
+		<enumeration>Вверху</enumeration>
+		<enumeration>Слева</enumeration>
+		<enumeration>Справа</enumeration>
+		<enumeration>Внизу</enumeration>
+	</valueType>
+	<valueType base="xsd:string" name="РазмерЛоготипа" variety="Atomic">
+		<enumeration>АвтоРазмер</enumeration>
+		<enumeration>Пропорционально</enumeration>
+		<enumeration>Растянуть</enumeration>
+		<enumeration>РеальныйРазмер</enumeration>
+		<enumeration>Черепица</enumeration>
+	</valueType>
+	<objectType name="Версия">
+		<property default="0" form="Attribute" lowerBound="1" name="МаксВерсия" type="xsd:int"/>
+		<property default="0" form="Attribute" lowerBound="1" name="МинВерсия" type="xsd:int"/>
+		<property default="0" form="Attribute" lowerBound="1" name="Релиз" type="xsd:int"/>
+		<property default="0" form="Attribute" lowerBound="1" name="Сборка" type="xsd:int"/>
+		<property form="Text" lowerBound="0" name="Строка" nillable="true" type="xsd:string"/>
+		<property form="Attribute" lowerBound="0" name="ДопВерсия" nillable="true" type="xsd:string"/>
+	</objectType>
+	<objectType name="ДополнительноеСвойство">
+		<property form="Attribute" lowerBound="1" name="Имя" type="xsd:string"/>
+		<property form="Attribute" lowerBound="1" name="Тип" type="xsd:string"/>
+		<property form="Text" lowerBound="0" name="Значение" nillable="true" type="xsd:string"/>
+		<property form="Attribute" lowerBound="0" name="Представление" nillable="true" type="xsd:string"/>
+		<property form="Attribute" lowerBound="0" name="ПредставлениеЗначения" nillable="true" type="xsd:string"/>
+		<property form="Attribute" lowerBound="0" name="Функция" nillable="true" type="xsd:boolean"/>
+	</objectType>
+	<objectType name="Конфигурация">
+		<property form="Attribute" name="Имя" type="xsd:string"/>
+		<property name="Синоним" type="xsd:string"/>
+		<property name="Комментарий" nillable="true" type="xsd:string"/>
+		<property name="ОсновнаяРоль" nillable="true" type="xsd:string"/>
+		<property name="ОсновнойЯзык" nillable="true" type="xsd:string"/>
+		<property name="ОсновнойИнтерфейс" nillable="true" type="xsd:string"/>
+		<property name="ОсновнаяФормаКонстант" nillable="true" type="xsd:string"/>
+		<property name="КраткаяИнформация" nillable="true" type="xsd:string"/>
+		<property name="ПодробнаяИнформация" nillable="true" type="xsd:string"/>
+		<property name="ОсновнойЛоготип" nillable="true" type="xsd:string"/>
+		<property name="АвторскиеПрава" nillable="true" type="xsd:string"/>
+		<property name="АдресИнформацииОПоставщике" nillable="true" type="xsd:string"/>
+		<property name="АдресИнформацииОКонфигурации" nillable="true" type="xsd:string"/>
+		<property name="Поставщик" nillable="true" type="xsd:string"/>
+		<property xmlns:d3p1="http://www.1cbit.ru/BITAboutConfig" name="Версия" nillable="true" type="d3p1:Версия"/>
+		<property name="АдресКаталогаОбновлений" nillable="true" type="xsd:string"/>
+		<property xmlns:d3p1="http://www.1cbit.ru/BITAboutConfig" lowerBound="0" name="ДополнительноеСвойство" type="d3p1:ДополнительноеСвойство" upperBound="-1"/>
+		<property xmlns:d3p1="http://www.1cbit.ru/BITAboutConfig" name="ТипыСвойств" nillable="true" type="d3p1:ТипСвойствСписок"/>
+		<property xmlns:d3p1="http://www.1cbit.ru/BITAboutConfig" name="Обработчики" nillable="true" type="d3p1:ОбработчикСписок"/>
+		<property xmlns:d3p1="http://www.1cbit.ru/BITAboutConfig" name="Логотипы" nillable="true" type="d3p1:ЛоготипСписок"/>
+		<property xmlns:d3p1="http://www.1cbit.ru/BITAboutConfig" name="Зависимости" nillable="true" type="d3p1:ЗависимостьСписок"/>
+		<property xmlns:d3p1="http://www.1cbit.ru/BITAboutConfig" name="Расширения" nillable="true" type="d3p1:РасширениеСписок"/>
+		<property form="Attribute" lowerBound="0" name="РасположениеПоУмолчанию" nillable="true" type="xsd:string"/>
+		<property form="Attribute" name="Ид" type="xsd:string"/>
+		<property lowerBound="0" name="ОсновнойЛоготипМини" nillable="true" type="xsd:string"/>
+	</objectType>
+	<objectType name="КонфигурацияСписок">
+		<property xmlns:d3p1="http://www.1cbit.ru/BITAboutConfig" lowerBound="0" name="Конфигурация" nillable="true" type="d3p1:Конфигурация" upperBound="-1"/>
+	</objectType>
+	<objectType name="Обработчик">
+		<property form="Attribute" name="Имя" type="xsd:string"/>
+		<property form="Attribute" name="ВозвращаетЗначение" nillable="true" type="xsd:boolean"/>
+		<property form="Attribute" name="Тип" nillable="true" type="xsd:string"/>
+		<property xmlns:d3p1="http://www.1cbit.ru/BITAboutConfig" lowerBound="0" name="Параметр" type="d3p1:Параметр" upperBound="-1"/>
+		<property name="Код" type="xsd:string"/>
+	</objectType>
+	<objectType name="ОбработчикСписок">
+		<property xmlns:d3p1="http://www.1cbit.ru/BITAboutConfig" lowerBound="0" name="Обработчик" type="d3p1:Обработчик" upperBound="-1"/>
+	</objectType>
+	<objectType name="Параметр">
+		<property form="Attribute" name="Имя" type="xsd:string"/>
+		<property form="Attribute" name="Тип" nillable="true" type="xsd:string"/>
+		<property form="Attribute" name="ВозвращаетЗначение" nillable="true" type="xsd:boolean"/>
+		<property form="Text" lowerBound="0" name="ЗначениеПоУмолчанию" nillable="true" type="xsd:string"/>
+	</objectType>
+	<objectType name="ТипСвойств">
+		<property form="Attribute" name="Имя" type="xsd:string"/>
+		<property xmlns:d3p1="http://www.1cbit.ru/BITAboutConfig" form="Attribute" name="БазовыйТип" type="d3p1:БазовыйТипСвойств"/>
+		<property form="Attribute" name="ПолучениеЗначения" nillable="true" type="xsd:string"/>
+		<property form="Attribute" name="НачалоВыбора" nillable="true" type="xsd:string"/>
+		<property form="Attribute" name="ОбработкаВыбора" nillable="true" type="xsd:string"/>
+		<property form="Attribute" name="Открытие" nillable="true" type="xsd:string"/>
+		<property form="Attribute" name="СохранениеЗначения" nillable="true" type="xsd:string"/>
+	</objectType>
+	<objectType name="ТипСвойствСписок">
+		<property xmlns:d3p1="http://www.1cbit.ru/BITAboutConfig" lowerBound="0" name="ТипСвойств" type="d3p1:ТипСвойств" upperBound="-1"/>
+	</objectType>
+	<objectType name="Логотип">
+		<property form="Attribute" name="ИмяСвойства" type="xsd:string"/>
+		<property xmlns:d3p1="http://www.1cbit.ru/BITAboutConfig" lowerBound="0" name="Положение" type="d3p1:ПоложениеЛоготипа" upperBound="-1"/>
+		<property xmlns:d3p1="http://www.1cbit.ru/BITAboutConfig" form="Attribute" name="Размер" nillable="true" type="d3p1:РазмерЛоготипа"/>
+		<property lowerBound="0" name="Нажатие" nillable="true" type="xsd:string"/>
+	</objectType>
+	<objectType name="ЛоготипСписок">
+		<property lowerBound="0" name="Логотип" upperBound="-1"/>
+	</objectType>
+	<objectType name="Зависимость">
+		<property form="Attribute" name="ИмяКонфигурации" type="xsd:string"/>
+		<property xmlns:d3p1="http://www.1cbit.ru/BITAboutConfig" lowerBound="0" name="Версия" nillable="true" type="d3p1:Версия"/>
+		<property form="Attribute" name="ВерсииНовее" nillable="true" type="xsd:boolean"/>
+		<property name="Комментарий" type="xsd:string"/>
+		<property form="Attribute" lowerBound="0" name="Синоним" nillable="true" type="xsd:string"/>
+		<property form="Attribute" lowerBound="0" name="РасположениеОписания" type="xsd:string"/>
+	</objectType>
+	<objectType name="ЗависимостьСписок">
+		<property xmlns:d3p1="http://www.1cbit.ru/BITAboutConfig" lowerBound="0" name="Зависимость" type="d3p1:Зависимость" upperBound="-1"/>
+	</objectType>
+	<objectType name="Расширение">
+		<property form="Attribute" name="Имя" type="xsd:string"/>
+		<property form="Attribute" name="РасположениеОписания" type="xsd:string"/>
+		<property name="Комментарий" nillable="true" type="xsd:string"/>
+	</objectType>
+	<objectType name="РасширениеСписок">
+		<property xmlns:d3p1="http://www.1cbit.ru/BITAboutConfig" lowerBound="0" name="Расширение" type="d3p1:Расширение" upperBound="-1"/>
+	</objectType>
+</package>

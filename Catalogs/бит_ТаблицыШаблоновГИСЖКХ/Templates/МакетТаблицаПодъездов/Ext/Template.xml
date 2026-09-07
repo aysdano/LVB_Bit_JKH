@@ -1,0 +1,301 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<DataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcscom="http://v8.1c.ru/8.1/data-composition-system/common" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataSource>
+		<name>ИсточникДанных1</name>
+		<dataSourceType>Local</dataSourceType>
+	</dataSource>
+	<dataSet xsi:type="DataSetQuery">
+		<name>НаборДанных1</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДатаПостройки</dataPath>
+			<field>ДатаПостройки</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дата постройки</v8:content>
+				</v8:item>
+			</title>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">ДФ='dd.MM.yyyy'</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>НомерПодъезда</dataPath>
+			<field>НомерПодъезда</field>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">ЧЦ='2'; ЧН=''; ЧО=''</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>АдресПодъезда</dataPath>
+			<field>АдресПодъезда</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Адрес подъезда</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Этажность</dataPath>
+			<field>Этажность</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Этажность</v8:content>
+				</v8:item>
+			</title>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">ЧЦ='2'; ЧН=''; ЧО=''</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КодПодъезда</dataPath>
+			<field>КодПодъезда</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Код подъезда</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КодФИАС_ИдентификаторГИСЖКХ</dataPath>
+			<field>КодФИАС_ИдентификаторГИСЖКХ</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Код ФИАС / Идентификатор ГИС ЖКХ</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПодтвержденоПоставщиком</dataPath>
+			<field>ПодтвержденоПоставщиком</field>
+		</field>
+		<dataSource>ИсточникДанных1</dataSource>
+		<query>ВЫБРАТЬ РАЗРЕШЕННЫЕ РАЗЛИЧНЫЕ
+	бит_ЛицевыеСчета.Квартира КАК Квартира
+ПОМЕСТИТЬ ВТ_ЛицевыеСчета
+ИЗ
+	Справочник.бит_ЛицевыеСчета КАК бит_ЛицевыеСчета
+ГДЕ
+	бит_ЛицевыеСчета.Архивный = ЛОЖЬ
+	И НЕ бит_ЛицевыеСчета.ПометкаУдаления
+{ГДЕ
+	(бит_ЛицевыеСчета.Ссылка В (&amp;СписокЛС))}
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	бит_Подъезды.Владелец КАК Владелец,
+	бит_Подъезды.Наименование КАК НомерПодъезда,
+	бит_Подъезды.УникальныйНомерГИСЖКХ КАК КодПодъезда,
+	бит_Подъезды.КоличествоЭтажей КАК Этажность,
+	бит_Подъезды.ПодтвержденоПоставщиком КАК ПодтвержденоПоставщиком
+ПОМЕСТИТЬ ВТ_Подъезды
+ИЗ
+	Справочник.бит_Подъезды КАК бит_Подъезды
+
+ИНДЕКСИРОВАТЬ ПО
+	Владелец
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ВТ_Подъезды.НомерПодъезда КАК НомерПодъезда,
+	ВТ_Подъезды.КодПодъезда КАК КодПодъезда,
+	ВЫБОР
+		КОГДА ЕСТЬNULL(бит_СписокЗданий.КодФИАС, "") = ""
+			ТОГДА ЕСТЬNULL(бит_СписокЗданий.УникальныйНомерГИСЖКХ, "")
+		ИНАЧЕ ЕСТЬNULL(бит_СписокЗданий.КодФИАС, "")
+	КОНЕЦ КАК КодФИАС_ИдентификаторГИСЖКХ,
+	ВТ_Подъезды.Этажность КАК Этажность,
+	бит_СписокЗданий.ПочтовыйАдрес КАК АдресПодъезда,
+	ВЫБОР
+		КОГДА бит_СписокЗданий.ДатаВводаВЭксплуатацию = ДАТАВРЕМЯ(1, 1, 1)
+			ТОГДА ""
+		ИНАЧЕ бит_СписокЗданий.ДатаВводаВЭксплуатацию
+	КОНЕЦ КАК ДатаПостройки,
+	ВЫБОР
+		КОГДА ВТ_Подъезды.ПодтвержденоПоставщиком
+			ТОГДА "Да"
+		ИНАЧЕ "Нет"
+	КОНЕЦ КАК ПодтвержденоПоставщиком
+ИЗ
+	ВТ_Подъезды КАК ВТ_Подъезды
+		ЛЕВОЕ СОЕДИНЕНИЕ Справочник.бит_СписокЗданий КАК бит_СписокЗданий
+		ПО ВТ_Подъезды.Владелец = бит_СписокЗданий.Ссылка
+ГДЕ
+	НЕ бит_СписокЗданий.ПометкаУдаления
+{ГДЕ
+	(бит_СписокЗданий.Организация = &amp;ОтборОрганизация),
+	(бит_СписокЗданий.Улица В (&amp;СписокУлиц)),
+	(бит_СписокЗданий.Ссылка В (&amp;СписокЗданий)),
+	(ВЫБОР
+			КОГДА &amp;ТипДомаГИСЖКХ = ЗНАЧЕНИЕ(Перечисление.бит_ТипыДомовГИСЖКХ.МКД)
+				ТОГДА бит_СписокЗданий.ТипыДомовГИСЖКХ = ЗНАЧЕНИЕ(Перечисление.бит_ТипыДомовГИСЖКХ.МКД)
+						ИЛИ бит_СписокЗданий.ТипыДомовГИСЖКХ = ЗНАЧЕНИЕ(Перечисление.бит_ТипыДомовГИСЖКХ.ПустаяСсылка)
+			ИНАЧЕ бит_СписокЗданий.ТипыДомовГИСЖКХ В (&amp;ТипДомаГИСЖКХ)
+		КОНЕЦ)}</query>
+	</dataSet>
+	<calculatedField>
+		<dataPath>ДатаПостройки</dataPath>
+		<expression>Формат(ДатаПостройки, "ДФ=dd.MM.yyyy")</expression>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Дата постройки</v8:content>
+			</v8:item>
+		</title>
+	</calculatedField>
+	<calculatedField>
+		<dataPath>ГодПостройки</dataPath>
+		<expression>Формат(ДатаПостройки, "ДФ=yyyy")</expression>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Год постройки</v8:content>
+			</v8:item>
+		</title>
+	</calculatedField>
+	<parameter>
+		<name>ОтборОрганизация</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Отбор организация</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.Организации</v8:Type>
+		</valueType>
+		<value xsi:nil="true"/>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<parameter>
+		<name>СписокЗданий</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Список зданий</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.бит_СписокЗданий</v8:Type>
+		</valueType>
+		<useRestriction>true</useRestriction>
+		<valueListAllowed>true</valueListAllowed>
+	</parameter>
+	<parameter>
+		<name>СписокЛС</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Список ЛС</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.бит_ЛицевыеСчета</v8:Type>
+		</valueType>
+		<useRestriction>true</useRestriction>
+		<valueListAllowed>true</valueListAllowed>
+	</parameter>
+	<parameter>
+		<name>СписокУлиц</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Список улиц</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.бит_СписокУлиц</v8:Type>
+		</valueType>
+		<useRestriction>true</useRestriction>
+		<valueListAllowed>true</valueListAllowed>
+	</parameter>
+	<parameter>
+		<name>ТипДомаГИСЖКХ</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Тип дома ГИСЖКХ</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:EnumRef.бит_ТипыДомовГИСЖКХ</v8:Type>
+		</valueType>
+		<value xsi:nil="true"/>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<settingsVariant>
+		<dcsset:name>Основной</dcsset:name>
+		<dcsset:presentation xsi:type="xs:string">Основной</dcsset:presentation>
+		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+			<dcsset:selection>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>АдресПодъезда</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>КодПодъезда</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>КодФИАС_ИдентификаторГИСЖКХ</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>НомерПодъезда</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Этажность</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ДатаПостройки</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ГодПостройки</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ПодтвержденоПоставщиком</dcsset:field>
+				</dcsset:item>
+			</dcsset:selection>
+			<dcsset:dataParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>СписокЗданий</dcscor:parameter>
+					<dcscor:value xsi:nil="true"/>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>СписокЛС</dcscor:parameter>
+					<dcscor:value xsi:nil="true"/>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>СписокУлиц</dcscor:parameter>
+					<dcscor:value xsi:nil="true"/>
+				</dcscor:item>
+			</dcsset:dataParameters>
+			<dcsset:item xsi:type="dcsset:StructureItemGroup">
+				<dcsset:order>
+					<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+				</dcsset:order>
+				<dcsset:selection>
+					<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+				</dcsset:selection>
+			</dcsset:item>
+		</dcsset:settings>
+	</settingsVariant>
+</DataCompositionSchema>

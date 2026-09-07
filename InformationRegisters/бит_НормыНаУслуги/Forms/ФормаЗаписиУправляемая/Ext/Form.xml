@@ -1,0 +1,547 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.18">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="AfterWrite">ПослеЗаписи</Event>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="BeforeWrite">ПередЗаписью</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+		<Event name="OnWriteAtServer">ПриЗаписиНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<InputField name="Период" id="1">
+			<DataPath>Запись.Period</DataPath>
+			<ContextMenu name="ПериодКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="ПериодExtendedTooltip" id="76"/>
+			<Events>
+				<Event name="OnChange">ПериодПриИзменении</Event>
+			</Events>
+		</InputField>
+		<UsualGroup name="УслугаСпособРасчета" id="37">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Услуга способ расчета</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Услуга способ расчета</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="УслугаСпособРасчетаExtendedTooltip" id="77"/>
+			<ChildItems>
+				<InputField name="Услуга" id="3">
+					<DataPath>Запись.Услуга</DataPath>
+					<Enabled>false</Enabled>
+					<ChoiceButton>false</ChoiceButton>
+					<OpenButton>false</OpenButton>
+					<ContextMenu name="УслугаКонтекстноеМеню" id="4"/>
+					<ExtendedTooltip name="УслугаExtendedTooltip" id="78"/>
+					<Events>
+						<Event name="OnChange">УслугаПриИзменении</Event>
+					</Events>
+				</InputField>
+				<InputField name="СпособРасчетаПоУслуге" id="5">
+					<DataPath>Запись.СпособРасчетаПоУслуге</DataPath>
+					<ContextMenu name="СпособРасчетаПоУслугеКонтекстноеМеню" id="6"/>
+					<ExtendedTooltip name="СпособРасчетаПоУслугеExtendedTooltip" id="79"/>
+					<Events>
+						<Event name="OnChange">СпособРасчетаПоУслугеПриИзменении</Event>
+						<Event name="StartChoice">СпособРасчетаПоУслугеНачалоВыбора</Event>
+					</Events>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ТипСтатусКвартиры" id="38">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Тип статус квартиры</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Тип статус квартиры</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ТипСтатусКвартирыExtendedTooltip" id="80"/>
+			<ChildItems>
+				<InputField name="ТипКвартиры" id="11">
+					<DataPath>Запись.ТипКвартиры</DataPath>
+					<ContextMenu name="ТипКвартирыКонтекстноеМеню" id="12"/>
+					<ExtendedTooltip name="ТипКвартирыExtendedTooltip" id="81"/>
+					<Events>
+						<Event name="OnChange">ТипКвартирыПриИзменении</Event>
+					</Events>
+				</InputField>
+				<InputField name="СтатусКвартиры" id="9">
+					<DataPath>Запись.СтатусКвартиры</DataPath>
+					<ContextMenu name="СтатусКвартирыКонтекстноеМеню" id="10"/>
+					<ExtendedTooltip name="СтатусКвартирыExtendedTooltip" id="82"/>
+					<Events>
+						<Event name="OnChange">СтатусКвартирыПриИзменении</Event>
+					</Events>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<Table name="ТаблицаРесурсов" id="39">
+			<Representation>List</Representation>
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<FileDragMode>AsFile</FileDragMode>
+			<DataPath>ТаблицаРесурсов</DataPath>
+			<SearchStringLocation>None</SearchStringLocation>
+			<ViewStatusLocation>None</ViewStatusLocation>
+			<SearchControlLocation>None</SearchControlLocation>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="ТаблицаРесурсовКонтекстноеМеню" id="40"/>
+			<AutoCommandBar name="ТаблицаРесурсовКоманднаяПанель" id="41">
+				<Autofill>false</Autofill>
+			</AutoCommandBar>
+			<ExtendedTooltip name="ТаблицаРесурсовExtendedTooltip" id="83"/>
+			<SearchStringAddition name="ТаблицаРесурсовСтрокаПоиска" id="103">
+				<AdditionSource>
+					<Item>ТаблицаРесурсов</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ТаблицаРесурсовСтрокаПоискаКонтекстноеМеню" id="104"/>
+				<ExtendedTooltip name="ТаблицаРесурсовСтрокаПоискаРасширеннаяПодсказка" id="105"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="ТаблицаРесурсовСостояниеПросмотра" id="106">
+				<AdditionSource>
+					<Item>ТаблицаРесурсов</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ТаблицаРесурсовСостояниеПросмотраКонтекстноеМеню" id="107"/>
+				<ExtendedTooltip name="ТаблицаРесурсовСостояниеПросмотраРасширеннаяПодсказка" id="108"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="ТаблицаРесурсовУправлениеПоиском" id="109">
+				<AdditionSource>
+					<Item>ТаблицаРесурсов</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="ТаблицаРесурсовУправлениеПоискомКонтекстноеМеню" id="110"/>
+				<ExtendedTooltip name="ТаблицаРесурсовУправлениеПоискомРасширеннаяПодсказка" id="111"/>
+			</SearchControlAddition>
+			<Events>
+				<Event name="BeforeAddRow">ТаблицаРесурсовПередНачаломДобавления</Event>
+				<Event name="BeforeDeleteRow">ТаблицаРесурсовПередУдалением</Event>
+			</Events>
+			<ChildItems>
+				<InputField name="ТаблицаРесурсовРежимПотребления" id="42">
+					<DataPath>ТаблицаРесурсов.РежимПотребления</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ТаблицаРесурсовРежимПотребленияКонтекстноеМеню" id="43"/>
+					<ExtendedTooltip name="ТаблицаРесурсовРежимПотребленияExtendedTooltip" id="84"/>
+					<Events>
+						<Event name="OnChange">ТаблицаРесурсовРежимПотребленияПриИзменении</Event>
+					</Events>
+				</InputField>
+				<InputField name="ТаблицаРесурсовНормативПотребленияПоКу" id="44">
+					<DataPath>ТаблицаРесурсов.НормативПотребленияПоКу</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ТаблицаРесурсовНормативПотребленияПоКуКонтекстноеМеню" id="45"/>
+					<ExtendedTooltip name="ТаблицаРесурсовНормативПотребленияПоКуExtendedTooltip" id="85"/>
+				</InputField>
+				<InputField name="ТаблицаРесурсовНормативОДН" id="112">
+					<DataPath>ТаблицаРесурсов.НормативОДН</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ТаблицаРесурсовНормативОДНКонтекстноеМеню" id="113"/>
+					<ExtendedTooltip name="ТаблицаРесурсовНормативОДНРасширеннаяПодсказка" id="114"/>
+				</InputField>
+				<InputField name="ТаблицаРесурсовНаОдного" id="46">
+					<DataPath>ТаблицаРесурсов.НаОдного</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ТаблицаРесурсовНаОдногоКонтекстноеМеню" id="47"/>
+					<ExtendedTooltip name="ТаблицаРесурсовНаОдногоExtendedTooltip" id="86"/>
+				</InputField>
+				<InputField name="ТаблицаРесурсовНаДвоих" id="48">
+					<DataPath>ТаблицаРесурсов.НаДвоих</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ТаблицаРесурсовНаДвоихКонтекстноеМеню" id="49"/>
+					<ExtendedTooltip name="ТаблицаРесурсовНаДвоихExtendedTooltip" id="87"/>
+				</InputField>
+				<InputField name="ТаблицаРесурсовНаСемью" id="50">
+					<DataPath>ТаблицаРесурсов.НаСемью</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ТаблицаРесурсовНаСемьюКонтекстноеМеню" id="51"/>
+					<ExtendedTooltip name="ТаблицаРесурсовНаСемьюExtendedTooltip" id="88"/>
+					<Events>
+						<Event name="OnChange">ТаблицаРесурсовНаСемьюПриИзменении</Event>
+					</Events>
+				</InputField>
+				<InputField name="ТаблицаРесурсовНаСемью4" id="52">
+					<DataPath>ТаблицаРесурсов.НаСемью4</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ТаблицаРесурсовНаСемью4КонтекстноеМеню" id="53"/>
+					<ExtendedTooltip name="ТаблицаРесурсовНаСемью4ExtendedTooltip" id="89"/>
+				</InputField>
+				<InputField name="ТаблицаРесурсовНаСемью5" id="54">
+					<DataPath>ТаблицаРесурсов.НаСемью5</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ТаблицаРесурсовНаСемью5КонтекстноеМеню" id="55"/>
+					<ExtendedTooltip name="ТаблицаРесурсовНаСемью5ExtendedTooltip" id="90"/>
+				</InputField>
+				<InputField name="ТаблицаРесурсовНаСемью6" id="56">
+					<DataPath>ТаблицаРесурсов.НаСемью6</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ТаблицаРесурсовНаСемью6КонтекстноеМеню" id="57"/>
+					<ExtendedTooltip name="ТаблицаРесурсовНаСемью6ExtendedTooltip" id="91"/>
+				</InputField>
+				<InputField name="ТаблицаРесурсовНаЛицевойСчет" id="58">
+					<DataPath>ТаблицаРесурсов.НаЛицевойСчет</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ТаблицаРесурсовНаЛицевойСчетКонтекстноеМеню" id="59"/>
+					<ExtendedTooltip name="ТаблицаРесурсовНаЛицевойСчетExtendedTooltip" id="92"/>
+				</InputField>
+				<InputField name="ТаблицаРесурсовДопНормаНаСемью" id="60">
+					<DataPath>ТаблицаРесурсов.ДопНормаНаСемью</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ТаблицаРесурсовДопНормаНаСемьюКонтекстноеМеню" id="61"/>
+					<ExtendedTooltip name="ТаблицаРесурсовДопНормаНаСемьюExtendedTooltip" id="93"/>
+				</InputField>
+				<InputField name="ТаблицаРесурсовДопНормаНаКаждого" id="62">
+					<DataPath>ТаблицаРесурсов.ДопНормаНаКаждого</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ТаблицаРесурсовДопНормаНаКаждогоКонтекстноеМеню" id="63"/>
+					<ExtendedTooltip name="ТаблицаРесурсовДопНормаНаКаждогоExtendedTooltip" id="94"/>
+				</InputField>
+				<CheckBoxField name="ТаблицаРесурсовИспользоватьДопНормуНаОдного" id="64">
+					<DataPath>ТаблицаРесурсов.ИспользоватьДопНормуНаОдного</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ТаблицаРесурсовИспользоватьДопНормуНаОдногоКонтекстноеМеню" id="65"/>
+					<ExtendedTooltip name="ТаблицаРесурсовИспользоватьДопНормуНаОдногоExtendedTooltip" id="95"/>
+				</CheckBoxField>
+				<CheckBoxField name="ТаблицаРесурсовИспользоватьДопНормуНаЛьготника" id="66">
+					<DataPath>ТаблицаРесурсов.ИспользоватьДопНормуНаЛьготника</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ТаблицаРесурсовИспользоватьДопНормуНаЛьготникаКонтекстноеМеню" id="67"/>
+					<ExtendedTooltip name="ТаблицаРесурсовИспользоватьДопНормуНаЛьготникаExtendedTooltip" id="96"/>
+				</CheckBoxField>
+			</ChildItems>
+		</Table>
+		<UsualGroup name="Группа1" id="68">
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ChildItemsWidth>LeftWidest</ChildItemsWidth>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="Группа1ExtendedTooltip" id="97"/>
+			<ChildItems>
+				<UsualGroup name="Группа2" id="70">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>                                                                                                                   </v8:content>
+						</v8:item>
+					</Title>
+					<Group>Vertical</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="Группа2ExtendedTooltip" id="98"/>
+					<ChildItems>
+						<LabelDecoration name="Декорация1" id="71">
+							<HorizontalStretch>true</HorizontalStretch>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>                                                                                                                                                                                                           </v8:content>
+								</v8:item>
+							</Title>
+							<HorizontalAlign>Right</HorizontalAlign>
+							<ContextMenu name="Декорация1КонтекстноеМеню" id="72"/>
+							<ExtendedTooltip name="Декорация1ExtendedTooltip" id="99"/>
+						</LabelDecoration>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="Группа3" id="73">
+					<Group>Horizontal</Group>
+					<Representation>None</Representation>
+					<ChildItemsWidth>LeftWidest</ChildItemsWidth>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="Группа3ExtendedTooltip" id="100"/>
+					<ChildItems>
+						<LabelDecoration name="Декорация2" id="74">
+							<HorizontalStretch>true</HorizontalStretch>
+							<ContextMenu name="Декорация2КонтекстноеМеню" id="75"/>
+							<ExtendedTooltip name="Декорация2ExtendedTooltip" id="101"/>
+						</LabelDecoration>
+						<Button name="ОК" id="69">
+							<Type>UsualButton</Type>
+							<CommandName>Form.Command.OK</CommandName>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>ОК</v8:content>
+								</v8:item>
+							</Title>
+							<ExtendedTooltip name="ОКExtendedTooltip" id="102"/>
+						</Button>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Запись" id="1">
+			<Type>
+				<v8:Type>cfg:InformationRegisterRecordManager.бит_НормыНаУслуги</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="ТаблицаРесурсов" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Таблица ресурсов</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="РежимПотребления" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Режим потребления</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.бит_РежимыПотребленияУслуг</v8:Type>
+					</Type>
+				</Column>
+				<Column name="НормативПотребленияПоКу" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Норматив потребления по КУ</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>15</v8:Digits>
+							<v8:FractionDigits>6</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="НаОдного" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>На одного</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>15</v8:Digits>
+							<v8:FractionDigits>4</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="НаДвоих" id="4">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>На двоих</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>15</v8:Digits>
+							<v8:FractionDigits>4</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="НаСемью" id="5">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>На семью</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>15</v8:Digits>
+							<v8:FractionDigits>4</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="НаСемью4" id="6">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>На семью4</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>15</v8:Digits>
+							<v8:FractionDigits>4</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="НаСемью5" id="7">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>На семью5</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>15</v8:Digits>
+							<v8:FractionDigits>4</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="НаСемью6" id="8">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>На семью6</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>15</v8:Digits>
+							<v8:FractionDigits>4</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="НаЛицевойСчет" id="9">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>На лицевой счет</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>15</v8:Digits>
+							<v8:FractionDigits>4</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="ДопНормаНаСемью" id="10">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Доп норма на семью</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>15</v8:Digits>
+							<v8:FractionDigits>4</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="ДопНормаНаКаждого" id="11">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Доп норма на каждого</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>15</v8:Digits>
+							<v8:FractionDigits>4</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="ИспользоватьДопНормуНаОдного" id="12">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Использовать доп норму на одного</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ИспользоватьДопНормуНаЛьготника" id="13">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Использовать доп норму на льготника</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="НормативОДН" id="14">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Норматив ОДН</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>15</v8:Digits>
+							<v8:FractionDigits>4</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="OK" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>OK</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>OK</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>OK</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+	</Commands>
+</Form>

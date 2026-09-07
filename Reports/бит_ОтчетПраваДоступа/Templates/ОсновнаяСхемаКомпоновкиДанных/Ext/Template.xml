@@ -1,0 +1,541 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<DataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcscom="http://v8.1c.ru/8.1/data-composition-system/common" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataSource>
+		<name>ИнформационнаяБаза</name>
+		<dataSourceType>Local</dataSourceType>
+	</dataSource>
+	<dataSet xsi:type="DataSetQuery">
+		<name>НаборДанных1</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ВидОбъекта</dataPath>
+			<field>ВидОбъекта</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вид объекта</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ВидСубъекта</dataPath>
+			<field>ВидСубъекта</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вид субъекта</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Копирование</dataPath>
+			<field>Копирование</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Копирование</v8:content>
+				</v8:item>
+			</title>
+			<presentationExpression>Формат(Копирование,"БЛ=; БИ=V")</presentationExpression>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ОбъектДоступа</dataPath>
+			<field>ОбъектДоступа</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Объект доступа</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПереносВГруппу</dataPath>
+			<field>ПереносВГруппу</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Перенос в группу</v8:content>
+				</v8:item>
+			</title>
+			<presentationExpression>Формат(ПереносВГруппу,"БЛ=; БИ=V")</presentationExpression>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Печать</dataPath>
+			<field>Печать</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Печать</v8:content>
+				</v8:item>
+			</title>
+			<presentationExpression>Формат(Печать,"БЛ=; БИ=V")</presentationExpression>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПометкаНаУдаление</dataPath>
+			<field>ПометкаНаУдаление</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Пометка на удаление</v8:content>
+				</v8:item>
+			</title>
+			<presentationExpression>Формат(ПометкаНаУдаление,"БЛ=; БИ=V")</presentationExpression>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Редактирование</dataPath>
+			<field>Редактирование</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Редактирование</v8:content>
+				</v8:item>
+			</title>
+			<presentationExpression>Формат(Редактирование,"БЛ=; БИ=V")</presentationExpression>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Создание</dataPath>
+			<field>Создание</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Создание</v8:content>
+				</v8:item>
+			</title>
+			<presentationExpression>Формат(Создание,"БЛ=; БИ=V")</presentationExpression>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СубъектДоступа</dataPath>
+			<field>СубъектДоступа</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Субъект доступа</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ОтменаПроведения</dataPath>
+			<field>ОтменаПроведения</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отмена проведения</v8:content>
+				</v8:item>
+			</title>
+			<presentationExpression>Формат(ОтменаПроведения,"БЛ=; БИ=V")</presentationExpression>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Проведение</dataPath>
+			<field>Проведение</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Проведение</v8:content>
+				</v8:item>
+			</title>
+			<presentationExpression>Формат(Проведение,"БЛ=; БИ=V")</presentationExpression>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ВсеПрава</dataPath>
+			<field>ВсеПрава</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Все права</v8:content>
+				</v8:item>
+			</title>
+			<presentationExpression>Формат(ВсеПрава,"БЛ=; БИ=V")</presentationExpression>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ОбластьДоступа</dataPath>
+			<field>ОбластьДоступа</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Область доступа</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<dataSource>ИнформационнаяБаза</dataSource>
+		<query>ВЫБРАТЬ
+	бит_ПраваДоступа.СубъектДоступа,
+	бит_ПраваДоступа.ОбъектДоступа,
+	бит_ПраваДоступа.Редактирование,
+	бит_ПраваДоступа.Создание,
+	бит_ПраваДоступа.Копирование,
+	бит_ПраваДоступа.ПометкаНаУдаление,
+	бит_ПраваДоступа.ПереносВГруппу,
+	бит_ПраваДоступа.Печать,
+	бит_ПраваДоступа.ВидОбъекта,
+	ВЫБОР
+		КОГДА бит_ПраваДоступа.СубъектДоступа ССЫЛКА Справочник.Пользователи
+			ТОГДА "Пользователи"
+		ИНАЧЕ "Шаблоны"
+	КОНЕЦ КАК ВидСубъекта,
+	NULL КАК Проведение,
+	NULL КАК ОтменаПроведения,
+	ВЫБОР
+		КОГДА бит_ПраваДоступа.Редактирование
+				И бит_ПраваДоступа.Создание
+				И бит_ПраваДоступа.ПометкаНаУдаление
+				И бит_ПраваДоступа.ПереносВГруппу
+				И бит_ПраваДоступа.Печать
+			ТОГДА ИСТИНА
+		ИНАЧЕ ЛОЖЬ
+	КОНЕЦ КАК ВсеПрава,
+	бит_ПраваДоступа.ОбластьДоступа КАК ОбластьДоступа
+ИЗ
+	РегистрСведений.бит_ПраваДоступа КАК бит_ПраваДоступа
+ГДЕ
+	бит_ПраваДоступа.ВидОбъекта = ЗНАЧЕНИЕ(Перечисление.бит_ВидыОбъектов.Справочник)
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	бит_ПраваДоступа.СубъектДоступа,
+	бит_ПраваДоступа.ОбъектДоступа,
+	бит_ПраваДоступа.Редактирование,
+	бит_ПраваДоступа.Создание,
+	бит_ПраваДоступа.Копирование,
+	бит_ПраваДоступа.ПометкаНаУдаление,
+	NULL,
+	бит_ПраваДоступа.Печать,
+	бит_ПраваДоступа.ВидОбъекта,
+	ВЫБОР
+		КОГДА бит_ПраваДоступа.СубъектДоступа ССЫЛКА Справочник.Пользователи
+			ТОГДА "Пользователи"
+		ИНАЧЕ "Шаблоны"
+	КОНЕЦ,
+	бит_ПраваДоступа.Проведение,
+	бит_ПраваДоступа.ОтменаПроведения,
+	ВЫБОР
+		КОГДА бит_ПраваДоступа.Редактирование
+				И бит_ПраваДоступа.Создание
+				И бит_ПраваДоступа.Копирование
+				И бит_ПраваДоступа.ПометкаНаУдаление
+				И бит_ПраваДоступа.Печать
+				И бит_ПраваДоступа.Проведение
+				И бит_ПраваДоступа.ОтменаПроведения
+			ТОГДА ИСТИНА
+		ИНАЧЕ ЛОЖЬ
+	КОНЕЦ,
+	бит_ПраваДоступа.ОбластьДоступа
+ИЗ
+	РегистрСведений.бит_ПраваДоступа КАК бит_ПраваДоступа
+ГДЕ
+	бит_ПраваДоступа.ВидОбъекта = ЗНАЧЕНИЕ(Перечисление.бит_ВидыОбъектов.Документ)
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	бит_ПраваДоступа.СубъектДоступа,
+	бит_ПраваДоступа.ОбъектДоступа,
+	бит_ПраваДоступа.Редактирование,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	бит_ПраваДоступа.ВидОбъекта,
+	ВЫБОР
+		КОГДА бит_ПраваДоступа.СубъектДоступа ССЫЛКА Справочник.Пользователи
+			ТОГДА "Пользователи"
+		ИНАЧЕ "Шаблоны"
+	КОНЕЦ,
+	NULL,
+	NULL,
+	ВЫБОР
+		КОГДА бит_ПраваДоступа.Редактирование
+			ТОГДА ИСТИНА
+		ИНАЧЕ ЛОЖЬ
+	КОНЕЦ,
+	бит_ПраваДоступа.ОбластьДоступа
+ИЗ
+	РегистрСведений.бит_ПраваДоступа КАК бит_ПраваДоступа
+ГДЕ
+	(бит_ПраваДоступа.ВидОбъекта = ЗНАЧЕНИЕ(Перечисление.бит_ВидыОбъектов.Отчет)
+			ИЛИ бит_ПраваДоступа.ВидОбъекта = ЗНАЧЕНИЕ(Перечисление.бит_ВидыОбъектов.Обработка)
+			ИЛИ бит_ПраваДоступа.ВидОбъекта = ЗНАЧЕНИЕ(Перечисление.бит_ВидыОбъектов.РегистрСведений))</query>
+	</dataSet>
+	<totalField>
+		<dataPath>Копирование</dataPath>
+		<expression>Минимум(Копирование)</expression>
+		<group>ВидОбъекта</group>
+		<group>ОбъектДоступа</group>
+	</totalField>
+	<totalField>
+		<dataPath>ОтменаПроведения</dataPath>
+		<expression>Минимум(ОтменаПроведения)</expression>
+		<group>ВидОбъекта</group>
+		<group>ОбъектДоступа</group>
+	</totalField>
+	<totalField>
+		<dataPath>ПереносВГруппу</dataPath>
+		<expression>Минимум(ПереносВГруппу)</expression>
+		<group>ВидОбъекта</group>
+		<group>ОбъектДоступа</group>
+	</totalField>
+	<totalField>
+		<dataPath>Печать</dataPath>
+		<expression>Минимум(Печать)</expression>
+		<group>ВидОбъекта</group>
+		<group>ОбъектДоступа</group>
+	</totalField>
+	<totalField>
+		<dataPath>ПометкаНаУдаление</dataPath>
+		<expression>Минимум(ПометкаНаУдаление)</expression>
+		<group>ВидОбъекта</group>
+		<group>ОбъектДоступа</group>
+	</totalField>
+	<totalField>
+		<dataPath>Проведение</dataPath>
+		<expression>Минимум(Проведение)</expression>
+		<group>ВидОбъекта</group>
+		<group>ОбъектДоступа</group>
+	</totalField>
+	<totalField>
+		<dataPath>Редактирование</dataPath>
+		<expression>Минимум(Редактирование)</expression>
+		<group>ВидОбъекта</group>
+		<group>ОбъектДоступа</group>
+	</totalField>
+	<totalField>
+		<dataPath>Создание</dataPath>
+		<expression>Минимум(Создание)</expression>
+		<group>ВидОбъекта</group>
+		<group>ОбъектДоступа</group>
+	</totalField>
+	<settingsVariant>
+		<dcsset:name>Основной</dcsset:name>
+		<dcsset:presentation xsi:type="xs:string">Основной</dcsset:presentation>
+		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+			<dcsset:selection>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Редактирование</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Создание</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Копирование</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ПометкаНаУдаление</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Печать</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Проведение</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ОтменаПроведения</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ПереносВГруппу</dcsset:field>
+				</dcsset:item>
+			</dcsset:selection>
+			<dcsset:filter>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">ВидОбъекта</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+					<dcsset:right xsi:type="dcscor:DesignTimeValue">Перечисление.бит_ВидыОбъектов.</dcsset:right>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">СубъектДоступа</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">ОбъектДоступа</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+					<dcsset:right xsi:type="dcscor:DesignTimeValue">Справочник.бит_ОбъектыДоступа.</dcsset:right>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">ВсеПрава</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+					<dcsset:right xsi:type="xs:boolean">false</dcsset:right>
+				</dcsset:item>
+			</dcsset:filter>
+			<dcsset:conditionalAppearance>
+				<dcsset:item>
+					<dcsset:selection>
+						<dcsset:item>
+							<dcsset:field>ОтменаПроведения</dcsset:field>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:field>ПереносВГруппу</dcsset:field>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:field>Печать</dcsset:field>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:field>ПометкаНаУдаление</dcsset:field>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:field>Проведение</dcsset:field>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:field>Редактирование</dcsset:field>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:field>Создание</dcsset:field>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:field>Копирование</dcsset:field>
+						</dcsset:item>
+					</dcsset:selection>
+					<dcsset:filter/>
+					<dcsset:appearance>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>Шрифт</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:Font" ref="sys:DefaultGUIFont" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+						</dcscor:item>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>Формат</dcscor:parameter>
+							<dcscor:value xsi:type="v8:LocalStringType">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>БЛ=; БИ=V</v8:content>
+								</v8:item>
+							</dcscor:value>
+						</dcscor:item>
+					</dcsset:appearance>
+				</dcsset:item>
+			</dcsset:conditionalAppearance>
+			<dcsset:outputParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>ВертикальноеРасположениеОбщихИтогов</dcscor:parameter>
+					<dcscor:value xsi:type="dcscor:DataCompositionTotalPlacement">None</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ВыводитьЗаголовок</dcscor:parameter>
+					<dcscor:value xsi:type="dcsset:DataCompositionTextOutputType">Output</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Заголовок</dcscor:parameter>
+					<dcscor:value xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Права доступа</v8:content>
+						</v8:item>
+					</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ВыводитьПараметрыДанных</dcscor:parameter>
+					<dcscor:value xsi:type="dcsset:DataCompositionTextOutputType">DontOutput</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ВыводитьОтбор</dcscor:parameter>
+					<dcscor:value xsi:type="dcsset:DataCompositionTextOutputType">DontOutput</dcscor:value>
+				</dcscor:item>
+			</dcsset:outputParameters>
+			<dcsset:item xsi:type="dcsset:StructureItemTable">
+				<dcsset:row>
+					<dcsset:groupItems>
+						<dcsset:item xsi:type="dcsset:GroupItemField">
+							<dcsset:field>ВидСубъекта</dcsset:field>
+							<dcsset:groupType>Items</dcsset:groupType>
+							<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+							<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+							<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+						</dcsset:item>
+					</dcsset:groupItems>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+					</dcsset:order>
+					<dcsset:selection>
+						<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+					</dcsset:selection>
+					<dcsset:item>
+						<dcsset:groupItems>
+							<dcsset:item xsi:type="dcsset:GroupItemField">
+								<dcsset:field>ВидОбъекта</dcsset:field>
+								<dcsset:groupType>Items</dcsset:groupType>
+								<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+								<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+								<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+							</dcsset:item>
+						</dcsset:groupItems>
+						<dcsset:order>
+							<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+						</dcsset:order>
+						<dcsset:selection>
+							<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+						</dcsset:selection>
+						<dcsset:item>
+							<dcsset:groupItems>
+								<dcsset:item xsi:type="dcsset:GroupItemField">
+									<dcsset:field>СубъектДоступа</dcsset:field>
+									<dcsset:groupType>Items</dcsset:groupType>
+									<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+									<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+									<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+								</dcsset:item>
+							</dcsset:groupItems>
+							<dcsset:order>
+								<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+							</dcsset:order>
+							<dcsset:selection>
+								<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+							</dcsset:selection>
+							<dcsset:item>
+								<dcsset:groupItems>
+									<dcsset:item xsi:type="dcsset:GroupItemField">
+										<dcsset:field>ОбъектДоступа</dcsset:field>
+										<dcsset:groupType>Hierarchy</dcsset:groupType>
+										<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+										<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+										<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+									</dcsset:item>
+									<dcsset:item xsi:type="dcsset:GroupItemField">
+										<dcsset:field>ОбластьДоступа</dcsset:field>
+										<dcsset:groupType>Items</dcsset:groupType>
+										<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+										<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+										<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+									</dcsset:item>
+								</dcsset:groupItems>
+								<dcsset:order>
+									<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+								</dcsset:order>
+								<dcsset:selection>
+									<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+								</dcsset:selection>
+							</dcsset:item>
+						</dcsset:item>
+					</dcsset:item>
+				</dcsset:row>
+				<dcsset:selection>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>Редактирование</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>Создание</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>Копирование</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>ПометкаНаУдаление</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>Печать</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>ОтменаПроведения</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>Проведение</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>ПереносВГруппу</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+			</dcsset:item>
+		</dcsset:settings>
+	</settingsVariant>
+</DataCompositionSchema>

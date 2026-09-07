@@ -1,0 +1,689 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<DataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcscom="http://v8.1c.ru/8.1/data-composition-system/common" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataSource>
+		<name>ИсточникДанных1</name>
+		<dataSourceType>Local</dataSourceType>
+	</dataSource>
+	<dataSet xsi:type="DataSetQuery">
+		<name>НаборДанных1</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СерияДокументаУЛ</dataPath>
+			<field>СерияДокументаУЛ</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Серия документа УЛ</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>НомерЛС</dataPath>
+			<field>НомерЛС</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Номер ЛС</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДатаДокументаУЛ</dataPath>
+			<field>ДатаДокументаУЛ</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дата документа УЛ</v8:content>
+				</v8:item>
+			</title>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">ДФ='yyyy'</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>НомерДокументаУЛ</dataPath>
+			<field>НомерДокументаУЛ</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Номер документа УЛ</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ЛицевойСчет</dataPath>
+			<field>ЛицевойСчет</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Лицевой счет</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ФИО</dataPath>
+			<field>ФИО</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>ФИО</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Отчество</dataPath>
+			<field>Отчество</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отчество</v8:content>
+				</v8:item>
+			</title>
+			<valueType>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>50</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</valueType>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Фамилия</dataPath>
+			<field>Фамилия</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Фамилия</v8:content>
+				</v8:item>
+			</title>
+			<valueType>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>50</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</valueType>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Имя</dataPath>
+			<field>Имя</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Имя</v8:content>
+				</v8:item>
+			</title>
+			<valueType>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>50</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</valueType>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>НомерЗаписи</dataPath>
+			<field>НомерЗаписи</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Номер записи</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ФизЛицо</dataPath>
+			<field>ФизЛицо</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДокументКемВыдан</dataPath>
+			<field>ДокументКемВыдан</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Документ кем выдан</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Пол</dataPath>
+			<field>Пол</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Пол</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДатаРождения</dataPath>
+			<field>ДатаРождения</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дата рождения</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Владелец</dataPath>
+			<field>Владелец</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Владелец</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ТипДокументаУЛ</dataPath>
+			<field>ТипДокументаУЛ</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Тип документа УЛ</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ЗарегистрированПО</dataPath>
+			<field>ЗарегистрированПО</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Зарегистрирован ПО</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПроживаетПО</dataPath>
+			<field>ПроживаетПО</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Проживает ПО</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Зарегистрирован</dataPath>
+			<field>Зарегистрирован</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Зарегистрирован</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Проживает</dataPath>
+			<field>Проживает</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Проживает</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ЗарегистрированС</dataPath>
+			<field>ЗарегистрированС</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Зарегистрирован С</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПроживаетС</dataPath>
+			<field>ПроживаетС</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Проживает С</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<dataSource>ИсточникДанных1</dataSource>
+		<query>ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	бит_ЛицевыеСчета.Идентификатор КАК НомерЗаписи,
+	бит_ЛицевыеСчета.Ссылка КАК ЛицевойСчет,
+	бит_ЛицевыеСчета.Наименование КАК НомерЛС,
+	бит_ЛицевыеСчета.Здание КАК Здание
+ПОМЕСТИТЬ ВТ_ЛицевыеСчета
+ИЗ
+	Справочник.бит_ЛицевыеСчета КАК бит_ЛицевыеСчета
+		ЛЕВОЕ СОЕДИНЕНИЕ Справочник.бит_СписокЗданий КАК бит_СписокЗданий
+		ПО бит_ЛицевыеСчета.Здание = бит_СписокЗданий.Ссылка
+ГДЕ
+	бит_ЛицевыеСчета.Архивный = ЛОЖЬ
+	И НЕ бит_ЛицевыеСчета.ПометкаУдаления
+	И НЕ бит_СписокЗданий.ПометкаУдаления
+{ГДЕ
+	(бит_ЛицевыеСчета.Ссылка В (&amp;СписокЛС)),
+	(бит_ЛицевыеСчета.Организация = &amp;ОтборОрганизация),
+	(бит_СписокЗданий.Улица В (&amp;СписокУлиц)),
+	(бит_ЛицевыеСчета.Здание В (&amp;СписокЗданий)),
+	(ВЫБОР
+			КОГДА &amp;ТипДомаГИСЖКХ = ЗНАЧЕНИЕ(Перечисление.бит_ТипыДомовГИСЖКХ.МКД)
+				ТОГДА бит_СписокЗданий.ТипыДомовГИСЖКХ = ЗНАЧЕНИЕ(Перечисление.бит_ТипыДомовГИСЖКХ.МКД)
+						ИЛИ бит_СписокЗданий.ТипыДомовГИСЖКХ = ЗНАЧЕНИЕ(Перечисление.бит_ТипыДомовГИСЖКХ.ПустаяСсылка)
+			ИНАЧЕ бит_СписокЗданий.ТипыДомовГИСЖКХ В (&amp;ТипДомаГИСЖКХ)
+		КОНЕЦ)}
+
+ИНДЕКСИРОВАТЬ ПО
+	ЛицевойСчет
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	бит_ПроживающиеПоЛССрезПоследних.ЛицевойСчет КАК ЛицевойСчет,
+	бит_ПроживающиеПоЛССрезПоследних.ФизЛицо КАК ФизЛицо,
+	бит_ПроживающиеПоЛССрезПоследних.СтатусФизЛица КАК СтатусФизЛица,
+	бит_ПроживающиеПоЛССрезПоследних.СтатусФизЛица.ПроживаниеВДанныйМомент КАК ПроживаниеВДанныйМомент,
+	бит_ПроживающиеПоЛССрезПоследних.СтатусПроживания КАК СтатусПроживания,
+	бит_ПроживающиеПоЛССрезПоследних.ДатаРегистрации КАК ДатаРегистрации,
+	бит_ПроживающиеПоЛССрезПоследних.ДатаСнятияСРегистрации КАК ДатаСнятияСРегистрации,
+	бит_ПроживающиеПоЛССрезПоследних.ДатаЗаписи КАК ДатаЗаписи,
+	ВЫБОР
+		КОГДА бит_ПроживающиеПоЛССрезПоследних.ВладелецКвартиры = ЗНАЧЕНИЕ(Перечисление.ДаНет.Да)
+			ТОГДА 1
+		ИНАЧЕ 0
+	КОНЕЦ КАК Владелец,
+	бит_ПроживающиеПоЛССрезПоследних.СтатусФизЛицаДляИзменения КАК СтатусФизЛицаДляИзменения,
+	бит_ПроживающиеПоЛССрезПоследних.ДатаПрибытия КАК ДатаПрибытия
+ПОМЕСТИТЬ ВТ_ВсеПроживающие
+ИЗ
+	РегистрСведений.бит_ПроживающиеПоЛС.СрезПоследних(
+			&amp;Период,
+			ЛицевойСчет В
+				(ВЫБРАТЬ
+					ВТ_ЛицевыеСчета.ЛицевойСчет
+				ИЗ
+					ВТ_ЛицевыеСчета КАК ВТ_ЛицевыеСчета)) КАК бит_ПроживающиеПоЛССрезПоследних
+ГДЕ
+	бит_ПроживающиеПоЛССрезПоследних.СтатусФизЛица &lt;&gt; ЗНАЧЕНИЕ(Справочник.бит_СтатусФизЛица.Выписан)
+
+ИНДЕКСИРОВАТЬ ПО
+	ЛицевойСчет,
+	ФизЛицо
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	бит_ФИОПроживающихСрезПоследних.ФизЛицо КАК ФизЛицо,
+	бит_ФИОПроживающихСрезПоследних.Фамилия КАК Фамилия,
+	бит_ФИОПроживающихСрезПоследних.Имя КАК Имя,
+	бит_ФИОПроживающихСрезПоследних.Отчество КАК Отчество
+ПОМЕСТИТЬ ВТ_ФИОПроживающих
+ИЗ
+	РегистрСведений.бит_ФИОПроживающих.СрезПоследних(
+			&amp;Период,
+			ФизЛицо В
+				(ВЫБРАТЬ
+					ВТ_ВсеПроживающие.ФизЛицо
+				ИЗ
+					ВТ_ВсеПроживающие КАК ВТ_ВсеПроживающие)) КАК бит_ФИОПроживающихСрезПоследних
+
+ИНДЕКСИРОВАТЬ ПО
+	ФизЛицо
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	бит_ПаспортныеДанныеПроживающихСрезПоследних.ФизЛицо КАК ФизЛицо,
+	бит_ПаспортныеДанныеПроживающихСрезПоследних.ДокументВид КАК ДокументВид,
+	бит_ПаспортныеДанныеПроживающихСрезПоследних.ДокументСерия КАК ДокументСерия,
+	бит_ПаспортныеДанныеПроживающихСрезПоследних.ДокументНомер КАК ДокументНомер,
+	бит_ПаспортныеДанныеПроживающихСрезПоследних.ДокументДатаВыдачи КАК ДокументДатаВыдачи,
+	ВЫРАЗИТЬ(бит_ПаспортныеДанныеПроживающихСрезПоследних.ДокументКемВыдан КАК СТРОКА(500)) КАК ДокументКемВыдан,
+	бит_ПаспортныеДанныеПроживающихСрезПоследних.ДокументКодПодразделения КАК ДокументКодПодразделения
+ПОМЕСТИТЬ ВТ_ПаспортныеДанные
+ИЗ
+	РегистрСведений.бит_ПаспортныеДанныеПроживающих.СрезПоследних(
+			&amp;Период,
+			ФизЛицо В
+				(ВЫБРАТЬ РАЗЛИЧНЫЕ
+					ВТ_ВсеПроживающие.ФизЛицо
+				ИЗ
+					ВТ_ВсеПроживающие КАК ВТ_ВсеПроживающие)) КАК бит_ПаспортныеДанныеПроживающихСрезПоследних
+
+ИНДЕКСИРОВАТЬ ПО
+	бит_ПаспортныеДанныеПроживающихСрезПоследних.ФизЛицо
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ВТ_ВсеПроживающие.ЛицевойСчет КАК ЛицевойСчет,
+	ВТ_ВсеПроживающие.ФизЛицо КАК ФизЛицо,
+	ВТ_ВсеПроживающие.СтатусФизЛица КАК СтатусФизЛица,
+	ВТ_ВсеПроживающие.СтатусПроживания КАК СтатусПроживания,
+	ВТ_ВсеПроживающие.ДатаРегистрации КАК ДатаРегистрации,
+	ВТ_ВсеПроживающие.ДатаСнятияСРегистрации КАК ДатаСнятияСРегистрации,
+	ВТ_ВсеПроживающие.ДатаЗаписи КАК ДатаЗаписи,
+	ВТ_ВсеПроживающие.Владелец КАК Владелец,
+	ВТ_ВсеПроживающие.СтатусФизЛицаДляИзменения КАК СтатусФизЛицаДляИзменения,
+	ВТ_ВсеПроживающие.ДатаПрибытия КАК ДатаПрибытия,
+	ВТ_ФИОПроживающих.Фамилия КАК Фамилия,
+	ВТ_ФИОПроживающих.Имя КАК Имя,
+	ВТ_ФИОПроживающих.Отчество КАК Отчество,
+	ВТ_ПаспортныеДанные.ДокументВид КАК ДокументВид,
+	ВТ_ПаспортныеДанные.ДокументСерия КАК ДокументСерия,
+	ВТ_ПаспортныеДанные.ДокументНомер КАК ДокументНомер,
+	ВТ_ПаспортныеДанные.ДокументДатаВыдачи КАК ДокументДатаВыдачи,
+	ВТ_ПаспортныеДанные.ДокументКемВыдан КАК ДокументКемВыдан,
+	ВТ_ПаспортныеДанные.ДокументКодПодразделения КАК ДокументКодПодразделения,
+	ВЫБОР
+		КОГДА ВТ_ВсеПроживающие.ПроживаниеВДанныйМомент
+			ТОГДА 1
+		ИНАЧЕ 0
+	КОНЕЦ КАК Проживает,
+	ВЫБОР
+		КОГДА (ВТ_ВсеПроживающие.ДатаСнятияСРегистрации &gt; &amp;Период
+				ИЛИ ВТ_ВсеПроживающие.ДатаСнятияСРегистрации = ДАТАВРЕМЯ(1, 1, 1))
+				И ВТ_ВсеПроживающие.СтатусФизЛица &lt;&gt; ЗНАЧЕНИЕ(Справочник.бит_СтатусФизЛица.Выписан)
+			ТОГДА 1
+		ИНАЧЕ 0
+	КОНЕЦ КАК Зарегистрирован,
+	ВЫБОР
+		КОГДА бит_Проживающие.Пол = ЗНАЧЕНИЕ(Перечисление.ПолФизическогоЛица.Мужской)
+				ИЛИ бит_Проживающие.Пол = ЗНАЧЕНИЕ(Перечисление.УдалитьПолФизическихЛиц.Мужской)
+			ТОГДА "1"
+		КОГДА бит_Проживающие.Пол = ЗНАЧЕНИЕ(Перечисление.ПолФизическогоЛица.Женский)
+				ИЛИ бит_Проживающие.Пол = ЗНАЧЕНИЕ(Перечисление.УдалитьПолФизическихЛиц.Женский)
+			ТОГДА "0"
+		ИНАЧЕ ""
+	КОНЕЦ КАК Пол,
+	бит_Проживающие.ДатаРождения КАК ДатаРождения
+ПОМЕСТИТЬ ВТ_ВсяИнфПроживающих
+ИЗ
+	ВТ_ВсеПроживающие КАК ВТ_ВсеПроживающие
+		ЛЕВОЕ СОЕДИНЕНИЕ ВТ_ФИОПроживающих КАК ВТ_ФИОПроживающих
+		ПО ВТ_ВсеПроживающие.ФизЛицо = ВТ_ФИОПроживающих.ФизЛицо
+		ЛЕВОЕ СОЕДИНЕНИЕ ВТ_ПаспортныеДанные КАК ВТ_ПаспортныеДанные
+		ПО ВТ_ВсеПроживающие.ФизЛицо = ВТ_ПаспортныеДанные.ФизЛицо
+		ЛЕВОЕ СОЕДИНЕНИЕ Справочник.бит_Проживающие КАК бит_Проживающие
+		ПО ВТ_ВсеПроживающие.ФизЛицо = бит_Проживающие.Ссылка
+
+ИНДЕКСИРОВАТЬ ПО
+	ВТ_ВсеПроживающие.ЛицевойСчет
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	ВТ_ЛицевыеСчета.НомерЗаписи КАК НомерЗаписи,
+	ВТ_ЛицевыеСчета.ЛицевойСчет КАК ЛицевойСчет,
+	ВТ_ЛицевыеСчета.НомерЛС КАК НомерЛС,
+	ЕСТЬNULL(ВТ_ВсяИнфПроживающих.ФизЛицо, "") КАК ФИО,
+	ЕСТЬNULL(ВТ_ВсяИнфПроживающих.Фамилия, "") КАК Фамилия,
+	ЕСТЬNULL(ВТ_ВсяИнфПроживающих.Имя, "") КАК Имя,
+	ЕСТЬNULL(ВТ_ВсяИнфПроживающих.Отчество, "") КАК Отчество,
+	ЕСТЬNULL(ВТ_ВсяИнфПроживающих.Пол, "") КАК Пол,
+	ВЫБОР
+		КОГДА ЕСТЬNULL(ВТ_ВсяИнфПроживающих.ДатаРождения, "") = ДАТАВРЕМЯ(1, 1, 1)
+			ТОГДА ""
+		ИНАЧЕ ЕСТЬNULL(ВТ_ВсяИнфПроживающих.ДатаРождения, "")
+	КОНЕЦ КАК ДатаРождения,
+	ЕСТЬNULL(ВТ_ВсяИнфПроживающих.Владелец, "") КАК Владелец,
+	ЕСТЬNULL(ВТ_ВсяИнфПроживающих.Проживает, "") КАК Проживает,
+	ЕСТЬNULL(ВТ_ВсяИнфПроживающих.Зарегистрирован, "") КАК Зарегистрирован,
+	ВЫБОР
+		КОГДА ЕСТЬNULL(ВТ_ВсяИнфПроживающих.ДатаРегистрации, "") = ДАТАВРЕМЯ(1, 1, 1)
+			ТОГДА ""
+		ИНАЧЕ ЕСТЬNULL(ВТ_ВсяИнфПроживающих.ДатаРегистрации, "")
+	КОНЕЦ КАК ПроживаетС,
+	ВЫБОР
+		КОГДА ЕСТЬNULL(ВТ_ВсяИнфПроживающих.ДатаСнятияСРегистрации, "") = ДАТАВРЕМЯ(1, 1, 1)
+			ТОГДА ""
+		ИНАЧЕ ЕСТЬNULL(ВТ_ВсяИнфПроживающих.ДатаСнятияСРегистрации, "")
+	КОНЕЦ КАК ПроживаетПО,
+	ВЫБОР
+		КОГДА ЕСТЬNULL(ВТ_ВсяИнфПроживающих.ДатаРегистрации, "") = ДАТАВРЕМЯ(1, 1, 1)
+			ТОГДА ""
+		ИНАЧЕ ЕСТЬNULL(ВТ_ВсяИнфПроживающих.ДатаРегистрации, "")
+	КОНЕЦ КАК ЗарегистрированС,
+	ВЫБОР
+		КОГДА ЕСТЬNULL(ВТ_ВсяИнфПроживающих.ДатаСнятияСРегистрации, "") = ДАТАВРЕМЯ(1, 1, 1)
+			ТОГДА ""
+		ИНАЧЕ ЕСТЬNULL(ВТ_ВсяИнфПроживающих.ДатаСнятияСРегистрации, "")
+	КОНЕЦ КАК ЗарегистрированПО,
+	ЕСТЬNULL(ВТ_ВсяИнфПроживающих.ДокументВид.КодПФР, "") КАК ТипДокументаУЛ,
+	ПРЕДСТАВЛЕНИЕ(ЕСТЬNULL(ВТ_ВсяИнфПроживающих.ДокументСерия, "")) КАК СерияДокументаУЛ,
+	ПРЕДСТАВЛЕНИЕ(ЕСТЬNULL(ВТ_ВсяИнфПроживающих.ДокументНомер, "")) КАК НомерДокументаУЛ,
+	ВЫБОР
+		КОГДА ЕСТЬNULL(ВТ_ВсяИнфПроживающих.ДокументДатаВыдачи, "") = ДАТАВРЕМЯ(1, 1, 1)
+			ТОГДА ""
+		ИНАЧЕ ЕСТЬNULL(ВТ_ВсяИнфПроживающих.ДокументДатаВыдачи, "")
+	КОНЕЦ КАК ДатаДокументаУЛ,
+	ВТ_ВсяИнфПроживающих.ДокументКемВыдан КАК ДокументКемВыдан
+ИЗ
+	ВТ_ЛицевыеСчета КАК ВТ_ЛицевыеСчета
+		ЛЕВОЕ СОЕДИНЕНИЕ ВТ_ВсяИнфПроживающих КАК ВТ_ВсяИнфПроживающих
+		ПО ВТ_ЛицевыеСчета.ЛицевойСчет = ВТ_ВсяИнфПроживающих.ЛицевойСчет
+
+УПОРЯДОЧИТЬ ПО
+	ВТ_ЛицевыеСчета.НомерЛС</query>
+	</dataSet>
+	<calculatedField>
+		<dataPath>ДатаДокументаУЛ</dataPath>
+		<expression>Формат(ДатаДокументаУЛ, "ДФ=dd.MM.yyyy")</expression>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Дата документа УЛ</v8:content>
+			</v8:item>
+		</title>
+	</calculatedField>
+	<calculatedField>
+		<dataPath>ДатаРождения</dataPath>
+		<expression>Формат(ДатаРождения, "ДФ=dd.MM.yyyy")</expression>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Дата рождения</v8:content>
+			</v8:item>
+		</title>
+	</calculatedField>
+	<calculatedField>
+		<dataPath>ПроживаетС</dataPath>
+		<expression>Формат(ПроживаетС, "ДФ=dd.MM.yyyy")</expression>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Проживает С</v8:content>
+			</v8:item>
+		</title>
+	</calculatedField>
+	<calculatedField>
+		<dataPath>ЗарегистрированС</dataPath>
+		<expression>Формат(ЗарегистрированС, "ДФ=dd.MM.yyyy")</expression>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Зарегистрирован С</v8:content>
+			</v8:item>
+		</title>
+	</calculatedField>
+	<parameter>
+		<name>Период</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Период</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+		<use>Always</use>
+	</parameter>
+	<parameter>
+		<name>ОтборОрганизация</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Отбор организация</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.Организации</v8:Type>
+		</valueType>
+		<value xsi:nil="true"/>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<parameter>
+		<name>СписокЗданий</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Список зданий</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.бит_СписокЗданий</v8:Type>
+		</valueType>
+		<useRestriction>true</useRestriction>
+		<valueListAllowed>true</valueListAllowed>
+	</parameter>
+	<parameter>
+		<name>СписокЛС</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Список ЛС</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.бит_ЛицевыеСчета</v8:Type>
+		</valueType>
+		<useRestriction>true</useRestriction>
+		<valueListAllowed>true</valueListAllowed>
+	</parameter>
+	<parameter>
+		<name>СписокУлиц</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Список улиц</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.бит_СписокУлиц</v8:Type>
+		</valueType>
+		<useRestriction>true</useRestriction>
+		<valueListAllowed>true</valueListAllowed>
+	</parameter>
+	<parameter>
+		<name>ТипДомаГИСЖКХ</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Тип дома ГИСЖКХ</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:EnumRef.бит_ТипыДомовГИСЖКХ</v8:Type>
+		</valueType>
+		<value xsi:nil="true"/>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<settingsVariant>
+		<dcsset:name>Основной</dcsset:name>
+		<dcsset:presentation xsi:type="xs:string">Основной</dcsset:presentation>
+		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+			<dcsset:selection>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>НомерЗаписи</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>НомерЛС</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Фамилия</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Имя</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Отчество</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Пол</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ДатаРождения</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Владелец</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Проживает</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Зарегистрирован</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ПроживаетС</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ПроживаетПО</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ЗарегистрированС</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ЗарегистрированПО</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ТипДокументаУЛ</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>СерияДокументаУЛ</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>НомерДокументаУЛ</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ДатаДокументаУЛ</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ДокументКемВыдан</dcsset:field>
+				</dcsset:item>
+			</dcsset:selection>
+			<dcsset:dataParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>СписокЗданий</dcscor:parameter>
+					<dcscor:value xsi:nil="true"/>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>СписокЛС</dcscor:parameter>
+					<dcscor:value xsi:nil="true"/>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>СписокУлиц</dcscor:parameter>
+					<dcscor:value xsi:nil="true"/>
+				</dcscor:item>
+			</dcsset:dataParameters>
+			<dcsset:item xsi:type="dcsset:StructureItemGroup">
+				<dcsset:order>
+					<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+				</dcsset:order>
+				<dcsset:selection>
+					<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+				</dcsset:selection>
+			</dcsset:item>
+		</dcsset:settings>
+	</settingsVariant>
+</DataCompositionSchema>

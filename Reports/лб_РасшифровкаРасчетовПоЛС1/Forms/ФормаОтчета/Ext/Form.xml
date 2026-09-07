@@ -1,0 +1,194 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.18">
+	<AutoSaveDataInSettings>Use</AutoSaveDataInSettings>
+	<CommandBarLocation>None</CommandBarLocation>
+	<ReportFormType>Main</ReportFormType>
+	<AutoShowState>Auto</AutoShowState>
+	<ReportResultViewMode>Auto</ReportResultViewMode>
+	<ViewModeApplicationOnSetReportResult>Auto</ViewModeApplicationOnSetReportResult>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+		<ChildItems>
+			<Button name="ФормаСформировать" id="16">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.Сформировать</CommandName>
+				<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
+				<ExtendedTooltip name="ФормаСформироватьРасширеннаяПодсказка" id="17"/>
+			</Button>
+			<Button name="ФормаСформироватьДляЗависимых" id="18">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.СформироватьДляЗависимых</CommandName>
+				<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
+				<ExtendedTooltip name="ФормаСформироватьДляЗависимыхРасширеннаяПодсказка" id="19"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<ChildItems>
+		<UsualGroup name="Группа1" id="23">
+			<Group>AlwaysHorizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="24"/>
+			<ChildItems>
+				<Button name="Сформировать" id="25">
+					<Type>UsualButton</Type>
+					<CommandName>Form.Command.Сформировать</CommandName>
+					<ExtendedTooltip name="СформироватьРасширеннаяПодсказка" id="26"/>
+				</Button>
+				<Button name="СформироватьДляЗависимых" id="27">
+					<Type>UsualButton</Type>
+					<CommandName>Form.Command.СформироватьДляЗависимых</CommandName>
+					<ExtendedTooltip name="СформироватьДляЗависимыхРасширеннаяПодсказка" id="28"/>
+				</Button>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="Группа2" id="29">
+			<Group>AlwaysHorizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="Группа2РасширеннаяПодсказка" id="30"/>
+			<ChildItems>
+				<InputField name="ПериодОтчета" id="20">
+					<DataPath>ПериодОтчета</DataPath>
+					<ContextMenu name="ПериодОтчетаКонтекстноеМеню" id="21"/>
+					<ExtendedTooltip name="ПериодОтчетаРасширеннаяПодсказка" id="22"/>
+					<Events>
+						<Event name="OnChange">ПериодОтчетаПриИзменении</Event>
+					</Events>
+				</InputField>
+				<InputField name="ЧислоМесяцев" id="33">
+					<DataPath>ЧислоМесяцев</DataPath>
+					<ContextMenu name="ЧислоМесяцевКонтекстноеМеню" id="34"/>
+					<ExtendedTooltip name="ЧислоМесяцевРасширеннаяПодсказка" id="35"/>
+				</InputField>
+				<Button name="ВесьПериодЛС" id="31">
+					<Type>UsualButton</Type>
+					<CommandName>Form.Command.ЗаполнитьПериод</CommandName>
+					<ExtendedTooltip name="ВесьПериодЛСРасширеннаяПодсказка" id="32"/>
+				</Button>
+			</ChildItems>
+		</UsualGroup>
+		<InputField name="ЛС" id="1">
+			<DataPath>Отчет.ЛС</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="ЛСКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="ЛСРасширеннаяПодсказка" id="3"/>
+		</InputField>
+		<InputField name="ШаблонИзвещения" id="4">
+			<DataPath>Отчет.ШаблонИзвещения</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="ШаблонИзвещенияКонтекстноеМеню" id="5"/>
+			<ExtendedTooltip name="ШаблонИзвещенияРасширеннаяПодсказка" id="6"/>
+		</InputField>
+		<SpreadSheetDocumentField name="Результат" id="13">
+			<DataPath>Результат</DataPath>
+			<ContextMenu name="РезультатКонтекстноеМеню" id="14"/>
+			<ExtendedTooltip name="РезультатРасширеннаяПодсказка" id="15"/>
+		</SpreadSheetDocumentField>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Отчет" id="1">
+			<Type>
+				<v8:Type>cfg:ReportObject.лб_РасшифровкаРасчетовПоЛС1</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<Save>
+				<Field>Отчет.ДатаКон</Field>
+				<Field>Отчет.ДатаНач</Field>
+				<Field>Отчет.ЛС</Field>
+				<Field>Отчет.ШаблонИзвещения</Field>
+			</Save>
+		</Attribute>
+		<Attribute name="Результат" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Результат</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type xmlns:mxl="http://v8.1c.ru/8.2/data/spreadsheet">mxl:SpreadsheetDocument</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ПериодОтчета" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Период отчета</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:StandardPeriod</v8:Type>
+			</Type>
+			<Save>
+				<Field>ПериодОтчета</Field>
+			</Save>
+		</Attribute>
+		<Attribute name="ЧислоМесяцев" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Число месяцев отчета (0 - весь период ЛС)</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>4</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+			<Save>
+				<Field>ЧислоМесяцев</Field>
+			</Save>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="Сформировать" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сформировать</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сформировать</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Сформировать</Action>
+		</Command>
+		<Command name="СформироватьДляЗависимых" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сформировать для зависимых</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сформировать для зависимых</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>СформироватьДляЗависимых</Action>
+		</Command>
+		<Command name="ЗаполнитьПериод" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить период</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить период</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЗаполнитьПериод</Action>
+		</Command>
+	</Commands>
+</Form>

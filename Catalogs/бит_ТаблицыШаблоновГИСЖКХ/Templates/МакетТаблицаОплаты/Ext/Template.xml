@@ -1,0 +1,306 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<DataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcscom="http://v8.1c.ru/8.1/data-composition-system/common" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataSource>
+		<name>ИсточникДанных1</name>
+		<dataSourceType>Local</dataSourceType>
+	</dataSource>
+	<dataSet xsi:type="DataSetQuery">
+		<name>НаборДанных2</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ЛицевойСчет</dataPath>
+			<field>ЛицевойСчет</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Сумма</dataPath>
+			<field>Сумма</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сумма</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ИдентификаторЖКУ</dataPath>
+			<field>ИдентификаторЖКУ</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ИдентификаторПД</dataPath>
+			<field>ИдентификаторПД</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДатаВнесения</dataPath>
+			<field>ДатаВнесения</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дата внесения</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПериодВзаиморасчетов</dataPath>
+			<field>ПериодВзаиморасчетов</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Период взаиморасчетов</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Период</dataPath>
+			<field>Период</field>
+			<role>
+				<dcscom:periodNumber>1</dcscom:periodNumber>
+				<dcscom:periodType>Main</dcscom:periodType>
+			</role>
+		</field>
+		<dataSource>ИсточникДанных1</dataSource>
+		<query>ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	бит_ЛицевыеСчета.Ссылка КАК ЛицевойСчет,
+	бит_ЛицевыеСчета.ИдентификаторЖКУ КАК ИдентификаторЖКУ
+ПОМЕСТИТЬ ВТ_ЛицевыеСчетаОбщая
+ИЗ
+	Справочник.бит_ЛицевыеСчета КАК бит_ЛицевыеСчета
+		ЛЕВОЕ СОЕДИНЕНИЕ Справочник.бит_СписокЗданий КАК бит_СписокЗданий
+		ПО бит_ЛицевыеСчета.Здание = бит_СписокЗданий.Ссылка
+ГДЕ
+	бит_ЛицевыеСчета.Архивный = ЛОЖЬ
+	И НЕ бит_ЛицевыеСчета.ПометкаУдаления
+	И НЕ бит_СписокЗданий.ПометкаУдаления
+{ГДЕ
+	(бит_ЛицевыеСчета.Ссылка В (&amp;СписокЛС)),
+	(бит_ЛицевыеСчета.Организация = &amp;ОтборОрганизация),
+	(бит_СписокЗданий.Улица В (&amp;СписокУлиц)),
+	(бит_ЛицевыеСчета.Здание В (&amp;СписокЗданий)),
+	(ВЫБОР
+			КОГДА &amp;ТипДомаГИСЖКХ = ЗНАЧЕНИЕ(Перечисление.бит_ТипыДомовГИСЖКХ.МКД)
+				ТОГДА бит_СписокЗданий.ТипыДомовГИСЖКХ = ЗНАЧЕНИЕ(Перечисление.бит_ТипыДомовГИСЖКХ.МКД)
+						ИЛИ бит_СписокЗданий.ТипыДомовГИСЖКХ = ЗНАЧЕНИЕ(Перечисление.бит_ТипыДомовГИСЖКХ.ПустаяСсылка)
+			ИНАЧЕ бит_СписокЗданий.ТипыДомовГИСЖКХ В (&amp;ТипДомаГИСЖКХ)
+		КОНЕЦ)}
+
+ИНДЕКСИРОВАТЬ ПО
+	ЛицевойСчет
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	бит_ЛицевыеСчета.Ссылка КАК ЛицевойСчет,
+	бит_ПлатежныеДокументыГИСЖКХ.Ссылка КАК ДокОплаты,
+	МЕСЯЦ(бит_ПлатежныеДокументыГИСЖКХ.РасчетныйПериод) КАК МеясцРасчетныйПериод,
+	ГОД(бит_ПлатежныеДокументыГИСЖКХ.РасчетныйПериод) КАК ГодРасчетныйПериод,
+	бит_ПлатежныеДокументыГИСЖКХ.ИдентификаторПД КАК ИдентификаторПД
+ПОМЕСТИТЬ ВТ_ДокОплаты
+ИЗ
+	Справочник.бит_ПлатежныеДокументыГИСЖКХ КАК бит_ПлатежныеДокументыГИСЖКХ
+		ЛЕВОЕ СОЕДИНЕНИЕ Справочник.бит_ЛицевыеСчета КАК бит_ЛицевыеСчета
+		ПО бит_ПлатежныеДокументыГИСЖКХ.ЛицевойСчет = бит_ЛицевыеСчета.Ссылка
+ГДЕ
+	МЕСЯЦ(бит_ПлатежныеДокументыГИСЖКХ.РасчетныйПериод) = МЕСЯЦ(&amp;Период)
+	И ГОД(бит_ПлатежныеДокументыГИСЖКХ.РасчетныйПериод) = ГОД(&amp;Период)
+	И бит_ПлатежныеДокументыГИСЖКХ.ЭтоГруппа = ЛОЖЬ
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	//ПРЕДСТАВЛЕНИЕ(бит_НачисленияПоУслугамЖКХПоПериоду.Регистратор) КАК ИдентификаторПД,
+	бит_НачисленияПоУслугамЖКХПоПериоду.ЛицевойСчет КАК ЛицевойСчет,
+	СУММА(бит_НачисленияПоУслугамЖКХПоПериоду.Сумма) КАК Сумма,
+	бит_НачисленияПоУслугамЖКХПоПериоду.Период КАК Период,
+	бит_НачисленияПоУслугамЖКХПоПериоду.ЛицевойСчет.ИдентификаторЖКУ КАК ИдентификаторЖКУ,
+	бит_НачисленияПоУслугамЖКХПоПериоду.ПериодВзаиморасчетов КАК ПериодВзаиморасчетов,
+	бит_НачисленияПоУслугамЖКХПоПериоду.Регистратор.Дата КАК ДатаВнесения,
+//	ВТ_ДокОплаты.ДокОплаты КАК ДокОплаты,
+//	ВТ_ДокОплаты.ЛицевойСчет КАК ЛицевойСчетДокОплаты,
+	ВТ_ДокОплаты.ИдентификаторПД КАК ИдентификаторПД 
+ИЗ
+	ВТ_ДокОплаты КАК ВТ_ДокОплаты
+		ПРАВОЕ СОЕДИНЕНИЕ РегистрНакопления.бит_НачисленияПоУслугамЖКХПоПериоду КАК бит_НачисленияПоУслугамЖКХПоПериоду
+		ПО ВТ_ДокОплаты.ЛицевойСчет = бит_НачисленияПоУслугамЖКХПоПериоду.ЛицевойСчет
+ГДЕ
+	(ТИПЗНАЧЕНИЯ(бит_НачисленияПоУслугамЖКХПоПериоду.Регистратор) = ТИП(Документ.бит_ОплатаКУ)
+			ИЛИ ТИПЗНАЧЕНИЯ(бит_НачисленияПоУслугамЖКХПоПериоду.Регистратор) = ТИП(Документ.бит_РаспределениеАванса))
+	И МЕСЯЦ(бит_НачисленияПоУслугамЖКХПоПериоду.Период) = МЕСЯЦ(&amp;Период)
+	И ГОД(бит_НачисленияПоУслугамЖКХПоПериоду.Период) = ГОД(&amp;Период)
+	И бит_НачисленияПоУслугамЖКХПоПериоду.ПериодВзаиморасчетов &lt;&gt; ДАТАВРЕМЯ(1,1,1,0,0,0) 
+	и Сумма &gt; 0
+
+СГРУППИРОВАТЬ ПО
+	бит_НачисленияПоУслугамЖКХПоПериоду.Регистратор,
+	бит_НачисленияПоУслугамЖКХПоПериоду.ЛицевойСчет,
+	бит_НачисленияПоУслугамЖКХПоПериоду.ПериодВзаиморасчетов,
+	бит_НачисленияПоУслугамЖКХПоПериоду.Период,
+	бит_НачисленияПоУслугамЖКХПоПериоду.ЛицевойСчет.ИдентификаторЖКУ,
+//	ВТ_ДокОплаты.ДокОплаты,
+//	ВТ_ДокОплаты.ЛицевойСчет,
+	ВТ_ДокОплаты.ИдентификаторПД,
+	бит_НачисленияПоУслугамЖКХПоПериоду.Регистратор.Дата</query>
+	</dataSet>
+	<calculatedField>
+		<dataPath>ДатаВнесения</dataPath>
+		<expression>Формат(ДатаВнесения, "ДФ=dd.MM.yyyy")</expression>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Дата внесения</v8:content>
+			</v8:item>
+		</title>
+	</calculatedField>
+	<calculatedField>
+		<dataPath>ПериодОплаты</dataPath>
+		<expression>Формат(ПериодВзаиморасчетов, "ДФ=MM.yyyy")</expression>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Период оплаты</v8:content>
+			</v8:item>
+		</title>
+	</calculatedField>
+	<parameter>
+		<name>Период</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Период</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+		<use>Always</use>
+	</parameter>
+	<parameter>
+		<name>ОтборОрганизация</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Отбор организация</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.Организации</v8:Type>
+		</valueType>
+		<value xsi:nil="true"/>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<parameter>
+		<name>СписокЗданий</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Список зданий</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.бит_СписокЗданий</v8:Type>
+		</valueType>
+		<useRestriction>true</useRestriction>
+		<valueListAllowed>true</valueListAllowed>
+	</parameter>
+	<parameter>
+		<name>СписокЛС</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Список ЛС</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.бит_ЛицевыеСчета</v8:Type>
+		</valueType>
+		<useRestriction>true</useRestriction>
+		<valueListAllowed>true</valueListAllowed>
+	</parameter>
+	<parameter>
+		<name>СписокУлиц</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Список улиц</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.бит_СписокУлиц</v8:Type>
+		</valueType>
+		<useRestriction>true</useRestriction>
+		<valueListAllowed>true</valueListAllowed>
+	</parameter>
+	<parameter>
+		<name>ТипДомаГИСЖКХ</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Тип дома ГИСЖКХ</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:EnumRef.бит_ТипыДомовГИСЖКХ</v8:Type>
+		</valueType>
+		<value xsi:nil="true"/>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<settingsVariant>
+		<dcsset:name>Основной</dcsset:name>
+		<dcsset:presentation xsi:type="xs:string">Основной</dcsset:presentation>
+		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+			<dcsset:selection>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>СистемныеПоля.НомерПоПорядку</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Сумма</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ДатаВнесения</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ПериодОплаты</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ИдентификаторПД</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ИдентификаторЖКУ</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ПериодВзаиморасчетов</dcsset:field>
+				</dcsset:item>
+			</dcsset:selection>
+			<dcsset:item xsi:type="dcsset:StructureItemGroup">
+				<dcsset:order>
+					<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+				</dcsset:order>
+				<dcsset:selection>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>СистемныеПоля.НомерПоПорядку</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>Сумма</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>ДатаВнесения</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>ПериодОплаты</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>ИдентификаторПД</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>ИдентификаторЖКУ</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>ПериодВзаиморасчетов</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+			</dcsset:item>
+		</dcsset:settings>
+	</settingsVariant>
+</DataCompositionSchema>

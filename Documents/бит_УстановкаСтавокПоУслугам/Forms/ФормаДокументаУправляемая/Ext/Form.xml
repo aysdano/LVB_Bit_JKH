@@ -1,0 +1,568 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.18">
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<AutoTime>CurrentOrLast</AutoTime>
+	<UsePostingMode>Auto</UsePostingMode>
+	<RepostOnWrite>true</RepostOnWrite>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<ChildItems>
+			<Button name="Файлы" id="46">
+				<Type>CommandBarButton</Type>
+				<Representation>PictureAndText</Representation>
+				<Enabled>false</Enabled>
+				<CommandName>Form.Command.Файлы</CommandName>
+				<ExtendedTooltip name="ФайлыExtendedTooltip" id="56"/>
+			</Button>
+			<Popup name="ФормаГруппа1" id="53">
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Перейти</v8:content>
+					</v8:item>
+				</Title>
+				<ExtendedTooltip name="ФормаГруппа1ExtendedTooltip" id="57"/>
+				<ChildItems>
+					<Button name="ФормаРегистрСведенийбит_СтавкиНаУслугиОткрытьПоЗначениюУслуга" id="55">
+						<Type>CommandBarButton</Type>
+						<CommandName>InformationRegister.бит_СтавкиНаУслуги.StandardCommand.OpenByValue.Услуга</CommandName>
+						<DataPath>УслугаВладелец</DataPath>
+						<ExtendedTooltip name="ФормаРегистрСведенийбит_СтавкиНаУслугиОткрытьПоЗначениюУслугаExtendedTooltip" id="58"/>
+					</Button>
+				</ChildItems>
+			</Popup>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="AfterWrite">ПослеЗаписи</Event>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="НомерДата" id="44">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Номер дата</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Номер дата</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="НомерДатаExtendedTooltip" id="59"/>
+			<ChildItems>
+				<InputField name="Номер" id="1">
+					<DataPath>Объект.Number</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="НомерКонтекстноеМеню" id="2"/>
+					<ExtendedTooltip name="НомерExtendedTooltip" id="60"/>
+				</InputField>
+				<InputField name="Дата" id="3">
+					<DataPath>Объект.Date</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>От</v8:content>
+						</v8:item>
+					</Title>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ДатаКонтекстноеМеню" id="4"/>
+					<ExtendedTooltip name="ДатаExtendedTooltip" id="61"/>
+					<Events>
+						<Event name="OnChange">ДатаПриИзменении</Event>
+					</Events>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ОрганизацияУслуга" id="45">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Организация услуга</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Организация услуга</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ОрганизацияУслугаExtendedTooltip" id="62"/>
+			<ChildItems>
+				<InputField name="Организация" id="5">
+					<DataPath>Объект.Организация</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<AutoMarkIncomplete>true</AutoMarkIncomplete>
+					<ContextMenu name="ОрганизацияКонтекстноеМеню" id="6"/>
+					<ExtendedTooltip name="ОрганизацияExtendedTooltip" id="63"/>
+				</InputField>
+				<InputField name="Услуга" id="7">
+					<DataPath>Объект.Услуга</DataPath>
+					<Enabled>false</Enabled>
+					<EditMode>EnterOnInput</EditMode>
+					<ChoiceButton>false</ChoiceButton>
+					<AutoMarkIncomplete>true</AutoMarkIncomplete>
+					<ContextMenu name="УслугаКонтекстноеМеню" id="8"/>
+					<ExtendedTooltip name="УслугаExtendedTooltip" id="64"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<CheckBoxField name="ИмеетЛьготнуюСтавку" id="97">
+			<DataPath>Объект.ИмеетЛьготнуюСтавку</DataPath>
+			<CheckBoxType>Auto</CheckBoxType>
+			<ContextMenu name="ИмеетЛьготнуюСтавкуКонтекстноеМеню" id="98"/>
+			<ExtendedTooltip name="ИмеетЛьготнуюСтавкуРасширеннаяПодсказка" id="99"/>
+			<Events>
+				<Event name="OnChange">ИмеетЛьготнуюСтавкуПриИзменении</Event>
+			</Events>
+		</CheckBoxField>
+		<UsualGroup name="Группа1" id="51">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ставки по услуге</v8:content>
+				</v8:item>
+			</Title>
+			<Group>Vertical</Group>
+			<ExtendedTooltip name="Группа1ExtendedTooltip" id="67"/>
+			<ChildItems>
+				<Table name="СтавкиНаУслуги" id="17">
+					<Representation>List</Representation>
+					<AutoInsertNewRow>true</AutoInsertNewRow>
+					<EnableStartDrag>true</EnableStartDrag>
+					<EnableDrag>true</EnableDrag>
+					<FileDragMode>AsFile</FileDragMode>
+					<DataPath>Объект.СтавкиНаУслуги</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Ставки по услуге</v8:content>
+						</v8:item>
+					</Title>
+					<SearchStringLocation>None</SearchStringLocation>
+					<ViewStatusLocation>None</ViewStatusLocation>
+					<SearchControlLocation>None</SearchControlLocation>
+					<RowFilter xsi:nil="true"/>
+					<ContextMenu name="СтавкиНаУслугиКонтекстноеМеню" id="18"/>
+					<AutoCommandBar name="СтавкиНаУслугиКоманднаяПанель" id="19">
+						<ChildItems>
+							<Popup name="Заполнить" id="47">
+								<Title>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Заполнить</v8:content>
+									</v8:item>
+								</Title>
+								<ToolTip>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Заполнить</v8:content>
+									</v8:item>
+								</ToolTip>
+								<ExtendedTooltip name="ЗаполнитьExtendedTooltip" id="68"/>
+								<ChildItems>
+									<Button name="ЗаполнитьТаблицу" id="48">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.ЗаполнитьТаблицу</CommandName>
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Заполнить таблицу</v8:content>
+											</v8:item>
+										</Title>
+										<ExtendedTooltip name="ЗаполнитьТаблицуExtendedTooltip" id="69"/>
+									</Button>
+									<Button name="ЗаполнитьНормативы" id="49">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.ЗаполнитьНормативы</CommandName>
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Заполнить нормативы</v8:content>
+											</v8:item>
+										</Title>
+										<ExtendedTooltip name="ЗаполнитьНормативыExtendedTooltip" id="70"/>
+									</Button>
+								</ChildItems>
+							</Popup>
+							<Button name="Расчитать" id="50">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Command.РасчитатьСтавки</CommandName>
+								<Title>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Расчитать ставки</v8:content>
+									</v8:item>
+								</Title>
+								<ExtendedTooltip name="РасчитатьExtendedTooltip" id="71"/>
+							</Button>
+							<Button name="СтавкиНаУслугиКнопка1" id="52">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Command.ВидимостьТарифНорматив</CommandName>
+								<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
+								<ExtendedTooltip name="СтавкиНаУслугиКнопка1ExtendedTooltip" id="72"/>
+							</Button>
+						</ChildItems>
+					</AutoCommandBar>
+					<ExtendedTooltip name="СтавкиНаУслугиExtendedTooltip" id="73"/>
+					<SearchStringAddition name="СтавкиНаУслугиСтрокаПоиска" id="85">
+						<AdditionSource>
+							<Item>СтавкиНаУслуги</Item>
+							<Type>SearchStringRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="СтавкиНаУслугиСтрокаПоискаКонтекстноеМеню" id="86"/>
+						<ExtendedTooltip name="СтавкиНаУслугиСтрокаПоискаРасширеннаяПодсказка" id="87"/>
+					</SearchStringAddition>
+					<ViewStatusAddition name="СтавкиНаУслугиСостояниеПросмотра" id="88">
+						<AdditionSource>
+							<Item>СтавкиНаУслуги</Item>
+							<Type>ViewStatusRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="СтавкиНаУслугиСостояниеПросмотраКонтекстноеМеню" id="89"/>
+						<ExtendedTooltip name="СтавкиНаУслугиСостояниеПросмотраРасширеннаяПодсказка" id="90"/>
+					</ViewStatusAddition>
+					<SearchControlAddition name="СтавкиНаУслугиУправлениеПоиском" id="91">
+						<AdditionSource>
+							<Item>СтавкиНаУслуги</Item>
+							<Type>SearchControl</Type>
+						</AdditionSource>
+						<ContextMenu name="СтавкиНаУслугиУправлениеПоискомКонтекстноеМеню" id="92"/>
+						<ExtendedTooltip name="СтавкиНаУслугиУправлениеПоискомРасширеннаяПодсказка" id="93"/>
+					</SearchControlAddition>
+					<ChildItems>
+						<LabelField name="СтавкиНаУслугиНомерСтроки" id="20">
+							<DataPath>Объект.СтавкиНаУслуги.LineNumber</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="СтавкиНаУслугиНомерСтрокиКонтекстноеМеню" id="21"/>
+							<ExtendedTooltip name="СтавкиНаУслугиНомерСтрокиExtendedTooltip" id="74"/>
+						</LabelField>
+						<InputField name="СтавкиНаУслугиПоставщик" id="38">
+							<DataPath>Объект.СтавкиНаУслуги.Поставщик</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<DropListButton>false</DropListButton>
+							<ChoiceButton>true</ChoiceButton>
+							<ChoiceButtonRepresentation>ShowInInputField</ChoiceButtonRepresentation>
+							<OpenButton>true</OpenButton>
+							<CreateButton>false</CreateButton>
+							<TextEdit>false</TextEdit>
+							<ChoiceHistoryOnInput>DontUse</ChoiceHistoryOnInput>
+							<ContextMenu name="СтавкиНаУслугиПоставщикКонтекстноеМеню" id="39"/>
+							<ExtendedTooltip name="СтавкиНаУслугиПоставщикExtendedTooltip" id="75"/>
+							<Events>
+								<Event name="OnChange">СтавкиНаУслугиПоставщикПриИзменении</Event>
+								<Event name="StartChoice">СтавкиНаУслугиПоставщикНачалоВыбора</Event>
+								<Event name="TextEditEnd">СтавкиНаУслугиПоставщикОкончаниеВводаТекста</Event>
+							</Events>
+						</InputField>
+						<InputField name="СтавкиНаУслугиРежимПотребления" id="22">
+							<DataPath>Объект.СтавкиНаУслуги.РежимПотребления</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<DropListButton>false</DropListButton>
+							<ChoiceButton>true</ChoiceButton>
+							<ChoiceButtonRepresentation>ShowInInputField</ChoiceButtonRepresentation>
+							<OpenButton>true</OpenButton>
+							<CreateButton>false</CreateButton>
+							<TextEdit>false</TextEdit>
+							<ChoiceHistoryOnInput>DontUse</ChoiceHistoryOnInput>
+							<ContextMenu name="СтавкиНаУслугиРежимПотребленияКонтекстноеМеню" id="23"/>
+							<ExtendedTooltip name="СтавкиНаУслугиРежимПотребленияExtendedTooltip" id="76"/>
+							<Events>
+								<Event name="OnChange">СтавкиНаУслугиРежимПотребленияПриИзменении</Event>
+								<Event name="StartChoice">СтавкиНаУслугиРежимПотребленияНачалоВыбора</Event>
+								<Event name="TextEditEnd">СтавкиНаУслугиРежимПотребленияОкончаниеВводаТекста</Event>
+							</Events>
+						</InputField>
+						<InputField name="СтавкиНаУслугиСпособРасчета" id="26">
+							<DataPath>Объект.СтавкиНаУслуги.СпособРасчета</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<DropListButton>false</DropListButton>
+							<ChoiceButton>true</ChoiceButton>
+							<ChoiceButtonRepresentation>ShowInInputField</ChoiceButtonRepresentation>
+							<OpenButton>false</OpenButton>
+							<CreateButton>false</CreateButton>
+							<QuickChoice>true</QuickChoice>
+							<TextEdit>false</TextEdit>
+							<ChoiceHistoryOnInput>DontUse</ChoiceHistoryOnInput>
+							<ContextMenu name="СтавкиНаУслугиСпособРасчетаКонтекстноеМеню" id="27"/>
+							<ExtendedTooltip name="СтавкиНаУслугиСпособРасчетаExtendedTooltip" id="77"/>
+							<Events>
+								<Event name="OnChange">СтавкиНаУслугиСпособРасчетаПриИзменении</Event>
+								<Event name="StartChoice">СтавкиНаУслугиСпособРасчетаНачалоВыбора</Event>
+								<Event name="TextEditEnd">СтавкиНаУслугиСпособРасчетаОкончаниеВводаТекста</Event>
+							</Events>
+						</InputField>
+						<InputField name="СтавкиНаУслугиСтатусКвартиры" id="28">
+							<DataPath>Объект.СтавкиНаУслуги.СтатусКвартиры</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ChoiceButton>true</ChoiceButton>
+							<OpenButton>false</OpenButton>
+							<ContextMenu name="СтавкиНаУслугиСтатусКвартирыКонтекстноеМеню" id="29"/>
+							<ExtendedTooltip name="СтавкиНаУслугиСтатусКвартирыExtendedTooltip" id="78"/>
+							<Events>
+								<Event name="OnChange">СтавкиНаУслугиСтатусКвартирыПриИзменении</Event>
+							</Events>
+						</InputField>
+						<InputField name="СтавкиНаУслугиТипКвартиры" id="30">
+							<DataPath>Объект.СтавкиНаУслуги.ТипКвартиры</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ChoiceButton>true</ChoiceButton>
+							<OpenButton>false</OpenButton>
+							<ContextMenu name="СтавкиНаУслугиТипКвартирыКонтекстноеМеню" id="31"/>
+							<ExtendedTooltip name="СтавкиНаУслугиТипКвартирыExtendedTooltip" id="79"/>
+							<Events>
+								<Event name="OnChange">СтавкиНаУслугиТипКвартирыПриИзменении</Event>
+							</Events>
+						</InputField>
+						<InputField name="СтавкиНаУслугиНормативПотребленияПоКу" id="42">
+							<DataPath>Объект.СтавкиНаУслуги.НормативПотребленияПоКу</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Норматив</v8:content>
+								</v8:item>
+							</Title>
+							<EditMode>EnterOnInput</EditMode>
+							<AutoChoiceIncomplete>true</AutoChoiceIncomplete>
+							<ContextMenu name="СтавкиНаУслугиНормативПотребленияПоКуКонтекстноеМеню" id="43"/>
+							<ExtendedTooltip name="СтавкиНаУслугиНормативПотребленияПоКуExtendedTooltip" id="80"/>
+						</InputField>
+						<InputField name="СтавкиНаУслугиТариф" id="40">
+							<DataPath>Объект.СтавкиНаУслуги.Тариф</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="СтавкиНаУслугиТарифКонтекстноеМеню" id="41"/>
+							<ExtendedTooltip name="СтавкиНаУслугиТарифExtendedTooltip" id="81"/>
+						</InputField>
+						<InputField name="СтавкиНаУслугиПлановаяСтавка" id="32">
+							<DataPath>Объект.СтавкиНаУслуги.ПлановаяСтавка</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="СтавкиНаУслугиПлановаяСтавкаКонтекстноеМеню" id="33"/>
+							<ExtendedTooltip name="СтавкиНаУслугиПлановаяСтавкаExtendedTooltip" id="82"/>
+							<Events>
+								<Event name="OnChange">СтавкиНаУслугиПлановаяСтавкаПриИзменении</Event>
+							</Events>
+						</InputField>
+						<InputField name="СтавкиНаУслугиОсновнаяСтавка" id="34">
+							<DataPath>Объект.СтавкиНаУслуги.ОсновнаяСтавка</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="СтавкиНаУслугиОсновнаяСтавкаКонтекстноеМеню" id="35"/>
+							<ExtendedTooltip name="СтавкиНаУслугиОсновнаяСтавкаExtendedTooltip" id="83"/>
+						</InputField>
+						<InputField name="СтавкиНаУслугиЛьготнаяСтавка" id="94">
+							<DataPath>Объект.СтавкиНаУслуги.ЛьготнаяСтавка</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="СтавкиНаУслугиЛьготнаяСтавкаКонтекстноеМеню" id="95"/>
+							<ExtendedTooltip name="СтавкиНаУслугиЛьготнаяСтавкаРасширеннаяПодсказка" id="96"/>
+						</InputField>
+						<InputField name="СтавкиНаУслугиСверхНормативнаяСтавка" id="36">
+							<DataPath>Объект.СтавкиНаУслуги.СверхНормативнаяСтавка</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="СтавкиНаУслугиСверхНормативнаяСтавкаКонтекстноеМеню" id="37"/>
+							<ExtendedTooltip name="СтавкиНаУслугиСверхНормативнаяСтавкаExtendedTooltip" id="84"/>
+						</InputField>
+					</ChildItems>
+				</Table>
+			</ChildItems>
+		</UsualGroup>
+		<InputField name="Ответственный" id="13">
+			<DataPath>Объект.Ответственный</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="ОтветственныйКонтекстноеМеню" id="14"/>
+			<ExtendedTooltip name="ОтветственныйExtendedTooltip" id="65"/>
+		</InputField>
+		<InputField name="Комментарий" id="15">
+			<DataPath>Объект.Комментарий</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="КомментарийКонтекстноеМеню" id="16"/>
+			<ExtendedTooltip name="КомментарийExtendedTooltip" id="66"/>
+		</InputField>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DocumentObject.бит_УстановкаСтавокПоУслугам</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+			<UseAlways>
+				<Field>Объект.RegisterRecords</Field>
+			</UseAlways>
+		</Attribute>
+		<Attribute name="УслугаВладелец" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Услуга владелец</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.бит_УслугиЖКХ</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="мКэшЗначений" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>М кэш значений</v8:content>
+				</v8:item>
+			</Title>
+			<Type/>
+		</Attribute>
+		<Attribute name="мСписокНормативов" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>М список нормативов</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="АдресСписокНормативовВХранилище" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Адрес список нормативов в хранилище</v8:content>
+				</v8:item>
+			</Title>
+			<Type/>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="Файлы" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Файлы</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Файлы</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.ТолькоСкрепка</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+				<xr:TransparentPixel x="12" y="3"/>
+			</Picture>
+			<Action>Файлы</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ЗаполнитьНормативы" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить нормативы</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить нормативы</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЗаполнитьНормативы</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ЗаполнитьТаблицу" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить таблицу</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить таблицу</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЗаполнитьТаблицу</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="РасчитатьСтавки" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Расчитать ставки</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Расчитать ставки</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>РасчитатьСтавки</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ВидимостьТарифНорматив" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Видимость тариф норматив</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Видимость тариф норматив</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ВидимостьТарифНорматив</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+	</Commands>
+	<CommandInterface>
+		<NavigationPanel>
+			<Item>
+				<Command>4:be6441d1-0ad8-4852-806c-533aee06a33f</Command>
+				<Type>Auto</Type>
+				<DefaultVisible>false</DefaultVisible>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+			<Item>
+				<Command>InformationRegister.бит_си_СвязанныеОбъекты.StandardCommand.OpenByValue.Объект</Command>
+				<Type>Auto</Type>
+				<DefaultVisible>false</DefaultVisible>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+			<Item>
+				<Command>InformationRegister.бит_СтавкиНаУслуги.StandardCommand.OpenByRecorder</Command>
+				<Type>Auto</Type>
+				<DefaultVisible>false</DefaultVisible>
+			</Item>
+			<Item>
+				<Command>CommonCommand.бит_СтруктураПодчиненности</Command>
+				<Type>Auto</Type>
+				<DefaultVisible>false</DefaultVisible>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+			<Item>
+				<Command>FilterCriterion.бит_СтруктураПодчиненности.StandardCommand.OpenByValue</Command>
+				<Type>Auto</Type>
+				<DefaultVisible>false</DefaultVisible>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+		</NavigationPanel>
+	</CommandInterface>
+</Form>

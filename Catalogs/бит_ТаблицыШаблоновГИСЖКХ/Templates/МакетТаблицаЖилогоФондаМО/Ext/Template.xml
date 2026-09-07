@@ -1,0 +1,780 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<DataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcscom="http://v8.1c.ru/8.1/data-composition-system/common" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataSource>
+		<name>ИсточникДанных1</name>
+		<dataSourceType>Local</dataSourceType>
+	</dataSource>
+	<dataSet xsi:type="DataSetQuery">
+		<name>НаборДанных1</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ГодВводаВЭксплуатацию</dataPath>
+			<field>ГодВводаВЭксплуатацию</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Год ввода в эксплуатацию</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ОбъектаКультурногоНаследия</dataPath>
+			<field>ОбъектаКультурногоНаследия</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Объекта культурного наследия</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ФондКапРемонта</dataPath>
+			<field>ФондКапРемонта</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Фонд кап ремонта</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ЧасоваяЗонаПоOlson</dataPath>
+			<field>ЧасоваяЗонаПоOlson</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Часовая зона по olson</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КоличествоЭтажейНаименьшее</dataPath>
+			<field>КоличествоЭтажейНаименьшее</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Количество этажей наименьшее</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Состояние</dataPath>
+			<field>Состояние</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Состояние</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КоличествоЭтажей</dataPath>
+			<field>КоличествоЭтажей</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Количество этажей</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ОбщаяПлощадьЗдания</dataPath>
+			<field>ОбщаяПлощадьЗдания</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Общая площадь здания</v8:content>
+				</v8:item>
+			</title>
+			<valueType>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>25</v8:Digits>
+					<v8:FractionDigits>4</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</valueType>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ОКТМО</dataPath>
+			<field>ОКТМО</field>
+			<valueType>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>0</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</valueType>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КадастровыйНомерЗдания</dataPath>
+			<field>КадастровыйНомерЗдания</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Кадастровый номер здания</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ОбщаяПлощадьЖилыхПомещений</dataPath>
+			<field>ОбщаяПлощадьЖилыхПомещений</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Общая площадь жилых помещений</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Здание</dataPath>
+			<field>Здание</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КоличествоПодземныхЭтажей</dataPath>
+			<field>КоличествоПодземныхЭтажей</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Количество подземных этажей</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КодФИАС_ИдентификаторГИСЖКХ</dataPath>
+			<field>КодФИАС_ИдентификаторГИСЖКХ</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Код ФИАС / Идентификатор ГИС ЖКХ</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ЖДБлокированнойЗастройки</dataPath>
+			<field>ЖДБлокированнойЗастройки</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>ЖДБлокированной застройки</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПолныйАдрес</dataPath>
+			<field>ПолныйАдрес</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Полный адрес</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КоличествоПодъездов</dataPath>
+			<field>КоличествоПодъездов</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Количество подъездов</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КодКапРемонта</dataPath>
+			<field>КодКапРемонта</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КоличествоКвартир</dataPath>
+			<field>КоличествоКвартир</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Количество квартир</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Квартира</dataPath>
+			<field>Квартира</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ТипПлиты</dataPath>
+			<field>ТипПлиты</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Тип плиты</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ТипДома</dataPath>
+			<field>ТипДома</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Тип дома</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ТипЛифта</dataPath>
+			<field>ТипЛифта</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Тип лифта</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<dataSource>ИсточникДанных1</dataSource>
+		<query>ВЫБРАТЬ РАЗРЕШЕННЫЕ РАЗЛИЧНЫЕ
+	бит_ЛицевыеСчета.Здание КАК Здание
+ПОМЕСТИТЬ ВТ_ЛицевыеСчета
+ИЗ
+	Справочник.бит_ЛицевыеСчета КАК бит_ЛицевыеСчета
+ГДЕ
+	бит_ЛицевыеСчета.Архивный = ЛОЖЬ
+	И НЕ бит_ЛицевыеСчета.ПометкаУдаления
+{ГДЕ
+	(бит_ЛицевыеСчета.Ссылка В (&amp;СписокЛС))}
+
+ИНДЕКСИРОВАТЬ ПО
+	Здание
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ВТ_ЛицевыеСчета.Здание КАК Здание,
+	ЕСТЬNULL(бит_СписокЗданийКонтактнаяИнформация.ЗначенияПолей, "") КАК ПолныйАдрес,
+	ВЫБОР
+		КОГДА ЕСТЬNULL(бит_СписокЗданий.КодФИАС, "") = ""
+			ТОГДА ЕСТЬNULL(бит_СписокЗданий.УникальныйНомерГИСЖКХ, "")
+		ИНАЧЕ ЕСТЬNULL(бит_СписокЗданий.КодФИАС, "")
+	КОНЕЦ КАК КодФИАС_ИдентификаторГИСЖКХ,
+	бит_СписокЗданий.ЖДБлокированнойЗастройки КАК ЖДБлокированнойЗастройки,
+	бит_СписокЗданий.ОКТМО КАК ОКТМО,
+	бит_СписокЗданий.Состояние КАК Состояние,
+	бит_СписокЗданий.ДатаВводаВЭксплуатацию КАК ДатаВводаВЭксплуатацию,
+	бит_СписокЗданий.ФондКапРемонта КАК ФондКапРемонта,
+	бит_СписокЗданий.КолВоПодземныхЭтажей КАК КолВоПодземныхЭтажей,
+	бит_СписокЗданий.КолВоЭтажейНаименьшее КАК КолВоЭтажейНаименьшее,
+	бит_СписокЗданий.ОбъектаКультурногоНаследия КАК ОбъектаКультурногоНаследия,
+	бит_СписокЗданий.ЧасоваяЗонаПоOlson КАК ЧасоваяЗонаПоOlson,
+	бит_СписокЗданий.КадастровыйНомер КАК КадастровыйНомер,
+	бит_СписокЗданий.КодКапРемонта КАК КодКапРемонта,
+	бит_СписокЗданий.ТипЖилФонда КАК ТипЖилФонда,
+	бит_СписокЗданий.ВидБлагоустройстваЗданий КАК ВидБлагоустройстваЗданий
+ПОМЕСТИТЬ ВТ_Здания
+ИЗ
+	ВТ_ЛицевыеСчета КАК ВТ_ЛицевыеСчета
+		ЛЕВОЕ СОЕДИНЕНИЕ Справочник.бит_СписокЗданий КАК бит_СписокЗданий
+		ПО ВТ_ЛицевыеСчета.Здание = бит_СписокЗданий.Ссылка
+		ЛЕВОЕ СОЕДИНЕНИЕ Справочник.бит_СписокЗданий.КонтактнаяИнформация КАК бит_СписокЗданийКонтактнаяИнформация
+		ПО ВТ_ЛицевыеСчета.Здание = бит_СписокЗданийКонтактнаяИнформация.Ссылка
+			И (бит_СписокЗданийКонтактнаяИнформация.Тип = ЗНАЧЕНИЕ(Перечисление.ТипыКонтактнойИнформации.Адрес))
+			И (бит_СписокЗданийКонтактнаяИнформация.Вид = ЗНАЧЕНИЕ(Справочник.бит_ВидыКонтактнойИнформацииЖКХ.ПочтовыйАдресЗдания))
+ГДЕ
+	НЕ бит_СписокЗданий.ПометкаУдаления
+{ГДЕ
+	(бит_СписокЗданий.Организация = &amp;ОтборОрганизация),
+	(бит_СписокЗданий.Улица В (&amp;СписокУлиц)),
+	(бит_СписокЗданий.Ссылка В (&amp;СписокЗданий)),
+	(ВЫБОР
+			КОГДА &amp;ТипДомаГИСЖКХ = ЗНАЧЕНИЕ(Перечисление.бит_ТипыДомовГИСЖКХ.МКД)
+				ТОГДА бит_СписокЗданий.ТипыДомовГИСЖКХ = ЗНАЧЕНИЕ(Перечисление.бит_ТипыДомовГИСЖКХ.МКД)
+						ИЛИ бит_СписокЗданий.ТипыДомовГИСЖКХ = ЗНАЧЕНИЕ(Перечисление.бит_ТипыДомовГИСЖКХ.ПустаяСсылка)
+			ИНАЧЕ бит_СписокЗданий.ТипыДомовГИСЖКХ В (&amp;ТипДомаГИСЖКХ)
+		КОНЕЦ)}
+
+ИНДЕКСИРОВАТЬ ПО
+	ВТ_ЛицевыеСчета.Здание
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ВТ_Здания.Здание КАК Здание,
+	бит_Квартиры.Ссылка КАК Квартира
+ПОМЕСТИТЬ ВТ_ВсеКвартиры
+ИЗ
+	ВТ_Здания КАК ВТ_Здания
+		ЛЕВОЕ СОЕДИНЕНИЕ Справочник.бит_Квартиры КАК бит_Квартиры
+		ПО ВТ_Здания.Здание = бит_Квартиры.Владелец
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ВТ_ВсеКвартиры.Здание КАК Здание,
+	КОЛИЧЕСТВО(ВТ_ВсеКвартиры.Квартира) КАК КоличествоКвартир
+ПОМЕСТИТЬ ВТ_КоличествоКвартир
+ИЗ
+	ВТ_ВсеКвартиры КАК ВТ_ВсеКвартиры
+
+СГРУППИРОВАТЬ ПО
+	ВТ_ВсеКвартиры.Здание
+
+ИНДЕКСИРОВАТЬ ПО
+	ВТ_ВсеКвартиры.Здание
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	бит_СведенияОКвартиреСрезПоследних.Квартира.Владелец КАК Здание,
+	МАКСИМУМ(бит_СведенияОКвартиреСрезПоследних.ТипПлиты) КАК ТипПлиты
+ПОМЕСТИТЬ ВТ_ТипПлиты
+ИЗ
+	РегистрСведений.бит_СведенияОКвартире.СрезПоследних(
+			&amp;Период,
+			Квартира В
+				(ВЫБРАТЬ РАЗЛИЧНЫЕ
+					ВТ_ВсеКвартиры.Квартира
+				ИЗ
+					ВТ_ВсеКвартиры КАК ВТ_ВсеКвартиры)) КАК бит_СведенияОКвартиреСрезПоследних
+
+СГРУППИРОВАТЬ ПО
+	бит_СведенияОКвартиреСрезПоследних.Квартира.Владелец
+
+ИНДЕКСИРОВАТЬ ПО
+	Здание
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	бит_ЗначениеСвойствОбъектовУчета.ОбъектУчета КАК ОбъектУчета,
+	МАКСИМУМ(ВЫБОР
+			КОГДА бит_ЗначениеСвойствОбъектовУчета.ВидСвойства = ЗНАЧЕНИЕ(ПланВидовХарактеристик.бит_СвойстваОбъектовУчета.ОбщаяПлощадьЖилыхПомещений)
+				ТОГДА бит_ЗначениеСвойствОбъектовУчета.Значение
+			ИНАЧЕ 0
+		КОНЕЦ) КАК ОбщаяПлощадьЖилыхПомещений,
+	МАКСИМУМ(ВЫБОР
+			КОГДА бит_ЗначениеСвойствОбъектовУчета.ВидСвойства = ЗНАЧЕНИЕ(ПланВидовХарактеристик.бит_СвойстваОбъектовУчета.ОбщаяПлощадьЖилогоЗдания)
+				ТОГДА бит_ЗначениеСвойствОбъектовУчета.Значение
+			ИНАЧЕ 0
+		КОНЕЦ) КАК ОбщаяПлощадьЖилогоЗдания,
+	МАКСИМУМ(ВЫБОР
+			КОГДА бит_ЗначениеСвойствОбъектовУчета.ВидСвойства = ЗНАЧЕНИЕ(ПланВидовХарактеристик.бит_СвойстваОбъектовУчета.КоличествоЭтажей)
+				ТОГДА бит_ЗначениеСвойствОбъектовУчета.Значение
+			ИНАЧЕ 0
+		КОНЕЦ) КАК КоличествоЭтажей,
+	МАКСИМУМ(ВЫБОР
+			КОГДА бит_ЗначениеСвойствОбъектовУчета.ВидСвойства = ЗНАЧЕНИЕ(ПланВидовХарактеристик.бит_СвойстваОбъектовУчета.КоличествоПодъездов)
+				ТОГДА бит_ЗначениеСвойствОбъектовУчета.Значение
+			ИНАЧЕ 0
+		КОНЕЦ) КАК КоличествоПодъездов
+ПОМЕСТИТЬ ВТ_ДопСвойства
+ИЗ
+	РегистрСведений.бит_ЗначениеСвойствОбъектовУчета КАК бит_ЗначениеСвойствОбъектовУчета
+ГДЕ
+	бит_ЗначениеСвойствОбъектовУчета.ОбъектУчета В
+			(ВЫБРАТЬ
+				ВТ_Здания.Здание
+			ИЗ
+				ВТ_Здания КАК ВТ_Здания)
+	И (бит_ЗначениеСвойствОбъектовУчета.ВидСвойства = ЗНАЧЕНИЕ(ПланВидовХарактеристик.бит_СвойстваОбъектовУчета.ОбщаяПлощадьЖилыхПомещений)
+			ИЛИ бит_ЗначениеСвойствОбъектовУчета.ВидСвойства = ЗНАЧЕНИЕ(ПланВидовХарактеристик.бит_СвойстваОбъектовУчета.ОбщаяПлощадьЖилогоЗдания)
+			ИЛИ бит_ЗначениеСвойствОбъектовУчета.ВидСвойства = ЗНАЧЕНИЕ(ПланВидовХарактеристик.бит_СвойстваОбъектовУчета.КоличествоЭтажей)
+			ИЛИ бит_ЗначениеСвойствОбъектовУчета.ВидСвойства = ЗНАЧЕНИЕ(ПланВидовХарактеристик.бит_СвойстваОбъектовУчета.КоличествоПодъездов))
+
+СГРУППИРОВАТЬ ПО
+	бит_ЗначениеСвойствОбъектовУчета.ОбъектУчета
+
+ИНДЕКСИРОВАТЬ ПО
+	ОбъектУчета
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ВТ_Здания.Здание КАК Здание,
+	ВТ_Здания.ПолныйАдрес КАК ПолныйАдрес,
+	ЕСТЬNULL(ВТ_ДопСвойства.КоличествоЭтажей, "") КАК КоличествоЭтажей,
+	ЕСТЬNULL(ВТ_ДопСвойства.КоличествоПодъездов, "") КАК КоличествоПодъездов,
+	ЕСТЬNULL(ВТ_КоличествоКвартир.КоличествоКвартир, "") КАК КоличествоКвартир,
+	ВЫБОР
+		КОГДА ВТ_ТипПлиты.ТипПлиты = ЗНАЧЕНИЕ(Справочник.бит_ТипыПлиты.ГазоваяПлита)
+			ТОГДА "1"
+		КОГДА ВТ_ТипПлиты.ТипПлиты = ЗНАЧЕНИЕ(Справочник.бит_ТипыПлиты.ЭлектрическаяПлита)
+			ТОГДА "2"
+		ИНАЧЕ ""
+	КОНЕЦ КАК ТипПлиты,
+	ВЫБОР
+		КОГДА ВТ_Здания.ДатаВводаВЭксплуатацию = ДАТАВРЕМЯ(1, 1, 1)
+			ТОГДА 0
+		ИНАЧЕ ГОД(ВТ_Здания.ДатаВводаВЭксплуатацию)
+	КОНЕЦ КАК ГодВводаВЭксплуатацию,
+	ВТ_Здания.КодКапРемонта КАК КодКапРемонта,
+	ВТ_Здания.КодФИАС_ИдентификаторГИСЖКХ КАК КодФИАС_ИдентификаторГИСЖКХ,
+	ВЫБОР
+		КОГДА ВТ_Здания.ЖДБлокированнойЗастройки
+			ТОГДА "Да"
+		ИНАЧЕ "Нет"
+	КОНЕЦ КАК ЖДБлокированнойЗастройки,
+	ВТ_Здания.ОКТМО КАК ОКТМО,
+	ПРЕДСТАВЛЕНИЕ(ВТ_Здания.Состояние) КАК Состояние,
+	ВЫБОР
+		КОГДА ВТ_Здания.ФондКапРемонта = ЗНАЧЕНИЕ(Перечисление.бит_СпособФормированияФондаКапРемонта.ПустаяСсылка)
+			ТОГДА "Значение не выбрано"
+		ИНАЧЕ ПРЕДСТАВЛЕНИЕ(ВТ_Здания.ФондКапРемонта)
+	КОНЕЦ КАК ФондКапРемонта,
+	ВТ_Здания.КолВоПодземныхЭтажей КАК КоличествоПодземныхЭтажей,
+	ВТ_Здания.КолВоЭтажейНаименьшее КАК КоличествоЭтажейНаименьшее,
+	ВЫБОР
+		КОГДА ВТ_Здания.ОбъектаКультурногоНаследия
+			ТОГДА "Да"
+		ИНАЧЕ "Нет"
+	КОНЕЦ КАК ОбъектаКультурногоНаследия,
+	ПРЕДСТАВЛЕНИЕ(ВТ_Здания.ЧасоваяЗонаПоOlson) КАК ЧасоваяЗонаПоOlson,
+	ВТ_Здания.КадастровыйНомер КАК КадастровыйНомерЗдания,
+	ВЫБОР
+		КОГДА ВТ_Здания.ВидБлагоустройстваЗданий = ЗНАЧЕНИЕ(Справочник.бит_ВидыБлагоустройстваЗданий.БезЛифтов)
+			ТОГДА 0
+		КОГДА ВТ_Здания.ВидБлагоустройстваЗданий = ЗНАЧЕНИЕ(Справочник.бит_ВидыБлагоустройстваЗданий.СЛифтами)
+			ТОГДА 1
+		КОГДА ВТ_Здания.ВидБлагоустройстваЗданий = ЗНАЧЕНИЕ(Справочник.бит_ВидыБлагоустройстваЗданий.ГрузовойЛифт)
+			ТОГДА 2
+		ИНАЧЕ 0
+	КОНЕЦ КАК ТипЛифта,
+	ВЫБОР
+		КОГДА бит_ТипыЖилогоФонда.ТипДомаМО = ЗНАЧЕНИЕ(Перечисление.бит_ТипДомаМО.Частный)
+			ТОГДА 1
+		КОГДА бит_ТипыЖилогоФонда.ТипДомаМО = ЗНАЧЕНИЕ(Перечисление.бит_ТипДомаМО.Многоквартирный)
+			ТОГДА 2
+		КОГДА бит_ТипыЖилогоФонда.ТипДомаМО = ЗНАЧЕНИЕ(Перечисление.бит_ТипДомаМО.МногоквартирныйСВодонагревателями)
+			ТОГДА 3
+		КОГДА бит_ТипыЖилогоФонда.ТипДомаМО = ЗНАЧЕНИЕ(Перечисление.бит_ТипДомаМО.МногоквартирныйСВодоотведением)
+			ТОГДА 4
+		КОГДА бит_ТипыЖилогоФонда.ТипДомаМО = ЗНАЧЕНИЕ(Перечисление.бит_ТипДомаМО.Общежитие)
+			ТОГДА 5
+		КОГДА бит_ТипыЖилогоФонда.ТипДомаМО = ЗНАЧЕНИЕ(Перечисление.бит_ТипДомаМО.НежилоеПомещение)
+			ТОГДА 6
+		ИНАЧЕ ""
+	КОНЕЦ КАК ТипДома,
+	ВТ_ДопСвойства.ОбщаяПлощадьЖилыхПомещений КАК ОбщаяПлощадьЖилыхПомещений,
+	ВТ_ДопСвойства.ОбщаяПлощадьЖилогоЗдания КАК ОбщаяПлощадьЗдания
+ИЗ
+	ВТ_Здания КАК ВТ_Здания
+		ЛЕВОЕ СОЕДИНЕНИЕ ВТ_ДопСвойства КАК ВТ_ДопСвойства
+		ПО ВТ_Здания.Здание = ВТ_ДопСвойства.ОбъектУчета
+		ЛЕВОЕ СОЕДИНЕНИЕ ВТ_КоличествоКвартир КАК ВТ_КоличествоКвартир
+		ПО ВТ_Здания.Здание = ВТ_КоличествоКвартир.Здание
+		ЛЕВОЕ СОЕДИНЕНИЕ ВТ_ТипПлиты КАК ВТ_ТипПлиты
+		ПО ВТ_Здания.Здание = ВТ_ТипПлиты.Здание
+		ЛЕВОЕ СОЕДИНЕНИЕ Справочник.бит_ТипыЖилогоФонда КАК бит_ТипыЖилогоФонда
+		ПО ВТ_Здания.ТипЖилФонда = бит_ТипыЖилогоФонда.Ссылка</query>
+	</dataSet>
+	<calculatedField>
+		<dataPath>Индекс</dataPath>
+		<expression>ВЫБОР
+    КОГДА ПолныйАдрес &lt;&gt;  ""
+        ТОГДА бит_ОбщегоНазначения.СведенияОбАдресе(ПолныйАдрес, "Индекс")
+    ИНАЧЕ
+        ""
+КОНЕЦ</expression>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Индекс</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:string</v8:Type>
+			<v8:StringQualifiers>
+				<v8:Length>10</v8:Length>
+				<v8:AllowedLength>Variable</v8:AllowedLength>
+			</v8:StringQualifiers>
+		</valueType>
+	</calculatedField>
+	<calculatedField>
+		<dataPath>Район</dataPath>
+		<expression>ВЫБОР
+    КОГДА ПолныйАдрес &lt;&gt;  ""
+        ТОГДА бит_ОбщегоНазначения.СведенияОбАдресе(ПолныйАдрес, "Район")
+    ИНАЧЕ
+        ""
+КОНЕЦ</expression>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Район</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:string</v8:Type>
+			<v8:StringQualifiers>
+				<v8:Length>250</v8:Length>
+				<v8:AllowedLength>Variable</v8:AllowedLength>
+			</v8:StringQualifiers>
+		</valueType>
+	</calculatedField>
+	<calculatedField>
+		<dataPath>НаселенныйПункт</dataPath>
+		<expression>ВЫБОР
+    КОГДА ПолныйАдрес &lt;&gt;  ""
+        ТОГДА бит_ОбщегоНазначения.СведенияОбАдресе(ПолныйАдрес, "НаселенныйПункт")
+    ИНАЧЕ
+        ""
+КОНЕЦ</expression>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Населенный пункт</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:string</v8:Type>
+			<v8:StringQualifiers>
+				<v8:Length>250</v8:Length>
+				<v8:AllowedLength>Variable</v8:AllowedLength>
+			</v8:StringQualifiers>
+		</valueType>
+	</calculatedField>
+	<calculatedField>
+		<dataPath>Улица</dataPath>
+		<expression>ВЫБОР
+    КОГДА ПолныйАдрес &lt;&gt;  ""
+        ТОГДА бит_ОбщегоНазначения.СведенияОбАдресе(ПолныйАдрес, "Улица")
+    ИНАЧЕ
+        ""
+КОНЕЦ</expression>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Улица</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:string</v8:Type>
+			<v8:StringQualifiers>
+				<v8:Length>250</v8:Length>
+				<v8:AllowedLength>Variable</v8:AllowedLength>
+			</v8:StringQualifiers>
+		</valueType>
+	</calculatedField>
+	<calculatedField>
+		<dataPath>Дом</dataPath>
+		<expression>ВЫБОР
+    КОГДА ПолныйАдрес &lt;&gt;  ""
+        ТОГДА бит_ОбщегоНазначения.СведенияОбАдресе(ПолныйАдрес, "Дом")
+    ИНАЧЕ
+        ""
+КОНЕЦ</expression>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Дом</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:string</v8:Type>
+			<v8:StringQualifiers>
+				<v8:Length>10</v8:Length>
+				<v8:AllowedLength>Variable</v8:AllowedLength>
+			</v8:StringQualifiers>
+		</valueType>
+	</calculatedField>
+	<calculatedField>
+		<dataPath>Корпус</dataPath>
+		<expression>ВЫБОР
+    КОГДА ПолныйАдрес &lt;&gt;  ""
+        ТОГДА бит_ОбщегоНазначения.СведенияОбАдресе(ПолныйАдрес, "Корпус")
+    ИНАЧЕ
+        ""
+КОНЕЦ</expression>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Корпус</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:string</v8:Type>
+			<v8:StringQualifiers>
+				<v8:Length>10</v8:Length>
+				<v8:AllowedLength>Variable</v8:AllowedLength>
+			</v8:StringQualifiers>
+		</valueType>
+	</calculatedField>
+	<calculatedField>
+		<dataPath>ГодВводаВЭксплуатацию</dataPath>
+		<expression>Формат(ГодВводаВЭксплуатацию, "ДФ=yyyy")</expression>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Год ввода в эксплуатацию</v8:content>
+			</v8:item>
+		</title>
+	</calculatedField>
+	<calculatedField>
+		<dataPath>ОКТМО</dataPath>
+		<expression>Формат(ОКТМО, "ЧВН=")</expression>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>ОКТМО</v8:content>
+			</v8:item>
+		</title>
+	</calculatedField>
+	<calculatedField>
+		<dataPath>КадастровыйНомерЗдания</dataPath>
+		<expression>ВЫБОР
+КОГДА КадастровыйНомерЗдания = ""
+ТОГДА "Нет"
+ИНАЧЕ КадастровыйНомерЗдания
+КОНЕЦ</expression>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Кадастровый номер здания</v8:content>
+			</v8:item>
+		</title>
+	</calculatedField>
+	<parameter>
+		<name>Период</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Период</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+		<use>Always</use>
+	</parameter>
+	<parameter>
+		<name>ОтборОрганизация</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Отбор организация</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.Организации</v8:Type>
+		</valueType>
+		<value xsi:nil="true"/>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<parameter>
+		<name>СписокЛС</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Список ЛС</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.бит_ЛицевыеСчета</v8:Type>
+		</valueType>
+		<useRestriction>true</useRestriction>
+		<valueListAllowed>true</valueListAllowed>
+	</parameter>
+	<parameter>
+		<name>СписокЗданий</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Список зданий</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.бит_СписокЗданий</v8:Type>
+		</valueType>
+		<useRestriction>true</useRestriction>
+		<valueListAllowed>true</valueListAllowed>
+	</parameter>
+	<parameter>
+		<name>СписокУлиц</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Список улиц</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.бит_СписокУлиц</v8:Type>
+		</valueType>
+		<useRestriction>true</useRestriction>
+		<valueListAllowed>true</valueListAllowed>
+	</parameter>
+	<parameter>
+		<name>ТипДомаГИСЖКХ</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Тип дома ГИСЖКХ</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:EnumRef.бит_ТипыДомовГИСЖКХ</v8:Type>
+		</valueType>
+		<value xsi:nil="true"/>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<settingsVariant>
+		<dcsset:name>Основной</dcsset:name>
+		<dcsset:presentation xsi:type="xs:string">Основной</dcsset:presentation>
+		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+			<dcsset:selection>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Индекс</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Район</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>НаселенныйПункт</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Улица</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Дом</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Корпус</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>КоличествоЭтажей</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>КоличествоПодъездов</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ОбщаяПлощадьЗдания</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>КоличествоКвартир</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ТипЛифта</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ТипПлиты</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ГодВводаВЭксплуатацию</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ТипДома</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>КодКапРемонта</dcsset:field>
+				</dcsset:item>
+			</dcsset:selection>
+			<dcsset:item xsi:type="dcsset:StructureItemGroup">
+				<dcsset:order>
+					<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+				</dcsset:order>
+				<dcsset:selection>
+					<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+				</dcsset:selection>
+			</dcsset:item>
+		</dcsset:settings>
+	</settingsVariant>
+</DataCompositionSchema>

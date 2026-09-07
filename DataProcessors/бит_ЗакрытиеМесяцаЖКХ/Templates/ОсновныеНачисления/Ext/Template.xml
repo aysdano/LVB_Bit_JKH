@@ -1,0 +1,165 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<DataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcscom="http://v8.1c.ru/8.1/data-composition-system/common" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataSource>
+		<name>ИсточникДанных1</name>
+		<dataSourceType>Local</dataSourceType>
+	</dataSource>
+	<dataSet xsi:type="DataSetQuery">
+		<name>НаборДанных</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДокументНачисления</dataPath>
+			<field>ДокументНачисления</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДокументПоЛьготам</dataPath>
+			<field>ДокументПоЛьготам</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДокументПоСч</dataPath>
+			<field>ДокументПоСч</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Здание</dataPath>
+			<field>Здание</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Улица</dataPath>
+			<field>Улица</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Район</dataPath>
+			<field>Район</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Участок</dataPath>
+			<field>Участок</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДокументПоПени</dataPath>
+			<field>ДокументПоПени</field>
+		</field>
+		<dataSource>ИсточникДанных1</dataSource>
+		<query>ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	бит_СписокЗданий.Район КАК Район,
+	бит_СписокЗданий.Участок КАК Участок,
+	бит_СписокЗданий.Ссылка КАК Здание,
+	бит_СписокЗданий.Улица КАК Улица,
+	ЕСТЬNULL(НачислениеПоЛС.ДокументНачисления, ЗНАЧЕНИЕ(Документ.бит_НачислениеПоЛицевымСчетам.ПустаяССылка)) КАК ДокументНачисления,
+	ЕСТЬNULL(НачисленияПоСчетчикам.ДокументПоСч, ЗНАЧЕНИЕ(Документ.бит_НачисленияПоСчетчикам.ПустаяСсылка)) КАК ДокументПоСч,
+	ЕСТЬNULL(НачисленияПоЛьготам.ДокументПоЛьготам, ЗНАЧЕНИЕ(Документ.бит_НачислениеЛьготПоЛицевымСчетам.ПустаяСсылка)) КАК ДокументПоЛьготам,
+	ЕСТЬNULL(НачислениеПоПени.ДокументПоПени, ЗНАЧЕНИЕ(Документ.бит_РазовыеПоУслугамЖКХ.ПустаяССылка)) КАК ДокументПоПени
+ИЗ
+	Справочник.бит_СписокЗданий КАК бит_СписокЗданий
+		ЛЕВОЕ СОЕДИНЕНИЕ (ВЫБРАТЬ
+			бит_НачислениеПоЛицевымСчетам.Ссылка КАК ДокументНачисления,
+			бит_НачислениеПоЛицевымСчетам.Здание КАК Здание
+		ИЗ
+			Документ.бит_НачислениеПоЛицевымСчетам КАК бит_НачислениеПоЛицевымСчетам
+		ГДЕ
+			бит_НачислениеПоЛицевымСчетам.Дата МЕЖДУ НАЧАЛОПЕРИОДА(&amp;Дата, МЕСЯЦ) И КОНЕЦПЕРИОДА(&amp;Дата, МЕСЯЦ)
+			И бит_НачислениеПоЛицевымСчетам.Организация = &amp;Организация) КАК НачислениеПоЛС
+		ПО бит_СписокЗданий.Ссылка = НачислениеПоЛС.Здание
+		ЛЕВОЕ СОЕДИНЕНИЕ (ВЫБРАТЬ
+			НачисленияПоСчетчикам.Ссылка КАК ДокументПоСч,
+			НачисленияПоСчетчикам.Здание КАК Здание
+		ИЗ
+			Документ.бит_НачисленияПоСчетчикам КАК НачисленияПоСчетчикам
+		ГДЕ
+			НачисленияПоСчетчикам.Дата &gt;= НАЧАЛОПЕРИОДА(&amp;Дата, МЕСЯЦ)
+			И НачисленияПоСчетчикам.Дата &lt;= КОНЕЦПЕРИОДА(&amp;Дата, МЕСЯЦ)
+			И НачисленияПоСчетчикам.Организация = &amp;Организация) КАК НачисленияПоСчетчикам
+		ПО бит_СписокЗданий.Ссылка = НачисленияПоСчетчикам.Здание
+		ЛЕВОЕ СОЕДИНЕНИЕ (ВЫБРАТЬ
+			НачислениеЛьготПоЛС.Ссылка КАК ДокументПоЛьготам,
+			НачислениеЛьготПоЛС.Здание КАК Здание
+		ИЗ
+			Документ.бит_НачислениеЛьготПоЛицевымСчетам КАК НачислениеЛьготПоЛС
+		ГДЕ
+			НачислениеЛьготПоЛС.Дата &gt;= НАЧАЛОПЕРИОДА(&amp;Дата, МЕСЯЦ)
+			И НачислениеЛьготПоЛС.Дата &lt;= КОНЕЦПЕРИОДА(&amp;Дата, МЕСЯЦ)
+			И НачислениеЛьготПоЛС.Организация = &amp;Организация) КАК НачисленияПоЛьготам
+		ПО бит_СписокЗданий.Ссылка = НачисленияПоЛьготам.Здание
+		ЛЕВОЕ СОЕДИНЕНИЕ (ВЫБРАТЬ
+			бит_РазовыеПоУслугамЖКХ.Ссылка КАК ДокументПоПени,
+			бит_РазовыеПоУслугамЖКХ.ЛицевойСчет.Здание КАК Здание
+		ИЗ
+			Документ.бит_РазовыеПоУслугамЖКХ КАК бит_РазовыеПоУслугамЖКХ
+		ГДЕ
+			бит_РазовыеПоУслугамЖКХ.Дата МЕЖДУ НАЧАЛОПЕРИОДА(&amp;Дата, МЕСЯЦ) И КОНЕЦПЕРИОДА(&amp;Дата, МЕСЯЦ)
+			И бит_РазовыеПоУслугамЖКХ.Организация = &amp;Организация) КАК НачислениеПоПени
+		ПО бит_СписокЗданий.Ссылка = НачислениеПоПени.Здание
+ГДЕ
+	бит_СписокЗданий.Организация = &amp;Организация</query>
+	</dataSet>
+	<parameter>
+		<name>Дата</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Дата</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<parameter>
+		<name>Организация</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Организация</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.Организации</v8:Type>
+		</valueType>
+		<value xsi:type="dcscor:DesignTimeValue">Справочник.Организации.ПустаяСсылка</value>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<settingsVariant>
+		<dcsset:name>Основной</dcsset:name>
+		<dcsset:presentation xsi:type="xs:string">Основной</dcsset:presentation>
+		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+			<dcsset:filter>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">Район</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+					<dcsset:right xsi:type="dcscor:DesignTimeValue">Справочник.бит_АдминистративныеОкруга.ПустаяСсылка</dcsset:right>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">Участок</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+					<dcsset:right xsi:type="dcscor:DesignTimeValue">Справочник.бит_ТехническиеУчастки.ПустаяСсылка</dcsset:right>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">Улица</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+					<dcsset:right xsi:type="dcscor:DesignTimeValue">Справочник.бит_СписокУлиц.ПустаяСсылка</dcsset:right>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">Здание</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+					<dcsset:right xsi:type="dcscor:DesignTimeValue">Справочник.бит_СписокЗданий.ПустаяСсылка</dcsset:right>
+				</dcsset:item>
+			</dcsset:filter>
+			<dcsset:item xsi:type="dcsset:StructureItemGroup">
+				<dcsset:order>
+					<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+				</dcsset:order>
+				<dcsset:selection>
+					<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+				</dcsset:selection>
+			</dcsset:item>
+		</dcsset:settings>
+	</settingsVariant>
+</DataCompositionSchema>

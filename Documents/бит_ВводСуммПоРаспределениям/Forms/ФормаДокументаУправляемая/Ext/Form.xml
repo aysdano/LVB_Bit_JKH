@@ -1,0 +1,395 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.18">
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<AutoTime>CurrentOrLast</AutoTime>
+	<UsePostingMode>Auto</UsePostingMode>
+	<RepostOnWrite>true</RepostOnWrite>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="AfterWrite">ПослеЗаписи</Event>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="Группа1" id="34">
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="Группа1ExtendedTooltip" id="76"/>
+			<ChildItems>
+				<UsualGroup name="ГруппаШапкаДокумента" id="35">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа реквизитов</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа реквизитов</v8:content>
+						</v8:item>
+					</ToolTip>
+					<HorizontalStretch>false</HorizontalStretch>
+					<Group>Horizontal</Group>
+					<Representation>None</Representation>
+					<ChildItemsWidth>LeftNarrow</ChildItemsWidth>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаШапкаДокументаExtendedTooltip" id="77"/>
+					<ChildItems>
+						<InputField name="Номер" id="36">
+							<DataPath>Объект.Number</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="НомерКонтекстноеМеню" id="37"/>
+							<ExtendedTooltip name="НомерExtendedTooltip" id="78"/>
+						</InputField>
+						<InputField name="Дата" id="38">
+							<DataPath>Объект.Date</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>от</v8:content>
+								</v8:item>
+							</Title>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ДатаКонтекстноеМеню" id="39"/>
+							<ExtendedTooltip name="ДатаExtendedTooltip" id="79"/>
+						</InputField>
+						<LabelDecoration name="НадписьСтавка" id="46">
+							<Width>25</Width>
+							<ContextMenu name="НадписьСтавкаКонтекстноеМеню" id="47"/>
+							<ExtendedTooltip name="НадписьСтавкаExtendedTooltip" id="80"/>
+						</LabelDecoration>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаОрганизация" id="43">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа организация</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа организация</v8:content>
+				</v8:item>
+			</ToolTip>
+			<HorizontalStretch>false</HorizontalStretch>
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ChildItemsWidth>LeftNarrow</ChildItemsWidth>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаОрганизацияExtendedTooltip" id="81"/>
+			<ChildItems>
+				<InputField name="Организация" id="44">
+					<DataPath>Объект.Организация</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<Width>28</Width>
+					<ContextMenu name="ОрганизацияКонтекстноеМеню" id="45"/>
+					<ExtendedTooltip name="ОрганизацияExtendedTooltip" id="82"/>
+				</InputField>
+				<LabelDecoration name="НадписьСумма" id="48">
+					<Width>37</Width>
+					<ContextMenu name="НадписьСуммаКонтекстноеМеню" id="49"/>
+					<ExtendedTooltip name="НадписьСуммаExtendedTooltip" id="83"/>
+				</LabelDecoration>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="Группа3" id="50">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Шапка документа</v8:content>
+				</v8:item>
+			</Title>
+			<Group>Horizontal</Group>
+			<ExtendedTooltip name="Группа3ExtendedTooltip" id="84"/>
+			<ChildItems>
+				<UsualGroup name="Группа4" id="51">
+					<Group>Vertical</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="Группа4ExtendedTooltip" id="85"/>
+					<ChildItems>
+						<InputField name="Улица" id="54">
+							<DataPath>Объект.Улица</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="УлицаКонтекстноеМеню" id="55"/>
+							<ExtendedTooltip name="УлицаExtendedTooltip" id="86"/>
+							<Events>
+								<Event name="OnChange">УлицаПриИзменении</Event>
+							</Events>
+						</InputField>
+						<InputField name="Услуга" id="59">
+							<DataPath>Объект.Услуга</DataPath>
+							<ContextMenu name="УслугаКонтекстноеМеню" id="60"/>
+							<ExtendedTooltip name="УслугаExtendedTooltip" id="87"/>
+							<Events>
+								<Event name="OnChange">УслугаПриИзменении</Event>
+							</Events>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="Группа5" id="58">
+					<Group>Vertical</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="Группа5ExtendedTooltip" id="88"/>
+					<ChildItems>
+						<InputField name="Дом" id="63">
+							<DataPath>Объект.Дом</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<TextEdit>false</TextEdit>
+							<ContextMenu name="ДомКонтекстноеМеню" id="64"/>
+							<ExtendedTooltip name="ДомExtendedTooltip" id="89"/>
+							<Events>
+								<Event name="OnChange">ДомПриИзменении</Event>
+								<Event name="StartChoice">ДомНачалоВыбора</Event>
+							</Events>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="Группа6" id="65">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Суммы распределений</v8:content>
+				</v8:item>
+			</Title>
+			<Group>Vertical</Group>
+			<ExtendedTooltip name="Группа6ExtendedTooltip" id="90"/>
+			<ChildItems>
+				<Table name="ПоказанияПоРаспределениям" id="19">
+					<Representation>List</Representation>
+					<AutoInsertNewRow>true</AutoInsertNewRow>
+					<EnableStartDrag>true</EnableStartDrag>
+					<EnableDrag>true</EnableDrag>
+					<FileDragMode>AsFile</FileDragMode>
+					<DataPath>Объект.ПоказанияПоРаспределениям</DataPath>
+					<SearchStringLocation>None</SearchStringLocation>
+					<ViewStatusLocation>None</ViewStatusLocation>
+					<SearchControlLocation>None</SearchControlLocation>
+					<RowFilter xsi:nil="true"/>
+					<ContextMenu name="ПоказанияПоРаспределениямКонтекстноеМеню" id="20"/>
+					<AutoCommandBar name="ПоказанияПоРаспределениямКоманднаяПанель" id="21">
+						<Autofill>false</Autofill>
+						<ChildItems>
+							<Button name="ПоказанияПоРаспределениямНайти" id="67">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Item.ПоказанияПоРаспределениям.StandardCommand.Find</CommandName>
+								<ExtendedTooltip name="ПоказанияПоРаспределениямНайтиExtendedTooltip" id="91"/>
+							</Button>
+							<Button name="ПоказанияПоРаспределениямОтменитьПоиск" id="68">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Item.ПоказанияПоРаспределениям.StandardCommand.CancelSearch</CommandName>
+								<ExtendedTooltip name="ПоказанияПоРаспределениямОтменитьПоискExtendedTooltip" id="92"/>
+							</Button>
+							<Button name="ПоказанияПоРаспределениямПереместитьВверх" id="69">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Item.ПоказанияПоРаспределениям.StandardCommand.MoveUp</CommandName>
+								<ExtendedTooltip name="ПоказанияПоРаспределениямПереместитьВверхExtendedTooltip" id="93"/>
+							</Button>
+							<Button name="ПоказанияПоРаспределениямПереместитьВниз" id="70">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Item.ПоказанияПоРаспределениям.StandardCommand.MoveDown</CommandName>
+								<ExtendedTooltip name="ПоказанияПоРаспределениямПереместитьВнизExtendedTooltip" id="94"/>
+							</Button>
+							<Button name="ПоказанияПоРаспределениямСортироватьСписокПоВозрастанию" id="71">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Item.ПоказанияПоРаспределениям.StandardCommand.SortListAsc</CommandName>
+								<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
+								<ExtendedTooltip name="ПоказанияПоРаспределениямСортироватьСписокПоВозрастаниюExtendedTooltip" id="95"/>
+							</Button>
+							<Button name="ПоказанияПоРаспределениямСортироватьСписокПоУбыванию" id="72">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Item.ПоказанияПоРаспределениям.StandardCommand.SortListDesc</CommandName>
+								<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
+								<ExtendedTooltip name="ПоказанияПоРаспределениямСортироватьСписокПоУбываниюExtendedTooltip" id="96"/>
+							</Button>
+							<Button name="ПоказанияПоРаспределениямВывестиСписок" id="73">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Item.ПоказанияПоРаспределениям.StandardCommand.OutputList</CommandName>
+								<ExtendedTooltip name="ПоказанияПоРаспределениямВывестиСписокExtendedTooltip" id="97"/>
+							</Button>
+							<Button name="ПоказанияПоРаспределениямКопироватьВБуферОбмена" id="74">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Item.ПоказанияПоРаспределениям.StandardCommand.CopyToClipboard</CommandName>
+								<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
+								<ExtendedTooltip name="ПоказанияПоРаспределениямКопироватьВБуферОбменаExtendedTooltip" id="98"/>
+							</Button>
+							<Button name="ПоказанияПоРаспределениямВыделитьВсе" id="75">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Item.ПоказанияПоРаспределениям.StandardCommand.SelectAll</CommandName>
+								<ExtendedTooltip name="ПоказанияПоРаспределениямВыделитьВсеExtendedTooltip" id="99"/>
+							</Button>
+							<Button name="ПоказанияПоРаспределениямЗаполнить" id="66">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Command.Заполнить</CommandName>
+								<ExtendedTooltip name="ПоказанияПоРаспределениямЗаполнитьExtendedTooltip" id="100"/>
+							</Button>
+						</ChildItems>
+					</AutoCommandBar>
+					<ExtendedTooltip name="ПоказанияПоРаспределениямExtendedTooltip" id="101"/>
+					<SearchStringAddition name="ПоказанияПоРаспределениямСтрокаПоиска" id="110">
+						<AdditionSource>
+							<Item>ПоказанияПоРаспределениям</Item>
+							<Type>SearchStringRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="ПоказанияПоРаспределениямСтрокаПоискаКонтекстноеМеню" id="111"/>
+						<ExtendedTooltip name="ПоказанияПоРаспределениямСтрокаПоискаРасширеннаяПодсказка" id="112"/>
+					</SearchStringAddition>
+					<ViewStatusAddition name="ПоказанияПоРаспределениямСостояниеПросмотра" id="113">
+						<AdditionSource>
+							<Item>ПоказанияПоРаспределениям</Item>
+							<Type>ViewStatusRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="ПоказанияПоРаспределениямСостояниеПросмотраКонтекстноеМеню" id="114"/>
+						<ExtendedTooltip name="ПоказанияПоРаспределениямСостояниеПросмотраРасширеннаяПодсказка" id="115"/>
+					</ViewStatusAddition>
+					<SearchControlAddition name="ПоказанияПоРаспределениямУправлениеПоиском" id="116">
+						<AdditionSource>
+							<Item>ПоказанияПоРаспределениям</Item>
+							<Type>SearchControl</Type>
+						</AdditionSource>
+						<ContextMenu name="ПоказанияПоРаспределениямУправлениеПоискомКонтекстноеМеню" id="117"/>
+						<ExtendedTooltip name="ПоказанияПоРаспределениямУправлениеПоискомРасширеннаяПодсказка" id="118"/>
+					</SearchControlAddition>
+					<ChildItems>
+						<LabelField name="ПоказанияПоРаспределениямНомерСтроки" id="22">
+							<DataPath>Объект.ПоказанияПоРаспределениям.LineNumber</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ПоказанияПоРаспределениямНомерСтрокиКонтекстноеМеню" id="23"/>
+							<ExtendedTooltip name="ПоказанияПоРаспределениямНомерСтрокиExtendedTooltip" id="102"/>
+						</LabelField>
+						<InputField name="ПоказанияПоРаспределениямДом" id="24">
+							<DataPath>Объект.ПоказанияПоРаспределениям.Дом</DataPath>
+							<Enabled>false</Enabled>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ПоказанияПоРаспределениямДомКонтекстноеМеню" id="25"/>
+							<ExtendedTooltip name="ПоказанияПоРаспределениямДомExtendedTooltip" id="103"/>
+						</InputField>
+						<InputField name="ПоказанияПоРаспределениямУлица" id="32">
+							<DataPath>Объект.ПоказанияПоРаспределениям.Улица</DataPath>
+							<Enabled>false</Enabled>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ПоказанияПоРаспределениямУлицаКонтекстноеМеню" id="33"/>
+							<ExtendedTooltip name="ПоказанияПоРаспределениямУлицаExtendedTooltip" id="104"/>
+						</InputField>
+						<InputField name="ПоказанияПоРаспределениямРаспределение" id="28">
+							<DataPath>Объект.ПоказанияПоРаспределениям.Распределение</DataPath>
+							<Enabled>false</Enabled>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ПоказанияПоРаспределениямРаспределениеКонтекстноеМеню" id="29"/>
+							<ExtendedTooltip name="ПоказанияПоРаспределениямРаспределениеExtendedTooltip" id="105"/>
+						</InputField>
+						<InputField name="ПоказанияПоРаспределениямУслуга" id="26">
+							<DataPath>Объект.ПоказанияПоРаспределениям.Услуга</DataPath>
+							<Enabled>false</Enabled>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ПоказанияПоРаспределениямУслугаКонтекстноеМеню" id="27"/>
+							<ExtendedTooltip name="ПоказанияПоРаспределениямУслугаExtendedTooltip" id="106"/>
+						</InputField>
+						<InputField name="ПоказанияПоРаспределениямСумма" id="30">
+							<DataPath>Объект.ПоказанияПоРаспределениям.Сумма</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ПоказанияПоРаспределениямСуммаКонтекстноеМеню" id="31"/>
+							<ExtendedTooltip name="ПоказанияПоРаспределениямСуммаExtendedTooltip" id="107"/>
+							<Events>
+								<Event name="OnChange">ПоказанияПоРаспределениямСуммаПриИзменении</Event>
+							</Events>
+						</InputField>
+					</ChildItems>
+				</Table>
+			</ChildItems>
+		</UsualGroup>
+		<InputField name="Ответственный" id="11">
+			<DataPath>Объект.Ответственный</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="ОтветственныйКонтекстноеМеню" id="12"/>
+			<ExtendedTooltip name="ОтветственныйExtendedTooltip" id="108"/>
+		</InputField>
+		<InputField name="Комментарий" id="13">
+			<DataPath>Объект.Комментарий</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="КомментарийКонтекстноеМеню" id="14"/>
+			<ExtendedTooltip name="КомментарийExtendedTooltip" id="109"/>
+		</InputField>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DocumentObject.бит_ВводСуммПоРаспределениям</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+			<UseAlways>
+				<Field>Объект.RegisterRecords</Field>
+			</UseAlways>
+		</Attribute>
+		<Attribute name="мКэшЗначений" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>М кэш значений</v8:content>
+				</v8:item>
+			</Title>
+			<Type/>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="Заполнить" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Заполнить</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+	</Commands>
+	<CommandInterface>
+		<NavigationPanel>
+			<Item>
+				<Command>AccumulationRegister.бит_Распределения.StandardCommand.OpenByRecorder</Command>
+				<Type>Auto</Type>
+				<DefaultVisible>false</DefaultVisible>
+			</Item>
+			<Item>
+				<Command>4:be6441d1-0ad8-4852-806c-533aee06a33f</Command>
+				<Type>Auto</Type>
+				<DefaultVisible>false</DefaultVisible>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+			<Item>
+				<Command>InformationRegister.бит_си_СвязанныеОбъекты.StandardCommand.OpenByValue.Объект</Command>
+				<Type>Auto</Type>
+				<DefaultVisible>false</DefaultVisible>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+			<Item>
+				<Command>CommonCommand.бит_СтруктураПодчиненности</Command>
+				<Type>Auto</Type>
+				<DefaultVisible>false</DefaultVisible>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+		</NavigationPanel>
+	</CommandInterface>
+</Form>

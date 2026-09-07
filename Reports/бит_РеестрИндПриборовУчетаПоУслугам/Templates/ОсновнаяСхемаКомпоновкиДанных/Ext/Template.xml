@@ -1,0 +1,884 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<DataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcscom="http://v8.1c.ru/8.1/data-composition-system/common" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataSource>
+		<name>ИнформационнаяБаза</name>
+		<dataSourceType>Local</dataSourceType>
+	</dataSource>
+	<dataSet xsi:type="DataSetQuery">
+		<name>РеестрИндСчетчиков</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Здание</dataPath>
+			<field>Здание</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Здание</v8:content>
+				</v8:item>
+			</title>
+			<valueType>
+				<v8:Type xmlns:d5p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d5p1:CatalogRef.бит_СписокЗданий</v8:Type>
+			</valueType>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ЛицевойСчет</dataPath>
+			<field>ЛицевойСчет</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Лицевой счет</v8:content>
+				</v8:item>
+			</title>
+			<valueType>
+				<v8:Type xmlns:d5p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d5p1:CatalogRef.бит_ЛицевыеСчета</v8:Type>
+			</valueType>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Счетчик</dataPath>
+			<field>Счетчик</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Счетчик</v8:content>
+				</v8:item>
+			</title>
+			<valueType>
+				<v8:Type xmlns:d5p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d5p1:CatalogRef.бит_Счетчики</v8:Type>
+			</valueType>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Улица</dataPath>
+			<field>Улица</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Улица</v8:content>
+				</v8:item>
+			</title>
+			<valueType>
+				<v8:Type xmlns:d5p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d5p1:CatalogRef.бит_СписокУлиц</v8:Type>
+			</valueType>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Услуга</dataPath>
+			<field>Услуга</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Услуга</v8:content>
+				</v8:item>
+			</title>
+			<valueType>
+				<v8:Type xmlns:d5p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d5p1:CatalogRef.бит_УслугиЖКХ</v8:Type>
+			</valueType>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Участок</dataPath>
+			<field>Участок</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Участок</v8:content>
+				</v8:item>
+			</title>
+			<valueType>
+				<v8:Type xmlns:d5p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d5p1:CatalogRef.бит_ТехническиеУчастки</v8:Type>
+			</valueType>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Период</dataPath>
+			<field>Период</field>
+			<valueType>
+				<v8:Type>xs:dateTime</v8:Type>
+				<v8:DateQualifiers>
+					<v8:DateFractions>DateTime</v8:DateFractions>
+				</v8:DateQualifiers>
+			</valueType>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Организация</dataPath>
+			<field>Организация</field>
+			<valueType>
+				<v8:Type xmlns:d5p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d5p1:CatalogRef.Организации</v8:Type>
+			</valueType>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Объект</dataPath>
+			<field>Объект</field>
+			<valueType>
+				<v8:Type xmlns:d5p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d5p1:CatalogRef.бит_ЛицевыеСчета</v8:Type>
+			</valueType>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Корректировка</dataPath>
+			<field>Корректировка</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Корректировка</v8:content>
+				</v8:item>
+			</title>
+			<valueType>
+				<v8:Type>xs:boolean</v8:Type>
+			</valueType>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КонечноеПоказание</dataPath>
+			<field>КонечноеПоказание</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Конечное показание</v8:content>
+				</v8:item>
+			</title>
+			<valueType>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>16</v8:Digits>
+					<v8:FractionDigits>4</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</valueType>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Период1</dataPath>
+			<field>Период1</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Период1</v8:content>
+				</v8:item>
+			</title>
+			<valueType>
+				<v8:Type>xs:dateTime</v8:Type>
+				<v8:DateQualifiers>
+					<v8:DateFractions>DateTime</v8:DateFractions>
+				</v8:DateQualifiers>
+			</valueType>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>НачальноеПоказание</dataPath>
+			<field>НачальноеПоказание</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Начальное показание</v8:content>
+				</v8:item>
+			</title>
+			<valueType>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>16</v8:Digits>
+					<v8:FractionDigits>4</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</valueType>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПоказаниеСчетчикаПриУстановке</dataPath>
+			<field>ПоказаниеСчетчикаПриУстановке</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Показание счетчика при установке</v8:content>
+				</v8:item>
+			</title>
+			<valueType>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>16</v8:Digits>
+					<v8:FractionDigits>4</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</valueType>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>МасштабныйКоэффициент</dataPath>
+			<field>МасштабныйКоэффициент</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Масштабный коэффициент</v8:content>
+				</v8:item>
+			</title>
+			<valueType>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>10</v8:Digits>
+					<v8:FractionDigits>4</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</valueType>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДатаПоверки</dataPath>
+			<field>ДатаПоверки</field>
+			<valueType>
+				<v8:Type>xs:dateTime</v8:Type>
+				<v8:DateQualifiers>
+					<v8:DateFractions>DateTime</v8:DateFractions>
+				</v8:DateQualifiers>
+			</valueType>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КоличествоРазрядовСчетчика</dataPath>
+			<field>КоличествоРазрядовСчетчика</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Количество разрядов счетчика</v8:content>
+				</v8:item>
+			</title>
+			<valueType>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>10</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</valueType>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Израсходовано</dataPath>
+			<field>Израсходовано</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Израсходовано</v8:content>
+				</v8:item>
+			</title>
+			<valueType>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>16</v8:Digits>
+					<v8:FractionDigits>4</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</valueType>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>НачальноеПоказаниеСУчетомПоказаниеСчетчикаПриУстановке</dataPath>
+			<field>НачальноеПоказаниеСУчетомПоказаниеСчетчикаПриУстановке</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Начальное показание с учетом показание счетчика при установке</v8:content>
+				</v8:item>
+			</title>
+			<valueType>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>16</v8:Digits>
+					<v8:FractionDigits>4</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</valueType>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ФизЛицо</dataPath>
+			<field>ФизЛицо</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Ответственный</dataPath>
+			<field>Ответственный</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ответственный</v8:content>
+				</v8:item>
+			</title>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<dataSource>ИнформационнаяБаза</dataSource>
+		<query>ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	бит_ПоверкаСчетчиковСрезПоследних.Счетчик КАК Счетчик,
+	бит_ПоверкаСчетчиковСрезПоследних.ДатаПоверки КАК ДатаПоверки
+ПОМЕСТИТЬ ПоверкаСчетчика
+ИЗ
+	РегистрСведений.бит_ПоверкаСчетчиков.СрезПоследних КАК бит_ПоверкаСчетчиковСрезПоследних
+ГДЕ
+	НЕ бит_ПоверкаСчетчиковСрезПоследних.СнятНаПоверку
+
+ИНДЕКСИРОВАТЬ ПО
+	Счетчик
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	бит_СчетчикиНаУслугахОбщийСрезПоследних.Услуга КАК Услуга,
+	бит_СчетчикиНаУслугахОбщийСрезПоследних.Счетчик КАК Счетчик,
+	бит_СчетчикиНаУслугахОбщийСрезПоследних.Объект.УлицаЛицевогоСчета КАК Улица,
+	бит_СчетчикиНаУслугахОбщийСрезПоследних.Объект.Здание КАК Здание,
+	бит_СчетчикиНаУслугахОбщийСрезПоследних.Объект.Здание.Участок КАК Участок,
+	бит_СчетчикиНаУслугахОбщийСрезПоследних.Объект КАК ЛицевойСчет,
+	бит_СчетчикиНаУслугахОбщийСрезПоследних.Счетчик.Разрядность КАК КоличествоРазрядовСчетчика,
+	бит_СчетчикиНаУслугахОбщийСрезПоследних.Счетчик.КоэффициентУмножения КАК МасштабныйКоэффициент,
+	бит_СчетчикиНаУслугахОбщийСрезПоследних.Период КАК Период,
+	ПоверкаСчетчика.ДатаПоверки КАК ДатаПоверки
+ПОМЕСТИТЬ ВТ_РеестрИндСчетчиков
+{ВЫБРАТЬ
+	Услуга.*,
+	Счетчик.*,
+	Улица.*,
+	Здание.*,
+	Участок.*,
+	ЛицевойСчет.*,
+	КоличествоРазрядовСчетчика,
+	МасштабныйКоэффициент}
+ИЗ
+	РегистрСведений.бит_СчетчикиНаУслугахОбщий.СрезПоследних(
+			&amp;КонецПериода {(&amp;КонецПериода)},
+			ТипСчетчика = ЗНАЧЕНИЕ(Перечисление.бит_ТипСчетчика.Индивидуальный)
+				И Объект ССЫЛКА Справочник.бит_ЛицевыеСчета) КАК бит_СчетчикиНаУслугахОбщийСрезПоследних
+		ЛЕВОЕ СОЕДИНЕНИЕ ПоверкаСчетчика КАК ПоверкаСчетчика
+		ПО бит_СчетчикиНаУслугахОбщийСрезПоследних.Счетчик = ПоверкаСчетчика.Счетчик
+ГДЕ
+	бит_СчетчикиНаУслугахОбщийСрезПоследних.Использовать
+{ГДЕ
+	бит_СчетчикиНаУслугахОбщийСрезПоследних.Услуга.*,
+	бит_СчетчикиНаУслугахОбщийСрезПоследних.Счетчик.*,
+	бит_СчетчикиНаУслугахОбщийСрезПоследних.Объект.УлицаЛицевогоСчета.* КАК Улица,
+	бит_СчетчикиНаУслугахОбщийСрезПоследних.Объект.Здание.* КАК Здание,
+	бит_СчетчикиНаУслугахОбщийСрезПоследних.Объект.Здание.Участок.* КАК Участок,
+	бит_СчетчикиНаУслугахОбщийСрезПоследних.Объект.* КАК ЛицевойСчет}
+
+ИНДЕКСИРОВАТЬ ПО
+	ЛицевойСчет,
+	Счетчик,
+	Услуга
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	&amp;Период КАК Период,
+	бит_ПоказанияСчетчиковОстатки.Объект КАК ЛицевойСчет,
+	бит_ПоказанияСчетчиковОстатки.Услуга КАК Услуга,
+	бит_ПоказанияСчетчиковОстатки.Счетчик КАК Счетчик,
+	бит_ПоказанияСчетчиковОстатки.ПоследниеПоказанияОстаток КАК НачальноеПоказание
+ПОМЕСТИТЬ ВТ_ОстатокНаНачало
+{ВЫБРАТЬ
+	Период,
+	ЛицевойСчет.*,
+	Услуга.*,
+	Счетчик.*,
+	НачальноеПоказание}
+ИЗ
+	РегистрНакопления.бит_ПоказанияСчетчиков.Остатки(
+			&amp;НачалоПериода,
+			(ВЫРАЗИТЬ(Объект КАК Справочник.бит_ЛицевыеСчета), Счетчик, Услуга) В
+				(ВЫБРАТЬ
+					ВТ_РеестрИндСчетчиков.ЛицевойСчет,
+					ВТ_РеестрИндСчетчиков.Счетчик,
+					ВТ_РеестрИндСчетчиков.Услуга
+				ИЗ
+					ВТ_РеестрИндСчетчиков)) КАК бит_ПоказанияСчетчиковОстатки
+{ГДЕ
+	(&amp;Период) КАК Период,
+	бит_ПоказанияСчетчиковОстатки.Объект.* КАК ЛицевойСчет,
+	бит_ПоказанияСчетчиковОстатки.Услуга.*,
+	бит_ПоказанияСчетчиковОстатки.Счетчик.*}
+
+ИНДЕКСИРОВАТЬ ПО
+	ЛицевойСчет,
+	Счетчик,
+	Услуга
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	бит_ПоказанияСчетчиковОстатки.Объект КАК ЛицевойСчет,
+	бит_ПоказанияСчетчиковОстатки.Услуга КАК Услуга,
+	бит_ПоказанияСчетчиковОстатки.Счетчик КАК Счетчик,
+	бит_ПоказанияСчетчиковОстатки.ПоследниеПоказанияОстаток КАК КонечноеПоказание
+ПОМЕСТИТЬ ВТ_ОстатокНаКонец
+{ВЫБРАТЬ
+	ЛицевойСчет.*,
+	Услуга.*,
+	Счетчик.*,
+	КонечноеПоказание}
+ИЗ
+	РегистрНакопления.бит_ПоказанияСчетчиков.Остатки(
+			&amp;КонецПериода,
+			(ВЫРАЗИТЬ(Объект КАК Справочник.бит_ЛицевыеСчета), Счетчик, Услуга) В
+				(ВЫБРАТЬ
+					ВТ_РеестрИндСчетчиков.ЛицевойСчет,
+					ВТ_РеестрИндСчетчиков.Счетчик,
+					ВТ_РеестрИндСчетчиков.Услуга
+				ИЗ
+					ВТ_РеестрИндСчетчиков)) КАК бит_ПоказанияСчетчиковОстатки
+{ГДЕ
+	бит_ПоказанияСчетчиковОстатки.Объект.* КАК ЛицевойСчет,
+	бит_ПоказанияСчетчиковОстатки.Услуга.*,
+	бит_ПоказанияСчетчиковОстатки.Счетчик.*}
+
+ИНДЕКСИРОВАТЬ ПО
+	ЛицевойСчет,
+	Счетчик,
+	Услуга
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	бит_ПоказанияСчетчиковОстаткиИОбороты.Объект КАК ЛицевойСчет,
+	бит_ПоказанияСчетчиковОстаткиИОбороты.Услуга КАК Услуга,
+	бит_ПоказанияСчетчиковОстаткиИОбороты.Счетчик КАК Счетчик,
+	СУММА(бит_ПоказанияСчетчиковОстаткиИОбороты.ПоследниеПоказанияПриход) КАК ПоказаниеСчетчикаПриУстановке
+ПОМЕСТИТЬ ВТ_НачальныеПоказанияСчетчиков
+{ВЫБРАТЬ
+	ЛицевойСчет.*,
+	Услуга.*,
+	Счетчик.*,
+	ПоказаниеСчетчикаПриУстановке}
+ИЗ
+	РегистрНакопления.бит_ПоказанияСчетчиков.ОстаткиИОбороты(
+			&amp;НачалоПериода,
+			&amp;КонецПериода,
+			Авто,
+			,
+			(ВЫРАЗИТЬ(Объект КАК Справочник.бит_ЛицевыеСчета), Счетчик, Услуга) В
+				(ВЫБРАТЬ
+					ВТ_РеестрИндСчетчиков.ЛицевойСчет,
+					ВТ_РеестрИндСчетчиков.Счетчик,
+					ВТ_РеестрИндСчетчиков.Услуга
+				ИЗ
+					ВТ_РеестрИндСчетчиков)) КАК бит_ПоказанияСчетчиковОстаткиИОбороты
+ГДЕ
+	бит_ПоказанияСчетчиковОстаткиИОбороты.Регистратор ССЫЛКА Документ.бит_УстановкаСчетчика
+	И бит_ПоказанияСчетчиковОстаткиИОбороты.Объект ССЫЛКА Справочник.бит_ЛицевыеСчета
+
+СГРУППИРОВАТЬ ПО
+	бит_ПоказанияСчетчиковОстаткиИОбороты.Счетчик,
+	бит_ПоказанияСчетчиковОстаткиИОбороты.Услуга,
+	бит_ПоказанияСчетчиковОстаткиИОбороты.Объект
+
+ИНДЕКСИРОВАТЬ ПО
+	ЛицевойСчет,
+	Счетчик,
+	Услуга
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	бит_ПоказанияСчетчиков.Объект КАК ЛицевойСчет,
+	бит_ПоказанияСчетчиков.Услуга КАК Услуга,
+	бит_ПоказанияСчетчиков.Счетчик КАК Счетчик,
+	ИСТИНА КАК Корректировка
+ПОМЕСТИТЬ ВТ_Корректировки
+ИЗ
+	РегистрНакопления.бит_ПоказанияСчетчиков КАК бит_ПоказанияСчетчиков
+ГДЕ
+	бит_ПоказанияСчетчиков.Регистратор ССЫЛКА Документ.бит_КорректировкаПоказанийСчетчиков
+	И бит_ПоказанияСчетчиков.Объект ССЫЛКА Справочник.бит_ЛицевыеСчета
+	И бит_ПоказанияСчетчиков.Период &gt;= &amp;НачалоПериода
+	И бит_ПоказанияСчетчиков.Период &lt;= &amp;КонецПериода
+
+ИНДЕКСИРОВАТЬ ПО
+	ЛицевойСчет,
+	Счетчик,
+	Услуга
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	бит_ПроживающиеПоЛССрезПоследних.ФизЛицо КАК ФизЛицо,
+	бит_ПроживающиеПоЛССрезПоследних.ЛицевойСчет КАК ЛицевойСчет
+ПОМЕСТИТЬ ВТ_Ответственные
+ИЗ
+	РегистрСведений.бит_ПроживающиеПоЛС.СрезПоследних(
+			&amp;КонецПериода {(&amp;КонецПериода)},
+			ЛицевойСчет В
+				(ВЫБРАТЬ РАЗЛИЧНЫЕ
+					ВТ_РеестрИндСчетчиков.ЛицевойСчет
+				ИЗ
+					ВТ_РеестрИндСчетчиков)) КАК бит_ПроживающиеПоЛССрезПоследних
+ГДЕ
+	бит_ПроживающиеПоЛССрезПоследних.СтепеньРодства = ЗНАЧЕНИЕ(Справочник.бит_СтепениРодстваФизЛиц.бит_ОтветственноеЛицо)
+	И бит_ПроживающиеПоЛССрезПоследних.СтатусФизЛица &lt;&gt; ЗНАЧЕНИЕ(Справочник.бит_СтатусФизЛица.ВЫПИСАН)
+
+ИНДЕКСИРОВАТЬ ПО
+	ЛицевойСчет
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ВТ_РеестрИндСчетчиков.Услуга КАК Услуга,
+	ВТ_РеестрИндСчетчиков.Счетчик КАК Счетчик,
+	ВТ_РеестрИндСчетчиков.Улица КАК Улица,
+	ВТ_РеестрИндСчетчиков.Здание КАК Здание,
+	ВТ_РеестрИндСчетчиков.Участок КАК Участок,
+	ВТ_РеестрИндСчетчиков.ЛицевойСчет КАК ЛицевойСчет,
+	ВТ_РеестрИндСчетчиков.КоличествоРазрядовСчетчика КАК КоличествоРазрядовСчетчика,
+	ВТ_РеестрИндСчетчиков.МасштабныйКоэффициент КАК МасштабныйКоэффициент,
+	ВТ_РеестрИндСчетчиков.Период КАК Период,
+	ВТ_РеестрИндСчетчиков.ДатаПоверки КАК ДатаПоверки,
+	ВТ_ОстатокНаНачало.Период КАК Период1,
+	ВТ_ОстатокНаНачало.НачальноеПоказание КАК НачальноеПоказание,
+	ВТ_ОстатокНаКонец.КонечноеПоказание КАК КонечноеПоказание,
+	ВТ_НачальныеПоказанияСчетчиков.ПоказаниеСчетчикаПриУстановке КАК ПоказаниеСчетчикаПриУстановке,
+	ВТ_Корректировки.Корректировка КАК Корректировка,
+	ВЫБОР
+		КОГДА ВТ_Корректировки.Корректировка = ИСТИНА
+			ТОГДА 0
+		ИНАЧЕ ВЫБОР
+				КОГДА ЕСТЬNULL(ВТ_ОстатокНаКонец.КонечноеПоказание, 0) &lt; ЕСТЬNULL(ВТ_ОстатокНаНачало.НачальноеПоказание, 0) + ЕСТЬNULL(ВТ_НачальныеПоказанияСчетчиков.ПоказаниеСчетчикаПриУстановке, 0)
+					ТОГДА ЕСТЬNULL(ВТ_РеестрИндСчетчиков.КоличествоРазрядовСчетчика, 0) - ЕСТЬNULL(ВТ_ОстатокНаНачало.НачальноеПоказание, 0) - ЕСТЬNULL(ВТ_НачальныеПоказанияСчетчиков.ПоказаниеСчетчикаПриУстановке, 0) + ЕСТЬNULL(ВТ_ОстатокНаКонец.КонечноеПоказание, 0) + 1
+				ИНАЧЕ ЕСТЬNULL(ВТ_ОстатокНаКонец.КонечноеПоказание, 0) - ЕСТЬNULL(ВТ_ОстатокНаНачало.НачальноеПоказание, 0) - ЕСТЬNULL(ВТ_НачальныеПоказанияСчетчиков.ПоказаниеСчетчикаПриУстановке, 0)
+			КОНЕЦ
+	КОНЕЦ КАК Израсходовано,
+	ВЫБОР
+		КОГДА ВТ_Корректировки.Корректировка = ИСТИНА
+			ТОГДА ЕСТЬNULL(ВТ_ОстатокНаКонец.КонечноеПоказание, 0)
+		ИНАЧЕ ЕСТЬNULL(ВТ_ОстатокНаНачало.НачальноеПоказание, 0) + ЕСТЬNULL(ВТ_НачальныеПоказанияСчетчиков.ПоказаниеСчетчикаПриУстановке, 0)
+	КОНЕЦ КАК НачальноеПоказаниеСУчетомПоказаниеСчетчикаПриУстановке,
+	ЕСТЬNULL(ВТ_Ответственные.ФизЛицо, ЗНАЧЕНИЕ(Справочник.бит_Проживающие.ПустаяСсылка)) КАК Ответственный
+ИЗ
+	ВТ_РеестрИндСчетчиков КАК ВТ_РеестрИндСчетчиков
+		ЛЕВОЕ СОЕДИНЕНИЕ ВТ_ОстатокНаНачало КАК ВТ_ОстатокНаНачало
+		ПО ВТ_РеестрИндСчетчиков.ЛицевойСчет = ВТ_ОстатокНаНачало.ЛицевойСчет
+			И ВТ_РеестрИндСчетчиков.Счетчик = ВТ_ОстатокНаНачало.Счетчик
+			И ВТ_РеестрИндСчетчиков.Услуга = ВТ_ОстатокНаНачало.Услуга
+		ЛЕВОЕ СОЕДИНЕНИЕ ВТ_ОстатокНаКонец КАК ВТ_ОстатокНаКонец
+		ПО ВТ_РеестрИндСчетчиков.ЛицевойСчет = ВТ_ОстатокНаКонец.ЛицевойСчет
+			И ВТ_РеестрИндСчетчиков.Счетчик = ВТ_ОстатокНаКонец.Счетчик
+			И ВТ_РеестрИндСчетчиков.Услуга = ВТ_ОстатокНаКонец.Услуга
+		ЛЕВОЕ СОЕДИНЕНИЕ ВТ_НачальныеПоказанияСчетчиков КАК ВТ_НачальныеПоказанияСчетчиков
+		ПО ВТ_РеестрИндСчетчиков.ЛицевойСчет = ВТ_НачальныеПоказанияСчетчиков.ЛицевойСчет
+			И ВТ_РеестрИндСчетчиков.Счетчик = ВТ_НачальныеПоказанияСчетчиков.Счетчик
+			И ВТ_РеестрИндСчетчиков.Услуга = ВТ_НачальныеПоказанияСчетчиков.Услуга
+		ЛЕВОЕ СОЕДИНЕНИЕ ВТ_Корректировки КАК ВТ_Корректировки
+		ПО ВТ_РеестрИндСчетчиков.ЛицевойСчет = ВТ_Корректировки.ЛицевойСчет
+			И ВТ_РеестрИндСчетчиков.Счетчик = ВТ_Корректировки.Счетчик
+			И ВТ_РеестрИндСчетчиков.Услуга = ВТ_Корректировки.Услуга
+		ЛЕВОЕ СОЕДИНЕНИЕ ВТ_Ответственные КАК ВТ_Ответственные
+		ПО ВТ_РеестрИндСчетчиков.ЛицевойСчет = ВТ_Ответственные.ЛицевойСчет</query>
+	</dataSet>
+	<totalField>
+		<dataPath>Израсходовано</dataPath>
+		<expression>Сумма(Израсходовано)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>КонечноеПоказание</dataPath>
+		<expression>Максимум(КонечноеПоказание)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>НачальноеПоказание</dataPath>
+		<expression>Максимум(НачальноеПоказание)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ПоказаниеСчетчикаПриУстановке</dataPath>
+		<expression>Сумма(ПоказаниеСчетчикаПриУстановке)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>НачальноеПоказаниеСУчетомПоказаниеСчетчикаПриУстановке</dataPath>
+		<expression>Сумма(НачальноеПоказаниеСУчетомПоказаниеСчетчикаПриУстановке)</expression>
+	</totalField>
+	<parameter>
+		<name>КонецПериода</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Конец периода</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<parameter>
+		<name>Период</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Период</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<parameter>
+		<name>НачалоПериода</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Начало периода</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<settingsVariant>
+		<dcsset:name>Основной</dcsset:name>
+		<dcsset:presentation xsi:type="xs:string">Основной</dcsset:presentation>
+		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+			<dcsset:selection>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>КоличествоРазрядовСчетчика</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>МасштабныйКоэффициент</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:field>НачальноеПоказаниеСУчетомПоказаниеСчетчикаПриУстановке</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:field>КонечноеПоказание</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:field>Израсходовано</dcsset:field>
+				</dcsset:item>
+			</dcsset:selection>
+			<dcsset:filter>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">Участок</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+					<dcsset:right xsi:type="dcscor:DesignTimeValue">Справочник.бит_ТехническиеУчастки.ПустаяСсылка</dcsset:right>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">Улица</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+					<dcsset:right xsi:type="dcscor:DesignTimeValue">Справочник.бит_СписокУлиц.ПустаяСсылка</dcsset:right>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">Здание</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+					<dcsset:right xsi:type="dcscor:DesignTimeValue">Справочник.бит_СписокЗданий.ПустаяСсылка</dcsset:right>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">ЛицевойСчет</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+					<dcsset:right xsi:type="dcscor:DesignTimeValue">Справочник.бит_ЛицевыеСчета.ПустаяСсылка</dcsset:right>
+				</dcsset:item>
+			</dcsset:filter>
+			<dcsset:dataParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>КонецПериода</dcscor:parameter>
+					<dcscor:value xsi:type="xs:dateTime">0001-01-01T00:00:00</dcscor:value>
+					<dcsset:userSettingID>7bf9fcca-a2d2-4479-ad5a-0326695f184a</dcsset:userSettingID>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>Период</dcscor:parameter>
+					<dcscor:value xsi:type="xs:dateTime">0001-01-01T00:00:00</dcscor:value>
+					<dcsset:userSettingID>dcae6968-fcc6-48f0-8e57-71e62d41d741</dcsset:userSettingID>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>НачалоПериода</dcscor:parameter>
+					<dcscor:value xsi:type="xs:dateTime">0001-01-01T00:00:00</dcscor:value>
+					<dcsset:userSettingID>eca82bac-640a-4958-ab9a-d6747fef1359</dcsset:userSettingID>
+				</dcscor:item>
+			</dcsset:dataParameters>
+			<dcsset:conditionalAppearance>
+				<dcsset:item>
+					<dcsset:selection>
+						<dcsset:item>
+							<dcsset:field>ОтменаПроведения</dcsset:field>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:field>ПереносВГруппу</dcsset:field>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:field>Печать</dcsset:field>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:field>ПометкаНаУдаление</dcsset:field>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:field>Проведение</dcsset:field>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:field>Редактирование</dcsset:field>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:field>Создание</dcsset:field>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:field>Копирование</dcsset:field>
+						</dcsset:item>
+					</dcsset:selection>
+					<dcsset:filter/>
+					<dcsset:appearance>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>Шрифт</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:Font" ref="sys:DefaultGUIFont" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+						</dcscor:item>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>Формат</dcscor:parameter>
+							<dcscor:value xsi:type="v8:LocalStringType">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>БЛ=; БИ=V</v8:content>
+								</v8:item>
+							</dcscor:value>
+						</dcscor:item>
+					</dcsset:appearance>
+				</dcsset:item>
+			</dcsset:conditionalAppearance>
+			<dcsset:outputParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ВертикальноеРасположениеОбщихИтогов</dcscor:parameter>
+					<dcscor:value xsi:type="dcscor:DataCompositionTotalPlacement">None</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ВыводитьЗаголовок</dcscor:parameter>
+					<dcscor:value xsi:type="dcsset:DataCompositionTextOutputType">Output</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Заголовок</dcscor:parameter>
+					<dcscor:value xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Реестр индивидуальных приборов учета по услугам</v8:content>
+						</v8:item>
+					</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ВыводитьПараметрыДанных</dcscor:parameter>
+					<dcscor:value xsi:type="dcsset:DataCompositionTextOutputType">DontOutput</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ВыводитьОтбор</dcscor:parameter>
+					<dcscor:value xsi:type="dcsset:DataCompositionTextOutputType">DontOutput</dcscor:value>
+				</dcscor:item>
+			</dcsset:outputParameters>
+			<dcsset:item xsi:type="dcsset:StructureItemGroup">
+				<dcsset:groupItems>
+					<dcsset:item xsi:type="dcsset:GroupItemField">
+						<dcsset:field>Участок</dcsset:field>
+						<dcsset:groupType>Items</dcsset:groupType>
+						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+						<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+						<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+					</dcsset:item>
+				</dcsset:groupItems>
+				<dcsset:order>
+					<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+				</dcsset:order>
+				<dcsset:selection>
+					<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+				</dcsset:selection>
+				<dcsset:outputParameters>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:use>false</dcscor:use>
+						<dcscor:parameter>ВертикальноеРасположениеОбщихИтогов</dcscor:parameter>
+						<dcscor:value xsi:type="dcscor:DataCompositionTotalPlacement">None</dcscor:value>
+					</dcscor:item>
+				</dcsset:outputParameters>
+				<dcsset:item xsi:type="dcsset:StructureItemGroup">
+					<dcsset:groupItems>
+						<dcsset:item xsi:type="dcsset:GroupItemField">
+							<dcsset:field>Улица</dcsset:field>
+							<dcsset:groupType>Items</dcsset:groupType>
+							<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+							<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+							<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:GroupItemField">
+							<dcsset:field>Здание</dcsset:field>
+							<dcsset:groupType>Items</dcsset:groupType>
+							<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+							<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+							<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+						</dcsset:item>
+					</dcsset:groupItems>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+					</dcsset:order>
+					<dcsset:selection>
+						<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+					</dcsset:selection>
+					<dcsset:item xsi:type="dcsset:StructureItemGroup">
+						<dcsset:groupItems>
+							<dcsset:item xsi:type="dcsset:GroupItemField">
+								<dcsset:field>Услуга</dcsset:field>
+								<dcsset:groupType>Items</dcsset:groupType>
+								<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+								<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+								<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+							</dcsset:item>
+						</dcsset:groupItems>
+						<dcsset:order>
+							<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+						</dcsset:order>
+						<dcsset:selection>
+							<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+						</dcsset:selection>
+						<dcsset:item xsi:type="dcsset:StructureItemGroup">
+							<dcsset:groupItems>
+								<dcsset:item xsi:type="dcsset:GroupItemField">
+									<dcsset:field>ЛицевойСчет</dcsset:field>
+									<dcsset:groupType>Items</dcsset:groupType>
+									<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+									<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+									<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+								</dcsset:item>
+								<dcsset:item xsi:type="dcsset:GroupItemField">
+									<dcsset:field>Счетчик</dcsset:field>
+									<dcsset:groupType>Items</dcsset:groupType>
+									<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+									<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+									<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+								</dcsset:item>
+								<dcsset:item xsi:type="dcsset:GroupItemField">
+									<dcsset:field>ДатаПоверки</dcsset:field>
+									<dcsset:groupType>Items</dcsset:groupType>
+									<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+									<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+									<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+								</dcsset:item>
+							</dcsset:groupItems>
+							<dcsset:order>
+								<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+							</dcsset:order>
+							<dcsset:selection>
+								<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+								<dcsset:item xsi:type="dcsset:SelectedItemField">
+									<dcsset:field>НачальноеПоказаниеСУчетомПоказаниеСчетчикаПриУстановке</dcsset:field>
+								</dcsset:item>
+								<dcsset:item xsi:type="dcsset:SelectedItemField">
+									<dcsset:field>КонечноеПоказание</dcsset:field>
+								</dcsset:item>
+								<dcsset:item xsi:type="dcsset:SelectedItemField">
+									<dcsset:field>Израсходовано</dcsset:field>
+								</dcsset:item>
+							</dcsset:selection>
+							<dcsset:outputParameters>
+								<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+									<dcscor:use>false</dcscor:use>
+									<dcscor:parameter>ВертикальноеРасположениеОбщихИтогов</dcscor:parameter>
+									<dcscor:value xsi:type="dcscor:DataCompositionTotalPlacement">None</dcscor:value>
+								</dcscor:item>
+							</dcsset:outputParameters>
+						</dcsset:item>
+					</dcsset:item>
+				</dcsset:item>
+			</dcsset:item>
+		</dcsset:settings>
+	</settingsVariant>
+</DataCompositionSchema>

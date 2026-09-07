@@ -1,0 +1,676 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<DataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcscom="http://v8.1c.ru/8.1/data-composition-system/common" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataSource>
+		<name>ИсточникДанных1</name>
+		<dataSourceType>Local</dataSourceType>
+	</dataSource>
+	<dataSet xsi:type="DataSetQuery">
+		<name>НаборДанных1</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Регистратор</dataPath>
+			<field>Регистратор</field>
+			<role>
+				<dcscom:periodNumber>1</dcscom:periodNumber>
+				<dcscom:periodType>Main</dcscom:periodType>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Здание</dataPath>
+			<field>Здание</field>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Организация</dataPath>
+			<field>Организация</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СтатьяОборотов</dataPath>
+			<field>СтатьяОборотов</field>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Сценарий</dataPath>
+			<field>Сценарий</field>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Кодификатор</dataPath>
+			<field>Кодификатор</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Наименование</dataPath>
+			<field>Наименование</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Период</dataPath>
+			<field>Период</field>
+			<presentationExpression>ВЫБОР
+    КОГДА Не Формат(Период, "ДФ=dd.MM.yyyy") = ""
+        ТОГДА
+            ВЫБОР
+                КОГДА &amp;Периодичность = 6
+                    ТОГДА Формат(Период, "ДФ=dd.MM.yyyy")
+                КОГДА &amp;Периодичность = 7
+                    ТОГДА Формат(Период, "ДФ=dd.MM.yyyy") + " (неделя)"
+                КОГДА &amp;Периодичность = 8
+                    ТОГДА Формат(Период, "ДФ=dd.MM.yyyy") + " (декада)"
+                КОГДА &amp;Периодичность = 9
+                    ТОГДА Формат(Период, "ДФ='MMMM yyyy'")
+                КОГДА &amp;Периодичность = 10
+                    ТОГДА Формат(Период, "ДФ=q") + "-й квартал " + Формат(Период, "ДФ=yyyy") + " г."
+                КОГДА &amp;Периодичность = 11
+                    ТОГДА 
+                        ВЫБОР 
+                            КОГДА Формат(Период, "ДФ=q") = "3" ИЛИ Формат(Период, "ДФ=q") = "4"
+                                ТОГДА "2-ое полугодие " + Формат(Период, "ДФ=yyyy") + " г."
+                            ИНАЧЕ "1-ое полугодие " + Формат(Период, "ДФ=yyyy") + " г."
+                        КОНЕЦ
+                КОГДА &amp;Периодичность = 12
+                    ТОГДА Формат(Период, "ДФ=yyyy") + " г."
+                ИНАЧЕ Формат(Период, "ДФ=dd.MM.yyyy")
+            КОНЕЦ
+    ИНАЧЕ ""
+КОНЕЦ</presentationExpression>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>План</dataPath>
+			<field>План</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Район</dataPath>
+			<field>Район</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Расхождение</dataPath>
+			<field>Расхождение</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Улица</dataPath>
+			<field>Улица</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Участок</dataPath>
+			<field>Участок</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Факт</dataPath>
+			<field>Факт</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Источник</dataPath>
+			<field>Источник</field>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КорСубконто1</dataPath>
+			<field>КорСубконто1</field>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КорСубконто2</dataPath>
+			<field>КорСубконто2</field>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КорСубконто3</dataPath>
+			<field>КорСубконто3</field>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КорСчет</dataPath>
+			<field>КорСчет</field>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Подразделение</dataPath>
+			<field>Подразделение</field>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПодразделениеКор</dataPath>
+			<field>ПодразделениеКор</field>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Субконто1</dataPath>
+			<field>Субконто1</field>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Субконто2</dataPath>
+			<field>Субконто2</field>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Субконто3</dataPath>
+			<field>Субконто3</field>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Счет</dataPath>
+			<field>Счет</field>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<dataSource>ИсточникДанных1</dataSource>
+		<query>ВЫБРАТЬ
+	бит_ОборотыПоСметамОбороты.Сценарий,
+	бит_ОборотыПоСметамОбороты.СтатьяОборотов,
+	бит_ОборотыПоСметамОбороты.Здание,
+	бит_ОборотыПоСметамОбороты.СуммаОборот,
+	бит_ОборотыПоСметамОбороты.Регистратор,
+	ВЫБОР
+		КОГДА &amp;Периодичность = 6
+			ТОГДА НАЧАЛОПЕРИОДА(бит_ОборотыПоСметамОбороты.Период, ДЕНЬ)
+		КОГДА &amp;Периодичность = 7
+			ТОГДА НАЧАЛОПЕРИОДА(бит_ОборотыПоСметамОбороты.Период, НЕДЕЛЯ)
+		КОГДА &amp;Периодичность = 8
+			ТОГДА НАЧАЛОПЕРИОДА(бит_ОборотыПоСметамОбороты.Период, ДЕКАДА)
+		КОГДА &amp;Периодичность = 9
+			ТОГДА НАЧАЛОПЕРИОДА(бит_ОборотыПоСметамОбороты.Период, МЕСЯЦ)
+		КОГДА &amp;Периодичность = 10
+			ТОГДА НАЧАЛОПЕРИОДА(бит_ОборотыПоСметамОбороты.Период, КВАРТАЛ)
+		КОГДА &amp;Периодичность = 11
+			ТОГДА НАЧАЛОПЕРИОДА(бит_ОборотыПоСметамОбороты.Период, ПОЛУГОДИЕ)
+		КОГДА &amp;Периодичность = 12
+			ТОГДА НАЧАЛОПЕРИОДА(бит_ОборотыПоСметамОбороты.Период, ГОД)
+		ИНАЧЕ бит_ОборотыПоСметамОбороты.Период
+	КОНЕЦ КАК Период,
+	бит_ОборотыПоСметамОбороты.Счет,
+	бит_ОборотыПоСметамОбороты.Подразделение,
+	бит_ОборотыПоСметамОбороты.Субконто1,
+	бит_ОборотыПоСметамОбороты.Субконто2,
+	бит_ОборотыПоСметамОбороты.Субконто3,
+	бит_ОборотыПоСметамОбороты.КорСчет,
+	бит_ОборотыПоСметамОбороты.ПодразделениеКор,
+	бит_ОборотыПоСметамОбороты.КорСубконто1,
+	бит_ОборотыПоСметамОбороты.КорСубконто2,
+	бит_ОборотыПоСметамОбороты.КорСубконто3,
+	бит_ОборотыПоСметамОбороты.Источник
+ПОМЕСТИТЬ ОборотыПлан
+ИЗ
+	РегистрНакопления.бит_ОборотыПоСметам.Обороты(
+			&amp;НачалоПериода,
+			&amp;КонецПериода,
+			Регистратор,
+			Сценарий = &amp;СценарийПлан
+				И Организация = &amp;Организация) КАК бит_ОборотыПоСметамОбороты
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	бит_ОборотыПоСметамОбороты.Сценарий,
+	бит_ОборотыПоСметамОбороты.СтатьяОборотов,
+	бит_ОборотыПоСметамОбороты.Здание,
+	бит_ОборотыПоСметамОбороты.СуммаОборот,
+	бит_ОборотыПоСметамОбороты.Регистратор,
+	ВЫБОР
+		КОГДА &amp;Периодичность = 6
+			ТОГДА НАЧАЛОПЕРИОДА(бит_ОборотыПоСметамОбороты.Период, ДЕНЬ)
+		КОГДА &amp;Периодичность = 7
+			ТОГДА НАЧАЛОПЕРИОДА(бит_ОборотыПоСметамОбороты.Период, НЕДЕЛЯ)
+		КОГДА &amp;Периодичность = 8
+			ТОГДА НАЧАЛОПЕРИОДА(бит_ОборотыПоСметамОбороты.Период, ДЕКАДА)
+		КОГДА &amp;Периодичность = 9
+			ТОГДА НАЧАЛОПЕРИОДА(бит_ОборотыПоСметамОбороты.Период, МЕСЯЦ)
+		КОГДА &amp;Периодичность = 10
+			ТОГДА НАЧАЛОПЕРИОДА(бит_ОборотыПоСметамОбороты.Период, КВАРТАЛ)
+		КОГДА &amp;Периодичность = 11
+			ТОГДА НАЧАЛОПЕРИОДА(бит_ОборотыПоСметамОбороты.Период, ПОЛУГОДИЕ)
+		КОГДА &amp;Периодичность = 12
+			ТОГДА НАЧАЛОПЕРИОДА(бит_ОборотыПоСметамОбороты.Период, ГОД)
+		ИНАЧЕ бит_ОборотыПоСметамОбороты.Период
+	КОНЕЦ КАК Период,
+	бит_ОборотыПоСметамОбороты.Счет,
+	бит_ОборотыПоСметамОбороты.Подразделение,
+	бит_ОборотыПоСметамОбороты.Субконто1,
+	бит_ОборотыПоСметамОбороты.Субконто2,
+	бит_ОборотыПоСметамОбороты.Субконто3,
+	бит_ОборотыПоСметамОбороты.КорСчет,
+	бит_ОборотыПоСметамОбороты.ПодразделениеКор,
+	бит_ОборотыПоСметамОбороты.КорСубконто1,
+	бит_ОборотыПоСметамОбороты.КорСубконто2,
+	бит_ОборотыПоСметамОбороты.КорСубконто3,
+	бит_ОборотыПоСметамОбороты.Источник
+ПОМЕСТИТЬ ОборотыФакт
+ИЗ
+	РегистрНакопления.бит_ОборотыПоСметам.Обороты(
+			&amp;НачалоПериода,
+			&amp;КонецПериода,
+			Регистратор,
+			Сценарий = &amp;СценарийФакт
+				И Организация = &amp;Организация) КАК бит_ОборотыПоСметамОбороты
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ЕСТЬNULL(ОборотыПлан.Сценарий, ОборотыФакт.Сценарий) КАК Сценарий,
+	ЕСТЬNULL(ОборотыПлан.СтатьяОборотов, ОборотыФакт.СтатьяОборотов) КАК СтатьяОборотов,
+	ЕСТЬNULL(ОборотыПлан.Здание, ОборотыФакт.Здание) КАК Здание,
+	ЕСТЬNULL(ОборотыПлан.СуммаОборот, 0) КАК План,
+	ЕСТЬNULL(ОборотыПлан.Регистратор, 0) КАК Регистратор,
+	ЕСТЬNULL(ОборотыПлан.Период, ОборотыФакт.Период) КАК Период,
+	ЕСТЬNULL(ОборотыФакт.СуммаОборот, 0) КАК Факт,
+	ЕСТЬNULL(ОборотыПлан.СуммаОборот, 0) - ЕСТЬNULL(ОборотыФакт.СуммаОборот, 0) КАК Расхождение,
+	ЕСТЬNULL(ОборотыПлан.Счет, ОборотыФакт.Счет) КАК Счет,
+	ЕСТЬNULL(ОборотыПлан.Подразделение, ОборотыФакт.Подразделение) КАК Подразделение,
+	ЕСТЬNULL(ОборотыПлан.Субконто1, ОборотыФакт.Субконто1) КАК Субконто1,
+	ЕСТЬNULL(ОборотыПлан.Субконто2, ОборотыФакт.Субконто2) КАК Субконто2,
+	ЕСТЬNULL(ОборотыПлан.Субконто3, ОборотыФакт.Субконто3) КАК Субконто3,
+	ЕСТЬNULL(ОборотыПлан.КорСчет, ОборотыФакт.КорСчет) КАК КорСчет,
+	ЕСТЬNULL(ОборотыПлан.ПодразделениеКор, ОборотыФакт.ПодразделениеКор) КАК ПодразделениеКор,
+	ЕСТЬNULL(ОборотыПлан.КорСубконто1, ОборотыФакт.КорСубконто1) КАК КорСубконто1,
+	ЕСТЬNULL(ОборотыПлан.КорСубконто2, ОборотыФакт.КорСубконто2) КАК КорСубконто2,
+	ЕСТЬNULL(ОборотыПлан.КорСубконто3, ОборотыФакт.КорСубконто3) КАК КорСубконто3,
+	ЕСТЬNULL(ОборотыПлан.Источник, ОборотыФакт.Источник) КАК Источник
+ПОМЕСТИТЬ СводнаяТаблица
+ИЗ
+	ОборотыПлан КАК ОборотыПлан
+		ПОЛНОЕ СОЕДИНЕНИЕ ОборотыФакт КАК ОборотыФакт
+		ПО ОборотыПлан.Сценарий = ОборотыФакт.Сценарий
+			И ОборотыПлан.СтатьяОборотов = ОборотыФакт.СтатьяОборотов
+			И ОборотыПлан.Здание = ОборотыФакт.Здание
+			И ОборотыПлан.Регистратор = ОборотыФакт.Регистратор
+			И ОборотыПлан.Период = ОборотыФакт.Период
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	СводнаяТаблица.Сценарий,
+	СводнаяТаблица.СтатьяОборотов,
+	СводнаяТаблица.Здание,
+	СводнаяТаблица.План,
+	СводнаяТаблица.Регистратор,
+	СводнаяТаблица.Период,
+	СводнаяТаблица.Факт,
+	СводнаяТаблица.Расхождение,
+	СводнаяТаблица.Здание.Район КАК Район,
+	СводнаяТаблица.Здание.Улица КАК Улица,
+	СводнаяТаблица.Здание.Участок КАК Участок,
+	СводнаяТаблица.СтатьяОборотов.Кодификатор КАК Кодификатор,
+	СводнаяТаблица.СтатьяОборотов.Наименование КАК Наименование,
+	СводнаяТаблица.Счет,
+	СводнаяТаблица.Подразделение,
+	СводнаяТаблица.Субконто1,
+	СводнаяТаблица.Субконто2,
+	СводнаяТаблица.Субконто3,
+	СводнаяТаблица.КорСчет,
+	СводнаяТаблица.ПодразделениеКор,
+	СводнаяТаблица.КорСубконто1,
+	СводнаяТаблица.КорСубконто2,
+	СводнаяТаблица.КорСубконто3,
+	СводнаяТаблица.Источник
+ИЗ
+	СводнаяТаблица КАК СводнаяТаблица</query>
+	</dataSet>
+	<totalField>
+		<dataPath>Расхождение</dataPath>
+		<expression>Сумма(Расхождение)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>План</dataPath>
+		<expression>Сумма(План)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>Факт</dataPath>
+		<expression>Сумма(Факт)</expression>
+	</totalField>
+	<parameter>
+		<name>НачалоПериода</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Начало периода</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>false</useRestriction>
+	</parameter>
+	<parameter>
+		<name>КонецПериода</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Конец периода</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>false</useRestriction>
+	</parameter>
+	<parameter>
+		<name>Организация</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Организация</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.Организации</v8:Type>
+		</valueType>
+		<value xsi:type="dcscor:DesignTimeValue">Справочник.Организации.ПустаяСсылка</value>
+		<useRestriction>false</useRestriction>
+	</parameter>
+	<parameter>
+		<name>СценарийПлан</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Сценарий план</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.бит_Сценарии</v8:Type>
+		</valueType>
+		<value xsi:type="dcscor:DesignTimeValue">Справочник.бит_Сценарии.ПустаяСсылка</value>
+		<useRestriction>false</useRestriction>
+	</parameter>
+	<parameter>
+		<name>Периодичность</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Периодичность</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:decimal</v8:Type>
+			<v8:NumberQualifiers>
+				<v8:Digits>0</v8:Digits>
+				<v8:FractionDigits>0</v8:FractionDigits>
+				<v8:AllowedSign>Any</v8:AllowedSign>
+			</v8:NumberQualifiers>
+		</valueType>
+		<value xsi:type="xs:decimal">0</value>
+		<useRestriction>false</useRestriction>
+		<availableValue>
+			<value xsi:type="xs:decimal">9</value>
+			<presentation xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Месяц</v8:content>
+				</v8:item>
+			</presentation>
+		</availableValue>
+		<availableValue>
+			<value xsi:type="xs:decimal">10</value>
+			<presentation xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Квартал</v8:content>
+				</v8:item>
+			</presentation>
+		</availableValue>
+		<availableValue>
+			<value xsi:type="xs:decimal">11</value>
+			<presentation xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Полугодие</v8:content>
+				</v8:item>
+			</presentation>
+		</availableValue>
+		<availableValue>
+			<value xsi:type="xs:decimal">12</value>
+			<presentation xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Год</v8:content>
+				</v8:item>
+			</presentation>
+		</availableValue>
+	</parameter>
+	<parameter>
+		<name>СценарийФакт</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Сценарий факт</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.бит_Сценарии</v8:Type>
+		</valueType>
+		<value xsi:type="dcscor:DesignTimeValue">Справочник.бит_Сценарии.ПустаяСсылка</value>
+		<useRestriction>false</useRestriction>
+	</parameter>
+	<settingsVariant>
+		<dcsset:name>Основной</dcsset:name>
+		<dcsset:presentation xsi:type="xs:string">Основной</dcsset:presentation>
+		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+			<dcsset:selection>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Здание</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>СтатьяОборотов</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Сценарий</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Улица</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Участок</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Район</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Регистратор</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Период</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Кодификатор</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Наименование</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemFolder">
+					<dcsset:lwsTitle>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Сумма</v8:content>
+						</v8:item>
+					</dcsset:lwsTitle>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>План</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>Факт</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>Расхождение</dcsset:field>
+					</dcsset:item>
+					<dcsset:placement>Auto</dcsset:placement>
+				</dcsset:item>
+				<dcsset:userSettingID>64b2592c-cf68-47e3-8db5-ef1a34f03e20</dcsset:userSettingID>
+			</dcsset:selection>
+			<dcsset:filter>
+				<dcsset:userSettingID>a818c7f3-fe26-4f79-aeab-4eee1e7d75ec</dcsset:userSettingID>
+			</dcsset:filter>
+			<dcsset:dataParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>НачалоПериода</dcscor:parameter>
+					<dcscor:value xsi:type="v8:StandardBeginningDate">
+						<v8:variant xsi:type="v8:StandardBeginningDateVariant">Custom</v8:variant>
+						<v8:date>0001-01-01T00:00:00</v8:date>
+					</dcscor:value>
+					<dcsset:userSettingID>d31dc4f1-e70c-4cbb-88d2-743fd5e87f98</dcsset:userSettingID>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>КонецПериода</dcscor:parameter>
+					<dcscor:value xsi:type="xs:dateTime">0001-01-01T00:00:00</dcscor:value>
+					<dcsset:userSettingID>2560696f-4656-4c75-88d7-6e66ee75ce57</dcsset:userSettingID>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Организация</dcscor:parameter>
+					<dcscor:value xsi:type="dcscor:DesignTimeValue">Справочник.Организации.ПустаяСсылка</dcscor:value>
+					<dcsset:userSettingID>d5f80b05-7b26-401d-8c85-a82191ade7b6</dcsset:userSettingID>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>СценарийПлан</dcscor:parameter>
+					<dcscor:value xsi:type="dcscor:DesignTimeValue">Справочник.бит_Сценарии.ПустаяСсылка</dcscor:value>
+					<dcsset:userSettingID>b8e5ca49-9943-4e7d-8aa4-8403e9d18d44</dcsset:userSettingID>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Периодичность</dcscor:parameter>
+					<dcscor:value xsi:type="xs:decimal">9</dcscor:value>
+					<dcsset:userSettingID>8afef407-2bcf-4c79-96be-bcb8ae51b784</dcsset:userSettingID>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>СценарийФакт</dcscor:parameter>
+					<dcscor:value xsi:type="dcscor:DesignTimeValue">Справочник.бит_Сценарии.ПустаяСсылка</dcscor:value>
+					<dcsset:userSettingID>cd8142bc-4a8a-43ce-9af3-731cb3e64b16</dcsset:userSettingID>
+				</dcscor:item>
+			</dcsset:dataParameters>
+			<dcsset:order>
+				<dcsset:userSettingID>f4350810-55a7-489f-9f84-b9edc91cde94</dcsset:userSettingID>
+			</dcsset:order>
+			<dcsset:outputParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ВыводитьЗаголовок</dcscor:parameter>
+					<dcscor:value xsi:type="dcsset:DataCompositionTextOutputType">Output</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Заголовок</dcscor:parameter>
+					<dcscor:value xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>План-фактный анализ</v8:content>
+						</v8:item>
+					</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ВыводитьПараметрыДанных</dcscor:parameter>
+					<dcscor:value xsi:type="dcsset:DataCompositionTextOutputType">DontOutput</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ВыводитьОтбор</dcscor:parameter>
+					<dcscor:value xsi:type="dcsset:DataCompositionTextOutputType">DontOutput</dcscor:value>
+				</dcscor:item>
+			</dcsset:outputParameters>
+			<dcsset:item xsi:type="dcsset:StructureItemTable">
+				<dcsset:column>
+					<dcsset:groupItems>
+						<dcsset:item xsi:type="dcsset:GroupItemField">
+							<dcsset:field>Период</dcsset:field>
+							<dcsset:groupType>Items</dcsset:groupType>
+							<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+							<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+							<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+						</dcsset:item>
+					</dcsset:groupItems>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>d92fc32f-bc67-4746-b06f-88f9684d6b8e</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+					</dcsset:order>
+					<dcsset:selection>
+						<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>003e864c-453c-461f-a2f9-0f33510a2308</dcsset:userSettingID>
+					</dcsset:selection>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>331eb71d-d849-49d0-9bd1-c8de2b4ab9c6</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:viewMode>Normal</dcsset:viewMode>
+					<dcsset:userSettingID>149cb256-20aa-44bc-9272-4655ef708605</dcsset:userSettingID>
+				</dcsset:column>
+				<dcsset:row>
+					<dcsset:groupItems>
+						<dcsset:item xsi:type="dcsset:GroupItemField">
+							<dcsset:field>Улица</dcsset:field>
+							<dcsset:groupType>Items</dcsset:groupType>
+							<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+							<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+							<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:GroupItemField">
+							<dcsset:field>Здание</dcsset:field>
+							<dcsset:groupType>Items</dcsset:groupType>
+							<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+							<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+							<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+						</dcsset:item>
+					</dcsset:groupItems>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+					</dcsset:order>
+					<dcsset:selection>
+						<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+					</dcsset:selection>
+					<dcsset:item>
+						<dcsset:groupItems>
+							<dcsset:item xsi:type="dcsset:GroupItemField">
+								<dcsset:field>СтатьяОборотов</dcsset:field>
+								<dcsset:groupType>Hierarchy</dcsset:groupType>
+								<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+								<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+								<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+							</dcsset:item>
+						</dcsset:groupItems>
+						<dcsset:order>
+							<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+						</dcsset:order>
+						<dcsset:selection>
+							<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+						</dcsset:selection>
+					</dcsset:item>
+				</dcsset:row>
+				<dcsset:selection>
+					<dcsset:userSettingID>6edffb29-9200-4204-9257-30540f0bce9c</dcsset:userSettingID>
+				</dcsset:selection>
+				<dcsset:userSettingID>8816207d-8f84-4db4-966e-8854f63f3a22</dcsset:userSettingID>
+				<dcsset:columnsUserSettingID>a4d45afd-757c-4ac7-9545-629fd46b1c64</dcsset:columnsUserSettingID>
+				<dcsset:rowsUserSettingID>3159cec3-1740-4b89-a9fa-9520cf737649</dcsset:rowsUserSettingID>
+			</dcsset:item>
+			<dcsset:itemsUserSettingID>24086801-736a-4ea5-b18b-7c13fd370eeb</dcsset:itemsUserSettingID>
+		</dcsset:settings>
+	</settingsVariant>
+</DataCompositionSchema>

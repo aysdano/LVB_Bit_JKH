@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.18">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<ChildItems>
+		<InputField name="ВидДоступа" id="1">
+			<DataPath>Запись.ВидДоступа</DataPath>
+			<ContextMenu name="ВидДоступаКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="ВидДоступаРасширеннаяПодсказка" id="16"/>
+		</InputField>
+		<InputField name="Пользователь" id="3">
+			<DataPath>Запись.Пользователь</DataPath>
+			<ContextMenu name="ПользовательКонтекстноеМеню" id="4"/>
+			<ExtendedTooltip name="ПользовательРасширеннаяПодсказка" id="17"/>
+		</InputField>
+		<InputField name="ЗначениеДоступа" id="7">
+			<DataPath>Запись.ЗначениеДоступа</DataPath>
+			<ContextMenu name="ЗначениеДоступаКонтекстноеМеню" id="8"/>
+			<ExtendedTooltip name="ЗначениеДоступаРасширеннаяПодсказка" id="18"/>
+		</InputField>
+		<CheckBoxField name="ЗапретНаВсе" id="5">
+			<DataPath>Запись.ЗапретНаВсе</DataPath>
+			<CheckBoxType>Auto</CheckBoxType>
+			<ContextMenu name="ЗапретНаВсеКонтекстноеМеню" id="6"/>
+			<ExtendedTooltip name="ЗапретНаВсеРасширеннаяПодсказка" id="19"/>
+		</CheckBoxField>
+		<UsualGroup name="Права" id="15">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Права</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Права</v8:content>
+				</v8:item>
+			</ToolTip>
+			<HorizontalStretch>true</HorizontalStretch>
+			<Group>Vertical</Group>
+			<ExtendedTooltip name="ПраваРасширеннаяПодсказка" id="20"/>
+			<ChildItems>
+				<CheckBoxField name="Добавление" id="9">
+					<DataPath>Запись.Добавление</DataPath>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ДобавлениеКонтекстноеМеню" id="10"/>
+					<ExtendedTooltip name="ДобавлениеРасширеннаяПодсказка" id="21"/>
+				</CheckBoxField>
+				<CheckBoxField name="Изменение" id="11">
+					<DataPath>Запись.Изменение</DataPath>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ИзменениеКонтекстноеМеню" id="12"/>
+					<ExtendedTooltip name="ИзменениеРасширеннаяПодсказка" id="22"/>
+				</CheckBoxField>
+				<CheckBoxField name="Удаление" id="13">
+					<DataPath>Запись.Удаление</DataPath>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="УдалениеКонтекстноеМеню" id="14"/>
+					<ExtendedTooltip name="УдалениеРасширеннаяПодсказка" id="23"/>
+				</CheckBoxField>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Запись" id="1">
+			<Type>
+				<v8:Type>cfg:InformationRegisterRecordManager.бит_рлс_НастройкиПравДоступаПользователей</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+	</Attributes>
+</Form>

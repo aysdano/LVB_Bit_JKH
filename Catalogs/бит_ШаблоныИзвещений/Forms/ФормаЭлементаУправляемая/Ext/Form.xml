@@ -1,0 +1,245 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.18">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<ChildItems>
+			<Button name="ID" id="26">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.ID</CommandName>
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>ID</v8:content>
+					</v8:item>
+				</Title>
+				<ExtendedTooltip name="IDExtendedTooltip" id="28"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="Группа1" id="24">
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="Группа1ExtendedTooltip" id="29"/>
+			<ChildItems>
+				<InputField name="Наименование" id="3">
+					<DataPath>Объект.Description</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="НаименованиеКонтекстноеМеню" id="4"/>
+					<ExtendedTooltip name="НаименованиеExtendedTooltip" id="30"/>
+				</InputField>
+				<InputField name="Код" id="1">
+					<DataPath>Объект.Code</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="КодКонтекстноеМеню" id="2"/>
+					<ExtendedTooltip name="КодExtendedTooltip" id="31"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<InputField name="ПолучательПлатежа" id="9">
+			<DataPath>Объект.ПолучательПлатежа</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="ПолучательПлатежаКонтекстноеМеню" id="10"/>
+			<ExtendedTooltip name="ПолучательПлатежаExtendedTooltip" id="32"/>
+		</InputField>
+		<UsualGroup name="Группа2" id="25">
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="Группа2ExtendedTooltip" id="33"/>
+			<ChildItems>
+				<InputField name="Сальдо" id="5">
+					<DataPath>Объект.Сальдо</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Сальдо (Долг):</v8:content>
+						</v8:item>
+					</Title>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="СальдоКонтекстноеМеню" id="6"/>
+					<ExtendedTooltip name="СальдоExtendedTooltip" id="34"/>
+				</InputField>
+				<InputField name="Кредит" id="7">
+					<DataPath>Объект.Кредит</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Кредит (Переплата):</v8:content>
+						</v8:item>
+					</Title>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="КредитКонтекстноеМеню" id="8"/>
+					<ExtendedTooltip name="КредитExtendedTooltip" id="35"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<InputField name="Идентификатор" id="11">
+			<DataPath>Объект.Идентификатор</DataPath>
+			<Visible>false</Visible>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="ИдентификаторКонтекстноеМеню" id="12"/>
+			<ExtendedTooltip name="ИдентификаторExtendedTooltip" id="36"/>
+		</InputField>
+		<Table name="Услуги" id="13">
+			<Representation>List</Representation>
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<FileDragMode>AsFile</FileDragMode>
+			<DataPath>Объект.Услуги</DataPath>
+			<SearchStringLocation>None</SearchStringLocation>
+			<ViewStatusLocation>None</ViewStatusLocation>
+			<SearchControlLocation>None</SearchControlLocation>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="УслугиКонтекстноеМеню" id="14"/>
+			<AutoCommandBar name="УслугиКоманднаяПанель" id="15">
+				<ChildItems>
+					<Button name="Подбор" id="27">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.Подбор</CommandName>
+						<ExtendedTooltip name="ПодборExtendedTooltip" id="37"/>
+					</Button>
+				</ChildItems>
+			</AutoCommandBar>
+			<ExtendedTooltip name="УслугиExtendedTooltip" id="38"/>
+			<SearchStringAddition name="УслугиСтрокаПоиска" id="43">
+				<AdditionSource>
+					<Item>Услуги</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="УслугиСтрокаПоискаКонтекстноеМеню" id="44"/>
+				<ExtendedTooltip name="УслугиСтрокаПоискаРасширеннаяПодсказка" id="45"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="УслугиСостояниеПросмотра" id="46">
+				<AdditionSource>
+					<Item>Услуги</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="УслугиСостояниеПросмотраКонтекстноеМеню" id="47"/>
+				<ExtendedTooltip name="УслугиСостояниеПросмотраРасширеннаяПодсказка" id="48"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="УслугиУправлениеПоиском" id="49">
+				<AdditionSource>
+					<Item>Услуги</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="УслугиУправлениеПоискомКонтекстноеМеню" id="50"/>
+				<ExtendedTooltip name="УслугиУправлениеПоискомРасширеннаяПодсказка" id="51"/>
+			</SearchControlAddition>
+			<Events>
+				<Event name="BeforeEditEnd">УслугиПередОкончаниемРедактирования</Event>
+				<Event name="ChoiceProcessing">УслугиОбработкаВыбора</Event>
+			</Events>
+			<ChildItems>
+				<LabelField name="УслугиНомерСтроки" id="16">
+					<DataPath>Объект.Услуги.LineNumber</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="УслугиНомерСтрокиКонтекстноеМеню" id="17"/>
+					<ExtendedTooltip name="УслугиНомерСтрокиExtendedTooltip" id="39"/>
+				</LabelField>
+				<InputField name="УслугиУслуга" id="18">
+					<DataPath>Объект.Услуги.Услуга</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="УслугиУслугаКонтекстноеМеню" id="19"/>
+					<ExtendedTooltip name="УслугиУслугаExtendedTooltip" id="40"/>
+					<Events>
+						<Event name="StartChoice">УслугиУслугаНачалоВыбора</Event>
+						<Event name="ChoiceProcessing">УслугиУслугаОбработкаВыбора</Event>
+					</Events>
+				</InputField>
+				<InputField name="УслугиПроцедураПечати" id="20">
+					<DataPath>Объект.Услуги.ПроцедураПечати</DataPath>
+					<Visible>false</Visible>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="УслугиПроцедураПечатиКонтекстноеМеню" id="21"/>
+					<ExtendedTooltip name="УслугиПроцедураПечатиExtendedTooltip" id="41"/>
+				</InputField>
+				<InputField name="УслугиФормаПечати" id="22">
+					<DataPath>Объект.Услуги.ФормаПечати</DataPath>
+					<Visible>false</Visible>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="УслугиФормаПечатиКонтекстноеМеню" id="23"/>
+					<ExtendedTooltip name="УслугиФормаПечатиExtendedTooltip" id="42"/>
+				</InputField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:CatalogObject.бит_ШаблоныИзвещений</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ID" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>ID</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>ID</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ID</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="Подбор" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подбор</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подбор</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Подбор</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+	</Commands>
+	<CommandInterface>
+		<NavigationPanel>
+			<Item>
+				<Command>InformationRegister.бит_си_НастройкиИсточников.StandardCommand.OpenByValue.Объект</Command>
+				<Type>Auto</Type>
+				<DefaultVisible>false</DefaultVisible>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+			<Item>
+				<Command>InformationRegister.бит_icq_Пользователи.StandardCommand.OpenByValue.ОбъектПользователя</Command>
+				<Type>Auto</Type>
+				<DefaultVisible>false</DefaultVisible>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+			<Item>
+				<Command>InformationRegister.бит_си_СвязанныеОбъекты.StandardCommand.OpenByValue.Объект</Command>
+				<Type>Auto</Type>
+				<DefaultVisible>false</DefaultVisible>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+		</NavigationPanel>
+	</CommandInterface>
+</Form>

@@ -1,0 +1,222 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<DataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcscom="http://v8.1c.ru/8.1/data-composition-system/common" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataSource>
+		<name>ИсточникДанных1</name>
+		<dataSourceType>Local</dataSourceType>
+	</dataSource>
+	<dataSet xsi:type="DataSetQuery">
+		<name>НаборДанных1</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ФизЛицо</dataPath>
+			<field>ФизЛицо</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Имя</dataPath>
+			<field>Имя</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Отчество</dataPath>
+			<field>Отчество</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Фамилия</dataPath>
+			<field>Фамилия</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДатаРождения</dataPath>
+			<field>ДатаРождения</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДокументНомер</dataPath>
+			<field>ДокументНомер</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДокументСерия</dataPath>
+			<field>ДокументСерия</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДокументКемВыдан</dataPath>
+			<field>ДокументКемВыдан</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДокументДатаВыдачи</dataPath>
+			<field>ДокументДатаВыдачи</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДокументКодПодразделения</dataPath>
+			<field>ДокументКодПодразделения</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Квартира</dataPath>
+			<field>Квартира</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Улица</dataPath>
+			<field>Улица</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Корпус</dataPath>
+			<field>Корпус</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>НомерДома</dataPath>
+			<field>НомерДома</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Поле2</dataPath>
+			<field>Поле2</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Поле4</dataPath>
+			<field>Поле4</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Поле5</dataPath>
+			<field>Поле5</field>
+		</field>
+		<dataSource>ИсточникДанных1</dataSource>
+		<query>ВЫБРАТЬ
+	бит_ПроживающиеПоЛССрезПоследних.ФизЛицо,
+	ЕСТЬNULL(бит_ФИОПроживающихСрезПоследних.Фамилия, "") КАК Фамилия,
+	ЕСТЬNULL(бит_ФИОПроживающихСрезПоследних.Имя, "") КАК Имя,
+	ЕСТЬNULL(бит_ФИОПроживающихСрезПоследних.Отчество, "") КАК Отчество,
+	бит_ПроживающиеПоЛССрезПоследних.ФизЛицо.ДатаРождения КАК ДатаРождения,
+	бит_ПаспортныеДанныеПроживающихСрезПоследних.ДокументСерия,
+	бит_ПаспортныеДанныеПроживающихСрезПоследних.ДокументНомер,
+	бит_ПаспортныеДанныеПроживающихСрезПоследних.ДокументКемВыдан,
+	бит_ПаспортныеДанныеПроживающихСрезПоследних.ДокументДатаВыдачи,
+	бит_ПаспортныеДанныеПроживающихСрезПоследних.ДокументКодПодразделения,
+	бит_ПроживающиеПоЛССрезПоследних.ЛицевойСчет.УлицаЛицевогоСчета КАК Улица,
+	бит_ПроживающиеПоЛССрезПоследних.ЛицевойСчет.Здание.НомерДома КАК НомерДома,
+	бит_ПроживающиеПоЛССрезПоследних.ЛицевойСчет.Здание.Корпус КАК Корпус,
+	бит_ПроживающиеПоЛССрезПоследних.ЛицевойСчет.Квартира КАК Квартира,
+	ЕСТЬNULL(АдресПрописки.Поле2, "") КАК Поле2,
+	ЕСТЬNULL(АдресПрописки.Поле4, "") КАК Поле4,
+	ЕСТЬNULL(АдресПрописки.Поле5, "") КАК Поле5
+ИЗ
+	РегистрСведений.бит_ПроживающиеПоЛС.СрезПоследних(, ФизЛицо = &amp;ФизЛицо) КАК бит_ПроживающиеПоЛССрезПоследних
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.бит_ФИОПроживающих.СрезПоследних(, ФизЛицо = &amp;ФизЛицо) КАК бит_ФИОПроживающихСрезПоследних
+		ПО бит_ПроживающиеПоЛССрезПоследних.ФизЛицо = бит_ФИОПроживающихСрезПоследних.ФизЛицо
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.бит_ПаспортныеДанныеПроживающих.СрезПоследних(, ФизЛицо = &amp;ФизЛицо) КАК бит_ПаспортныеДанныеПроживающихСрезПоследних
+		ПО бит_ПроживающиеПоЛССрезПоследних.ФизЛицо = бит_ПаспортныеДанныеПроживающихСрезПоследних.ФизЛицо
+		ЛЕВОЕ СОЕДИНЕНИЕ (ВЫБРАТЬ
+			бит_КонтактнаяИнформация.Объект КАК Объект,
+			бит_КонтактнаяИнформация.Поле2 КАК Поле2,
+			бит_КонтактнаяИнформация.Поле4 КАК Поле4,
+			бит_КонтактнаяИнформация.Поле5 КАК Поле5
+		ИЗ
+			РегистрСведений.бит_КонтактнаяИнформация КАК бит_КонтактнаяИнформация
+		ГДЕ
+			бит_КонтактнаяИнформация.Объект ССЫЛКА Справочник.бит_СписокЗданий
+			И бит_КонтактнаяИнформация.Тип = ЗНАЧЕНИЕ(Перечисление.бит_ТипыКонтактнойИнформации.Адрес)
+			И бит_КонтактнаяИнформация.Вид = ЗНАЧЕНИЕ(Справочник.бит_ВидыКонтактнойИнформации.ПочтовыйАдресЗдания)) КАК АдресПрописки
+		ПО бит_ПроживающиеПоЛССрезПоследних.ЛицевойСчет.Здание = АдресПрописки.Объект</query>
+	</dataSet>
+	<parameter>
+		<name>Период</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Период</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>false</useRestriction>
+	</parameter>
+	<parameter>
+		<name>ФизЛицо</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Физ лицо</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.бит_Проживающие</v8:Type>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.ФизическиеЛица</v8:Type>
+		</valueType>
+		<value xsi:nil="true"/>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<settingsVariant>
+		<dcsset:name>Основной</dcsset:name>
+		<dcsset:presentation xsi:type="xs:string">Основной</dcsset:presentation>
+		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+			<dcsset:selection>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ФизЛицо</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Имя</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Отчество</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Фамилия</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ДатаРождения</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ДокументСерия</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ДокументНомер</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ДокументКемВыдан</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ДокументДатаВыдачи</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ДокументКодПодразделения</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Квартира</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Улица</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>НомерДома</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Корпус</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Поле2</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Поле4</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Поле5</dcsset:field>
+				</dcsset:item>
+			</dcsset:selection>
+			<dcsset:dataParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>Период</dcscor:parameter>
+					<dcscor:value xsi:type="xs:dateTime">0001-01-01T00:00:00</dcscor:value>
+					<dcsset:userSettingID>b10a1e0b-5ff3-4333-8f92-85ffd8f0f852</dcsset:userSettingID>
+				</dcscor:item>
+			</dcsset:dataParameters>
+			<dcsset:item xsi:type="dcsset:StructureItemGroup">
+				<dcsset:order>
+					<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+				</dcsset:order>
+				<dcsset:selection>
+					<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+				</dcsset:selection>
+			</dcsset:item>
+		</dcsset:settings>
+	</settingsVariant>
+</DataCompositionSchema>

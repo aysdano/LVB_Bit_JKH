@@ -1,0 +1,110 @@
+﻿<package xmlns="http://v8.1c.ru/8.1/xdto" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" targetNamespace="http://www.jaxb.msp/report/IncomeReport" elementFormQualified="false" attributeFormQualified="false">
+	<d2p1:property xmlns:d2p1="http://v8.1c.ru/8.1/xdto" name="Report" d2p1:qualified="true">
+		<d2p1:typeDef xsi:type="d2p1:ObjectType">
+			<d2p1:property name="DateCreate" type="xs:date"/>
+			<d2p1:property name="Dognum" type="xs:string"/>
+			<d2p1:property name="ReportType" type="xs:int"/>
+			<d2p1:property name="BnfMonth" type="xs:date"/>
+			<d2p1:property name="Check1" type="xs:decimal" nillable="true" fixed="false" default="" d2p1:qualified="false"/>
+			<d2p1:property name="Check2" type="xs:decimal"/>
+			<d2p1:property name="Check3" type="xs:decimal"/>
+			<d2p1:property name="Check4" type="xs:decimal"/>
+			<d2p1:property xmlns:d4p1="http://www.jaxb.msp/report/IncomeReport" name="Beneficiaries" type="d4p1:Beneficiaries"/>
+		</d2p1:typeDef>
+	</d2p1:property>
+	<objectType name="Beneficiaries">
+		<property xmlns:d3p1="http://www.jaxb.msp/report/IncomeReport" name="Beneficiary" type="d3p1:Beneficiary" upperBound="-1"/>
+	</objectType>
+	<objectType name="Beneficiary">
+		<property name="MoID" type="xs:int"/>
+		<property name="PayID" type="xs:long"/>
+		<property name="NUMLS" type="xs:string"/>
+		<property name="SNILS" type="xs:string"/>
+		<property name="Name1" type="xs:string"/>
+		<property name="Name2" type="xs:string"/>
+		<property name="Name3" type="xs:string"/>
+		<property name="StreetID" type="xs:int"/>
+		<property name="HouseNum" type="xs:string"/>
+		<property name="CorpusNum" type="xs:string"/>
+		<property name="BuildingNum" type="xs:string"/>
+		<property name="Flat" type="xs:string"/>
+		<property name="UNOM" type="xs:int" lowerBound="0"/>
+		<property name="HouseFIAS" type="xs:string" lowerBound="0"/>
+		<property name="Phone" type="xs:string" lowerBound="0"/>
+		<property name="OccupType" type="xs:int"/>
+		<property name="OwnProperty" type="xs:int"/>
+		<property name="PPLReg" type="xs:int"/>
+		<property name="PPLCnt" type="xs:int"/>
+		<property name="TotalSquare" type="xs:decimal"/>
+		<property name="LivingSquare" type="xs:decimal" lowerBound="0"/>
+		<property name="Gender" type="xs:string"/>
+		<property name="Birthday" type="xs:date"/>
+		<property name="OwnSquare" type="xs:decimal"/>
+		<property name="RegType" type="xs:int"/>
+		<property name="LivingType" type="xs:int"/>
+		<property name="DocType" type="xs:int" lowerBound="0"/>
+		<property name="DocSeries" type="xs:string" lowerBound="0"/>
+		<property name="DocNumber" type="xs:string" lowerBound="0"/>
+		<property name="DocDate" type="xs:date" lowerBound="0" nillable="true"/>
+		<property name="DocEnd" type="xs:date" lowerBound="0"/>
+		<property name="DocOrg" type="xs:string" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.jaxb.msp/report/IncomeReport" name="FamilyMembers" type="d3p1:FamilyMembers" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.jaxb.msp/report/IncomeReport" name="Categories" type="d3p1:Categories"/>
+	</objectType>
+	<objectType name="Categories">
+		<property xmlns:d3p1="http://www.jaxb.msp/report/IncomeReport" name="Category" type="d3p1:Category" upperBound="-1"/>
+	</objectType>
+	<objectType name="Category">
+		<property name="BenefitID" type="xs:int"/>
+		<property xmlns:d3p1="http://www.jaxb.msp/report/IncomeReport" name="Documents" type="d3p1:Documents"/>
+		<property xmlns:d3p1="http://www.jaxb.msp/report/IncomeReport" name="Services" type="d3p1:Services"/>
+	</objectType>
+	<objectType name="Document">
+		<property name="DocType" type="xs:int"/>
+		<property name="DocSeries" type="xs:string" lowerBound="0"/>
+		<property name="DocNumber" type="xs:string" lowerBound="0"/>
+		<property name="DocDate" type="xs:date" nillable="true"/>
+		<property name="DocEnd" type="xs:date" lowerBound="0" nillable="true" fixed="false"/>
+		<property name="DocOrg" type="xs:string"/>
+	</objectType>
+	<objectType name="Documents">
+		<property xmlns:d3p1="http://www.jaxb.msp/report/IncomeReport" name="Document" type="d3p1:Document" upperBound="-1"/>
+	</objectType>
+	<objectType name="FamilyMember">
+		<property name="SNILS" type="xs:string"/>
+		<property name="Name1" type="xs:string"/>
+		<property name="Name2" type="xs:string"/>
+		<property name="Name3" type="xs:string"/>
+		<property name="Gender" type="xs:string"/>
+		<property name="Birthday" type="xs:date"/>
+		<property name="FamilyRelation" type="xs:int"/>
+		<property name="OwnSquare" type="xs:decimal"/>
+	</objectType>
+	<objectType name="FamilyMembers">
+		<property xmlns:d3p1="http://www.jaxb.msp/report/IncomeReport" name="FamilyMember" type="d3p1:FamilyMember" upperBound="-1"/>
+	</objectType>
+	<objectType name="Report">
+		<property name="DateCreate" type="xs:date"/>
+		<property name="Dognum" type="xs:string"/>
+		<property name="ReportType" type="xs:int"/>
+		<property name="BnfMonth" type="xs:date"/>
+		<property name="Check1" type="xs:decimal"/>
+		<property name="Check2" type="xs:decimal"/>
+		<property name="Check3" type="xs:decimal"/>
+		<property name="Check4" type="xs:decimal"/>
+		<property xmlns:d3p1="http://www.jaxb.msp/report/IncomeReport" name="Beneficiaries" type="d3p1:Beneficiaries"/>
+	</objectType>
+	<objectType name="Service">
+		<property name="ServiceID" type="xs:int"/>
+		<property name="Tariff" type="xs:decimal"/>
+		<property name="ConsumerQty" type="xs:int"/>
+		<property name="Quant" type="xs:decimal"/>
+		<property name="BnfSquare" type="xs:decimal"/>
+		<property name="Summa" type="xs:decimal"/>
+		<property name="SummaCorr" type="xs:decimal" lowerBound="0"/>
+		<property name="TotalQuant" type="xs:decimal"/>
+	</objectType>
+	<objectType name="Services">
+		<property xmlns:d3p1="http://www.jaxb.msp/report/IncomeReport" name="Service" type="d3p1:Service" upperBound="-1"/>
+	</objectType>
+</package>

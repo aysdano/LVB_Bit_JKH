@@ -1,0 +1,636 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.18">
+	<AutoSaveDataInSettings>Use</AutoSaveDataInSettings>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<InputField name="Период" id="1">
+			<DataPath>Объект.Период</DataPath>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Период (месяц поступления файла из горгза)</v8:content>
+				</v8:item>
+			</Title>
+			<ContextMenu name="ПериодКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="ПериодРасширеннаяПодсказка" id="3"/>
+			<Events>
+				<Event name="OnChange">ПериодПриИзменении</Event>
+			</Events>
+		</InputField>
+		<InputField name="Организация" id="19">
+			<DataPath>Объект.Организация</DataPath>
+			<ContextMenu name="ОрганизацияКонтекстноеМеню" id="20"/>
+			<ExtendedTooltip name="ОрганизацияРасширеннаяПодсказка" id="21"/>
+			<Events>
+				<Event name="OnChange">ОрганизацияПриИзменении</Event>
+			</Events>
+		</InputField>
+		<InputField name="ДокументДанныеГоргаза" id="4">
+			<DataPath>Объект.ДокументДанныеГоргаза</DataPath>
+			<ReadOnly>true</ReadOnly>
+			<InputHint>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>ищется/создается автоматически</v8:content>
+				</v8:item>
+			</InputHint>
+			<ContextMenu name="ДокументДанныеГоргазаКонтекстноеМеню" id="5"/>
+			<ExtendedTooltip name="ДокументДанныеГоргазаРасширеннаяПодсказка" id="6"/>
+		</InputField>
+		<InputField name="УстановкаИзменениеУслугЛС" id="7">
+			<DataPath>Объект.УстановкаИзменениеУслугЛС</DataPath>
+			<ReadOnly>true</ReadOnly>
+			<ChooseType>false</ChooseType>
+			<InputHint>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>берется из документа Данные Горгаза</v8:content>
+				</v8:item>
+			</InputHint>
+			<ContextMenu name="УстановкаИзменениеУслугЛСКонтекстноеМеню" id="8"/>
+			<ExtendedTooltip name="УстановкаИзменениеУслугЛСРасширеннаяПодсказка" id="9"/>
+		</InputField>
+		<InputField name="ДокументКоррекцииСальдо" id="10">
+			<DataPath>Объект.ДокументКоррекцииСальдо</DataPath>
+			<ReadOnly>true</ReadOnly>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Документ коррекции сальдо (на конец прошлого месяца)</v8:content>
+				</v8:item>
+			</Title>
+			<InputHint>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>берется из документа Данные Горгаза</v8:content>
+				</v8:item>
+			</InputHint>
+			<ContextMenu name="ДокументКоррекцииСальдоКонтекстноеМеню" id="11"/>
+			<ExtendedTooltip name="ДокументКоррекцииСальдоРасширеннаяПодсказка" id="12"/>
+		</InputField>
+		<UsualGroup name="Кнопки" id="47">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Кнопки</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Кнопки</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>AlwaysHorizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="КнопкиРасширеннаяПодсказка" id="48"/>
+			<ChildItems>
+				<Button name="Обновить" id="49">
+					<Type>UsualButton</Type>
+					<Width>9</Width>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<CommandName>Form.Command.Обновить</CommandName>
+					<ExtendedTooltip name="ОбновитьРасширеннаяПодсказка" id="50"/>
+				</Button>
+				<Button name="КоррекцияСальдо" id="51">
+					<Type>UsualButton</Type>
+					<CommandName>Form.Command.КоррекцияСальдо</CommandName>
+					<ExtendedTooltip name="КоррекцияСальдоРасширеннаяПодсказка" id="52"/>
+				</Button>
+				<Button name="КоррекцияУслуг" id="85">
+					<Type>UsualButton</Type>
+					<CommandName>Form.Command.КоррекцияУслуг</CommandName>
+					<ExtendedTooltip name="КоррекцияУслугРасширеннаяПодсказка" id="86"/>
+				</Button>
+				<Button name="Загрузить" id="53">
+					<Type>UsualButton</Type>
+					<DefaultButton>true</DefaultButton>
+					<CommandName>Form.Command.ЗагрузитьФайл</CommandName>
+					<ExtendedTooltip name="ЗагрузитьРасширеннаяПодсказка" id="54"/>
+				</Button>
+				<Button name="ОткрытьФайл" id="55">
+					<Type>UsualButton</Type>
+					<Width>3</Width>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<CommandName>Form.Command.ОткрытьФайл</CommandName>
+					<ExtendedTooltip name="ОткрытьФайлРасширеннаяПодсказка" id="56"/>
+				</Button>
+				<LabelField name="Файл" id="57">
+					<DataPath>Файл</DataPath>
+					<TitleLocation>None</TitleLocation>
+					<ContextMenu name="ФайлКонтекстноеМеню" id="58"/>
+					<ExtendedTooltip name="ФайлРасширеннаяПодсказка" id="59"/>
+				</LabelField>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="Настройки" id="83">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настройки</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настройки</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Vertical</Group>
+			<ExtendedTooltip name="НастройкиРасширеннаяПодсказка" id="84"/>
+			<ChildItems>
+				<InputField name="Услуга" id="13">
+					<DataPath>Объект.Услуга</DataPath>
+					<ContextMenu name="УслугаКонтекстноеМеню" id="14"/>
+					<ExtendedTooltip name="УслугаРасширеннаяПодсказка" id="15"/>
+				</InputField>
+				<InputField name="Поставщик" id="16">
+					<DataPath>Объект.Поставщик</DataPath>
+					<ContextMenu name="ПоставщикКонтекстноеМеню" id="17"/>
+					<ExtendedTooltip name="ПоставщикРасширеннаяПодсказка" id="18"/>
+				</InputField>
+				<InputField name="РежимДляСчетчиков" id="22">
+					<DataPath>Объект.РежимДляСчетчиков</DataPath>
+					<ContextMenu name="РежимДляСчетчиковКонтекстноеМеню" id="23"/>
+					<ExtendedTooltip name="РежимДляСчетчиковРасширеннаяПодсказка" id="24"/>
+				</InputField>
+				<InputField name="РежимДляНормативаПоУмолчанию" id="25">
+					<DataPath>Объект.РежимДляНормативаПоУмолчанию</DataPath>
+					<ContextMenu name="РежимДляНормативаПоУмолчаниюКонтекстноеМеню" id="26"/>
+					<ExtendedTooltip name="РежимДляНормативаПоУмолчаниюРасширеннаяПодсказка" id="27"/>
+				</InputField>
+				<UsualGroup name="ГруппаНорма2" id="28">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа норма2</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа норма2</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>AlwaysHorizontal</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаНорма2РасширеннаяПодсказка" id="29"/>
+					<ChildItems>
+						<InputField name="РежимДляНорматива2" id="30">
+							<DataPath>Объект.РежимДляНорматива2</DataPath>
+							<ContextMenu name="РежимДляНорматива2КонтекстноеМеню" id="31"/>
+							<ExtendedTooltip name="РежимДляНорматива2РасширеннаяПодсказка" id="32"/>
+						</InputField>
+						<InputField name="РазмерНорматива2" id="33">
+							<DataPath>Объект.РазмерНорматива2</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>размер</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="РазмерНорматива2КонтекстноеМеню" id="34"/>
+							<ExtendedTooltip name="РазмерНорматива2РасширеннаяПодсказка" id="35"/>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаНорма3" id="36">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа норма3</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа норма3</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>AlwaysHorizontal</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаНорма3РасширеннаяПодсказка" id="37"/>
+					<ChildItems>
+						<InputField name="РежимДляНорматива3" id="38">
+							<DataPath>Объект.РежимДляНорматива3</DataPath>
+							<ContextMenu name="РежимДляНорматива3КонтекстноеМеню" id="39"/>
+							<ExtendedTooltip name="РежимДляНорматива3РасширеннаяПодсказка" id="40"/>
+						</InputField>
+						<InputField name="РазмерНорматива3" id="41">
+							<DataPath>Объект.РазмерНорматива3</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>размер</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="РазмерНорматива3КонтекстноеМеню" id="42"/>
+							<ExtendedTooltip name="РазмерНорматива3РасширеннаяПодсказка" id="43"/>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+				<InputField name="РежимНеНачислять" id="44">
+					<DataPath>Объект.РежимНеНачислять</DataPath>
+					<ContextMenu name="РежимНеНачислятьКонтекстноеМеню" id="45"/>
+					<ExtendedTooltip name="РежимНеНачислятьРасширеннаяПодсказка" id="46"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ВыгрузитьДанные" id="60">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выгрузить данные</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выгрузить данные</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Vertical</Group>
+			<Representation>NormalSeparation</Representation>
+			<ExtendedTooltip name="ВыгрузитьДанныеРасширеннаяПодсказка" id="61"/>
+			<ChildItems>
+				<UsualGroup name="Группа1" id="62">
+					<Group>Vertical</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="63"/>
+					<ChildItems>
+						<Button name="НачисленияГорГаз" id="64">
+							<Type>UsualButton</Type>
+							<CommandName>Form.Command.НачисленияГорГаз</CommandName>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Начисления ГорГаз</v8:content>
+								</v8:item>
+							</Title>
+							<ExtendedTooltip name="НачисленияГорГазРасширеннаяПодсказка" id="65"/>
+						</Button>
+						<LabelDecoration name="Декорация1" id="66">
+							<TextColor>#00CC00</TextColor>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>*Обязательно для заполнения: Период, Услуга, Поставщик, Организация, Режим для счетчиков
+    </v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="Декорация1КонтекстноеМеню" id="67"/>
+							<ExtendedTooltip name="Декорация1РасширеннаяПодсказка" id="68"/>
+						</LabelDecoration>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="Группа2" id="69">
+					<Group>Vertical</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="Группа2РасширеннаяПодсказка" id="70"/>
+					<ChildItems>
+						<Button name="ПроживающиеГорГаз" id="71">
+							<Type>UsualButton</Type>
+							<CommandName>Form.Command.ПроживающиеГорГаз</CommandName>
+							<ExtendedTooltip name="ПроживающиеГорГазРасширеннаяПодсказка" id="72"/>
+						</Button>
+						<LabelDecoration name="Декорация2" id="73">
+							<TextColor>#00CC00</TextColor>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>*Обязательно для заполнения: Период, Услуга, Поставщик, Организация, Режим для норматива по умолчанию
+    </v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="Декорация2КонтекстноеМеню" id="74"/>
+							<ExtendedTooltip name="Декорация2РасширеннаяПодсказка" id="75"/>
+						</LabelDecoration>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="Группа3" id="76">
+					<Group>Vertical</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="Группа3РасширеннаяПодсказка" id="77"/>
+					<ChildItems>
+						<Button name="ПроживающиеРегионГаз" id="78">
+							<Type>UsualButton</Type>
+							<CommandName>Form.Command.ПроживающиеРегионГаз</CommandName>
+							<ExtendedTooltip name="ПроживающиеРегионГазРасширеннаяПодсказка" id="79"/>
+						</Button>
+						<LabelDecoration name="Декорация3" id="80">
+							<TextColor>#00CC00</TextColor>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>*Обязательно для заполнения: Период, Поставщик</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="Декорация3КонтекстноеМеню" id="81"/>
+							<ExtendedTooltip name="Декорация3РасширеннаяПодсказка" id="82"/>
+						</LabelDecoration>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.лб_ОбменОмскГорГаз</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<Save>
+				<Field>1/0:9b0c532a-6e3e-4a02-9005-fb66924fd1a0</Field>
+				<Field>Объект.ДокументКоррекцииСальдо</Field>
+				<Field>Объект.Организация</Field>
+				<Field>Объект.Поставщик</Field>
+				<Field>Объект.РазмерНорматива2</Field>
+				<Field>Объект.РазмерНорматива3</Field>
+				<Field>Объект.РежимДляНорматива2</Field>
+				<Field>Объект.РежимДляНорматива3</Field>
+				<Field>Объект.РежимДляНормативаПоУмолчанию</Field>
+				<Field>Объект.РежимДляСчетчиков</Field>
+				<Field>Объект.РежимНеНачислять</Field>
+				<Field>Объект.Услуга</Field>
+				<Field>Объект.ФайлЗагрузки</Field>
+			</Save>
+		</Attribute>
+		<Attribute name="ВременноеХранилищеDBFФайл" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Временное хранилище DBFФайл</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ФайлНачисленияГорГаза" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>ФайлНачисленияГорГаза</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+			<Save>
+				<Field>ФайлНачисленияГорГаза</Field>
+			</Save>
+		</Attribute>
+		<Attribute name="Файл" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Файл</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+			<Save>
+				<Field>Файл</Field>
+			</Save>
+		</Attribute>
+		<Attribute name="ФайлНачисленияГорГазаВр" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>ФайлНачисленияГорГазаВр</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+			<Save>
+				<Field>ФайлНачисленияГорГазаВр</Field>
+			</Save>
+		</Attribute>
+		<Attribute name="ФайлПроживающиеГорГаза" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>ФайлПроживающиеГорГаза</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+			<Save>
+				<Field>ФайлПроживающиеГорГаза</Field>
+			</Save>
+		</Attribute>
+		<Attribute name="ФайлПроживающиеГорГазаВр" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>ФайлПроживающиеГорГазаВр</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+			<Save>
+				<Field>ФайлПроживающиеГорГазаВр</Field>
+			</Save>
+		</Attribute>
+		<Attribute name="ФайлПроживающиеРегионГаз" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>ФайлПроживающиеРегионГаз</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+			<Save>
+				<Field>ФайлПроживающиеРегионГаз</Field>
+			</Save>
+		</Attribute>
+		<Attribute name="ФайлПроживающиеРегионГазВр" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>ФайлПроживающиеРегионГазВр</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+			<Save>
+				<Field>ФайлПроживающиеРегионГазВр</Field>
+			</Save>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ЗагрузитьФайл" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Загрузить файл</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Загрузить файл</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЗагрузитьФайл</Action>
+		</Command>
+		<Command name="КоррекцияСальдо" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Коррекция сальдо</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Коррекция сальдо</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>КоррекцияСальдо</Action>
+		</Command>
+		<Command name="НачисленияГорГаз" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Начисления гор газ</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Начисления гор газ</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>НачисленияГорГаз</Action>
+		</Command>
+		<Command name="Обновить" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обновить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обновить</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Обновить</Action>
+		</Command>
+		<Command name="ОткрытьФайл" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть файл</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть файл</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.OpenFile</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ВыбратьФайл</Action>
+			<Representation>Picture</Representation>
+		</Command>
+		<Command name="ПроживающиеГорГаз" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Проживающие ГорГаз</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Проживающие гор газ</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПроживающиеГорГаз</Action>
+		</Command>
+		<Command name="ПроживающиеРегионГаз" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Проживающие РегионГаз</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Начисления гор газ</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПроживающиеРегионГаз</Action>
+		</Command>
+		<Command name="КоррекцияУслуг" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Коррекция услуг</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Коррекция услуг</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>КоррекцияУслуг</Action>
+		</Command>
+	</Commands>
+</Form>

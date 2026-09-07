@@ -1,0 +1,443 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.18">
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+		<ChildItems>
+			<Popup name="ФормаГруппаСохранить" id="1">
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Сохранить</v8:content>
+					</v8:item>
+				</Title>
+				<ToolTip>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Сохранить</v8:content>
+					</v8:item>
+				</ToolTip>
+				<Picture>
+					<xr:Ref>StdPicture.SaveFile</xr:Ref>
+					<xr:LoadTransparent>true</xr:LoadTransparent>
+				</Picture>
+				<ExtendedTooltip name="ФормаГруппаСохранитьРасширеннаяПодсказка" id="23"/>
+				<ChildItems>
+					<Button name="ФормаСохранитьВXML" id="2">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.СохранитьВXML</CommandName>
+						<ExtendedTooltip name="ФормаСохранитьВXMLРасширеннаяПодсказка" id="24"/>
+					</Button>
+					<Button name="ФормаСохранитьВHTML" id="3">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.СохранитьВHTML</CommandName>
+						<ExtendedTooltip name="ФормаСохранитьВHTMLРасширеннаяПодсказка" id="25"/>
+					</Button>
+				</ChildItems>
+			</Popup>
+			<ButtonGroup name="ФормаГруппаПометки" id="4">
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Пометки</v8:content>
+					</v8:item>
+				</Title>
+				<ToolTip>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Пометки</v8:content>
+					</v8:item>
+				</ToolTip>
+				<ExtendedTooltip name="ФормаГруппаПометкиРасширеннаяПодсказка" id="26"/>
+				<ChildItems>
+					<Button name="ФормаПометкиУстановить" id="5">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.ПометкиУстановить</CommandName>
+						<ExtendedTooltip name="ФормаПометкиУстановитьРасширеннаяПодсказка" id="27"/>
+					</Button>
+					<Button name="ФормаПометкиСнять" id="6">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.ПометкиСнять</CommandName>
+						<ExtendedTooltip name="ФормаПометкиСнятьРасширеннаяПодсказка" id="28"/>
+					</Button>
+					<Button name="ФормаПометкиИнвертировать" id="7">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.ПометкиИнвертировать</CommandName>
+						<ExtendedTooltip name="ФормаПометкиИнвертироватьРасширеннаяПодсказка" id="29"/>
+					</Button>
+				</ChildItems>
+			</ButtonGroup>
+			<Button name="ФормаВыбратьМетки" id="8">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.ВыбратьМетки</CommandName>
+				<ExtendedTooltip name="ФормаВыбратьМеткиРасширеннаяПодсказка" id="30"/>
+			</Button>
+			<Button name="ФормаОбновитьРазделы" id="9">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.ОбновитьРазделы</CommandName>
+				<ExtendedTooltip name="ФормаОбновитьРазделыРасширеннаяПодсказка" id="31"/>
+			</Button>
+			<Button name="ФормаОбработкабит_си_ИсточникСправочникСтатьиСправочнаяИнформацияОбщая" id="22">
+				<Type>CommandBarButton</Type>
+				<CommandName>DataProcessor.бит_си_ИсточникСправочникСтатьи.Command.СправочнаяИнформацияОбщая</CommandName>
+				<ExtendedTooltip name="ФормаОбработкабит_си_ИсточникСправочникСтатьиСправочнаяИнформацияОбщаяРасширеннаяПодсказка" id="32"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<Table name="РазделыСправки" id="10">
+			<Representation>Tree</Representation>
+			<CommandBarLocation>None</CommandBarLocation>
+			<ChangeRowSet>false</ChangeRowSet>
+			<ChangeRowOrder>false</ChangeRowOrder>
+			<SelectionMode>SingleRow</SelectionMode>
+			<RowSelectionMode>Row</RowSelectionMode>
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<InitialTreeView>ExpandAllLevels</InitialTreeView>
+			<FileDragMode>AsFile</FileDragMode>
+			<DataPath>РазделыСправки</DataPath>
+			<CommandSet>
+				<ExcludedCommand>Add</ExcludedCommand>
+				<ExcludedCommand>Change</ExcludedCommand>
+				<ExcludedCommand>Copy</ExcludedCommand>
+				<ExcludedCommand>Delete</ExcludedCommand>
+				<ExcludedCommand>EndEdit</ExcludedCommand>
+				<ExcludedCommand>HierarchicalList</ExcludedCommand>
+				<ExcludedCommand>List</ExcludedCommand>
+				<ExcludedCommand>MoveDown</ExcludedCommand>
+				<ExcludedCommand>MoveUp</ExcludedCommand>
+				<ExcludedCommand>SortListAsc</ExcludedCommand>
+				<ExcludedCommand>SortListDesc</ExcludedCommand>
+				<ExcludedCommand>Tree</ExcludedCommand>
+			</CommandSet>
+			<SearchStringLocation>None</SearchStringLocation>
+			<ViewStatusLocation>None</ViewStatusLocation>
+			<SearchControlLocation>None</SearchControlLocation>
+			<ContextMenu name="РазделыСправкиКонтекстноеМеню" id="11"/>
+			<AutoCommandBar name="РазделыСправкиКоманднаяПанель" id="12"/>
+			<ExtendedTooltip name="РазделыСправкиРасширеннаяПодсказка" id="33"/>
+			<SearchStringAddition name="РазделыСправкиСтрокаПоиска" id="34">
+				<AdditionSource>
+					<Item>РазделыСправки</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="РазделыСправкиСтрокаПоискаКонтекстноеМеню" id="35"/>
+				<ExtendedTooltip name="РазделыСправкиСтрокаПоискаРасширеннаяПодсказка" id="36"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="РазделыСправкиСостояниеПросмотра" id="37">
+				<AdditionSource>
+					<Item>РазделыСправки</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="РазделыСправкиСостояниеПросмотраКонтекстноеМеню" id="38"/>
+				<ExtendedTooltip name="РазделыСправкиСостояниеПросмотраРасширеннаяПодсказка" id="39"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="РазделыСправкиУправлениеПоиском" id="40">
+				<AdditionSource>
+					<Item>РазделыСправки</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="РазделыСправкиУправлениеПоискомКонтекстноеМеню" id="41"/>
+				<ExtendedTooltip name="РазделыСправкиУправлениеПоискомРасширеннаяПодсказка" id="42"/>
+			</SearchControlAddition>
+			<Events>
+				<Event name="ChoiceProcessing">РазделыСправкиОбработкаВыбора</Event>
+			</Events>
+			<ChildItems>
+				<ColumnGroup name="РазделыСправкиГруппаРазделы" id="17">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Разделы справки группа разделы</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Разделы справки группа разделы</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>InCell</Group>
+					<ExtendedTooltip name="РазделыСправкиГруппаРазделыРасширеннаяПодсказка" id="43"/>
+					<ChildItems>
+						<CheckBoxField name="РазделыСправкиСохранять" id="15">
+							<DataPath>РазделыСправки.Сохранять</DataPath>
+							<TitleLocation>None</TitleLocation>
+							<EditMode>Directly</EditMode>
+							<ThreeState>true</ThreeState>
+							<ContextMenu name="РазделыСправкиСохранятьКонтекстноеМеню" id="16"/>
+							<ExtendedTooltip name="РазделыСправкиСохранятьРасширеннаяПодсказка" id="44"/>
+							<Events>
+								<Event name="OnChange">РазделыСправкиСохранятьПриИзменении</Event>
+							</Events>
+						</CheckBoxField>
+						<InputField name="РазделыСправкиРаздел" id="13">
+							<DataPath>РазделыСправки.НазваниеСтатьи</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Раздел справки</v8:content>
+								</v8:item>
+							</Title>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="РазделыСправкиРазделКонтекстноеМеню" id="14"/>
+							<ExtendedTooltip name="РазделыСправкиРазделРасширеннаяПодсказка" id="45"/>
+						</InputField>
+					</ChildItems>
+				</ColumnGroup>
+			</ChildItems>
+		</Table>
+		<CheckBoxField name="СохранятьОтборы" id="18">
+			<DataPath>СохранятьОтборы</DataPath>
+			<TitleFont ref="sys:DefaultGUIFont" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+			<TitleLocation>Right</TitleLocation>
+			<CheckBoxType>Auto</CheckBoxType>
+			<ContextMenu name="СохранятьОтборыКонтекстноеМеню" id="19"/>
+			<ExtendedTooltip name="СохранятьОтборыРасширеннаяПодсказка" id="46"/>
+		</CheckBoxField>
+		<CheckBoxField name="СохранятьПривязки" id="20">
+			<DataPath>СохранятьПривязки</DataPath>
+			<TitleFont ref="sys:DefaultGUIFont" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+			<TitleLocation>Right</TitleLocation>
+			<CheckBoxType>Auto</CheckBoxType>
+			<ContextMenu name="СохранятьПривязкиКонтекстноеМеню" id="21"/>
+			<ExtendedTooltip name="СохранятьПривязкиРасширеннаяПодсказка" id="47"/>
+		</CheckBoxField>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.бит_си_СохранениеСправочнойИнформации</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<Attribute name="РазделыСправки" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Разделы справки</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTree</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Раздел" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Раздел</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.бит_си_Статьи</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Сохранять" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Сохранять</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>10</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="НазваниеСтатьи" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Название статьи</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ЭтоГруппа" id="4">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Это группа</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="СохранятьОтборы" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сохранять отборы</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="СохранятьПривязки" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сохранять привязки</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="СохранитьВXML" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сохранить в XML...</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сохранить ВXML</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>СохранитьВXML</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="СохранитьВHTML" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сохранить в HTML...</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сохранить ВHTML</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>СохранитьВHTML</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ОбновитьРазделы" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обновить разделы</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обновить разделы</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.Refresh</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ОбновитьРазделы</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ВыбратьМетки" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выбрать метки...</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выбрать метки</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.бит_си_МеткаСтатьи</xr:Ref>
+				<xr:LoadTransparent>false</xr:LoadTransparent>
+			</Picture>
+			<Action>ВыбратьМетки</Action>
+			<Representation>TextPicture</Representation>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ПометкиУстановить" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Пометки установить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Пометки установить</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.CheckAll</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ПометкиИзменить</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ПометкиСнять" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Пометки снять</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Пометки снять</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.UncheckAll</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ПометкиИзменить</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ПометкиИнвертировать" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Пометки инвертировать</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Пометки инвертировать</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.бит_ИнвертироватьФлажки</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+				<xr:TransparentPixel x="13" y="12"/>
+			</Picture>
+			<Action>ПометкиИзменить</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+	</Commands>
+</Form>

@@ -1,0 +1,441 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"><html><head><meta content="text/html; charset=utf-8" http-equiv="Content-Type"></meta><link rel="stylesheet" type="text/css" href="v8help://service_book/service_style"></link><meta name="GENERATOR" content="MSHTML 11.00.10570.1001"></meta></head><body>
+<h1>Справочник "Варианты счет - извещений"</h1>
+<p> </p>
+<p class="Usual" style="MARGIN-RIGHT: 0px" dir="ltr">      Справочник предназначен для хранения списка вариантов макетов счет-извещений.</p>
+<p class="Usual" style="MARGIN-RIGHT: 0px" dir="ltr">В данном справочнике представлена возможности отредактировать внешний вид печатной формы счет-извещения, </p>
+<p class="Usual" style="MARGIN-RIGHT: 0px" dir="ltr">либо разработать собственную форму, как на базе одного из основных вариантов, так и полностью новую.</p>
+<p class="Usual" style="MARGIN-RIGHT: 0px" dir="ltr">В справочнике представлено несколько предопределенных элементов, это "ОВ <font size="2" face="Symbol">®</font> Основные варианты" счет-извещений.</p>
+<p class="Usual" style="MARGIN-RIGHT: 0px" dir="ltr">Алгоритмы заполнения и вывода на печать этих вариантов описаны в обработке "Печать счет-извещений".</p>
+<p class="Usual" style="MARGIN-RIGHT: 0px" dir="ltr"> </p>
+<p class="Usual" style="MARGIN-RIGHT: 0px" dir="ltr"> На форме представлены следующие элементы управления:</p>
+<ul dir="ltr"><li>Основной вариант                                      - В этом поле необходимо указать предопределенный элемент справочника, как ссылку на алгоритм печати. 
+</li><li>
+<div style="MARGIN-RIGHT: 0px">Использовать пользовательскую функцию - При установке данного флага на форме будет доступна закладка "Пользовательская функция".</div>
+</li><li>
+<div style="MARGIN-RIGHT: 0px">Закладка "Редактирование Макета"            - На закладке располагается поле табличного документа для редактирования макета, дерево доступных параметров и командная панель.</div>
+</li><li>
+<div style="MARGIN-RIGHT: 0px">Закладка "Пользовательская функция"      - На данной закладке располагается поле текстового документа в котором необходимо описать алгоритм печати языком 1С.</div>
+</li><li>
+<div style="MARGIN-RIGHT: 0px">Закладка "Комментарий"                            - На данной закладке находится поле комментарий.</div></li></ul><p class="Usual" style="MARGIN-RIGHT: 0px" dir="ltr"> </p>
+<p class="Usual" style="MARGIN-RIGHT: 0px" dir="ltr">     Для начала работы над макетом его необходимо загрузить на форму. Для этого на закладке "Редактирование макета",</p>
+<p class="Usual" style="MARGIN-RIGHT: 0px" dir="ltr">воспользуйтесь меню "Загрузка". Макет возможно загрузить из базы на основе ОВ либо из внешнего файла в формате ""mxl".</p>
+<p class="Usual" style="MARGIN-RIGHT: 0px" dir="ltr">Редактирование макета выполняется стандартными средствами 1С, на командной панели располагаются кнопки быстрого доступа</p>
+<p class="Usual" style="MARGIN-RIGHT: 0px" dir="ltr">для объединения и разъединения ячеек. </p>
+<blockquote class="Usual" style="MARGIN-RIGHT: 0px" dir="ltr">
+<p class="Usual" style="MARGIN-RIGHT: 0px" dir="ltr">     Справа на закладке располагается дерево доступных параметров для вывода данных в макет. Чтобы перенести выбранное поле в макет, выделите</p>
+<p class="Usual" style="MARGIN-RIGHT: 0px" dir="ltr">ячейки и щелкните 2 раза ПКМ на поле в дереве.</p>
+<p class="Usual" style="MARGIN-RIGHT: 0px" dir="ltr"> </p>
+<table width="100%" bgcolor="#ffefd5"><tbody><tr><td><strong><strong>Описание доступных полей:</strong></strong></td></tr></tbody></table><p class="Usual" style="MARGIN-RIGHT: 0px" dir="ltr"></p><!-- Описание скрипта -->
+<script type="text/javascript">
+function spoiler(id)
+	{
+		var obj = "";	
+		// Проверить совместимость браузера
+		if(document.getElementById)
+			obj = document.getElementById(id).style;
+		else if(document.all)
+			obj = document.all[id];
+		else if(document.layers)
+			obj = document.layers[id];
+		else
+			return 1;
+		// Пошла магия
+		if(obj.display == "")
+			obj.display = "none";
+		else if(obj.display != "none")
+			obj.display = "none";
+		else
+			obj.display = "block";
+	}
+</script><!-- Описание стиля --><style type="text/css" media="screen,projection">#content {
+	WIDTH: 500px; DISPLAY: none
+}
+</style><!-- Спойлер реквизитов --><a onclick="spoiler('content');" href="javascript://">Реквизиты </a>
+<div id="content">
+<table style="FONT-SIZE: 8pt; OVERFLOW: visible; FONT-FAMILY: Arial; VERTICAL-ALIGN: bottom; BORDER-COLLAPSE: collapse; TABLE-LAYOUT: fixed; PADDING-BOTTOM: 0px; FONT-STYLE: normal; PADDING-TOP: 0px; PADDING-LEFT: 2px; PADDING-RIGHT: 0px" cellspacing="0"><tbody style="FONT-SIZE: 8pt; FONT-FAMILY: Arial; BACKGROUND: #ffffff; FONT-STYLE: normal; MARGIN: 0px"><tr style="DISPLAY: none"><td width="212"></td>
+<td width="115"></td>
+<td width="239"></td></tr><tr style="HEIGHT: 17px"><td style="FONT-SIZE: 10pt; BORDER-TOP: #000000 2px solid; FONT-FAMILY: Arial; BORDER-RIGHT: #000000 2px solid; BORDER-BOTTOM: #000000 2px solid; FONT-WEIGHT: bold; FONT-STYLE: normal; TEXT-ALIGN: center; BORDER-LEFT: #000000 2px solid"><span style="WHITE-SPACE: nowrap">Название</span></td>
+<td style="FONT-SIZE: 10pt; BORDER-TOP: #000000 2px solid; FONT-FAMILY: Arial; BORDER-RIGHT: #000000 2px solid; BORDER-BOTTOM: #000000 2px solid; FONT-WEIGHT: bold; FONT-STYLE: normal; TEXT-ALIGN: center; BORDER-LEFT: #000000 2px solid"><span style="WHITE-SPACE: nowrap">Тип</span></td>
+<td style="FONT-SIZE: 10pt; BORDER-TOP: #000000 2px solid; FONT-FAMILY: Arial; BORDER-RIGHT: #000000 2px solid; BORDER-BOTTOM: #000000 2px solid; FONT-WEIGHT: bold; FONT-STYLE: normal; TEXT-ALIGN: center; BORDER-LEFT: #000000 2px solid"><span style="WHITE-SPACE: nowrap">Описание</span></td>
+<td></td></tr><tr style="HEIGHT: 43px"><td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid"><span style="WHITE-SPACE: nowrap">ПолучательПредставление</span></td>
+<td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid"><span style="WHITE-SPACE: nowrap">Строка</span></td>
+<td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid">Наименование организации (сокращенное или полное в зависимости от настроек макета).</td>
+<td></td></tr><tr style="HEIGHT: 15px"><td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid"><span style="WHITE-SPACE: nowrap">ПолучательРС</span></td>
+<td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid"><span style="WHITE-SPACE: nowrap">СправочникСсылка</span></td>
+<td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid"><span style="WHITE-SPACE: nowrap">Банковский счет Организации.</span></td>
+<td></td></tr><tr style="HEIGHT: 15px"><td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid"><span style="WHITE-SPACE: nowrap">ПолучательБанк</span></td>
+<td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid"><span style="WHITE-SPACE: nowrap">Строка</span></td>
+<td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid"><span style="WHITE-SPACE: nowrap">Наименования банка.</span></td>
+<td></td></tr><tr style="HEIGHT: 15px"><td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid"><span style="WHITE-SPACE: nowrap">ПолучательКоррСчет</span></td>
+<td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid"><span style="WHITE-SPACE: nowrap">Строка</span></td>
+<td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid">Номер счета \ БИК</td>
+<td></td></tr><tr style="HEIGHT: 15px"><td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid"><span style="WHITE-SPACE: nowrap">ПолучательКоррСчет2</span></td>
+<td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid"><span style="WHITE-SPACE: nowrap">Строка</span></td>
+<td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid">Номер счета</td>
+<td></td></tr><tr style="HEIGHT: 15px"><td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid"><span style="WHITE-SPACE: nowrap">ПолучательИНН</span></td>
+<td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid"><span style="WHITE-SPACE: nowrap">Строка</span></td>
+<td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid">ИНН организации</td>
+<td></td></tr><tr style="HEIGHT: 15px"><td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid"><span style="WHITE-SPACE: nowrap">ПолучательКПП</span></td>
+<td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid"><span style="WHITE-SPACE: nowrap">Строка</span></td>
+<td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid">КПП организации</td>
+<td></td></tr><tr style="HEIGHT: 29px"><td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid"><span style="WHITE-SPACE: nowrap">Период</span></td>
+<td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid"><span style="WHITE-SPACE: nowrap">Строка</span></td>
+<td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid">Период формирования квитанций (реквизит), формат: "Март 2012г.".</td>
+<td></td></tr><tr style="HEIGHT: 15px"><td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid"><span style="WHITE-SPACE: nowrap">ПолучательАдрес</span></td>
+<td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid"><span style="WHITE-SPACE: nowrap">Строка</span></td>
+<td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid">Юридический адрес организации</td>
+<td></td></tr><tr style="HEIGHT: 15px"><td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid"><span style="WHITE-SPACE: nowrap">ПолучательТелефон</span></td>
+<td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid"><span style="WHITE-SPACE: nowrap">Строка</span></td>
+<td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid">Телефон организации</td>
+<td></td></tr><tr style="HEIGHT: 29px"><td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid"><span style="WHITE-SPACE: nowrap">ПолучательДопИнформация</span></td>
+<td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid"><span style="WHITE-SPACE: nowrap">Строка</span></td>
+<td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid">Информация по организации одной строкой (телефон, факс, e-mail, доп информация)</td>
+<td></td></tr><tr style="HEIGHT: 15px"><td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid"><span style="WHITE-SPACE: nowrap">ПолучательБИК</span></td>
+<td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid"><span style="WHITE-SPACE: nowrap">Строка</span></td>
+<td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid">БИК. </td>
+<td></td></tr><tr style="HEIGHT: 15px"><td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid"><span style="WHITE-SPACE: nowrap">Дата</span></td>
+<td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid"><span style="WHITE-SPACE: nowrap">Дата</span></td>
+<td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid">Период (реквизит)</td>
+<td></td></tr><tr style="HEIGHT: 29px"><td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid"><span style="WHITE-SPACE: nowrap">ДатаПечатиКвитанций</span></td>
+<td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid"><span style="WHITE-SPACE: nowrap">Строка</span></td>
+<td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid">Точная дата печати в формате: ("14 март 2012 г.")</td>
+<td></td></tr><tr style="HEIGHT: 15px"><td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid"><span style="WHITE-SPACE: nowrap">ПериодМесяц</span></td>
+<td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid"><span style="WHITE-SPACE: nowrap">Строка</span></td>
+<td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid">Номер месяца периода печати.</td>
+<td></td></tr><tr style="HEIGHT: 15px"><td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid"><span style="WHITE-SPACE: nowrap">ПериодГод</span></td>
+<td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid"><span style="WHITE-SPACE: nowrap">Строка</span></td>
+<td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid">Год периода печати.</td>
+<td></td></tr><tr style="HEIGHT: 15px"><td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid"><span style="WHITE-SPACE: nowrap">ДатаНачалоМесяца</span></td>
+<td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid"><span style="WHITE-SPACE: nowrap">Дата</span></td>
+<td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid">Дата начала периода печати.</td>
+<td></td></tr><tr style="HEIGHT: 57px"><td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid"><span style="WHITE-SPACE: nowrap">ПолучательПлатежа</span></td>
+<td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid"><span style="WHITE-SPACE: nowrap">СправочникСсылка</span></td>
+<td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid">Получатель платежа - используется при печати платежного документа РК354. Ссылка на элемент справочников Контрагенты или Организации (реквизит).</td>
+<td></td></tr><tr style="HEIGHT: 15px"><td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid"><span style="WHITE-SPACE: nowrap">ПроцентОтОплаты</span></td>
+<td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid"><span style="WHITE-SPACE: nowrap">Число</span></td>
+<td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid">Сумма кассового сбора.</td>
+<td></td></tr><tr style="HEIGHT: 43px"><td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid"><span style="WHITE-SPACE: nowrap">ЛицевойСчетФио</span></td>
+<td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid"><span style="WHITE-SPACE: nowrap">СправочникСсылка</span></td>
+<td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid">Ссылка на справочник Проживающие/Ответственное лицо по лицевому счету.</td>
+<td></td></tr><tr style="HEIGHT: 15px"><td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid"><span style="WHITE-SPACE: nowrap">ЛицевойСчетНомер</span></td>
+<td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid"><span style="WHITE-SPACE: nowrap">Строка</span></td>
+<td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid">Номер лицевого счета</td>
+<td></td></tr><tr style="HEIGHT: 43px"><td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid"><span style="WHITE-SPACE: nowrap">ЛицевойСчетАдрес</span></td>
+<td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid"><span style="WHITE-SPACE: nowrap">Строка</span></td>
+<td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid">Представление адреса лицевого счета. Сформировано по настройкам в параметрах ЖКХ.</td>
+<td></td></tr><tr style="HEIGHT: 15px"><td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid"><span style="WHITE-SPACE: nowrap">КоличествоПроживающих</span></td>
+<td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid"><span style="WHITE-SPACE: nowrap">Число</span></td>
+<td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid">Количество постоянно проживающих.</td>
+<td></td></tr><tr style="HEIGHT: 15px"><td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid"><span style="WHITE-SPACE: nowrap">ОписаниеОбщейПлощади</span></td>
+<td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid"><span style="WHITE-SPACE: nowrap">Число</span></td>
+<td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid">Общая площадь.</td>
+<td></td></tr><tr style="HEIGHT: 15px"><td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid"><span style="WHITE-SPACE: nowrap">ОписаниеЖилойПлощади</span></td>
+<td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid"><span style="WHITE-SPACE: nowrap">Число</span></td>
+<td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid">Жилая площадь.</td>
+<td></td></tr><tr style="HEIGHT: 15px"><td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid"><span style="WHITE-SPACE: nowrap">ОписаниеОтапливаемойПлощади</span></td>
+<td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid"><span style="WHITE-SPACE: nowrap">Число</span></td>
+<td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid">Отапливаемая площадь.</td>
+<td></td></tr><tr style="HEIGHT: 15px"><td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid"><span style="WHITE-SPACE: nowrap">Сальдо</span></td>
+<td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid"><span style="WHITE-SPACE: nowrap">Число</span></td>
+<td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid">Сумма входящего сальдо по ЛС.</td>
+<td></td></tr><tr style="HEIGHT: 29px"><td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid"><span style="WHITE-SPACE: nowrap">СальдоЗнак</span></td>
+<td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid"><span style="WHITE-SPACE: nowrap">Строка</span></td>
+<td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid">Представление знака суммы сальдо минус - переплата, плюс - долг.</td>
+<td></td></tr><tr style="HEIGHT: 15px"><td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid"><span style="WHITE-SPACE: nowrap">СальдоСоЗнаком</span></td>
+<td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid"><span style="WHITE-SPACE: nowrap">Число</span></td>
+<td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid">Модуль сумма входящего сальдо по ЛС </td>
+<td></td></tr><tr style="HEIGHT: 15px"><td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid"><span style="WHITE-SPACE: nowrap">Оплата</span></td>
+<td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid"><span style="WHITE-SPACE: nowrap">Число</span></td>
+<td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid">Сумма оплаты по ЛС.</td>
+<td></td></tr><tr style="HEIGHT: 15px"><td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid"><span style="WHITE-SPACE: nowrap">Льгота</span></td>
+<td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid"><span style="WHITE-SPACE: nowrap">Число</span></td>
+<td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid">Сумма льготы по ЛС.</td>
+<td></td></tr><tr style="HEIGHT: 15px"><td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid"><span style="WHITE-SPACE: nowrap">Разовые</span></td>
+<td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid"><span style="WHITE-SPACE: nowrap">Число</span></td>
+<td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid">Сумма перерасчетов по ЛС.</td>
+<td></td></tr><tr style="HEIGHT: 15px"><td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid"><span style="WHITE-SPACE: nowrap">ЛицевойСчет</span></td>
+<td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid"><span style="WHITE-SPACE: nowrap">СправочникСсылка</span></td>
+<td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid">Ссылка на справочник Лицевые счета.</td>
+<td></td></tr><tr style="HEIGHT: 15px"><td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid"><span style="WHITE-SPACE: nowrap">ИтогПени</span></td>
+<td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid"><span style="WHITE-SPACE: nowrap">Число </span></td>
+<td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid">Сумма пени.</td>
+<td></td></tr><tr style="HEIGHT: 15px"><td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid"><span style="WHITE-SPACE: nowrap">КолЛьготников</span></td>
+<td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid"><span style="WHITE-SPACE: nowrap">Число</span></td>
+<td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid">Количество льготодержателей.</td>
+<td></td></tr><tr style="HEIGHT: 15px"><td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid"><span style="WHITE-SPACE: nowrap">ДатаПоследнейОплаты</span></td>
+<td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid"><span style="WHITE-SPACE: nowrap">Дата</span></td>
+<td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid">Дата введенной последней оплаты.</td>
+<td></td></tr><tr style="HEIGHT: 15px"><td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid"><span style="WHITE-SPACE: nowrap">СтатусКвартиры</span></td>
+<td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid"><span style="WHITE-SPACE: nowrap">СправочникСсылка</span></td>
+<td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid">Ссылка на справочник Статусы квартиры</td>
+<td></td></tr><tr style="HEIGHT: 15px"><td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid"><span style="WHITE-SPACE: nowrap">КоличествоКомнат</span></td>
+<td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid"><span style="WHITE-SPACE: nowrap">Число</span></td>
+<td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid">Количество комнат</td>
+<td></td></tr><tr style="HEIGHT: 29px"><td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid"><span style="WHITE-SPACE: nowrap">Переплата</span></td>
+<td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid"><span style="WHITE-SPACE: nowrap">Число</span></td>
+<td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid">Сумма входящего сальдо + текущие начисления с минусом.</td>
+<td></td></tr><tr style="HEIGHT: 15px"><td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid"><span style="WHITE-SPACE: nowrap">Долг</span></td>
+<td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid"><span style="WHITE-SPACE: nowrap">Число</span></td>
+<td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid">Сумма входящего сальдо с плюсом.</td>
+<td></td></tr><tr style="HEIGHT: 29px"><td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid"><span style="WHITE-SPACE: nowrap">Авансы</span></td>
+<td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid"><span style="WHITE-SPACE: nowrap">Число</span></td>
+<td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid">Сумма входящего сальдо с учетом оплаты со знаком минус.</td>
+<td></td></tr><tr style="HEIGHT: 15px"><td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid"><span style="WHITE-SPACE: nowrap">ПереплатаНаНачало</span></td>
+<td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid"><span style="WHITE-SPACE: nowrap">Число</span></td>
+<td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid">Сумма входящего сальдо с минусом.</td>
+<td></td></tr><tr style="HEIGHT: 15px"><td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid"><span style="WHITE-SPACE: nowrap">Оплата</span></td>
+<td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid"><span style="WHITE-SPACE: nowrap">Число</span></td>
+<td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid">Сумма оплат по ЛС.</td>
+<td></td></tr><tr style="HEIGHT: 15px"><td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid"><span style="WHITE-SPACE: nowrap">Начислено</span></td>
+<td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid"><span style="WHITE-SPACE: nowrap">Число</span></td>
+<td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid">Сумма начислений по ЛС.</td>
+<td></td></tr><tr style="HEIGHT: 29px"><td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid"><span style="WHITE-SPACE: nowrap">КОплате</span></td>
+<td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid"><span style="WHITE-SPACE: nowrap">Число</span></td>
+<td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid">Сумма всех видов начислений по ЛС. Зависит от настроек печати макета.</td>
+<td></td></tr><tr style="HEIGHT: 29px"><td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid"><span style="WHITE-SPACE: nowrap">КОплатеЗаМесяц</span></td>
+<td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid"><span style="WHITE-SPACE: nowrap">Число</span></td>
+<td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid">Сумма всех видов начислений по ЛС. Зависит от настроек печати макета.</td>
+<td></td></tr><tr style="HEIGHT: 15px"><td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid"><span style="WHITE-SPACE: nowrap">ТипКвартиры</span></td>
+<td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid"><span style="WHITE-SPACE: nowrap">СправочникСсылка</span></td>
+<td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid">Ссылка на справочник Типы квартир</td>
+<td></td></tr><tr style="HEIGHT: 15px"><td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid"><span style="WHITE-SPACE: nowrap">ОписаниеЛьгот</span></td>
+<td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid"><span style="WHITE-SPACE: nowrap">Строка</span></td>
+<td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid">Перечисление льгот.</td>
+<td></td></tr><tr style="HEIGHT: 43px"><td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid"><span style="WHITE-SPACE: nowrap">ОписаниеСложнойЛьготы</span></td>
+<td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid"><span style="WHITE-SPACE: nowrap">Строка</span></td>
+<td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid">Перечисление льгот в случае если количество льгот больше 1 содержит сообщение "Сложная льгота".</td>
+<td></td></tr><tr style="HEIGHT: 43px"><td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid"><span style="WHITE-SPACE: nowrap">ГруппироватьУслуги</span></td>
+<td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid"><span style="WHITE-SPACE: nowrap">Булево</span></td>
+<td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid">Настройка печати лицевого счета, признак отображения услуг в группах. (Не используется в макетах).</td>
+<td></td></tr><tr style="HEIGHT: 43px"><td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid"><span style="WHITE-SPACE: nowrap">ПечатьЗависимыхЛС</span></td>
+<td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid"><span style="WHITE-SPACE: nowrap">Булево</span></td>
+<td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid">Настройка печати лицевого счета, признак порядка печати лицевых счетов. (Не используется в макетах).</td>
+<td></td></tr><tr style="HEIGHT: 29px"><td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid"><span style="WHITE-SPACE: nowrap">ДолгСУчетомОплаты</span></td>
+<td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid"><span style="WHITE-SPACE: nowrap">Число</span></td>
+<td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid">Сумма входящего сальдо с учетом оплаты со знаком плюс.</td>
+<td></td></tr><tr style="HEIGHT: 29px"><td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid"><span style="WHITE-SPACE: nowrap">РежимРаботы</span></td>
+<td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid"><span style="WHITE-SPACE: nowrap">Строка</span></td>
+<td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid">Режим работы Организации из параметров ЖКХ.</td>
+<td></td></tr><tr style="HEIGHT: 15px"><td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid"><span style="WHITE-SPACE: nowrap">ИтогоКОплатеСУчетомПредоплаты</span></td>
+<td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid"><span style="WHITE-SPACE: nowrap">Число</span></td>
+<td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid">Сумма полей : КОплате,ПроцентОтОплаты.</td>
+<td></td></tr><tr style="HEIGHT: 29px"><td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid"><span style="WHITE-SPACE: nowrap">ИтогоКОплатеСУчетомПени</span></td>
+<td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid"><span style="WHITE-SPACE: nowrap">Число</span></td>
+<td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid">Сумма полей : КОплате,ПроцентОтОплаты, ИтогоПени.</td>
+<td></td></tr></tbody></table></div>
+<p class="Usual" style="MARGIN-RIGHT: 0px" dir="ltr"></p><!-- Описание стиля -->
+<style type="text/css" media="screen,projection">#content2 {
+	WIDTH: 500px; DISPLAY: none
+}
+</style><!-- Спойлер Таблица начислений --><a onclick="spoiler('content2');" href="javascript://">Строка: Таблица начислений </a>
+<div id="content2">
+<table style="FONT-SIZE: 8pt; OVERFLOW: visible; FONT-FAMILY: Arial; VERTICAL-ALIGN: bottom; BORDER-COLLAPSE: collapse; TABLE-LAYOUT: fixed; PADDING-BOTTOM: 0px; FONT-STYLE: normal; PADDING-TOP: 0px; PADDING-LEFT: 2px; PADDING-RIGHT: 0px" cellspacing="0"><tbody style="FONT-SIZE: 8pt; FONT-FAMILY: Arial; BACKGROUND: #ffffff; FONT-STYLE: normal; MARGIN: 0px"><tr style="DISPLAY: none"><td width="175"></td>
+<td width="115"></td>
+<td width="209"></td></tr><tr style="HEIGHT: 17px"><td style="FONT-SIZE: 10pt; BORDER-TOP: #000000 2px solid; FONT-FAMILY: Arial; BORDER-RIGHT: #000000 2px solid; BORDER-BOTTOM: #000000 2px solid; FONT-WEIGHT: bold; FONT-STYLE: normal; TEXT-ALIGN: center; BORDER-LEFT: #000000 2px solid"><span style="WHITE-SPACE: nowrap">Название</span></td>
+<td style="FONT-SIZE: 10pt; BORDER-TOP: #000000 2px solid; FONT-FAMILY: Arial; BORDER-RIGHT: #000000 2px solid; BORDER-BOTTOM: #000000 2px solid; FONT-WEIGHT: bold; FONT-STYLE: normal; TEXT-ALIGN: center; BORDER-LEFT: #000000 2px solid"><span style="WHITE-SPACE: nowrap">Тип</span></td>
+<td style="FONT-SIZE: 10pt; BORDER-TOP: #000000 2px solid; FONT-FAMILY: Arial; BORDER-RIGHT: #000000 2px solid; BORDER-BOTTOM: #000000 2px solid; FONT-WEIGHT: bold; FONT-STYLE: normal; TEXT-ALIGN: center; BORDER-LEFT: #000000 2px solid"><span style="WHITE-SPACE: nowrap">Описание</span></td>
+<td></td></tr><tr style="HEIGHT: 15px"><td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid"><span style="WHITE-SPACE: nowrap">Услуга</span></td>
+<td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid"><span style="WHITE-SPACE: nowrap">СправочникСсылка</span></td>
+<td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid">Ссылка на справочник Услуги ЖКХ.</td>
+<td></td></tr><tr style="HEIGHT: 15px"><td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid"><span style="WHITE-SPACE: nowrap">ГруппаУслуги</span></td>
+<td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid"><span style="WHITE-SPACE: nowrap">СправочникСсылка</span></td>
+<td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid">Ссылка на справочник Группы услуг.</td>
+<td></td></tr><tr style="HEIGHT: 15px"><td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid"><span style="WHITE-SPACE: nowrap">Сальдо</span></td>
+<td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid"><span style="WHITE-SPACE: nowrap">Число</span></td>
+<td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid">Входящее сальдо по услуге</td>
+<td></td></tr><tr style="HEIGHT: 29px"><td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid"><span style="WHITE-SPACE: nowrap">ЕдИзм</span></td>
+<td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid"><span style="WHITE-SPACE: nowrap">СправочникСсылка</span></td>
+<td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid">Ссылка на справочник Классификатор единиц измерения</td>
+<td></td></tr><tr style="HEIGHT: 29px"><td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid"><span style="WHITE-SPACE: nowrap">Количество</span></td>
+<td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid"><span style="WHITE-SPACE: nowrap">Число</span></td>
+<td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid">Фактическое количество по способу расчета для начислений</td>
+<td></td></tr><tr style="HEIGHT: 15px"><td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid"><span style="WHITE-SPACE: nowrap">Пени</span></td>
+<td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid"><span style="WHITE-SPACE: nowrap">Число</span></td>
+<td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid">Сумма пени по услуге</td>
+<td></td></tr><tr style="HEIGHT: 15px"><td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid"><span style="WHITE-SPACE: nowrap">Ставка</span></td>
+<td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid"><span style="WHITE-SPACE: nowrap">Число</span></td>
+<td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid">Основная ставка по услуге</td>
+<td></td></tr><tr style="HEIGHT: 15px"><td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid"><span style="WHITE-SPACE: nowrap">Начислено</span></td>
+<td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid"><span style="WHITE-SPACE: nowrap">Число</span></td>
+<td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid">Сумма начислений по услуге</td>
+<td></td></tr><tr style="HEIGHT: 15px"><td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid"><span style="WHITE-SPACE: nowrap">Льгота</span></td>
+<td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid"><span style="WHITE-SPACE: nowrap">Число</span></td>
+<td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid">Сумма льгот по услуге</td>
+<td></td></tr><tr style="HEIGHT: 15px"><td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid"><span style="WHITE-SPACE: nowrap">Оплата</span></td>
+<td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid"><span style="WHITE-SPACE: nowrap">Число</span></td>
+<td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid">Сумма оплат в периоде по услуге</td>
+<td></td></tr><tr style="HEIGHT: 15px"><td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid"><span style="WHITE-SPACE: nowrap">Разовые</span></td>
+<td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid"><span style="WHITE-SPACE: nowrap">Число</span></td>
+<td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid">Сумма разовых по услуге</td>
+<td></td></tr><tr style="HEIGHT: 43px"><td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid"><span style="WHITE-SPACE: nowrap">КОплатеЗаМесяц</span></td>
+<td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid"><span style="WHITE-SPACE: nowrap">Число</span></td>
+<td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid">Сумма всех видов начислений по Услуге за месяц. Зависит от настроек печати макета.</td>
+<td></td></tr><tr style="HEIGHT: 43px"><td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid"><span style="WHITE-SPACE: nowrap">КОплате</span></td>
+<td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid"><span style="WHITE-SPACE: nowrap">Число</span></td>
+<td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid">Сумма всех видов начислений по Услуге с учетом входящего сальдо. Зависит от настроек печати макета.</td>
+<td></td></tr><tr style="HEIGHT: 15px"><td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid"><span style="WHITE-SPACE: nowrap">Долг</span></td>
+<td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid"><span style="WHITE-SPACE: nowrap">Число</span></td>
+<td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid">Сумма входящего сальдо с плюсом.</td>
+<td></td></tr><tr style="HEIGHT: 15px"><td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid"><span style="WHITE-SPACE: nowrap">ПереплатаНаНачало</span></td>
+<td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid"><span style="WHITE-SPACE: nowrap">Число</span></td>
+<td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid">Сумма входящего сальдо с минусом.</td>
+<td></td></tr><tr style="HEIGHT: 15px"><td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid"><span style="WHITE-SPACE: nowrap">Поставщик</span></td>
+<td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid"><span style="WHITE-SPACE: nowrap">СправочникСсылка</span></td>
+<td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid">Ссылка на справочник Поставщики</td>
+<td></td></tr><tr style="HEIGHT: 15px"><td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid"><span style="WHITE-SPACE: nowrap">Приоритет</span></td>
+<td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid"><span style="WHITE-SPACE: nowrap">Число</span></td>
+<td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid">Приоритет услуги.</td>
+<td></td></tr><tr style="HEIGHT: 15px"><td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid"><span style="WHITE-SPACE: nowrap">ПриоритетГруп</span></td>
+<td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid"><span style="WHITE-SPACE: nowrap">Число</span></td>
+<td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid">Приоритет группы услуги.</td>
+<td></td></tr><tr style="HEIGHT: 15px"><td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid"><span style="WHITE-SPACE: nowrap">Тариф</span></td>
+<td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid"><span style="WHITE-SPACE: nowrap">Число</span></td>
+<td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid">Тариф по услуге</td>
+<td></td></tr><tr style="HEIGHT: 29px"><td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid"><span style="WHITE-SPACE: nowrap">НастройкаСтавки</span></td>
+<td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid"><span style="WHITE-SPACE: nowrap">Число</span></td>
+<td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid">Значение настройки поля ставки из настроек печати макета.</td>
+<td></td></tr><tr style="HEIGHT: 15px"><td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid"><span style="WHITE-SPACE: nowrap">Объем</span></td>
+<td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid"><span style="WHITE-SPACE: nowrap">Число</span></td>
+<td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid">Объем по услуге.</td>
+<td></td></tr><tr style="HEIGHT: 15px"><td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid"><span style="WHITE-SPACE: nowrap">Норматив</span></td>
+<td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid"><span style="WHITE-SPACE: nowrap">Число</span></td>
+<td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid">Норматив</td>
+<td></td></tr><tr style="HEIGHT: 43px"><td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid"><span style="WHITE-SPACE: nowrap">УслугаПредставление</span></td>
+<td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid"><span style="WHITE-SPACE: nowrap">Строка</span></td>
+<td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid">Представление наименования услуги полное или сокращенное зависит от настроек печати макета.</td>
+<td></td></tr><tr style="HEIGHT: 29px"><td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid">ОбъемИНД</td>
+<td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid">Число</td>
+<td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid">Объем по индивидуальным начислениям.</td>
+<td></td></tr><tr style="HEIGHT: 15px"><td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid"><span style="WHITE-SPACE: nowrap">ОбъемОбщДом</span></td>
+<td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid"><span style="WHITE-SPACE: nowrap">Число</span></td>
+<td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid">Объем по общедомовым начислениям.</td>
+<td></td></tr><tr style="HEIGHT: 29px"><td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid"><span style="WHITE-SPACE: nowrap">НачисленоИНД</span></td>
+<td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid"><span style="WHITE-SPACE: nowrap">Число</span></td>
+<td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid">Сумма по индивидуальным начислениям.</td>
+<td></td></tr><tr style="HEIGHT: 15px"><td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid"><span style="WHITE-SPACE: nowrap">НачисленоОбщДом</span></td>
+<td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid"><span style="WHITE-SPACE: nowrap">Число</span></td>
+<td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid">Сумма по общедомовым начислениям.</td>
+<td></td></tr><tr style="HEIGHT: 29px"><td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid"><span style="WHITE-SPACE: nowrap">НормативИНД</span></td>
+<td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid"><span style="WHITE-SPACE: nowrap">Число</span></td>
+<td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid">Норматив по индивидуальным начислениям.</td>
+<td></td></tr><tr style="HEIGHT: 29px"><td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid"><span style="WHITE-SPACE: nowrap">НормативОбщДом</span></td>
+<td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid"><span style="WHITE-SPACE: nowrap">Число</span></td>
+<td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid">Норматив по общедомовым начислениям.</td>
+<td></td></tr><tr style="HEIGHT: 29px"><td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid"><span style="WHITE-SPACE: nowrap">КоличествоЕдиницИНД</span></td>
+<td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid"><span style="WHITE-SPACE: nowrap">Число</span></td>
+<td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid">Факт по индивидуальным начислениям.</td>
+<td></td></tr><tr style="HEIGHT: 15px"><td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid"><span style="WHITE-SPACE: nowrap">КоличествоЕдиницГУРП</span></td>
+<td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid"><span style="WHITE-SPACE: nowrap">Число</span></td>
+<td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid">Факт по общедомовым начислениям</td>
+<td></td></tr><tr style="HEIGHT: 29px"><td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid"><span style="WHITE-SPACE: nowrap">ИтогоОбъекмИнд</span></td>
+<td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid"><span style="WHITE-SPACE: nowrap">Число</span></td>
+<td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid">Объем по зданию по индивидуальным начислениям.</td>
+<td></td></tr><tr style="HEIGHT: 29px"><td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid"><span style="WHITE-SPACE: nowrap">ИтогоОбъемОбщедомовых</span></td>
+<td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid"><span style="WHITE-SPACE: nowrap">Число</span></td>
+<td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid">Объем по зданию по общедомовым начислениям.</td>
+<td></td></tr></tbody></table></div>
+<p class="Usual" style="MARGIN-RIGHT: 0px" dir="ltr"></p>
+<style type="text/css" media="screen,projection">#content3 {
+	WIDTH: 500px; DISPLAY: none
+}
+</style><!-- Спойлер Таблица начислений --><a onclick="spoiler('content3');" href="javascript://">Строка: Таблица счетчиков </a>
+<div id="content3">
+<table style="FONT-SIZE: 8pt; OVERFLOW: visible; FONT-FAMILY: Arial; VERTICAL-ALIGN: bottom; BORDER-COLLAPSE: collapse; TABLE-LAYOUT: fixed; PADDING-BOTTOM: 0px; FONT-STYLE: normal; PADDING-TOP: 0px; PADDING-LEFT: 2px; PADDING-RIGHT: 0px" cellspacing="0"><tbody style="FONT-SIZE: 8pt; FONT-FAMILY: Arial; BACKGROUND: #ffffff; FONT-STYLE: normal; MARGIN: 0px"><tr style="DISPLAY: none"><td width="222"></td>
+<td width="125"></td>
+<td width="190"></td></tr><tr style="HEIGHT: 17px"><td style="FONT-SIZE: 10pt; BORDER-TOP: #000000 2px solid; FONT-FAMILY: Arial; BORDER-RIGHT: #000000 2px solid; BORDER-BOTTOM: #000000 2px solid; FONT-WEIGHT: bold; FONT-STYLE: normal; TEXT-ALIGN: center; BORDER-LEFT: #000000 2px solid"><span style="WHITE-SPACE: nowrap">Название</span></td>
+<td style="FONT-SIZE: 10pt; BORDER-TOP: #000000 2px solid; FONT-FAMILY: Arial; BORDER-RIGHT: #000000 2px solid; BORDER-BOTTOM: #000000 2px solid; FONT-WEIGHT: bold; FONT-STYLE: normal; TEXT-ALIGN: center; BORDER-LEFT: #000000 2px solid"><span style="WHITE-SPACE: nowrap">Тип</span></td>
+<td style="FONT-SIZE: 10pt; BORDER-TOP: #000000 2px solid; FONT-FAMILY: Arial; BORDER-RIGHT: #000000 2px solid; BORDER-BOTTOM: #000000 2px solid; FONT-WEIGHT: bold; FONT-STYLE: normal; TEXT-ALIGN: center; BORDER-LEFT: #000000 2px solid"><span style="WHITE-SPACE: nowrap">Описание</span></td>
+<td></td></tr><tr style="HEIGHT: 29px"><td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid"><span style="WHITE-SPACE: nowrap">ЛицевойСчет</span></td>
+<td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid"><span style="WHITE-SPACE: nowrap">СправочникСсылка</span></td>
+<td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid">Ссылка на справочник Лицевые счета</td>
+<td></td></tr><tr style="HEIGHT: 15px"><td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid"><span style="WHITE-SPACE: nowrap">Счетчик</span></td>
+<td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid"><span style="WHITE-SPACE: nowrap">СправочникСсылка</span></td>
+<td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid">Ссылка на справочник Счетчики</td>
+<td></td></tr><tr style="HEIGHT: 15px"><td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid"><span style="WHITE-SPACE: nowrap">Услуга</span></td>
+<td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid"><span style="WHITE-SPACE: nowrap">СправочникСсылка</span></td>
+<td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid">Ссылка на справочник Услуги ЖКХ</td>
+<td></td></tr><tr style="HEIGHT: 15px"><td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid"><span style="WHITE-SPACE: nowrap">Приоритет</span></td>
+<td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid"><span style="WHITE-SPACE: nowrap">Число</span></td>
+<td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid">Приоритет услуги.</td>
+<td></td></tr><tr style="HEIGHT: 15px"><td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid"><span style="WHITE-SPACE: nowrap">ДоПоказаний</span></td>
+<td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid"><span style="WHITE-SPACE: nowrap">Число</span></td>
+<td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid">Конечные показания по счетчику.</td>
+<td></td></tr><tr style="HEIGHT: 29px"><td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid"><span style="WHITE-SPACE: nowrap">ОтПоказаний</span></td>
+<td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid"><span style="WHITE-SPACE: nowrap">Число</span></td>
+<td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid">Предыдущие показания по счетчику.</td>
+<td></td></tr><tr style="HEIGHT: 15px"><td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid"><span style="WHITE-SPACE: nowrap">КоличествоЕдиниц</span></td>
+<td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid"><span style="WHITE-SPACE: nowrap">Число</span></td>
+<td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid">Фактическое потребление.</td>
+<td></td></tr><tr style="HEIGHT: 29px"><td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid"><span style="WHITE-SPACE: nowrap">Многотарифный</span></td>
+<td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid"><span style="WHITE-SPACE: nowrap">Булево</span></td>
+<td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid">Признак многотарифности счетчика.</td>
+<td></td></tr><tr style="HEIGHT: 29px"><td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid"><span style="WHITE-SPACE: nowrap">СокрНаименование</span></td>
+<td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid"><span style="WHITE-SPACE: nowrap">Строка</span></td>
+<td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid">Сокращенное наименование услуги.</td>
+<td></td></tr><tr style="HEIGHT: 29px"><td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid"><span style="WHITE-SPACE: nowrap">НормативИнд</span></td>
+<td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid"><span style="WHITE-SPACE: nowrap">Число</span></td>
+<td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid">Норматив по индивидуальным услугам.</td>
+<td></td></tr><tr style="HEIGHT: 29px"><td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid"><span style="WHITE-SPACE: nowrap">НормативОбщДом</span></td>
+<td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid"><span style="WHITE-SPACE: nowrap">Число</span></td>
+<td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid">Норматив по общедомовым услугам.</td>
+<td></td></tr><tr style="HEIGHT: 15px"><td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid"><span style="WHITE-SPACE: nowrap">ОбъемОбщДом</span></td>
+<td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid"><span style="WHITE-SPACE: nowrap">Число</span></td>
+<td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid">Объем по общедомовым услугам.</td>
+<td></td></tr><tr style="HEIGHT: 29px"><td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid"><span style="WHITE-SPACE: nowrap">ОбъемИнд</span></td>
+<td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid"><span style="WHITE-SPACE: nowrap">Число</span></td>
+<td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid">Объем по индивидуальным услугам.</td>
+<td></td></tr><tr style="HEIGHT: 29px"><td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid"><span style="WHITE-SPACE: nowrap">ДоПоказанийИнд</span></td>
+<td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid"><span style="WHITE-SPACE: nowrap">Число</span></td>
+<td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid">Конечные показания по индивидуальным услугам.</td>
+<td></td></tr><tr style="HEIGHT: 29px"><td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid"><span style="WHITE-SPACE: nowrap">ДоПоказанийОбщДом</span></td>
+<td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid"><span style="WHITE-SPACE: nowrap">Число</span></td>
+<td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; VERTICAL-ALIGN: top; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid">Конечные показания по общедомовым услугам.</td>
+<td></td></tr></tbody></table></div>
+<p class="Usual" style="MARGIN-RIGHT: 0px" dir="ltr"></p>
+<style type="text/css" media="screen,projection">#content4 {
+	WIDTH: 500px; DISPLAY: none
+}
+</style><!-- Спойлер Таблица начислений --><a onclick="spoiler('content4');" href="javascript://">Строка: Таблица перерасчетов </a>
+<div id="content4">
+<table style="FONT-SIZE: 8pt; OVERFLOW: visible; FONT-FAMILY: Arial; VERTICAL-ALIGN: bottom; BORDER-COLLAPSE: collapse; TABLE-LAYOUT: fixed; PADDING-BOTTOM: 0px; FONT-STYLE: normal; PADDING-TOP: 0px; PADDING-LEFT: 2px; PADDING-RIGHT: 0px" cellspacing="0"><tbody style="FONT-SIZE: 8pt; FONT-FAMILY: Arial; BACKGROUND: #ffffff; FONT-STYLE: normal; MARGIN: 0px"><tr style="DISPLAY: none"><td width="143"></td>
+<td width="124"></td>
+<td width="189"></td></tr><tr style="HEIGHT: 17px"><td style="FONT-SIZE: 10pt; BORDER-TOP: #000000 2px solid; FONT-FAMILY: Arial; BORDER-RIGHT: #000000 2px solid; BORDER-BOTTOM: #000000 2px solid; FONT-WEIGHT: bold; FONT-STYLE: normal; TEXT-ALIGN: center; BORDER-LEFT: #000000 2px solid"><span style="WHITE-SPACE: nowrap">Название</span></td>
+<td style="FONT-SIZE: 10pt; BORDER-TOP: #000000 2px solid; FONT-FAMILY: Arial; BORDER-RIGHT: #000000 2px solid; BORDER-BOTTOM: #000000 2px solid; FONT-WEIGHT: bold; FONT-STYLE: normal; TEXT-ALIGN: center; BORDER-LEFT: #000000 2px solid"><span style="WHITE-SPACE: nowrap">Тип</span></td>
+<td style="FONT-SIZE: 10pt; BORDER-TOP: #000000 2px solid; FONT-FAMILY: Arial; BORDER-RIGHT: #000000 2px solid; BORDER-BOTTOM: #000000 2px solid; FONT-WEIGHT: bold; FONT-STYLE: normal; TEXT-ALIGN: center; BORDER-LEFT: #000000 2px solid"><span style="WHITE-SPACE: nowrap">Описание</span></td>
+<td></td></tr><tr style="HEIGHT: 15px"><td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid"><span style="WHITE-SPACE: nowrap">Услуга</span></td>
+<td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid"><span style="WHITE-SPACE: nowrap">СправочникСсылка</span></td>
+<td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid"><span style="WHITE-SPACE: nowrap">Ссылка на справочник Услуги ЖКХ.</span></td>
+<td></td></tr><tr style="HEIGHT: 15px"><td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid"><span style="WHITE-SPACE: nowrap">Основание</span></td>
+<td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid"><span style="WHITE-SPACE: nowrap">Строка</span></td>
+<td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid"><span style="WHITE-SPACE: nowrap">Описание основания перерасчета.</span></td>
+<td></td></tr><tr style="HEIGHT: 15px"><td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid"><span style="WHITE-SPACE: nowrap">Сумма</span></td>
+<td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid"><span style="WHITE-SPACE: nowrap">Число</span></td>
+<td style="BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid"><span style="WHITE-SPACE: nowrap">Сумма перерасчета по услуге.</span></td>
+<td></td></tr></tbody></table></div>
+<p></p>
+<style type="text/css" media="screen,projection">#content5 {
+	WIDTH: 500px; DISPLAY: none
+}
+</style><a onclick="spoiler('content5');" href="javascript://"><strong>Описание пользовательской функции:</strong> </a>
+<div id="content5" style="HEIGHT: 26px; WIDTH: 706px">
+<p class="Usual">Код пользовательской функции испольняется в модуле объекта обработки Печать счет-извещени. При описании функции печати используются следующие переменные:</p>
+<ul><li>
+<div>мКэшОрганизации  Экспорт             Структура  - хранит информацию по организации</div>
+</li><li>
+<div>мКэшПараметрыЖКХ Экспорт           Структура  - хранит параметры учета ЖУХ и настройки печати.</div>
+</li><li>
+<div>мНастройкиМакета Экспорт              СправочникСсылка, Структура - Хранит настройки печати макета.</div>
+</li><li>
+<div>мОсновнойВариантМакета Экспорт   СправочникСсылка - Хранит основной вариант макета.</div>
+</li><li>
+<div>мВнешняяКомпонента                       COMОбъект  - хранит внешнюю компоненту формирования ШтрихКода</div>
+</li><li>
+<div>мСтруктураДанных                          Структура  - хранит данные шапки печатных документов.</div>
+</li><li>
+<div>мТаблицаПечати                              Таблица значений - Таблица начислений по лицевому счету.</div>
+</li><li>
+<div>мТаблицаПечатиСчетчиков              Таблица значений - Таблица приборов учета.</div>
+</li><li>
+<div>мТаблицаПерерасчетов                   Таблица значений - Таблица перерасчетов по лицевому счету.</div>
+</li><li>
+<div>мМакет                                           Табличный документ - Текущий макет печати</div></li></ul><p class="Usual">Функция возвращает сформированый табличный документа содержащий данные по одному лицевому счету.</p></div></blockquote></body></html>

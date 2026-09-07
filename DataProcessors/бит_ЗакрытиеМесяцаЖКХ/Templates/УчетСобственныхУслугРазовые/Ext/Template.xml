@@ -1,0 +1,279 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<DataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcscom="http://v8.1c.ru/8.1/data-composition-system/common" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataSource>
+		<name>ИсточникДанных1</name>
+		<dataSourceType>Local</dataSourceType>
+	</dataSource>
+	<dataSet xsi:type="DataSetQuery">
+		<name>НаборДанных</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Контрагент</dataPath>
+			<field>Контрагент</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СчетКУ</dataPath>
+			<field>СчетКУ</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Документ</dataPath>
+			<field>Документ</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Документ</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Услуга</dataPath>
+			<field>Услуга</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Здание</dataPath>
+			<field>Здание</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Здание</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Улица</dataPath>
+			<field>Улица</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Улица</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Участок</dataPath>
+			<field>Участок</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Участок</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Начислено</dataPath>
+			<field>Начислено</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Начислено</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Район</dataPath>
+			<field>Район</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Район</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СчетАбонента</dataPath>
+			<field>СчетАбонента</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ЛицевойСчет</dataPath>
+			<field>ЛицевойСчет</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СубконтоКУ1</dataPath>
+			<field>СубконтоКУ1</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СубконтоКУ2</dataPath>
+			<field>СубконтоКУ2</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СубконтоКУ3</dataPath>
+			<field>СубконтоКУ3</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Субконто1</dataPath>
+			<field>Субконто1</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Субконто2</dataPath>
+			<field>Субконто2</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Субконто3</dataPath>
+			<field>Субконто3</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДоговорКонтрагента</dataPath>
+			<field>ДоговорКонтрагента</field>
+		</field>
+		<dataSource>ИсточникДанных1</dataSource>
+		<query>ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	бит_РазовыеПоУслугамЖКХСписокУслуг.Ссылка КАК Документ,
+	ВЫБОР
+		КОГДА НЕ бит_РазовыеПоУслугамЖКХСписокУслуг.Ссылка.ЛицевойСчет = ЗНАЧЕНИЕ(Справочник.бит_ЛицевыеСчета.ПустаяСсылка)
+			ТОГДА бит_РазовыеПоУслугамЖКХСписокУслуг.Ссылка.ЛицевойСчет
+		ИНАЧЕ бит_РазовыеПоУслугамЖКХСписокУслуг.ЛицевойСчет
+	КОНЕЦ КАК ЛицевойСчет,
+	бит_РазовыеПоУслугамЖКХСписокУслуг.Услуга КАК Услуга,
+	бит_РазовыеПоУслугамЖКХСписокУслуг.Сумма КАК Начислено,
+	бит_РазовыеПоУслугамЖКХСписокУслуг.СчетАбонента КАК СчетАбонента,
+	бит_РазовыеПоУслугамЖКХСписокУслуг.Субконто1 КАК Субконто1,
+	бит_РазовыеПоУслугамЖКХСписокУслуг.Субконто2 КАК Субконто2,
+	бит_РазовыеПоУслугамЖКХСписокУслуг.Субконто3 КАК Субконто3,
+	бит_РазовыеПоУслугамЖКХСписокУслуг.СчетКУ КАК СчетКУ,
+	бит_РазовыеПоУслугамЖКХСписокУслуг.СубконтоКУ1 КАК СубконтоКУ1,
+	бит_РазовыеПоУслугамЖКХСписокУслуг.СубконтоКУ2 КАК СубконтоКУ2,
+	бит_РазовыеПоУслугамЖКХСписокУслуг.СубконтоКУ3 КАК СубконтоКУ3,
+	бит_РазовыеПоУслугамЖКХСписокУслуг.ЛицевойСчет.УлицаЛицевогоСчета КАК Улица,
+	бит_РазовыеПоУслугамЖКХСписокУслуг.ЛицевойСчет.Здание КАК Здание,
+	бит_РазовыеПоУслугамЖКХСписокУслуг.ЛицевойСчет.Здание.Район КАК Район,
+	бит_РазовыеПоУслугамЖКХСписокУслуг.ЛицевойСчет.Здание.Участок КАК Участок
+ПОМЕСТИТЬ ОсновнаяТаблица
+ИЗ
+	Документ.бит_РазовыеПоУслугамЖКХ.СписокУслуг КАК бит_РазовыеПоУслугамЖКХСписокУслуг
+ГДЕ
+	бит_РазовыеПоУслугамЖКХСписокУслуг.Ссылка.Дата МЕЖДУ НАЧАЛОПЕРИОДА(&amp;Дата, МЕСЯЦ) И КОНЕЦПЕРИОДА(&amp;Дата, МЕСЯЦ)
+	И бит_РазовыеПоУслугамЖКХСписокУслуг.Ссылка.Организация = &amp;Организация
+	И (бит_РазовыеПоУслугамЖКХСписокУслуг.СчетКУ = ЗНАЧЕНИЕ(ПланСчетов.Хозрасчетный.ВыручкаНеЕНВД)
+			ИЛИ бит_РазовыеПоУслугамЖКХСписокУслуг.СчетКУ = ЗНАЧЕНИЕ(ПланСчетов.Хозрасчетный.ВыручкаЕНВД))
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	бит_ПроживающиеПоЛССрезПоследних.ЛицевойСчет,
+	бит_ОтветственныеЛицаПоКУСрезПоследних.Контрагент,
+	бит_ОтветственныеЛицаПоКУСрезПоследних.ДоговорКонтрагента
+ПОМЕСТИТЬ КонтрагентыПоОтвЛицам
+ИЗ
+	РегистрСведений.бит_ПроживающиеПоЛС.СрезПоследних(&amp;Дата, ЛицевойСчет.Организация = &amp;Организация) КАК бит_ПроживающиеПоЛССрезПоследних
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.бит_ОтветственныеЛицаПоКУ.СрезПоследних(&amp;Дата, ЛицевойСчет.Организация = &amp;Организация) КАК бит_ОтветственныеЛицаПоКУСрезПоследних
+		ПО бит_ПроживающиеПоЛССрезПоследних.ЛицевойСчет = бит_ОтветственныеЛицаПоКУСрезПоследних.ЛицевойСчет
+			И бит_ПроживающиеПоЛССрезПоследних.ФизЛицо = бит_ОтветственныеЛицаПоКУСрезПоследних.ФизЛицо
+ГДЕ
+	(бит_ПроживающиеПоЛССрезПоследних.ДатаСнятияСРегистрации &gt; &amp;Дата
+			ИЛИ бит_ПроживающиеПоЛССрезПоследних.ДатаСнятияСРегистрации = ДАТАВРЕМЯ(1, 1, 1))
+	И бит_ПроживающиеПоЛССрезПоследних.СтепеньРодства = ЗНАЧЕНИЕ(Справочник.бит_СтепениРодстваФизЛиц.бит_ОтветственноеЛицо)
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	КонтрагентыПоОтвЛицам.Контрагент,
+	ОсновнаяТаблица.Документ,
+	ОсновнаяТаблица.ЛицевойСчет,
+	ОсновнаяТаблица.Услуга,
+	ОсновнаяТаблица.Начислено,
+	ОсновнаяТаблица.СчетАбонента,
+	ОсновнаяТаблица.Субконто1,
+	ОсновнаяТаблица.Субконто2,
+	ОсновнаяТаблица.Субконто3,
+	ОсновнаяТаблица.СчетКУ,
+	ОсновнаяТаблица.СубконтоКУ1,
+	ОсновнаяТаблица.СубконтоКУ2,
+	ОсновнаяТаблица.СубконтоКУ3,
+	ОсновнаяТаблица.Улица,
+	ОсновнаяТаблица.Здание,
+	ОсновнаяТаблица.Район,
+	ОсновнаяТаблица.Участок,
+	КонтрагентыПоОтвЛицам.ДоговорКонтрагента
+ИЗ
+	ОсновнаяТаблица КАК ОсновнаяТаблица
+		ЛЕВОЕ СОЕДИНЕНИЕ КонтрагентыПоОтвЛицам КАК КонтрагентыПоОтвЛицам
+		ПО ОсновнаяТаблица.ЛицевойСчет = КонтрагентыПоОтвЛицам.ЛицевойСчет</query>
+	</dataSet>
+	<parameter>
+		<name>Дата</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Дата</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<parameter>
+		<name>Организация</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Организация</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.Организации</v8:Type>
+		</valueType>
+		<value xsi:type="dcscor:DesignTimeValue">Справочник.Организации.ПустаяСсылка</value>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<parameter>
+		<name>Период</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Период</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>false</useRestriction>
+	</parameter>
+	<settingsVariant>
+		<dcsset:name>Основной</dcsset:name>
+		<dcsset:presentation xsi:type="xs:string">Основной</dcsset:presentation>
+		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+			<dcsset:filter>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">Район</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+					<dcsset:right xsi:type="dcscor:DesignTimeValue">Справочник.бит_АдминистративныеОкруга.ПустаяСсылка</dcsset:right>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">Участок</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+					<dcsset:right xsi:type="dcscor:DesignTimeValue">Справочник.бит_ТехническиеУчастки.ПустаяСсылка</dcsset:right>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">Улица</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+					<dcsset:right xsi:type="dcscor:DesignTimeValue">Справочник.бит_СписокУлиц.ПустаяСсылка</dcsset:right>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">Здание</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+					<dcsset:right xsi:type="dcscor:DesignTimeValue">Справочник.бит_СписокЗданий.ПустаяСсылка</dcsset:right>
+				</dcsset:item>
+			</dcsset:filter>
+			<dcsset:item xsi:type="dcsset:StructureItemGroup">
+				<dcsset:order>
+					<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+				</dcsset:order>
+				<dcsset:selection>
+					<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+				</dcsset:selection>
+			</dcsset:item>
+		</dcsset:settings>
+	</settingsVariant>
+</DataCompositionSchema>

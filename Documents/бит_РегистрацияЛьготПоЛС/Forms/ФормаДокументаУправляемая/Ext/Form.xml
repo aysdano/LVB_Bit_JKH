@@ -1,0 +1,437 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.18">
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<AutoTime>CurrentOrLast</AutoTime>
+	<UsePostingMode>Auto</UsePostingMode>
+	<RepostOnWrite>true</RepostOnWrite>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="AfterWrite">ПослеЗаписи</Event>
+		<Event name="ChoiceProcessing">ОбработкаВыбора</Event>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+		<Event name="OnClose">ПриЗакрытии</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="Группа1" id="38">
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="Группа1ExtendedTooltip" id="53"/>
+			<ChildItems>
+				<InputField name="Номер" id="1">
+					<DataPath>Объект.Number</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="НомерКонтекстноеМеню" id="2"/>
+					<ExtendedTooltip name="НомерExtendedTooltip" id="54"/>
+				</InputField>
+				<InputField name="Дата" id="3">
+					<DataPath>Объект.Date</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>от</v8:content>
+						</v8:item>
+					</Title>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ДатаКонтекстноеМеню" id="4"/>
+					<ExtendedTooltip name="ДатаExtendedTooltip" id="55"/>
+					<Events>
+						<Event name="OnChange">ДатаПриИзменении</Event>
+					</Events>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="Группа2" id="39">
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="Группа2ExtendedTooltip" id="56"/>
+			<ChildItems>
+				<InputField name="ЛицевойСчет" id="5">
+					<DataPath>Объект.ЛицевойСчет</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ЛицевойСчетКонтекстноеМеню" id="6"/>
+					<ExtendedTooltip name="ЛицевойСчетExtendedTooltip" id="57"/>
+				</InputField>
+				<InputField name="ИсточникФинансирования" id="11">
+					<DataPath>Объект.ИсточникФинансирования</DataPath>
+					<Visible>false</Visible>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ИсточникФинансированияКонтекстноеМеню" id="12"/>
+					<ExtendedTooltip name="ИсточникФинансированияExtendedTooltip" id="58"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="Группа3" id="40">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Проживающие</v8:content>
+				</v8:item>
+			</Title>
+			<Group>Horizontal</Group>
+			<ExtendedTooltip name="Группа3ExtendedTooltip" id="59"/>
+			<ChildItems>
+				<Table name="СписокПроживающих" id="15">
+					<Representation>List</Representation>
+					<AutoInsertNewRow>true</AutoInsertNewRow>
+					<EnableStartDrag>true</EnableStartDrag>
+					<EnableDrag>true</EnableDrag>
+					<FileDragMode>AsFile</FileDragMode>
+					<DataPath>Объект.СписокПроживающих</DataPath>
+					<SearchStringLocation>None</SearchStringLocation>
+					<ViewStatusLocation>None</ViewStatusLocation>
+					<SearchControlLocation>None</SearchControlLocation>
+					<RowFilter xsi:nil="true"/>
+					<ContextMenu name="СписокПроживающихКонтекстноеМеню" id="16"/>
+					<AutoCommandBar name="СписокПроживающихКоманднаяПанель" id="17">
+						<Autofill>false</Autofill>
+						<ChildItems>
+							<Button name="СписокПроживающихДобавить" id="41">
+								<Type>CommandBarButton</Type>
+								<Representation>Picture</Representation>
+								<CommandName>Form.Item.СписокПроживающих.StandardCommand.Add</CommandName>
+								<ExtendedTooltip name="СписокПроживающихДобавитьРасширеннаяПодсказка" id="60"/>
+							</Button>
+							<Button name="Скопировать" id="42">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Item.СписокПроживающих.StandardCommand.Copy</CommandName>
+								<ExtendedTooltip name="СкопироватьExtendedTooltip" id="61"/>
+							</Button>
+							<Button name="СписокПроживающихИзменить" id="43">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Item.СписокПроживающих.StandardCommand.Change</CommandName>
+								<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
+								<ExtendedTooltip name="СписокПроживающихИзменитьРасширеннаяПодсказка" id="62"/>
+							</Button>
+							<Button name="СписокПроживающихУдалить" id="44">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Item.СписокПроживающих.StandardCommand.Delete</CommandName>
+								<ExtendedTooltip name="СписокПроживающихУдалитьРасширеннаяПодсказка" id="63"/>
+							</Button>
+							<Button name="СписокПроживающихЗакончитьРедактирование" id="45">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Item.СписокПроживающих.StandardCommand.EndEdit</CommandName>
+								<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
+								<ExtendedTooltip name="СписокПроживающихЗакончитьРедактированиеРасширеннаяПодсказка" id="64"/>
+							</Button>
+							<Button name="СписокПроживающихНайти" id="46">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Item.СписокПроживающих.StandardCommand.Find</CommandName>
+								<ExtendedTooltip name="СписокПроживающихНайтиРасширеннаяПодсказка" id="65"/>
+							</Button>
+							<Button name="СписокПроживающихОтменитьПоиск" id="47">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Item.СписокПроживающих.StandardCommand.CancelSearch</CommandName>
+								<ExtendedTooltip name="СписокПроживающихОтменитьПоискРасширеннаяПодсказка" id="66"/>
+							</Button>
+							<Button name="СписокПроживающихПереместитьВверх" id="48">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Item.СписокПроживающих.StandardCommand.MoveUp</CommandName>
+								<ExtendedTooltip name="СписокПроживающихПереместитьВверхРасширеннаяПодсказка" id="67"/>
+							</Button>
+							<Button name="СписокПроживающихПереместитьВниз" id="49">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Item.СписокПроживающих.StandardCommand.MoveDown</CommandName>
+								<ExtendedTooltip name="СписокПроживающихПереместитьВнизРасширеннаяПодсказка" id="68"/>
+							</Button>
+							<Button name="СписокПроживающихСортироватьСписокПоВозрастанию" id="50">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Item.СписокПроживающих.StandardCommand.SortListAsc</CommandName>
+								<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
+								<ExtendedTooltip name="СписокПроживающихСортироватьСписокПоВозрастаниюРасширеннаяПодсказка" id="69"/>
+							</Button>
+							<Button name="СписокПроживающихСортироватьСписокПоУбыванию" id="51">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Item.СписокПроживающих.StandardCommand.SortListDesc</CommandName>
+								<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
+								<ExtendedTooltip name="СписокПроживающихСортироватьСписокПоУбываниюРасширеннаяПодсказка" id="70"/>
+							</Button>
+							<Button name="СписокПроживающихПодборИзСпискаПроживающих" id="52">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Command.ПодборИзСпискаПроживающих</CommandName>
+								<ExtendedTooltip name="СписокПроживающихПодборИзСпискаПроживающихРасширеннаяПодсказка" id="71"/>
+							</Button>
+						</ChildItems>
+					</AutoCommandBar>
+					<ExtendedTooltip name="СписокПроживающихРасширеннаяПодсказка" id="72"/>
+					<SearchStringAddition name="СписокПроживающихСтрокаПоиска" id="85">
+						<AdditionSource>
+							<Item>СписокПроживающих</Item>
+							<Type>SearchStringRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="СписокПроживающихСтрокаПоискаКонтекстноеМеню" id="86"/>
+						<ExtendedTooltip name="СписокПроживающихСтрокаПоискаРасширеннаяПодсказка" id="87"/>
+					</SearchStringAddition>
+					<ViewStatusAddition name="СписокПроживающихСостояниеПросмотра" id="88">
+						<AdditionSource>
+							<Item>СписокПроживающих</Item>
+							<Type>ViewStatusRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="СписокПроживающихСостояниеПросмотраКонтекстноеМеню" id="89"/>
+						<ExtendedTooltip name="СписокПроживающихСостояниеПросмотраРасширеннаяПодсказка" id="90"/>
+					</ViewStatusAddition>
+					<SearchControlAddition name="СписокПроживающихУправлениеПоиском" id="91">
+						<AdditionSource>
+							<Item>СписокПроживающих</Item>
+							<Type>SearchControl</Type>
+						</AdditionSource>
+						<ContextMenu name="СписокПроживающихУправлениеПоискомКонтекстноеМеню" id="92"/>
+						<ExtendedTooltip name="СписокПроживающихУправлениеПоискомРасширеннаяПодсказка" id="93"/>
+					</SearchControlAddition>
+					<ChildItems>
+						<LabelField name="СписокПроживающихНомерСтроки" id="18">
+							<DataPath>Объект.СписокПроживающих.LineNumber</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="СписокПроживающихНомерСтрокиКонтекстноеМеню" id="19"/>
+							<ExtendedTooltip name="СписокПроживающихНомерСтрокиРасширеннаяПодсказка" id="73"/>
+						</LabelField>
+						<InputField name="СписокПроживающихФизЛицо" id="20">
+							<DataPath>Объект.СписокПроживающих.ФизЛицо</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<TextEdit>false</TextEdit>
+							<ContextMenu name="СписокПроживающихФизЛицоКонтекстноеМеню" id="21"/>
+							<ExtendedTooltip name="СписокПроживающихФизЛицоРасширеннаяПодсказка" id="74"/>
+							<Events>
+								<Event name="StartChoice">СписокПроживающихФизЛицоНачалоВыбора</Event>
+							</Events>
+						</InputField>
+						<InputField name="СписокПроживающихЛьгота" id="22">
+							<DataPath>Объект.СписокПроживающих.Льгота</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="СписокПроживающихЛьготаКонтекстноеМеню" id="23"/>
+							<ExtendedTooltip name="СписокПроживающихЛьготаРасширеннаяПодсказка" id="75"/>
+						</InputField>
+						<InputField name="СписокПроживающихСрокДействияЛьготы" id="24">
+							<DataPath>Объект.СписокПроживающих.СрокДействияЛьготы</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="СписокПроживающихСрокДействияЛьготыКонтекстноеМеню" id="25"/>
+							<ExtendedTooltip name="СписокПроживающихСрокДействияЛьготыРасширеннаяПодсказка" id="76"/>
+						</InputField>
+						<InputField name="СписокПроживающихДокументНаЛьготу" id="30">
+							<DataPath>Объект.СписокПроживающих.ДокументНаЛьготу</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="СписокПроживающихДокументНаЛьготуКонтекстноеМеню" id="31"/>
+							<ExtendedTooltip name="СписокПроживающихДокументНаЛьготуРасширеннаяПодсказка" id="77"/>
+						</InputField>
+						<InputField name="СписокПроживающихСерияДокументаЛьготы" id="26">
+							<DataPath>Объект.СписокПроживающих.СерияДокументаЛьготы</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="СписокПроживающихСерияДокументаЛьготыКонтекстноеМеню" id="27"/>
+							<ExtendedTooltip name="СписокПроживающихСерияДокументаЛьготыРасширеннаяПодсказка" id="78"/>
+						</InputField>
+						<InputField name="СписокПроживающихНомерДокументаЛьготы" id="28">
+							<DataPath>Объект.СписокПроживающих.НомерДокументаЛьготы</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="СписокПроживающихНомерДокументаЛьготыКонтекстноеМеню" id="29"/>
+							<ExtendedTooltip name="СписокПроживающихНомерДокументаЛьготыРасширеннаяПодсказка" id="79"/>
+						</InputField>
+						<InputField name="СписокПроживающихДатаВыдачи" id="32">
+							<DataPath>Объект.СписокПроживающих.ДатаВыдачи</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="СписокПроживающихДатаВыдачиКонтекстноеМеню" id="33"/>
+							<ExtendedTooltip name="СписокПроживающихДатаВыдачиРасширеннаяПодсказка" id="80"/>
+						</InputField>
+						<InputField name="СписокПроживающихКемВыдан" id="34">
+							<DataPath>Объект.СписокПроживающих.КемВыдан</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="СписокПроживающихКемВыданКонтекстноеМеню" id="35"/>
+							<ExtendedTooltip name="СписокПроживающихКемВыданРасширеннаяПодсказка" id="81"/>
+						</InputField>
+						<InputField name="СписокПроживающихЛСвБДСоцзащиты" id="36">
+							<DataPath>Объект.СписокПроживающих.ЛСвБДСоцзащиты</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="СписокПроживающихЛСвБДСоцзащитыКонтекстноеМеню" id="37"/>
+							<ExtendedTooltip name="СписокПроживающихЛСвБДСоцзащитыРасширеннаяПодсказка" id="82"/>
+						</InputField>
+					</ChildItems>
+				</Table>
+			</ChildItems>
+		</UsualGroup>
+		<InputField name="Ответственный" id="9">
+			<DataPath>Объект.Ответственный</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="ОтветственныйКонтекстноеМеню" id="10"/>
+			<ExtendedTooltip name="ОтветственныйExtendedTooltip" id="83"/>
+		</InputField>
+		<InputField name="Комментарий" id="7">
+			<DataPath>Объект.Комментарий</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="КомментарийКонтекстноеМеню" id="8"/>
+			<ExtendedTooltip name="КомментарийExtendedTooltip" id="84"/>
+		</InputField>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DocumentObject.бит_РегистрацияЛьготПоЛС</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+			<UseAlways>
+				<Field>Объект.RegisterRecords</Field>
+			</UseAlways>
+		</Attribute>
+		<Attribute name="мТаблицаФизЛиц" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>М таблица физ лиц</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="ФизЛицо" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Физ лицо</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.бит_Проживающие</v8:Type>
+						<v8:Type>cfg:CatalogRef.ФизическиеЛица</v8:Type>
+					</Type>
+				</Column>
+				<Column name="СтатусФизЛица" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Статус физ лица</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.бит_СтатусФизЛица</v8:Type>
+					</Type>
+				</Column>
+				<Column name="СтепеньРодства" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Степень родства</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.бит_СтепениРодстваФизЛиц</v8:Type>
+					</Type>
+				</Column>
+				<Column name="СтатусПроживания" id="4">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Статус проживания</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:EnumRef.бит_СтатусПроживания</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ДатаРегистрации" id="5">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Дата регистрации</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:dateTime</v8:Type>
+						<v8:DateQualifiers>
+							<v8:DateFractions>Date</v8:DateFractions>
+						</v8:DateQualifiers>
+					</Type>
+				</Column>
+				<Column name="ДатаСнятияСРегистрации" id="6">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Дата снятия с регистрации</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:dateTime</v8:Type>
+						<v8:DateQualifiers>
+							<v8:DateFractions>Date</v8:DateFractions>
+						</v8:DateQualifiers>
+					</Type>
+				</Column>
+				<Column name="ДатаЗаписи" id="7">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Дата записи</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:dateTime</v8:Type>
+						<v8:DateQualifiers>
+							<v8:DateFractions>Date</v8:DateFractions>
+						</v8:DateQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="мКэшЗначений" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>М кэш значений</v8:content>
+				</v8:item>
+			</Title>
+			<Type/>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ПодборИзСпискаПроживающих" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подбор из списка проживающих</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подбор из списка проживающих</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПодборИзСпискаПроживающих</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+	</Commands>
+	<CommandInterface>
+		<NavigationPanel>
+			<Item>
+				<Command>InformationRegister.бит_ЛьготыПоЛС.StandardCommand.OpenByRecorder</Command>
+				<Type>Auto</Type>
+				<DefaultVisible>false</DefaultVisible>
+			</Item>
+			<Item>
+				<Command>4:be6441d1-0ad8-4852-806c-533aee06a33f</Command>
+				<Type>Auto</Type>
+				<DefaultVisible>false</DefaultVisible>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+			<Item>
+				<Command>InformationRegister.бит_си_СвязанныеОбъекты.StandardCommand.OpenByValue.Объект</Command>
+				<Type>Auto</Type>
+				<DefaultVisible>false</DefaultVisible>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+			<Item>
+				<Command>CommonCommand.бит_СтруктураПодчиненности</Command>
+				<Type>Auto</Type>
+				<DefaultVisible>false</DefaultVisible>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+		</NavigationPanel>
+	</CommandInterface>
+</Form>

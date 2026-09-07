@@ -1,0 +1,362 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.18">
+	<CommandBarLocation>None</CommandBarLocation>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаКонтрольСтатусовКодовМаркировки" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа контроль статусов кодов маркировки</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа контроль статусов кодов маркировки</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Vertical</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаКонтрольСтатусовКодовМаркировкиРасширеннаяПодсказка" id="2"/>
+			<ChildItems>
+				<CheckBoxField name="КонтролироватьСтатусыКодовМаркировкиИСМП" id="3">
+					<DataPath>НаборКонстант.КонтролироватьСтатусыКодовМаркировкиИСМП</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Контролировать статусы кодов маркировки</v8:content>
+						</v8:item>
+					</Title>
+					<TitleLocation>Right</TitleLocation>
+					<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="КонтролироватьСтатусыКодовМаркировкиИСМПКонтекстноеМеню" id="4"/>
+					<ExtendedTooltip name="КонтролироватьСтатусыКодовМаркировкиИСМПРасширеннаяПодсказка" id="5">
+						<AutoMaxWidth>false</AutoMaxWidth>
+						<MaxWidth>60</MaxWidth>
+						<Title formatted="false">
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Запрашивать онлайн статусы кодов маркировки при сканировании в ГИС МП
+в момент сканирования маркируемой продукции при оптовых продажах</v8:content>
+							</v8:item>
+						</Title>
+					</ExtendedTooltip>
+					<Events>
+						<Event name="OnChange">КонтролироватьСтатусыКодовМаркировкиИСМППриИзменении</Event>
+					</Events>
+				</CheckBoxField>
+				<CheckBoxField name="КонтролироватьСтатусыКодовМаркировкиВРозницеИСМП" id="6">
+					<DataPath>НаборКонстант.КонтролироватьСтатусыКодовМаркировкиВРозницеИСМП</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Контролировать статусы кодов маркировки при розничных продажах</v8:content>
+						</v8:item>
+					</Title>
+					<TitleLocation>Right</TitleLocation>
+					<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="КонтролироватьСтатусыКодовМаркировкиВРозницеИСМПКонтекстноеМеню" id="7"/>
+					<ExtendedTooltip name="КонтролироватьСтатусыКодовМаркировкиВРозницеИСМПРасширеннаяПодсказка" id="8">
+						<AutoMaxWidth>false</AutoMaxWidth>
+						<MaxWidth>60</MaxWidth>
+						<Title formatted="false">
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Запрашивать онлайн статусы кодов маркировки при сканировании в ГИС МП
+в момент сканирования маркируемой продукции при розничной торговле</v8:content>
+							</v8:item>
+						</Title>
+					</ExtendedTooltip>
+					<Events>
+						<Event name="OnChange">КонтролироватьСтатусыКодовМаркировкиВРозницеИСМППриИзменении</Event>
+					</Events>
+				</CheckBoxField>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаНастройкиГрупповойОбработки" id="12">
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настройки для загрузки из ТСД и табличного документа</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Vertical</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаНастройкиГрупповойОбработкиРасширеннаяПодсказка" id="13"/>
+			<ChildItems>
+				<CheckBoxField name="ПропускатьСтрокиСОшибкамиПриЗагрузкеИзТСД" id="9">
+					<DataPath>ПропускатьСтрокиСОшибкамиПриЗагрузкеИзТСД</DataPath>
+					<TitleLocation>Right</TitleLocation>
+					<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ПропускатьСтрокиСОшибкамиПриЗагрузкеИзТСДКонтекстноеМеню" id="10"/>
+					<ExtendedTooltip name="ПропускатьСтрокиСОшибкамиПриЗагрузкеИзТСДРасширеннаяПодсказка" id="11">
+						<AutoMaxWidth>false</AutoMaxWidth>
+						<MaxWidth>60</MaxWidth>
+						<Title formatted="false">
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>При ошибках, возникших в процессе групповой загрузки, коды маркировки
+(упаковок и продукции) не содержащие ошибок будут загружены</v8:content>
+							</v8:item>
+						</Title>
+					</ExtendedTooltip>
+					<Events>
+						<Event name="OnChange">ПропускатьСтрокиСОшибкамиПриЗагрузкеИзТСДПриИзменении</Event>
+					</Events>
+				</CheckBoxField>
+			</ChildItems>
+		</UsualGroup>
+		<CheckBoxField name="ПроверятьАлфавитКодовМаркировки" id="19">
+			<DataPath>ПроверятьАлфавитКодовМаркировки</DataPath>
+			<TitleLocation>Right</TitleLocation>
+			<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+			<CheckBoxType>Auto</CheckBoxType>
+			<ContextMenu name="ПроверятьАлфавитКодовМаркировкиКонтекстноеМеню" id="20"/>
+			<ExtendedTooltip name="ПроверятьАлфавитКодовМаркировкиРасширеннаяПодсказка" id="21">
+				<AutoMaxWidth>false</AutoMaxWidth>
+				<MaxWidth>60</MaxWidth>
+				<AutoMaxHeight>false</AutoMaxHeight>
+				<Title formatted="false">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>При сканировании кодов маркировки сканером штрихкода либо в процессе загрузки кодов маркировки из ТСД выполнять проверку символов считанных кодов маркировки на вхождение в множество допустимых символов GS1.
+Некорректные символы могут появится при некорректной настройке сканеров штрихкода или при загрузке кодов из внешних источников.</v8:content>
+					</v8:item>
+				</Title>
+			</ExtendedTooltip>
+			<Events>
+				<Event name="OnChange">ПроверятьАлфавитКодовМаркировкиПриИзменении</Event>
+			</Events>
+		</CheckBoxField>
+		<UsualGroup name="ГруппаРаботаСУпаковками" id="14">
+			<Group>Vertical</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаРаботаСУпаковкамиРасширеннаяПодсказка" id="15"/>
+			<ChildItems>
+				<CheckBoxField name="КонтролироватьСтандартнуюВложенность" id="16">
+					<DataPath>КонтролироватьСтандартнуюВложенность</DataPath>
+					<TitleLocation>Right</TitleLocation>
+					<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="КонтролироватьСтандартнуюВложенностьКонтекстноеМеню" id="17"/>
+					<ExtendedTooltip name="КонтролироватьСтандартнуюВложенностьРасширеннаяПодсказка" id="18">
+						<AutoMaxWidth>false</AutoMaxWidth>
+						<MaxWidth>60</MaxWidth>
+						<Title formatted="false">
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Проверять соответствие количества вложенных потребительских упаковок, полученного по GTIN (из данных о коэффициентах упаковок номенклатуры или сведений регистра Описание GTIN), фактическому количеству потребительских упаковок по данным сервиса ГИС МТ.</v8:content>
+							</v8:item>
+						</Title>
+					</ExtendedTooltip>
+					<Events>
+						<Event name="OnChange">КонтролироватьСтандартнуюВложенностьПриИзменении</Event>
+					</Events>
+				</CheckBoxField>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаТабачнаяПродукция" id="22">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Табачная продукция</v8:content>
+				</v8:item>
+			</Title>
+			<Group>Vertical</Group>
+			<Behavior>Collapsible</Behavior>
+			<ControlRepresentation>Picture</ControlRepresentation>
+			<Representation>NormalSeparation</Representation>
+			<ExtendedTooltip name="ГруппаТабачнаяПродукцияРасширеннаяПодсказка" id="23"/>
+			<ChildItems>
+				<UsualGroup name="ГруппаСераяЗона" id="36">
+					<Group>Vertical</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаСераяЗонаРасширеннаяПодсказка" id="37"/>
+					<ChildItems>
+						<CheckBoxField name="ПроверятьПотребительскиеУпаковкиНаВхождениеВСеруюЗонуМОТП" id="27">
+							<DataPath>ПроверятьПотребительскиеУпаковкиНаВхождениеВСеруюЗонуМОТП</DataPath>
+							<TitleLocation>Right</TitleLocation>
+							<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ПроверятьПотребительскиеУпаковкиНаВхождениеВСеруюЗонуМОТПКонтекстноеМеню" id="28"/>
+							<ExtendedTooltip name="ПроверятьПотребительскиеУпаковкиНаВхождениеВСеруюЗонуМОТПРасширеннаяПодсказка" id="29">
+								<AutoMaxWidth>false</AutoMaxWidth>
+								<MaxWidth>60</MaxWidth>
+								<Title formatted="false">
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>При продаже потребительских и групповых упаковок (пачек и блоков) на ККТ при обнаружении некорректного статуса кода маркировки (Нанесен...) или некорректного владельца (производитель табачной продукции) выполнять проверку считанного кода маркировки на вхождение в серую зону. При подтверждении вхождения в серую зону некорректные статусы и владельцы игнорируются.
+Не поддерживается для альтернативной табачной продукции.</v8:content>
+									</v8:item>
+								</Title>
+							</ExtendedTooltip>
+							<Events>
+								<Event name="OnChange">ПроверятьПотребительскиеУпаковкиНаВхождениеВСеруюЗонуМОТППриИзменении</Event>
+							</Events>
+						</CheckBoxField>
+						<CheckBoxField name="ПроверятьЛогистическиеИГрупповыеУпаковкиНаСодержаниеСерыхКодовМОТП" id="30">
+							<DataPath>ПроверятьЛогистическиеИГрупповыеУпаковкиНаСодержаниеСерыхКодовМОТП</DataPath>
+							<TitleLocation>Right</TitleLocation>
+							<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ПроверятьЛогистическиеИГрупповыеУпаковкиНаСодержаниеСерыхКодовМОТПКонтекстноеМеню" id="31"/>
+							<ExtendedTooltip name="ПроверятьЛогистическиеИГрупповыеУпаковкиНаСодержаниеСерыхКодовМОТПРасширеннаяПодсказка" id="32">
+								<AutoMaxWidth>false</AutoMaxWidth>
+								<MaxWidth>60</MaxWidth>
+								<Title formatted="false">
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Если в процессе получения состава упаковок из сервиса ГИС МТ было получено некорректное количество вложенных упаковок (например, если в блоке содержится 9 пачек из 10 или если в коробке содержится 48 блоков из 50), то будет выполнено обращение к сервису ГИС МТ на предмет содержания в считанных упаковках серых кодов. Если серые коды будут обнаружены, то количество вложенных упаковок будет скорректировано.
+Не поддерживается для альтернативной табачной продукции.</v8:content>
+									</v8:item>
+								</Title>
+							</ExtendedTooltip>
+							<Events>
+								<Event name="OnChange">ПроверятьЛогистическиеИГрупповыеУпаковкиНаСодержаниеСерыхКодовМОТППриИзменении</Event>
+							</Events>
+						</CheckBoxField>
+					</ChildItems>
+				</UsualGroup>
+				<InputField name="ДатаПроизводстваНачалаКонтроляСтатусовКодовМаркировкиМОТП" id="38">
+					<DataPath>ДатаПроизводстваНачалаКонтроляСтатусовКодовМаркировкиМОТП</DataPath>
+					<ContextMenu name="ДатаПроизводстваНачалаКонтроляСтатусовКодовМаркировкиМОТПКонтекстноеМеню" id="39"/>
+					<ExtendedTooltip name="ДатаПроизводстваНачалаКонтроляСтатусовКодовМаркировкиМОТПРасширеннаяПодсказка" id="40"/>
+					<Events>
+						<Event name="OnChange">ДатаПроизводстваНачалаКонтроляСтатусовКодовМаркировкиМОТППриИзменении</Event>
+						<Event name="Clearing">ДатаПроизводстваНачалаКонтроляСтатусовКодовМаркировкиМОТПОчистка</Event>
+					</Events>
+				</InputField>
+				<CheckBoxField name="УчитыватьМРЦ" id="33">
+					<DataPath>УчитыватьМРЦ</DataPath>
+					<TitleLocation>Right</TitleLocation>
+					<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="УчитыватьМРЦКонтекстноеМеню" id="34"/>
+					<ExtendedTooltip name="УчитыватьМРЦРасширеннаяПодсказка" id="35">
+						<AutoMaxWidth>false</AutoMaxWidth>
+						<MaxWidth>60</MaxWidth>
+						<Title formatted="false">
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Описание ведения учета МРЦ</v8:content>
+							</v8:item>
+						</Title>
+					</ExtendedTooltip>
+					<Events>
+						<Event name="OnChange">УчитыватьМРЦПриИзменении</Event>
+					</Events>
+				</CheckBoxField>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="НаборКонстант" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Набор констант</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:ConstantsSet</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<UseAlways>
+				<Field>НаборКонстант.КонтролироватьСтатусыКодовМаркировкиВРозницеИСМП</Field>
+				<Field>НаборКонстант.КонтролироватьСтатусыКодовМаркировкиИСМП</Field>
+			</UseAlways>
+		</Attribute>
+		<Attribute name="ПропускатьСтрокиСОшибкамиПриЗагрузкеИзТСД" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Пропускать строки с ошибками при загрузке из ТСД</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="КонтролироватьСтандартнуюВложенность" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Контролировать стандартную вложенность</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ПроверятьАлфавитКодовМаркировки" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Проверять алфавит кодов маркировки</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ПроверятьПотребительскиеУпаковкиНаВхождениеВСеруюЗонуМОТП" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Проверять потребительские упаковки на вхождение в серую зону</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ПроверятьЛогистическиеИГрупповыеУпаковкиНаСодержаниеСерыхКодовМОТП" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Проверять логистические и групповые упаковки на содержание серых кодов</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="УчитыватьМРЦ" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Учитывать МРЦ</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ДатаПроизводстваНачалаКонтроляСтатусовКодовМаркировкиМОТП" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Контролировать статусы с даты производства</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:dateTime</v8:Type>
+				<v8:DateQualifiers>
+					<v8:DateFractions>Date</v8:DateFractions>
+				</v8:DateQualifiers>
+			</Type>
+			<FillCheck>ShowError</FillCheck>
+		</Attribute>
+	</Attributes>
+</Form>

@@ -1,0 +1,366 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.18">
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<AutoTime>CurrentOrLast</AutoTime>
+	<UsePostingMode>Auto</UsePostingMode>
+	<RepostOnWrite>true</RepostOnWrite>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="AfterWrite">ПослеЗаписи</Event>
+		<Event name="ChoiceProcessing">ОбработкаВыбора</Event>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="Группа1" id="32">
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="Группа1ExtendedTooltip" id="47"/>
+			<ChildItems>
+				<InputField name="Номер" id="1">
+					<DataPath>Объект.Number</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="НомерКонтекстноеМеню" id="2"/>
+					<ExtendedTooltip name="НомерExtendedTooltip" id="48"/>
+				</InputField>
+				<InputField name="Дата" id="3">
+					<DataPath>Объект.Date</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>от</v8:content>
+						</v8:item>
+					</Title>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ДатаКонтекстноеМеню" id="4"/>
+					<ExtendedTooltip name="ДатаExtendedTooltip" id="49"/>
+					<Events>
+						<Event name="OnChange">ДатаПриИзменении</Event>
+					</Events>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<InputField name="Льгота" id="9">
+			<DataPath>Объект.Льгота</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="ЛьготаКонтекстноеМеню" id="10"/>
+			<ExtendedTooltip name="ЛьготаExtendedTooltip" id="50"/>
+		</InputField>
+		<Table name="СписокУслуг" id="11">
+			<Representation>List</Representation>
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<FileDragMode>AsFile</FileDragMode>
+			<DataPath>Объект.СписокУслуг</DataPath>
+			<SearchStringLocation>None</SearchStringLocation>
+			<ViewStatusLocation>None</ViewStatusLocation>
+			<SearchControlLocation>None</SearchControlLocation>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="СписокУслугКонтекстноеМеню" id="12"/>
+			<AutoCommandBar name="СписокУслугКоманднаяПанель" id="13">
+				<Autofill>false</Autofill>
+				<ChildItems>
+					<Button name="СписокУслугДобавить" id="33">
+						<Type>CommandBarButton</Type>
+						<Representation>Picture</Representation>
+						<CommandName>Form.Item.СписокУслуг.StandardCommand.Add</CommandName>
+						<ExtendedTooltip name="СписокУслугДобавитьExtendedTooltip" id="51"/>
+					</Button>
+					<Button name="СписокУслугСкопировать" id="34">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Item.СписокУслуг.StandardCommand.Copy</CommandName>
+						<ExtendedTooltip name="СписокУслугСкопироватьExtendedTooltip" id="52"/>
+					</Button>
+					<Button name="СписокУслугИзменить" id="35">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Item.СписокУслуг.StandardCommand.Change</CommandName>
+						<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
+						<ExtendedTooltip name="СписокУслугИзменитьExtendedTooltip" id="53"/>
+					</Button>
+					<Button name="СписокУслугУдалить" id="36">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Item.СписокУслуг.StandardCommand.Delete</CommandName>
+						<ExtendedTooltip name="СписокУслугУдалитьExtendedTooltip" id="54"/>
+					</Button>
+					<Button name="СписокУслугЗакончитьРедактирование" id="37">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Item.СписокУслуг.StandardCommand.EndEdit</CommandName>
+						<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
+						<ExtendedTooltip name="СписокУслугЗакончитьРедактированиеExtendedTooltip" id="55"/>
+					</Button>
+					<Button name="СписокУслугНайти" id="38">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Item.СписокУслуг.StandardCommand.Find</CommandName>
+						<ExtendedTooltip name="СписокУслугНайтиExtendedTooltip" id="56"/>
+					</Button>
+					<Button name="СписокУслугОтменитьПоиск" id="39">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Item.СписокУслуг.StandardCommand.CancelSearch</CommandName>
+						<ExtendedTooltip name="СписокУслугОтменитьПоискExtendedTooltip" id="57"/>
+					</Button>
+					<Button name="СписокУслугПереместитьВверх" id="40">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Item.СписокУслуг.StandardCommand.MoveUp</CommandName>
+						<ExtendedTooltip name="СписокУслугПереместитьВверхExtendedTooltip" id="58"/>
+					</Button>
+					<Button name="СписокУслугПереместитьВниз" id="41">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Item.СписокУслуг.StandardCommand.MoveDown</CommandName>
+						<ExtendedTooltip name="СписокУслугПереместитьВнизExtendedTooltip" id="59"/>
+					</Button>
+					<Button name="СписокУслугСортироватьСписокПоВозрастанию" id="42">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Item.СписокУслуг.StandardCommand.SortListAsc</CommandName>
+						<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
+						<ExtendedTooltip name="СписокУслугСортироватьСписокПоВозрастаниюExtendedTooltip" id="60"/>
+					</Button>
+					<Button name="СписокУслугСортироватьСписокПоУбыванию" id="43">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Item.СписокУслуг.StandardCommand.SortListDesc</CommandName>
+						<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
+						<ExtendedTooltip name="СписокУслугСортироватьСписокПоУбываниюExtendedTooltip" id="61"/>
+					</Button>
+					<Button name="СписокУслугПодбор" id="44">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.Подбор</CommandName>
+						<ExtendedTooltip name="СписокУслугПодборExtendedTooltip" id="62"/>
+					</Button>
+					<Button name="СписокУслугСнятьФлажки" id="45">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.СнятьФлажки</CommandName>
+						<ExtendedTooltip name="СписокУслугСнятьФлажкиExtendedTooltip" id="63"/>
+					</Button>
+					<Button name="СписокУслугУстановитьФлажки" id="46">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.УстановитьФлажки</CommandName>
+						<ExtendedTooltip name="СписокУслугУстановитьФлажкиExtendedTooltip" id="64"/>
+					</Button>
+				</ChildItems>
+			</AutoCommandBar>
+			<ExtendedTooltip name="СписокУслугExtendedTooltip" id="65"/>
+			<SearchStringAddition name="СписокУслугСтрокаПоиска" id="77">
+				<AdditionSource>
+					<Item>СписокУслуг</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокУслугСтрокаПоискаКонтекстноеМеню" id="78"/>
+				<ExtendedTooltip name="СписокУслугСтрокаПоискаРасширеннаяПодсказка" id="79"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="СписокУслугСостояниеПросмотра" id="80">
+				<AdditionSource>
+					<Item>СписокУслуг</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокУслугСостояниеПросмотраКонтекстноеМеню" id="81"/>
+				<ExtendedTooltip name="СписокУслугСостояниеПросмотраРасширеннаяПодсказка" id="82"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="СписокУслугУправлениеПоиском" id="83">
+				<AdditionSource>
+					<Item>СписокУслуг</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокУслугУправлениеПоискомКонтекстноеМеню" id="84"/>
+				<ExtendedTooltip name="СписокУслугУправлениеПоискомРасширеннаяПодсказка" id="85"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<LabelField name="СписокУслугНомерСтроки" id="14">
+					<DataPath>Объект.СписокУслуг.LineNumber</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="СписокУслугНомерСтрокиКонтекстноеМеню" id="15"/>
+					<ExtendedTooltip name="СписокУслугНомерСтрокиExtendedTooltip" id="66"/>
+				</LabelField>
+				<InputField name="СписокУслугУслуга" id="16">
+					<DataPath>Объект.СписокУслуг.Услуга</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="СписокУслугУслугаКонтекстноеМеню" id="17"/>
+					<ExtendedTooltip name="СписокУслугУслугаExtendedTooltip" id="67"/>
+				</InputField>
+				<InputField name="СписокУслугРаспространение" id="18">
+					<DataPath>Объект.СписокУслуг.Распространение</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="СписокУслугРаспространениеКонтекстноеМеню" id="19"/>
+					<ExtendedTooltip name="СписокУслугРаспространениеExtendedTooltip" id="68"/>
+				</InputField>
+				<InputField name="СписокУслугСемейнаяСтавка" id="20">
+					<DataPath>Объект.СписокУслуг.СемейнаяСтавка</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="СписокУслугСемейнаяСтавкаКонтекстноеМеню" id="21"/>
+					<ExtendedTooltip name="СписокУслугСемейнаяСтавкаExtendedTooltip" id="69"/>
+				</InputField>
+				<InputField name="СписокУслугЛичнаяСтавка" id="22">
+					<DataPath>Объект.СписокУслуг.ЛичнаяСтавка</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="СписокУслугЛичнаяСтавкаКонтекстноеМеню" id="23"/>
+					<ExtendedTooltip name="СписокУслугЛичнаяСтавкаExtendedTooltip" id="70"/>
+				</InputField>
+				<CheckBoxField name="СписокУслугИспользоватьНормуНаОдного" id="24">
+					<DataPath>Объект.СписокУслуг.ИспользоватьНормуНаОдного</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="СписокУслугИспользоватьНормуНаОдногоКонтекстноеМеню" id="25"/>
+					<ExtendedTooltip name="СписокУслугИспользоватьНормуНаОдногоExtendedTooltip" id="71"/>
+					<Events>
+						<Event name="OnChange">СписокУслугИспользоватьНормуНаОдногоПриИзменении</Event>
+					</Events>
+				</CheckBoxField>
+				<CheckBoxField name="СписокУслугРасчетСУчетомДолейВладения" id="26">
+					<DataPath>Объект.СписокУслуг.РасчетСУчетомДолейВладения</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="СписокУслугРасчетСУчетомДолейВладенияКонтекстноеМеню" id="27"/>
+					<ExtendedTooltip name="СписокУслугРасчетСУчетомДолейВладенияExtendedTooltip" id="72"/>
+				</CheckBoxField>
+				<CheckBoxField name="СписокУслугРасчетСУчетомСоставаСемьи" id="28">
+					<DataPath>Объект.СписокУслуг.РасчетСУчетомСоставаСемьи</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="СписокУслугРасчетСУчетомСоставаСемьиКонтекстноеМеню" id="29"/>
+					<ExtendedTooltip name="СписокУслугРасчетСУчетомСоставаСемьиExtendedTooltip" id="73"/>
+				</CheckBoxField>
+				<CheckBoxField name="СписокУслугФактическоеПотреблениеПоСчетчикамБезУчетаВременноПроживающих" id="30">
+					<DataPath>Объект.СписокУслуг.ФактическоеПотреблениеПоСчетчикамБезУчетаВременноПроживающих</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="СписокУслугФактическоеПотреблениеПоСчетчикамБезУчетаВременноПроживающихКонтекстноеМеню" id="31"/>
+					<ExtendedTooltip name="СписокУслугФактическоеПотреблениеПоСчетчикамБезУчетаВременноПроживающихExtendedTooltip" id="74"/>
+				</CheckBoxField>
+			</ChildItems>
+		</Table>
+		<InputField name="Ответственный" id="7">
+			<DataPath>Объект.Ответственный</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="ОтветственныйКонтекстноеМеню" id="8"/>
+			<ExtendedTooltip name="ОтветственныйExtendedTooltip" id="75"/>
+		</InputField>
+		<InputField name="Комментарий" id="5">
+			<DataPath>Объект.Комментарий</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="КомментарийКонтекстноеМеню" id="6"/>
+			<ExtendedTooltip name="КомментарийExtendedTooltip" id="76"/>
+		</InputField>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DocumentObject.бит_УстановкаСоответствияЛьготыИУслуг</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+			<UseAlways>
+				<Field>Объект.RegisterRecords</Field>
+			</UseAlways>
+		</Attribute>
+		<Attribute name="мКэшЗначений" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>М кэш значений</v8:content>
+				</v8:item>
+			</Title>
+			<Type/>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="Подбор" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подбор</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подбор</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Подбор</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="СнятьФлажки" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Снять флажки</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Снять флажки</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.UncheckAll</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>СнятьФлажки</Action>
+			<Representation>Picture</Representation>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="УстановитьФлажки" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Установить флажки</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Установить флажки</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.CheckAll</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>УстановитьФлажки</Action>
+			<Representation>Picture</Representation>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+	</Commands>
+	<CommandInterface>
+		<NavigationPanel>
+			<Item>
+				<Command>4:be6441d1-0ad8-4852-806c-533aee06a33f</Command>
+				<Type>Auto</Type>
+				<DefaultVisible>false</DefaultVisible>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+			<Item>
+				<Command>InformationRegister.бит_си_СвязанныеОбъекты.StandardCommand.OpenByValue.Объект</Command>
+				<Type>Auto</Type>
+				<DefaultVisible>false</DefaultVisible>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+			<Item>
+				<Command>CommonCommand.бит_СтруктураПодчиненности</Command>
+				<Type>Auto</Type>
+				<DefaultVisible>false</DefaultVisible>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+			<Item>
+				<Command>FilterCriterion.бит_СтруктураПодчиненности.StandardCommand.OpenByValue</Command>
+				<Type>Auto</Type>
+				<DefaultVisible>false</DefaultVisible>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+			<Item>
+				<Command>InformationRegister.бит_УстановкаЛьгот.StandardCommand.OpenByRecorder</Command>
+				<Type>Auto</Type>
+				<DefaultVisible>false</DefaultVisible>
+			</Item>
+		</NavigationPanel>
+	</CommandInterface>
+</Form>

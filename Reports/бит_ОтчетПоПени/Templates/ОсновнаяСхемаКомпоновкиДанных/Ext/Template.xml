@@ -1,0 +1,700 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<DataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcscom="http://v8.1c.ru/8.1/data-composition-system/common" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataSource>
+		<name>ИсточникДанных1</name>
+		<dataSourceType>Local</dataSourceType>
+	</dataSource>
+	<dataSet xsi:type="DataSetQuery">
+		<name>ОборотыПоПени</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ЛицевойСчет</dataPath>
+			<field>ЛицевойСчет</field>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Организация</dataPath>
+			<field>Организация</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Период</dataPath>
+			<field>Период</field>
+			<presentationExpression>ВЫБОР
+    КОГДА Не Формат(Период, "ДФ=dd.MM.yyyy") = ""
+        ТОГДА
+            ВЫБОР
+                КОГДА &amp;Периодичность = 6
+                    ТОГДА Формат(Период, "ДФ=dd.MM.yyyy")
+                КОГДА &amp;Периодичность = 7
+                    ТОГДА Формат(Период, "ДФ=dd.MM.yyyy") + " (неделя)"
+                КОГДА &amp;Периодичность = 8
+                    ТОГДА Формат(Период, "ДФ=dd.MM.yyyy") + " (декада)"
+                КОГДА &amp;Периодичность = 9
+                    ТОГДА Формат(Период, "ДФ='MMMM yyyy'")
+                КОГДА &amp;Периодичность = 10
+                    ТОГДА Формат(Период, "ДФ=q") + "-й квартал " + Формат(Период, "ДФ=yyyy") + " г."
+                КОГДА &amp;Периодичность = 11
+                    ТОГДА 
+                        ВЫБОР 
+                            КОГДА Формат(Период, "ДФ=q") = "3" ИЛИ Формат(Период, "ДФ=q") = "4"
+                                ТОГДА "2-ое полугодие " + Формат(Период, "ДФ=yyyy") + " г."
+                            ИНАЧЕ "1-ое полугодие " + Формат(Период, "ДФ=yyyy") + " г."
+                        КОНЕЦ
+                КОГДА &amp;Периодичность = 12
+                    ТОГДА Формат(Период, "ДФ=yyyy") + " г."
+                ИНАЧЕ Формат(Период, "ДФ=dd.MM.yyyy")
+            КОНЕЦ
+    ИНАЧЕ ""
+КОНЕЦ</presentationExpression>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Услуга</dataPath>
+			<field>Услуга</field>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Приоритет</dataPath>
+			<field>Приоритет</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Начислено</dataPath>
+			<field>Начислено</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Оплата</dataPath>
+			<field>Оплата</field>
+		</field>
+		<dataSource>ИсточникДанных1</dataSource>
+		<query>ВЫБРАТЬ
+	бит_НачислениеПениПоУслугамЖКХОбороты.ЛицевойСчет КАК ЛицевойСчет,
+	бит_НачислениеПениПоУслугамЖКХОбороты.УслугаЖКХ КАК Услуга,
+	бит_НачислениеПениПоУслугамЖКХОбороты.ЛицевойСчет.Организация КАК Организация,
+	ВЫБОР
+		КОГДА &amp;Периодичность = 6
+			ТОГДА КОНЕЦПЕРИОДА(бит_НачислениеПениПоУслугамЖКХОбороты.Период, ДЕНЬ)
+		КОГДА &amp;Периодичность = 7
+			ТОГДА КОНЕЦПЕРИОДА(бит_НачислениеПениПоУслугамЖКХОбороты.Период, НЕДЕЛЯ)
+		КОГДА &amp;Периодичность = 8
+			ТОГДА КОНЕЦПЕРИОДА(бит_НачислениеПениПоУслугамЖКХОбороты.Период, ДЕКАДА)
+		КОГДА &amp;Периодичность = 9
+			ТОГДА КОНЕЦПЕРИОДА(бит_НачислениеПениПоУслугамЖКХОбороты.Период, МЕСЯЦ)
+		КОГДА &amp;Периодичность = 10
+			ТОГДА КОНЕЦПЕРИОДА(бит_НачислениеПениПоУслугамЖКХОбороты.Период, КВАРТАЛ)
+		КОГДА &amp;Периодичность = 11
+			ТОГДА КОНЕЦПЕРИОДА(бит_НачислениеПениПоУслугамЖКХОбороты.Период, ПОЛУГОДИЕ)
+		КОГДА &amp;Периодичность = 12
+			ТОГДА КОНЕЦПЕРИОДА(бит_НачислениеПениПоУслугамЖКХОбороты.Период, ГОД)
+		ИНАЧЕ бит_НачислениеПениПоУслугамЖКХОбороты.Период
+	КОНЕЦ КАК Период,
+	бит_НачислениеПениПоУслугамЖКХОбороты.УслугаЖКХ.Приоритет КАК Приоритет,
+	СУММА(ВЫБОР
+			КОГДА бит_НачислениеПениПоУслугамЖКХОбороты.Регистратор ССЫЛКА Документ.бит_ОплатаКУ
+				ТОГДА бит_НачислениеПениПоУслугамЖКХОбороты.СуммаПениОборот
+			ИНАЧЕ 0
+		КОНЕЦ * -1) КАК Оплата,
+	СУММА(ВЫБОР
+			КОГДА НЕ бит_НачислениеПениПоУслугамЖКХОбороты.Регистратор ССЫЛКА Документ.бит_ОплатаКУ
+				ТОГДА бит_НачислениеПениПоУслугамЖКХОбороты.СуммаПениОборот
+			ИНАЧЕ 0
+		КОНЕЦ) КАК Начислено
+{ВЫБРАТЬ
+	ЛицевойСчет.*,
+	Услуга.*,
+	Организация.*,
+	Период,
+	Приоритет,
+	Начислено,
+	Оплата}
+ИЗ
+	РегистрНакопления.бит_НачислениеПениПоУслугамЖКХ.Обороты(&amp;НачалоПериода, &amp;КонецПериода, Регистратор, ) КАК бит_НачислениеПениПоУслугамЖКХОбороты
+{ГДЕ
+	бит_НачислениеПениПоУслугамЖКХОбороты.ЛицевойСчет.*,
+	бит_НачислениеПениПоУслугамЖКХОбороты.УслугаЖКХ.* КАК Услуга,
+	бит_НачислениеПениПоУслугамЖКХОбороты.ЛицевойСчет.Организация.* КАК Организация,
+	(ВЫБОР
+			КОГДА бит_НачислениеПениПоУслугамЖКХОбороты.Регистратор ССЫЛКА Документ.бит_ОплатаКУ
+				ТОГДА бит_НачислениеПениПоУслугамЖКХОбороты.СуммаПениОборот
+			ИНАЧЕ 0
+		КОНЕЦ) КАК Оплата,
+	(ВЫБОР
+			КОГДА НЕ бит_НачислениеПениПоУслугамЖКХОбороты.Регистратор ССЫЛКА Документ.бит_ОплатаКУ
+				ТОГДА бит_НачислениеПениПоУслугамЖКХОбороты.СуммаПениОборот
+			ИНАЧЕ 0
+		КОНЕЦ) КАК Начислено}
+
+СГРУППИРОВАТЬ ПО
+	бит_НачислениеПениПоУслугамЖКХОбороты.ЛицевойСчет,
+	бит_НачислениеПениПоУслугамЖКХОбороты.УслугаЖКХ,
+	ВЫБОР
+		КОГДА &amp;Периодичность = 6
+			ТОГДА КОНЕЦПЕРИОДА(бит_НачислениеПениПоУслугамЖКХОбороты.Период, ДЕНЬ)
+		КОГДА &amp;Периодичность = 7
+			ТОГДА КОНЕЦПЕРИОДА(бит_НачислениеПениПоУслугамЖКХОбороты.Период, НЕДЕЛЯ)
+		КОГДА &amp;Периодичность = 8
+			ТОГДА КОНЕЦПЕРИОДА(бит_НачислениеПениПоУслугамЖКХОбороты.Период, ДЕКАДА)
+		КОГДА &amp;Периодичность = 9
+			ТОГДА КОНЕЦПЕРИОДА(бит_НачислениеПениПоУслугамЖКХОбороты.Период, МЕСЯЦ)
+		КОГДА &amp;Периодичность = 10
+			ТОГДА КОНЕЦПЕРИОДА(бит_НачислениеПениПоУслугамЖКХОбороты.Период, КВАРТАЛ)
+		КОГДА &amp;Периодичность = 11
+			ТОГДА КОНЕЦПЕРИОДА(бит_НачислениеПениПоУслугамЖКХОбороты.Период, ПОЛУГОДИЕ)
+		КОГДА &amp;Периодичность = 12
+			ТОГДА КОНЕЦПЕРИОДА(бит_НачислениеПениПоУслугамЖКХОбороты.Период, ГОД)
+		ИНАЧЕ бит_НачислениеПениПоУслугамЖКХОбороты.Период
+	КОНЕЦ,
+	бит_НачислениеПениПоУслугамЖКХОбороты.УслугаЖКХ.Приоритет,
+	бит_НачислениеПениПоУслугамЖКХОбороты.ЛицевойСчет.Организация</query>
+		<autoFillFields>false</autoFillFields>
+	</dataSet>
+	<dataSet xsi:type="DataSetQuery">
+		<name>ДопДанныеПоПени</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Долг</dataPath>
+			<field>Долг</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КоличествоДней</dataPath>
+			<field>КоличествоДней</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ЛицевойСчет</dataPath>
+			<field>ЛицевойСчет</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Период</dataPath>
+			<field>Период</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Услуга</dataPath>
+			<field>Услуга</field>
+		</field>
+		<dataSource>ИсточникДанных1</dataSource>
+		<query>ВЫБРАТЬ
+	бит_ДопДанныеНачисленияПениСрезПоследних.ЛицевойСчет КАК ЛицевойСчет,
+	бит_ДопДанныеНачисленияПениСрезПоследних.Услуга КАК Услуга,
+	бит_ДопДанныеНачисленияПениСрезПоследних.Долг КАК Долг,
+	бит_ДопДанныеНачисленияПениСрезПоследних.КоличествоДней КАК КоличествоДней,
+	&amp;Период КАК Период
+{ВЫБРАТЬ
+	ЛицевойСчет.*,
+	Услуга.*,
+	Долг,
+	КоличествоДней,
+	Период}
+ИЗ
+	РегистрСведений.бит_ДопДанныеНачисленияПени.СрезПоследних(
+			&amp;Период,
+			ЛицевойСчет = &amp;ЛицевойСчет
+				И Услуга = &amp;Услуга) КАК бит_ДопДанныеНачисленияПениСрезПоследних
+{ГДЕ
+	бит_ДопДанныеНачисленияПениСрезПоследних.ЛицевойСчет.*,
+	бит_ДопДанныеНачисленияПениСрезПоследних.Услуга.*,
+	бит_ДопДанныеНачисленияПениСрезПоследних.Долг,
+	бит_ДопДанныеНачисленияПениСрезПоследних.КоличествоДней}</query>
+		<autoFillFields>false</autoFillFields>
+	</dataSet>
+	<dataSet xsi:type="DataSetQuery">
+		<name>Проживающие</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ЛицевойСчет</dataPath>
+			<field>ЛицевойСчет</field>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СтепеньРодства</dataPath>
+			<field>СтепеньРодства</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ФизЛицо</dataPath>
+			<field>ФизЛицо</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ответственное лицо</v8:content>
+				</v8:item>
+			</title>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<dataSource>ИсточникДанных1</dataSource>
+		<query>ВЫБРАТЬ
+	бит_ПроживающиеПоЛССрезПоследних.ЛицевойСчет КАК ЛицевойСчет,
+	бит_ПроживающиеПоЛССрезПоследних.ФизЛицо КАК ФизЛицо,
+	бит_ПроживающиеПоЛССрезПоследних.СтепеньРодства КАК СтепеньРодства
+ИЗ
+	РегистрСведений.бит_ПроживающиеПоЛС.СрезПоследних КАК бит_ПроживающиеПоЛССрезПоследних
+ГДЕ
+	бит_ПроживающиеПоЛССрезПоследних.СтепеньРодства = &amp;СтепеньРодства</query>
+	</dataSet>
+	<dataSetLink>
+		<sourceDataSet>ОборотыПоПени</sourceDataSet>
+		<destinationDataSet>ДопДанныеПоПени</destinationDataSet>
+		<sourceExpression>ЛицевойСчет</sourceExpression>
+		<destinationExpression>ЛицевойСчет</destinationExpression>
+		<parameter>ЛицевойСчет</parameter>
+		<parameterListAllowed>false</parameterListAllowed>
+	</dataSetLink>
+	<dataSetLink>
+		<sourceDataSet>ОборотыПоПени</sourceDataSet>
+		<destinationDataSet>ДопДанныеПоПени</destinationDataSet>
+		<sourceExpression>Услуга</sourceExpression>
+		<destinationExpression>Услуга</destinationExpression>
+		<parameter>Услуга</parameter>
+		<parameterListAllowed>false</parameterListAllowed>
+	</dataSetLink>
+	<dataSetLink>
+		<sourceDataSet>ОборотыПоПени</sourceDataSet>
+		<destinationDataSet>ДопДанныеПоПени</destinationDataSet>
+		<sourceExpression>Период</sourceExpression>
+		<destinationExpression>Период</destinationExpression>
+		<parameter>Период</parameter>
+		<parameterListAllowed>false</parameterListAllowed>
+	</dataSetLink>
+	<dataSetLink>
+		<sourceDataSet>Проживающие</sourceDataSet>
+		<destinationDataSet>ОборотыПоПени</destinationDataSet>
+		<sourceExpression>ЛицевойСчет</sourceExpression>
+		<destinationExpression>ЛицевойСчет</destinationExpression>
+		<parameter>ЛицевойСчет</parameter>
+		<parameterListAllowed>false</parameterListAllowed>
+	</dataSetLink>
+	<totalField>
+		<dataPath>Долг</dataPath>
+		<expression>Сумма(Долг)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>КоличествоДней</dataPath>
+		<expression>Максимум(КоличествоДней)</expression>
+		<group>Услуга</group>
+	</totalField>
+	<totalField>
+		<dataPath>Оплата</dataPath>
+		<expression>Сумма(Оплата)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>Начислено</dataPath>
+		<expression>Сумма(Начислено)</expression>
+	</totalField>
+	<parameter>
+		<name>НачалоПериода</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Начало периода</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>false</useRestriction>
+	</parameter>
+	<parameter>
+		<name>КонецПериода</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Конец периода</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>false</useRestriction>
+	</parameter>
+	<parameter>
+		<name>Период</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Период</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<parameter>
+		<name>ЛицевойСчет</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Лицевой счет</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.бит_ЛицевыеСчета</v8:Type>
+		</valueType>
+		<value xsi:type="dcscor:DesignTimeValue">Справочник.бит_ЛицевыеСчета.ПустаяСсылка</value>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<parameter>
+		<name>Услуга</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Услуга</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.бит_УслугиЖКХ</v8:Type>
+		</valueType>
+		<value xsi:type="dcscor:DesignTimeValue">Справочник.бит_УслугиЖКХ.ПустаяСсылка</value>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<parameter>
+		<name>Периодичность</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Периодичность</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:decimal</v8:Type>
+			<v8:NumberQualifiers>
+				<v8:Digits>0</v8:Digits>
+				<v8:FractionDigits>0</v8:FractionDigits>
+				<v8:AllowedSign>Any</v8:AllowedSign>
+			</v8:NumberQualifiers>
+		</valueType>
+		<value xsi:type="xs:decimal">9</value>
+		<useRestriction>false</useRestriction>
+		<availableValue>
+			<value xsi:type="xs:decimal">6</value>
+			<presentation xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>ДЕНЬ</v8:content>
+				</v8:item>
+			</presentation>
+		</availableValue>
+		<availableValue>
+			<value xsi:type="xs:decimal">7</value>
+			<presentation xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>НЕДЕЛЯ</v8:content>
+				</v8:item>
+			</presentation>
+		</availableValue>
+		<availableValue>
+			<value xsi:type="xs:decimal">8</value>
+			<presentation xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>ДЕКАДА</v8:content>
+				</v8:item>
+			</presentation>
+		</availableValue>
+		<availableValue>
+			<value xsi:type="xs:decimal">9</value>
+			<presentation xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>МЕСЯЦ</v8:content>
+				</v8:item>
+			</presentation>
+		</availableValue>
+		<availableValue>
+			<value xsi:type="xs:decimal">10</value>
+			<presentation xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>КВАРТАЛ</v8:content>
+				</v8:item>
+			</presentation>
+		</availableValue>
+		<availableValue>
+			<value xsi:type="xs:decimal">11</value>
+			<presentation xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>ПОЛУГОДИЕ</v8:content>
+				</v8:item>
+			</presentation>
+		</availableValue>
+		<availableValue>
+			<value xsi:type="xs:decimal">12</value>
+			<presentation xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>ГОД</v8:content>
+				</v8:item>
+			</presentation>
+		</availableValue>
+	</parameter>
+	<parameter>
+		<name>СтепеньРодства</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Степень родства</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.бит_СтепениРодстваФизЛиц</v8:Type>
+		</valueType>
+		<value xsi:type="dcscor:DesignTimeValue">Справочник.бит_СтепениРодстваФизЛиц.бит_ОтветственноеЛицо</value>
+		<useRestriction>true</useRestriction>
+		<availableValue>
+			<value xsi:type="dcscor:DesignTimeValue">Справочник.бит_СтепениРодстваФизЛиц.бит_ОтветственноеЛицо</value>
+		</availableValue>
+	</parameter>
+	<settingsVariant>
+		<dcsset:name>Список</dcsset:name>
+		<dcsset:presentation xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Список</v8:content>
+			</v8:item>
+		</dcsset:presentation>
+		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+			<dcsset:selection>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Период</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ЛицевойСчет</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Услуга</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Долг</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>КоличествоДней</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Начислено</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Оплата</dcsset:field>
+				</dcsset:item>
+			</dcsset:selection>
+			<dcsset:order>
+				<dcsset:item xsi:type="dcsset:OrderItemField">
+					<dcsset:field>Период</dcsset:field>
+					<dcsset:orderType>Desc</dcsset:orderType>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:OrderItemField">
+					<dcsset:field>ЛицевойСчет</dcsset:field>
+					<dcsset:orderType>Asc</dcsset:orderType>
+				</dcsset:item>
+			</dcsset:order>
+			<dcsset:outputParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>МакетОформления</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">Основной</dcscor:value>
+				</dcscor:item>
+			</dcsset:outputParameters>
+			<dcsset:item xsi:type="dcsset:StructureItemGroup">
+				<dcsset:groupItems>
+					<dcsset:item xsi:type="dcsset:GroupItemField">
+						<dcsset:field>ЛицевойСчет</dcsset:field>
+						<dcsset:groupType>Items</dcsset:groupType>
+						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+						<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+						<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:GroupItemField">
+						<dcsset:field>ФизЛицо</dcsset:field>
+						<dcsset:groupType>Items</dcsset:groupType>
+						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+						<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+						<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+					</dcsset:item>
+				</dcsset:groupItems>
+				<dcsset:order>
+					<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+				</dcsset:order>
+				<dcsset:selection>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>ЛицевойСчет</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>ФизЛицо</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:item xsi:type="dcsset:StructureItemGroup">
+					<dcsset:groupItems>
+						<dcsset:item xsi:type="dcsset:GroupItemField">
+							<dcsset:field>Период</dcsset:field>
+							<dcsset:groupType>Items</dcsset:groupType>
+							<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+							<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+							<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+						</dcsset:item>
+					</dcsset:groupItems>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+					</dcsset:order>
+					<dcsset:selection>
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:field>Период</dcsset:field>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:field>Долг</dcsset:field>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:field>КоличествоДней</dcsset:field>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:field>Начислено</dcsset:field>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:field>Оплата</dcsset:field>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:field>ФизЛицо</dcsset:field>
+						</dcsset:item>
+					</dcsset:selection>
+					<dcsset:item xsi:type="dcsset:StructureItemGroup">
+						<dcsset:groupItems>
+							<dcsset:item xsi:type="dcsset:GroupItemField">
+								<dcsset:field>Услуга</dcsset:field>
+								<dcsset:groupType>Items</dcsset:groupType>
+								<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+								<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+								<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+							</dcsset:item>
+						</dcsset:groupItems>
+						<dcsset:order>
+							<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+						</dcsset:order>
+						<dcsset:selection>
+							<dcsset:item xsi:type="dcsset:SelectedItemField">
+								<dcsset:field>Долг</dcsset:field>
+							</dcsset:item>
+							<dcsset:item xsi:type="dcsset:SelectedItemField">
+								<dcsset:field>КоличествоДней</dcsset:field>
+							</dcsset:item>
+							<dcsset:item xsi:type="dcsset:SelectedItemField">
+								<dcsset:field>Начислено</dcsset:field>
+							</dcsset:item>
+							<dcsset:item xsi:type="dcsset:SelectedItemField">
+								<dcsset:field>Оплата</dcsset:field>
+							</dcsset:item>
+							<dcsset:item xsi:type="dcsset:SelectedItemField">
+								<dcsset:field>Услуга</dcsset:field>
+							</dcsset:item>
+						</dcsset:selection>
+					</dcsset:item>
+				</dcsset:item>
+			</dcsset:item>
+		</dcsset:settings>
+	</settingsVariant>
+	<settingsVariant>
+		<dcsset:name>Таблица</dcsset:name>
+		<dcsset:presentation xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Таблица</v8:content>
+			</v8:item>
+		</dcsset:presentation>
+		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+			<dcsset:selection>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Долг</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>КоличествоДней</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Начислено</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Оплата</dcsset:field>
+				</dcsset:item>
+			</dcsset:selection>
+			<dcsset:order>
+				<dcsset:item xsi:type="dcsset:OrderItemField">
+					<dcsset:field>Период</dcsset:field>
+					<dcsset:orderType>Desc</dcsset:orderType>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:OrderItemField">
+					<dcsset:field>ЛицевойСчет</dcsset:field>
+					<dcsset:orderType>Asc</dcsset:orderType>
+				</dcsset:item>
+			</dcsset:order>
+			<dcsset:outputParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>МакетОформления</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">Main</dcscor:value>
+				</dcscor:item>
+			</dcsset:outputParameters>
+			<dcsset:item xsi:type="dcsset:StructureItemTable">
+				<dcsset:column>
+					<dcsset:groupItems>
+						<dcsset:item xsi:type="dcsset:GroupItemField">
+							<dcsset:field>Период</dcsset:field>
+							<dcsset:groupType>Items</dcsset:groupType>
+							<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+							<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+							<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+						</dcsset:item>
+					</dcsset:groupItems>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+					</dcsset:order>
+					<dcsset:selection>
+						<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+					</dcsset:selection>
+				</dcsset:column>
+				<dcsset:row>
+					<dcsset:groupItems>
+						<dcsset:item xsi:type="dcsset:GroupItemField">
+							<dcsset:field>ЛицевойСчет</dcsset:field>
+							<dcsset:groupType>Items</dcsset:groupType>
+							<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+							<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+							<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+						</dcsset:item>
+					</dcsset:groupItems>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+					</dcsset:order>
+					<dcsset:selection>
+						<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+					</dcsset:selection>
+					<dcsset:item>
+						<dcsset:groupItems>
+							<dcsset:item xsi:type="dcsset:GroupItemField">
+								<dcsset:field>Услуга</dcsset:field>
+								<dcsset:groupType>Items</dcsset:groupType>
+								<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+								<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+								<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+							</dcsset:item>
+						</dcsset:groupItems>
+						<dcsset:order>
+							<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+						</dcsset:order>
+						<dcsset:selection>
+							<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+						</dcsset:selection>
+					</dcsset:item>
+				</dcsset:row>
+			</dcsset:item>
+		</dcsset:settings>
+	</settingsVariant>
+</DataCompositionSchema>

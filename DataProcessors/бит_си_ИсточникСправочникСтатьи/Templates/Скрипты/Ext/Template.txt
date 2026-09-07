@@ -1,0 +1,16 @@
+﻿function expandit(curobj, objtoex)
+   {
+     ftitle=document.getElementById(curobj)
+     folder=document.getElementById(objtoex)
+     if (folder==null) return
+     if (folder.style.display=="none")
+     	{
+			ftitle.innerHTML = "&#8211;"
+        	folder.style.display=""
+		}
+     else
+		{
+     		ftitle.innerHTML = "+"
+	        folder.style.display="none"
+		}
+   }

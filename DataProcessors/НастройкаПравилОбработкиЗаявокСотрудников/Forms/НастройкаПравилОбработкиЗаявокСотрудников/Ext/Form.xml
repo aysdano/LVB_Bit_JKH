@@ -1,0 +1,531 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.18">
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+		<ChildItems>
+			<Button name="ФормаЗаписатьИЗакрыть" id="17">
+				<Type>CommandBarButton</Type>
+				<DefaultButton>true</DefaultButton>
+				<CommandName>Form.Command.ЗаписатьИЗакрыть</CommandName>
+				<ExtendedTooltip name="ФормаЗаписатьИЗакрытьРасширеннаяПодсказка" id="18"/>
+			</Button>
+			<Button name="ФормаЗаписать" id="19">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.Записать</CommandName>
+				<ExtendedTooltip name="ФормаЗаписатьРасширеннаяПодсказка" id="20"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="BeforeClose">ПередЗакрытием</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="Шапка" id="78">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Шапка</v8:content>
+				</v8:item>
+			</Title>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ШапкаРасширеннаяПодсказка" id="79"/>
+			<ChildItems>
+				<Button name="ФормаОтчетПоЗадачам" id="92">
+					<Type>Hyperlink</Type>
+					<CommandName>Form.Command.ОтчетПоЗаявкам</CommandName>
+					<ExtendedTooltip name="ФормаОтчетПоЗадачамРасширеннаяПодсказка" id="93"/>
+				</Button>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаНастройкаНедоступна" id="94">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настройка недоступна</v8:content>
+				</v8:item>
+			</Title>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаНастройкаНедоступнаРасширеннаяПодсказка" id="95"/>
+			<ChildItems>
+				<PictureDecoration name="ДекорацияКартинкаНастройкаНедоступна" id="96">
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Декорация картинка настройка недоступна</v8:content>
+						</v8:item>
+					</Title>
+					<Picture>
+						<xr:Ref>CommonPicture.Информация16АнимированнаяБЗК</xr:Ref>
+						<xr:LoadTransparent>true</xr:LoadTransparent>
+					</Picture>
+					<ContextMenu name="ДекорацияКартинкаНастройкаНедоступнаКонтекстноеМеню" id="97"/>
+					<ExtendedTooltip name="ДекорацияКартинкаНастройкаНедоступнаРасширеннаяПодсказка" id="98"/>
+				</PictureDecoration>
+				<LabelDecoration name="ДекорацияНастройкаНедоступна" id="99">
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Настройка правил недоступна. Требуется доступ ко все структуре предприятия.
+Обратитесь к вашему администратору.</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ДекорацияНастройкаНедоступнаКонтекстноеМеню" id="100"/>
+					<ExtendedTooltip name="ДекорацияНастройкаНедоступнаРасширеннаяПодсказка" id="101"/>
+				</LabelDecoration>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаВидНастройки" id="102">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вид настройки</v8:content>
+				</v8:item>
+			</Title>
+			<Group>Vertical</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаВидНастройкиРасширеннаяПодсказка" id="103"/>
+			<ChildItems>
+				<LabelDecoration name="ДекорацияОграничениеДоступности" id="104">
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Для изменения варианта настройки требуется полный доступ к структуре предприятия, обратитесь к вашему администратору.</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ДекорацияОграничениеДоступностиКонтекстноеМеню" id="105"/>
+					<ExtendedTooltip name="ДекорацияОграничениеДоступностиРасширеннаяПодсказка" id="106"/>
+				</LabelDecoration>
+				<LabelDecoration name="ДекорацияПустаяСтруктураПредприятия" id="107">
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Справочник структура предприятия не заполнен. Настройка правил недоступна. Обратитесь к вашему администратору.</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ДекорацияПустаяСтруктураПредприятияКонтекстноеМеню" id="108"/>
+					<ExtendedTooltip name="ДекорацияПустаяСтруктураПредприятияРасширеннаяПодсказка" id="109"/>
+				</LabelDecoration>
+				<RadioButtonField name="ВидНастройки" id="83">
+					<DataPath>ВидНастройки</DataPath>
+					<TitleLocation>None</TitleLocation>
+					<RadioButtonType>Tumbler</RadioButtonType>
+					<ChoiceList>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Настройка по видам заявки</v8:content>
+									</v8:item>
+								</Presentation>
+								<Value xsi:type="xs:decimal">0</Value>
+							</xr:Value>
+						</xr:Item>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Настройка с точностью до структуры предприятия</v8:content>
+									</v8:item>
+								</Presentation>
+								<Value xsi:type="xs:decimal">1</Value>
+							</xr:Value>
+						</xr:Item>
+					</ChoiceList>
+					<ContextMenu name="ВидНастройкиКонтекстноеМеню" id="84"/>
+					<ExtendedTooltip name="ВидНастройкиРасширеннаяПодсказка" id="85"/>
+					<Events>
+						<Event name="OnChange">ВидНастройкиПриИзменении</Event>
+					</Events>
+				</RadioButtonField>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаНастройки" id="46">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настройки</v8:content>
+				</v8:item>
+			</Title>
+			<Group>AlwaysHorizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаНастройкиРасширеннаяПодсказка" id="47"/>
+			<ChildItems>
+				<Table name="НастройкиПравил" id="1">
+					<Representation>List</Representation>
+					<CommandBarLocation>None</CommandBarLocation>
+					<ChangeRowSet>false</ChangeRowSet>
+					<ChangeRowOrder>false</ChangeRowOrder>
+					<AutoInsertNewRow>true</AutoInsertNewRow>
+					<EnableStartDrag>true</EnableStartDrag>
+					<EnableDrag>true</EnableDrag>
+					<DataPath>НастройкиПравил</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Роли исполнителей</v8:content>
+						</v8:item>
+					</Title>
+					<RowFilter xsi:nil="true"/>
+					<ContextMenu name="НастройкиПравилКонтекстноеМеню" id="2"/>
+					<AutoCommandBar name="НастройкиПравилКоманднаяПанель" id="3"/>
+					<ExtendedTooltip name="НастройкиПравилРасширеннаяПодсказка" id="4"/>
+					<SearchStringAddition name="НастройкиПравилСтрокаПоиска" id="5">
+						<AdditionSource>
+							<Item>НастройкиПравил</Item>
+							<Type>SearchStringRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="НастройкиПравилСтрокаПоискаКонтекстноеМеню" id="6"/>
+						<ExtendedTooltip name="НастройкиПравилСтрокаПоискаРасширеннаяПодсказка" id="7"/>
+					</SearchStringAddition>
+					<ViewStatusAddition name="НастройкиПравилСостояниеПросмотра" id="8">
+						<AdditionSource>
+							<Item>НастройкиПравил</Item>
+							<Type>ViewStatusRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="НастройкиПравилСостояниеПросмотраКонтекстноеМеню" id="9"/>
+						<ExtendedTooltip name="НастройкиПравилСостояниеПросмотраРасширеннаяПодсказка" id="10"/>
+					</ViewStatusAddition>
+					<SearchControlAddition name="НастройкиПравилУправлениеПоиском" id="11">
+						<AdditionSource>
+							<Item>НастройкиПравил</Item>
+							<Type>SearchControl</Type>
+						</AdditionSource>
+						<ContextMenu name="НастройкиПравилУправлениеПоискомКонтекстноеМеню" id="12"/>
+						<ExtendedTooltip name="НастройкиПравилУправлениеПоискомРасширеннаяПодсказка" id="13"/>
+					</SearchControlAddition>
+					<Events>
+						<Event name="OnActivateRow">НастройкиПравилПриАктивизацииСтроки</Event>
+					</Events>
+					<ChildItems>
+						<InputField name="НастройкиПравилРольИсполнителя" id="14">
+							<DataPath>НастройкиПравил.РольИсполнителя</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Вид заявки</v8:content>
+								</v8:item>
+							</Title>
+							<EditMode>EnterOnInput</EditMode>
+							<AutoChoiceIncomplete>true</AutoChoiceIncomplete>
+							<AutoMarkIncomplete>true</AutoMarkIncomplete>
+							<ContextMenu name="НастройкиПравилРольИсполнителяКонтекстноеМеню" id="15"/>
+							<ExtendedTooltip name="НастройкиПравилРольИсполнителяРасширеннаяПодсказка" id="16"/>
+						</InputField>
+						<InputField name="НастройкиПравилСрокЗадачи" id="86">
+							<DataPath>НастройкиПравил.СрокЗадачи</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Количество дней для выполнения заявок</v8:content>
+								</v8:item>
+							</Title>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="НастройкиПравилСрокЗадачиКонтекстноеМеню" id="87"/>
+							<ExtendedTooltip name="НастройкиПравилСрокЗадачиРасширеннаяПодсказка" id="88"/>
+							<Events>
+								<Event name="OnChange">НастройкиПравилСрокЗадачиПриИзменении</Event>
+							</Events>
+						</InputField>
+						<InputField name="НастройкиПравилСписокПользователей" id="89">
+							<DataPath>НастройкиПравил.СписокПользователей</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Исполнители заявок</v8:content>
+								</v8:item>
+							</Title>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="НастройкиПравилСписокПользователейКонтекстноеМеню" id="90"/>
+							<ExtendedTooltip name="НастройкиПравилСписокПользователейРасширеннаяПодсказка" id="91"/>
+							<Events>
+								<Event name="StartChoice">НастройкиПравилСписокПользователейНачалоВыбора</Event>
+							</Events>
+						</InputField>
+					</ChildItems>
+				</Table>
+				<Table name="НастройкиПравилСтруктураПредприятия" id="21">
+					<Representation>Tree</Representation>
+					<CommandBarLocation>None</CommandBarLocation>
+					<ChangeRowSet>false</ChangeRowSet>
+					<ChangeRowOrder>false</ChangeRowOrder>
+					<AutoInsertNewRow>true</AutoInsertNewRow>
+					<EnableStartDrag>true</EnableStartDrag>
+					<EnableDrag>true</EnableDrag>
+					<DataPath>Items.НастройкиПравил.CurrentData.СтруктураПредприятия</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Настройки правил заявок сотрудников</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="НастройкиПравилСтруктураПредприятияКонтекстноеМеню" id="22"/>
+					<AutoCommandBar name="НастройкиПравилСтруктураПредприятияКоманднаяПанель" id="23"/>
+					<ExtendedTooltip name="НастройкиПравилСтруктураПредприятияРасширеннаяПодсказка" id="24"/>
+					<SearchStringAddition name="НастройкиПравилСтруктураПредприятияСтрокаПоиска" id="25">
+						<AdditionSource>
+							<Item>НастройкиПравилСтруктураПредприятия</Item>
+							<Type>SearchStringRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="НастройкиПравилСтруктураПредприятияСтрокаПоискаКонтекстноеМеню" id="26"/>
+						<ExtendedTooltip name="НастройкиПравилСтруктураПредприятияСтрокаПоискаРасширеннаяПодсказка" id="27"/>
+					</SearchStringAddition>
+					<ViewStatusAddition name="НастройкиПравилСтруктураПредприятияСостояниеПросмотра" id="28">
+						<AdditionSource>
+							<Item>НастройкиПравилСтруктураПредприятия</Item>
+							<Type>ViewStatusRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="НастройкиПравилСтруктураПредприятияСостояниеПросмотраКонтекстноеМеню" id="29"/>
+						<ExtendedTooltip name="НастройкиПравилСтруктураПредприятияСостояниеПросмотраРасширеннаяПодсказка" id="30"/>
+					</ViewStatusAddition>
+					<SearchControlAddition name="НастройкиПравилСтруктураПредприятияУправлениеПоиском" id="31">
+						<AdditionSource>
+							<Item>НастройкиПравилСтруктураПредприятия</Item>
+							<Type>SearchControl</Type>
+						</AdditionSource>
+						<ContextMenu name="НастройкиПравилСтруктураПредприятияУправлениеПоискомКонтекстноеМеню" id="32"/>
+						<ExtendedTooltip name="НастройкиПравилСтруктураПредприятияУправлениеПоискомРасширеннаяПодсказка" id="33"/>
+					</SearchControlAddition>
+					<Events>
+						<Event name="OnChange">НастройкиПравилСтруктураПредприятияПриИзменении</Event>
+					</Events>
+					<ChildItems>
+						<InputField name="НастройкиПравилСтруктураПредприятияПодразделение" id="34">
+							<DataPath>Items.НастройкиПравил.CurrentData.СтруктураПредприятия.Подразделение</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="НастройкиПравилСтруктураПредприятияПодразделениеКонтекстноеМеню" id="35"/>
+							<ExtendedTooltip name="НастройкиПравилСтруктураПредприятияПодразделениеРасширеннаяПодсказка" id="36"/>
+						</InputField>
+						<InputField name="НастройкиПравилСтруктураПредприятияСрокЗадачи" id="37">
+							<DataPath>Items.НастройкиПравил.CurrentData.СтруктураПредприятия.СрокЗадачи</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Количество дней для выполнения заявок</v8:content>
+								</v8:item>
+							</Title>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="НастройкиПравилСтруктураПредприятияСрокЗадачиКонтекстноеМеню" id="38"/>
+							<ExtendedTooltip name="НастройкиПравилСтруктураПредприятияСрокЗадачиРасширеннаяПодсказка" id="39"/>
+							<Events>
+								<Event name="OnChange">НастройкиПравилСтруктураПредприятияСрокЗадачиПриИзменении</Event>
+							</Events>
+						</InputField>
+						<InputField name="НастройкиПравилСтруктураПредприятияСписокПользователей" id="43">
+							<DataPath>Items.НастройкиПравил.CurrentData.СтруктураПредприятия.СписокПользователей</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Исполнители заявок</v8:content>
+								</v8:item>
+							</Title>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="НастройкиПравилСтруктураПредприятияСписокПользователейКонтекстноеМеню" id="44"/>
+							<ExtendedTooltip name="НастройкиПравилСтруктураПредприятияСписокПользователейРасширеннаяПодсказка" id="45"/>
+							<Events>
+								<Event name="OnChange">НастройкиПравилСтруктураПредприятияСписокПользователейПриИзменении</Event>
+								<Event name="StartChoice">НастройкиПравилСтруктураПредприятияСписокПользователейНачалоВыбора</Event>
+							</Events>
+						</InputField>
+						<InputField name="НастройкиПравилСтруктураПредприятияИзмененоВручную" id="51">
+							<Visible>false</Visible>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="НастройкиПравилСтруктураПредприятияИзмененоВручнуюКонтекстноеМеню" id="52"/>
+							<ExtendedTooltip name="НастройкиПравилСтруктураПредприятияИзмененоВручнуюРасширеннаяПодсказка" id="53"/>
+						</InputField>
+					</ChildItems>
+				</Table>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="НастройкиПравил" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настройки правил</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="РольИсполнителя" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Роль исполнителя</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.РолиИсполнителей</v8:Type>
+					</Type>
+				</Column>
+				<Column name="СтруктураПредприятия" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Структура предприятия</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>v8:ValueTree</v8:Type>
+					</Type>
+				</Column>
+				<Column name="СрокЗадачи" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Срок задачи</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="СписокПользователей" id="4">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Список пользователей</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>v8:ValueListType</v8:Type>
+					</Type>
+				</Column>
+				<AdditionalColumns table="НастройкиПравил.СтруктураПредприятия">
+					<Column name="Подразделение" id="1">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Подразделение</v8:content>
+							</v8:item>
+						</Title>
+						<Type>
+							<v8:Type>cfg:CatalogRef.СтруктураПредприятия</v8:Type>
+						</Type>
+					</Column>
+					<Column name="СрокЗадачи" id="2">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Срок задачи</v8:content>
+							</v8:item>
+						</Title>
+						<Type>
+							<v8:Type>xs:decimal</v8:Type>
+							<v8:NumberQualifiers>
+								<v8:Digits>2</v8:Digits>
+								<v8:FractionDigits>0</v8:FractionDigits>
+								<v8:AllowedSign>Any</v8:AllowedSign>
+							</v8:NumberQualifiers>
+						</Type>
+					</Column>
+					<Column name="СписокПользователей" id="4">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Список пользователей</v8:content>
+							</v8:item>
+						</Title>
+						<Type>
+							<v8:Type>v8:ValueListType</v8:Type>
+						</Type>
+					</Column>
+				</AdditionalColumns>
+			</Columns>
+		</Attribute>
+		<Attribute name="ВидНастройки" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вид настройки</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>1</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="Реквизит1" id="2">
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ЗаписатьИЗакрыть" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Записать и закрыть</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Записать и закрыть</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЗаписатьИЗакрыть</Action>
+		</Command>
+		<Command name="Записать" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Записать</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Записать</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Записать</Action>
+		</Command>
+		<Command name="ОтчетПоЗаявкам" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отчет по заявкам</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отчет по заявкам</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОтчетПоЗаявкам</Action>
+		</Command>
+	</Commands>
+</Form>

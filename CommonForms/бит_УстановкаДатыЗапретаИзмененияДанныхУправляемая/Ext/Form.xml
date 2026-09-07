@@ -1,0 +1,457 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.18">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Установка даты запрета изменения</v8:content>
+		</v8:item>
+	</Title>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="BeforeClose">ПередЗакрытием</Event>
+	</Events>
+	<ChildItems>
+		<InputField name="СписокСпособУказанияДаты" id="47">
+			<DataPath>СписокСпособУказанияДаты</DataPath>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Способ указания даты</v8:content>
+				</v8:item>
+			</Title>
+			<DropListButton>true</DropListButton>
+			<ChoiceButton>false</ChoiceButton>
+			<ClearButton>false</ClearButton>
+			<ListChoiceMode>true</ListChoiceMode>
+			<ChooseType>false</ChooseType>
+			<ChoiceList>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Общая дата</v8:content>
+							</v8:item>
+						</Presentation>
+						<Value xsi:type="xr:ValueList"/>
+					</xr:Value>
+				</xr:Item>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>По организациям</v8:content>
+							</v8:item>
+						</Presentation>
+						<Value xsi:type="xr:ValueList"/>
+					</xr:Value>
+				</xr:Item>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>По организациям и пользователям</v8:content>
+							</v8:item>
+						</Presentation>
+						<Value xsi:type="xr:ValueList"/>
+					</xr:Value>
+				</xr:Item>
+			</ChoiceList>
+			<ContextMenu name="СписокСпособУказанияДатыКонтекстноеМеню" id="48"/>
+			<ExtendedTooltip name="СписокСпособУказанияДатыРасширеннаяПодсказка" id="49"/>
+			<Events>
+				<Event name="OnChange">СписокСпособУказанияДатыПриИзменении</Event>
+			</Events>
+		</InputField>
+		<InputField name="СпособУказанияДаты" id="1">
+			<DataPath>СпособУказанияДаты</DataPath>
+			<Visible>false</Visible>
+			<DropListButton>true</DropListButton>
+			<ChoiceButtonRepresentation>ShowInInputField</ChoiceButtonRepresentation>
+			<ListChoiceMode>true</ListChoiceMode>
+			<ContextMenu name="СпособУказанияДатыКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="СпособУказанияДатыРасширеннаяПодсказка" id="3"/>
+			<Events>
+				<Event name="OnChange">СпособУказанияДатыПриИзменении</Event>
+				<Event name="StartChoice">СпособУказанияДатыНачалоВыбора</Event>
+			</Events>
+		</InputField>
+		<Pages name="Группа1" id="10">
+			<PagesRepresentation>TabsOnTop</PagesRepresentation>
+			<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="11"/>
+			<ChildItems>
+				<Page name="ОбщаяДата" id="12">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Общая дата (ОбщаяДата)</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Общая дата</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ОбщаяДатаРасширеннаяПодсказка" id="13"/>
+					<ChildItems>
+						<InputField name="ОбщаяДатаЗапрета" id="4">
+							<DataPath>ОбщаяДатаЗапрета</DataPath>
+							<ContextMenu name="ОбщаяДатаЗапретаКонтекстноеМеню" id="5"/>
+							<ExtendedTooltip name="ОбщаяДатаЗапретаРасширеннаяПодсказка" id="6"/>
+						</InputField>
+						<LabelDecoration name="Надпись2" id="7">
+							<TextColor>#4479AE</TextColor>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>После установки даты запрета создание новых или изменение существующих 
+документов будет возможно только в случае, если их дата больше даты запрета.
+</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="Надпись2КонтекстноеМеню" id="8"/>
+							<ExtendedTooltip name="Надпись2РасширеннаяПодсказка" id="9"/>
+						</LabelDecoration>
+					</ChildItems>
+				</Page>
+				<Page name="ДатыПоОрганизациям" id="14">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Даты по организациям (ДатыПоОрганизациям)</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Даты по организациям</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ДатыПоОрганизациямРасширеннаяПодсказка" id="15"/>
+					<ChildItems>
+						<Table name="ДеревоДаты" id="16">
+							<Representation>Tree</Representation>
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<FileDragMode>AsFile</FileDragMode>
+							<DataPath>ДеревоДаты</DataPath>
+							<SearchStringLocation>None</SearchStringLocation>
+							<ViewStatusLocation>None</ViewStatusLocation>
+							<SearchControlLocation>None</SearchControlLocation>
+							<ContextMenu name="ДеревоДатыКонтекстноеМеню" id="17"/>
+							<AutoCommandBar name="ДеревоДатыКоманднаяПанель" id="18">
+								<Autofill>false</Autofill>
+								<ChildItems>
+									<Popup name="Добавить" id="28">
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Добавить</v8:content>
+											</v8:item>
+										</Title>
+										<ToolTip>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Добавить</v8:content>
+											</v8:item>
+										</ToolTip>
+										<ExtendedTooltip name="ДобавитьРасширеннаяПодсказка" id="29"/>
+										<ChildItems>
+											<Button name="ДобавитьПользователя" id="26">
+												<Type>CommandBarButton</Type>
+												<Representation>PictureAndText</Representation>
+												<CommandName>Form.Command.ДобавитьПользователя</CommandName>
+												<Picture>
+													<xr:Ref>CommonPicture.ЗначокСотрудник16</xr:Ref>
+													<xr:LoadTransparent>true</xr:LoadTransparent>
+												</Picture>
+												<ExtendedTooltip name="ДобавитьПользователяРасширеннаяПодсказка" id="27"/>
+											</Button>
+											<Button name="ДеревоДатыДобавитьГруппуПользователей" id="30">
+												<Type>CommandBarButton</Type>
+												<Representation>PictureAndText</Representation>
+												<CommandName>Form.Command.ДобавитьГруппуПользователей</CommandName>
+												<Picture>
+													<xr:Ref>CommonPicture.ЗначокФизическиеЛица32</xr:Ref>
+													<xr:LoadTransparent>true</xr:LoadTransparent>
+												</Picture>
+												<ExtendedTooltip name="ДеревоДатыДобавитьГруппуПользователейРасширеннаяПодсказка" id="31"/>
+											</Button>
+										</ChildItems>
+									</Popup>
+								</ChildItems>
+							</AutoCommandBar>
+							<ExtendedTooltip name="ДеревоДатыРасширеннаяПодсказка" id="19"/>
+							<SearchStringAddition name="ДеревоДатыСтрокаПоиска" id="38">
+								<AdditionSource>
+									<Item>ДеревоДаты</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ДеревоДатыСтрокаПоискаКонтекстноеМеню" id="39"/>
+								<ExtendedTooltip name="ДеревоДатыСтрокаПоискаРасширеннаяПодсказка" id="40"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ДеревоДатыСостояниеПросмотра" id="41">
+								<AdditionSource>
+									<Item>ДеревоДаты</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ДеревоДатыСостояниеПросмотраКонтекстноеМеню" id="42"/>
+								<ExtendedTooltip name="ДеревоДатыСостояниеПросмотраРасширеннаяПодсказка" id="43"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ДеревоДатыУправлениеПоиском" id="44">
+								<AdditionSource>
+									<Item>ДеревоДаты</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ДеревоДатыУправлениеПоискомКонтекстноеМеню" id="45"/>
+								<ExtendedTooltip name="ДеревоДатыУправлениеПоискомРасширеннаяПодсказка" id="46"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<InputField name="ДеревоДатыОрганизацияПользователь" id="20">
+									<DataPath>ДеревоДаты.ОрганизацияПользователь</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ДеревоДатыОрганизацияПользовательКонтекстноеМеню" id="21"/>
+									<ExtendedTooltip name="ДеревоДатыОрганизацияПользовательРасширеннаяПодсказка" id="22"/>
+								</InputField>
+								<InputField name="ДеревоДатыГраница" id="23">
+									<DataPath>ДеревоДаты.Граница</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ДеревоДатыГраницаКонтекстноеМеню" id="24"/>
+									<ExtendedTooltip name="ДеревоДатыГраницаРасширеннаяПодсказка" id="25"/>
+								</InputField>
+								<CheckBoxField name="ДеревоДатыПравоНаИзменение" id="32">
+									<DataPath>ДеревоДаты.ПравоНаИзменение</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="ДеревоДатыПравоНаИзменениеКонтекстноеМеню" id="33"/>
+									<ExtendedTooltip name="ДеревоДатыПравоНаИзменениеРасширеннаяПодсказка" id="34"/>
+								</CheckBoxField>
+								<InputField name="ДеревоДатыТипСтроки" id="35">
+									<DataPath>ДеревоДаты.ТипСтроки</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ДеревоДатыТипСтрокиКонтекстноеМеню" id="36"/>
+									<ExtendedTooltip name="ДеревоДатыТипСтрокиРасширеннаяПодсказка" id="37"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+		<Button name="ОК" id="50">
+			<Type>UsualButton</Type>
+			<DefaultButton>true</DefaultButton>
+			<CommandName>Form.Command.ОК</CommandName>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>ОК</v8:content>
+				</v8:item>
+			</Title>
+			<ExtendedTooltip name="ОКРасширеннаяПодсказка" id="51"/>
+		</Button>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="СпособУказанияДаты" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Способ указания даты</v8:content>
+				</v8:item>
+			</Title>
+			<Type/>
+		</Attribute>
+		<Attribute name="ОбщаяДатаЗапрета" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Общая дата запрета</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:dateTime</v8:Type>
+				<v8:DateQualifiers>
+					<v8:DateFractions>Date</v8:DateFractions>
+				</v8:DateQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ДеревоДаты" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дерево даты</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTree</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="ОрганизацияПользователь" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Организация пользователь</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:Type>cfg:CatalogRef.ГруппыПользователей</v8:Type>
+						<v8:Type>cfg:CatalogRef.Пользователи</v8:Type>
+						<v8:Type>cfg:CatalogRef.Организации</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Граница" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Граница</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:dateTime</v8:Type>
+						<v8:DateQualifiers>
+							<v8:DateFractions>Date</v8:DateFractions>
+						</v8:DateQualifiers>
+					</Type>
+				</Column>
+				<Column name="ПравоНаИзменение" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Право на изменение</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ТипСтроки" id="4">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Тип строки</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>1</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="мКэшЗначений" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>М кэш значений</v8:content>
+				</v8:item>
+			</Title>
+			<Type/>
+		</Attribute>
+		<Attribute name="СписокСпособУказанияДаты" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Список способ указания даты</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueListType</v8:Type>
+			</Type>
+			<SavedData>true</SavedData>
+			<Settings xsi:type="v8:TypeDescription">
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>10</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Settings>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ДобавитьПользователя" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Добавить пользователя</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Добавить пользователя</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ДобавитьПользователя</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ДобавитьГруппуПользователей" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Добавить группу пользователей</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Добавить группу пользователей</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ДобавитьГруппуПользователей</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="УдалитьСтроку" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Удалить строку</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Удалить строку</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>УдалитьСтроку</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ОК" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>ОК</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>ОК</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОК</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+	</Commands>
+</Form>

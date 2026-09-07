@@ -1,0 +1,709 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.18">
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<AutoTime>CurrentOrLast</AutoTime>
+	<UsePostingMode>Auto</UsePostingMode>
+	<RepostOnWrite>true</RepostOnWrite>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="AfterWrite">ПослеЗаписи</Event>
+		<Event name="ChoiceProcessing">ОбработкаВыбора</Event>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="BeforeWrite">ПередЗаписью</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+		<Event name="OnClose">ПриЗакрытии</Event>
+	</Events>
+	<ChildItems>
+		<InputField name="ВидОперации" id="13">
+			<DataPath>Объект.ВидОперации</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="ВидОперацииКонтекстноеМеню" id="14"/>
+			<ExtendedTooltip name="ВидОперацииExtendedTooltip" id="76"/>
+			<Events>
+				<Event name="OnChange">ВидОперацииПриИзменении</Event>
+			</Events>
+		</InputField>
+		<UsualGroup name="Группа1" id="40">
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="Группа1ExtendedTooltip" id="77"/>
+			<ChildItems>
+				<InputField name="Номер" id="1">
+					<DataPath>Объект.Number</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="НомерКонтекстноеМеню" id="2"/>
+					<ExtendedTooltip name="НомерExtendedTooltip" id="78"/>
+				</InputField>
+				<InputField name="Дата" id="3">
+					<DataPath>Объект.Date</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>от</v8:content>
+						</v8:item>
+					</Title>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ДатаКонтекстноеМеню" id="4"/>
+					<ExtendedTooltip name="ДатаExtendedTooltip" id="79"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="Группа2" id="41">
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="Группа2ExtendedTooltip" id="80"/>
+			<ChildItems>
+				<InputField name="Улица" id="5">
+					<DataPath>Объект.Улица</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<CreateButton>false</CreateButton>
+					<ContextMenu name="УлицаКонтекстноеМеню" id="6"/>
+					<ExtendedTooltip name="УлицаExtendedTooltip" id="81"/>
+					<Events>
+						<Event name="OnChange">УлицаПриИзменении</Event>
+						<Event name="ChoiceProcessing">УлицаОбработкаВыбора</Event>
+					</Events>
+				</InputField>
+				<InputField name="Услуга" id="9">
+					<DataPath>Объект.Услуга</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<DropListButton>false</DropListButton>
+					<ChoiceButton>true</ChoiceButton>
+					<ChoiceButtonRepresentation>ShowInInputField</ChoiceButtonRepresentation>
+					<CreateButton>false</CreateButton>
+					<TextEdit>false</TextEdit>
+					<ChoiceHistoryOnInput>DontUse</ChoiceHistoryOnInput>
+					<ContextMenu name="УслугаКонтекстноеМеню" id="10"/>
+					<ExtendedTooltip name="УслугаExtendedTooltip" id="82"/>
+					<Events>
+						<Event name="StartChoice">УслугаНачалоВыбора</Event>
+						<Event name="ChoiceProcessing">УслугаОбработкаВыбора</Event>
+					</Events>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="Группа3" id="42">
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ChildItemsWidth>Equal</ChildItemsWidth>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="Группа3ExtendedTooltip" id="83"/>
+			<ChildItems>
+				<InputField name="Здание" id="7">
+					<DataPath>Объект.Здание</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<Width>20</Width>
+					<DropListButton>false</DropListButton>
+					<ChoiceButton>true</ChoiceButton>
+					<ChoiceButtonRepresentation>ShowInInputField</ChoiceButtonRepresentation>
+					<CreateButton>false</CreateButton>
+					<TextEdit>false</TextEdit>
+					<ChoiceHistoryOnInput>DontUse</ChoiceHistoryOnInput>
+					<ContextMenu name="ЗданиеКонтекстноеМеню" id="8"/>
+					<ExtendedTooltip name="ЗданиеExtendedTooltip" id="84"/>
+					<Events>
+						<Event name="OnChange">ЗданиеПриИзменении</Event>
+						<Event name="StartChoice">ЗданиеНачалоВыбора</Event>
+						<Event name="ChoiceProcessing">ЗданиеОбработкаВыбора</Event>
+					</Events>
+				</InputField>
+				<UsualGroup name="Группа8" id="72">
+					<Group>Horizontal</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="Группа8ExtendedTooltip" id="85"/>
+					<ChildItems>
+						<InputField name="ЛицевойСчет" id="11">
+							<DataPath>Объект.ЛицевойСчет</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<DropListButton>false</DropListButton>
+							<ChoiceButton>true</ChoiceButton>
+							<ChoiceButtonRepresentation>ShowInInputField</ChoiceButtonRepresentation>
+							<CreateButton>false</CreateButton>
+							<TextEdit>false</TextEdit>
+							<ChoiceHistoryOnInput>DontUse</ChoiceHistoryOnInput>
+							<ContextMenu name="ЛицевойСчетКонтекстноеМеню" id="12"/>
+							<ExtendedTooltip name="ЛицевойСчетExtendedTooltip" id="86"/>
+							<Events>
+								<Event name="OnChange">ЛицевойСчетПриИзменении</Event>
+								<Event name="StartChoice">ЛицевойСчетНачалоВыбора</Event>
+							</Events>
+						</InputField>
+						<LabelDecoration name="Декорация1" id="73">
+							<Width>53</Width>
+							<ContextMenu name="Декорация1КонтекстноеМеню" id="74"/>
+							<ExtendedTooltip name="Декорация1ExtendedTooltip" id="87"/>
+						</LabelDecoration>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<Pages name="Группа4" id="43">
+			<PagesRepresentation>TabsOnTop</PagesRepresentation>
+			<ExtendedTooltip name="Группа4ExtendedTooltip" id="88"/>
+			<ChildItems>
+				<Page name="Группа5" id="44">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Услуги по ЛС</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="Группа5ExtendedTooltip" id="89"/>
+					<ChildItems>
+						<Table name="ЛицевыеСчета" id="23">
+							<Representation>List</Representation>
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<FileDragMode>AsFile</FileDragMode>
+							<DataPath>Объект.ЛицевыеСчета</DataPath>
+							<SearchStringLocation>None</SearchStringLocation>
+							<ViewStatusLocation>None</ViewStatusLocation>
+							<SearchControlLocation>None</SearchControlLocation>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="ЛицевыеСчетаКонтекстноеМеню" id="24"/>
+							<AutoCommandBar name="ЛицевыеСчетаКоманднаяПанель" id="25">
+								<Autofill>false</Autofill>
+								<ChildItems>
+									<Button name="ЛицевыеСчетаДобавить" id="45">
+										<Type>CommandBarButton</Type>
+										<Representation>Picture</Representation>
+										<CommandName>Form.Item.ЛицевыеСчета.StandardCommand.Add</CommandName>
+										<ExtendedTooltip name="ЛицевыеСчетаДобавитьExtendedTooltip" id="90"/>
+									</Button>
+									<Button name="ЛицевыеСчетаСкопировать" id="46">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Item.ЛицевыеСчета.StandardCommand.Copy</CommandName>
+										<ExtendedTooltip name="ЛицевыеСчетаСкопироватьExtendedTooltip" id="91"/>
+									</Button>
+									<Button name="ЛицевыеСчетаИзменить" id="47">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Item.ЛицевыеСчета.StandardCommand.Change</CommandName>
+										<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
+										<ExtendedTooltip name="ЛицевыеСчетаИзменитьExtendedTooltip" id="92"/>
+									</Button>
+									<Button name="ЛицевыеСчетаУдалить" id="48">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Item.ЛицевыеСчета.StandardCommand.Delete</CommandName>
+										<ExtendedTooltip name="ЛицевыеСчетаУдалитьExtendedTooltip" id="93"/>
+									</Button>
+									<Button name="ЛицевыеСчетаЗакончитьРедактирование" id="49">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Item.ЛицевыеСчета.StandardCommand.EndEdit</CommandName>
+										<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
+										<ExtendedTooltip name="ЛицевыеСчетаЗакончитьРедактированиеExtendedTooltip" id="94"/>
+									</Button>
+									<Button name="ЛицевыеСчетаНайти" id="50">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Item.ЛицевыеСчета.StandardCommand.Find</CommandName>
+										<ExtendedTooltip name="ЛицевыеСчетаНайтиExtendedTooltip" id="95"/>
+									</Button>
+									<Button name="ЛицевыеСчетаОтменитьПоиск" id="51">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Item.ЛицевыеСчета.StandardCommand.CancelSearch</CommandName>
+										<ExtendedTooltip name="ЛицевыеСчетаОтменитьПоискExtendedTooltip" id="96"/>
+									</Button>
+									<Button name="ЛицевыеСчетаПереместитьВверх" id="52">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Item.ЛицевыеСчета.StandardCommand.MoveUp</CommandName>
+										<ExtendedTooltip name="ЛицевыеСчетаПереместитьВверхExtendedTooltip" id="97"/>
+									</Button>
+									<Button name="ЛицевыеСчетаПереместитьВниз" id="53">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Item.ЛицевыеСчета.StandardCommand.MoveDown</CommandName>
+										<ExtendedTooltip name="ЛицевыеСчетаПереместитьВнизExtendedTooltip" id="98"/>
+									</Button>
+									<Button name="ЛицевыеСчетаСортироватьСписокПоВозрастанию" id="54">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Item.ЛицевыеСчета.StandardCommand.SortListAsc</CommandName>
+										<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
+										<ExtendedTooltip name="ЛицевыеСчетаСортироватьСписокПоВозрастаниюExtendedTooltip" id="99"/>
+									</Button>
+									<Button name="ЛицевыеСчетаСортироватьСписокПоУбыванию" id="55">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Item.ЛицевыеСчета.StandardCommand.SortListDesc</CommandName>
+										<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
+										<ExtendedTooltip name="ЛицевыеСчетаСортироватьСписокПоУбываниюExtendedTooltip" id="100"/>
+									</Button>
+									<Popup name="ЛицевыеСчетаГруппа1" id="67">
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Заполнить</v8:content>
+											</v8:item>
+										</Title>
+										<ExtendedTooltip name="ЛицевыеСчетаГруппа1ExtendedTooltip" id="101"/>
+										<ChildItems>
+											<Button name="ЛицевыеСчетаАктуальнымиУслугами" id="68">
+												<Type>CommandBarButton</Type>
+												<CommandName>Form.Command.АктуальнымиУслугами</CommandName>
+												<ExtendedTooltip name="ЛицевыеСчетаАктуальнымиУслугамиExtendedTooltip" id="102"/>
+											</Button>
+											<Button name="ЛицевыеСчетаЗаполнитьОмск" id="132">
+												<Type>CommandBarButton</Type>
+												<CommandName>Form.Command.ЗаполнитьОмск</CommandName>
+												<ExtendedTooltip name="ЛицевыеСчетаЗаполнитьОмскРасширеннаяПодсказка" id="133"/>
+											</Button>
+											<Button name="ЛицевыеСчетаЗаполнить" id="69">
+												<Type>CommandBarButton</Type>
+												<CommandName>Form.Command.Заполнить</CommandName>
+												<ExtendedTooltip name="ЛицевыеСчетаЗаполнитьExtendedTooltip" id="103"/>
+											</Button>
+											<Button name="ЛицевыеСчетаПодбор" id="70">
+												<Type>CommandBarButton</Type>
+												<CommandName>Form.Command.Подбор</CommandName>
+												<ExtendedTooltip name="ЛицевыеСчетаПодборExtendedTooltip" id="104"/>
+											</Button>
+										</ChildItems>
+									</Popup>
+									<Button name="ЛицевыеСчетаВывестиСписок" id="75">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Item.ЛицевыеСчета.StandardCommand.OutputList</CommandName>
+										<ExtendedTooltip name="ЛицевыеСчетаВывестиСписокExtendedTooltip" id="105"/>
+									</Button>
+								</ChildItems>
+							</AutoCommandBar>
+							<ExtendedTooltip name="ЛицевыеСчетаExtendedTooltip" id="106"/>
+							<SearchStringAddition name="ЛицевыеСчетаСтрокаПоиска" id="123">
+								<AdditionSource>
+									<Item>ЛицевыеСчета</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ЛицевыеСчетаСтрокаПоискаКонтекстноеМеню" id="124"/>
+								<ExtendedTooltip name="ЛицевыеСчетаСтрокаПоискаРасширеннаяПодсказка" id="125"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ЛицевыеСчетаСостояниеПросмотра" id="126">
+								<AdditionSource>
+									<Item>ЛицевыеСчета</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ЛицевыеСчетаСостояниеПросмотраКонтекстноеМеню" id="127"/>
+								<ExtendedTooltip name="ЛицевыеСчетаСостояниеПросмотраРасширеннаяПодсказка" id="128"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ЛицевыеСчетаУправлениеПоиском" id="129">
+								<AdditionSource>
+									<Item>ЛицевыеСчета</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ЛицевыеСчетаУправлениеПоискомКонтекстноеМеню" id="130"/>
+								<ExtendedTooltip name="ЛицевыеСчетаУправлениеПоискомРасширеннаяПодсказка" id="131"/>
+							</SearchControlAddition>
+							<Events>
+								<Event name="OnActivateRow">ЛицевыеСчетаПриАктивизацииСтроки</Event>
+								<Event name="OnStartEdit">ЛицевыеСчетаПриНачалеРедактирования</Event>
+								<Event name="OnActivateCell">ЛицевыеСчетаПриАктивизацииЯчейки</Event>
+								<Event name="OnChange">ЛицевыеСчетаПриИзменении</Event>
+							</Events>
+							<ChildItems>
+								<LabelField name="ЛицевыеСчетаНомерСтроки" id="26">
+									<DataPath>Объект.ЛицевыеСчета.LineNumber</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ЛицевыеСчетаНомерСтрокиКонтекстноеМеню" id="27"/>
+									<ExtendedTooltip name="ЛицевыеСчетаНомерСтрокиExtendedTooltip" id="107"/>
+								</LabelField>
+								<InputField name="ЛицевыеСчетаЛицевойСчет" id="28">
+									<DataPath>Объект.ЛицевыеСчета.ЛицевойСчет</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<DropListButton>false</DropListButton>
+									<ChoiceButton>true</ChoiceButton>
+									<ChoiceButtonRepresentation>ShowInInputField</ChoiceButtonRepresentation>
+									<CreateButton>false</CreateButton>
+									<TextEdit>false</TextEdit>
+									<ChoiceHistoryOnInput>DontUse</ChoiceHistoryOnInput>
+									<ContextMenu name="ЛицевыеСчетаЛицевойСчетКонтекстноеМеню" id="29"/>
+									<ExtendedTooltip name="ЛицевыеСчетаЛицевойСчетExtendedTooltip" id="108"/>
+									<Events>
+										<Event name="OnChange">ЛицевыеСчетаЛицевойСчетПриИзменении</Event>
+										<Event name="StartChoice">ЛицевыеСчетаЛицевойСчетНачалоВыбора</Event>
+										<Event name="ChoiceProcessing">ЛицевыеСчетаЛицевойСчетОбработкаВыбора</Event>
+									</Events>
+								</InputField>
+								<InputField name="ЛицевыеСчетаУслуга" id="38">
+									<DataPath>Объект.ЛицевыеСчета.Услуга</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<DropListButton>false</DropListButton>
+									<ChoiceButton>true</ChoiceButton>
+									<ChoiceButtonRepresentation>ShowInInputField</ChoiceButtonRepresentation>
+									<CreateButton>false</CreateButton>
+									<TextEdit>false</TextEdit>
+									<ChoiceHistoryOnInput>DontUse</ChoiceHistoryOnInput>
+									<ContextMenu name="ЛицевыеСчетаУслугаКонтекстноеМеню" id="39"/>
+									<ExtendedTooltip name="ЛицевыеСчетаУслугаExtendedTooltip" id="109"/>
+									<Events>
+										<Event name="OnChange">ЛицевыеСчетаУслугаПриИзменении</Event>
+										<Event name="StartChoice">ЛицевыеСчетаУслугаНачалоВыбора</Event>
+										<Event name="ChoiceProcessing">ЛицевыеСчетаУслугаОбработкаВыбора</Event>
+									</Events>
+								</InputField>
+								<InputField name="ЛицевыеСчетаПоставщик" id="30">
+									<DataPath>Объект.ЛицевыеСчета.Поставщик</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<DropListButton>false</DropListButton>
+									<ChoiceButton>true</ChoiceButton>
+									<ChoiceButtonRepresentation>ShowInInputField</ChoiceButtonRepresentation>
+									<CreateButton>false</CreateButton>
+									<TextEdit>false</TextEdit>
+									<ChoiceHistoryOnInput>DontUse</ChoiceHistoryOnInput>
+									<ContextMenu name="ЛицевыеСчетаПоставщикКонтекстноеМеню" id="31"/>
+									<ExtendedTooltip name="ЛицевыеСчетаПоставщикExtendedTooltip" id="110"/>
+									<Events>
+										<Event name="OnChange">ЛицевыеСчетаПоставщикПриИзменении</Event>
+										<Event name="StartChoice">ЛицевыеСчетаПоставщикНачалоВыбора</Event>
+										<Event name="TextEditEnd">ЛицевыеСчетаПоставщикОкончаниеВводаТекста</Event>
+									</Events>
+								</InputField>
+								<InputField name="ЛицевыеСчетаРежимПотребления" id="32">
+									<DataPath>Объект.ЛицевыеСчета.РежимПотребления</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<DropListButton>false</DropListButton>
+									<ChoiceButton>true</ChoiceButton>
+									<ChoiceButtonRepresentation>ShowInInputField</ChoiceButtonRepresentation>
+									<CreateButton>false</CreateButton>
+									<TextEdit>false</TextEdit>
+									<ChoiceHistoryOnInput>DontUse</ChoiceHistoryOnInput>
+									<ContextMenu name="ЛицевыеСчетаРежимПотребленияКонтекстноеМеню" id="33"/>
+									<ExtendedTooltip name="ЛицевыеСчетаРежимПотребленияExtendedTooltip" id="111"/>
+									<Events>
+										<Event name="OnChange">ЛицевыеСчетаРежимПотребленияПриИзменении</Event>
+										<Event name="StartChoice">ЛицевыеСчетаРежимПотребленияНачалоВыбора</Event>
+										<Event name="TextEditEnd">ЛицевыеСчетаРежимПотребленияОкончаниеВводаТекста</Event>
+									</Events>
+								</InputField>
+								<InputField name="ЛицевыеСчетаСпособРасчета" id="34">
+									<DataPath>Объект.ЛицевыеСчета.СпособРасчета</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<DropListButton>false</DropListButton>
+									<ChoiceButton>true</ChoiceButton>
+									<ChoiceButtonRepresentation>ShowInInputField</ChoiceButtonRepresentation>
+									<CreateButton>false</CreateButton>
+									<TextEdit>false</TextEdit>
+									<ChoiceHistoryOnInput>DontUse</ChoiceHistoryOnInput>
+									<ContextMenu name="ЛицевыеСчетаСпособРасчетаКонтекстноеМеню" id="35"/>
+									<ExtendedTooltip name="ЛицевыеСчетаСпособРасчетаExtendedTooltip" id="112"/>
+									<Events>
+										<Event name="OnChange">ЛицевыеСчетаСпособРасчетаПриИзменении</Event>
+										<Event name="StartChoice">ЛицевыеСчетаСпособРасчетаНачалоВыбора</Event>
+										<Event name="TextEditEnd">ЛицевыеСчетаСпособРасчетаОкончаниеВводаТекста</Event>
+									</Events>
+								</InputField>
+								<InputField name="ЛицевыеСчетаКоличествоЕдиницПотребления" id="36">
+									<DataPath>Объект.ЛицевыеСчета.КоличествоЕдиницПотребления</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Кол. ед. потреб.</v8:content>
+										</v8:item>
+									</Title>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ЛицевыеСчетаКоличествоЕдиницПотребленияКонтекстноеМеню" id="37"/>
+									<ExtendedTooltip name="ЛицевыеСчетаКоличествоЕдиницПотребленияExtendedTooltip" id="113"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+				<Page name="Группа6" id="56">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Настройка</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="Группа6ExtendedTooltip" id="114"/>
+					<ChildItems>
+						<UsualGroup name="Группа7" id="71">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Настройка подстановки значений</v8:content>
+								</v8:item>
+							</Title>
+							<Group>Vertical</Group>
+							<ExtendedTooltip name="Группа7ExtendedTooltip" id="115"/>
+							<ChildItems>
+								<RadioButtonField name="УказыватьОтдельно" id="57">
+									<DataPath>УказыватьОтдельно</DataPath>
+									<TitleLocation>None</TitleLocation>
+									<RadioButtonType>Auto</RadioButtonType>
+									<ChoiceList>
+										<xr:Item>
+											<xr:Presentation/>
+											<xr:CheckState>0</xr:CheckState>
+											<xr:Value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Указывать отдельно для каждого ЛС</v8:content>
+													</v8:item>
+												</Presentation>
+												<Value xsi:type="xs:decimal">0</Value>
+											</xr:Value>
+										</xr:Item>
+										<xr:Item>
+											<xr:Presentation/>
+											<xr:CheckState>0</xr:CheckState>
+											<xr:Value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Применить ко всем ЛС</v8:content>
+													</v8:item>
+												</Presentation>
+												<Value xsi:type="xs:decimal">1</Value>
+											</xr:Value>
+										</xr:Item>
+									</ChoiceList>
+									<ContextMenu name="УказыватьОтдельноКонтекстноеМеню" id="58"/>
+									<ExtendedTooltip name="УказыватьОтдельноExtendedTooltip" id="116"/>
+									<Events>
+										<Event name="OnChange">УказыватьОтдельноПриИзменении</Event>
+									</Events>
+								</RadioButtonField>
+							</ChildItems>
+						</UsualGroup>
+						<InputField name="РежимПотребления" id="59">
+							<DataPath>РежимПотребления</DataPath>
+							<DropListButton>false</DropListButton>
+							<ChoiceButton>true</ChoiceButton>
+							<ChoiceButtonRepresentation>ShowInInputField</ChoiceButtonRepresentation>
+							<ChoiceHistoryOnInput>DontUse</ChoiceHistoryOnInput>
+							<ContextMenu name="РежимПотребленияКонтекстноеМеню" id="60"/>
+							<ExtendedTooltip name="РежимПотребленияExtendedTooltip" id="117"/>
+							<Events>
+								<Event name="OnChange">РежимПотребленияПриИзменении</Event>
+								<Event name="StartChoice">РежимПотребленияНачалоВыбора</Event>
+								<Event name="TextEditEnd">РежимПотребленияОкончаниеВводаТекста</Event>
+							</Events>
+						</InputField>
+						<InputField name="Поставщик" id="61">
+							<DataPath>Поставщик</DataPath>
+							<DropListButton>false</DropListButton>
+							<ChoiceButton>true</ChoiceButton>
+							<ChoiceButtonRepresentation>ShowInInputField</ChoiceButtonRepresentation>
+							<ChoiceHistoryOnInput>DontUse</ChoiceHistoryOnInput>
+							<ContextMenu name="ПоставщикКонтекстноеМеню" id="62"/>
+							<ExtendedTooltip name="ПоставщикExtendedTooltip" id="118"/>
+							<Events>
+								<Event name="OnChange">ПоставщикПриИзменении</Event>
+								<Event name="StartChoice">ПоставщикНачалоВыбора</Event>
+								<Event name="TextEditEnd">ПоставщикОкончаниеВводаТекста</Event>
+							</Events>
+						</InputField>
+						<InputField name="СпособРасчета" id="63">
+							<DataPath>СпособРасчета</DataPath>
+							<DropListButton>false</DropListButton>
+							<ChoiceButton>true</ChoiceButton>
+							<ChoiceButtonRepresentation>ShowInInputField</ChoiceButtonRepresentation>
+							<OpenButton>true</OpenButton>
+							<ChoiceListButton>false</ChoiceListButton>
+							<ChoiceHistoryOnInput>DontUse</ChoiceHistoryOnInput>
+							<ContextMenu name="СпособРасчетаКонтекстноеМеню" id="64"/>
+							<ExtendedTooltip name="СпособРасчетаExtendedTooltip" id="119"/>
+							<Events>
+								<Event name="OnChange">СпособРасчетаПриИзменении</Event>
+								<Event name="StartChoice">СпособРасчетаНачалоВыбора</Event>
+								<Event name="TextEditEnd">СпособРасчетаОкончаниеВводаТекста</Event>
+							</Events>
+						</InputField>
+						<InputField name="КоличествоЕдиницПотребления" id="65">
+							<DataPath>КоличествоЕдиницПотребления</DataPath>
+							<ContextMenu name="КоличествоЕдиницПотребленияКонтекстноеМеню" id="66"/>
+							<ExtendedTooltip name="КоличествоЕдиницПотребленияExtendedTooltip" id="120"/>
+						</InputField>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+		<InputField name="Ответственный" id="15">
+			<DataPath>Объект.Ответственный</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="ОтветственныйКонтекстноеМеню" id="16"/>
+			<ExtendedTooltip name="ОтветственныйExtendedTooltip" id="121"/>
+		</InputField>
+		<InputField name="Комментарий" id="17">
+			<DataPath>Объект.Комментарий</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="КомментарийКонтекстноеМеню" id="18"/>
+			<ExtendedTooltip name="КомментарийExtendedTooltip" id="122"/>
+		</InputField>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DocumentObject.бит_УстановкаИзменениеУслугПоЛС</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+			<UseAlways>
+				<Field>Объект.RegisterRecords</Field>
+			</UseAlways>
+		</Attribute>
+		<Attribute name="УказыватьОтдельно" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Указывать отдельно</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>1</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="РежимПотребления" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Режим потребления</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.бит_РежимыПотребленияУслуг</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="Поставщик" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Поставщик</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.бит_ПоставщикиУслуг</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="СпособРасчета" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Способ расчета</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:EnumRef.бит_СпособыРасчетаПоУслугам</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="КоличествоЕдиницПотребления" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Количество единиц потребления</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>15</v8:Digits>
+					<v8:FractionDigits>4</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="мКэшЗначений" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>М кэш значений</v8:content>
+				</v8:item>
+			</Title>
+			<Type/>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="АктуальнымиУслугами" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Актуальными услугами</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Актуальными услугами</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>АктуальнымиУслугами</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="Заполнить" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Заполнить</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="Подбор" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подбор</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подбор</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Подбор</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ЗаполнитьОмск" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить (Омск)</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить омск</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЗаполнитьОмск</Action>
+		</Command>
+	</Commands>
+	<CommandInterface>
+		<NavigationPanel>
+			<Item>
+				<Command>InformationRegister.бит_СведенияПоУслугамЛС.StandardCommand.OpenByRecorder</Command>
+				<Type>Auto</Type>
+				<DefaultVisible>false</DefaultVisible>
+			</Item>
+			<Item>
+				<Command>4:be6441d1-0ad8-4852-806c-533aee06a33f</Command>
+				<Type>Auto</Type>
+				<DefaultVisible>false</DefaultVisible>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+			<Item>
+				<Command>InformationRegister.бит_си_СвязанныеОбъекты.StandardCommand.OpenByValue.Объект</Command>
+				<Type>Auto</Type>
+				<DefaultVisible>false</DefaultVisible>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+		</NavigationPanel>
+	</CommandInterface>
+</Form>

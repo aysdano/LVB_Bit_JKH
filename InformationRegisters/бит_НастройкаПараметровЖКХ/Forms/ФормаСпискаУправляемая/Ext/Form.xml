@@ -1,0 +1,717 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.18">
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<ChildItems>
+		<Table name="Список" id="1">
+			<Representation>List</Representation>
+			<CommandBarLocation>None</CommandBarLocation>
+			<DefaultItem>true</DefaultItem>
+			<UseAlternationRowColor>true</UseAlternationRowColor>
+			<InitialTreeView>ExpandTopLevel</InitialTreeView>
+			<EnableStartDrag>true</EnableStartDrag>
+			<FileDragMode>AsFile</FileDragMode>
+			<DataPath>Список</DataPath>
+			<RowPictureDataPath>Список.DefaultPicture</RowPictureDataPath>
+			<SearchStringLocation>None</SearchStringLocation>
+			<ViewStatusLocation>None</ViewStatusLocation>
+			<SearchControlLocation>None</SearchControlLocation>
+			<AutoRefresh>false</AutoRefresh>
+			<AutoRefreshPeriod>60</AutoRefreshPeriod>
+			<Period>
+				<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+				<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+				<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+			</Period>
+			<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+			<RestoreCurrentRow>false</RestoreCurrentRow>
+			<TopLevelParent xsi:nil="true"/>
+			<ShowRoot>true</ShowRoot>
+			<AllowRootChoice>false</AllowRootChoice>
+			<UpdateOnDataChange>Auto</UpdateOnDataChange>
+			<AllowGettingCurrentRowURL>true</AllowGettingCurrentRowURL>
+			<ContextMenu name="СписокКонтекстноеМеню" id="2"/>
+			<AutoCommandBar name="СписокКоманднаяПанель" id="3">
+				<Autofill>false</Autofill>
+			</AutoCommandBar>
+			<ExtendedTooltip name="СписокРасширеннаяПодсказка" id="171"/>
+			<SearchStringAddition name="СписокСтрокаПоиска" id="172">
+				<AdditionSource>
+					<Item>Список</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокСтрокаПоискаКонтекстноеМеню" id="173"/>
+				<ExtendedTooltip name="СписокСтрокаПоискаРасширеннаяПодсказка" id="174"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="СписокСостояниеПросмотра" id="175">
+				<AdditionSource>
+					<Item>Список</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокСостояниеПросмотраКонтекстноеМеню" id="176"/>
+				<ExtendedTooltip name="СписокСостояниеПросмотраРасширеннаяПодсказка" id="177"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="СписокУправлениеПоиском" id="178">
+				<AdditionSource>
+					<Item>Список</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокУправлениеПоискомКонтекстноеМеню" id="179"/>
+				<ExtendedTooltip name="СписокУправлениеПоискомРасширеннаяПодсказка" id="180"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<LabelField name="Период" id="4">
+					<DataPath>Список.Period</DataPath>
+					<DefaultItem>true</DefaultItem>
+					<ContextMenu name="ПериодКонтекстноеМеню" id="5"/>
+					<ExtendedTooltip name="ПериодРасширеннаяПодсказка" id="181"/>
+				</LabelField>
+				<LabelField name="Организация" id="6">
+					<DataPath>Список.Организация</DataPath>
+					<ContextMenu name="ОрганизацияКонтекстноеМеню" id="7"/>
+					<ExtendedTooltip name="ОрганизацияРасширеннаяПодсказка" id="182"/>
+				</LabelField>
+				<LabelField name="ДатаНачалаВеденияПоКУ" id="22">
+					<DataPath>Список.ДатаНачалаВеденияПоКУ</DataPath>
+					<ContextMenu name="ДатаНачалаВеденияПоКУКонтекстноеМеню" id="23"/>
+					<ExtendedTooltip name="ДатаНачалаВеденияПоКУРасширеннаяПодсказка" id="183"/>
+				</LabelField>
+				<LabelField name="ПоследнийДеньПриемаПлатежей" id="58">
+					<DataPath>Список.ПоследнийДеньПриемаПлатежей</DataPath>
+					<ContextMenu name="ПоследнийДеньПриемаПлатежейКонтекстноеМеню" id="59"/>
+					<ExtendedTooltip name="ПоследнийДеньПриемаПлатежейРасширеннаяПодсказка" id="184"/>
+				</LabelField>
+				<LabelField name="КоличествоМесяцевОтсрочкиНачисленияПени" id="26">
+					<DataPath>Список.КоличествоМесяцевОтсрочкиНачисленияПени</DataPath>
+					<Width>5</Width>
+					<ContextMenu name="КоличествоМесяцевОтсрочкиНачисленияПениКонтекстноеМеню" id="27"/>
+					<ExtendedTooltip name="КоличествоМесяцевОтсрочкиНачисленияПениРасширеннаяПодсказка" id="185"/>
+				</LabelField>
+				<LabelField name="СколькоЭтажейНеПлатятЗаЛифт" id="82">
+					<DataPath>Список.СколькоЭтажейНеПлатятЗаЛифт</DataPath>
+					<ContextMenu name="СколькоЭтажейНеПлатятЗаЛифтКонтекстноеМеню" id="83"/>
+					<ExtendedTooltip name="СколькоЭтажейНеПлатятЗаЛифтРасширеннаяПодсказка" id="186"/>
+				</LabelField>
+				<ColumnGroup name="Группа1" id="170">
+					<Width>1</Width>
+					<HorizontalStretch>false</HorizontalStretch>
+					<Group>Horizontal</Group>
+					<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="187"/>
+					<ChildItems>
+						<CheckBoxField name="СкидкаПоЛьготеСУчетомСверхНормы" id="78">
+							<DataPath>Список.СкидкаПоЛьготеСУчетомСверхНормы</DataPath>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="СкидкаПоЛьготеСУчетомСверхНормыКонтекстноеМеню" id="79"/>
+							<ExtendedTooltip name="СкидкаПоЛьготеСУчетомСверхНормыРасширеннаяПодсказка" id="188"/>
+						</CheckBoxField>
+						<CheckBoxField name="ЛьготаПерсонифицированная" id="32">
+							<DataPath>Список.ЛьготаПерсонифицированная</DataPath>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ЛьготаПерсонифицированнаяКонтекстноеМеню" id="33"/>
+							<ExtendedTooltip name="ЛьготаПерсонифицированнаяРасширеннаяПодсказка" id="189"/>
+						</CheckBoxField>
+						<CheckBoxField name="СчетчикиПодкрутка" id="124">
+							<DataPath>Список.СчетчикиПодкрутка</DataPath>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="СчетчикиПодкруткаКонтекстноеМеню" id="125"/>
+							<ExtendedTooltip name="СчетчикиПодкруткаРасширеннаяПодсказка" id="190"/>
+						</CheckBoxField>
+						<CheckBoxField name="НачислятьПени" id="36">
+							<DataPath>Список.НачислятьПени</DataPath>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="НачислятьПениКонтекстноеМеню" id="37"/>
+							<ExtendedTooltip name="НачислятьПениРасширеннаяПодсказка" id="191"/>
+						</CheckBoxField>
+						<CheckBoxField name="ПодкруткаНаЛС" id="56">
+							<DataPath>Список.ПодкруткаНаЛС</DataPath>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ПодкруткаНаЛСКонтекстноеМеню" id="57"/>
+							<ExtendedTooltip name="ПодкруткаНаЛСРасширеннаяПодсказка" id="192"/>
+						</CheckBoxField>
+						<CheckBoxField name="СкидкаПриНачисленииПоНормеНаСчетчики" id="80">
+							<DataPath>Список.СкидкаПриНачисленииПоНормеНаСчетчики</DataPath>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="СкидкаПриНачисленииПоНормеНаСчетчикиКонтекстноеМеню" id="81"/>
+							<ExtendedTooltip name="СкидкаПриНачисленииПоНормеНаСчетчикиРасширеннаяПодсказка" id="193"/>
+						</CheckBoxField>
+					</ChildItems>
+				</ColumnGroup>
+				<LabelField name="ВариантПодкрутки" id="8">
+					<DataPath>Список.ВариантПодкрутки</DataPath>
+					<Visible>false</Visible>
+					<ContextMenu name="ВариантПодкруткиКонтекстноеМеню" id="9"/>
+					<ExtendedTooltip name="ВариантПодкруткиРасширеннаяПодсказка" id="194"/>
+				</LabelField>
+				<CheckBoxField name="ВключатьВРасчетСуммыДолгаПени" id="10">
+					<DataPath>Список.ВключатьВРасчетСуммыДолгаПени</DataPath>
+					<Visible>false</Visible>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ВключатьВРасчетСуммыДолгаПениКонтекстноеМеню" id="11"/>
+					<ExtendedTooltip name="ВключатьВРасчетСуммыДолгаПениРасширеннаяПодсказка" id="195"/>
+				</CheckBoxField>
+				<CheckBoxField name="ВыводитьЗависимыеЛС" id="12">
+					<DataPath>Список.ВыводитьЗависимыеЛС</DataPath>
+					<Visible>false</Visible>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ВыводитьЗависимыеЛСКонтекстноеМеню" id="13"/>
+					<ExtendedTooltip name="ВыводитьЗависимыеЛСРасширеннаяПодсказка" id="196"/>
+				</CheckBoxField>
+				<CheckBoxField name="ВыводитьЗамечанияЖКХ" id="14">
+					<DataPath>Список.ВыводитьЗамечанияЖКХ</DataPath>
+					<Visible>false</Visible>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ВыводитьЗамечанияЖКХКонтекстноеМеню" id="15"/>
+					<ExtendedTooltip name="ВыводитьЗамечанияЖКХРасширеннаяПодсказка" id="197"/>
+				</CheckBoxField>
+				<CheckBoxField name="ВыводитьЛьготыНаСчетИзвещение" id="16">
+					<DataPath>Список.ВыводитьЛьготыНаСчетИзвещение</DataPath>
+					<Visible>false</Visible>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ВыводитьЛьготыНаСчетИзвещениеКонтекстноеМеню" id="17"/>
+					<ExtendedTooltip name="ВыводитьЛьготыНаСчетИзвещениеРасширеннаяПодсказка" id="198"/>
+				</CheckBoxField>
+				<CheckBoxField name="ВыводитьСуммуБезУчетаПереплатПоУслугам" id="18">
+					<DataPath>Список.ВыводитьСуммуБезУчетаПереплатПоУслугам</DataPath>
+					<Visible>false</Visible>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ВыводитьСуммуБезУчетаПереплатПоУслугамКонтекстноеМеню" id="19"/>
+					<ExtendedTooltip name="ВыводитьСуммуБезУчетаПереплатПоУслугамРасширеннаяПодсказка" id="199"/>
+				</CheckBoxField>
+				<CheckBoxField name="ГруппироватьУслугиВЧеке" id="20">
+					<DataPath>Список.ГруппироватьУслугиВЧеке</DataPath>
+					<Visible>false</Visible>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ГруппироватьУслугиВЧекеКонтекстноеМеню" id="21"/>
+					<ExtendedTooltip name="ГруппироватьУслугиВЧекеРасширеннаяПодсказка" id="200"/>
+				</CheckBoxField>
+				<CheckBoxField name="ИспользоватьНомерПолучателяВШК" id="24">
+					<DataPath>Список.ИспользоватьНомерПолучателяВШК</DataPath>
+					<Visible>false</Visible>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ИспользоватьНомерПолучателяВШККонтекстноеМеню" id="25"/>
+					<ExtendedTooltip name="ИспользоватьНомерПолучателяВШКРасширеннаяПодсказка" id="201"/>
+				</CheckBoxField>
+				<LabelField name="КоличествоМесяцевПодкрутки" id="28">
+					<DataPath>Список.КоличествоМесяцевПодкрутки</DataPath>
+					<Visible>false</Visible>
+					<ContextMenu name="КоличествоМесяцевПодкруткиКонтекстноеМеню" id="29"/>
+					<ExtendedTooltip name="КоличествоМесяцевПодкруткиРасширеннаяПодсказка" id="202"/>
+				</LabelField>
+				<LabelField name="Контрагент" id="30">
+					<DataPath>Список.Контрагент</DataPath>
+					<Visible>false</Visible>
+					<ContextMenu name="КонтрагентКонтекстноеМеню" id="31"/>
+					<ExtendedTooltip name="КонтрагентРасширеннаяПодсказка" id="203"/>
+				</LabelField>
+				<CheckBoxField name="НачислениеСУчетомДнейПроживания" id="34">
+					<DataPath>Список.НачислениеСУчетомДнейПроживания</DataPath>
+					<Visible>false</Visible>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="НачислениеСУчетомДнейПроживанияКонтекстноеМеню" id="35"/>
+					<ExtendedTooltip name="НачислениеСУчетомДнейПроживанияРасширеннаяПодсказка" id="204"/>
+				</CheckBoxField>
+				<CheckBoxField name="НачислятьПениСУчетомПереплаты" id="38">
+					<DataPath>Список.НачислятьПениСУчетомПереплаты</DataPath>
+					<Visible>false</Visible>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="НачислятьПениСУчетомПереплатыКонтекстноеМеню" id="39"/>
+					<ExtendedTooltip name="НачислятьПениСУчетомПереплатыРасширеннаяПодсказка" id="205"/>
+				</CheckBoxField>
+				<CheckBoxField name="НеПечататьДом" id="40">
+					<DataPath>Список.НеПечататьДом</DataPath>
+					<Visible>false</Visible>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="НеПечататьДомКонтекстноеМеню" id="41"/>
+					<ExtendedTooltip name="НеПечататьДомРасширеннаяПодсказка" id="206"/>
+				</CheckBoxField>
+				<CheckBoxField name="НеПечататьКвартира" id="42">
+					<DataPath>Список.НеПечататьКвартира</DataPath>
+					<Visible>false</Visible>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="НеПечататьКвартираКонтекстноеМеню" id="43"/>
+					<ExtendedTooltip name="НеПечататьКвартираРасширеннаяПодсказка" id="207"/>
+				</CheckBoxField>
+				<CheckBoxField name="НеПечататьКорпус" id="44">
+					<DataPath>Список.НеПечататьКорпус</DataPath>
+					<Visible>false</Visible>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="НеПечататьКорпусКонтекстноеМеню" id="45"/>
+					<ExtendedTooltip name="НеПечататьКорпусРасширеннаяПодсказка" id="208"/>
+				</CheckBoxField>
+				<CheckBoxField name="НеПечататьРайон" id="46">
+					<DataPath>Список.НеПечататьРайон</DataPath>
+					<Visible>false</Visible>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="НеПечататьРайонКонтекстноеМеню" id="47"/>
+					<ExtendedTooltip name="НеПечататьРайонРасширеннаяПодсказка" id="209"/>
+				</CheckBoxField>
+				<CheckBoxField name="НеПечататьУлица" id="48">
+					<DataPath>Список.НеПечататьУлица</DataPath>
+					<Visible>false</Visible>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="НеПечататьУлицаКонтекстноеМеню" id="49"/>
+					<ExtendedTooltip name="НеПечататьУлицаРасширеннаяПодсказка" id="210"/>
+				</CheckBoxField>
+				<LabelField name="НомерПолучателяПоБанку" id="50">
+					<DataPath>Список.НомерПолучателяПоБанку</DataPath>
+					<Visible>false</Visible>
+					<ContextMenu name="НомерПолучателяПоБанкуКонтекстноеМеню" id="51"/>
+					<ExtendedTooltip name="НомерПолучателяПоБанкуРасширеннаяПодсказка" id="211"/>
+				</LabelField>
+				<CheckBoxField name="ОбщедомовыеРасходыВГрафеНачисления" id="52">
+					<DataPath>~Список.ОбщедомовыеРосходыВГрафеНачисления</DataPath>
+					<Visible>false</Visible>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ОбщедомовыеРасходыВГрафеНачисленияКонтекстноеМеню" id="53"/>
+					<ExtendedTooltip name="ОбщедомовыеРасходыВГрафеНачисленияРасширеннаяПодсказка" id="212"/>
+				</CheckBoxField>
+				<LabelField name="ПечатьПолучателейДС" id="54">
+					<DataPath>Список.ПечатьПолучателейДС</DataPath>
+					<Visible>false</Visible>
+					<ContextMenu name="ПечатьПолучателейДСКонтекстноеМеню" id="55"/>
+					<ExtendedTooltip name="ПечатьПолучателейДСРасширеннаяПодсказка" id="213"/>
+				</LabelField>
+				<LabelField name="ПрефиксДом" id="60">
+					<DataPath>Список.ПрефиксДом</DataPath>
+					<Visible>false</Visible>
+					<ContextMenu name="ПрефиксДомКонтекстноеМеню" id="61"/>
+					<ExtendedTooltip name="ПрефиксДомРасширеннаяПодсказка" id="214"/>
+				</LabelField>
+				<LabelField name="ПрефиксКвартира" id="62">
+					<DataPath>Список.ПрефиксКвартира</DataPath>
+					<Visible>false</Visible>
+					<ContextMenu name="ПрефиксКвартираКонтекстноеМеню" id="63"/>
+					<ExtendedTooltip name="ПрефиксКвартираРасширеннаяПодсказка" id="215"/>
+				</LabelField>
+				<LabelField name="ПрефиксКорпус" id="64">
+					<DataPath>Список.ПрефиксКорпус</DataPath>
+					<Visible>false</Visible>
+					<ContextMenu name="ПрефиксКорпусКонтекстноеМеню" id="65"/>
+					<ExtendedTooltip name="ПрефиксКорпусРасширеннаяПодсказка" id="216"/>
+				</LabelField>
+				<LabelField name="ПрефиксРайон" id="66">
+					<DataPath>Список.ПрефиксРайон</DataPath>
+					<Visible>false</Visible>
+					<ContextMenu name="ПрефиксРайонКонтекстноеМеню" id="67"/>
+					<ExtendedTooltip name="ПрефиксРайонРасширеннаяПодсказка" id="217"/>
+				</LabelField>
+				<LabelField name="ПрефиксУлица" id="68">
+					<DataPath>Список.ПрефиксУлица</DataPath>
+					<Visible>false</Visible>
+					<ContextMenu name="ПрефиксУлицаКонтекстноеМеню" id="69"/>
+					<ExtendedTooltip name="ПрефиксУлицаРасширеннаяПодсказка" id="218"/>
+				</LabelField>
+				<CheckBoxField name="РазбитьОплатуКУПоДатам" id="70">
+					<DataPath>Список.РазбитьОплатуКУПоДатам</DataPath>
+					<Visible>false</Visible>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="РазбитьОплатуКУПоДатамКонтекстноеМеню" id="71"/>
+					<ExtendedTooltip name="РазбитьОплатуКУПоДатамРасширеннаяПодсказка" id="219"/>
+				</CheckBoxField>
+				<CheckBoxField name="РасчетПоСоциальнымНормамСучетомМноготарифногоСчетчика" id="72">
+					<DataPath>Список.РасчетПоСоциальнымНормамСУчетомМноготарифногоСчетчика</DataPath>
+					<Visible>false</Visible>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="РасчетПоСоциальнымНормамСучетомМноготарифногоСчетчикаКонтекстноеМеню" id="73"/>
+					<ExtendedTooltip name="РасчетПоСоциальнымНормамСучетомМноготарифногоСчетчикаРасширеннаяПодсказка" id="220"/>
+				</CheckBoxField>
+				<CheckBoxField name="РасчетСУчетомДолейВладения" id="74">
+					<DataPath>Список.РасчетСУчетомДолейВладения</DataPath>
+					<Visible>false</Visible>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="РасчетСУчетомДолейВладенияКонтекстноеМеню" id="75"/>
+					<ExtendedTooltip name="РасчетСУчетомДолейВладенияРасширеннаяПодсказка" id="221"/>
+				</CheckBoxField>
+				<LabelField name="РежимРаботы" id="76">
+					<DataPath>Список.РежимРаботы</DataPath>
+					<Visible>false</Visible>
+					<ContextMenu name="РежимРаботыКонтекстноеМеню" id="77"/>
+					<ExtendedTooltip name="РежимРаботыРасширеннаяПодсказка" id="222"/>
+				</LabelField>
+				<LabelField name="Субконто1" id="84">
+					<DataPath>Список.Субконто1</DataPath>
+					<Visible>false</Visible>
+					<ContextMenu name="Субконто1КонтекстноеМеню" id="85"/>
+					<ExtendedTooltip name="Субконто1РасширеннаяПодсказка" id="223"/>
+				</LabelField>
+				<LabelField name="Субконто2" id="86">
+					<DataPath>Список.Субконто2</DataPath>
+					<Visible>false</Visible>
+					<ContextMenu name="Субконто2КонтекстноеМеню" id="87"/>
+					<ExtendedTooltip name="Субконто2РасширеннаяПодсказка" id="224"/>
+				</LabelField>
+				<LabelField name="Субконто3" id="88">
+					<DataPath>Список.Субконто3</DataPath>
+					<Visible>false</Visible>
+					<ContextMenu name="Субконто3КонтекстноеМеню" id="89"/>
+					<ExtendedTooltip name="Субконто3РасширеннаяПодсказка" id="225"/>
+				</LabelField>
+				<LabelField name="СубконтоПениСУ1" id="90">
+					<DataPath>Список.СубконтоПениСУ1</DataPath>
+					<Visible>false</Visible>
+					<ContextMenu name="СубконтоПениСУ1КонтекстноеМеню" id="91"/>
+					<ExtendedTooltip name="СубконтоПениСУ1РасширеннаяПодсказка" id="226"/>
+				</LabelField>
+				<LabelField name="СубконтоПениСУ2" id="92">
+					<DataPath>Список.СубконтоПениСУ2</DataPath>
+					<Visible>false</Visible>
+					<ContextMenu name="СубконтоПениСУ2КонтекстноеМеню" id="93"/>
+					<ExtendedTooltip name="СубконтоПениСУ2РасширеннаяПодсказка" id="227"/>
+				</LabelField>
+				<LabelField name="СубконтоПениСУ3" id="94">
+					<DataPath>Список.СубконтоПениСУ3</DataPath>
+					<Visible>false</Visible>
+					<ContextMenu name="СубконтоПениСУ3КонтекстноеМеню" id="95"/>
+					<ExtendedTooltip name="СубконтоПениСУ3РасширеннаяПодсказка" id="228"/>
+				</LabelField>
+				<LabelField name="СубконтоПениУСО1" id="96">
+					<DataPath>Список.СубконтоПениУСО1</DataPath>
+					<Visible>false</Visible>
+					<ContextMenu name="СубконтоПениУСО1КонтекстноеМеню" id="97"/>
+					<ExtendedTooltip name="СубконтоПениУСО1РасширеннаяПодсказка" id="229"/>
+				</LabelField>
+				<LabelField name="СубконтоПениУСО2" id="98">
+					<DataPath>Список.СубконтоПениУСО2</DataPath>
+					<Visible>false</Visible>
+					<ContextMenu name="СубконтоПениУСО2КонтекстноеМеню" id="99"/>
+					<ExtendedTooltip name="СубконтоПениУСО2РасширеннаяПодсказка" id="230"/>
+				</LabelField>
+				<LabelField name="СубконтоПениУСО3" id="100">
+					<DataPath>Список.СубконтоПениУСО3</DataPath>
+					<Visible>false</Visible>
+					<ContextMenu name="СубконтоПениУСО3КонтекстноеМеню" id="101"/>
+					<ExtendedTooltip name="СубконтоПениУСО3РасширеннаяПодсказка" id="231"/>
+				</LabelField>
+				<LabelField name="СчетАбонента" id="102">
+					<DataPath>Список.СчетАбонента</DataPath>
+					<Visible>false</Visible>
+					<ContextMenu name="СчетАбонентаКонтекстноеМеню" id="103"/>
+					<ExtendedTooltip name="СчетАбонентаРасширеннаяПодсказка" id="232"/>
+				</LabelField>
+				<LabelField name="СчетДохода" id="104">
+					<DataPath>Список.СчетДохода</DataPath>
+					<Visible>false</Visible>
+					<ContextMenu name="СчетДоходаКонтекстноеМеню" id="105"/>
+					<ExtendedTooltip name="СчетДоходаРасширеннаяПодсказка" id="233"/>
+				</LabelField>
+				<LabelField name="СчетЛьготСторП" id="106">
+					<DataPath>Список.СчетЛьготСторП</DataPath>
+					<Visible>false</Visible>
+					<ContextMenu name="СчетЛьготСторПКонтекстноеМеню" id="107"/>
+					<ExtendedTooltip name="СчетЛьготСторПРасширеннаяПодсказка" id="234"/>
+				</LabelField>
+				<LabelField name="СчетЛьготСУ" id="108">
+					<DataPath>Список.СчетЛьготСУ</DataPath>
+					<Visible>false</Visible>
+					<ContextMenu name="СчетЛьготСУКонтекстноеМеню" id="109"/>
+					<ExtendedTooltip name="СчетЛьготСУРасширеннаяПодсказка" id="235"/>
+				</LabelField>
+				<LabelField name="СчетПениСУ" id="110">
+					<DataPath>Список.СчетПениСУ</DataPath>
+					<Visible>false</Visible>
+					<ContextMenu name="СчетПениСУКонтекстноеМеню" id="111"/>
+					<ExtendedTooltip name="СчетПениСУРасширеннаяПодсказка" id="236"/>
+				</LabelField>
+				<LabelField name="СчетПениУСО" id="112">
+					<DataPath>Список.СчетПениУСО</DataPath>
+					<Visible>false</Visible>
+					<ContextMenu name="СчетПениУСОКонтекстноеМеню" id="113"/>
+					<ExtendedTooltip name="СчетПениУСОРасширеннаяПодсказка" id="237"/>
+				</LabelField>
+				<LabelField name="СчетСторПКУ" id="114">
+					<DataPath>Список.СчетСторПКУ</DataPath>
+					<Visible>false</Visible>
+					<ContextMenu name="СчетСторПКУКонтекстноеМеню" id="115"/>
+					<ExtendedTooltip name="СчетСторПКУРасширеннаяПодсказка" id="238"/>
+				</LabelField>
+				<LabelField name="СчетСторПКУОплата" id="116">
+					<DataPath>Список.СчетСторПКУОплата</DataPath>
+					<Visible>false</Visible>
+					<ContextMenu name="СчетСторПКУОплатаКонтекстноеМеню" id="117"/>
+					<ExtendedTooltip name="СчетСторПКУОплатаРасширеннаяПодсказка" id="239"/>
+				</LabelField>
+				<LabelField name="СчетСУАренды" id="118">
+					<DataPath>Список.СчетСУАренды</DataPath>
+					<Visible>false</Visible>
+					<ContextMenu name="СчетСУАрендыКонтекстноеМеню" id="119"/>
+					<ExtendedTooltip name="СчетСУАрендыРасширеннаяПодсказка" id="240"/>
+				</LabelField>
+				<LabelField name="СчетСУКУ" id="120">
+					<DataPath>Список.СчетСУКУ</DataPath>
+					<Visible>false</Visible>
+					<ContextMenu name="СчетСУКУКонтекстноеМеню" id="121"/>
+					<ExtendedTooltip name="СчетСУКУРасширеннаяПодсказка" id="241"/>
+				</LabelField>
+				<LabelField name="СчетСУЦС" id="122">
+					<DataPath>Список.СчетСУЦС</DataPath>
+					<Visible>false</Visible>
+					<ContextMenu name="СчетСУЦСКонтекстноеМеню" id="123"/>
+					<ExtendedTooltip name="СчетСУЦСРасширеннаяПодсказка" id="242"/>
+				</LabelField>
+				<LabelField name="ТранзитныйСчетОплаты" id="126">
+					<DataPath>Список.ТранзитныйСчетОплаты</DataPath>
+					<Visible>false</Visible>
+					<ContextMenu name="ТранзитныйСчетОплатыКонтекстноеМеню" id="127"/>
+					<ExtendedTooltip name="ТранзитныйСчетОплатыРасширеннаяПодсказка" id="243"/>
+				</LabelField>
+				<CheckBoxField name="УдалитьПодкруткаПоСреднему" id="128">
+					<DataPath>~Список.УдалитьПодкруткаПоСреднему</DataPath>
+					<Visible>false</Visible>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="УдалитьПодкруткаПоСреднемуКонтекстноеМеню" id="129"/>
+					<ExtendedTooltip name="УдалитьПодкруткаПоСреднемуРасширеннаяПодсказка" id="244"/>
+				</CheckBoxField>
+				<CheckBoxField name="УменьшениеНормыЛьготыВПределахФакта" id="130">
+					<DataPath>Список.УменьшениеНормыЛьготыВПределахФакта</DataPath>
+					<Visible>false</Visible>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="УменьшениеНормыЛьготыВПределахФактаКонтекстноеМеню" id="131"/>
+					<ExtendedTooltip name="УменьшениеНормыЛьготыВПределахФактаРасширеннаяПодсказка" id="245"/>
+				</CheckBoxField>
+				<CheckBoxField name="УчитыватьНачисленияПоГрупповымСчетчикам" id="132">
+					<DataPath>Список.УчитыватьНачисленияПоГрупповымСчетчикам</DataPath>
+					<Visible>false</Visible>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="УчитыватьНачисленияПоГрупповымСчетчикамКонтекстноеМеню" id="133"/>
+					<ExtendedTooltip name="УчитыватьНачисленияПоГрупповымСчетчикамРасширеннаяПодсказка" id="246"/>
+				</CheckBoxField>
+				<CheckBoxField name="ФормироватьАктИРеализациюПоКонтрагенту" id="134">
+					<DataPath>Список.ФормироватьАктИРеализациюПоКонтрагенту</DataPath>
+					<Visible>false</Visible>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ФормироватьАктИРеализациюПоКонтрагентуКонтекстноеМеню" id="135"/>
+					<ExtendedTooltip name="ФормироватьАктИРеализациюПоКонтрагентуРасширеннаяПодсказка" id="247"/>
+				</CheckBoxField>
+				<CheckBoxField name="ФормироватьАктИРеализациюПоКонтрагентуОтветственныхЛиц" id="136">
+					<DataPath>Список.ФормироватьАктИРеализациюПоКонтрагентуОтветственныхЛиц</DataPath>
+					<Visible>false</Visible>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ФормироватьАктИРеализациюПоКонтрагентуОтветственныхЛицКонтекстноеМеню" id="137"/>
+					<ExtendedTooltip name="ФормироватьАктИРеализациюПоКонтрагентуОтветственныхЛицРасширеннаяПодсказка" id="248"/>
+				</CheckBoxField>
+				<LabelField name="СубконтоЛьготСУ1" id="138">
+					<DataPath>Список.СубконтоЛьготСУ1</DataPath>
+					<Visible>false</Visible>
+					<ContextMenu name="СубконтоЛьготСУ1КонтекстноеМеню" id="139"/>
+					<ExtendedTooltip name="СубконтоЛьготСУ1РасширеннаяПодсказка" id="249"/>
+				</LabelField>
+				<LabelField name="СубконтоЛьготСУ2" id="140">
+					<DataPath>Список.СубконтоЛьготСУ2</DataPath>
+					<Visible>false</Visible>
+					<ContextMenu name="СубконтоЛьготСУ2КонтекстноеМеню" id="141"/>
+					<ExtendedTooltip name="СубконтоЛьготСУ2РасширеннаяПодсказка" id="250"/>
+				</LabelField>
+				<LabelField name="СубконтоЛьготСУ3" id="142">
+					<DataPath>Список.СубконтоЛьготСУ3</DataPath>
+					<Visible>false</Visible>
+					<ContextMenu name="СубконтоЛьготСУ3КонтекстноеМеню" id="143"/>
+					<ExtendedTooltip name="СубконтоЛьготСУ3РасширеннаяПодсказка" id="251"/>
+				</LabelField>
+				<LabelField name="СубконтоЛьготУСО1" id="144">
+					<DataPath>Список.СубконтоЛьготУСО1</DataPath>
+					<Visible>false</Visible>
+					<ContextMenu name="СубконтоЛьготУСО1КонтекстноеМеню" id="145"/>
+					<ExtendedTooltip name="СубконтоЛьготУСО1РасширеннаяПодсказка" id="252"/>
+				</LabelField>
+				<LabelField name="СубконтоЛьготУСО2" id="146">
+					<DataPath>Список.СубконтоЛьготУСО2</DataPath>
+					<Visible>false</Visible>
+					<ContextMenu name="СубконтоЛьготУСО2КонтекстноеМеню" id="147"/>
+					<ExtendedTooltip name="СубконтоЛьготУСО2РасширеннаяПодсказка" id="253"/>
+				</LabelField>
+				<LabelField name="СубконтоЛьготУСО3" id="148">
+					<DataPath>Список.СубконтоЛьготУСО3</DataPath>
+					<Visible>false</Visible>
+					<ContextMenu name="СубконтоЛьготУСО3КонтекстноеМеню" id="149"/>
+					<ExtendedTooltip name="СубконтоЛьготУСО3РасширеннаяПодсказка" id="254"/>
+				</LabelField>
+				<CheckBoxField name="УчитыватьПерерасчет" id="150">
+					<DataPath>Список.УчитыватьПерерасчет</DataPath>
+					<Visible>false</Visible>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="УчитыватьПерерасчетКонтекстноеМеню" id="151"/>
+					<ExtendedTooltip name="УчитыватьПерерасчетРасширеннаяПодсказка" id="255"/>
+				</CheckBoxField>
+				<LabelField name="СчетНачисленийРасчетаПредельногоИндексаСобственныхУслуг" id="152">
+					<DataPath>Список.СчетНачисленийРасчетаПредельногоИндексаСобственныхУслуг</DataPath>
+					<Visible>false</Visible>
+					<ContextMenu name="СчетНачисленийРасчетаПредельногоИндексаСобственныхУслугКонтекстноеМеню" id="153"/>
+					<ExtendedTooltip name="СчетНачисленийРасчетаПредельногоИндексаСобственныхУслугРасширеннаяПодсказка" id="256"/>
+				</LabelField>
+				<LabelField name="СчетНачисленийРасчетаПредельногоИндексаСоСтороннимиОрганизациями" id="154">
+					<DataPath>Список.СчетНачисленийРасчетаПредельногоИндексаСоСтороннимиОрганизациями</DataPath>
+					<Visible>false</Visible>
+					<ContextMenu name="СчетНачисленийРасчетаПредельногоИндексаСоСтороннимиОрганизациямиКонтекстноеМеню" id="155"/>
+					<ExtendedTooltip name="СчетНачисленийРасчетаПредельногоИндексаСоСтороннимиОрганизациямиРасширеннаяПодсказка" id="257"/>
+				</LabelField>
+				<LabelField name="СубконтоНачисленийРасчетаПредельногоИндексаСобственныхУслуг1" id="156">
+					<DataPath>Список.СубконтоНачисленийРасчетаПредельногоИндексаСобственныхУслуг1</DataPath>
+					<Visible>false</Visible>
+					<ContextMenu name="СубконтоНачисленийРасчетаПредельногоИндексаСобственныхУслуг1КонтекстноеМеню" id="157"/>
+					<ExtendedTooltip name="СубконтоНачисленийРасчетаПредельногоИндексаСобственныхУслуг1РасширеннаяПодсказка" id="258"/>
+				</LabelField>
+				<LabelField name="СубконтоНачисленийРасчетаПредельногоИндексаСобственныхУслуг2" id="158">
+					<DataPath>Список.СубконтоНачисленийРасчетаПредельногоИндексаСобственныхУслуг2</DataPath>
+					<Visible>false</Visible>
+					<ContextMenu name="СубконтоНачисленийРасчетаПредельногоИндексаСобственныхУслуг2КонтекстноеМеню" id="159"/>
+					<ExtendedTooltip name="СубконтоНачисленийРасчетаПредельногоИндексаСобственныхУслуг2РасширеннаяПодсказка" id="259"/>
+				</LabelField>
+				<LabelField name="СубконтоНачисленийРасчетаПредельногоИндексаСобственныхУслуг3" id="160">
+					<DataPath>Список.СубконтоНачисленийРасчетаПредельногоИндексаСобственныхУслуг3</DataPath>
+					<Visible>false</Visible>
+					<ContextMenu name="СубконтоНачисленийРасчетаПредельногоИндексаСобственныхУслуг3КонтекстноеМеню" id="161"/>
+					<ExtendedTooltip name="СубконтоНачисленийРасчетаПредельногоИндексаСобственныхУслуг3РасширеннаяПодсказка" id="260"/>
+				</LabelField>
+				<LabelField name="СубконтоНачисленийРасчетаПредельногоИндексаСоСтороннимиОрганизациями1" id="162">
+					<DataPath>Список.СубконтоНачисленийРасчетаПредельногоИндексаСоСтороннимиОрганизациями1</DataPath>
+					<Visible>false</Visible>
+					<ContextMenu name="СубконтоНачисленийРасчетаПредельногоИндексаСоСтороннимиОрганизациями1КонтекстноеМеню" id="163"/>
+					<ExtendedTooltip name="СубконтоНачисленийРасчетаПредельногоИндексаСоСтороннимиОрганизациями1РасширеннаяПодсказка" id="261"/>
+				</LabelField>
+				<LabelField name="СубконтоНачисленийРасчетаПредельногоИндексаСоСтороннимиОрганизациями2" id="164">
+					<DataPath>Список.СубконтоНачисленийРасчетаПредельногоИндексаСоСтороннимиОрганизациями2</DataPath>
+					<Visible>false</Visible>
+					<ContextMenu name="СубконтоНачисленийРасчетаПредельногоИндексаСоСтороннимиОрганизациями2КонтекстноеМеню" id="165"/>
+					<ExtendedTooltip name="СубконтоНачисленийРасчетаПредельногоИндексаСоСтороннимиОрганизациями2РасширеннаяПодсказка" id="262"/>
+				</LabelField>
+				<LabelField name="СубконтоНачисленийРасчетаПредельногоИндексаСоСтороннимиОрганизациями3" id="166">
+					<DataPath>Список.СубконтоНачисленийРасчетаПредельногоИндексаСоСтороннимиОрганизациями3</DataPath>
+					<Visible>false</Visible>
+					<ContextMenu name="СубконтоНачисленийРасчетаПредельногоИндексаСоСтороннимиОрганизациями3КонтекстноеМеню" id="167"/>
+					<ExtendedTooltip name="СубконтоНачисленийРасчетаПредельногоИндексаСоСтороннимиОрганизациями3РасширеннаяПодсказка" id="263"/>
+				</LabelField>
+				<CheckBoxField name="РаспределениеПропорциональноФактуРасчетаПоСоциальнымНормамСУчетомМноготарифногоСчетчика" id="168">
+					<DataPath>Список.РаспределениеПропорциональноФактуРасчетаПоСоциальнымНормамСУчетомМноготарифногоСчетчика</DataPath>
+					<Visible>false</Visible>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="РаспределениеПропорциональноФактуРасчетаПоСоциальнымНормамСУчетомМноготарифногоСчетчикаКонтекстноеМеню" id="169"/>
+					<ExtendedTooltip name="РаспределениеПропорциональноФактуРасчетаПоСоциальнымНормамСУчетомМноготарифногоСчетчикаРасширеннаяПодсказка" id="264"/>
+				</CheckBoxField>
+				<CheckBoxField name="ИспользоватьСокращенноеНаименование" id="268">
+					<DataPath>Список.ИспользоватьСокращенноеНаименование</DataPath>
+					<Visible>false</Visible>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ИспользоватьСокращенноеНаименованиеКонтекстноеМеню" id="269"/>
+					<ExtendedTooltip name="ИспользоватьСокращенноеНаименованиеРасширеннаяПодсказка" id="270"/>
+				</CheckBoxField>
+				<LabelField name="ФорматДаты" id="265">
+					<DataPath>Список.ФорматДаты</DataPath>
+					<Visible>false</Visible>
+					<ContextMenu name="ФорматДатыКонтекстноеМеню" id="266"/>
+					<ExtendedTooltip name="ФорматДатыРасширеннаяПодсказка" id="267"/>
+				</LabelField>
+				<LabelField name="НазначениеПлатежа" id="271">
+					<DataPath>Список.НазначениеПлатежа</DataPath>
+					<Visible>false</Visible>
+					<ContextMenu name="НазначениеПлатежаКонтекстноеМеню" id="272"/>
+					<ExtendedTooltip name="НазначениеПлатежаРасширеннаяПодсказка" id="273"/>
+				</LabelField>
+				<CheckBoxField name="Мосэнергосбыт2016" id="274">
+					<DataPath>Список.Мосэнергосбыт2016</DataPath>
+					<Visible>false</Visible>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="Мосэнергосбыт2016КонтекстноеМеню" id="275"/>
+					<ExtendedTooltip name="Мосэнергосбыт2016РасширеннаяПодсказка" id="276"/>
+				</CheckBoxField>
+				<CheckBoxField name="РаздельныйУчетКапРемонта" id="277">
+					<DataPath>Список.РаздельныйУчетКапРемонта</DataPath>
+					<Visible>false</Visible>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="РаздельныйУчетКапРемонтаКонтекстноеМеню" id="278"/>
+					<ExtendedTooltip name="РаздельныйУчетКапРемонтаРасширеннаяПодсказка" id="279"/>
+				</CheckBoxField>
+				<CheckBoxField name="РасчетОбъемовДоТретьегоЗнака" id="280">
+					<DataPath>Список.РасчетОбъемовДоТретьегоЗнака</DataPath>
+					<Visible>false</Visible>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="РасчетОбъемовДоТретьегоЗнакаКонтекстноеМеню" id="281"/>
+					<ExtendedTooltip name="РасчетОбъемовДоТретьегоЗнакаРасширеннаяПодсказка" id="282"/>
+				</CheckBoxField>
+				<CheckBoxField name="ОптимизацияЛС" id="283">
+					<DataPath>Список.ОптимизацияЛС</DataPath>
+					<Visible>false</Visible>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ОптимизацияЛСКонтекстноеМеню" id="284"/>
+					<ExtendedTooltip name="ОптимизацияЛСРасширеннаяПодсказка" id="285"/>
+				</CheckBoxField>
+				<LabelField name="СчетЛьготКапРемонта" id="289">
+					<DataPath>Список.СчетЛьготКапРемонта</DataPath>
+					<Visible>false</Visible>
+					<ContextMenu name="СчетЛьготКапРемонтаКонтекстноеМеню" id="290"/>
+					<ExtendedTooltip name="СчетЛьготКапРемонтаРасширеннаяПодсказка" id="291"/>
+				</LabelField>
+				<LabelField name="СубконтоЛьготКапРем1" id="301">
+					<DataPath>Список.СубконтоЛьготКапРем1</DataPath>
+					<Visible>false</Visible>
+					<ContextMenu name="СубконтоЛьготКапРем1КонтекстноеМеню" id="302"/>
+					<ExtendedTooltip name="СубконтоЛьготКапРем1РасширеннаяПодсказка" id="303"/>
+				</LabelField>
+				<LabelField name="СубконтоЛьготКапРем2" id="304">
+					<DataPath>Список.СубконтоЛьготКапРем2</DataPath>
+					<Visible>false</Visible>
+					<ContextMenu name="СубконтоЛьготКапРем2КонтекстноеМеню" id="305"/>
+					<ExtendedTooltip name="СубконтоЛьготКапРем2РасширеннаяПодсказка" id="306"/>
+				</LabelField>
+				<LabelField name="СубконтоЛьготКапРем3" id="307">
+					<DataPath>Список.СубконтоЛьготКапРем3</DataPath>
+					<Visible>false</Visible>
+					<ContextMenu name="СубконтоЛьготКапРем3КонтекстноеМеню" id="308"/>
+					<ExtendedTooltip name="СубконтоЛьготКапРем3РасширеннаяПодсказка" id="309"/>
+				</LabelField>
+				<LabelField name="СчетПениКапРемонта" id="286">
+					<DataPath>Список.СчетПениКапРемонта</DataPath>
+					<Visible>false</Visible>
+					<ContextMenu name="СчетПениКапРемонтаКонтекстноеМеню" id="287"/>
+					<ExtendedTooltip name="СчетПениКапРемонтаРасширеннаяПодсказка" id="288"/>
+				</LabelField>
+				<LabelField name="СубконтоПениКапРем1" id="292">
+					<DataPath>Список.СубконтоПениКапРем1</DataPath>
+					<Visible>false</Visible>
+					<ContextMenu name="СубконтоПениКапРем1КонтекстноеМеню" id="293"/>
+					<ExtendedTooltip name="СубконтоПениКапРем1РасширеннаяПодсказка" id="294"/>
+				</LabelField>
+				<LabelField name="СубконтоПениКапРем2" id="295">
+					<DataPath>Список.СубконтоПениКапРем2</DataPath>
+					<Visible>false</Visible>
+					<ContextMenu name="СубконтоПениКапРем2КонтекстноеМеню" id="296"/>
+					<ExtendedTooltip name="СубконтоПениКапРем2РасширеннаяПодсказка" id="297"/>
+				</LabelField>
+				<LabelField name="СубконтоПениКапРем3" id="298">
+					<DataPath>Список.СубконтоПениКапРем3</DataPath>
+					<Visible>false</Visible>
+					<ContextMenu name="СубконтоПениКапРем3КонтекстноеМеню" id="299"/>
+					<ExtendedTooltip name="СубконтоПениКапРем3РасширеннаяПодсказка" id="300"/>
+				</LabelField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Список" id="1">
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>false</ManualQuery>
+				<DynamicDataRead>true</DynamicDataRead>
+				<MainTable>InformationRegister.бит_НастройкаПараметровЖКХ</MainTable>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+	</Attributes>
+</Form>

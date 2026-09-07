@@ -1,0 +1,793 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.18">
+	<CommandBarLocation>Bottom</CommandBarLocation>
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<HorizontalAlign>Right</HorizontalAlign>
+		<Autofill>false</Autofill>
+		<ChildItems>
+			<Button name="ФормаЗаписать" id="52">
+				<Type>CommandBarButton</Type>
+				<DefaultButton>true</DefaultButton>
+				<CommandName>Form.Command.Записать</CommandName>
+				<ExtendedTooltip name="ФормаЗаписатьРасширеннаяПодсказка" id="62"/>
+			</Button>
+			<Button name="ФормаЗакрыть" id="53">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.StandardCommand.Close</CommandName>
+				<ExtendedTooltip name="ФормаЗакрытьРасширеннаяПодсказка" id="63"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<Pages name="ГруппаСтраницСвязанныхОбъектовИОтборов" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа страниц связанных объектов и отборов</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа страниц связанных объектов и отборов</v8:content>
+				</v8:item>
+			</ToolTip>
+			<PagesRepresentation>TabsOnTop</PagesRepresentation>
+			<ExtendedTooltip name="ГруппаСтраницСвязанныхОбъектовИОтборовРасширеннаяПодсказка" id="64"/>
+			<ChildItems>
+				<Page name="ГруппаСвязанныеОбъекты" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Связанные объекты</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа связанные объекты</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ГруппаСвязанныеОбъектыРасширеннаяПодсказка" id="65"/>
+					<ChildItems>
+						<Table name="Настройка_ОбъектыПривязки" id="4">
+							<Representation>List</Representation>
+							<SelectionMode>SingleRow</SelectionMode>
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<FileDragMode>AsFile</FileDragMode>
+							<DataPath>Объект.Настройка_ОбъектыПривязки</DataPath>
+							<SearchStringLocation>None</SearchStringLocation>
+							<ViewStatusLocation>None</ViewStatusLocation>
+							<SearchControlLocation>None</SearchControlLocation>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="Настройка_ОбъектыПривязкиКонтекстноеМеню" id="5"/>
+							<AutoCommandBar name="Настройка_ОбъектыПривязкиКоманднаяПанель" id="6"/>
+							<ExtendedTooltip name="Настройка_ОбъектыПривязкиРасширеннаяПодсказка" id="66"/>
+							<SearchStringAddition name="Настройка_ОбъектыПривязкиСтрокаПоиска" id="67">
+								<AdditionSource>
+									<Item>Настройка_ОбъектыПривязки</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="Настройка_ОбъектыПривязкиСтрокаПоискаКонтекстноеМеню" id="68"/>
+								<ExtendedTooltip name="Настройка_ОбъектыПривязкиСтрокаПоискаРасширеннаяПодсказка" id="69"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="Настройка_ОбъектыПривязкиСостояниеПросмотра" id="70">
+								<AdditionSource>
+									<Item>Настройка_ОбъектыПривязки</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="Настройка_ОбъектыПривязкиСостояниеПросмотраКонтекстноеМеню" id="71"/>
+								<ExtendedTooltip name="Настройка_ОбъектыПривязкиСостояниеПросмотраРасширеннаяПодсказка" id="72"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="Настройка_ОбъектыПривязкиУправлениеПоиском" id="73">
+								<AdditionSource>
+									<Item>Настройка_ОбъектыПривязки</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="Настройка_ОбъектыПривязкиУправлениеПоискомКонтекстноеМеню" id="74"/>
+								<ExtendedTooltip name="Настройка_ОбъектыПривязкиУправлениеПоискомРасширеннаяПодсказка" id="75"/>
+							</SearchControlAddition>
+							<Events>
+								<Event name="BeforeDeleteRow">Настройка_ОбъектыПривязкиПередУдалением</Event>
+								<Event name="BeforeEditEnd">Настройка_ОбъектыПривязкиПередОкончаниемРедактирования</Event>
+								<Event name="OnActivateRow">Настройка_ОбъектыПривязкиПриАктивизацииСтроки</Event>
+							</Events>
+							<ChildItems>
+								<ColumnGroup name="Настройка_ОбъектыПривязкиГруппаКолонок" id="18">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Настройка объекты привязки группа колонок</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Настройка объекты привязки группа колонок</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ExtendedTooltip name="Настройка_ОбъектыПривязкиГруппаКолонокРасширеннаяПодсказка" id="76"/>
+									<ChildItems>
+										<InputField name="Настройка_ОбъектыПривязкиЗаголовок" id="7">
+											<DataPath>Объект.Настройка_ОбъектыПривязки.Заголовок</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="Настройка_ОбъектыПривязкиЗаголовокКонтекстноеМеню" id="8"/>
+											<ExtendedTooltip name="Настройка_ОбъектыПривязкиЗаголовокРасширеннаяПодсказка" id="77"/>
+										</InputField>
+										<InputField name="Настройка_ОбъектыПривязкиВидОбъектаИБ" id="9">
+											<DataPath>Объект.Настройка_ОбъектыПривязки.МетаОбъект</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ChoiceButton>true</ChoiceButton>
+											<ClearButton>false</ClearButton>
+											<SpinButton>false</SpinButton>
+											<OpenButton>false</OpenButton>
+											<TextEdit>false</TextEdit>
+											<ChoiceListButton>false</ChoiceListButton>
+											<ContextMenu name="Настройка_ОбъектыПривязкиВидОбъектаИБКонтекстноеМеню" id="10"/>
+											<ExtendedTooltip name="Настройка_ОбъектыПривязкиВидОбъектаИБРасширеннаяПодсказка" id="78"/>
+											<Events>
+												<Event name="StartChoice">Настройка_ОбъектыПривязкиМетаОбъектНачалоВыбора</Event>
+											</Events>
+										</InputField>
+									</ChildItems>
+								</ColumnGroup>
+							</ChildItems>
+						</Table>
+						<UsualGroup name="ГруппаПроверитьРедактировать" id="54">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа проверить редактировать</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа проверить редактировать</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Horizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаПроверитьРедактироватьРасширеннаяПодсказка" id="79"/>
+							<ChildItems>
+								<Button name="ПолучениеОбъектовПривязкиПроверить" id="55">
+									<Type>UsualButton</Type>
+									<Representation>PictureAndText</Representation>
+									<CommandName>Form.Command.ПолучениеОбъектовПривязкиПроверить</CommandName>
+									<ExtendedTooltip name="ПолучениеОбъектовПривязкиПроверитьРасширеннаяПодсказка" id="80"/>
+								</Button>
+								<CheckBoxField name="Флажок_ПолучениеОбъектовПривязкиДоступность" id="56">
+									<DataPath>Флажок_ПолучениеОбъектовПривязкиДоступность</DataPath>
+									<TitleLocation>Right</TitleLocation>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="Флажок_ПолучениеОбъектовПривязкиДоступностьКонтекстноеМеню" id="57"/>
+									<ExtendedTooltip name="Флажок_ПолучениеОбъектовПривязкиДоступностьРасширеннаяПодсказка" id="81"/>
+									<Events>
+										<Event name="OnChange">Флажок_ПолучениеОбъектовПривязкиДоступностьПриИзменении</Event>
+									</Events>
+								</CheckBoxField>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаФункцияПолучениеОбъектовПривязкиЗаголовок" id="20">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа функция получение объектов привязки заголовок</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа функция получение объектов привязки заголовок</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Horizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаФункцияПолучениеОбъектовПривязкиЗаголовокРасширеннаяПодсказка" id="82"/>
+							<ChildItems>
+								<LabelDecoration name="НадписьФункция_ПолучениеОбъектовПривязкиЗаголовок" id="21">
+									<TextColor>style:SpecialTextColor</TextColor>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Функция</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="НадписьФункция_ПолучениеОбъектовПривязкиЗаголовокКонтекстноеМеню" id="22"/>
+									<ExtendedTooltip name="НадписьФункция_ПолучениеОбъектовПривязкиЗаголовокРасширеннаяПодсказка" id="83"/>
+								</LabelDecoration>
+								<LabelDecoration name="Надпись_ПолучениеОбъектовПривязкиЗаголовокИмя" id="23">
+									<TextColor>#0000FF</TextColor>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>ПолучитьТекстСвязанныхОбъектов(МассивОбъектов)</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="Надпись_ПолучениеОбъектовПривязкиЗаголовокИмяКонтекстноеМеню" id="24"/>
+									<ExtendedTooltip name="Надпись_ПолучениеОбъектовПривязкиЗаголовокИмяРасширеннаяПодсказка" id="84"/>
+								</LabelDecoration>
+							</ChildItems>
+						</UsualGroup>
+						<TextDocumentField name="Код_ПолучениеОбъектовПривязки" id="25">
+							<DataPath>Код_ПолучениеОбъектовПривязки</DataPath>
+							<TitleLocation>None</TitleLocation>
+							<ContextMenu name="Код_ПолучениеОбъектовПривязкиКонтекстноеМеню" id="26"/>
+							<ExtendedTooltip name="Код_ПолучениеОбъектовПривязкиРасширеннаяПодсказка" id="85"/>
+						</TextDocumentField>
+						<UsualGroup name="ГруппаФункцияПолучениеОбъектовПривязкиРезультат" id="27">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа функция получение объектов привязки результат</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа функция получение объектов привязки заголовок</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Horizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаФункцияПолучениеОбъектовПривязкиРезультатРасширеннаяПодсказка" id="86"/>
+							<ChildItems>
+								<LabelDecoration name="НадписьФункция_ПолучениеОбъектовПривязкиРезультат" id="28">
+									<TextColor>style:SpecialTextColor</TextColor>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Возврат</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="НадписьФункция_ПолучениеОбъектовПривязкиРезультатКонтекстноеМеню" id="29"/>
+									<ExtendedTooltip name="НадписьФункция_ПолучениеОбъектовПривязкиРезультатРасширеннаяПодсказка" id="87"/>
+								</LabelDecoration>
+								<LabelDecoration name="Надпись_ПолучениеОбъектовПривязкиЗаголовокРезультат" id="30">
+									<TextColor>#0000FF</TextColor>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Результат</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="Надпись_ПолучениеОбъектовПривязкиЗаголовокРезультатКонтекстноеМеню" id="31"/>
+									<ExtendedTooltip name="Надпись_ПолучениеОбъектовПривязкиЗаголовокРезультатРасширеннаяПодсказка" id="88"/>
+								</LabelDecoration>
+								<LabelDecoration name="НадписьКонецСтроки_ПолучениеОбъектовПривязкиРезультат" id="32">
+									<TextColor>style:SpecialTextColor</TextColor>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>;</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="НадписьКонецСтроки_ПолучениеОбъектовПривязкиРезультатКонтекстноеМеню" id="33"/>
+									<ExtendedTooltip name="НадписьКонецСтроки_ПолучениеОбъектовПривязкиРезультатРасширеннаяПодсказка" id="89"/>
+								</LabelDecoration>
+							</ChildItems>
+						</UsualGroup>
+						<LabelDecoration name="НадписьКонецФункции_ПолучениеОбъектовПривязкиРезультат" id="34">
+							<TextColor>style:SpecialTextColor</TextColor>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>КонецФункции</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="НадписьКонецФункции_ПолучениеОбъектовПривязкиРезультатКонтекстноеМеню" id="35"/>
+							<ExtendedTooltip name="НадписьКонецФункции_ПолучениеОбъектовПривязкиРезультатРасширеннаяПодсказка" id="90"/>
+						</LabelDecoration>
+					</ChildItems>
+				</Page>
+				<Page name="ГруппаОтборыПоОбъектам" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Отборы по объектам</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа отборы по объектам</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ГруппаОтборыПоОбъектамРасширеннаяПодсказка" id="91"/>
+					<ChildItems>
+						<Table name="Настройка_ОбъектыОтбора" id="11">
+							<Representation>List</Representation>
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<FileDragMode>AsFile</FileDragMode>
+							<DataPath>Объект.Настройка_ОбъектыОтбора</DataPath>
+							<SearchStringLocation>None</SearchStringLocation>
+							<ViewStatusLocation>None</ViewStatusLocation>
+							<SearchControlLocation>None</SearchControlLocation>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="Настройка_ОбъектыОтбораКонтекстноеМеню" id="12"/>
+							<AutoCommandBar name="Настройка_ОбъектыОтбораКоманднаяПанель" id="13"/>
+							<ExtendedTooltip name="Настройка_ОбъектыОтбораРасширеннаяПодсказка" id="92"/>
+							<SearchStringAddition name="Настройка_ОбъектыОтбораСтрокаПоиска" id="93">
+								<AdditionSource>
+									<Item>Настройка_ОбъектыОтбора</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="Настройка_ОбъектыОтбораСтрокаПоискаКонтекстноеМеню" id="94"/>
+								<ExtendedTooltip name="Настройка_ОбъектыОтбораСтрокаПоискаРасширеннаяПодсказка" id="95"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="Настройка_ОбъектыОтбораСостояниеПросмотра" id="96">
+								<AdditionSource>
+									<Item>Настройка_ОбъектыОтбора</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="Настройка_ОбъектыОтбораСостояниеПросмотраКонтекстноеМеню" id="97"/>
+								<ExtendedTooltip name="Настройка_ОбъектыОтбораСостояниеПросмотраРасширеннаяПодсказка" id="98"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="Настройка_ОбъектыОтбораУправлениеПоиском" id="99">
+								<AdditionSource>
+									<Item>Настройка_ОбъектыОтбора</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="Настройка_ОбъектыОтбораУправлениеПоискомКонтекстноеМеню" id="100"/>
+								<ExtendedTooltip name="Настройка_ОбъектыОтбораУправлениеПоискомРасширеннаяПодсказка" id="101"/>
+							</SearchControlAddition>
+							<Events>
+								<Event name="BeforeDeleteRow">Настройка_ОбъектыОтбораПередУдалением</Event>
+								<Event name="BeforeEditEnd">Настройка_ОбъектыОтбораПередОкончаниемРедактирования</Event>
+								<Event name="OnActivateRow">Настройка_ОбъектыОтбораПриАктивизацииСтроки</Event>
+							</Events>
+							<ChildItems>
+								<ColumnGroup name="Настройка_ОбъектыОтбораГруппаКолонок" id="19">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Настройка объекты отбора группа колонок</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Настройка объекты отбора группа колонок</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ExtendedTooltip name="Настройка_ОбъектыОтбораГруппаКолонокРасширеннаяПодсказка" id="102"/>
+									<ChildItems>
+										<InputField name="Настройка_ОбъектыОтбораЗаголовок" id="14">
+											<DataPath>Объект.Настройка_ОбъектыОтбора.Заголовок</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="Настройка_ОбъектыОтбораЗаголовокКонтекстноеМеню" id="15"/>
+											<ExtendedTooltip name="Настройка_ОбъектыОтбораЗаголовокРасширеннаяПодсказка" id="103"/>
+										</InputField>
+										<InputField name="Настройка_ОбъектыОтбораВидОбъектаИБ" id="16">
+											<DataPath>Объект.Настройка_ОбъектыОтбора.МетаОбъект</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ChoiceButton>true</ChoiceButton>
+											<ClearButton>false</ClearButton>
+											<SpinButton>false</SpinButton>
+											<OpenButton>false</OpenButton>
+											<TextEdit>false</TextEdit>
+											<ChoiceListButton>false</ChoiceListButton>
+											<ContextMenu name="Настройка_ОбъектыОтбораВидОбъектаИБКонтекстноеМеню" id="17"/>
+											<ExtendedTooltip name="Настройка_ОбъектыОтбораВидОбъектаИБРасширеннаяПодсказка" id="104"/>
+											<Events>
+												<Event name="StartChoice">Настройка_ОбъектыОтбораМетаОбъектНачалоВыбора</Event>
+											</Events>
+										</InputField>
+									</ChildItems>
+								</ColumnGroup>
+							</ChildItems>
+						</Table>
+						<UsualGroup name="ГруппаПроверитьРедактирова" id="58">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа проверить редактирова</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа проверить редактирова</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Horizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаПроверитьРедактироваРасширеннаяПодсказка" id="105"/>
+							<ChildItems>
+								<Button name="ПолучениеОбъектовОтбораПроверить" id="59">
+									<Type>UsualButton</Type>
+									<CommandName>Form.Command.ПолучениеОбъектовОтбораПроверить</CommandName>
+									<ExtendedTooltip name="ПолучениеОбъектовОтбораПроверитьРасширеннаяПодсказка" id="106"/>
+								</Button>
+								<CheckBoxField name="Флажок_ПолучениеОбъектовОтбораДоступность" id="60">
+									<DataPath>Флажок_ПолучениеОбъектовОтбораДоступность</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Редактировать</v8:content>
+										</v8:item>
+									</Title>
+									<TitleLocation>Right</TitleLocation>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="Флажок_ПолучениеОбъектовОтбораДоступностьКонтекстноеМеню" id="61"/>
+									<ExtendedTooltip name="Флажок_ПолучениеОбъектовОтбораДоступностьРасширеннаяПодсказка" id="107"/>
+									<Events>
+										<Event name="OnChange">Флажок_ПолучениеОбъектовОтбораДоступностьПриИзменении</Event>
+									</Events>
+								</CheckBoxField>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаФункцияПолучениеОбъектовОтбораЗаголовок" id="36">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа функция получение объектов привязки заголовок</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа функция получение объектов привязки заголовок</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Horizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаФункцияПолучениеОбъектовОтбораЗаголовокРасширеннаяПодсказка" id="108"/>
+							<ChildItems>
+								<LabelDecoration name="НадписьФункция_ПолучениеОбъектовОтбораЗаголовок" id="37">
+									<TextColor>style:SpecialTextColor</TextColor>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Функция</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="НадписьФункция_ПолучениеОбъектовОтбораЗаголовокКонтекстноеМеню" id="38"/>
+									<ExtendedTooltip name="НадписьФункция_ПолучениеОбъектовОтбораЗаголовокРасширеннаяПодсказка" id="109"/>
+								</LabelDecoration>
+								<LabelDecoration name="Надпись_ПолучениеОбъектовОтбораЗаголовокИмя" id="39">
+									<TextColor>#0000FF</TextColor>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>ПолучитьТекущиеОбъектыОтбора()</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="Надпись_ПолучениеОбъектовОтбораЗаголовокИмяКонтекстноеМеню" id="40"/>
+									<ExtendedTooltip name="Надпись_ПолучениеОбъектовОтбораЗаголовокИмяРасширеннаяПодсказка" id="110"/>
+								</LabelDecoration>
+							</ChildItems>
+						</UsualGroup>
+						<TextDocumentField name="Код_ПолучениеОбъектовОтбора" id="41">
+							<DataPath>Код_ПолучениеОбъектовОтбора</DataPath>
+							<TitleLocation>None</TitleLocation>
+							<ContextMenu name="Код_ПолучениеОбъектовОтбораКонтекстноеМеню" id="42"/>
+							<ExtendedTooltip name="Код_ПолучениеОбъектовОтбораРасширеннаяПодсказка" id="111"/>
+						</TextDocumentField>
+						<UsualGroup name="ГруппаФункцияПолучениеОбъектовОтбораРезультат" id="43">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа функция получение объектов привязки результат</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа функция получение объектов привязки заголовок</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Horizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаФункцияПолучениеОбъектовОтбораРезультатРасширеннаяПодсказка" id="112"/>
+							<ChildItems>
+								<LabelDecoration name="НадписьФункция_ПолучениеОбъектовОтбораРезультат" id="44">
+									<TextColor>style:SpecialTextColor</TextColor>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Возврат</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="НадписьФункция_ПолучениеОбъектовОтбораРезультатКонтекстноеМеню" id="45"/>
+									<ExtendedTooltip name="НадписьФункция_ПолучениеОбъектовОтбораРезультатРасширеннаяПодсказка" id="113"/>
+								</LabelDecoration>
+								<LabelDecoration name="Надпись_ПолучениеОбъектовОтбораЗаголовокРезультат1" id="46">
+									<TextColor>#0000FF</TextColor>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Результат</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="Надпись_ПолучениеОбъектовОтбораЗаголовокРезультат1КонтекстноеМеню" id="47"/>
+									<ExtendedTooltip name="Надпись_ПолучениеОбъектовОтбораЗаголовокРезультат1РасширеннаяПодсказка" id="114"/>
+								</LabelDecoration>
+								<LabelDecoration name="НадписьКонецСтроки_ПолучениеОбъектовОтбораРезультат" id="48">
+									<TextColor>style:SpecialTextColor</TextColor>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>;</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="НадписьКонецСтроки_ПолучениеОбъектовОтбораРезультатКонтекстноеМеню" id="49"/>
+									<ExtendedTooltip name="НадписьКонецСтроки_ПолучениеОбъектовОтбораРезультатРасширеннаяПодсказка" id="115"/>
+								</LabelDecoration>
+							</ChildItems>
+						</UsualGroup>
+						<LabelDecoration name="НадписьКонецФункции_ПолучениеОбъектовОтбораРезультат" id="50">
+							<TextColor>style:SpecialTextColor</TextColor>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>КонецФункции</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="НадписьКонецФункции_ПолучениеОбъектовОтбораРезультатКонтекстноеМеню" id="51"/>
+							<ExtendedTooltip name="НадписьКонецФункции_ПолучениеОбъектовОтбораРезультатРасширеннаяПодсказка" id="116"/>
+						</LabelDecoration>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.бит_си_ИсточникСправочникСтатьи</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<Columns>
+				<AdditionalColumns table="Объект.Настройка_ОбъектыОтбора">
+					<Column name="Заголовок" id="1">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Заголовок</v8:content>
+							</v8:item>
+						</Title>
+						<Type>
+							<v8:Type>xs:string</v8:Type>
+							<v8:StringQualifiers>
+								<v8:Length>0</v8:Length>
+								<v8:AllowedLength>Variable</v8:AllowedLength>
+							</v8:StringQualifiers>
+						</Type>
+					</Column>
+					<Column name="МетаОбъект" id="2">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Мета объект</v8:content>
+							</v8:item>
+						</Title>
+						<Type>
+							<v8:Type>xs:string</v8:Type>
+							<v8:StringQualifiers>
+								<v8:Length>0</v8:Length>
+								<v8:AllowedLength>Variable</v8:AllowedLength>
+							</v8:StringQualifiers>
+						</Type>
+					</Column>
+					<Column name="КодПолученияОбъектов" id="3">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Код получения объектов</v8:content>
+							</v8:item>
+						</Title>
+						<Type>
+							<v8:Type>xs:string</v8:Type>
+							<v8:StringQualifiers>
+								<v8:Length>0</v8:Length>
+								<v8:AllowedLength>Variable</v8:AllowedLength>
+							</v8:StringQualifiers>
+						</Type>
+					</Column>
+				</AdditionalColumns>
+				<AdditionalColumns table="Объект.Настройка_ОбъектыПривязки">
+					<Column name="Заголовок" id="1">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Заголовок</v8:content>
+							</v8:item>
+						</Title>
+						<Type>
+							<v8:Type>xs:string</v8:Type>
+							<v8:StringQualifiers>
+								<v8:Length>0</v8:Length>
+								<v8:AllowedLength>Variable</v8:AllowedLength>
+							</v8:StringQualifiers>
+						</Type>
+					</Column>
+					<Column name="МетаОбъект" id="2">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Мета объект</v8:content>
+							</v8:item>
+						</Title>
+						<Type>
+							<v8:Type>xs:string</v8:Type>
+							<v8:StringQualifiers>
+								<v8:Length>0</v8:Length>
+								<v8:AllowedLength>Variable</v8:AllowedLength>
+							</v8:StringQualifiers>
+						</Type>
+					</Column>
+					<Column name="КодПолученияТекстаОбъекта" id="3">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Код получения текста объекта</v8:content>
+							</v8:item>
+						</Title>
+						<Type>
+							<v8:Type>xs:string</v8:Type>
+							<v8:StringQualifiers>
+								<v8:Length>0</v8:Length>
+								<v8:AllowedLength>Variable</v8:AllowedLength>
+							</v8:StringQualifiers>
+						</Type>
+					</Column>
+				</AdditionalColumns>
+			</Columns>
+		</Attribute>
+		<Attribute name="Источник" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Источник</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.бит_си_Статьи</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="Код_ПолучениеОбъектовПривязки" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Код получение объектов привязки</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="Код_ПолучениеОбъектовОтбора" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Код получение объектов отбора</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="Флажок_ПолучениеОбъектовПривязкиДоступность" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Редактировать</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ПолучениеОбъектовОтбораПроверить" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Получение объектов отбора проверить</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="Флажок_ПолучениеОбъектовОтбораДоступность" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Флажок получение объектов отбора доступность</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="Записать" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Записать</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Записать</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>КнопкаВыполнитьНажатие</Action>
+		</Command>
+		<Command name="ПолучениеОбъектовПривязкиПроверить" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Проверить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Получение объектов привязки проверить</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.CheckSyntax</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ПолучениеОбъектовПривязкиПроверить</Action>
+		</Command>
+		<Command name="ПолучениеОбъектовОтбораПроверить" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Проверить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Получение объектов отбора проверить</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.CheckSyntax</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ПолучениеОбъектовОтбораПроверить</Action>
+			<Representation>TextPicture</Representation>
+		</Command>
+	</Commands>
+	<Parameters>
+		<Parameter name="АдресНастроекВоВременномХранилище">
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Parameter>
+	</Parameters>
+</Form>

@@ -1,0 +1,128 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.18">
+	<DocumentJournal uuid="8ae58dd0-3df0-484d-b63d-4bddc89729e7">
+		<InternalInfo>
+			<xr:GeneratedType name="DocumentJournalSelection.бит_ЖурналУчетаРегистрацииПребывания" category="Selection">
+				<xr:TypeId>dc0f360c-69ce-419f-80f5-2dd2aa2e609f</xr:TypeId>
+				<xr:ValueId>ed7d99e7-0f3e-4ca4-9dc1-ce1f2a9b6b0a</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="DocumentJournalList.бит_ЖурналУчетаРегистрацииПребывания" category="List">
+				<xr:TypeId>10d5267d-2307-48d5-a64e-80be0b4e06b8</xr:TypeId>
+				<xr:ValueId>8b3f55fe-632f-4462-9605-41a838f1353d</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="DocumentJournalManager.бит_ЖурналУчетаРегистрацииПребывания" category="Manager">
+				<xr:TypeId>ddbb43b4-ea7f-4a41-ab69-d3c320f9d619</xr:TypeId>
+				<xr:ValueId>f554fce0-7522-4ac0-a4cf-5d65c4bffafb</xr:ValueId>
+			</xr:GeneratedType>
+		</InternalInfo>
+		<Properties>
+			<Name>бит_ЖурналУчетаРегистрацииПребывания</Name>
+			<Synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Журнал учета регистрации граждан по месту пребывания</v8:content>
+				</v8:item>
+			</Synonym>
+			<Comment/>
+			<DefaultForm>DocumentJournal.бит_ЖурналУчетаРегистрацииПребывания.Form.ФормаСпискаУправляемая</DefaultForm>
+			<AuxiliaryForm/>
+			<UseStandardCommands>true</UseStandardCommands>
+			<RegisteredDocuments>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.бит_ЗаявлениеОРегистрацииПоМестуПЖ</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.бит_СвидетельствоОРегистрацииПоМестуПребывания</xr:Item>
+			</RegisteredDocuments>
+			<IncludeHelpInContents>true</IncludeHelpInContents>
+			<ListPresentation/>
+			<ExtendedListPresentation/>
+			<Explanation/>
+		</Properties>
+		<ChildObjects>
+			<Column uuid="f74aae77-9c42-406d-9f84-08f7f0f4b330">
+				<Properties>
+					<Name>Организация</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Организация</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Indexing>DontIndex</Indexing>
+					<References>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.бит_ЗаявлениеОРегистрацииПоМестуПЖ.Attribute.Организация</xr:Item>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.бит_СвидетельствоОРегистрацииПоМестуПребывания.Attribute.Организация</xr:Item>
+					</References>
+				</Properties>
+			</Column>
+			<Column uuid="26ee7474-5351-42f3-a9e1-3211ffd28afa">
+				<Properties>
+					<Name>ЛицевойСчет</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Лицевой счет</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Indexing>DontIndex</Indexing>
+					<References>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.бит_ЗаявлениеОРегистрацииПоМестуПЖ.Attribute.ЛицевойСчет</xr:Item>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.бит_СвидетельствоОРегистрацииПоМестуПребывания.Attribute.ЛицевойСчет</xr:Item>
+					</References>
+				</Properties>
+			</Column>
+			<Column uuid="af7ff304-1658-45fb-8f2d-6cf1988d99e4">
+				<Properties>
+					<Name>РегистрируемоеЛицо</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Регистрируемое лицо</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Indexing>DontIndex</Indexing>
+					<References>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.бит_ЗаявлениеОРегистрацииПоМестуПЖ.Attribute.РегистрируемоеЛицо</xr:Item>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.бит_СвидетельствоОРегистрацииПоМестуПребывания.Attribute.РегистрируемоеЛицо</xr:Item>
+					</References>
+				</Properties>
+			</Column>
+			<Column uuid="e6616fbb-96d7-4dec-952b-5e096d73c1ff">
+				<Properties>
+					<Name>Комментарий</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Комментарий</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Indexing>DontIndex</Indexing>
+					<References>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.бит_ЗаявлениеОРегистрацииПоМестуПЖ.Attribute.Комментарий</xr:Item>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.бит_СвидетельствоОРегистрацииПоМестуПребывания.Attribute.Комментарий</xr:Item>
+					</References>
+				</Properties>
+			</Column>
+			<Column uuid="09fd6c3c-6632-47ca-aaa5-42f66f24bea6">
+				<Properties>
+					<Name>ВидОперации</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Вид операции</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Indexing>DontIndex</Indexing>
+					<References>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.бит_ЗаявлениеОРегистрацииПоМестуПЖ.Attribute.ВидОперации</xr:Item>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.бит_СвидетельствоОРегистрацииПоМестуПребывания.Attribute.ОтборПоВидуОперации</xr:Item>
+					</References>
+				</Properties>
+			</Column>
+			<Form>ФормаСпискаУправляемая</Form>
+		</ChildObjects>
+	</DocumentJournal>
+</MetaDataObject>

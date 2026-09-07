@@ -1,0 +1,151 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.18">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="AfterWrite">ПослеЗаписи</Event>
+		<Event name="BeforeWrite">ПередЗаписью</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+		<Event name="OnClose">ПриЗакрытии</Event>
+	</Events>
+	<ChildItems>
+		<InputField name="Период" id="1">
+			<DataPath>Запись.Period</DataPath>
+			<ContextMenu name="ПериодКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="ПериодExtendedTooltip" id="25"/>
+		</InputField>
+		<InputField name="Квартира" id="3">
+			<DataPath>Запись.Квартира</DataPath>
+			<ReadOnly>true</ReadOnly>
+			<ContextMenu name="КвартираКонтекстноеМеню" id="4"/>
+			<ExtendedTooltip name="КвартираExtendedTooltip" id="26"/>
+		</InputField>
+		<InputField name="ОбщаяПлощадь" id="5">
+			<DataPath>Запись.ОбщаяПлощадь</DataPath>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Общая площадь,м2</v8:content>
+				</v8:item>
+			</Title>
+			<ContextMenu name="ОбщаяПлощадьКонтекстноеМеню" id="6"/>
+			<ExtendedTooltip name="ОбщаяПлощадьExtendedTooltip" id="27"/>
+		</InputField>
+		<InputField name="ЖилаяПлощадь" id="7">
+			<DataPath>Запись.ЖилаяПлощадь</DataPath>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Жилая площадь,м2</v8:content>
+				</v8:item>
+			</Title>
+			<ContextMenu name="ЖилаяПлощадьКонтекстноеМеню" id="8"/>
+			<ExtendedTooltip name="ЖилаяПлощадьExtendedTooltip" id="28"/>
+		</InputField>
+		<InputField name="МОП" id="9">
+			<DataPath>Запись.МОП</DataPath>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>МОП,м2</v8:content>
+				</v8:item>
+			</Title>
+			<ContextMenu name="МОПКонтекстноеМеню" id="10"/>
+			<ExtendedTooltip name="МОПExtendedTooltip" id="29"/>
+		</InputField>
+		<InputField name="ОтапливаемаяПлощадь" id="11">
+			<DataPath>Запись.ОтапливаемаяПлощадь</DataPath>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отапливаемая площадь,м2</v8:content>
+				</v8:item>
+			</Title>
+			<ContextMenu name="ОтапливаемаяПлощадьКонтекстноеМеню" id="12"/>
+			<ExtendedTooltip name="ОтапливаемаяПлощадьExtendedTooltip" id="30"/>
+		</InputField>
+		<InputField name="СовокупнаяПлощадь" id="13">
+			<DataPath>Запись.СовокупнаяПлощадь</DataPath>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Совокупная площадь,м2</v8:content>
+				</v8:item>
+			</Title>
+			<ContextMenu name="СовокупнаяПлощадьКонтекстноеМеню" id="14"/>
+			<ExtendedTooltip name="СовокупнаяПлощадьExtendedTooltip" id="31"/>
+		</InputField>
+		<InputField name="ПлощадьОДНСОИЭлектроснаб" id="37">
+			<DataPath>Запись.ПлощадьОДНСОИЭлектроснаб</DataPath>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Площадь ОДН СОИ электроснабжения,м2</v8:content>
+				</v8:item>
+			</Title>
+			<ContextMenu name="ПлощадьОДНСОИЭлектроснабКонтекстноеМеню" id="38"/>
+			<ExtendedTooltip name="ПлощадьОДНСОИЭлектроснабРасширеннаяПодсказка" id="39"/>
+		</InputField>
+		<InputField name="ПлощадьОДНСОИВодоснаб" id="40">
+			<DataPath>Запись.ПлощадьОДНСОИВодоснаб</DataPath>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Площадь ОДН СОИ водоснабжения,м2</v8:content>
+				</v8:item>
+			</Title>
+			<ContextMenu name="ПлощадьОДНСОИВодоснабКонтекстноеМеню" id="41"/>
+			<ExtendedTooltip name="ПлощадьОДНСОИВодоснабРасширеннаяПодсказка" id="42"/>
+		</InputField>
+		<InputField name="ТипКвартиры" id="15">
+			<DataPath>Запись.ТипКвартиры</DataPath>
+			<AutoMarkIncomplete>true</AutoMarkIncomplete>
+			<ContextMenu name="ТипКвартирыКонтекстноеМеню" id="16"/>
+			<ExtendedTooltip name="ТипКвартирыExtendedTooltip" id="32"/>
+		</InputField>
+		<InputField name="СтатусКвартиры" id="17">
+			<DataPath>Запись.СтатусКвартиры</DataPath>
+			<AutoMarkIncomplete>true</AutoMarkIncomplete>
+			<ContextMenu name="СтатусКвартирыКонтекстноеМеню" id="18"/>
+			<ExtendedTooltip name="СтатусКвартирыExtendedTooltip" id="33"/>
+		</InputField>
+		<InputField name="ТипПлиты" id="19">
+			<DataPath>Запись.ТипПлиты</DataPath>
+			<ContextMenu name="ТипПлитыКонтекстноеМеню" id="20"/>
+			<ExtendedTooltip name="ТипПлитыExtendedTooltip" id="34"/>
+		</InputField>
+		<InputField name="ТипЗапирающегоУстройства" id="21">
+			<DataPath>Запись.ТипЗапирающегоУстройства</DataPath>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Тип запирающего устр-ва</v8:content>
+				</v8:item>
+			</Title>
+			<ContextMenu name="ТипЗапирающегоУстройстваКонтекстноеМеню" id="22"/>
+			<ExtendedTooltip name="ТипЗапирающегоУстройстваExtendedTooltip" id="35"/>
+		</InputField>
+		<InputField name="ВысотаПотолков" id="43">
+			<DataPath>Запись.ВысотаПотолков</DataPath>
+			<ContextMenu name="ВысотаПотолковКонтекстноеМеню" id="44"/>
+			<ExtendedTooltip name="ВысотаПотолковРасширеннаяПодсказка" id="45"/>
+		</InputField>
+		<CheckBoxField name="ЖилоеПомещениеСпециализированногоЖилищногоФонда" id="23">
+			<DataPath>Запись.ЖилоеПомещениеСпециализированногоЖилищногоФонда</DataPath>
+			<TitleLocation>Right</TitleLocation>
+			<CheckBoxType>Auto</CheckBoxType>
+			<ContextMenu name="ЖилоеПомещениеСпециализированногоЖилищногоФондаКонтекстноеМеню" id="24"/>
+			<ExtendedTooltip name="ЖилоеПомещениеСпециализированногоЖилищногоФондаExtendedTooltip" id="36"/>
+		</CheckBoxField>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Запись" id="1">
+			<Type>
+				<v8:Type>cfg:InformationRegisterRecordManager.бит_СведенияОКвартире</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+	</Attributes>
+</Form>

@@ -1,0 +1,728 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.18">
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<ChildItems>
+			<Button name="ФормаЗаполнитьСведения" id="33">
+				<Type>CommandBarButton</Type>
+				<DefaultButton>true</DefaultButton>
+				<CommandName>Form.Command.ЗаполнитьСведения</CommandName>
+				<ExtendedTooltip name="ФормаЗаполнитьСведенияРасширеннаяПодсказка" id="63"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="ChoiceProcessing">ОбработкаВыбора</Event>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="Шапка" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Шапка</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Шапка</v8:content>
+				</v8:item>
+			</ToolTip>
+			<HorizontalStretch>false</HorizontalStretch>
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ШапкаРасширеннаяПодсказка" id="64"/>
+			<ChildItems>
+				<InputField name="Здание" id="1">
+					<DataPath>Здание</DataPath>
+					<ContextMenu name="ЗданиеКонтекстноеМеню" id="2"/>
+					<ExtendedTooltip name="ЗданиеРасширеннаяПодсказка" id="65"/>
+					<Events>
+						<Event name="OnChange">ЗданиеПриИзменении</Event>
+					</Events>
+				</InputField>
+				<InputField name="СтрокаКонецПериода" id="57">
+					<DataPath>СтрокаКонецПериода</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Период сведений</v8:content>
+						</v8:item>
+					</Title>
+					<Width>15</Width>
+					<SpinButton>true</SpinButton>
+					<ChoiceListButton>true</ChoiceListButton>
+					<ContextMenu name="СтрокаКонецПериодаКонтекстноеМеню" id="58"/>
+					<ExtendedTooltip name="СтрокаКонецПериодаРасширеннаяПодсказка" id="66"/>
+					<Events>
+						<Event name="OnChange">СтрокаКонецПериодаПриИзменении</Event>
+						<Event name="Tuning">СтрокаКонецПериодаРегулирование</Event>
+						<Event name="StartListChoice">СтрокаКонецПериодаНачалоВыбораИзСписка</Event>
+						<Event name="Clearing">СтрокаКонецПериодаОчистка</Event>
+					</Events>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<Table name="Квартиры" id="34">
+			<Representation>List</Representation>
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<FileDragMode>AsFile</FileDragMode>
+			<DataPath>Квартиры</DataPath>
+			<SearchStringLocation>None</SearchStringLocation>
+			<ViewStatusLocation>None</ViewStatusLocation>
+			<SearchControlLocation>None</SearchControlLocation>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="КвартирыКонтекстноеМеню" id="35"/>
+			<AutoCommandBar name="КвартирыКоманднаяПанель" id="36">
+				<ChildItems>
+					<Button name="КвартирыОбновить" id="60">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.Обновить</CommandName>
+						<Picture>
+							<xr:Ref>StdPicture.Refresh</xr:Ref>
+							<xr:LoadTransparent>true</xr:LoadTransparent>
+						</Picture>
+						<ExtendedTooltip name="КвартирыОбновитьРасширеннаяПодсказка" id="67"/>
+					</Button>
+					<Button name="КвартирыПодбор" id="59">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.Подбор</CommandName>
+						<ExtendedTooltip name="КвартирыПодборРасширеннаяПодсказка" id="68"/>
+					</Button>
+				</ChildItems>
+			</AutoCommandBar>
+			<ExtendedTooltip name="КвартирыРасширеннаяПодсказка" id="69"/>
+			<SearchStringAddition name="КвартирыСтрокаПоиска" id="70">
+				<AdditionSource>
+					<Item>Квартиры</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="КвартирыСтрокаПоискаКонтекстноеМеню" id="71"/>
+				<ExtendedTooltip name="КвартирыСтрокаПоискаРасширеннаяПодсказка" id="72"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="КвартирыСостояниеПросмотра" id="73">
+				<AdditionSource>
+					<Item>Квартиры</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="КвартирыСостояниеПросмотраКонтекстноеМеню" id="74"/>
+				<ExtendedTooltip name="КвартирыСостояниеПросмотраРасширеннаяПодсказка" id="75"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="КвартирыУправлениеПоиском" id="76">
+				<AdditionSource>
+					<Item>Квартиры</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="КвартирыУправлениеПоискомКонтекстноеМеню" id="77"/>
+				<ExtendedTooltip name="КвартирыУправлениеПоискомРасширеннаяПодсказка" id="78"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<InputField name="КвартирыКвартира" id="37">
+					<DataPath>Квартиры.Квартира</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="КвартирыКвартираКонтекстноеМеню" id="38"/>
+					<ExtendedTooltip name="КвартирыКвартираРасширеннаяПодсказка" id="79"/>
+					<Events>
+						<Event name="OnChange">КвартирыКвартираПриИзменении</Event>
+						<Event name="StartChoice">КвартирыКвартираНачалоВыбора</Event>
+					</Events>
+				</InputField>
+				<InputField name="КвартирыСтатусКвартиры" id="49">
+					<DataPath>Квартиры.СтатусКвартиры</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="КвартирыСтатусКвартирыКонтекстноеМеню" id="50"/>
+					<ExtendedTooltip name="КвартирыСтатусКвартирыРасширеннаяПодсказка" id="80"/>
+				</InputField>
+				<InputField name="КвартирыТипКвартиры" id="51">
+					<DataPath>Квартиры.ТипКвартиры</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="КвартирыТипКвартирыКонтекстноеМеню" id="52"/>
+					<ExtendedTooltip name="КвартирыТипКвартирыРасширеннаяПодсказка" id="81"/>
+				</InputField>
+				<InputField name="КвартирыОбщаяПлощадь" id="43">
+					<DataPath>Квартиры.ОбщаяПлощадь</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="КвартирыОбщаяПлощадьКонтекстноеМеню" id="44"/>
+					<ExtendedTooltip name="КвартирыОбщаяПлощадьРасширеннаяПодсказка" id="82"/>
+				</InputField>
+				<InputField name="КвартирыЖилаяПлощадь" id="41">
+					<DataPath>Квартиры.ЖилаяПлощадь</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="КвартирыЖилаяПлощадьКонтекстноеМеню" id="42"/>
+					<ExtendedTooltip name="КвартирыЖилаяПлощадьРасширеннаяПодсказка" id="83"/>
+				</InputField>
+				<InputField name="КвартирыОтапливаемаяПлощадь" id="45">
+					<DataPath>Квартиры.ОтапливаемаяПлощадь</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="КвартирыОтапливаемаяПлощадьКонтекстноеМеню" id="46"/>
+					<ExtendedTooltip name="КвартирыОтапливаемаяПлощадьРасширеннаяПодсказка" id="84"/>
+				</InputField>
+				<InputField name="КвартирыСовокупнаяПлощадь" id="47">
+					<DataPath>Квартиры.СовокупнаяПлощадь</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="КвартирыСовокупнаяПлощадьКонтекстноеМеню" id="48"/>
+					<ExtendedTooltip name="КвартирыСовокупнаяПлощадьРасширеннаяПодсказка" id="85"/>
+				</InputField>
+				<InputField name="КвартирыМОП" id="39">
+					<DataPath>Квартиры.МОП</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="КвартирыМОПКонтекстноеМеню" id="40"/>
+					<ExtendedTooltip name="КвартирыМОПРасширеннаяПодсказка" id="86"/>
+				</InputField>
+				<InputField name="КвартирыТипЗапирающегоУстройства" id="53">
+					<DataPath>Квартиры.ТипЗапирающегоУстройства</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="КвартирыТипЗапирающегоУстройстваКонтекстноеМеню" id="54"/>
+					<ExtendedTooltip name="КвартирыТипЗапирающегоУстройстваРасширеннаяПодсказка" id="87"/>
+				</InputField>
+				<InputField name="КвартирыТипПлиты" id="55">
+					<DataPath>Квартиры.ТипПлиты</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="КвартирыТипПлитыКонтекстноеМеню" id="56"/>
+					<ExtendedTooltip name="КвартирыТипПлитыРасширеннаяПодсказка" id="88"/>
+				</InputField>
+				<InputField name="КвартирыСтепеньБлагоустройства" id="61">
+					<DataPath>Квартиры.СтепеньБлагоустройства</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="КвартирыСтепеньБлагоустройстваКонтекстноеМеню" id="62"/>
+					<ExtendedTooltip name="КвартирыСтепеньБлагоустройстваРасширеннаяПодсказка" id="89"/>
+				</InputField>
+			</ChildItems>
+		</Table>
+		<UsualGroup name="СведенияОКвартире" id="12">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сведения о квартире для изменения</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сведения о квартире</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Horizontal</Group>
+			<Representation>StrongSeparation</Representation>
+			<ExtendedTooltip name="СведенияОКвартиреРасширеннаяПодсказка" id="90"/>
+			<ChildItems>
+				<UsualGroup name="Свойства" id="13">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Свойства</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Свойства</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Vertical</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="СвойстваРасширеннаяПодсказка" id="91"/>
+					<ChildItems>
+						<InputField name="ТипКвартиры" id="15">
+							<DataPath>ТипКвартиры</DataPath>
+							<AutoMarkIncomplete>true</AutoMarkIncomplete>
+							<ContextMenu name="ТипКвартирыКонтекстноеМеню" id="16"/>
+							<ExtendedTooltip name="ТипКвартирыРасширеннаяПодсказка" id="92"/>
+						</InputField>
+						<InputField name="СтатусКвартиры" id="17">
+							<DataPath>СтатусКвартиры</DataPath>
+							<AutoMarkIncomplete>true</AutoMarkIncomplete>
+							<ContextMenu name="СтатусКвартирыКонтекстноеМеню" id="18"/>
+							<ExtendedTooltip name="СтатусКвартирыРасширеннаяПодсказка" id="93"/>
+						</InputField>
+						<InputField name="ТипПлиты" id="19">
+							<DataPath>ТипПлиты</DataPath>
+							<ContextMenu name="ТипПлитыКонтекстноеМеню" id="20"/>
+							<ExtendedTooltip name="ТипПлитыРасширеннаяПодсказка" id="94"/>
+						</InputField>
+						<InputField name="ТипЗапирающегоУстройства" id="21">
+							<DataPath>ТипЗапирающегоУстройства</DataPath>
+							<ContextMenu name="ТипЗапирающегоУстройстваКонтекстноеМеню" id="22"/>
+							<ExtendedTooltip name="ТипЗапирающегоУстройстваРасширеннаяПодсказка" id="95"/>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="Площади" id="14">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Площади</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Площади</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Vertical</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ПлощадиРасширеннаяПодсказка" id="96"/>
+					<ChildItems>
+						<InputField name="ОбщаяПлощадь" id="23">
+							<DataPath>ОбщаяПлощадь</DataPath>
+							<ContextMenu name="ОбщаяПлощадьКонтекстноеМеню" id="24"/>
+							<ExtendedTooltip name="ОбщаяПлощадьРасширеннаяПодсказка" id="97"/>
+						</InputField>
+						<InputField name="ЖилаяПлощадь" id="25">
+							<DataPath>ЖилаяПлощадь</DataPath>
+							<ContextMenu name="ЖилаяПлощадьКонтекстноеМеню" id="26"/>
+							<ExtendedTooltip name="ЖилаяПлощадьРасширеннаяПодсказка" id="98"/>
+						</InputField>
+						<InputField name="МОП" id="31">
+							<DataPath>МОП</DataPath>
+							<ContextMenu name="МОПКонтекстноеМеню" id="32"/>
+							<ExtendedTooltip name="МОПРасширеннаяПодсказка" id="99"/>
+						</InputField>
+						<InputField name="ОтапливаемаяПлощадь" id="27">
+							<DataPath>ОтапливаемаяПлощадь</DataPath>
+							<ContextMenu name="ОтапливаемаяПлощадьКонтекстноеМеню" id="28"/>
+							<ExtendedTooltip name="ОтапливаемаяПлощадьРасширеннаяПодсказка" id="100"/>
+						</InputField>
+						<InputField name="СовокупнаяПлощадь" id="29">
+							<DataPath>СовокупнаяПлощадь</DataPath>
+							<ContextMenu name="СовокупнаяПлощадьКонтекстноеМеню" id="30"/>
+							<ExtendedTooltip name="СовокупнаяПлощадьРасширеннаяПодсказка" id="101"/>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.бит_ЗаполнениеСведенийПоКвартирам</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<Attribute name="ДатаСведений" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дата сведений</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:dateTime</v8:Type>
+				<v8:DateQualifiers>
+					<v8:DateFractions>Date</v8:DateFractions>
+				</v8:DateQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="Здание" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Здание</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.бит_СписокЗданий</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ОбщаяПлощадь" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Общая площадь</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>6</v8:Digits>
+					<v8:FractionDigits>2</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ЖилаяПлощадь" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Жилая площадь</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>6</v8:Digits>
+					<v8:FractionDigits>2</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="МОП" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>МОП</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>6</v8:Digits>
+					<v8:FractionDigits>2</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ОтапливаемаяПлощадь" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отапливаемая площадь</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>6</v8:Digits>
+					<v8:FractionDigits>2</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="СовокупнаяПлощадь" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Совокупная площадь</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>6</v8:Digits>
+					<v8:FractionDigits>2</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ТипКвартиры" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Тип квартиры</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.бит_ТипыКвартиры</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="СтатусКвартиры" id="12">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Статус квартиры</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.бит_СтатусыКвартиры</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ТипПлиты" id="13">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Тип плиты</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.бит_ТипыПлиты</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ТипЗапирающегоУстройства" id="14">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Тип запирающего устройства</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.бит_ТипыЗапирающихУстройств</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="Квартиры" id="15">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Квартиры</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Квартира" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Квартира</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.бит_Квартиры</v8:Type>
+					</Type>
+				</Column>
+				<Column name="МОП" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>МОП</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>6</v8:Digits>
+							<v8:FractionDigits>2</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="ЖилаяПлощадь" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Жилая площадь</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>6</v8:Digits>
+							<v8:FractionDigits>2</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="ОбщаяПлощадь" id="4">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Общая площадь</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>6</v8:Digits>
+							<v8:FractionDigits>2</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="ОтапливаемаяПлощадь" id="5">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Отапливаемая площадь</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>6</v8:Digits>
+							<v8:FractionDigits>2</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="СовокупнаяПлощадь" id="6">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Совокупная площадь</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>6</v8:Digits>
+							<v8:FractionDigits>2</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="СтатусКвартиры" id="7">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Статус квартиры</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.бит_СтатусыКвартиры</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ТипКвартиры" id="8">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Тип квартиры</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.бит_ТипыКвартиры</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ТипЗапирающегоУстройства" id="9">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Тип запирающего устройства</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.бит_ТипыЗапирающихУстройств</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ТипПлиты" id="10">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Тип плиты</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.бит_ТипыПлиты</v8:Type>
+					</Type>
+				</Column>
+				<Column name="СтепеньБлагоустройства" id="11">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Степень благоустройства</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>250</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="СтрокаКонецПериода" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Строка конец периода</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>20</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+			<Save>
+				<Field>СтрокаКонецПериода</Field>
+			</Save>
+		</Attribute>
+		<Attribute name="СтепеньБлагоустройства" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Степень благоустройства</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>250</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ЗаполнитьСведения" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить сведения</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить сведения</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЗаполнитьСведения</Action>
+		</Command>
+		<Command name="Подбор" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подбор</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подбор</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Подбор</Action>
+		</Command>
+		<Command name="Обновить" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обновить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обновить</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Обновить</Action>
+		</Command>
+	</Commands>
+	<Parameters>
+		<Parameter name="ДатаСведений">
+			<Type>
+				<v8:Type>xs:dateTime</v8:Type>
+				<v8:DateQualifiers>
+					<v8:DateFractions>Date</v8:DateFractions>
+				</v8:DateQualifiers>
+			</Type>
+		</Parameter>
+		<Parameter name="Здание">
+			<Type>
+				<v8:Type>cfg:CatalogRef.бит_СписокЗданий</v8:Type>
+			</Type>
+		</Parameter>
+	</Parameters>
+</Form>

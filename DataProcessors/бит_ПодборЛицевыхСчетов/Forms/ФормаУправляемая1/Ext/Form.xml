@@ -1,0 +1,855 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.18">
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<ChildItems>
+			<Button name="ФормаПеренестиВДокумент" id="63">
+				<Type>CommandBarButton</Type>
+				<DefaultButton>true</DefaultButton>
+				<CommandName>Form.Command.ПеренестиВДокумент</CommandName>
+				<ExtendedTooltip name="ФормаПеренестиВДокументРасширеннаяПодсказка" id="88"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="BeforeClose">ПередЗакрытием</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+		<Event name="OnClose">ПриЗакрытии</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="Отборы" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отборы</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отборы</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Vertical</Group>
+			<Representation>StrongSeparation</Representation>
+			<ExtendedTooltip name="ОтборыРасширеннаяПодсказка" id="89"/>
+			<ChildItems>
+				<UsualGroup name="ПоАдресу" id="10">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>По адресу</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>По адресу</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Horizontal</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ПоАдресуРасширеннаяПодсказка" id="90"/>
+					<ChildItems>
+						<InputField name="Улица" id="14">
+							<DataPath>Объект.Улица</DataPath>
+							<ClearButton>true</ClearButton>
+							<OpenButton>false</OpenButton>
+							<ContextMenu name="УлицаКонтекстноеМеню" id="15"/>
+							<ExtendedTooltip name="УлицаРасширеннаяПодсказка" id="91"/>
+							<Events>
+								<Event name="OnChange">УлицаПриИзменении</Event>
+								<Event name="StartChoice">УлицаНачалоВыбора</Event>
+							</Events>
+						</InputField>
+						<InputField name="Здание" id="16">
+							<DataPath>Объект.Здание</DataPath>
+							<ClearButton>true</ClearButton>
+							<OpenButton>false</OpenButton>
+							<ContextMenu name="ЗданиеКонтекстноеМеню" id="17"/>
+							<ExtendedTooltip name="ЗданиеРасширеннаяПодсказка" id="92"/>
+							<Events>
+								<Event name="OnChange">ЗданиеПриИзменении</Event>
+								<Event name="StartChoice">ЗданиеНачалоВыбора</Event>
+							</Events>
+						</InputField>
+						<InputField name="Квартира" id="18">
+							<DataPath>Объект.Квартира</DataPath>
+							<Width>7</Width>
+							<HorizontalStretch>false</HorizontalStretch>
+							<ClearButton>true</ClearButton>
+							<OpenButton>false</OpenButton>
+							<ContextMenu name="КвартираКонтекстноеМеню" id="19"/>
+							<ExtendedTooltip name="КвартираРасширеннаяПодсказка" id="93"/>
+							<Events>
+								<Event name="OnChange">КвартираПриИзменении</Event>
+								<Event name="StartChoice">КвартираНачалоВыбора</Event>
+							</Events>
+						</InputField>
+						<InputField name="Подъезд" id="163">
+							<DataPath>Объект.Подъезд</DataPath>
+							<Width>6</Width>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<AutoMaxHeight>false</AutoMaxHeight>
+							<HorizontalStretch>false</HorizontalStretch>
+							<ContextMenu name="ПодъездКонтекстноеМеню" id="164"/>
+							<ExtendedTooltip name="ПодъездРасширеннаяПодсказка" id="165"/>
+							<Events>
+								<Event name="OnChange">ПодъездПриИзменении</Event>
+								<Event name="StartChoice">ПодъездНачалоВыбора</Event>
+							</Events>
+						</InputField>
+						<InputField name="Этаж" id="166">
+							<DataPath>Объект.Этаж</DataPath>
+							<ContextMenu name="ЭтажКонтекстноеМеню" id="167"/>
+							<ExtendedTooltip name="ЭтажРасширеннаяПодсказка" id="168"/>
+							<Events>
+								<Event name="OnChange">ЭтажПриИзменении</Event>
+								<Event name="StartChoice">ЭтажНачалоВыбора</Event>
+							</Events>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+				<InputField name="ТипКвартиры" id="77">
+					<DataPath>Объект.ТипКвартиры</DataPath>
+					<ClearButton>true</ClearButton>
+					<OpenButton>false</OpenButton>
+					<ContextMenu name="ТипКвартирыКонтекстноеМеню" id="78"/>
+					<ExtendedTooltip name="ТипКвартирыРасширеннаяПодсказка" id="94"/>
+					<Events>
+						<Event name="OnChange">ТипКвартирыПриИзменении</Event>
+					</Events>
+				</InputField>
+				<InputField name="СтатусКвартиры" id="79">
+					<DataPath>Объект.СтатусКвартиры</DataPath>
+					<ClearButton>true</ClearButton>
+					<OpenButton>false</OpenButton>
+					<ContextMenu name="СтатусКвартирыКонтекстноеМеню" id="80"/>
+					<ExtendedTooltip name="СтатусКвартирыРасширеннаяПодсказка" id="95"/>
+					<Events>
+						<Event name="OnChange">СтатусКвартирыПриИзменении</Event>
+					</Events>
+				</InputField>
+				<InputField name="ОтветсвенноеЛицо" id="12">
+					<DataPath>Объект.ОтветственноеЛицо</DataPath>
+					<Visible>false</Visible>
+					<Enabled>false</Enabled>
+					<ClearButton>true</ClearButton>
+					<OpenButton>false</OpenButton>
+					<ContextMenu name="ОтветсвенноеЛицоКонтекстноеМеню" id="13"/>
+					<ExtendedTooltip name="ОтветсвенноеЛицоРасширеннаяПодсказка" id="96"/>
+					<Events>
+						<Event name="OnChange">ОтветсвенноеЛицоПриИзменении</Event>
+					</Events>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ПанельПодбора" id="20">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Панель подбора</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Панель подбора</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ПанельПодбораРасширеннаяПодсказка" id="97"/>
+			<ChildItems>
+				<UsualGroup name="Услуги" id="69">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Услуги</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Услуги</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Vertical</Group>
+					<ExtendedTooltip name="УслугиРасширеннаяПодсказка" id="98"/>
+					<ChildItems>
+						<Table name="СписокУслуг" id="21">
+							<Representation>List</Representation>
+							<Width>25</Width>
+							<Header>false</Header>
+							<HorizontalLines>false</HorizontalLines>
+							<VerticalLines>false</VerticalLines>
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<HorizontalStretch>false</HorizontalStretch>
+							<FileDragMode>AsFile</FileDragMode>
+							<DataPath>СписокУслуг</DataPath>
+							<RowPictureDataPath>СписокУслуг.Picture</RowPictureDataPath>
+							<SearchStringLocation>None</SearchStringLocation>
+							<ViewStatusLocation>None</ViewStatusLocation>
+							<SearchControlLocation>None</SearchControlLocation>
+							<ContextMenu name="СписокУслугКонтекстноеМеню" id="22"/>
+							<AutoCommandBar name="СписокУслугКоманднаяПанель" id="23"/>
+							<ExtendedTooltip name="СписокУслугРасширеннаяПодсказка" id="99"/>
+							<SearchStringAddition name="СписокУслугСтрокаПоиска" id="100">
+								<AdditionSource>
+									<Item>СписокУслуг</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="СписокУслугСтрокаПоискаКонтекстноеМеню" id="101"/>
+								<ExtendedTooltip name="СписокУслугСтрокаПоискаРасширеннаяПодсказка" id="102"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="СписокУслугСостояниеПросмотра" id="103">
+								<AdditionSource>
+									<Item>СписокУслуг</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="СписокУслугСостояниеПросмотраКонтекстноеМеню" id="104"/>
+								<ExtendedTooltip name="СписокУслугСостояниеПросмотраРасширеннаяПодсказка" id="105"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="СписокУслугУправлениеПоиском" id="106">
+								<AdditionSource>
+									<Item>СписокУслуг</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="СписокУслугУправлениеПоискомКонтекстноеМеню" id="107"/>
+								<ExtendedTooltip name="СписокУслугУправлениеПоискомРасширеннаяПодсказка" id="108"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<InputField name="СписокУслугЗначение" id="81">
+									<DataPath>СписокУслуг.Value</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ChoiceButton>true</ChoiceButton>
+									<ContextMenu name="СписокУслугЗначениеКонтекстноеМеню" id="82"/>
+									<ExtendedTooltip name="СписокУслугЗначениеРасширеннаяПодсказка" id="109"/>
+									<Events>
+										<Event name="StartChoice">СписокУслугЗначениеНачалоВыбора</Event>
+									</Events>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаЛицевыеСчета" id="87">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Лицевые счета</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа лицевые счета</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Height>10</Height>
+					<Group>Vertical</Group>
+					<ExtendedTooltip name="ГруппаЛицевыеСчетаРасширеннаяПодсказка" id="110"/>
+					<ChildItems>
+						<Table name="СписокЛицевыхСчетов" id="26">
+							<Width>25</Width>
+							<ChoiceMode>true</ChoiceMode>
+							<MultipleChoice>true</MultipleChoice>
+							<RowSelectionMode>Row</RowSelectionMode>
+							<UseAlternationRowColor>true</UseAlternationRowColor>
+							<EnableStartDrag>true</EnableStartDrag>
+							<FileDragMode>AsFile</FileDragMode>
+							<DataPath>СписокЛицевыхСчетов</DataPath>
+							<RowPictureDataPath>СписокЛицевыхСчетов.DefaultPicture</RowPictureDataPath>
+							<SearchStringLocation>None</SearchStringLocation>
+							<ViewStatusLocation>None</ViewStatusLocation>
+							<SearchControlLocation>None</SearchControlLocation>
+							<AutoRefresh>false</AutoRefresh>
+							<AutoRefreshPeriod>60</AutoRefreshPeriod>
+							<Period>
+								<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+								<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+								<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+							</Period>
+							<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+							<RestoreCurrentRow>false</RestoreCurrentRow>
+							<TopLevelParent xsi:nil="true"/>
+							<ShowRoot>true</ShowRoot>
+							<AllowRootChoice>false</AllowRootChoice>
+							<UpdateOnDataChange>Auto</UpdateOnDataChange>
+							<AllowGettingCurrentRowURL>true</AllowGettingCurrentRowURL>
+							<ContextMenu name="СписокЛицевыхСчетовКонтекстноеМеню" id="27"/>
+							<AutoCommandBar name="СписокЛицевыхСчетовКоманднаяПанель" id="28">
+								<Autofill>false</Autofill>
+								<ChildItems>
+									<Button name="СписокЛицевыхСчетовНайти" id="64">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Item.СписокЛицевыхСчетов.StandardCommand.Find</CommandName>
+										<ExtendedTooltip name="СписокЛицевыхСчетовНайтиРасширеннаяПодсказка" id="111"/>
+									</Button>
+									<Button name="СписокЛицевыхСчетовОтменитьПоиск" id="65">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Item.СписокЛицевыхСчетов.StandardCommand.CancelSearch</CommandName>
+										<ExtendedTooltip name="СписокЛицевыхСчетовОтменитьПоискРасширеннаяПодсказка" id="112"/>
+									</Button>
+									<Button name="СписокЛицевыхСчетовНастройкаСписка" id="70">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Item.СписокЛицевыхСчетов.StandardCommand.ListSettings</CommandName>
+										<ExtendedTooltip name="СписокЛицевыхСчетовНастройкаСпискаРасширеннаяПодсказка" id="113"/>
+									</Button>
+									<Button name="СписокЛицевыхСчетовПустая" id="86">
+										<Type>CommandBarButton</Type>
+										<Enabled>false</Enabled>
+										<CommandName>Form.Command.Пустая</CommandName>
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Для выделения всех строк нажмите Ctrl+A</v8:content>
+											</v8:item>
+										</Title>
+										<ExtendedTooltip name="СписокЛицевыхСчетовПустаяРасширеннаяПодсказка" id="114"/>
+									</Button>
+								</ChildItems>
+							</AutoCommandBar>
+							<ExtendedTooltip name="СписокЛицевыхСчетовРасширеннаяПодсказка" id="115"/>
+							<SearchStringAddition name="СписокЛицевыхСчетовСтрокаПоиска" id="116">
+								<AdditionSource>
+									<Item>СписокЛицевыхСчетов</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="СписокЛицевыхСчетовСтрокаПоискаКонтекстноеМеню" id="117"/>
+								<ExtendedTooltip name="СписокЛицевыхСчетовСтрокаПоискаРасширеннаяПодсказка" id="118"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="СписокЛицевыхСчетовСостояниеПросмотра" id="119">
+								<AdditionSource>
+									<Item>СписокЛицевыхСчетов</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="СписокЛицевыхСчетовСостояниеПросмотраКонтекстноеМеню" id="120"/>
+								<ExtendedTooltip name="СписокЛицевыхСчетовСостояниеПросмотраРасширеннаяПодсказка" id="121"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="СписокЛицевыхСчетовУправлениеПоиском" id="122">
+								<AdditionSource>
+									<Item>СписокЛицевыхСчетов</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="СписокЛицевыхСчетовУправлениеПоискомКонтекстноеМеню" id="123"/>
+								<ExtendedTooltip name="СписокЛицевыхСчетовУправлениеПоискомРасширеннаяПодсказка" id="124"/>
+							</SearchControlAddition>
+							<Events>
+								<Event name="Selection">СписокЛицевыхСчетовВыбор</Event>
+							</Events>
+							<ChildItems>
+								<LabelField name="СписокЛицевыхСчетовЛицевойСчет" id="37">
+									<DataPath>СписокЛицевыхСчетов.ЛицевойСчет</DataPath>
+									<ContextMenu name="СписокЛицевыхСчетовЛицевойСчетКонтекстноеМеню" id="38"/>
+									<ExtendedTooltip name="СписокЛицевыхСчетовЛицевойСчетРасширеннаяПодсказка" id="125"/>
+								</LabelField>
+								<LabelField name="СписокЛицевыхСчетовУлица" id="43">
+									<DataPath>СписокЛицевыхСчетов.Улица</DataPath>
+									<ContextMenu name="СписокЛицевыхСчетовУлицаКонтекстноеМеню" id="44"/>
+									<ExtendedTooltip name="СписокЛицевыхСчетовУлицаРасширеннаяПодсказка" id="126"/>
+								</LabelField>
+								<LabelField name="СписокЛицевыхСчетовЗдание" id="29">
+									<DataPath>СписокЛицевыхСчетов.Здание</DataPath>
+									<ContextMenu name="СписокЛицевыхСчетовЗданиеКонтекстноеМеню" id="30"/>
+									<ExtendedTooltip name="СписокЛицевыхСчетовЗданиеРасширеннаяПодсказка" id="127"/>
+								</LabelField>
+								<LabelField name="СписокЛицевыхСчетовКорпус" id="35">
+									<DataPath>СписокЛицевыхСчетов.Корпус</DataPath>
+									<ContextMenu name="СписокЛицевыхСчетовКорпусКонтекстноеМеню" id="36"/>
+									<ExtendedTooltip name="СписокЛицевыхСчетовКорпусРасширеннаяПодсказка" id="128"/>
+								</LabelField>
+								<LabelField name="СписокЛицевыхСчетовКвартира" id="33">
+									<DataPath>СписокЛицевыхСчетов.Квартира</DataPath>
+									<ContextMenu name="СписокЛицевыхСчетовКвартираКонтекстноеМеню" id="34"/>
+									<ExtendedTooltip name="СписокЛицевыхСчетовКвартираРасширеннаяПодсказка" id="129"/>
+								</LabelField>
+								<LabelField name="СписокЛицевыхСчетовПодъезд" id="171">
+									<DataPath>СписокЛицевыхСчетов.Подъезд</DataPath>
+									<ContextMenu name="СписокЛицевыхСчетовПодъездКонтекстноеМеню" id="172"/>
+									<ExtendedTooltip name="СписокЛицевыхСчетовПодъездРасширеннаяПодсказка" id="173"/>
+								</LabelField>
+								<LabelField name="СписокЛицевыхСчетовЭтаж" id="174">
+									<DataPath>СписокЛицевыхСчетов.Этаж</DataPath>
+									<ContextMenu name="СписокЛицевыхСчетовЭтажКонтекстноеМеню" id="175"/>
+									<ExtendedTooltip name="СписокЛицевыхСчетовЭтажРасширеннаяПодсказка" id="176"/>
+								</LabelField>
+								<LabelField name="СписокЛицевыхСчетовОрганизация" id="39">
+									<DataPath>СписокЛицевыхСчетов.Организация</DataPath>
+									<ContextMenu name="СписокЛицевыхСчетовОрганизацияКонтекстноеМеню" id="40"/>
+									<ExtendedTooltip name="СписокЛицевыхСчетовОрганизацияРасширеннаяПодсказка" id="130"/>
+								</LabelField>
+								<LabelField name="СписокЛицевыхСчетовОтветственноеЛицо" id="160">
+									<DataPath>~СписокЛицевыхСчетов.ОтветственноеЛицо</DataPath>
+									<ContextMenu name="СписокЛицевыхСчетовОтветственноеЛицоКонтекстноеМеню" id="161"/>
+									<ExtendedTooltip name="СписокЛицевыхСчетовОтветственноеЛицоРасширеннаяПодсказка" id="162"/>
+								</LabelField>
+								<LabelField name="СписокЛицевыхСчетовФизЛицоEmailПроживающего" id="157">
+									<DataPath>~СписокЛицевыхСчетов.ФизЛицоEmailПроживающего</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>E-mail</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="СписокЛицевыхСчетовФизЛицоEmailПроживающегоКонтекстноеМеню" id="158"/>
+									<ExtendedTooltip name="СписокЛицевыхСчетовФизЛицоEmailПроживающегоРасширеннаяПодсказка" id="159"/>
+								</LabelField>
+								<LabelField name="СписокЛицевыхСчетовСтатусКвартиры" id="73">
+									<DataPath>СписокЛицевыхСчетов.СтатусКвартиры</DataPath>
+									<Visible>false</Visible>
+									<ContextMenu name="СписокЛицевыхСчетовСтатусКвартирыКонтекстноеМеню" id="74"/>
+									<ExtendedTooltip name="СписокЛицевыхСчетовСтатусКвартирыРасширеннаяПодсказка" id="132"/>
+								</LabelField>
+								<LabelField name="СписокЛицевыхСчетовТипКвартиры" id="75">
+									<DataPath>СписокЛицевыхСчетов.ТипКвартиры</DataPath>
+									<Visible>false</Visible>
+									<ContextMenu name="СписокЛицевыхСчетовТипКвартирыКонтекстноеМеню" id="76"/>
+									<ExtendedTooltip name="СписокЛицевыхСчетовТипКвартирыРасширеннаяПодсказка" id="133"/>
+								</LabelField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ОтображениеВыбранного" id="66">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отображение выбранного</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отображение выбранного</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ОтображениеВыбранногоРасширеннаяПодсказка" id="134"/>
+			<ChildItems>
+				<LabelDecoration name="НадписьВыбранного" id="67">
+					<HorizontalStretch>true</HorizontalStretch>
+					<Font ref="sys:SystemFont" kind="WindowsFont"/>
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Выбрано элементов : 0</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="НадписьВыбранногоКонтекстноеМеню" id="68"/>
+					<ExtendedTooltip name="НадписьВыбранногоРасширеннаяПодсказка" id="135"/>
+				</LabelDecoration>
+				<Button name="Выбрать" id="83">
+					<Type>UsualButton</Type>
+					<Representation>PictureAndText</Representation>
+					<CommandName>Form.Command.Выбрать</CommandName>
+					<Picture>
+						<xr:Ref>StdPicture.Next</xr:Ref>
+						<xr:LoadTransparent>true</xr:LoadTransparent>
+					</Picture>
+					<ExtendedTooltip name="ВыбратьРасширеннаяПодсказка" id="136"/>
+				</Button>
+				<Button name="ВыбратьИПеренести" id="155">
+					<Type>UsualButton</Type>
+					<Representation>PictureAndText</Representation>
+					<CommandName>Form.Command.ВыбратьИПеренести</CommandName>
+					<Picture>
+						<xr:Ref>StdPicture.ExecuteTask</xr:Ref>
+						<xr:LoadTransparent>true</xr:LoadTransparent>
+					</Picture>
+					<ExtendedTooltip name="ВыбратьИПеренестиРасширеннаяПодсказка" id="156"/>
+				</Button>
+				<CheckBoxField name="ОтобразитьВыбранное" id="45">
+					<DataPath>ОтобразитьВыбранное</DataPath>
+					<TitleLocation>Right</TitleLocation>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ОтобразитьВыбранноеКонтекстноеМеню" id="46"/>
+					<ExtendedTooltip name="ОтобразитьВыбранноеРасширеннаяПодсказка" id="137"/>
+					<Events>
+						<Event name="OnChange">ОтобразитьВыбранноеПриИзменении</Event>
+					</Events>
+				</CheckBoxField>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ПанельВыбранного" id="47">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Панель выбранного</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Панель выбранного</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Vertical</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ПанельВыбранногоРасширеннаяПодсказка" id="138"/>
+			<ChildItems>
+				<Table name="ТаблицаВыбора" id="48">
+					<Height>10</Height>
+					<AutoInsertNewRow>true</AutoInsertNewRow>
+					<VerticalStretch>false</VerticalStretch>
+					<EnableStartDrag>true</EnableStartDrag>
+					<EnableDrag>true</EnableDrag>
+					<FileDragMode>AsFile</FileDragMode>
+					<DataPath>Объект.ТаблицаВыбора</DataPath>
+					<SearchStringLocation>None</SearchStringLocation>
+					<ViewStatusLocation>None</ViewStatusLocation>
+					<SearchControlLocation>None</SearchControlLocation>
+					<RowFilter xsi:nil="true"/>
+					<ContextMenu name="ТаблицаВыбораКонтекстноеМеню" id="49"/>
+					<AutoCommandBar name="ТаблицаВыбораКоманднаяПанель" id="50">
+						<Autofill>false</Autofill>
+						<ChildItems>
+							<Button name="ТаблицаВыбораСортироватьСписокПоВозрастанию" id="84">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Item.ТаблицаВыбора.StandardCommand.SortListAsc</CommandName>
+								<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
+								<ExtendedTooltip name="ТаблицаВыбораСортироватьСписокПоВозрастаниюРасширеннаяПодсказка" id="139"/>
+							</Button>
+							<Button name="ТаблицаВыбораСортироватьСписокПоУбыванию" id="85">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Item.ТаблицаВыбора.StandardCommand.SortListDesc</CommandName>
+								<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
+								<ExtendedTooltip name="ТаблицаВыбораСортироватьСписокПоУбываниюРасширеннаяПодсказка" id="140"/>
+							</Button>
+						</ChildItems>
+					</AutoCommandBar>
+					<ExtendedTooltip name="ТаблицаВыбораРасширеннаяПодсказка" id="141"/>
+					<SearchStringAddition name="ТаблицаВыбораСтрокаПоиска" id="142">
+						<AdditionSource>
+							<Item>ТаблицаВыбора</Item>
+							<Type>SearchStringRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="ТаблицаВыбораСтрокаПоискаКонтекстноеМеню" id="143"/>
+						<ExtendedTooltip name="ТаблицаВыбораСтрокаПоискаРасширеннаяПодсказка" id="144"/>
+					</SearchStringAddition>
+					<ViewStatusAddition name="ТаблицаВыбораСостояниеПросмотра" id="145">
+						<AdditionSource>
+							<Item>ТаблицаВыбора</Item>
+							<Type>ViewStatusRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="ТаблицаВыбораСостояниеПросмотраКонтекстноеМеню" id="146"/>
+						<ExtendedTooltip name="ТаблицаВыбораСостояниеПросмотраРасширеннаяПодсказка" id="147"/>
+					</ViewStatusAddition>
+					<SearchControlAddition name="ТаблицаВыбораУправлениеПоиском" id="148">
+						<AdditionSource>
+							<Item>ТаблицаВыбора</Item>
+							<Type>SearchControl</Type>
+						</AdditionSource>
+						<ContextMenu name="ТаблицаВыбораУправлениеПоискомКонтекстноеМеню" id="149"/>
+						<ExtendedTooltip name="ТаблицаВыбораУправлениеПоискомРасширеннаяПодсказка" id="150"/>
+					</SearchControlAddition>
+					<Events>
+						<Event name="BeforeAddRow">ТаблицаВыбораПередНачаломДобавления</Event>
+						<Event name="BeforeRowChange">ТаблицаВыбораПередНачаломИзменения</Event>
+						<Event name="AfterDeleteRow">ТаблицаВыбораПослеУдаления</Event>
+					</Events>
+					<ChildItems>
+						<LabelField name="ТаблицаВыбораНомерСтроки" id="51">
+							<DataPath>Объект.ТаблицаВыбора.LineNumber</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<Width>1</Width>
+							<HorizontalStretch>false</HorizontalStretch>
+							<ContextMenu name="ТаблицаВыбораНомерСтрокиКонтекстноеМеню" id="52"/>
+							<ExtendedTooltip name="ТаблицаВыбораНомерСтрокиРасширеннаяПодсказка" id="151"/>
+						</LabelField>
+						<InputField name="ТаблицаВыбораУслуга" id="53">
+							<DataPath>Объект.ТаблицаВыбора.Услуга</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ТаблицаВыбораУслугаКонтекстноеМеню" id="54"/>
+							<ExtendedTooltip name="ТаблицаВыбораУслугаРасширеннаяПодсказка" id="152"/>
+						</InputField>
+						<InputField name="ТаблицаВыбораЛицевойСчет" id="55">
+							<DataPath>Объект.ТаблицаВыбора.ЛицевойСчет</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ТаблицаВыбораЛицевойСчетКонтекстноеМеню" id="56"/>
+							<ExtendedTooltip name="ТаблицаВыбораЛицевойСчетРасширеннаяПодсказка" id="153"/>
+						</InputField>
+						<InputField name="ТаблицаВыбораАдрес" id="59">
+							<DataPath>Объект.ТаблицаВыбора.Адрес</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ТаблицаВыбораАдресКонтекстноеМеню" id="60"/>
+							<ExtendedTooltip name="ТаблицаВыбораАдресРасширеннаяПодсказка" id="154"/>
+						</InputField>
+					</ChildItems>
+				</Table>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.бит_ПодборЛицевыхСчетов</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<Attribute name="мКэшЗначений" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>М кэш значений</v8:content>
+				</v8:item>
+			</Title>
+			<Type/>
+		</Attribute>
+		<Attribute name="СписокЛицевыхСчетов" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Список лицевых счетов</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>true</ManualQuery>
+				<DynamicDataRead>false</DynamicDataRead>
+				<QueryText>ВЫБРАТЬ
+	бит_ЛицевыеСчета.Ссылка КАК ЛицевойСчет,
+	бит_ЛицевыеСчета.Здание КАК Здание,
+	бит_ЛицевыеСчета.Квартира КАК Квартира,
+	бит_ЛицевыеСчета.Квартира.Подъезд КАК Подъезд,
+	бит_ЛицевыеСчета.Квартира.Этаж КАК Этаж,
+	бит_ЛицевыеСчета.Организация КАК Организация,
+	бит_ЛицевыеСчета.УлицаЛицевогоСчета КАК Улица,
+	бит_ЛицевыеСчета.Идентификатор КАК Идентификатор,
+	бит_ЛицевыеСчета.Здание.Корпус КАК Корпус,
+	бит_СведенияОКвартиреСрезПоследних.ТипКвартиры КАК ТипКвартиры,
+	бит_СведенияОКвартиреСрезПоследних.СтатусКвартиры КАК СтатусКвартиры
+ИЗ
+	Справочник.бит_ЛицевыеСчета КАК бит_ЛицевыеСчета
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.бит_СведенияОКвартире.СрезПоследних(&amp;Дата, ) КАК бит_СведенияОКвартиреСрезПоследних
+		ПО бит_ЛицевыеСчета.Квартира = бит_СведенияОКвартиреСрезПоследних.Квартира</QueryText>
+				<MainTable>Catalog.бит_ЛицевыеСчета</MainTable>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+		<Attribute name="СписокУслуг" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Список услуг</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueListType</v8:Type>
+			</Type>
+			<Settings xsi:type="v8:TypeDescription">
+				<v8:Type>cfg:CatalogRef.бит_УслугиЖКХ</v8:Type>
+			</Settings>
+		</Attribute>
+		<Attribute name="ОтобразитьВыбранное" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отобразить выбранное</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ТекОтбор" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Тек отбор</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>10</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ПеренестиВДокумент" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Перенести в документ</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="СписокЗданий" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Список зданий</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueListType</v8:Type>
+			</Type>
+			<Settings xsi:type="v8:TypeDescription">
+				<v8:Type>cfg:CatalogRef.бит_СписокЗданий</v8:Type>
+			</Settings>
+		</Attribute>
+		<Attribute name="СписокУлиц" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Список улиц</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueListType</v8:Type>
+			</Type>
+			<Settings xsi:type="v8:TypeDescription">
+				<v8:Type>cfg:CatalogRef.бит_СписокУлиц</v8:Type>
+			</Settings>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ПеренестиВДокумент" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Перенести в документ</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Перенести в документ</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПеренестиВДокумент</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="Выбрать" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выбрать</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выбрать</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Выбрать</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="Пустая" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Пустая</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Пустая</v8:content>
+				</v8:item>
+			</ToolTip>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ВыбратьИПеренести" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выбрать и перенести</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выбрать и перенести</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ВыбратьИПеренести</Action>
+		</Command>
+	</Commands>
+	<Parameters>
+		<Parameter name="Организация">
+			<Type>
+				<v8:Type>cfg:CatalogRef.Организации</v8:Type>
+			</Type>
+		</Parameter>
+		<Parameter name="Дата">
+			<Type>
+				<v8:Type>xs:dateTime</v8:Type>
+				<v8:DateQualifiers>
+					<v8:DateFractions>Date</v8:DateFractions>
+				</v8:DateQualifiers>
+			</Type>
+		</Parameter>
+		<Parameter name="Улица">
+			<Type>
+				<v8:Type>cfg:CatalogRef.бит_СписокУлиц</v8:Type>
+			</Type>
+		</Parameter>
+		<Parameter name="Здание">
+			<Type>
+				<v8:Type>cfg:CatalogRef.бит_СписокЗданий</v8:Type>
+			</Type>
+		</Parameter>
+		<Parameter name="СписокУслуг">
+			<Type>
+				<v8:Type>v8:ValueListType</v8:Type>
+			</Type>
+		</Parameter>
+		<Parameter name="ОткрытоИзДокумента">
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+			<KeyParameter>true</KeyParameter>
+		</Parameter>
+		<Parameter name="СписокУлиц">
+			<Type>
+				<v8:Type>v8:ValueListType</v8:Type>
+			</Type>
+		</Parameter>
+		<Parameter name="СписокЗданий">
+			<Type>
+				<v8:Type>v8:ValueListType</v8:Type>
+			</Type>
+		</Parameter>
+		<Parameter name="СписокЛС">
+			<Type>
+				<v8:Type>v8:ValueListType</v8:Type>
+			</Type>
+		</Parameter>
+		<Parameter name="ВСписке">
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Parameter>
+	</Parameters>
+</Form>

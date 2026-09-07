@@ -1,0 +1,954 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<DataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcscom="http://v8.1c.ru/8.1/data-composition-system/common" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataSource>
+		<name>ИсточникДанных1</name>
+		<dataSourceType>Local</dataSourceType>
+	</dataSource>
+	<dataSet xsi:type="DataSetQuery">
+		<name>НаборДанных1</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДатаНаправленияБанк</dataPath>
+			<field>ДатаНаправленияБанк</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дата направления банк</v8:content>
+				</v8:item>
+			</title>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">ДФ='dd.MM.yyyy'</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СуммаГПпоРешениюСуда</dataPath>
+			<field>СуммаГПпоРешениюСуда</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сумма ГП по решению суда, руб.</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ФИОДолжника</dataPath>
+			<field>ФИОДолжника</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СуммаДолгаПоРешениюСуда</dataPath>
+			<field>СуммаДолгаПоРешениюСуда</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сумма долга по решению суда, руб.</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ТипСудебногоДокумента</dataPath>
+			<field>ТипСудебногоДокумента</field>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ЛицевойСчет</dataPath>
+			<field>ЛицевойСчет</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Адрес</dataPath>
+			<field>Адрес</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Услуга</dataPath>
+			<field>Услуга</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>НомерИЛ</dataPath>
+			<field>НомерИЛ</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Номер ИЛ</v8:content>
+				</v8:item>
+			</title>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СуммаПРпоРешениюСуда</dataPath>
+			<field>СуммаПРпоРешениюСуда</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сумма ПР по решению суда, руб.</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДатаНаправленияСПП</dataPath>
+			<field>ДатаНаправленияСПП</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дата направления СПП</v8:content>
+				</v8:item>
+			</title>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">ДФ='dd.MM.yyyy'</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Регистратор</dataPath>
+			<field>Регистратор</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДатаРейда</dataPath>
+			<field>ДатаРейда</field>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">ДФ='dd.MM.yyyy'</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>РезультатРейда</dataPath>
+			<field>РезультатРейда</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СуммаОстаток</dataPath>
+			<field>СуммаОстаток</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сумма Остаток, руб.</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СуммаПРОстаток</dataPath>
+			<field>СуммаПРОстаток</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сумма ПР Остаток, руб.</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СуммаГПОстаток</dataPath>
+			<field>СуммаГПОстаток</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сумма ГП Остаток, руб.</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СуммаПоИску</dataPath>
+			<field>СуммаПоИску</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сумма иска, руб.</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СуммаПРпоИску</dataPath>
+			<field>СуммаПРпоИску</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сумма ПР по иску, руб.</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СуммаГПпоИску</dataPath>
+			<field>СуммаГПпоИску</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сумма ГП по иску, руб.</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ИсполнительныйЛист</dataPath>
+			<field>ИсполнительныйЛист</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДатаСнятияСУчета</dataPath>
+			<field>ДатаСнятияСУчета</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дата снятия с учета</v8:content>
+				</v8:item>
+			</title>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ДФ=dd.MM.yyyy</v8:content>
+						</v8:item>
+					</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>НомерИсполнительногоЛиста</dataPath>
+			<field>НомерИсполнительногоЛиста</field>
+		</field>
+		<dataSource>ИсточникДанных1</dataSource>
+		<query>ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	ИсторияИсполнительныхЛистовСрезПоследних.Регистратор КАК Регистратор,
+	ИсторияИсполнительныхЛистовСрезПоследних.НомерИсполнительногоЛиста КАК НомерИЛ,
+	ИсторияИсполнительныхЛистовСрезПоследних.ТипСудебногоДокумента КАК ТипСудебногоДокумента,
+	ИсторияИсполнительныхЛистовСрезПоследних.ФИОДолжника КАК ФИОДолжника,
+	ИсторияИсполнительныхЛистовСрезПоследних.Адрес КАК Адрес,
+	ИсторияИсполнительныхЛистовСрезПоследних.ДатаИсполнительногоЛиста КАК ДатаИсполнительногоЛиста,
+	бит_ИсполнительныйЛист.СуммаПредставительскихРасходовПоРешениюСуда КАК СуммаПРпоРешениюСуда,
+	бит_ИсполнительныйЛист.СуммаГоспошлиныПоРешениюСуда КАК СуммаГПпоРешениюСуда,
+	бит_ИсполнительныйЛист.ЛицевойСчет КАК ЛицевойСчет,
+	бит_ИсполнительныйЛист.Услуга КАК Услуга,
+	бит_ИсполнительныйЛист.СуммаДолгаПоУслугеПоРешениюСуда КАК СуммаДолгаПоРешениюСуда,
+	бит_ИсковоеЗаявление.СуммаЗадолженности КАК СуммаПоИску,
+	бит_ИсковоеЗаявление.Госпошлина КАК СуммаГПпоИску,
+	бит_ИсковоеЗаявление.ПредставительскиеРасходы КАК СуммаПРпоИску
+ПОМЕСТИТЬ ВТ_ИсторияИЛ
+ИЗ
+	РегистрСведений.ИсторияИсполнительныхЛистов.СрезПоследних(, ) КАК ИсторияИсполнительныхЛистовСрезПоследних
+		ЛЕВОЕ СОЕДИНЕНИЕ Документ.бит_ИсполнительныйЛист КАК бит_ИсполнительныйЛист
+			ЛЕВОЕ СОЕДИНЕНИЕ Документ.бит_ИсковоеЗаявление КАК бит_ИсковоеЗаявление
+			ПО бит_ИсполнительныйЛист.ЛицевойСчет = бит_ИсковоеЗаявление.ЛицевойСчет
+				И бит_ИсполнительныйЛист.Услуга = бит_ИсковоеЗаявление.Услуга
+		ПО ИсторияИсполнительныхЛистовСрезПоследних.Регистратор = бит_ИсполнительныйЛист.Ссылка
+ГДЕ
+	ИсторияИсполнительныхЛистовСрезПоследних.Период МЕЖДУ &amp;Дата1 И &amp;Дата2
+	И бит_ИсполнительныйЛист.Проведен = ИСТИНА
+	И ИсторияИсполнительныхЛистовСрезПоследних.Активность = ИСТИНА
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	бит_ИсполнительныйЛист.Ссылка КАК Ссылка,
+	НаправлениеБанк.СтатусДокумента КАК СтатусНаправлениеБанк,
+	МАКСИМУМ(НаправлениеБанк.Период) КАК ДатаНаправленияБанк,
+	0 КАК СтатусСПП,
+	0 КАК ДатаНаправленияСПП,
+	0 КАК СтатусСнятие,
+	0 КАК ДатаСнятияСУчета
+ПОМЕСТИТЬ ВТ_ПервичныеСтатусы
+ИЗ
+	Документ.бит_ИсполнительныйЛист КАК бит_ИсполнительныйЛист
+		ПОЛНОЕ СОЕДИНЕНИЕ РегистрСведений.СтатусыПоИсполнительнымЛистам КАК НаправлениеБанк
+		ПО бит_ИсполнительныйЛист.Ссылка = НаправлениеБанк.ИсполнительныйЛист
+ГДЕ
+	бит_ИсполнительныйЛист.Проведен = ИСТИНА
+	И бит_ИсполнительныйЛист.Дата МЕЖДУ &amp;Дата1 И &amp;Дата2
+	И НаправлениеБанк.СтатусДокумента.Ссылка В(&amp;СтатусНаправлениеБанк)
+
+СГРУППИРОВАТЬ ПО
+	бит_ИсполнительныйЛист.Ссылка,
+	НаправлениеБанк.СтатусДокумента
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	бит_ИсполнительныйЛист.Ссылка,
+	0,
+	0,
+	НаправлениеСПП.СтатусДокумента,
+	МАКСИМУМ(НаправлениеСПП.Период),
+	0,
+	0
+ИЗ
+	Документ.бит_ИсполнительныйЛист КАК бит_ИсполнительныйЛист
+		ПОЛНОЕ СОЕДИНЕНИЕ РегистрСведений.СтатусыПоИсполнительнымЛистам КАК НаправлениеСПП
+		ПО бит_ИсполнительныйЛист.Ссылка = НаправлениеСПП.ИсполнительныйЛист
+ГДЕ
+	бит_ИсполнительныйЛист.Проведен = ИСТИНА
+	И бит_ИсполнительныйЛист.Дата МЕЖДУ &amp;Дата1 И &amp;Дата2
+	И НаправлениеСПП.СтатусДокумента.Ссылка В(&amp;СтатусНаправлениеСПП)
+
+СГРУППИРОВАТЬ ПО
+	бит_ИсполнительныйЛист.Ссылка,
+	НаправлениеСПП.СтатусДокумента
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	бит_ИсполнительныйЛист.Ссылка,
+	0,
+	0,
+	0,
+	0,
+	СнятиеСУчета.СтатусДокумента,
+	МАКСИМУМ(СнятиеСУчета.Период)
+ИЗ
+	Документ.бит_ИсполнительныйЛист КАК бит_ИсполнительныйЛист
+		ПОЛНОЕ СОЕДИНЕНИЕ РегистрСведений.СтатусыПоИсполнительнымЛистам КАК СнятиеСУчета
+		ПО бит_ИсполнительныйЛист.Ссылка = СнятиеСУчета.ИсполнительныйЛист
+ГДЕ
+	бит_ИсполнительныйЛист.Проведен = ИСТИНА
+	И бит_ИсполнительныйЛист.Дата МЕЖДУ &amp;Дата1 И &amp;Дата2
+	И СнятиеСУчета.СтатусДокумента.Ссылка В(&amp;СтатусСнятиеСУчета)
+
+СГРУППИРОВАТЬ ПО
+	бит_ИсполнительныйЛист.Ссылка,
+	СнятиеСУчета.СтатусДокумента
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ВТ_ПервичныеСтатусы.Ссылка КАК Ссылка,
+	МАКСИМУМ(ВТ_ПервичныеСтатусы.СтатусНаправлениеБанк) КАК СтатусНаправлениеБанк,
+	МАКСИМУМ(ВТ_ПервичныеСтатусы.ДатаНаправленияБанк) КАК ДатаНаправленияБанк,
+	МАКСИМУМ(ВТ_ПервичныеСтатусы.СтатусСПП) КАК СтатусСПП,
+	МАКСИМУМ(ВТ_ПервичныеСтатусы.ДатаНаправленияСПП) КАК ДатаНаправленияСПП,
+	МАКСИМУМ(ВТ_ПервичныеСтатусы.СтатусСнятие) КАК СтатусСнятие,
+	МАКСИМУМ(ВТ_ПервичныеСтатусы.ДатаСнятияСУчета) КАК ДатаСнятияСУчета
+ПОМЕСТИТЬ ВТ_Статусы
+ИЗ
+	ВТ_ПервичныеСтатусы КАК ВТ_ПервичныеСтатусы
+
+СГРУППИРОВАТЬ ПО
+	ВТ_ПервичныеСтатусы.Ссылка
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	ИсторияРаботыСДолжниками.Регистратор КАК Регистратор,
+	ИсторияРаботыСДолжниками.ДатаРейда КАК ДатаРейда,
+	ИсторияРаботыСДолжниками.РезультатРейда КАК РезультатРейда
+ПОМЕСТИТЬ ВТ_Рейд
+ИЗ
+	РегистрСведений.ИсторияРаботыСДолжниками КАК ИсторияРаботыСДолжниками
+		ЛЕВОЕ СОЕДИНЕНИЕ Документ.бит_ИсполнительныйЛист КАК бит_ИсполнительныйЛист
+		ПО ИсторияРаботыСДолжниками.Регистратор = бит_ИсполнительныйЛист.Ссылка
+ГДЕ
+	бит_ИсполнительныйЛист.Дата МЕЖДУ &amp;Дата1 И &amp;Дата2
+	И бит_ИсполнительныйЛист.Проведен = ИСТИНА
+	И ИсторияРаботыСДолжниками.Активность = ИСТИНА
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	бит_ИсполнительныйЛист.Ссылка КАК ИЛ,
+	ВзаиморасчетыПоИсполнительномуПроизводствуОстатки.ЛицевойСчет КАК ЛицевойСчет,
+	ВзаиморасчетыПоИсполнительномуПроизводствуОстатки.ФИОДолжника КАК ФИОДолжника,
+	ВзаиморасчетыПоИсполнительномуПроизводствуОстатки.Услуга КАК Услуга,
+	ВзаиморасчетыПоИсполнительномуПроизводствуОстатки.СуммаОстаток КАК СуммаОстаток,
+	ВзаиморасчетыПоИсполнительномуПроизводствуОстатки.СуммаГоспошлиныОстаток КАК СуммаГПОстаток,
+	ВзаиморасчетыПоИсполнительномуПроизводствуОстатки.СуммаПредставительскихРасходовОстаток КАК СуммаПРОстаток
+ПОМЕСТИТЬ ВТ_Взаиморасчеты
+ИЗ
+	РегистрНакопления.ВзаиморасчетыПоИсполнительномуПроизводству.Остатки(
+			&amp;Дата2,
+			ИсполнительныйЛист В
+				(ВЫБРАТЬ
+					ВТ_ИсторияИЛ.Регистратор КАК Регистратор
+				ИЗ
+					ВТ_ИсторияИЛ КАК ВТ_ИсторияИЛ)) КАК ВзаиморасчетыПоИсполнительномуПроизводствуОстатки
+		ЛЕВОЕ СОЕДИНЕНИЕ Документ.бит_ИсполнительныйЛист КАК бит_ИсполнительныйЛист
+		ПО ВзаиморасчетыПоИсполнительномуПроизводствуОстатки.ЛицевойСчет = бит_ИсполнительныйЛист.ЛицевойСчет
+			И ВзаиморасчетыПоИсполнительномуПроизводствуОстатки.ФИОДолжника = бит_ИсполнительныйЛист.ФИОДолжника
+			И ВзаиморасчетыПоИсполнительномуПроизводствуОстатки.Услуга = бит_ИсполнительныйЛист.Услуга
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ РАЗРЕШЕННЫЕ РАЗЛИЧНЫЕ
+	ВТ_ИсторияИЛ.ФИОДолжника КАК ФИОДолжника,
+	ВТ_ИсторияИЛ.ЛицевойСчет КАК ЛицевойСчет,
+	ВТ_ИсторияИЛ.Адрес КАК Адрес,
+	ВТ_ИсторияИЛ.ТипСудебногоДокумента КАК ТипСудебногоДокумента,
+	ВТ_ИсторияИЛ.Услуга КАК Услуга,
+	ВТ_ИсторияИЛ.НомерИЛ КАК НомерИЛ,
+	ВТ_ИсторияИЛ.СуммаПоИску КАК СуммаПоИску,
+	ВТ_ИсторияИЛ.СуммаДолгаПоРешениюСуда КАК СуммаДолгаПоРешениюСуда,
+	ВТ_Взаиморасчеты.СуммаОстаток КАК СуммаОстаток,
+	ВТ_ИсторияИЛ.СуммаПРпоИску КАК СуммаПРпоИску,
+	ВТ_ИсторияИЛ.СуммаПРпоРешениюСуда КАК СуммаПРпоРешениюСуда,
+	ВТ_Взаиморасчеты.СуммаПРОстаток КАК СуммаПРОстаток,
+	ВТ_ИсторияИЛ.СуммаГПпоИску КАК СуммаГПпоИску,
+	ВТ_ИсторияИЛ.СуммаГПпоРешениюСуда КАК СуммаГПпоРешениюСуда,
+	ВТ_Взаиморасчеты.СуммаГПОстаток КАК СуммаГПОстаток,
+	ВТ_Статусы.ДатаНаправленияБанк КАК ДатаНаправленияБанк,
+	ВТ_Статусы.ДатаНаправленияСПП КАК ДатаНаправленияСПП,
+	ВТ_Статусы.ДатаСнятияСУчета КАК ДатаСнятияСУчета,
+	ВТ_ИсторияИЛ.Регистратор КАК Регистратор,
+	ВТ_Рейд.ДатаРейда КАК ДатаРейда,
+	ВТ_Рейд.РезультатРейда КАК РезультатРейда
+ИЗ
+	ВТ_ИсторияИЛ КАК ВТ_ИсторияИЛ
+		ЛЕВОЕ СОЕДИНЕНИЕ ВТ_Рейд КАК ВТ_Рейд
+		ПО ВТ_ИсторияИЛ.Регистратор = ВТ_Рейд.Регистратор
+		ЛЕВОЕ СОЕДИНЕНИЕ ВТ_Взаиморасчеты КАК ВТ_Взаиморасчеты
+		ПО ВТ_ИсторияИЛ.Регистратор = ВТ_Взаиморасчеты.ИЛ
+		ЛЕВОЕ СОЕДИНЕНИЕ ВТ_Статусы КАК ВТ_Статусы
+		ПО ВТ_ИсторияИЛ.Регистратор = ВТ_Статусы.Ссылка</query>
+	</dataSet>
+	<parameter>
+		<name>Период</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Период</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>Date</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+		<expression>&amp;ПериодОтчета.ДатаОкончания</expression>
+	</parameter>
+	<parameter>
+		<name>СтатусНаправлениеБанк</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Статус направление банк</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:EnumRef.СтатусыПоИсполнительнымЛистам</v8:Type>
+		</valueType>
+		<value xsi:type="dcscor:DesignTimeValue">Перечисление.СтатусыПоИсполнительнымЛистам.НаправленВБанк</value>
+		<value xsi:type="dcscor:DesignTimeValue">Перечисление.СтатусыПоИсполнительнымЛистам.ПовторноНаправленВБанк</value>
+		<useRestriction>true</useRestriction>
+		<availableValue>
+			<value xsi:type="dcscor:DesignTimeValue">Перечисление.СтатусыПоИсполнительнымЛистам.НаправленВБанк</value>
+		</availableValue>
+		<availableValue>
+			<value xsi:type="dcscor:DesignTimeValue">Перечисление.СтатусыПоИсполнительнымЛистам.ПовторноНаправленВБанк</value>
+		</availableValue>
+		<valueListAllowed>true</valueListAllowed>
+	</parameter>
+	<parameter>
+		<name>СтатусНаправлениеСПП</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Статус направление СПП</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:EnumRef.СтатусыПоИсполнительнымЛистам</v8:Type>
+		</valueType>
+		<value xsi:type="dcscor:DesignTimeValue">Перечисление.СтатусыПоИсполнительнымЛистам.НаправленВОСП</value>
+		<value xsi:type="dcscor:DesignTimeValue">Перечисление.СтатусыПоИсполнительнымЛистам.ПовторноНаправленВОСП</value>
+		<useRestriction>true</useRestriction>
+		<availableValue>
+			<value xsi:type="dcscor:DesignTimeValue">Перечисление.СтатусыПоИсполнительнымЛистам.НаправленВОСП</value>
+		</availableValue>
+		<availableValue>
+			<value xsi:type="dcscor:DesignTimeValue">Перечисление.СтатусыПоИсполнительнымЛистам.ПовторноНаправленВОСП</value>
+		</availableValue>
+		<valueListAllowed>true</valueListAllowed>
+	</parameter>
+	<parameter>
+		<name>СтатусСнятиеСУчета</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Статус снятие с учета</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:EnumRef.СтатусыПоИсполнительнымЛистам</v8:Type>
+		</valueType>
+		<value xsi:type="dcscor:DesignTimeValue">Перечисление.СтатусыПоИсполнительнымЛистам.ИсполненВПолномОбъеме</value>
+		<value xsi:type="dcscor:DesignTimeValue">Перечисление.СтатусыПоИсполнительнымЛистам.ОконченВСвязиСНевозможностьюВзыскания</value>
+		<useRestriction>true</useRestriction>
+		<availableValue>
+			<value xsi:type="dcscor:DesignTimeValue">Перечисление.СтатусыПоИсполнительнымЛистам.ИсполненВПолномОбъеме</value>
+		</availableValue>
+		<availableValue>
+			<value xsi:type="dcscor:DesignTimeValue">Перечисление.СтатусыПоИсполнительнымЛистам.ОконченВСвязиСНевозможностьюВзыскания</value>
+		</availableValue>
+		<valueListAllowed>true</valueListAllowed>
+	</parameter>
+	<parameter>
+		<name>Дата1</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Дата1</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>Date</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+		<expression>&amp;ПериодОтчета.ДатаНачала</expression>
+	</parameter>
+	<parameter>
+		<name>Дата2</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Дата2</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>Date</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+		<expression>&amp;ПериодОтчета.ДатаОкончания</expression>
+	</parameter>
+	<parameter>
+		<name>ПериодОтчета</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Период отчета</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>v8:StandardPeriod</v8:Type>
+		</valueType>
+		<value xsi:type="v8:StandardPeriod">
+			<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+			<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+			<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+		</value>
+		<useRestriction>false</useRestriction>
+	</parameter>
+	<template>
+		<name>Макет1</name>
+		<template xmlns:dcsat="http://v8.1c.ru/8.1/data-composition-system/area-template" xsi:type="dcsat:AreaTemplate">
+			<dcsat:item xsi:type="dcsat:TableRow">
+				<dcsat:tableCell>
+					<dcsat:item xsi:type="dcsat:Field">
+						<dcsat:value xsi:type="v8:LocalStringType">
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Отчет по исполнительным листам с </v8:content>
+							</v8:item>
+						</dcsat:value>
+						<dcsat:appearance>
+							<dcscor:item>
+								<dcscor:parameter>Формат</dcscor:parameter>
+								<dcscor:value xsi:type="xs:string">ДФ=dd.MM.yyyy</dcscor:value>
+							</dcscor:item>
+						</dcsat:appearance>
+					</dcsat:item>
+					<dcsat:item xsi:type="dcsat:Field">
+						<dcsat:value xsi:type="dcscor:Parameter">Дата1</dcsat:value>
+						<dcsat:appearance>
+							<dcscor:item>
+								<dcscor:parameter>Формат</dcscor:parameter>
+								<dcscor:value xsi:type="xs:string">ДФ=dd.MM.yyyy</dcscor:value>
+							</dcscor:item>
+						</dcsat:appearance>
+					</dcsat:item>
+					<dcsat:item xsi:type="dcsat:Field">
+						<dcsat:value xsi:type="v8:LocalStringType">
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content> по </v8:content>
+							</v8:item>
+						</dcsat:value>
+						<dcsat:appearance>
+							<dcscor:item>
+								<dcscor:parameter>Формат</dcscor:parameter>
+								<dcscor:value xsi:type="xs:string">ДФ=dd.MM.yyyy</dcscor:value>
+							</dcscor:item>
+						</dcsat:appearance>
+					</dcsat:item>
+					<dcsat:item xsi:type="dcsat:Field">
+						<dcsat:value xsi:type="dcscor:Parameter">Дата2</dcsat:value>
+						<dcsat:appearance>
+							<dcscor:item>
+								<dcscor:parameter>Формат</dcscor:parameter>
+								<dcscor:value xsi:type="xs:string">ДФ=dd.MM.yyyy</dcscor:value>
+							</dcscor:item>
+						</dcsat:appearance>
+					</dcsat:item>
+					<dcsat:appearance>
+						<dcscor:item>
+							<dcscor:parameter>Шрифт</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:Font" faceName="Arial" height="12" bold="true" italic="false" underline="false" strikeout="false" kind="Absolute" scale="100"/>
+						</dcscor:item>
+						<dcscor:item>
+							<dcscor:parameter>ГоризонтальноеПоложение</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:HorizontalAlign">Center</dcscor:value>
+						</dcscor:item>
+						<dcscor:item>
+							<dcscor:parameter>МинимальнаяШирина</dcscor:parameter>
+							<dcscor:value xsi:type="xs:decimal">7.75</dcscor:value>
+						</dcscor:item>
+						<dcscor:item>
+							<dcscor:parameter>МаксимальнаяШирина</dcscor:parameter>
+							<dcscor:value xsi:type="xs:decimal">7.75</dcscor:value>
+						</dcscor:item>
+					</dcsat:appearance>
+				</dcsat:tableCell>
+				<dcsat:tableCell>
+					<dcsat:appearance>
+						<dcscor:item>
+							<dcscor:parameter>ОбъединятьПоГоризонтали</dcscor:parameter>
+							<dcscor:value xsi:type="xs:boolean">true</dcscor:value>
+						</dcscor:item>
+					</dcsat:appearance>
+				</dcsat:tableCell>
+				<dcsat:tableCell>
+					<dcsat:appearance>
+						<dcscor:item>
+							<dcscor:parameter>ОбъединятьПоГоризонтали</dcscor:parameter>
+							<dcscor:value xsi:type="xs:boolean">true</dcscor:value>
+						</dcscor:item>
+					</dcsat:appearance>
+				</dcsat:tableCell>
+				<dcsat:tableCell>
+					<dcsat:appearance>
+						<dcscor:item>
+							<dcscor:parameter>ОбъединятьПоГоризонтали</dcscor:parameter>
+							<dcscor:value xsi:type="xs:boolean">true</dcscor:value>
+						</dcscor:item>
+					</dcsat:appearance>
+				</dcsat:tableCell>
+				<dcsat:tableCell>
+					<dcsat:appearance>
+						<dcscor:item>
+							<dcscor:parameter>ОбъединятьПоГоризонтали</dcscor:parameter>
+							<dcscor:value xsi:type="xs:boolean">true</dcscor:value>
+						</dcscor:item>
+					</dcsat:appearance>
+				</dcsat:tableCell>
+				<dcsat:tableCell>
+					<dcsat:appearance>
+						<dcscor:item>
+							<dcscor:parameter>ОбъединятьПоГоризонтали</dcscor:parameter>
+							<dcscor:value xsi:type="xs:boolean">true</dcscor:value>
+						</dcscor:item>
+					</dcsat:appearance>
+				</dcsat:tableCell>
+				<dcsat:tableCell>
+					<dcsat:appearance>
+						<dcscor:item>
+							<dcscor:parameter>ОбъединятьПоГоризонтали</dcscor:parameter>
+							<dcscor:value xsi:type="xs:boolean">true</dcscor:value>
+						</dcscor:item>
+					</dcsat:appearance>
+				</dcsat:tableCell>
+				<dcsat:tableCell>
+					<dcsat:appearance>
+						<dcscor:item>
+							<dcscor:parameter>ОбъединятьПоГоризонтали</dcscor:parameter>
+							<dcscor:value xsi:type="xs:boolean">true</dcscor:value>
+						</dcscor:item>
+					</dcsat:appearance>
+				</dcsat:tableCell>
+				<dcsat:tableCell>
+					<dcsat:appearance>
+						<dcscor:item>
+							<dcscor:parameter>ОбъединятьПоГоризонтали</dcscor:parameter>
+							<dcscor:value xsi:type="xs:boolean">true</dcscor:value>
+						</dcscor:item>
+					</dcsat:appearance>
+				</dcsat:tableCell>
+				<dcsat:tableCell>
+					<dcsat:appearance>
+						<dcscor:item>
+							<dcscor:parameter>ОбъединятьПоГоризонтали</dcscor:parameter>
+							<dcscor:value xsi:type="xs:boolean">true</dcscor:value>
+						</dcscor:item>
+					</dcsat:appearance>
+				</dcsat:tableCell>
+				<dcsat:tableCell>
+					<dcsat:appearance>
+						<dcscor:item>
+							<dcscor:parameter>ОбъединятьПоГоризонтали</dcscor:parameter>
+							<dcscor:value xsi:type="xs:boolean">true</dcscor:value>
+						</dcscor:item>
+					</dcsat:appearance>
+				</dcsat:tableCell>
+				<dcsat:tableCell>
+					<dcsat:appearance>
+						<dcscor:item>
+							<dcscor:parameter>ОбъединятьПоГоризонтали</dcscor:parameter>
+							<dcscor:value xsi:type="xs:boolean">true</dcscor:value>
+						</dcscor:item>
+					</dcsat:appearance>
+				</dcsat:tableCell>
+				<dcsat:tableCell>
+					<dcsat:appearance>
+						<dcscor:item>
+							<dcscor:parameter>ОбъединятьПоГоризонтали</dcscor:parameter>
+							<dcscor:value xsi:type="xs:boolean">true</dcscor:value>
+						</dcscor:item>
+					</dcsat:appearance>
+				</dcsat:tableCell>
+				<dcsat:tableCell>
+					<dcsat:appearance>
+						<dcscor:item>
+							<dcscor:parameter>ОбъединятьПоГоризонтали</dcscor:parameter>
+							<dcscor:value xsi:type="xs:boolean">true</dcscor:value>
+						</dcscor:item>
+					</dcsat:appearance>
+				</dcsat:tableCell>
+				<dcsat:tableCell>
+					<dcsat:appearance>
+						<dcscor:item>
+							<dcscor:parameter>ОбъединятьПоГоризонтали</dcscor:parameter>
+							<dcscor:value xsi:type="xs:boolean">true</dcscor:value>
+						</dcscor:item>
+					</dcsat:appearance>
+				</dcsat:tableCell>
+				<dcsat:tableCell>
+					<dcsat:appearance>
+						<dcscor:item>
+							<dcscor:parameter>ОбъединятьПоГоризонтали</dcscor:parameter>
+							<dcscor:value xsi:type="xs:boolean">true</dcscor:value>
+						</dcscor:item>
+					</dcsat:appearance>
+				</dcsat:tableCell>
+				<dcsat:tableCell>
+					<dcsat:appearance>
+						<dcscor:item>
+							<dcscor:parameter>ОбъединятьПоГоризонтали</dcscor:parameter>
+							<dcscor:value xsi:type="xs:boolean">true</dcscor:value>
+						</dcscor:item>
+					</dcsat:appearance>
+				</dcsat:tableCell>
+				<dcsat:tableCell>
+					<dcsat:appearance>
+						<dcscor:item>
+							<dcscor:parameter>ОбъединятьПоГоризонтали</dcscor:parameter>
+							<dcscor:value xsi:type="xs:boolean">true</dcscor:value>
+						</dcscor:item>
+					</dcsat:appearance>
+				</dcsat:tableCell>
+				<dcsat:tableCell>
+					<dcsat:appearance>
+						<dcscor:item>
+							<dcscor:parameter>ОбъединятьПоГоризонтали</dcscor:parameter>
+							<dcscor:value xsi:type="xs:boolean">true</dcscor:value>
+						</dcscor:item>
+					</dcsat:appearance>
+				</dcsat:tableCell>
+				<dcsat:tableCell>
+					<dcsat:appearance>
+						<dcscor:item>
+							<dcscor:parameter>ОбъединятьПоГоризонтали</dcscor:parameter>
+							<dcscor:value xsi:type="xs:boolean">true</dcscor:value>
+						</dcscor:item>
+					</dcsat:appearance>
+				</dcsat:tableCell>
+				<dcsat:tableCell>
+					<dcsat:appearance>
+						<dcscor:item>
+							<dcscor:parameter>ОбъединятьПоГоризонтали</dcscor:parameter>
+							<dcscor:value xsi:type="xs:boolean">true</dcscor:value>
+						</dcscor:item>
+					</dcsat:appearance>
+				</dcsat:tableCell>
+				<dcsat:tableCell>
+					<dcsat:appearance>
+						<dcscor:item>
+							<dcscor:parameter>ОбъединятьПоГоризонтали</dcscor:parameter>
+							<dcscor:value xsi:type="xs:boolean">true</dcscor:value>
+						</dcscor:item>
+					</dcsat:appearance>
+				</dcsat:tableCell>
+			</dcsat:item>
+		</template>
+		<parameter xmlns:dcsat="http://v8.1c.ru/8.1/data-composition-system/area-template" xsi:type="dcsat:ExpressionAreaTemplateParameter">
+			<dcsat:name>Дата1</dcsat:name>
+			<dcsat:expression>ПараметрыДанных.Дата1</dcsat:expression>
+		</parameter>
+		<parameter xmlns:dcsat="http://v8.1c.ru/8.1/data-composition-system/area-template" xsi:type="dcsat:ExpressionAreaTemplateParameter">
+			<dcsat:name>Дата2</dcsat:name>
+			<dcsat:expression>ПараметрыДанных.Дата2</dcsat:expression>
+		</parameter>
+	</template>
+	<groupTemplate>
+		<groupName>Заголовок</groupName>
+		<templateType>Header</templateType>
+		<template>Макет1</template>
+	</groupTemplate>
+	<settingsVariant>
+		<dcsset:name>Основной</dcsset:name>
+		<dcsset:presentation xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Отчет по исполнительным листам</v8:content>
+			</v8:item>
+		</dcsset:presentation>
+		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+			<dcsset:selection>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>СистемныеПоля.НомерПоПорядку</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ФИОДолжника</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ЛицевойСчет</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Адрес</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ТипСудебногоДокумента</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Услуга</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>НомерИЛ</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>СуммаПоИску</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>СуммаДолгаПоРешениюСуда</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>СуммаОстаток</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>СуммаПРпоИску</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>СуммаПРпоРешениюСуда</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>СуммаПРОстаток</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>СуммаГПпоИску</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>СуммаГПпоРешениюСуда</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>СуммаГПОстаток</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ДатаНаправленияСПП</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ДатаНаправленияБанк</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ДатаРейда</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>РезультатРейда</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ДатаСнятияСУчета</dcsset:field>
+				</dcsset:item>
+			</dcsset:selection>
+			<dcsset:dataParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>СтатусНаправлениеБанк</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string"/>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>СтатусНаправлениеСПП</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string"/>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>СтатусСнятиеСУчета</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string"/>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>Дата1</dcscor:parameter>
+					<dcscor:value xsi:type="xs:dateTime">0001-01-01T00:00:00</dcscor:value>
+					<dcsset:userSettingID>87662f52-7888-4e34-b8be-994a90b3d6a3</dcsset:userSettingID>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>Дата2</dcscor:parameter>
+					<dcscor:value xsi:type="xs:dateTime">0001-01-01T00:00:00</dcscor:value>
+					<dcsset:userSettingID>7e86d64e-863d-4adc-a784-d3626843a49e</dcsset:userSettingID>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>ПериодОтчета</dcscor:parameter>
+					<dcscor:value xsi:type="v8:StandardPeriod">
+						<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+						<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+						<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+					</dcscor:value>
+					<dcsset:userSettingID>b9811e5d-04e7-4997-9be8-34d269c4ccec</dcsset:userSettingID>
+					<dcsset:userSettingPresentation xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Период</v8:content>
+						</v8:item>
+					</dcsset:userSettingPresentation>
+				</dcscor:item>
+			</dcsset:dataParameters>
+			<dcsset:outputParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>МакетОформления</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">Зеленый</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ВыводитьПараметрыДанных</dcscor:parameter>
+					<dcscor:value xsi:type="dcsset:DataCompositionTextOutputType">DontOutput</dcscor:value>
+				</dcscor:item>
+			</dcsset:outputParameters>
+			<dcsset:item xsi:type="dcsset:StructureItemGroup">
+				<dcsset:name>Заголовок</dcsset:name>
+				<dcsset:order>
+					<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+				</dcsset:order>
+				<dcsset:selection>
+					<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+				</dcsset:selection>
+				<dcsset:outputParameters>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>МакетОформления</dcscor:parameter>
+						<dcscor:value xsi:type="xs:string">БезОформления</dcscor:value>
+					</dcscor:item>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ВариантИспользованияГруппировки</dcscor:parameter>
+						<dcscor:value xsi:type="dcsset:DataCompositionGroupUseVariant">AdditionalInformation</dcscor:value>
+					</dcscor:item>
+				</dcsset:outputParameters>
+			</dcsset:item>
+			<dcsset:item xsi:type="dcsset:StructureItemGroup">
+				<dcsset:name>Строки</dcsset:name>
+				<dcsset:order>
+					<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+				</dcsset:order>
+				<dcsset:selection>
+					<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+				</dcsset:selection>
+			</dcsset:item>
+		</dcsset:settings>
+	</settingsVariant>
+</DataCompositionSchema>

@@ -1,0 +1,901 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<DataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcscom="http://v8.1c.ru/8.1/data-composition-system/common" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataSource>
+		<name>ИсточникДанных1</name>
+		<dataSourceType>Local</dataSourceType>
+	</dataSource>
+	<dataSet xsi:type="DataSetQuery">
+		<name>НаборДанных1</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Период</dataPath>
+			<field>Период</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>День</v8:content>
+				</v8:item>
+			</title>
+			<role>
+				<dcscom:periodNumber>1</dcscom:periodNumber>
+				<dcscom:periodType>Additional</dcscom:periodType>
+			</role>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ДФ=dd</v8:content>
+						</v8:item>
+					</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Организация</dataPath>
+			<field>Организация</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>УслугаЖКХ</dataPath>
+			<field>УслугаЖКХ</field>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>Размещение</dcscor:parameter>
+					<dcscor:value xsi:type="dcscor:DataCompositionTextPlacementType">Wrap</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>МаксимальнаяШирина</dcscor:parameter>
+					<dcscor:value xsi:type="xs:decimal">5</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ЛицевойСчет</dataPath>
+			<field>ЛицевойСчет</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Квартира</dataPath>
+			<field>Квартира</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>VID</dataPath>
+			<field>VID</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вид оплаты</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Услуга</dataPath>
+			<field>Услуга</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Услуга</v8:content>
+				</v8:item>
+			</title>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Размещение</dcscor:parameter>
+					<dcscor:value xsi:type="dcscor:DataCompositionTextPlacementType">Wrap</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Сумма</dataPath>
+			<field>Сумма</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сумма</v8:content>
+				</v8:item>
+			</title>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Размещение</dcscor:parameter>
+					<dcscor:value xsi:type="dcscor:DataCompositionTextPlacementType">Wrap</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>МаксимальнаяШирина</dcscor:parameter>
+					<dcscor:value xsi:type="xs:decimal">15</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Пени</dataPath>
+			<field>СуммаПени</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Пени</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Порядок1</dataPath>
+			<field>Порядок1</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Порядок1</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Порядок</dataPath>
+			<field>Порядок</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Порядок</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<dataSource>ИсточникДанных1</dataSource>
+		<query>ВЫБРАТЬ РАЗЛИЧНЫЕ
+	бит_НачисленияПоУслугамЖКХПоПериодуОбороты.УслугаЖКХ КАК Услуга,
+	бит_НачисленияПоУслугамЖКХПоПериодуОбороты.Регистратор КАК Ссылка,
+	бит_НачисленияПоУслугамЖКХПоПериодуОбороты.ПериодДень КАК Период,
+	СУММА(бит_НачисленияПоУслугамЖКХПоПериодуОбороты.СуммаРасход) КАК Сумма,
+	ЕСТЬNULL(бит_НачисленияПоУслугамЖКХПоПериодуОбороты.Регистратор.лб_ВидОплаты, ЗНАЧЕНИЕ(Справочник.лб_ВидыОплат.ОплатаЖильцов)) КАК VID,
+	СУММА(0) КАК СуммаПени,
+	бит_СведенияОКвартиреСрезПоследних.ТипКвартиры КАК ТипКвартиры,
+	бит_НачисленияПоУслугамЖКХПоПериодуОбороты.ЛицевойСчет КАК ЛицевойСчет
+ПОМЕСТИТЬ ВТ_Данные
+ИЗ
+	РегистрНакопления.бит_НачисленияПоУслугамЖКХ.Обороты(
+			,
+			,
+			Авто,
+			Организация = &amp;Организация
+				И УслугаЖКХ В (&amp;Начисления)
+				И 1 = 1
+				И ЛицевойСчет.Здание.Район В (&amp;Участки)) КАК бит_НачисленияПоУслугамЖКХПоПериодуОбороты
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.бит_СведенияОКвартире.СрезПоследних(, ) КАК бит_СведенияОКвартиреСрезПоследних
+		ПО бит_НачисленияПоУслугамЖКХПоПериодуОбороты.ЛицевойСчет.Квартира = бит_СведенияОКвартиреСрезПоследних.Квартира
+ГДЕ
+	НЕ(бит_НачисленияПоУслугамЖКХПоПериодуОбороты.Регистратор ССЫЛКА Документ.бит_НачислениеЛьготПоЛицевымСчетам
+				ИЛИ бит_НачисленияПоУслугамЖКХПоПериодуОбороты.Регистратор ССЫЛКА Документ.бит_РасчетПредельногоИндекса
+				ИЛИ бит_НачисленияПоУслугамЖКХПоПериодуОбороты.Регистратор ССЫЛКА Документ.бит_РасчетПредельногоИндексаОбщедомовыхЗатрат
+				ИЛИ бит_НачисленияПоУслугамЖКХПоПериодуОбороты.Регистратор ССЫЛКА Документ.бит_НачисленияПоСчетчикамГрупповыеСИндивидуальными
+				ИЛИ бит_НачисленияПоУслугамЖКХПоПериодуОбороты.Регистратор ССЫЛКА Документ.бит_НачислениеПоЛицевымСчетам)
+	И ВЫБОР
+			КОГДА бит_НачисленияПоУслугамЖКХПоПериодуОбороты.Регистратор ССЫЛКА Документ.бит_ОплатаКУ
+					ИЛИ бит_НачисленияПоУслугамЖКХПоПериодуОбороты.Регистратор ССЫЛКА Документ.бит_РазовыеПоУслугамЖКХ
+					ИЛИ бит_НачисленияПоУслугамЖКХПоПериодуОбороты.Регистратор ССЫЛКА Документ.ОперацияБух
+				ТОГДА бит_НачисленияПоУслугамЖКХПоПериодуОбороты.Регистратор.лб_ВидОплаты В (&amp;ВидыОплаты)
+			ИНАЧЕ ИСТИНА
+		КОНЕЦ
+
+СГРУППИРОВАТЬ ПО
+	бит_НачисленияПоУслугамЖКХПоПериодуОбороты.ПериодДень,
+	бит_НачисленияПоУслугамЖКХПоПериодуОбороты.Регистратор,
+	бит_НачисленияПоУслугамЖКХПоПериодуОбороты.УслугаЖКХ,
+	ЕСТЬNULL(бит_НачисленияПоУслугамЖКХПоПериодуОбороты.Регистратор.лб_ВидОплаты, ЗНАЧЕНИЕ(Справочник.лб_ВидыОплат.ОплатаЖильцов)),
+	бит_СведенияОКвартиреСрезПоследних.ТипКвартиры,
+	бит_НачисленияПоУслугамЖКХПоПериодуОбороты.ЛицевойСчет
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ РАЗЛИЧНЫЕ
+	бит_НачислениеПениПоУслугамЖКХОбороты.УслугаЖКХ,
+	бит_НачислениеПениПоУслугамЖКХОбороты.Регистратор,
+	бит_НачислениеПениПоУслугамЖКХОбороты.ПериодДень,
+	СУММА(0),
+	ЕСТЬNULL(бит_НачислениеПениПоУслугамЖКХОбороты.Регистратор.лб_ВидОплаты, ЗНАЧЕНИЕ(Справочник.лб_ВидыОплат.ОплатаЖильцов)),
+	СУММА(бит_НачислениеПениПоУслугамЖКХОбороты.СуммаПениРасход),
+	бит_СведенияОКвартиреСрезПоследних.ТипКвартиры,
+	бит_НачислениеПениПоУслугамЖКХОбороты.ЛицевойСчет
+ИЗ
+	РегистрНакопления.бит_НачислениеПениПоУслугамЖКХ.Обороты(
+			,
+			,
+			Авто,
+			Организация = &amp;Организация
+				И УслугаЖКХ В (&amp;Начисления)
+				И 1 = 1
+				И ЛицевойСчет.Здание.Район В (&amp;Участки)) КАК бит_НачислениеПениПоУслугамЖКХОбороты
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.бит_СведенияОКвартире.СрезПоследних(, ) КАК бит_СведенияОКвартиреСрезПоследних
+		ПО бит_НачислениеПениПоУслугамЖКХОбороты.ЛицевойСчет.Квартира = бит_СведенияОКвартиреСрезПоследних.Квартира
+ГДЕ
+	ВЫБОР
+			КОГДА бит_НачислениеПениПоУслугамЖКХОбороты.Регистратор ССЫЛКА Документ.бит_ОплатаКУ
+					ИЛИ бит_НачислениеПениПоУслугамЖКХОбороты.Регистратор ССЫЛКА Документ.бит_РазовыеПоУслугамЖКХ
+					ИЛИ бит_НачислениеПениПоУслугамЖКХОбороты.Регистратор ССЫЛКА Документ.бит_ВводНачальныхОстатковПениПоКУ
+				ТОГДА бит_НачислениеПениПоУслугамЖКХОбороты.Регистратор.лб_ВидОплаты В (&amp;ВидыОплаты)
+			ИНАЧЕ ИСТИНА
+		КОНЕЦ
+
+СГРУППИРОВАТЬ ПО
+	бит_НачислениеПениПоУслугамЖКХОбороты.УслугаЖКХ,
+	бит_НачислениеПениПоУслугамЖКХОбороты.Регистратор,
+	бит_НачислениеПениПоУслугамЖКХОбороты.ПериодДень,
+	ЕСТЬNULL(бит_НачислениеПениПоУслугамЖКХОбороты.Регистратор.лб_ВидОплаты, ЗНАЧЕНИЕ(Справочник.лб_ВидыОплат.ОплатаЖильцов)),
+	бит_СведенияОКвартиреСрезПоследних.ТипКвартиры,
+	бит_НачислениеПениПоУслугамЖКХОбороты.ЛицевойСчет
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ВТ_Данные.VID КАК VID,
+	ВТ_Данные.Период КАК Период,
+	ВТ_Данные.Услуга КАК Услуга,
+	СУММА(ВТ_Данные.Сумма) КАК Сумма,
+	ВЫБОР
+		КОГДА ВТ_Данные.Услуга.Код = "00-000001"
+			ТОГДА 10
+		КОГДА ВТ_Данные.Услуга.Код = "00-000010"
+			ТОГДА 20
+		КОГДА ВТ_Данные.Услуга.Код = "00-000011"
+			ТОГДА 30
+		КОГДА ВТ_Данные.Услуга.Код = "00-000012"
+			ТОГДА 40
+		КОГДА ВТ_Данные.Услуга.Код = "00-000015"
+			ТОГДА 50
+		КОГДА ВТ_Данные.Услуга.Код = "00-000007"
+			ТОГДА 60
+		КОГДА ВТ_Данные.Услуга.Код = "00-000018"
+			ТОГДА 70
+		КОГДА ВТ_Данные.Услуга.Код = "00-000009"
+			ТОГДА 80
+		КОГДА ВТ_Данные.Услуга.Код = "00-000014"
+			ТОГДА 90
+		КОГДА ВТ_Данные.Услуга.Код = "00-000023"
+			ТОГДА 100
+		КОГДА ВТ_Данные.Услуга.Код = "00-000013"
+			ТОГДА 110
+		КОГДА ВТ_Данные.Услуга.Код = "00-000019"
+			ТОГДА 120
+		КОГДА ВТ_Данные.Услуга.Код = "00-000026"
+			ТОГДА 130
+		КОГДА ВТ_Данные.Услуга.Код = "00-000021"
+			ТОГДА 140
+		КОГДА ВТ_Данные.Услуга.Код = "00-000022"
+			ТОГДА 150
+		КОГДА ВТ_Данные.Услуга.Код = "00-000008"
+			ТОГДА 160
+	КОНЕЦ КАК порядок,
+	СУММА(ВТ_Данные.СуммаПени) КАК СуммаПени,
+	ВТ_Данные.ЛицевойСчет КАК ЛицевойСчет,
+	ВТ_Данные.ТипКвартиры КАК ТипКвартиры
+ПОМЕСТИТЬ вт2
+ИЗ
+	ВТ_Данные КАК ВТ_Данные
+ГДЕ
+	ВТ_Данные.VID В(&amp;ВидыОплаты)
+	И ВТ_Данные.ТипКвартиры В(&amp;ТипыКвартир)
+
+СГРУППИРОВАТЬ ПО
+	ВТ_Данные.VID,
+	ВТ_Данные.Период,
+	ВТ_Данные.Услуга,
+	ВЫБОР
+		КОГДА ВТ_Данные.Услуга.Код = "00-000001"
+			ТОГДА 10
+		КОГДА ВТ_Данные.Услуга.Код = "00-000010"
+			ТОГДА 20
+		КОГДА ВТ_Данные.Услуга.Код = "00-000011"
+			ТОГДА 30
+		КОГДА ВТ_Данные.Услуга.Код = "00-000012"
+			ТОГДА 40
+		КОГДА ВТ_Данные.Услуга.Код = "00-000015"
+			ТОГДА 50
+		КОГДА ВТ_Данные.Услуга.Код = "00-000007"
+			ТОГДА 60
+		КОГДА ВТ_Данные.Услуга.Код = "00-000018"
+			ТОГДА 70
+		КОГДА ВТ_Данные.Услуга.Код = "00-000009"
+			ТОГДА 80
+		КОГДА ВТ_Данные.Услуга.Код = "00-000014"
+			ТОГДА 90
+		КОГДА ВТ_Данные.Услуга.Код = "00-000023"
+			ТОГДА 100
+		КОГДА ВТ_Данные.Услуга.Код = "00-000013"
+			ТОГДА 110
+		КОГДА ВТ_Данные.Услуга.Код = "00-000019"
+			ТОГДА 120
+		КОГДА ВТ_Данные.Услуга.Код = "00-000026"
+			ТОГДА 130
+		КОГДА ВТ_Данные.Услуга.Код = "00-000021"
+			ТОГДА 140
+		КОГДА ВТ_Данные.Услуга.Код = "00-000022"
+			ТОГДА 150
+		КОГДА ВТ_Данные.Услуга.Код = "00-000008"
+			ТОГДА 160
+	КОНЕЦ,
+	ВТ_Данные.ЛицевойСчет,
+	ВТ_Данные.ТипКвартиры
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	вт2.VID КАК VID,
+	вт2.Период КАК Период,
+	СУММА(ЕСТЬNULL(вт2.Сумма, 0)) КАК Сумма,
+	СУММА(ЕСТЬNULL(вт2.СуммаПени, 0)) КАК СуммаПени,
+	ВложенныйЗапрос.Услуга КАК Услуга,
+	ВложенныйЗапрос.Порядок1 КАК Порядок
+ИЗ
+	(ВЫБРАТЬ
+		бит_УслугиЖКХ.Ссылка КАК Услуга,
+		ВЫБОР
+			КОГДА бит_УслугиЖКХ.Ссылка.Код = "00-000001"
+				ТОГДА "010"
+			КОГДА бит_УслугиЖКХ.Ссылка.Код = "00-000010"
+				ТОГДА "020"
+			КОГДА бит_УслугиЖКХ.Ссылка.Код = "00-000011"
+				ТОГДА "030"
+			КОГДА бит_УслугиЖКХ.Ссылка.Код = "00-000012"
+				ТОГДА "040"
+			КОГДА бит_УслугиЖКХ.Ссылка.Код = "00-000015"
+				ТОГДА "050"
+			КОГДА бит_УслугиЖКХ.Ссылка.Код = "00-000007"
+				ТОГДА "060"
+			КОГДА бит_УслугиЖКХ.Ссылка.Код = "00-000018"
+				ТОГДА "070"
+			КОГДА бит_УслугиЖКХ.Ссылка.Код = "00-000009"
+				ТОГДА "080"
+			КОГДА бит_УслугиЖКХ.Ссылка.Код = "00-000014"
+				ТОГДА "090"
+			КОГДА бит_УслугиЖКХ.Ссылка.Код = "00-000023"
+				ТОГДА "100"
+			КОГДА бит_УслугиЖКХ.Ссылка.Код = "00-000013"
+				ТОГДА "110"
+			КОГДА бит_УслугиЖКХ.Ссылка.Код = "00-000019"
+				ТОГДА "120"
+			КОГДА бит_УслугиЖКХ.Ссылка.Код = "00-000026"
+				ТОГДА "130"
+			КОГДА бит_УслугиЖКХ.Ссылка.Код = "00-000021"
+				ТОГДА "140"
+			КОГДА бит_УслугиЖКХ.Ссылка.Код = "00-000022"
+				ТОГДА "150"
+			КОГДА бит_УслугиЖКХ.Ссылка.Код = "00-000008"
+				ТОГДА "160"
+			ИНАЧЕ "999"
+		КОНЕЦ КАК Порядок1
+	ИЗ
+		Справочник.бит_УслугиЖКХ КАК бит_УслугиЖКХ
+	ГДЕ
+		бит_УслугиЖКХ.Ссылка В(&amp;Начисления)) КАК ВложенныйЗапрос
+		ЛЕВОЕ СОЕДИНЕНИЕ вт2 КАК вт2
+		ПО ВложенныйЗапрос.Услуга = вт2.Услуга
+ГДЕ
+	ЕСТЬNULL(вт2.Сумма, 0) + ЕСТЬNULL(вт2.СуммаПени, 0) &lt;&gt; 0
+
+СГРУППИРОВАТЬ ПО
+	вт2.VID,
+	вт2.Период,
+	ВложенныйЗапрос.Услуга,
+	ВложенныйЗапрос.Порядок1
+
+УПОРЯДОЧИТЬ ПО
+	вт2.VID.Наименование,
+	вт2.Период,
+	Порядок</query>
+	</dataSet>
+	<calculatedField>
+		<dataPath>УслугаСНомером</dataPath>
+		<expression>строка(порядок)+". "+Услуга.наименование</expression>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Услуга</v8:content>
+			</v8:item>
+		</title>
+		<presentationExpression>Услуга</presentationExpression>
+	</calculatedField>
+	<totalField>
+		<dataPath>Сумма</dataPath>
+		<expression>Сумма(Сумма)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>Пени</dataPath>
+		<expression>Сумма(Пени)</expression>
+	</totalField>
+	<parameter>
+		<name>ПериодОтчета</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Период отчета</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>v8:StandardPeriod</v8:Type>
+		</valueType>
+		<value xsi:type="v8:StandardPeriod">
+			<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+			<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+			<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+		</value>
+		<useRestriction>false</useRestriction>
+	</parameter>
+	<parameter>
+		<name>ВидыОплаты</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Виды оплаты</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.лб_ВидыОплат</v8:Type>
+		</valueType>
+		<useRestriction>false</useRestriction>
+		<valueListAllowed>true</valueListAllowed>
+	</parameter>
+	<parameter>
+		<name>Начисления</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Начисления</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.бит_УслугиЖКХ</v8:Type>
+		</valueType>
+		<useRestriction>false</useRestriction>
+		<valueListAllowed>true</valueListAllowed>
+	</parameter>
+	<parameter>
+		<name>Организация</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Организация</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.Организации</v8:Type>
+		</valueType>
+		<value xsi:nil="true"/>
+		<useRestriction>false</useRestriction>
+	</parameter>
+	<parameter>
+		<name>ТипыКвартир</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Типы квартир</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.бит_ТипыКвартиры</v8:Type>
+		</valueType>
+		<useRestriction>false</useRestriction>
+		<valueListAllowed>true</valueListAllowed>
+		<use>Always</use>
+	</parameter>
+	<parameter>
+		<name>Участки</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Участки</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.бит_АдминистративныеОкруга</v8:Type>
+		</valueType>
+		<useRestriction>false</useRestriction>
+		<valueListAllowed>true</valueListAllowed>
+	</parameter>
+	<parameter>
+		<name>НачалоПериода</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Начало периода</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+		<expression>НачалоПериода(&amp;ПериодОтчета.ДатаНачала, "День")</expression>
+	</parameter>
+	<parameter>
+		<name>КонецПериода</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Конец периода</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+		<expression>КонецПериода(&amp;ПериодОтчета.ДатаОкончания, "День")</expression>
+	</parameter>
+	<parameter>
+		<name>Период</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Период</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+		<expression>КонецПериода(&amp;ПериодОтчета.ДатаОкончания, "День")</expression>
+	</parameter>
+	<parameter>
+		<name>Адреса</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Адреса</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.бит_СписокЗданий</v8:Type>
+		</valueType>
+		<useRestriction>false</useRestriction>
+		<valueListAllowed>true</valueListAllowed>
+	</parameter>
+	<template>
+		<name>Макет1</name>
+		<template xmlns:dcsat="http://v8.1c.ru/8.1/data-composition-system/area-template" xsi:type="dcsat:AreaTemplate">
+			<dcsat:item xsi:type="dcsat:TableRow">
+				<dcsat:tableCell>
+					<dcsat:item xsi:type="dcsat:Field">
+						<dcsat:value xsi:type="dcscor:Parameter">Услуга</dcsat:value>
+					</dcsat:item>
+					<dcsat:appearance>
+						<dcscor:item>
+							<dcscor:parameter>ГоризонтальноеПоложение</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:HorizontalAlign">Center</dcscor:value>
+						</dcscor:item>
+						<dcscor:item>
+							<dcscor:parameter>ВертикальноеПоложение</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:VerticalAlign">Center</dcscor:value>
+						</dcscor:item>
+						<dcscor:item>
+							<dcscor:parameter>Размещение</dcscor:parameter>
+							<dcscor:value xsi:type="dcscor:DataCompositionTextPlacementType">Wrap</dcscor:value>
+						</dcscor:item>
+					</dcsat:appearance>
+				</dcsat:tableCell>
+			</dcsat:item>
+		</template>
+		<parameter xmlns:dcsat="http://v8.1c.ru/8.1/data-composition-system/area-template" xsi:type="dcsat:ExpressionAreaTemplateParameter">
+			<dcsat:name>Услуга</dcsat:name>
+			<dcsat:expression>Представление(Услуга)</dcsat:expression>
+		</parameter>
+	</template>
+	<template>
+		<name>Макет2</name>
+		<template xmlns:dcsat="http://v8.1c.ru/8.1/data-composition-system/area-template" xsi:type="dcsat:AreaTemplate">
+			<dcsat:item xsi:type="dcsat:TableRow">
+				<dcsat:tableCell>
+					<dcsat:item xsi:type="dcsat:Field">
+						<dcsat:value xsi:type="v8:LocalStringType">
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Итог:</v8:content>
+							</v8:item>
+						</dcsat:value>
+					</dcsat:item>
+					<dcsat:appearance>
+						<dcscor:item>
+							<dcscor:parameter>СтильГраницы</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:Line" width="0" gap="false">
+								<v8ui:style xsi:type="v8ui:SpreadsheetDocumentCellLineType">None</v8ui:style>
+							</dcscor:value>
+							<dcscor:item>
+								<dcscor:parameter>СтильГраницы.Снизу</dcscor:parameter>
+								<dcscor:value xsi:type="v8ui:Line" width="1" gap="false">
+									<v8ui:style xsi:type="v8ui:SpreadsheetDocumentCellLineType">Solid</v8ui:style>
+								</dcscor:value>
+							</dcscor:item>
+						</dcscor:item>
+					</dcsat:appearance>
+				</dcsat:tableCell>
+			</dcsat:item>
+		</template>
+	</template>
+	<template>
+		<name>Макет3</name>
+		<template xmlns:dcsat="http://v8.1c.ru/8.1/data-composition-system/area-template" xsi:type="dcsat:AreaTemplate">
+			<dcsat:item xsi:type="dcsat:TableRow">
+				<dcsat:tableCell>
+					<dcsat:item xsi:type="dcsat:Field">
+						<dcsat:value xsi:type="v8:LocalStringType">
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>ИТОГО</v8:content>
+							</v8:item>
+						</dcsat:value>
+					</dcsat:item>
+					<dcsat:appearance>
+						<dcscor:item>
+							<dcscor:parameter>ГоризонтальноеПоложение</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:HorizontalAlign">Center</dcscor:value>
+						</dcscor:item>
+						<dcscor:item>
+							<dcscor:parameter>ВертикальноеПоложение</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:VerticalAlign">Center</dcscor:value>
+						</dcscor:item>
+					</dcsat:appearance>
+				</dcsat:tableCell>
+			</dcsat:item>
+		</template>
+	</template>
+	<template>
+		<name>Макет4</name>
+		<template xmlns:dcsat="http://v8.1c.ru/8.1/data-composition-system/area-template" xsi:type="dcsat:AreaTemplate">
+			<dcsat:item xsi:type="dcsat:TableRow">
+				<dcsat:tableCell>
+					<dcsat:item xsi:type="dcsat:Field">
+						<dcsat:value xsi:type="v8:LocalStringType">
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>ВСЕГО:</v8:content>
+							</v8:item>
+						</dcsat:value>
+					</dcsat:item>
+				</dcsat:tableCell>
+			</dcsat:item>
+		</template>
+	</template>
+	<groupTemplate>
+		<groupField>Услуга</groupField>
+		<templateType>Header</templateType>
+		<template>Макет1</template>
+	</groupTemplate>
+	<groupTemplate>
+		<groupField>VID</groupField>
+		<templateType>Footer</templateType>
+		<template>Макет2</template>
+	</groupTemplate>
+	<groupTemplate>
+		<groupField>Услуга</groupField>
+		<templateType>OverallHeader</templateType>
+		<template>Макет3</template>
+	</groupTemplate>
+	<groupTemplate>
+		<groupField>VID</groupField>
+		<templateType>OverallFooter</templateType>
+		<template>Макет4</template>
+	</groupTemplate>
+	<settingsVariant>
+		<dcsset:name>Основной</dcsset:name>
+		<dcsset:presentation xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Выгрузка оплат по дням (xls)</v8:content>
+			</v8:item>
+		</dcsset:presentation>
+		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+			<dcsset:selection>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Сумма</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Пени</dcsset:field>
+				</dcsset:item>
+			</dcsset:selection>
+			<dcsset:dataParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>ПериодОтчета</dcscor:parameter>
+					<dcscor:value xsi:type="v8:StandardPeriod">
+						<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+						<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+						<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+					</dcscor:value>
+					<dcsset:userSettingID>1f0ae913-8347-4b53-903a-53ac90bcb344</dcsset:userSettingID>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>ВидыОплаты</dcscor:parameter>
+					<dcscor:value xsi:nil="true"/>
+					<dcsset:userSettingID>3b6aee60-cf77-4c89-bbc2-1170f4382949</dcsset:userSettingID>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>Начисления</dcscor:parameter>
+					<dcscor:value xsi:nil="true"/>
+					<dcsset:userSettingID>ad37e467-a8e9-4deb-b927-e15743f12bed</dcsset:userSettingID>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>Организация</dcscor:parameter>
+					<dcscor:value xsi:nil="true"/>
+					<dcsset:userSettingID>5dc5fe65-cc10-4a6f-b2e0-1013c2dc118d</dcsset:userSettingID>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>ТипыКвартир</dcscor:parameter>
+					<dcscor:value xsi:nil="true"/>
+					<dcsset:userSettingID>1d2cfc1c-c0d6-48ee-859c-305edf5d10dc</dcsset:userSettingID>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>Участки</dcscor:parameter>
+					<dcscor:value xsi:nil="true"/>
+					<dcsset:userSettingID>1adca348-8530-4f2b-ae49-f6444e93f7be</dcsset:userSettingID>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>Период</dcscor:parameter>
+					<dcscor:value xsi:type="xs:dateTime">0001-01-01T00:00:00</dcscor:value>
+					<dcsset:userSettingID>81359c34-81ba-440e-8ca9-c68077ca893a</dcsset:userSettingID>
+				</dcscor:item>
+			</dcsset:dataParameters>
+			<dcsset:order>
+				<dcsset:item xsi:type="dcsset:OrderItemAuto">
+					<dcsset:use>false</dcsset:use>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:OrderItemField">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:field>порядок</dcsset:field>
+					<dcsset:orderType>Asc</dcsset:orderType>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:OrderItemField">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:field>порядок</dcsset:field>
+					<dcsset:orderType>Asc</dcsset:orderType>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:OrderItemField">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:field>VID</dcsset:field>
+					<dcsset:orderType>Asc</dcsset:orderType>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:OrderItemField">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:field>Период</dcsset:field>
+					<dcsset:orderType>Asc</dcsset:orderType>
+				</dcsset:item>
+			</dcsset:order>
+			<dcsset:outputParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>МакетОформления</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">Арктика</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>ВертикальноеРасположениеОбщихИтогов</dcscor:parameter>
+					<dcscor:value xsi:type="dcscor:DataCompositionTotalPlacement">End</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ВыводитьПараметрыДанных</dcscor:parameter>
+					<dcscor:value xsi:type="dcsset:DataCompositionTextOutputType">DontOutput</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ВыводитьОтбор</dcscor:parameter>
+					<dcscor:value xsi:type="dcsset:DataCompositionTextOutputType">DontOutput</dcscor:value>
+				</dcscor:item>
+			</dcsset:outputParameters>
+			<dcsset:item xsi:type="dcsset:StructureItemTable">
+				<dcsset:column>
+					<dcsset:groupItems>
+						<dcsset:item xsi:type="dcsset:GroupItemField">
+							<dcsset:field>Услуга</dcsset:field>
+							<dcsset:groupType>Items</dcsset:groupType>
+							<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+							<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+							<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:GroupItemField">
+							<dcsset:use>false</dcsset:use>
+							<dcsset:field>Сумма</dcsset:field>
+							<dcsset:groupType>Items</dcsset:groupType>
+							<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+							<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+							<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:GroupItemField">
+							<dcsset:use>false</dcsset:use>
+							<dcsset:field>Пени</dcsset:field>
+							<dcsset:groupType>Items</dcsset:groupType>
+							<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+							<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+							<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+						</dcsset:item>
+					</dcsset:groupItems>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemAuto">
+							<dcsset:use>false</dcsset:use>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:OrderItemField">
+							<dcsset:field>Услуга.Наименование</dcsset:field>
+							<dcsset:orderType>Asc</dcsset:orderType>
+						</dcsset:item>
+					</dcsset:order>
+					<dcsset:selection>
+						<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+					</dcsset:selection>
+				</dcsset:column>
+				<dcsset:row>
+					<dcsset:groupItems>
+						<dcsset:item xsi:type="dcsset:GroupItemField">
+							<dcsset:field>VID</dcsset:field>
+							<dcsset:groupType>Items</dcsset:groupType>
+							<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+							<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+							<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+						</dcsset:item>
+					</dcsset:groupItems>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemAuto">
+							<dcsset:use>false</dcsset:use>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:OrderItemField">
+							<dcsset:field>VID.Наименование</dcsset:field>
+							<dcsset:orderType>Asc</dcsset:orderType>
+						</dcsset:item>
+					</dcsset:order>
+					<dcsset:selection>
+						<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+					</dcsset:selection>
+					<dcsset:outputParameters>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>РасположениеИтогов</dcscor:parameter>
+							<dcscor:value xsi:type="dcscor:DataCompositionTotalPlacement">Begin</dcscor:value>
+						</dcscor:item>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>РасположениеГруппировки</dcscor:parameter>
+							<dcscor:value xsi:type="dcsset:DataCompositionGroupPlacement">Begin</dcscor:value>
+						</dcscor:item>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:use>false</dcscor:use>
+							<dcscor:parameter>РасположениеОбщихИтогов</dcscor:parameter>
+							<dcscor:value xsi:type="dcscor:DataCompositionTotalPlacement">None</dcscor:value>
+						</dcscor:item>
+					</dcsset:outputParameters>
+					<dcsset:item>
+						<dcsset:groupItems>
+							<dcsset:item xsi:type="dcsset:GroupItemField">
+								<dcsset:field>Период</dcsset:field>
+								<dcsset:groupType>Items</dcsset:groupType>
+								<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+								<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+								<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+							</dcsset:item>
+						</dcsset:groupItems>
+						<dcsset:order>
+							<dcsset:item xsi:type="dcsset:OrderItemAuto">
+								<dcsset:use>false</dcsset:use>
+							</dcsset:item>
+							<dcsset:item xsi:type="dcsset:OrderItemField">
+								<dcsset:field>Период</dcsset:field>
+								<dcsset:orderType>Asc</dcsset:orderType>
+							</dcsset:item>
+						</dcsset:order>
+						<dcsset:selection>
+							<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+						</dcsset:selection>
+						<dcsset:outputParameters>
+							<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+								<dcscor:use>false</dcscor:use>
+								<dcscor:parameter>РасположениеИтогов</dcscor:parameter>
+								<dcscor:value xsi:type="dcscor:DataCompositionTotalPlacement">None</dcscor:value>
+							</dcscor:item>
+						</dcsset:outputParameters>
+					</dcsset:item>
+				</dcsset:row>
+			</dcsset:item>
+		</dcsset:settings>
+	</settingsVariant>
+</DataCompositionSchema>

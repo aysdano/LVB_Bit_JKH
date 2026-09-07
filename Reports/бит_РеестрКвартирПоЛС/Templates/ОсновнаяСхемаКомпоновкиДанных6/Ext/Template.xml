@@ -1,0 +1,774 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<DataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcscom="http://v8.1c.ru/8.1/data-composition-system/common" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataSource>
+		<name>ИнформационнаяБаза</name>
+		<dataSourceType>Local</dataSourceType>
+	</dataSource>
+	<dataSet xsi:type="DataSetQuery">
+		<name>НаборДанных1</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ЖилаяПлощадь</dataPath>
+			<field>ЖилаяПлощадь</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Жилая площадь</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Квартира</dataPath>
+			<field>Квартира</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Квартира</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КоличествоКомнат</dataPath>
+			<field>КоличествоКомнат</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Количество комнат</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ОбщаяПлощадь</dataPath>
+			<field>ОбщаяПлощадь</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Общая площадь</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ОтапливаемаяПлощадь</dataPath>
+			<field>ОтапливаемаяПлощадь</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отапливаемая площадь</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СовокупнаяПлощадь</dataPath>
+			<field>СовокупнаяПлощадь</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Совокупная площадь</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СтатусКвартиры</dataPath>
+			<field>СтатусКвартиры</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Статус квартиры</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ТипКвартиры</dataPath>
+			<field>ТипКвартиры</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Тип квартиры</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Здание</dataPath>
+			<field>Здание</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Здание</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Район</dataPath>
+			<field>Район</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Район</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Улица</dataPath>
+			<field>Улица</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Улица</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ЛицевойСчет</dataPath>
+			<field>ЛицевойСчет</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Лицевой счет</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ФизЛицо</dataPath>
+			<field>ФизЛицо</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ответвественный</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Участок</dataPath>
+			<field>Участок</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Участок</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>НомерКвартиры</dataPath>
+			<field>НомерКвартиры</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Номер квартиры</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПрефиксКвартиры</dataPath>
+			<field>ПрефиксКвартиры</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Префикс квартиры</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Корпус</dataPath>
+			<field>Корпус</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Корпус</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КолвоЛицевыхСчетов</dataPath>
+			<field>КолвоЛицевыхСчетов</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Колво лицевых счетов</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КолПроживающихПоЛС</dataPath>
+			<field>КолПроживающихПоЛС</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Кол проживающих по ЛС</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<dataSource>ИнформационнаяБаза</dataSource>
+		<query>ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	бит_Квартиры.Ссылка КАК Квартира,
+	бит_ЛицевыеСчета.Ссылка КАК ЛицевойСчетКвартиры,
+	бит_Квартиры.КоличествоКомнат КАК КоличествоКомнат,
+	бит_СписокЗданий.Район КАК Район,
+	бит_СписокЗданий.Участок КАК Участок,
+	бит_СписокЗданий.Улица КАК Улица,
+	бит_СписокЗданий.Ссылка КАК Здание,
+	бит_Квартиры.НомерКвартиры КАК НомерКвартиры,
+	бит_Квартиры.ПрефиксКвартиры КАК ПрефиксКвартиры,
+	бит_СписокЗданий.Корпус КАК Корпус
+ПОМЕСТИТЬ СписокКвартир
+ИЗ
+	Справочник.бит_ЛицевыеСчета КАК бит_ЛицевыеСчета
+		ЛЕВОЕ СОЕДИНЕНИЕ Справочник.бит_СписокЗданий КАК бит_СписокЗданий
+			ЛЕВОЕ СОЕДИНЕНИЕ Справочник.бит_Квартиры КАК бит_Квартиры
+			ПО бит_СписокЗданий.Ссылка = бит_Квартиры.Владелец
+		ПО (бит_ЛицевыеСчета.Квартира = бит_Квартиры.Ссылка)
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ЕСТЬNULL(бит_ЛицевыеСчета.Ссылка, ЗНАЧЕНИЕ(Справочник.бит_ЛицевыеСчета.ПустаяСсылка)) КАК ЛицевойСчет1,
+	СписокКвартир.Квартира КАК Квартира
+ПОМЕСТИТЬ СписокЛицевыхСчетов
+ИЗ
+	СписокКвартир КАК СписокКвартир
+		ЛЕВОЕ СОЕДИНЕНИЕ Справочник.бит_ЛицевыеСчета КАК бит_ЛицевыеСчета
+		ПО СписокКвартир.Квартира = бит_ЛицевыеСчета.Квартира
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ РАЗЛИЧНЫЕ
+	СписокЛицевыхСчетов.Квартира КАК Квартира,
+	бит_ПроживающиеПоЛССрезПоследних.ФизЛицо КАК ФизЛицо,
+	СписокЛицевыхСчетов.ЛицевойСчет1 КАК ЛицевойСчет1,
+  бит_ПроживающиеПоЛССрезПоследних.ДатаСнятияСРегистрации КАК ДатаСнятияСРегистрации,
+	бит_ПроживающиеПоЛССрезПоследних.СтатусФизЛица КАК СтатусФизЛица,
+	бит_ПроживающиеПоЛССрезПоследних.СтепеньРодства КАК СтепеньРодства,
+	бит_ПроживающиеПоЛССрезПоследних.СтатусПроживания КАК СтатусПроживания,
+	бит_ПроживающиеПоЛССрезПоследних.ДатаРегистрации КАК ДатаРегистрации,
+	бит_ПроживающиеПоЛССрезПоследних.ДатаПраваСобственности КАК ДатаПраваСобственности
+
+ПОМЕСТИТЬ СписокОтветственных
+ИЗ
+	СписокЛицевыхСчетов КАК СписокЛицевыхСчетов
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.бит_ПроживающиеПоЛС.СрезПоследних(&amp;Период, ) КАК бит_ПроживающиеПоЛССрезПоследних
+		ПО СписокЛицевыхСчетов.ЛицевойСчет1 = бит_ПроживающиеПоЛССрезПоследних.ЛицевойСчет
+ГДЕ
+	бит_ПроживающиеПоЛССрезПоследних.СтепеньРодства = ЗНАЧЕНИЕ(Справочник.бит_СтепениРодстваФизЛиц.бит_ОтветственноеЛицо)
+	И НЕ бит_ПроживающиеПоЛССрезПоследних.СтатусФизЛица = ЗНАЧЕНИЕ(Справочник.бит_СтатусФизЛица.Выписан)
+	И (бит_ПроживающиеПоЛССрезПоследних.ДатаСнятияСРегистрации &gt; &amp;Период
+			ИЛИ бит_ПроживающиеПоЛССрезПоследних.ДатаСнятияСРегистрации = ДАТАВРЕМЯ(1, 1, 1))
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ РАЗРЕШЕННЫЕ РАЗЛИЧНЫЕ
+	СписокКвартир.Квартира КАК Квартира,
+	СписокКвартир.КоличествоКомнат КАК КоличествоКомнат,
+	СписокКвартир.Район КАК Район,
+	СписокКвартир.Улица КАК Улица,
+	СписокКвартир.Здание КАК Здание,
+	бит_СведенияОКвартиреСрезПоследних.ОбщаяПлощадь КАК ОбщаяПлощадь,
+	бит_СведенияОКвартиреСрезПоследних.ЖилаяПлощадь КАК ЖилаяПлощадь,
+	бит_СведенияОКвартиреСрезПоследних.ТипКвартиры КАК ТипКвартиры,
+	бит_СведенияОКвартиреСрезПоследних.СтатусКвартиры КАК СтатусКвартиры,
+	бит_СведенияОКвартиреСрезПоследних.ОтапливаемаяПлощадь КАК ОтапливаемаяПлощадь,
+	бит_СведенияОКвартиреСрезПоследних.СовокупнаяПлощадь КАК СовокупнаяПлощадь,
+	СписокКвартир.Участок КАК Участок,
+	СписокОтветственных.ФизЛицо КАК ФизЛицо,
+	СписокКвартир.НомерКвартиры КАК НомерКвартиры,
+	СписокКвартир.ПрефиксКвартиры КАК ПрефиксКвартиры,
+	СписокКвартир.Корпус КАК Корпус,
+	ВЫБОР
+		КОГДА СписокЛицевыхСчетов.ЛицевойСчет1 ЕСТЬ NULL
+				ИЛИ СписокЛицевыхСчетов.ЛицевойСчет1 = НЕОПРЕДЕЛЕНО
+			ТОГДА ЗНАЧЕНИЕ(Справочник.бит_ЛицевыеСчета.ПустаяСсылка)
+		ИНАЧЕ СписокЛицевыхСчетов.ЛицевойСчет1
+	КОНЕЦ КАК ЛицевойСчет
+ПОМЕСТИТЬ ИтоговаяТаблица
+ИЗ
+	СписокКвартир КАК СписокКвартир
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.бит_СведенияОКвартире.СрезПоследних(&amp;Период, ) КАК бит_СведенияОКвартиреСрезПоследних
+		ПО СписокКвартир.Квартира = бит_СведенияОКвартиреСрезПоследних.Квартира
+		ЛЕВОЕ СОЕДИНЕНИЕ СписокЛицевыхСчетов КАК СписокЛицевыхСчетов
+		ПО СписокКвартир.Квартира = СписокЛицевыхСчетов.Квартира
+		ЛЕВОЕ СОЕДИНЕНИЕ СписокОтветственных КАК СписокОтветственных
+		ПО СписокКвартир.Квартира = СписокОтветственных.Квартира
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ РАЗРЕШЕННЫЕ РАЗЛИЧНЫЕ
+	бит_ПроживающиеПоЛССрезПоследних.ФизЛицо КАК ФизЛицо,
+	бит_ПроживающиеПоЛССрезПоследних.ЛицевойСчет КАК ЛС_Проживающего,
+	1 КАК КолПроживающихПоЛС
+ПОМЕСТИТЬ Проживающие
+ИЗ
+	РегистрСведений.бит_ПроживающиеПоЛС.СрезПоследних КАК бит_ПроживающиеПоЛССрезПоследних
+ГДЕ
+	бит_ПроживающиеПоЛССрезПоследних.ДатаСнятияСРегистрации = &amp;ДатаСнятияСРегистрации
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	Проживающие.ЛС_Проживающего КАК ЛС_Проживающего,
+	СУММА(Проживающие.КолПроживающихПоЛС) КАК КолПроживающихПоЛС
+ПОМЕСТИТЬ ИтоговаяТаблицаКолПроживающие
+ИЗ
+	Проживающие КАК Проживающие
+
+СГРУППИРОВАТЬ ПО
+	Проживающие.ЛС_Проживающего
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ИтоговаяТаблица.Квартира КАК Квартира,
+	ИтоговаяТаблица.ЛицевойСчет КАК ЛицевойСчет,
+	ИтоговаяТаблица.ФизЛицо КАК ФизЛицо,
+	ИтоговаяТаблица.КоличествоКомнат КАК КоличествоКомнат,
+	ИтоговаяТаблица.Район КАК Район,
+	ИтоговаяТаблица.Улица КАК Улица,
+	ИтоговаяТаблица.Здание КАК Здание,
+	ИтоговаяТаблица.ОбщаяПлощадь КАК ОбщаяПлощадь,
+	ИтоговаяТаблица.ЖилаяПлощадь КАК ЖилаяПлощадь,
+	ИтоговаяТаблица.ТипКвартиры КАК ТипКвартиры,
+	ИтоговаяТаблица.СтатусКвартиры КАК СтатусКвартиры,
+	ИтоговаяТаблица.ОтапливаемаяПлощадь КАК ОтапливаемаяПлощадь,
+	ИтоговаяТаблица.СовокупнаяПлощадь КАК СовокупнаяПлощадь,
+	ИтоговаяТаблица.Участок КАК Участок,
+	ИтоговаяТаблица.НомерКвартиры КАК НомерКвартиры,
+	ИтоговаяТаблица.ПрефиксКвартиры КАК ПрефиксКвартиры,
+	ИтоговаяТаблица.Корпус КАК Корпус,
+	1 КАК КолвоЛицевыхСчетов,
+//	ВЫБОР
+//		КОГДА ИтоговаяТаблица.ЛицевойСчет = ЗНАЧЕНИЕ(Справочник.бит_ЛицевыеСчета.ПустаяСсылка)
+//			ТОГДА ЛОЖЬ
+//		ИНАЧЕ бит_ЛицевыеСчета.Архивный
+//	КОНЕЦ КАК Архивный,
+	ИтоговаяТаблицаКолПроживающие.КолПроживающихПоЛС КАК КолПроживающихПоЛС
+ПОМЕСТИТЬ ВР_ТАБ	
+ИЗ
+	ИтоговаяТаблица КАК ИтоговаяТаблица
+		ЛЕВОЕ СОЕДИНЕНИЕ СписокОтветственных КАК СписокОтветственных
+		ПО ИтоговаяТаблица.ЛицевойСчет  = СписокОтветственных.ЛицевойСчет1
+		ЛЕВОЕ СОЕДИНЕНИЕ ИтоговаяТаблицаКолПроживающие КАК ИтоговаяТаблицаКолПроживающие
+		ПО ИтоговаяТаблица.ЛицевойСчет = ИтоговаяТаблицаКолПроживающие.ЛС_Проживающего          ;
+		
+		////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ  РАЗЛИЧНЫЕ
+	СписокОтветственных.ФизЛицо КАК ФизЛицо,
+	ВР_ТАБ.Квартира КАК Квартира,
+	ВР_ТАБ.ЛицевойСчет КАК ЛицевойСчет,
+	ВР_ТАБ.КоличествоКомнат КАК КоличествоКомнат,
+	ВР_ТАБ.Район КАК Район,
+	ВР_ТАБ.Улица КАК Улица,
+	ВР_ТАБ.Здание КАК Здание,
+	ВР_ТАБ.ОбщаяПлощадь КАК ОбщаяПлощадь,
+	ВР_ТАБ.ЖилаяПлощадь КАК ЖилаяПлощадь,
+	ВР_ТАБ.ТипКвартиры КАК ТипКвартиры,
+	ВР_ТАБ.СтатусКвартиры КАК СтатусКвартиры,
+	ВР_ТАБ.ОтапливаемаяПлощадь КАК ОтапливаемаяПлощадь,
+	ВР_ТАБ.СовокупнаяПлощадь КАК СовокупнаяПлощадь,
+	ВР_ТАБ.Участок КАК Участок,
+	ВР_ТАБ.НомерКвартиры КАК НомерКвартиры,
+	ВР_ТАБ.ПрефиксКвартиры КАК ПрефиксКвартиры,
+	ВР_ТАБ.Корпус КАК Корпус,
+	1 КАК КолвоЛицевыхСчетов,
+    ИтоговаяТаблицаКолПроживающие.КолПроживающихПоЛС КАК КолПроживающихПоЛС
+ИЗ
+	ВР_ТАБ КАК ВР_ТАБ
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ СписокОтветственных КАК СписокОтветственных
+		ПО ВР_ТАБ.ЛицевойСчет = СписокОтветственных.ЛицевойСчет1
+		ЛЕВОЕ СОЕДИНЕНИЕ ИтоговаяТаблицаКолПроживающие КАК ИтоговаяТаблицаКолПроживающие
+		ПО ВР_ТАБ.ЛицевойСчет = ИтоговаяТаблицаКолПроживающие.ЛС_Проживающего</query>
+	</dataSet>
+	<calculatedField>
+		<dataPath>КоличествоПроживающих</dataPath>
+		<expression>бит_ОтчетыВызовСервера.ПолучитьКоличествоПроживающихНаЛС(ЛицевойСчет)</expression>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Количество проживающих</v8:content>
+			</v8:item>
+		</title>
+	</calculatedField>
+	<calculatedField>
+		<dataPath>КоличествоЛС</dataPath>
+		<expression>бит_ОтчетыВызовСервера.ПолучитьКоличествоЛСПоКвартире(Квартира, ЛицевойСчет)</expression>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Количество ЛС</v8:content>
+			</v8:item>
+		</title>
+	</calculatedField>
+	<totalField>
+		<dataPath>КоличествоКомнат</dataPath>
+		<expression>Максимум(КоличествоКомнат)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>КоличествоЛС</dataPath>
+		<expression>КоличествоЛС</expression>
+	</totalField>
+	<totalField>
+		<dataPath>КоличествоПроживающих</dataPath>
+		<expression>Сумма(КоличествоПроживающих)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>КолПроживающихПоЛС</dataPath>
+		<expression>Сумма(КолПроживающихПоЛС)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>КолвоЛицевыхСчетов</dataPath>
+		<expression>Сумма(КолвоЛицевыхСчетов)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ЖилаяПлощадь</dataPath>
+		<expression>Сумма(ЖилаяПлощадь)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ОбщаяПлощадь</dataPath>
+		<expression>Сумма(ОбщаяПлощадь)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ОтапливаемаяПлощадь</dataPath>
+		<expression>Сумма(ОтапливаемаяПлощадь)</expression>
+	</totalField>
+	<parameter>
+		<name>Период</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Период</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>false</useRestriction>
+		<use>Always</use>
+	</parameter>
+	<parameter>
+		<name>ДатаСнятияСРегистрации</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Дата снятия с регистрации</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<settingsVariant>
+		<dcsset:name>Основной</dcsset:name>
+		<dcsset:presentation xsi:type="xs:string">Основной</dcsset:presentation>
+		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+			<dcsset:filter>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">Район</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+					<dcsset:right xsi:type="dcscor:DesignTimeValue">Справочник.бит_АдминистративныеОкруга.ПустаяСсылка</dcsset:right>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">Участок</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+					<dcsset:right xsi:type="dcscor:DesignTimeValue">Справочник.бит_ТехническиеУчастки.ПустаяСсылка</dcsset:right>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">Улица</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+					<dcsset:right xsi:type="dcscor:DesignTimeValue">Справочник.бит_СписокУлиц.ПустаяСсылка</dcsset:right>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">Здание</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+					<dcsset:right xsi:type="dcscor:DesignTimeValue">Справочник.бит_СписокЗданий.ПустаяСсылка</dcsset:right>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">СтатусКвартиры</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+					<dcsset:right xsi:type="dcscor:DesignTimeValue">Перечисление.бит_СтатусыКвартиры.ПустаяСсылка</dcsset:right>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">ТипКвартиры</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+					<dcsset:right xsi:type="dcscor:DesignTimeValue">Перечисление.бит_ТипыКвартиры.ПустаяСсылка</dcsset:right>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">ЛицевойСчет</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+					<dcsset:right xsi:type="dcscor:DesignTimeValue">Справочник.бит_ЛицевыеСчета.ПустаяСсылка</dcsset:right>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">Архивный</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+					<dcsset:right xsi:type="xs:boolean">false</dcsset:right>
+				</dcsset:item>
+			</dcsset:filter>
+			<dcsset:dataParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Период</dcscor:parameter>
+					<dcscor:value xsi:type="v8:StandardBeginningDate">
+						<v8:variant xsi:type="v8:StandardBeginningDateVariant">BeginningOfLastDay</v8:variant>
+					</dcscor:value>
+					<dcsset:userSettingID>0e0dcff3-9326-4014-8fb1-57988d3d81f5</dcsset:userSettingID>
+				</dcscor:item>
+			</dcsset:dataParameters>
+			<dcsset:order>
+				<dcsset:item xsi:type="dcsset:OrderItemField">
+					<dcsset:field>НомерКвартиры</dcsset:field>
+					<dcsset:orderType>Asc</dcsset:orderType>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:OrderItemField">
+					<dcsset:field>ПрефиксКвартиры</dcsset:field>
+					<dcsset:orderType>Asc</dcsset:orderType>
+				</dcsset:item>
+			</dcsset:order>
+			<dcsset:conditionalAppearance>
+				<dcsset:item>
+					<dcsset:selection>
+						<dcsset:item>
+							<dcsset:field>ОтменаПроведения</dcsset:field>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:field>ПереносВГруппу</dcsset:field>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:field>Печать</dcsset:field>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:field>ПометкаНаУдаление</dcsset:field>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:field>Проведение</dcsset:field>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:field>Редактирование</dcsset:field>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:field>Создание</dcsset:field>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:field>Копирование</dcsset:field>
+						</dcsset:item>
+					</dcsset:selection>
+					<dcsset:filter/>
+					<dcsset:appearance>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>Шрифт</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:Font" ref="sys:DefaultGUIFont" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+						</dcscor:item>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>Формат</dcscor:parameter>
+							<dcscor:value xsi:type="xs:string">БЛ=; БИ=V</dcscor:value>
+						</dcscor:item>
+					</dcsset:appearance>
+				</dcsset:item>
+			</dcsset:conditionalAppearance>
+			<dcsset:outputParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>МакетОформления</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string"/>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>РасположениеИтогов</dcscor:parameter>
+					<dcscor:value xsi:type="dcscor:DataCompositionTotalPlacement">Begin</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>ВертикальноеРасположениеОбщихИтогов</dcscor:parameter>
+					<dcscor:value xsi:type="dcscor:DataCompositionTotalPlacement">None</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ВыводитьЗаголовок</dcscor:parameter>
+					<dcscor:value xsi:type="dcsset:DataCompositionTextOutputType">Output</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Заголовок</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">Реестр квартир по лицевым счетам</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ВыводитьПараметрыДанных</dcscor:parameter>
+					<dcscor:value xsi:type="dcsset:DataCompositionTextOutputType">DontOutput</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ВыводитьОтбор</dcscor:parameter>
+					<dcscor:value xsi:type="dcsset:DataCompositionTextOutputType">DontOutput</dcscor:value>
+				</dcscor:item>
+			</dcsset:outputParameters>
+			<dcsset:item xsi:type="dcsset:StructureItemTable">
+				<dcsset:row>
+					<dcsset:groupItems>
+						<dcsset:item xsi:type="dcsset:GroupItemField">
+							<dcsset:field>Здание</dcsset:field>
+							<dcsset:groupType>Items</dcsset:groupType>
+							<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+							<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+							<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+						</dcsset:item>
+					</dcsset:groupItems>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+					</dcsset:order>
+					<dcsset:selection>
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:field>Здание</dcsset:field>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:field>КолвоЛицевыхСчетов</dcsset:field>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:field>КоличествоПроживающих</dcsset:field>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:field>ЖилаяПлощадь</dcsset:field>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:field>ОбщаяПлощадь</dcsset:field>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:field>ОтапливаемаяПлощадь</dcsset:field>
+						</dcsset:item>
+					</dcsset:selection>
+					<dcsset:item>
+						<dcsset:groupItems>
+							<dcsset:item xsi:type="dcsset:GroupItemField">
+								<dcsset:field>Квартира</dcsset:field>
+								<dcsset:groupType>Items</dcsset:groupType>
+								<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+								<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+								<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+							</dcsset:item>
+						</dcsset:groupItems>
+						<dcsset:order>
+							<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+						</dcsset:order>
+						<dcsset:selection>
+							<dcsset:item xsi:type="dcsset:SelectedItemField">
+								<dcsset:field>Квартира</dcsset:field>
+							</dcsset:item>
+							<dcsset:item xsi:type="dcsset:SelectedItemField">
+								<dcsset:field>КоличествоПроживающих</dcsset:field>
+							</dcsset:item>
+							<dcsset:item xsi:type="dcsset:SelectedItemField">
+								<dcsset:field>КолвоЛицевыхСчетов</dcsset:field>
+							</dcsset:item>
+							<dcsset:item xsi:type="dcsset:SelectedItemField">
+								<dcsset:field>КоличествоКомнат</dcsset:field>
+							</dcsset:item>
+						</dcsset:selection>
+						<dcsset:item>
+							<dcsset:groupItems>
+								<dcsset:item xsi:type="dcsset:GroupItemField">
+									<dcsset:use>false</dcsset:use>
+									<dcsset:field>Квартира</dcsset:field>
+									<dcsset:groupType>Items</dcsset:groupType>
+									<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+									<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+									<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+								</dcsset:item>
+								<dcsset:item xsi:type="dcsset:GroupItemField">
+									<dcsset:field>ЛицевойСчет</dcsset:field>
+									<dcsset:groupType>Items</dcsset:groupType>
+									<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+									<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+									<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+								</dcsset:item>
+								<dcsset:item xsi:type="dcsset:GroupItemField">
+									<dcsset:field>ФизЛицо</dcsset:field>
+									<dcsset:groupType>Items</dcsset:groupType>
+									<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+									<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+									<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+								</dcsset:item>
+								<dcsset:item xsi:type="dcsset:GroupItemField">
+									<dcsset:field>СтатусКвартиры</dcsset:field>
+									<dcsset:groupType>Items</dcsset:groupType>
+									<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+									<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+									<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+								</dcsset:item>
+								<dcsset:item xsi:type="dcsset:GroupItemField">
+									<dcsset:field>ТипКвартиры</dcsset:field>
+									<dcsset:groupType>Items</dcsset:groupType>
+									<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+									<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+									<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+								</dcsset:item>
+								<dcsset:item xsi:type="dcsset:GroupItemField">
+									<dcsset:field>НомерКвартиры</dcsset:field>
+									<dcsset:groupType>Items</dcsset:groupType>
+									<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+									<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+									<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+								</dcsset:item>
+								<dcsset:item xsi:type="dcsset:GroupItemField">
+									<dcsset:field>ПрефиксКвартиры</dcsset:field>
+									<dcsset:groupType>Items</dcsset:groupType>
+									<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+									<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+									<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+								</dcsset:item>
+							</dcsset:groupItems>
+							<dcsset:order>
+								<dcsset:item xsi:type="dcsset:OrderItemAuto">
+									<dcsset:use>false</dcsset:use>
+								</dcsset:item>
+								<dcsset:item xsi:type="dcsset:OrderItemField">
+									<dcsset:field>НомерКвартиры</dcsset:field>
+									<dcsset:orderType>Asc</dcsset:orderType>
+								</dcsset:item>
+								<dcsset:item xsi:type="dcsset:OrderItemField">
+									<dcsset:field>ПрефиксКвартиры</dcsset:field>
+									<dcsset:orderType>Asc</dcsset:orderType>
+								</dcsset:item>
+							</dcsset:order>
+							<dcsset:selection>
+								<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+								<dcsset:item xsi:type="dcsset:SelectedItemField">
+									<dcsset:use>false</dcsset:use>
+									<dcsset:field>ПрефиксКвартиры</dcsset:field>
+								</dcsset:item>
+								<dcsset:item xsi:type="dcsset:SelectedItemField">
+									<dcsset:use>false</dcsset:use>
+									<dcsset:field>НомерКвартиры</dcsset:field>
+								</dcsset:item>
+								<dcsset:item xsi:type="dcsset:SelectedItemField">
+									<dcsset:field>ЛицевойСчет</dcsset:field>
+								</dcsset:item>
+								<dcsset:item xsi:type="dcsset:SelectedItemField">
+									<dcsset:field>ЖилаяПлощадь</dcsset:field>
+								</dcsset:item>
+								<dcsset:item xsi:type="dcsset:SelectedItemField">
+									<dcsset:field>ОтапливаемаяПлощадь</dcsset:field>
+								</dcsset:item>
+								<dcsset:item xsi:type="dcsset:SelectedItemField">
+									<dcsset:field>ОбщаяПлощадь</dcsset:field>
+								</dcsset:item>
+								<dcsset:item xsi:type="dcsset:SelectedItemField">
+									<dcsset:field>КоличествоКомнат</dcsset:field>
+								</dcsset:item>
+								<dcsset:item xsi:type="dcsset:SelectedItemField">
+									<dcsset:field>КоличествоПроживающих</dcsset:field>
+								</dcsset:item>
+								<dcsset:item xsi:type="dcsset:SelectedItemField">
+									<dcsset:field>КолвоЛицевыхСчетов</dcsset:field>
+								</dcsset:item>
+							</dcsset:selection>
+						</dcsset:item>
+					</dcsset:item>
+				</dcsset:row>
+			</dcsset:item>
+		</dcsset:settings>
+	</settingsVariant>
+</DataCompositionSchema>

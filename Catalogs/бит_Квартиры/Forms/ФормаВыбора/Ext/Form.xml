@@ -1,0 +1,268 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.18">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<CommandSet>
+		<ExcludedCommand>Copy</ExcludedCommand>
+		<ExcludedCommand>Create</ExcludedCommand>
+	</CommandSet>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<ChildItems>
+			<Button name="ФормаНастройкаСписка" id="16">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.StandardCommand.ListSettings</CommandName>
+				<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
+				<ExtendedTooltip name="ФормаНастройкаСпискаРасширеннаяПодсказка" id="42"/>
+			</Button>
+			<Button name="ФормаОбновить" id="17">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.StandardCommand.Refresh</CommandName>
+				<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
+				<ExtendedTooltip name="ФормаОбновитьРасширеннаяПодсказка" id="43"/>
+			</Button>
+			<Button name="ФормаОбработкабит_си_ИсточникСправочникСтатьиСправочнаяИнформация" id="18">
+				<Type>CommandBarButton</Type>
+				<CommandName>DataProcessor.бит_си_ИсточникСправочникСтатьи.Command.СправочнаяИнформация</CommandName>
+				<DataPath>Items.Список.CurrentData.Owner</DataPath>
+				<ExtendedTooltip name="ФормаОбработкабит_си_ИсточникСправочникСтатьиСправочнаяИнформацияРасширеннаяПодсказка" id="44"/>
+			</Button>
+			<Popup name="ФормаГруппа1" id="19">
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Перейти</v8:content>
+					</v8:item>
+				</Title>
+				<ExtendedTooltip name="ФормаГруппа1РасширеннаяПодсказка" id="45"/>
+				<ChildItems>
+					<Button name="ФормаСправочникбит_КомнатыОткрытьПоЗначению" id="20">
+						<Type>CommandBarButton</Type>
+						<CommandName>Catalog.бит_Комнаты.StandardCommand.OpenByValue</CommandName>
+						<DataPath>Items.Список.CurrentData.Ref</DataPath>
+						<ExtendedTooltip name="ФормаСправочникбит_КомнатыОткрытьПоЗначениюРасширеннаяПодсказка" id="46"/>
+					</Button>
+					<Button name="ФормаРегистрСведенийбит_СведенияОКвартиреОткрытьПоЗначениюКвартира" id="21">
+						<Type>CommandBarButton</Type>
+						<CommandName>InformationRegister.бит_СведенияОКвартире.StandardCommand.OpenByValue.Квартира</CommandName>
+						<DataPath>Items.Список.CurrentData.Ref</DataPath>
+						<ExtendedTooltip name="ФормаРегистрСведенийбит_СведенияОКвартиреОткрытьПоЗначениюКвартираРасширеннаяПодсказка" id="47"/>
+					</Button>
+				</ChildItems>
+			</Popup>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<Table name="Список" id="1">
+			<Representation>List</Representation>
+			<CommandBarLocation>None</CommandBarLocation>
+			<DefaultItem>true</DefaultItem>
+			<ChoiceMode>true</ChoiceMode>
+			<UseAlternationRowColor>true</UseAlternationRowColor>
+			<InitialTreeView>ExpandTopLevel</InitialTreeView>
+			<EnableStartDrag>true</EnableStartDrag>
+			<FileDragMode>AsFile</FileDragMode>
+			<DataPath>Список</DataPath>
+			<RowPictureDataPath>Список.DefaultPicture</RowPictureDataPath>
+			<CommandSet>
+				<ExcludedCommand>Copy</ExcludedCommand>
+				<ExcludedCommand>Create</ExcludedCommand>
+			</CommandSet>
+			<SearchStringLocation>None</SearchStringLocation>
+			<ViewStatusLocation>None</ViewStatusLocation>
+			<SearchControlLocation>None</SearchControlLocation>
+			<AutoRefresh>false</AutoRefresh>
+			<AutoRefreshPeriod>60</AutoRefreshPeriod>
+			<Period>
+				<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+				<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+				<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+			</Period>
+			<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+			<RestoreCurrentRow>false</RestoreCurrentRow>
+			<TopLevelParent xsi:nil="true"/>
+			<ShowRoot>true</ShowRoot>
+			<AllowRootChoice>false</AllowRootChoice>
+			<UpdateOnDataChange>Auto</UpdateOnDataChange>
+			<AllowGettingCurrentRowURL>true</AllowGettingCurrentRowURL>
+			<ContextMenu name="СписокКонтекстноеМеню" id="2"/>
+			<AutoCommandBar name="СписокКоманднаяПанель" id="3">
+				<Autofill>false</Autofill>
+			</AutoCommandBar>
+			<ExtendedTooltip name="СписокРасширеннаяПодсказка" id="48"/>
+			<SearchStringAddition name="СписокСтрокаПоиска" id="49">
+				<AdditionSource>
+					<Item>Список</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокСтрокаПоискаКонтекстноеМеню" id="50"/>
+				<ExtendedTooltip name="СписокСтрокаПоискаРасширеннаяПодсказка" id="51"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="СписокСостояниеПросмотра" id="52">
+				<AdditionSource>
+					<Item>Список</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокСостояниеПросмотраКонтекстноеМеню" id="53"/>
+				<ExtendedTooltip name="СписокСостояниеПросмотраРасширеннаяПодсказка" id="54"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="СписокУправлениеПоиском" id="55">
+				<AdditionSource>
+					<Item>Список</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокУправлениеПоискомКонтекстноеМеню" id="56"/>
+				<ExtendedTooltip name="СписокУправлениеПоискомРасширеннаяПодсказка" id="57"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<LabelField name="Код" id="6">
+					<DataPath>Список.Code</DataPath>
+					<ContextMenu name="КодКонтекстноеМеню" id="7"/>
+					<ExtendedTooltip name="КодРасширеннаяПодсказка" id="58"/>
+				</LabelField>
+				<LabelField name="Владелец" id="8">
+					<DataPath>Список.Owner</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Номер дома</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ВладелецКонтекстноеМеню" id="9"/>
+					<ExtendedTooltip name="ВладелецРасширеннаяПодсказка" id="59"/>
+				</LabelField>
+				<LabelField name="Наименование" id="22">
+					<DataPath>Список.Description</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Номер квартиры</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="НаименованиеКонтекстноеМеню" id="23"/>
+					<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="60"/>
+				</LabelField>
+				<LabelField name="Этаж" id="24">
+					<DataPath>Список.Этаж</DataPath>
+					<ContextMenu name="ЭтажКонтекстноеМеню" id="25"/>
+					<ExtendedTooltip name="ЭтажРасширеннаяПодсказка" id="61"/>
+				</LabelField>
+				<LabelField name="ОбщаяПлощадь" id="26">
+					<DataPath>Список.ОбщаяПлощадь</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Общая площадь,м2</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ОбщаяПлощадьКонтекстноеМеню" id="27"/>
+					<ExtendedTooltip name="ОбщаяПлощадьРасширеннаяПодсказка" id="62"/>
+				</LabelField>
+				<LabelField name="ЖилаяПлощадь" id="28">
+					<DataPath>Список.ЖилаяПлощадь</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Жилая площадь,м2</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ЖилаяПлощадьКонтекстноеМеню" id="29"/>
+					<ExtendedTooltip name="ЖилаяПлощадьРасширеннаяПодсказка" id="63"/>
+				</LabelField>
+				<InputField name="МОП" id="30">
+					<DataPath>Список.МОП</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>МОП,м2</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="МОПКонтекстноеМеню" id="31"/>
+					<ExtendedTooltip name="МОПРасширеннаяПодсказка" id="64"/>
+				</InputField>
+				<LabelField name="КоличествоКомнат" id="32">
+					<DataPath>Список.КоличествоКомнат</DataPath>
+					<ContextMenu name="КоличествоКомнатКонтекстноеМеню" id="33"/>
+					<ExtendedTooltip name="КоличествоКомнатРасширеннаяПодсказка" id="65"/>
+				</LabelField>
+				<LabelField name="ТипКвартиры" id="34">
+					<DataPath>Список.ТипКвартиры</DataPath>
+					<ContextMenu name="ТипКвартирыКонтекстноеМеню" id="35"/>
+					<ExtendedTooltip name="ТипКвартирыРасширеннаяПодсказка" id="66"/>
+				</LabelField>
+				<LabelField name="СтатусКвартиры" id="36">
+					<DataPath>Список.СтатусКвартиры</DataPath>
+					<ContextMenu name="СтатусКвартирыКонтекстноеМеню" id="37"/>
+					<ExtendedTooltip name="СтатусКвартирыРасширеннаяПодсказка" id="67"/>
+				</LabelField>
+				<LabelField name="ТипПлиты" id="38">
+					<DataPath>Список.ТипПлиты</DataPath>
+					<ContextMenu name="ТипПлитыКонтекстноеМеню" id="39"/>
+					<ExtendedTooltip name="ТипПлитыРасширеннаяПодсказка" id="68"/>
+				</LabelField>
+				<LabelField name="ТипЗапирающегоУстройства" id="40">
+					<DataPath>Список.ТипЗапирающегоУстройства</DataPath>
+					<ContextMenu name="ТипЗапирающегоУстройстваКонтекстноеМеню" id="41"/>
+					<ExtendedTooltip name="ТипЗапирающегоУстройстваРасширеннаяПодсказка" id="69"/>
+				</LabelField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Список" id="1">
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>true</ManualQuery>
+				<DynamicDataRead>true</DynamicDataRead>
+				<QueryText>ВЫБРАТЬ
+	Справочникбит_Квартиры.Ссылка,
+	Справочникбит_Квартиры.ВерсияДанных,
+	Справочникбит_Квартиры.ПометкаУдаления,
+	Справочникбит_Квартиры.Предопределенный,
+	Справочникбит_Квартиры.Владелец,
+	Справочникбит_Квартиры.Код,
+	Справочникбит_Квартиры.Наименование,
+	Справочникбит_Квартиры.Этаж,
+	Справочникбит_Квартиры.КоличествоКомнат,
+	Справочникбит_Квартиры.НомерКвартиры,
+	Справочникбит_Квартиры.ПрефиксКвартиры,
+	Справочникбит_Квартиры.КодПоБТИ,
+	бит_СведенияОКвартиреСрезПоследних.ОбщаяПлощадь,
+	бит_СведенияОКвартиреСрезПоследних.ЖилаяПлощадь,
+	бит_СведенияОКвартиреСрезПоследних.МОП,
+	бит_СведенияОКвартиреСрезПоследних.ОтапливаемаяПлощадь,
+	бит_СведенияОКвартиреСрезПоследних.СовокупнаяПлощадь,
+	бит_СведенияОКвартиреСрезПоследних.ТипКвартиры,
+	бит_СведенияОКвартиреСрезПоследних.СтатусКвартиры,
+	бит_СведенияОКвартиреСрезПоследних.ТипПлиты,
+	бит_СведенияОКвартиреСрезПоследних.ТипЗапирающегоУстройства
+ИЗ
+	Справочник.бит_Квартиры КАК Справочникбит_Квартиры
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.бит_СведенияОКвартире.СрезПоследних(&amp;Момент, ) КАК бит_СведенияОКвартиреСрезПоследних
+		ПО бит_СведенияОКвартиреСрезПоследних.Квартира = Справочникбит_Квартиры.Ссылка</QueryText>
+				<MainTable>Catalog.бит_Квартиры</MainTable>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+	</Attributes>
+</Form>

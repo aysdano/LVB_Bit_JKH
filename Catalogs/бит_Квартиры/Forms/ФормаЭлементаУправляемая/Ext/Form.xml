@@ -1,0 +1,1019 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.18">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<CommandSet>
+		<ExcludedCommand>Copy</ExcludedCommand>
+	</CommandSet>
+	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<ChildItems>
+			<Button name="ФормаПеречитать" id="17">
+				<Type>CommandBarButton</Type>
+				<Representation>Picture</Representation>
+				<CommandName>Form.StandardCommand.Reread</CommandName>
+				<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
+				<ExtendedTooltip name="ФормаПеречитатьExtendedTooltip" id="107"/>
+			</Button>
+			<Button name="ФормаСкопировать" id="18">
+				<Type>CommandBarButton</Type>
+				<CommandName>0:68baa1bc-edd1-4d9b-ad80-1d53fb8a7988</CommandName>
+				<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
+				<ExtendedTooltip name="ФормаСкопироватьExtendedTooltip" id="108"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="AfterWrite">ПослеЗаписи</Event>
+		<Event name="NotificationProcessing">ОбработкаОповещения</Event>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+		<Event name="BeforeWriteAtServer">ПередЗаписьюНаСервере</Event>
+		<Event name="OnClose">ПриЗакрытии</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="Группа1" id="19">
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ChildItemsWidth>Equal</ChildItemsWidth>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="Группа1ExtendedTooltip" id="109"/>
+			<ChildItems>
+				<UsualGroup name="Группа2" id="20">
+					<Group>Vertical</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="Группа2ExtendedTooltip" id="110"/>
+					<ChildItems>
+						<InputField name="Владелец" id="5">
+							<DataPath>Объект.Owner</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Номер здания</v8:content>
+								</v8:item>
+							</Title>
+							<EditMode>EnterOnInput</EditMode>
+							<ChoiceButton>false</ChoiceButton>
+							<ContextMenu name="ВладелецКонтекстноеМеню" id="6"/>
+							<ExtendedTooltip name="ВладелецExtendedTooltip" id="111"/>
+						</InputField>
+						<InputField name="НомерКвартиры" id="11">
+							<DataPath>Объект.НомерКвартиры</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ChoiceButton>true</ChoiceButton>
+							<AutoMarkIncomplete>true</AutoMarkIncomplete>
+							<ContextMenu name="НомерКвартирыКонтекстноеМеню" id="12"/>
+							<ExtendedTooltip name="НомерКвартирыExtendedTooltip" id="112"/>
+							<Events>
+								<Event name="OnChange">НомерКвартирыПриИзменении</Event>
+							</Events>
+						</InputField>
+						<InputField name="Этаж" id="7">
+							<DataPath>Объект.Этаж</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ChoiceButton>true</ChoiceButton>
+							<ContextMenu name="ЭтажКонтекстноеМеню" id="8"/>
+							<ExtendedTooltip name="ЭтажExtendedTooltip" id="113"/>
+						</InputField>
+						<InputField name="НомерПодъезда" id="206">
+							<DataPath>Объект.НомерПодъезда</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Номер подъезда (не используется)</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Номер подъезда более не используется. Функционал унаследовал новый реквизит "Подъезд".</v8:content>
+								</v8:item>
+							</ToolTip>
+							<ContextMenu name="НомерПодъездаКонтекстноеМеню" id="207"/>
+							<ExtendedTooltip name="НомерПодъездаРасширеннаяПодсказка" id="208"/>
+						</InputField>
+						<InputField name="Подъезд" id="203">
+							<DataPath>Объект.Подъезд</DataPath>
+							<ChoiceParameterLinks>
+								<xr:Link>
+									<xr:Name>Отбор.Владелец</xr:Name>
+									<xr:DataPath xsi:type="xs:string">Объект.Owner</xr:DataPath>
+									<xr:ValueChange>Clear</xr:ValueChange>
+								</xr:Link>
+							</ChoiceParameterLinks>
+							<ContextMenu name="ПодъездКонтекстноеМеню" id="204"/>
+							<ExtendedTooltip name="ПодъездРасширеннаяПодсказка" id="205"/>
+						</InputField>
+						<InputField name="КодПоБТИ" id="15">
+							<DataPath>Объект.КодПоБТИ</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="КодПоБТИКонтекстноеМеню" id="16"/>
+							<ExtendedTooltip name="КодПоБТИExtendedTooltip" id="114"/>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="Группа3" id="21">
+					<Group>Vertical</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="Группа3ExtendedTooltip" id="115"/>
+					<ChildItems>
+						<InputField name="НаДату" id="22">
+							<DataPath>НаДату</DataPath>
+							<Enabled>false</Enabled>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Период свед. о кв</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="НаДатуКонтекстноеМеню" id="23"/>
+							<ExtendedTooltip name="НаДатуExtendedTooltip" id="116"/>
+						</InputField>
+						<InputField name="ПрефиксКвартиры" id="13">
+							<DataPath>Объект.ПрефиксКвартиры</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Префикс</v8:content>
+								</v8:item>
+							</Title>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ПрефиксКвартирыКонтекстноеМеню" id="14"/>
+							<ExtendedTooltip name="ПрефиксКвартирыExtendedTooltip" id="117"/>
+							<Events>
+								<Event name="OnChange">ПрефиксКвартирыПриИзменении</Event>
+								<Event name="TextEditEnd">ПрефиксКвартирыОкончаниеВводаТекста</Event>
+							</Events>
+						</InputField>
+						<InputField name="КоличествоКомнат" id="9">
+							<DataPath>Объект.КоличествоКомнат</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Кол-во комнат </v8:content>
+								</v8:item>
+							</Title>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="КоличествоКомнатКонтекстноеМеню" id="10"/>
+							<ExtendedTooltip name="КоличествоКомнатExtendedTooltip" id="118"/>
+						</InputField>
+						<InputField name="КадастровыйНомер" id="194">
+							<DataPath>Объект.КадастровыйНомер</DataPath>
+							<ContextMenu name="КадастровыйНомерКонтекстноеМеню" id="195"/>
+							<ExtendedTooltip name="КадастровыйНомерРасширеннаяПодсказка" id="196"/>
+						</InputField>
+						<InputField name="УникальныйНомер" id="200">
+							<DataPath>Объект.УникальныйНомерГИСЖКХ</DataPath>
+							<ContextMenu name="УникальныйНомерКонтекстноеМеню" id="201"/>
+							<ExtendedTooltip name="УникальныйНомерРасширеннаяПодсказка" id="202"/>
+						</InputField>
+						<CheckBoxField name="ПодтвержденоПоставщиком" id="215">
+							<DataPath>Объект.ПодтвержденоПоставщиком</DataPath>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ПодтвержденоПоставщикомКонтекстноеМеню" id="216"/>
+							<ExtendedTooltip name="ПодтвержденоПоставщикомРасширеннаяПодсказка" id="217"/>
+						</CheckBoxField>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="Группа4" id="24">
+			<Group>Vertical</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="Группа4ExtendedTooltip" id="119"/>
+			<ChildItems>
+				<Pages name="Группа5" id="25">
+					<PagesRepresentation>TabsOnTop</PagesRepresentation>
+					<ExtendedTooltip name="Группа5ExtendedTooltip" id="120"/>
+					<ChildItems>
+						<Page name="Группа6" id="51">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Сведения о квартире</v8:content>
+								</v8:item>
+							</Title>
+							<ExtendedTooltip name="Группа6ExtendedTooltip" id="121"/>
+							<ChildItems>
+								<Table name="СведенияОКвартире" id="26">
+									<AutoInsertNewRow>true</AutoInsertNewRow>
+									<EnableStartDrag>true</EnableStartDrag>
+									<EnableDrag>true</EnableDrag>
+									<FileDragMode>AsFile</FileDragMode>
+									<DataPath>СведенияОКвартире</DataPath>
+									<SearchStringLocation>None</SearchStringLocation>
+									<ViewStatusLocation>None</ViewStatusLocation>
+									<SearchControlLocation>None</SearchControlLocation>
+									<AutoRefresh>false</AutoRefresh>
+									<AutoRefreshPeriod>2</AutoRefreshPeriod>
+									<Period>
+										<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+										<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+										<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+									</Period>
+									<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+									<RestoreCurrentRow>false</RestoreCurrentRow>
+									<TopLevelParent xsi:nil="true"/>
+									<ShowRoot>true</ShowRoot>
+									<AllowRootChoice>false</AllowRootChoice>
+									<UpdateOnDataChange>Auto</UpdateOnDataChange>
+									<AllowGettingCurrentRowURL>true</AllowGettingCurrentRowURL>
+									<ContextMenu name="СведенияОКвартиреКонтекстноеМеню" id="27"/>
+									<AutoCommandBar name="СведенияОКвартиреКоманднаяПанель" id="28">
+										<Autofill>false</Autofill>
+										<ChildItems>
+											<Button name="СведенияОКвартиреДобавить" id="52">
+												<Type>CommandBarButton</Type>
+												<Representation>Picture</Representation>
+												<CommandName>Form.Item.СведенияОКвартире.StandardCommand.Create</CommandName>
+												<ExtendedTooltip name="СведенияОКвартиреДобавитьExtendedTooltip" id="122"/>
+											</Button>
+											<Button name="СведенияОКвартиреСкопировать" id="53">
+												<Type>CommandBarButton</Type>
+												<CommandName>Form.Item.СведенияОКвартире.StandardCommand.Copy</CommandName>
+												<ExtendedTooltip name="СведенияОКвартиреСкопироватьExtendedTooltip" id="123"/>
+											</Button>
+											<Button name="СведенияОКвартиреИзменить" id="54">
+												<Type>CommandBarButton</Type>
+												<CommandName>Form.Item.СведенияОКвартире.StandardCommand.Change</CommandName>
+												<ExtendedTooltip name="СведенияОКвартиреИзменитьExtendedTooltip" id="124"/>
+											</Button>
+											<Button name="СведенияОКвартиреУдалить" id="55">
+												<Type>CommandBarButton</Type>
+												<CommandName>Form.Item.СведенияОКвартире.StandardCommand.Delete</CommandName>
+												<ExtendedTooltip name="СведенияОКвартиреУдалитьExtendedTooltip" id="125"/>
+											</Button>
+											<Button name="СведенияОКвартиреУстановитьИнтервал" id="94">
+												<Type>CommandBarButton</Type>
+												<CommandName>Form.Item.СведенияОКвартире.StandardCommand.SetDateInterval</CommandName>
+												<ExtendedTooltip name="СведенияОКвартиреУстановитьИнтервалExtendedTooltip" id="126"/>
+											</Button>
+											<Button name="СведенияОКвартиреНайти" id="56">
+												<Type>CommandBarButton</Type>
+												<CommandName>Form.Item.СведенияОКвартире.StandardCommand.Find</CommandName>
+												<ExtendedTooltip name="СведенияОКвартиреНайтиExtendedTooltip" id="127"/>
+											</Button>
+											<Button name="СведенияОКвартиреОтменитьПоиск" id="57">
+												<Type>CommandBarButton</Type>
+												<CommandName>Form.Item.СведенияОКвартире.StandardCommand.CancelSearch</CommandName>
+												<ExtendedTooltip name="СведенияОКвартиреОтменитьПоискExtendedTooltip" id="128"/>
+											</Button>
+											<Button name="СведенияОКвартиреНастройкаСписка" id="95">
+												<Type>CommandBarButton</Type>
+												<CommandName>Form.Item.СведенияОКвартире.StandardCommand.ListSettings</CommandName>
+												<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
+												<ExtendedTooltip name="СведенияОКвартиреНастройкаСпискаExtendedTooltip" id="129"/>
+											</Button>
+											<Button name="СведенияОКвартиреОбновить" id="96">
+												<Type>CommandBarButton</Type>
+												<CommandName>Form.Item.СведенияОКвартире.StandardCommand.Refresh</CommandName>
+												<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
+												<ExtendedTooltip name="СведенияОКвартиреОбновитьExtendedTooltip" id="130"/>
+											</Button>
+										</ChildItems>
+									</AutoCommandBar>
+									<ExtendedTooltip name="СведенияОКвартиреExtendedTooltip" id="131"/>
+									<SearchStringAddition name="СведенияОКвартиреСтрокаПоиска" id="167">
+										<AdditionSource>
+											<Item>СведенияОКвартире</Item>
+											<Type>SearchStringRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="СведенияОКвартиреСтрокаПоискаКонтекстноеМеню" id="168"/>
+										<ExtendedTooltip name="СведенияОКвартиреСтрокаПоискаРасширеннаяПодсказка" id="169"/>
+									</SearchStringAddition>
+									<ViewStatusAddition name="СведенияОКвартиреСостояниеПросмотра" id="170">
+										<AdditionSource>
+											<Item>СведенияОКвартире</Item>
+											<Type>ViewStatusRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="СведенияОКвартиреСостояниеПросмотраКонтекстноеМеню" id="171"/>
+										<ExtendedTooltip name="СведенияОКвартиреСостояниеПросмотраРасширеннаяПодсказка" id="172"/>
+									</ViewStatusAddition>
+									<SearchControlAddition name="СведенияОКвартиреУправлениеПоиском" id="173">
+										<AdditionSource>
+											<Item>СведенияОКвартире</Item>
+											<Type>SearchControl</Type>
+										</AdditionSource>
+										<ContextMenu name="СведенияОКвартиреУправлениеПоискомКонтекстноеМеню" id="174"/>
+										<ExtendedTooltip name="СведенияОКвартиреУправлениеПоискомРасширеннаяПодсказка" id="175"/>
+									</SearchControlAddition>
+									<Events>
+										<Event name="OnEditEnd">СведенияОКвартиреПриОкончанииРедактирования</Event>
+										<Event name="BeforeAddRow">СведенияОКвартиреПередНачаломДобавления</Event>
+										<Event name="OnChange">СведенияОКвартиреПриИзменении</Event>
+									</Events>
+									<ChildItems>
+										<InputField name="СведенияОКвартиреПериод" id="29">
+											<DataPath>СведенияОКвартире.Period</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="СведенияОКвартиреПериодКонтекстноеМеню" id="30"/>
+											<ExtendedTooltip name="СведенияОКвартиреПериодExtendedTooltip" id="132"/>
+										</InputField>
+										<InputField name="СведенияОКвартиреКвартира" id="31">
+											<DataPath>СведенияОКвартире.Квартира</DataPath>
+											<Visible>false</Visible>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="СведенияОКвартиреКвартираКонтекстноеМеню" id="32"/>
+											<ExtendedTooltip name="СведенияОКвартиреКвартираExtendedTooltip" id="133"/>
+										</InputField>
+										<InputField name="СведенияОКвартиреОбщаяПлощадь" id="33">
+											<DataPath>СведенияОКвартире.ОбщаяПлощадь</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="СведенияОКвартиреОбщаяПлощадьКонтекстноеМеню" id="34"/>
+											<ExtendedTooltip name="СведенияОКвартиреОбщаяПлощадьExtendedTooltip" id="134"/>
+										</InputField>
+										<InputField name="СведенияОКвартиреЖилаяПлощадь" id="35">
+											<DataPath>СведенияОКвартире.ЖилаяПлощадь</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="СведенияОКвартиреЖилаяПлощадьКонтекстноеМеню" id="36"/>
+											<ExtendedTooltip name="СведенияОКвартиреЖилаяПлощадьExtendedTooltip" id="135"/>
+										</InputField>
+										<InputField name="СведенияОКвартиреМОП" id="37">
+											<DataPath>СведенияОКвартире.МОП</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="СведенияОКвартиреМОПКонтекстноеМеню" id="38"/>
+											<ExtendedTooltip name="СведенияОКвартиреМОПExtendedTooltip" id="136"/>
+										</InputField>
+										<InputField name="СведенияОКвартиреОтапливаемаяПлощадь" id="39">
+											<DataPath>СведенияОКвартире.ОтапливаемаяПлощадь</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="СведенияОКвартиреОтапливаемаяПлощадьКонтекстноеМеню" id="40"/>
+											<ExtendedTooltip name="СведенияОКвартиреОтапливаемаяПлощадьExtendedTooltip" id="137"/>
+										</InputField>
+										<InputField name="СведенияОКвартиреСовокупнаяПлощадь" id="41">
+											<DataPath>СведенияОКвартире.СовокупнаяПлощадь</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="СведенияОКвартиреСовокупнаяПлощадьКонтекстноеМеню" id="42"/>
+											<ExtendedTooltip name="СведенияОКвартиреСовокупнаяПлощадьExtendedTooltip" id="138"/>
+										</InputField>
+										<InputField name="СведенияОКвартиреТипКвартиры" id="43">
+											<DataPath>СведенияОКвартире.ТипКвартиры</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="СведенияОКвартиреТипКвартирыКонтекстноеМеню" id="44"/>
+											<ExtendedTooltip name="СведенияОКвартиреТипКвартирыExtendedTooltip" id="139"/>
+										</InputField>
+										<InputField name="СведенияОКвартиреСтатусКвартиры" id="45">
+											<DataPath>СведенияОКвартире.СтатусКвартиры</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="СведенияОКвартиреСтатусКвартирыКонтекстноеМеню" id="46"/>
+											<ExtendedTooltip name="СведенияОКвартиреСтатусКвартирыExtendedTooltip" id="140"/>
+										</InputField>
+										<InputField name="СведенияОКвартиреТипПлиты" id="47">
+											<DataPath>СведенияОКвартире.ТипПлиты</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="СведенияОКвартиреТипПлитыКонтекстноеМеню" id="48"/>
+											<ExtendedTooltip name="СведенияОКвартиреТипПлитыExtendedTooltip" id="141"/>
+										</InputField>
+										<InputField name="СведенияОКвартиреТипЗапирающегоУстройства" id="49">
+											<DataPath>СведенияОКвартире.ТипЗапирающегоУстройства</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="СведенияОКвартиреТипЗапирающегоУстройстваКонтекстноеМеню" id="50"/>
+											<ExtendedTooltip name="СведенияОКвартиреТипЗапирающегоУстройстваExtendedTooltip" id="142"/>
+										</InputField>
+										<CheckBoxField name="СведенияОКвартиреЖилоеПомещениеСпециализированногоЖилищногоФонда" id="105">
+											<DataPath>СведенияОКвартире.ЖилоеПомещениеСпециализированногоЖилищногоФонда</DataPath>
+											<CheckBoxType>Auto</CheckBoxType>
+											<ContextMenu name="СведенияОКвартиреЖилоеПомещениеСпециализированногоЖилищногоФондаКонтекстноеМеню" id="106"/>
+											<ExtendedTooltip name="СведенияОКвартиреЖилоеПомещениеСпециализированногоЖилищногоФондаExtendedTooltip" id="143"/>
+										</CheckBoxField>
+										<LabelField name="СведенияОКвартиреПлощадьОДНСОИЭлектроснаб" id="209">
+											<DataPath>СведенияОКвартире.ПлощадьОДНСОИЭлектроснаб</DataPath>
+											<ContextMenu name="СведенияОКвартиреПлощадьОДНСОИЭлектроснабКонтекстноеМеню" id="210"/>
+											<ExtendedTooltip name="СведенияОКвартиреПлощадьОДНСОИЭлектроснабРасширеннаяПодсказка" id="211"/>
+										</LabelField>
+										<LabelField name="СведенияОКвартиреПлощадьОДНСОИВодоснаб" id="212">
+											<DataPath>СведенияОКвартире.ПлощадьОДНСОИВодоснаб</DataPath>
+											<ContextMenu name="СведенияОКвартиреПлощадьОДНСОИВодоснабКонтекстноеМеню" id="213"/>
+											<ExtendedTooltip name="СведенияОКвартиреПлощадьОДНСОИВодоснабРасширеннаяПодсказка" id="214"/>
+										</LabelField>
+										<LabelField name="СведенияОКвартиреВысотаПотолков" id="218">
+											<DataPath>СведенияОКвартире.ВысотаПотолков</DataPath>
+											<ContextMenu name="СведенияОКвартиреВысотаПотолковКонтекстноеМеню" id="219"/>
+											<ExtendedTooltip name="СведенияОКвартиреВысотаПотолковРасширеннаяПодсказка" id="220"/>
+										</LabelField>
+									</ChildItems>
+								</Table>
+							</ChildItems>
+						</Page>
+						<Page name="Группа7" id="58">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Комнаты</v8:content>
+								</v8:item>
+							</Title>
+							<ExtendedTooltip name="Группа7ExtendedTooltip" id="144"/>
+							<ChildItems>
+								<Table name="КомнатыКвартиры" id="59">
+									<Representation>List</Representation>
+									<UseAlternationRowColor>true</UseAlternationRowColor>
+									<AutoInsertNewRow>true</AutoInsertNewRow>
+									<EnableStartDrag>true</EnableStartDrag>
+									<EnableDrag>true</EnableDrag>
+									<FileDragMode>AsFile</FileDragMode>
+									<DataPath>КомнатыКвартиры</DataPath>
+									<RowPictureDataPath>КомнатыКвартиры.НомерКартинки</RowPictureDataPath>
+									<RowsPicture>
+										<xr:Abs>RowsPicture.png</xr:Abs>
+										<xr:LoadTransparent>false</xr:LoadTransparent>
+									</RowsPicture>
+									<SearchStringLocation>None</SearchStringLocation>
+									<ViewStatusLocation>None</ViewStatusLocation>
+									<SearchControlLocation>None</SearchControlLocation>
+									<RowFilter xsi:nil="true"/>
+									<ContextMenu name="КомнатыКвартирыКонтекстноеМеню" id="60"/>
+									<AutoCommandBar name="КомнатыКвартирыКоманднаяПанель" id="61">
+										<Autofill>false</Autofill>
+										<ChildItems>
+											<Button name="Добавить" id="99">
+												<Type>CommandBarButton</Type>
+												<Representation>Picture</Representation>
+												<CommandName>Form.Item.КомнатыКвартиры.StandardCommand.Add</CommandName>
+												<ExtendedTooltip name="ДобавитьExtendedTooltip" id="145"/>
+											</Button>
+											<Button name="КомнатыКвартирыСкопировать" id="100">
+												<Type>CommandBarButton</Type>
+												<CommandName>Form.Item.КомнатыКвартиры.StandardCommand.Copy</CommandName>
+												<ExtendedTooltip name="КомнатыКвартирыСкопироватьExtendedTooltip" id="146"/>
+											</Button>
+											<Button name="КомнатыКвартирыИзменить" id="101">
+												<Type>CommandBarButton</Type>
+												<CommandName>Form.Item.КомнатыКвартиры.StandardCommand.Change</CommandName>
+												<ExtendedTooltip name="КомнатыКвартирыИзменитьExtendedTooltip" id="147"/>
+											</Button>
+											<Button name="КомнатыКвартирыУдалить" id="102">
+												<Type>CommandBarButton</Type>
+												<CommandName>Form.Item.КомнатыКвартиры.StandardCommand.Delete</CommandName>
+												<Picture>
+													<xr:Ref>StdPicture.MarkToDelete</xr:Ref>
+													<xr:LoadTransparent>true</xr:LoadTransparent>
+												</Picture>
+												<ExtendedTooltip name="КомнатыКвартирыУдалитьExtendedTooltip" id="148"/>
+											</Button>
+											<Button name="КомнатыКвартирыНайти" id="103">
+												<Type>CommandBarButton</Type>
+												<CommandName>Form.Item.КомнатыКвартиры.StandardCommand.Find</CommandName>
+												<ExtendedTooltip name="КомнатыКвартирыНайтиExtendedTooltip" id="149"/>
+											</Button>
+											<Button name="КомнатыКвартирыНастройкаСписка" id="74">
+												<Type>CommandBarButton</Type>
+												<CommandName>59:14559f7c-853c-42a4-9ea1-01546107747b</CommandName>
+												<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
+												<ExtendedTooltip name="КомнатыКвартирыНастройкаСпискаExtendedTooltip" id="150"/>
+											</Button>
+											<Button name="КомнатыКвартирыОтменитьПоиск" id="104">
+												<Type>CommandBarButton</Type>
+												<Representation>Picture</Representation>
+												<CommandName>Form.Item.КомнатыКвартиры.StandardCommand.CancelSearch</CommandName>
+												<ExtendedTooltip name="КомнатыКвартирыОтменитьПоискExtendedTooltip" id="151"/>
+											</Button>
+											<Button name="КомнатыКвартирыОбновить" id="75">
+												<Type>CommandBarButton</Type>
+												<Representation>Picture</Representation>
+												<CommandName>Form.Command.Обновить</CommandName>
+												<Picture>
+													<xr:Ref>StdPicture.Refresh</xr:Ref>
+													<xr:LoadTransparent>true</xr:LoadTransparent>
+												</Picture>
+												<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
+												<ExtendedTooltip name="КомнатыКвартирыОбновитьExtendedTooltip" id="152"/>
+											</Button>
+											<Popup name="КомнатыКвартирыГруппа1" id="76">
+												<Title>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Перейти</v8:content>
+													</v8:item>
+												</Title>
+												<ExtendedTooltip name="КомнатыКвартирыГруппа1ExtendedTooltip" id="153"/>
+												<ChildItems>
+													<Button name="КомнатыКвартирыРегистрСведенийбит_СведенияОКомнатеОткрытьПоЗначениюКомната" id="77">
+														<Type>CommandBarButton</Type>
+														<CommandName>Form.Command.КомнатыКвартирыРегистрСведенийбит_СведенияОКомнатеОткрытьПоЗначениюКомната</CommandName>
+														<Title>
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>Сведения о комнате</v8:content>
+															</v8:item>
+														</Title>
+														<ExtendedTooltip name="КомнатыКвартирыРегистрСведенийбит_СведенияОКомнатеОткрытьПоЗначениюКомнатаExtendedTooltip" id="154"/>
+													</Button>
+												</ChildItems>
+											</Popup>
+										</ChildItems>
+									</AutoCommandBar>
+									<ExtendedTooltip name="КомнатыКвартирыExtendedTooltip" id="155"/>
+									<SearchStringAddition name="КомнатыКвартирыСтрокаПоиска" id="176">
+										<AdditionSource>
+											<Item>КомнатыКвартиры</Item>
+											<Type>SearchStringRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="КомнатыКвартирыСтрокаПоискаКонтекстноеМеню" id="177"/>
+										<ExtendedTooltip name="КомнатыКвартирыСтрокаПоискаРасширеннаяПодсказка" id="178"/>
+									</SearchStringAddition>
+									<ViewStatusAddition name="КомнатыКвартирыСостояниеПросмотра" id="179">
+										<AdditionSource>
+											<Item>КомнатыКвартиры</Item>
+											<Type>ViewStatusRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="КомнатыКвартирыСостояниеПросмотраКонтекстноеМеню" id="180"/>
+										<ExtendedTooltip name="КомнатыКвартирыСостояниеПросмотраРасширеннаяПодсказка" id="181"/>
+									</ViewStatusAddition>
+									<SearchControlAddition name="КомнатыКвартирыУправлениеПоиском" id="182">
+										<AdditionSource>
+											<Item>КомнатыКвартиры</Item>
+											<Type>SearchControl</Type>
+										</AdditionSource>
+										<ContextMenu name="КомнатыКвартирыУправлениеПоискомКонтекстноеМеню" id="183"/>
+										<ExtendedTooltip name="КомнатыКвартирыУправлениеПоискомРасширеннаяПодсказка" id="184"/>
+									</SearchControlAddition>
+									<Events>
+										<Event name="OnEditEnd">КомнатыКвартирыПриОкончанииРедактирования</Event>
+										<Event name="BeforeAddRow">КомнатыКвартирыПередНачаломДобавления</Event>
+										<Event name="BeforeDeleteRow">КомнатыКвартирыПередУдалением</Event>
+									</Events>
+									<ChildItems>
+										<InputField name="КомнатыКвартирыСсылка" id="97">
+											<DataPath>КомнатыКвартиры.Ссылка</DataPath>
+											<Visible>false</Visible>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="КомнатыКвартирыСсылкаКонтекстноеМеню" id="98"/>
+											<ExtendedTooltip name="КомнатыКвартирыСсылкаExtendedTooltip" id="156"/>
+										</InputField>
+										<InputField name="КомнатыКвартирыНаименование" id="62">
+											<DataPath>КомнатыКвартиры.Наименование</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Комната</v8:content>
+												</v8:item>
+											</Title>
+											<ChoiceButton>false</ChoiceButton>
+											<ClearButton>false</ClearButton>
+											<SpinButton>false</SpinButton>
+											<OpenButton>true</OpenButton>
+											<ChoiceListButton>false</ChoiceListButton>
+											<ContextMenu name="КомнатыКвартирыНаименованиеКонтекстноеМеню" id="63"/>
+											<ExtendedTooltip name="КомнатыКвартирыНаименованиеExtendedTooltip" id="157"/>
+											<Events>
+												<Event name="Opening">КомнатыКвартирыНаименованиеОткрытие</Event>
+											</Events>
+										</InputField>
+										<LabelField name="КомнатыКвартирыНомерКомнаты" id="68">
+											<DataPath>КомнатыКвартиры.НомерКомнаты</DataPath>
+											<Enabled>false</Enabled>
+											<ContextMenu name="КомнатыКвартирыНомерКомнатыКонтекстноеМеню" id="69"/>
+											<ExtendedTooltip name="КомнатыКвартирыНомерКомнатыExtendedTooltip" id="158"/>
+										</LabelField>
+										<InputField name="КомнатыКвартирыПлощадь" id="90">
+											<DataPath>КомнатыКвартиры.Площадь</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Площадь,м2</v8:content>
+												</v8:item>
+											</Title>
+											<ChoiceButton>false</ChoiceButton>
+											<ContextMenu name="КомнатыКвартирыПлощадьКонтекстноеМеню" id="91"/>
+											<ExtendedTooltip name="КомнатыКвартирыПлощадьExtendedTooltip" id="159"/>
+											<Events>
+												<Event name="OnChange">КомнатыКвартирыПлощадьПриИзменении</Event>
+											</Events>
+										</InputField>
+										<InputField name="КомнатыКвартирыВысота" id="88">
+											<DataPath>КомнатыКвартиры.Высота</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Высота,м</v8:content>
+												</v8:item>
+											</Title>
+											<ChoiceButton>false</ChoiceButton>
+											<ContextMenu name="КомнатыКвартирыВысотаКонтекстноеМеню" id="89"/>
+											<ExtendedTooltip name="КомнатыКвартирыВысотаExtendedTooltip" id="160"/>
+											<Events>
+												<Event name="OnChange">КомнатыКвартирыВысотаПриИзменении</Event>
+											</Events>
+										</InputField>
+										<LabelField name="КомнатыКвартирыВладелец" id="92">
+											<DataPath>КомнатыКвартиры.Владелец</DataPath>
+											<Visible>false</Visible>
+											<ContextMenu name="КомнатыКвартирыВладелецКонтекстноеМеню" id="93"/>
+											<ExtendedTooltip name="КомнатыКвартирыВладелецExtendedTooltip" id="161"/>
+										</LabelField>
+									</ChildItems>
+								</Table>
+								<UsualGroup name="Группа8" id="78">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Информация по площадям</v8:content>
+										</v8:item>
+									</Title>
+									<Group>Vertical</Group>
+									<ExtendedTooltip name="Группа8ExtendedTooltip" id="162"/>
+									<ChildItems>
+										<Table name="ТабличноеПолеПлощадей" id="79">
+											<Representation>List</Representation>
+											<AutoInsertNewRow>true</AutoInsertNewRow>
+											<EnableStartDrag>true</EnableStartDrag>
+											<EnableDrag>true</EnableDrag>
+											<FileDragMode>AsFile</FileDragMode>
+											<DataPath>ТабличноеПолеПлощадей</DataPath>
+											<SearchStringLocation>None</SearchStringLocation>
+											<ViewStatusLocation>None</ViewStatusLocation>
+											<SearchControlLocation>None</SearchControlLocation>
+											<RowFilter xsi:nil="true"/>
+											<ContextMenu name="ТабличноеПолеПлощадейКонтекстноеМеню" id="80"/>
+											<AutoCommandBar name="ТабличноеПолеПлощадейКоманднаяПанель" id="81">
+												<Autofill>false</Autofill>
+											</AutoCommandBar>
+											<ExtendedTooltip name="ТабличноеПолеПлощадейExtendedTooltip" id="163"/>
+											<SearchStringAddition name="ТабличноеПолеПлощадейСтрокаПоиска" id="185">
+												<AdditionSource>
+													<Item>ТабличноеПолеПлощадей</Item>
+													<Type>SearchStringRepresentation</Type>
+												</AdditionSource>
+												<ContextMenu name="ТабличноеПолеПлощадейСтрокаПоискаКонтекстноеМеню" id="186"/>
+												<ExtendedTooltip name="ТабличноеПолеПлощадейСтрокаПоискаРасширеннаяПодсказка" id="187"/>
+											</SearchStringAddition>
+											<ViewStatusAddition name="ТабличноеПолеПлощадейСостояниеПросмотра" id="188">
+												<AdditionSource>
+													<Item>ТабличноеПолеПлощадей</Item>
+													<Type>ViewStatusRepresentation</Type>
+												</AdditionSource>
+												<ContextMenu name="ТабличноеПолеПлощадейСостояниеПросмотраКонтекстноеМеню" id="189"/>
+												<ExtendedTooltip name="ТабличноеПолеПлощадейСостояниеПросмотраРасширеннаяПодсказка" id="190"/>
+											</ViewStatusAddition>
+											<SearchControlAddition name="ТабличноеПолеПлощадейУправлениеПоиском" id="191">
+												<AdditionSource>
+													<Item>ТабличноеПолеПлощадей</Item>
+													<Type>SearchControl</Type>
+												</AdditionSource>
+												<ContextMenu name="ТабличноеПолеПлощадейУправлениеПоискомКонтекстноеМеню" id="192"/>
+												<ExtendedTooltip name="ТабличноеПолеПлощадейУправлениеПоискомРасширеннаяПодсказка" id="193"/>
+											</SearchControlAddition>
+											<ChildItems>
+												<InputField name="ТабличноеПолеПлощадейВидыПлощадей" id="82">
+													<DataPath>ТабличноеПолеПлощадей.ВидыПлощадей</DataPath>
+													<Enabled>false</Enabled>
+													<EditMode>EnterOnInput</EditMode>
+													<ContextMenu name="ТабличноеПолеПлощадейВидыПлощадейКонтекстноеМеню" id="83"/>
+													<ExtendedTooltip name="ТабличноеПолеПлощадейВидыПлощадейExtendedTooltip" id="164"/>
+												</InputField>
+												<InputField name="ТабличноеПолеПлощадейПлощадиКвартиры" id="84">
+													<DataPath>ТабличноеПолеПлощадей.ПлощадиКвартиры</DataPath>
+													<Enabled>false</Enabled>
+													<EditMode>EnterOnInput</EditMode>
+													<ContextMenu name="ТабличноеПолеПлощадейПлощадиКвартирыКонтекстноеМеню" id="85"/>
+													<ExtendedTooltip name="ТабличноеПолеПлощадейПлощадиКвартирыExtendedTooltip" id="165"/>
+												</InputField>
+												<InputField name="ТабличноеПолеПлощадейПлощадиКомнат" id="86">
+													<DataPath>ТабличноеПолеПлощадей.ПлощадиКомнат</DataPath>
+													<Enabled>false</Enabled>
+													<EditMode>EnterOnInput</EditMode>
+													<ContextMenu name="ТабличноеПолеПлощадейПлощадиКомнатКонтекстноеМеню" id="87"/>
+													<ExtendedTooltip name="ТабличноеПолеПлощадейПлощадиКомнатExtendedTooltip" id="166"/>
+												</InputField>
+											</ChildItems>
+										</Table>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</Page>
+					</ChildItems>
+				</Pages>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:CatalogObject.бит_Квартиры</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="НаДату" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>На дату</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:dateTime</v8:Type>
+				<v8:DateQualifiers>
+					<v8:DateFractions>Date</v8:DateFractions>
+				</v8:DateQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="СведенияОКвартире" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сведения о квартире</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>true</ManualQuery>
+				<DynamicDataRead>true</DynamicDataRead>
+				<QueryText>ВЫБРАТЬ
+	РегистрСведенийбит_СведенияОКвартире.Период,
+	РегистрСведенийбит_СведенияОКвартире.Квартира,
+	РегистрСведенийбит_СведенияОКвартире.ОбщаяПлощадь,
+	РегистрСведенийбит_СведенияОКвартире.ЖилаяПлощадь,
+	РегистрСведенийбит_СведенияОКвартире.МОП,
+	РегистрСведенийбит_СведенияОКвартире.ОтапливаемаяПлощадь,
+	РегистрСведенийбит_СведенияОКвартире.СовокупнаяПлощадь,
+	РегистрСведенийбит_СведенияОКвартире.ТипКвартиры,
+	РегистрСведенийбит_СведенияОКвартире.СтатусКвартиры,
+	РегистрСведенийбит_СведенияОКвартире.ТипПлиты,
+	РегистрСведенийбит_СведенияОКвартире.ТипЗапирающегоУстройства,
+	РегистрСведенийбит_СведенияОКвартире.ЖилоеПомещениеСпециализированногоЖилищногоФонда,
+	РегистрСведенийбит_СведенияОКвартире.ПлощадьОДНСОИЭлектроснаб,
+	РегистрСведенийбит_СведенияОКвартире.ПлощадьОДНСОИВодоснаб,
+	РегистрСведенийбит_СведенияОКвартире.ВысотаПотолков
+ИЗ
+	РегистрСведений.бит_СведенияОКвартире КАК РегистрСведенийбит_СведенияОКвартире</QueryText>
+				<MainTable>InformationRegister.бит_СведенияОКвартире</MainTable>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+		<Attribute name="ТабличноеПолеПлощадей" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Табличное поле площадей</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="ВидыПлощадей" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Виды площадей</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ПлощадиКвартиры" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Квартира</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ПлощадиКомнат" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Площади комнат</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="мКэшЗначений" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>М кэш значений</v8:content>
+				</v8:item>
+			</Title>
+			<Type/>
+		</Attribute>
+		<Attribute name="КомнатыКвартиры" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Комнаты квартиры</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Наименование" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Наименование</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>25</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="НомерКомнаты" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Номер комнаты</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>10</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="Площадь" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Площадь</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>6</v8:Digits>
+							<v8:FractionDigits>2</v8:FractionDigits>
+							<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="Высота" id="4">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Высота</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>6</v8:Digits>
+							<v8:FractionDigits>2</v8:FractionDigits>
+							<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="Владелец" id="5">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Владелец</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.бит_ЛицевыеСчета</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Ссылка" id="6">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Ссылка</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.бит_Комнаты</v8:Type>
+					</Type>
+				</Column>
+				<Column name="НомерКартинки" id="7">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Номер картинки</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>1</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="Обновить" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обновить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обновить</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Обновить</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="КомнатыКвартирыРегистрСведенийбит_СведенияОКомнатеОткрытьПоЗначениюКомната" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Комнаты квартиры регистр сведенийбит сведения о комнате открыть по значению комната</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Комнаты квартиры регистр сведенийбит сведения о комнате открыть по значению комната</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>КомнатыКвартирыРегистрСведенийбит_СведенияОКомнатеОткрытьПоЗначениюКомната</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+	</Commands>
+	<CommandInterface>
+		<NavigationPanel>
+			<Item>
+				<Command>InformationRegister.бит_си_НастройкиИсточников.StandardCommand.OpenByValue.Объект</Command>
+				<Type>Auto</Type>
+				<DefaultVisible>false</DefaultVisible>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+			<Item>
+				<Command>InformationRegister.бит_icq_Пользователи.StandardCommand.OpenByValue.ОбъектПользователя</Command>
+				<Type>Auto</Type>
+				<DefaultVisible>false</DefaultVisible>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+			<Item>
+				<Command>InformationRegister.бит_си_СвязанныеОбъекты.StandardCommand.OpenByValue.Объект</Command>
+				<Type>Auto</Type>
+				<DefaultVisible>false</DefaultVisible>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+		</NavigationPanel>
+		<CommandBar>
+			<Item>
+				<Command>DataProcessor.бит_си_ИсточникСправочникСтатьи.Command.СправочнаяИнформация</Command>
+				<Type>Added</Type>
+				<Attribute>Объект.Owner</Attribute>
+				<CommandGroup>FormCommandBarImportant</CommandGroup>
+				<DefaultVisible>false</DefaultVisible>
+			</Item>
+		</CommandBar>
+	</CommandInterface>
+</Form>

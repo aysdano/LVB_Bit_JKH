@@ -1,0 +1,97 @@
+﻿<package xmlns="http://v8.1c.ru/8.1/xdto" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" targetNamespace="http://bit-jkh.ru/functional/">
+	<objectType name="Здание">
+		<property name="Идентификатор" type="xs:string" lowerBound="0"/>
+		<property name="Номер" type="xs:string" lowerBound="0" form="Element"/>
+		<property name="ГодПостройки" type="xs:int" lowerBound="0"/>
+		<property name="Серия" type="xs:string" lowerBound="0"/>
+		<property name="Этажность" type="xs:int" lowerBound="0"/>
+		<property name="КолВоКвартир" type="xs:int" lowerBound="0"/>
+		<property name="ОбщаяПлощадь" type="xs:decimal" lowerBound="0"/>
+		<property name="ПлощадьЖилыхПомещений" type="xs:decimal" lowerBound="0"/>
+		<property name="Адрес" type="xs:string" lowerBound="0"/>
+		<property name="Прочее" type="xs:string" lowerBound="0"/>
+	</objectType>
+	<objectType name="Квартира">
+		<property name="ИдентификаторЗдания" type="xs:string" lowerBound="0"/>
+		<property name="Идентификатор" type="xs:string" lowerBound="0"/>
+		<property name="Номер" type="xs:string" lowerBound="0" form="Element"/>
+	</objectType>
+	<objectType name="ЛицевойСчет">
+		<property name="Идентификатор" type="xs:string" lowerBound="0"/>
+		<property name="ИдентификаторКвартиры" type="xs:string" lowerBound="0"/>
+		<property name="ИдентификаторЗдания" type="xs:string" lowerBound="0"/>
+		<property name="Номер" type="xs:string" lowerBound="0" form="Element"/>
+		<property name="НомерКвартиры" type="xs:string" lowerBound="0" form="Element"/>
+		<property name="НачальноеСальдо" type="xs:decimal" lowerBound="0"/>
+		<property name="СуммаНачислений" type="xs:decimal" lowerBound="0"/>
+		<property name="СуммаОплаты" type="xs:decimal" lowerBound="0"/>
+		<property name="СуммаПени" type="xs:decimal" lowerBound="0"/>
+		<property name="КонечноеСальдо" type="xs:decimal" lowerBound="0"/>
+	</objectType>
+	<objectType name="Услуга">
+		<property name="Идентификатор" type="xs:string" lowerBound="0"/>
+		<property name="Название" type="xs:string" lowerBound="0"/>
+		<property name="ТипУслуги" type="xs:string" lowerBound="0"/>
+	</objectType>
+	<objectType name="УслугаПОЛС">
+		<property name="Идентификатор" type="xs:string" lowerBound="0"/>
+		<property name="Название" type="xs:string" lowerBound="0"/>
+		<property name="ИдентификаторЛС" type="xs:string" lowerBound="0"/>
+		<property name="НомерЛС" type="xs:string" lowerBound="0" form="Element"/>
+		<property name="ТипУслуги" type="xs:string" lowerBound="0"/>
+		<property name="ИдентификаторПоставщика" type="xs:string" lowerBound="0"/>
+		<property name="НазваниеПоставщика" type="xs:string" lowerBound="0"/>
+	</objectType>
+	<objectType name="Счетчик">
+		<property name="Идентификатор" type="xs:string" lowerBound="0"/>
+		<property name="Название" type="xs:string" lowerBound="0"/>
+		<property name="ИдентификаторВладельца" type="xs:string" lowerBound="0"/>
+		<property name="ИдентификаторУслуги" type="xs:string" lowerBound="0"/>
+		<property name="ТипУслуги" type="xs:string" lowerBound="0"/>
+		<property name="ДатаСнятияПоказания" type="xs:string" lowerBound="0"/>
+		<property name="Показания" type="xs:decimal" lowerBound="0"/>
+	</objectType>
+	<objectType name="ОперацияПоЛС">
+		<property name="Идентификатор" type="xs:string" lowerBound="0"/>
+		<property name="ИдентификаторКвартиры" type="xs:string" lowerBound="0"/>
+		<property name="ИдентификаторЗдания" type="xs:string" lowerBound="0"/>
+		<property name="ИдентификаторУслуги" type="xs:string" lowerBound="0"/>
+		<property name="ИдентификаторДокумента" type="xs:string" lowerBound="0"/>
+		<property name="Период" type="xs:date" lowerBound="0"/>
+		<property name="Номер" type="xs:string" lowerBound="0" form="Element"/>
+		<property name="НомерКвартиры" type="xs:string" lowerBound="0" form="Element"/>
+		<property name="ТипОперации" type="xs:string" lowerBound="0"/>
+		<property name="Сумма" type="xs:decimal" lowerBound="0"/>
+	</objectType>
+	<objectType name="ЕПД">
+		<property name="Номер" type="xs:string" lowerBound="0"/>
+		<property name="ИдентификаторЛС" type="xs:string" lowerBound="0"/>
+		<property name="Период" type="xs:date" lowerBound="0"/>
+		<property name="Сумма" type="xs:decimal" lowerBound="0"/>
+		<property name="Вложение" type="xs:base64Binary" lowerBound="0"/>
+	</objectType>
+	<objectType name="СписокЗданий">
+		<property xmlns:d3p1="http://bit-jkh.ru/functional/" name="Здание" type="d3p1:Здание" lowerBound="0" upperBound="-1"/>
+	</objectType>
+	<objectType name="СписокКвартир">
+		<property xmlns:d3p1="http://bit-jkh.ru/functional/" name="Квартира" type="d3p1:Квартира" lowerBound="0" upperBound="-1"/>
+	</objectType>
+	<objectType name="СписокЛицевыхСчетов">
+		<property xmlns:d3p1="http://bit-jkh.ru/functional/" name="ЛицевойСчет" type="d3p1:ЛицевойСчет" lowerBound="0" upperBound="-1"/>
+	</objectType>
+	<objectType name="СписокУслуг">
+		<property xmlns:d3p1="http://bit-jkh.ru/functional/" name="Услуга" type="d3p1:Услуга" lowerBound="0" upperBound="-1"/>
+	</objectType>
+	<objectType name="СписокУслугПОЛС">
+		<property xmlns:d3p1="http://bit-jkh.ru/functional/" name="УслугаПОЛС" type="d3p1:УслугаПОЛС" lowerBound="0" upperBound="-1"/>
+	</objectType>
+	<objectType name="СписокСчетчиков">
+		<property xmlns:d3p1="http://bit-jkh.ru/functional/" name="Счетчик" type="d3p1:Счетчик" lowerBound="0" upperBound="-1"/>
+	</objectType>
+	<objectType name="СписокОперацийПоЛС">
+		<property xmlns:d3p1="http://bit-jkh.ru/functional/" name="ОперацияПоЛС" type="d3p1:ОперацияПоЛС" lowerBound="0" upperBound="-1"/>
+	</objectType>
+	<objectType name="СписокЕПД">
+		<property xmlns:d3p1="http://bit-jkh.ru/functional/" name="ЕПД" type="d3p1:ЕПД" lowerBound="0" upperBound="-1"/>
+	</objectType>
+</package>

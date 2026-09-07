@@ -1,0 +1,559 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.18">
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаОтбор" id="108">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа отбор</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа отбор</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Vertical</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаОтборРасширеннаяПодсказка" id="109"/>
+			<ChildItems>
+				<UsualGroup name="ЛС" id="116">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ЛС</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ЛС</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ЛСРасширеннаяПодсказка" id="117"/>
+					<ChildItems>
+						<CheckBoxField name="ИспользоватьЛицевойСчет" id="113">
+							<DataPath>ИспользоватьЛицевойСчет</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Отбор по Лицевому счету</v8:content>
+								</v8:item>
+							</Title>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ИспользоватьЛицевойСчетКонтекстноеМеню" id="114"/>
+							<ExtendedTooltip name="ИспользоватьЛицевойСчетРасширеннаяПодсказка" id="115"/>
+							<Events>
+								<Event name="OnChange">ИспользоватьЛицевойСчетПриИзменении</Event>
+							</Events>
+						</CheckBoxField>
+						<InputField name="ЛицевойСчет" id="105">
+							<DataPath>ЛицевойСчет</DataPath>
+							<ContextMenu name="ЛицевойСчетКонтекстноеМеню" id="106"/>
+							<ExtendedTooltip name="ЛицевойСчетРасширеннаяПодсказка" id="107"/>
+							<Events>
+								<Event name="OnChange">ЛицевойСчетПриИзменении</Event>
+							</Events>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="Проживающие" id="121">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Проживающие</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Проживающие</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ПроживающиеРасширеннаяПодсказка" id="122"/>
+					<ChildItems>
+						<CheckBoxField name="ИспользоватьПроживающего" id="118">
+							<DataPath>ИспользоватьПроживающего</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Отбор по Проживающему</v8:content>
+								</v8:item>
+							</Title>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ИспользоватьПроживающегоКонтекстноеМеню" id="119"/>
+							<ExtendedTooltip name="ИспользоватьПроживающегоРасширеннаяПодсказка" id="120"/>
+							<Events>
+								<Event name="OnChange">ИспользоватьПроживающегоПриИзменении</Event>
+							</Events>
+						</CheckBoxField>
+						<InputField name="Проживающий" id="110">
+							<DataPath>Проживающий</DataPath>
+							<DropListButton>false</DropListButton>
+							<ChoiceButton>true</ChoiceButton>
+							<ChoiceButtonRepresentation>ShowInInputField</ChoiceButtonRepresentation>
+							<OpenButton>true</OpenButton>
+							<ContextMenu name="ПроживающийКонтекстноеМеню" id="111"/>
+							<ExtendedTooltip name="ПроживающийРасширеннаяПодсказка" id="112"/>
+							<Events>
+								<Event name="OnChange">ПроживающийПриИзменении</Event>
+								<Event name="StartChoice">ПроживающийНачалоВыбора</Event>
+							</Events>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<Pages name="Группа1" id="47">
+			<PagesRepresentation>TabsOnTop</PagesRepresentation>
+			<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="48"/>
+			<ChildItems>
+				<Page name="АктуальныеДокументы" id="51">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Актуальные документы</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Актуальные документы</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="АктуальныеДокументыРасширеннаяПодсказка" id="52"/>
+					<ChildItems>
+						<Table name="Список" id="1">
+							<UseAlternationRowColor>true</UseAlternationRowColor>
+							<EnableStartDrag>true</EnableStartDrag>
+							<DataPath>Список</DataPath>
+							<RowPictureDataPath>Список.DefaultPicture</RowPictureDataPath>
+							<AutoRefresh>false</AutoRefresh>
+							<AutoRefreshPeriod>60</AutoRefreshPeriod>
+							<Period>
+								<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+								<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+								<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+							</Period>
+							<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+							<RestoreCurrentRow>false</RestoreCurrentRow>
+							<TopLevelParent xsi:nil="true"/>
+							<ShowRoot>true</ShowRoot>
+							<AllowRootChoice>false</AllowRootChoice>
+							<UpdateOnDataChange>Auto</UpdateOnDataChange>
+							<AllowGettingCurrentRowURL>true</AllowGettingCurrentRowURL>
+							<ContextMenu name="СписокКонтекстноеМеню" id="2"/>
+							<AutoCommandBar name="СписокКоманднаяПанель" id="3">
+								<ChildItems>
+									<Button name="СписокУстановитьАрихв" id="123">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.УстановитьАрихв</CommandName>
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Поместить выделенные документы в архив</v8:content>
+											</v8:item>
+										</Title>
+										<ExtendedTooltip name="СписокУстановитьАрихвРасширеннаяПодсказка" id="124"/>
+									</Button>
+								</ChildItems>
+							</AutoCommandBar>
+							<ExtendedTooltip name="СписокРасширеннаяПодсказка" id="4"/>
+							<SearchStringAddition name="СписокСтрокаПоиска" id="5">
+								<AdditionSource>
+									<Item>Список</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="СписокСтрокаПоискаКонтекстноеМеню" id="6"/>
+								<ExtendedTooltip name="СписокСтрокаПоискаРасширеннаяПодсказка" id="7"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="СписокСостояниеПросмотра" id="8">
+								<AdditionSource>
+									<Item>Список</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="СписокСостояниеПросмотраКонтекстноеМеню" id="9"/>
+								<ExtendedTooltip name="СписокСостояниеПросмотраРасширеннаяПодсказка" id="10"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="СписокУправлениеПоиском" id="11">
+								<AdditionSource>
+									<Item>Список</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="СписокУправлениеПоискомКонтекстноеМеню" id="12"/>
+								<ExtendedTooltip name="СписокУправлениеПоискомРасширеннаяПодсказка" id="13"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<CheckBoxField name="Списокбит_Архивный" id="102">
+									<DataPath>Список.бит_Архивный</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Архивный</v8:content>
+										</v8:item>
+									</Title>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="Списокбит_АрхивныйКонтекстноеМеню" id="103"/>
+									<ExtendedTooltip name="Списокбит_АрхивныйРасширеннаяПодсказка" id="104"/>
+								</CheckBoxField>
+								<LabelField name="ДокументыНаименование" id="14">
+									<DataPath>Список.Description</DataPath>
+									<ContextMenu name="ДокументыНаименованиеКонтекстноеМеню" id="15"/>
+									<ExtendedTooltip name="ДокументыНаименованиеРасширеннаяПодсказка" id="16"/>
+								</LabelField>
+								<LabelField name="ДокументыНомерДокумента" id="20">
+									<DataPath>Список.НомерДокумента</DataPath>
+									<ContextMenu name="ДокументыНомерДокументаКонтекстноеМеню" id="21"/>
+									<ExtendedTooltip name="ДокументыНомерДокументаРасширеннаяПодсказка" id="22"/>
+								</LabelField>
+								<LabelField name="Документыбит_ЛицевойСчет" id="44">
+									<DataPath>Список.бит_ЛицевойСчет</DataPath>
+									<ContextMenu name="Документыбит_ЛицевойСчетКонтекстноеМеню" id="45"/>
+									<ExtendedTooltip name="Документыбит_ЛицевойСчетРасширеннаяПодсказка" id="46"/>
+								</LabelField>
+								<LabelField name="Документыбит_Проживающий" id="41">
+									<DataPath>Список.бит_Проживающий</DataPath>
+									<ContextMenu name="Документыбит_ПроживающийКонтекстноеМеню" id="42"/>
+									<ExtendedTooltip name="Документыбит_ПроживающийРасширеннаяПодсказка" id="43"/>
+								</LabelField>
+								<LabelField name="ДокументыДатаДокумента" id="23">
+									<DataPath>Список.ДатаДокумента</DataPath>
+									<ContextMenu name="ДокументыДатаДокументаКонтекстноеМеню" id="24"/>
+									<ExtendedTooltip name="ДокументыДатаДокументаРасширеннаяПодсказка" id="25"/>
+								</LabelField>
+								<LabelField name="ДокументыОрганизацияВыдавшаяДокумент" id="26">
+									<DataPath>Список.ОрганизацияВыдавшаяДокумент</DataPath>
+									<ContextMenu name="ДокументыОрганизацияВыдавшаяДокументКонтекстноеМеню" id="27"/>
+									<ExtendedTooltip name="ДокументыОрганизацияВыдавшаяДокументРасширеннаяПодсказка" id="28"/>
+								</LabelField>
+								<LabelField name="Списокбит_ДатаВнесенияДокументов" id="127">
+									<DataPath>Список.бит_ДатаВнесенияДокументов</DataPath>
+									<ContextMenu name="Списокбит_ДатаВнесенияДокументовКонтекстноеМеню" id="128"/>
+									<ExtendedTooltip name="Списокбит_ДатаВнесенияДокументовРасширеннаяПодсказка" id="129"/>
+								</LabelField>
+								<LabelField name="ДокументыВидДокумента" id="29">
+									<DataPath>Список.ВидДокумента</DataPath>
+									<ContextMenu name="ДокументыВидДокументаКонтекстноеМеню" id="30"/>
+									<ExtendedTooltip name="ДокументыВидДокументаРасширеннаяПодсказка" id="31"/>
+								</LabelField>
+								<LabelField name="Документылб_Архив" id="32">
+									<DataPath>Список.лб_Архив</DataPath>
+									<ContextMenu name="Документылб_АрхивКонтекстноеМеню" id="33"/>
+									<ExtendedTooltip name="Документылб_АрхивРасширеннаяПодсказка" id="34"/>
+								</LabelField>
+								<CheckBoxField name="Документылб_ИспользоватьАрхивДляФЛС" id="35">
+									<DataPath>Список.лб_ИспользоватьАрхивДляФЛС</DataPath>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="Документылб_ИспользоватьАрхивДляФЛСКонтекстноеМеню" id="36"/>
+									<ExtendedTooltip name="Документылб_ИспользоватьАрхивДляФЛСРасширеннаяПодсказка" id="37"/>
+								</CheckBoxField>
+								<LabelField name="Документылб_НомерЛС10" id="38">
+									<DataPath>Список.лб_НомерЛС10</DataPath>
+									<ContextMenu name="Документылб_НомерЛС10КонтекстноеМеню" id="39"/>
+									<ExtendedTooltip name="Документылб_НомерЛС10РасширеннаяПодсказка" id="40"/>
+								</LabelField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+				<Page name="АрхивныеДокументы" id="49">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Архивные документы</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Архивные документы</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="АрхивныеДокументыРасширеннаяПодсказка" id="50"/>
+					<ChildItems>
+						<Table name="СписокАрхивный" id="53">
+							<UseAlternationRowColor>true</UseAlternationRowColor>
+							<EnableStartDrag>true</EnableStartDrag>
+							<DataPath>СписокАрхивный</DataPath>
+							<RowPictureDataPath>СписокАрхивный.DefaultPicture</RowPictureDataPath>
+							<AutoRefresh>false</AutoRefresh>
+							<AutoRefreshPeriod>60</AutoRefreshPeriod>
+							<Period>
+								<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+								<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+								<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+							</Period>
+							<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+							<RestoreCurrentRow>false</RestoreCurrentRow>
+							<TopLevelParent xsi:nil="true"/>
+							<ShowRoot>true</ShowRoot>
+							<AllowRootChoice>false</AllowRootChoice>
+							<UpdateOnDataChange>Auto</UpdateOnDataChange>
+							<AllowGettingCurrentRowURL>true</AllowGettingCurrentRowURL>
+							<ContextMenu name="СписокАрхивныйКонтекстноеМеню" id="54"/>
+							<AutoCommandBar name="СписокАрхивныйКоманднаяПанель" id="55">
+								<ChildItems>
+									<Button name="СписокАрхивныйУстановитьАрихв" id="125">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.УстановитьАрихв</CommandName>
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Вернуть выделенные документы из архива</v8:content>
+											</v8:item>
+										</Title>
+										<ExtendedTooltip name="СписокАрхивныйУстановитьАрихвРасширеннаяПодсказка" id="126"/>
+									</Button>
+								</ChildItems>
+							</AutoCommandBar>
+							<ExtendedTooltip name="СписокАрхивныйРасширеннаяПодсказка" id="56"/>
+							<SearchStringAddition name="СписокАрхивныйСтрокаПоиска" id="57">
+								<AdditionSource>
+									<Item>СписокАрхивный</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="СписокАрхивныйСтрокаПоискаКонтекстноеМеню" id="58"/>
+								<ExtendedTooltip name="СписокАрхивныйСтрокаПоискаРасширеннаяПодсказка" id="59"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="СписокАрхивныйСостояниеПросмотра" id="60">
+								<AdditionSource>
+									<Item>СписокАрхивный</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="СписокАрхивныйСостояниеПросмотраКонтекстноеМеню" id="61"/>
+								<ExtendedTooltip name="СписокАрхивныйСостояниеПросмотраРасширеннаяПодсказка" id="62"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="СписокАрхивныйУправлениеПоиском" id="63">
+								<AdditionSource>
+									<Item>СписокАрхивный</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="СписокАрхивныйУправлениеПоискомКонтекстноеМеню" id="64"/>
+								<ExtendedTooltip name="СписокАрхивныйУправлениеПоискомРасширеннаяПодсказка" id="65"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<CheckBoxField name="СписокАрхивныйбит_Архивный" id="99">
+									<DataPath>СписокАрхивный.бит_Архивный</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Архивный</v8:content>
+										</v8:item>
+									</Title>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="СписокАрхивныйбит_АрхивныйКонтекстноеМеню" id="100"/>
+									<ExtendedTooltip name="СписокАрхивныйбит_АрхивныйРасширеннаяПодсказка" id="101"/>
+								</CheckBoxField>
+								<LabelField name="СписокАрхивныйНаименование" id="66">
+									<DataPath>СписокАрхивный.Description</DataPath>
+									<ContextMenu name="СписокАрхивныйНаименованиеКонтекстноеМеню" id="67"/>
+									<ExtendedTooltip name="СписокАрхивныйНаименованиеРасширеннаяПодсказка" id="68"/>
+								</LabelField>
+								<LabelField name="СписокАрхивныйКод" id="69">
+									<DataPath>СписокАрхивный.Code</DataPath>
+									<ContextMenu name="СписокАрхивныйКодКонтекстноеМеню" id="70"/>
+									<ExtendedTooltip name="СписокАрхивныйКодРасширеннаяПодсказка" id="71"/>
+								</LabelField>
+								<LabelField name="СписокАрхивныйНомерДокумента" id="72">
+									<DataPath>СписокАрхивный.НомерДокумента</DataPath>
+									<ContextMenu name="СписокАрхивныйНомерДокументаКонтекстноеМеню" id="73"/>
+									<ExtendedTooltip name="СписокАрхивныйНомерДокументаРасширеннаяПодсказка" id="74"/>
+								</LabelField>
+								<LabelField name="СписокАрхивныйДатаДокумента" id="75">
+									<DataPath>СписокАрхивный.ДатаДокумента</DataPath>
+									<ContextMenu name="СписокАрхивныйДатаДокументаКонтекстноеМеню" id="76"/>
+									<ExtendedTooltip name="СписокАрхивныйДатаДокументаРасширеннаяПодсказка" id="77"/>
+								</LabelField>
+								<LabelField name="СписокАрхивныйбит_ДатаВнесенияДокументов" id="130">
+									<DataPath>СписокАрхивный.бит_ДатаВнесенияДокументов</DataPath>
+									<ContextMenu name="СписокАрхивныйбит_ДатаВнесенияДокументовКонтекстноеМеню" id="131"/>
+									<ExtendedTooltip name="СписокАрхивныйбит_ДатаВнесенияДокументовРасширеннаяПодсказка" id="132"/>
+								</LabelField>
+								<LabelField name="СписокАрхивныйОрганизацияВыдавшаяДокумент" id="78">
+									<DataPath>СписокАрхивный.ОрганизацияВыдавшаяДокумент</DataPath>
+									<ContextMenu name="СписокАрхивныйОрганизацияВыдавшаяДокументКонтекстноеМеню" id="79"/>
+									<ExtendedTooltip name="СписокАрхивныйОрганизацияВыдавшаяДокументРасширеннаяПодсказка" id="80"/>
+								</LabelField>
+								<LabelField name="СписокАрхивныйВидДокумента" id="81">
+									<DataPath>СписокАрхивный.ВидДокумента</DataPath>
+									<ContextMenu name="СписокАрхивныйВидДокументаКонтекстноеМеню" id="82"/>
+									<ExtendedTooltip name="СписокАрхивныйВидДокументаРасширеннаяПодсказка" id="83"/>
+								</LabelField>
+								<LabelField name="СписокАрхивныйлб_Архив" id="84">
+									<DataPath>СписокАрхивный.лб_Архив</DataPath>
+									<ContextMenu name="СписокАрхивныйлб_АрхивКонтекстноеМеню" id="85"/>
+									<ExtendedTooltip name="СписокАрхивныйлб_АрхивРасширеннаяПодсказка" id="86"/>
+								</LabelField>
+								<CheckBoxField name="СписокАрхивныйлб_ИспользоватьАрхивДляФЛС" id="87">
+									<DataPath>СписокАрхивный.лб_ИспользоватьАрхивДляФЛС</DataPath>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="СписокАрхивныйлб_ИспользоватьАрхивДляФЛСКонтекстноеМеню" id="88"/>
+									<ExtendedTooltip name="СписокАрхивныйлб_ИспользоватьАрхивДляФЛСРасширеннаяПодсказка" id="89"/>
+								</CheckBoxField>
+								<LabelField name="СписокАрхивныйлб_НомерЛС10" id="90">
+									<DataPath>СписокАрхивный.лб_НомерЛС10</DataPath>
+									<ContextMenu name="СписокАрхивныйлб_НомерЛС10КонтекстноеМеню" id="91"/>
+									<ExtendedTooltip name="СписокАрхивныйлб_НомерЛС10РасширеннаяПодсказка" id="92"/>
+								</LabelField>
+								<LabelField name="СписокАрхивныйбит_Проживающий" id="93">
+									<DataPath>СписокАрхивный.бит_Проживающий</DataPath>
+									<ContextMenu name="СписокАрхивныйбит_ПроживающийКонтекстноеМеню" id="94"/>
+									<ExtendedTooltip name="СписокАрхивныйбит_ПроживающийРасширеннаяПодсказка" id="95"/>
+								</LabelField>
+								<LabelField name="СписокАрхивныйбит_ЛицевойСчет" id="96">
+									<DataPath>СписокАрхивный.бит_ЛицевойСчет</DataPath>
+									<ContextMenu name="СписокАрхивныйбит_ЛицевойСчетКонтекстноеМеню" id="97"/>
+									<ExtendedTooltip name="СписокАрхивныйбит_ЛицевойСчетРасширеннаяПодсказка" id="98"/>
+								</LabelField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.бит_ПросмотрПравоустанавливающихДокументов</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<Attribute name="Список" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Список</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>false</ManualQuery>
+				<DynamicDataRead>true</DynamicDataRead>
+				<MainTable>Catalog.бит_ПравоустанавливающиеДокументы</MainTable>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+		<Attribute name="ЛицевойСчет" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Лицевой счет</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.бит_ЛицевыеСчета</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="Проживающий" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Проживающий</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.бит_Проживающие</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="СписокАрхивный" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Список архивный</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>false</ManualQuery>
+				<DynamicDataRead>true</DynamicDataRead>
+				<MainTable>Catalog.бит_ПравоустанавливающиеДокументы</MainTable>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+		<Attribute name="ИспользоватьЛицевойСчет" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Использовать лицевой счет</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ИспользоватьПроживающего" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Использовать проживающего</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="УстановитьАрихв" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Установить арихв</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Установить арихв</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>УстановитьАрихв</Action>
+		</Command>
+	</Commands>
+</Form>

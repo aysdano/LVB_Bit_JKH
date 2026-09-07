@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.18">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<ChildItems>
+		<InputField name="Период" id="1">
+			<DataPath>Запись.Period</DataPath>
+			<ContextMenu name="ПериодКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="ПериодРасширеннаяПодсказка" id="20"/>
+		</InputField>
+		<InputField name="ФизЛицо" id="3">
+			<DataPath>Запись.ФизЛицо</DataPath>
+			<ContextMenu name="ФизЛицоКонтекстноеМеню" id="4"/>
+			<ExtendedTooltip name="ФизЛицоРасширеннаяПодсказка" id="21"/>
+		</InputField>
+		<UsualGroup name="ДанныеОТрудовойДеятельности" id="17">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Данные о трудовой деятельности</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Данные о трудовой деятельности</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Vertical</Group>
+			<ExtendedTooltip name="ДанныеОТрудовойДеятельностиРасширеннаяПодсказка" id="22"/>
+			<ChildItems>
+				<InputField name="ВидыЗанятости" id="15">
+					<DataPath>Запись.ВидыЗанятости</DataPath>
+					<ContextMenu name="ВидыЗанятостиКонтекстноеМеню" id="16"/>
+					<ExtendedTooltip name="ВидыЗанятостиРасширеннаяПодсказка" id="23"/>
+				</InputField>
+				<InputField name="МестоРаботы" id="5">
+					<DataPath>Запись.МестоРаботы</DataPath>
+					<ContextMenu name="МестоРаботыКонтекстноеМеню" id="6"/>
+					<ExtendedTooltip name="МестоРаботыРасширеннаяПодсказка" id="24"/>
+				</InputField>
+				<InputField name="НачалоРаботы" id="7">
+					<DataPath>Запись.НачалоРаботы</DataPath>
+					<ContextMenu name="НачалоРаботыКонтекстноеМеню" id="8"/>
+					<ExtendedTooltip name="НачалоРаботыРасширеннаяПодсказка" id="25"/>
+				</InputField>
+				<InputField name="ОкончаниеРаботы" id="9">
+					<DataPath>Запись.ОкончаниеРаботы</DataPath>
+					<ContextMenu name="ОкончаниеРаботыКонтекстноеМеню" id="10"/>
+					<ExtendedTooltip name="ОкончаниеРаботыРасширеннаяПодсказка" id="26"/>
+				</InputField>
+				<InputField name="Должность" id="11">
+					<DataPath>Запись.Должность</DataPath>
+					<ContextMenu name="ДолжностьКонтекстноеМеню" id="12"/>
+					<ExtendedTooltip name="ДолжностьРасширеннаяПодсказка" id="27"/>
+				</InputField>
+				<InputField name="КурсКласс" id="13">
+					<DataPath>Запись.КурсКласс</DataPath>
+					<ContextMenu name="КурсКлассКонтекстноеМеню" id="14"/>
+					<ExtendedTooltip name="КурсКлассРасширеннаяПодсказка" id="28"/>
+				</InputField>
+				<InputField name="РодЗанятий" id="18">
+					<DataPath>Запись.РодЗанятий</DataPath>
+					<ContextMenu name="РодЗанятийКонтекстноеМеню" id="19"/>
+					<ExtendedTooltip name="РодЗанятийРасширеннаяПодсказка" id="29"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Запись" id="1">
+			<Type>
+				<v8:Type>cfg:InformationRegisterRecordManager.бит_ТрудоваяДеятельностьПроживающих</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+	</Attributes>
+</Form>

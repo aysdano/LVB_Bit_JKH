@@ -1,0 +1,348 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<DataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcscom="http://v8.1c.ru/8.1/data-composition-system/common" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataSource>
+		<name>ИсточникДанных1</name>
+		<dataSourceType>Local</dataSourceType>
+	</dataSource>
+	<dataSet xsi:type="DataSetQuery">
+		<name>НаборДанных1</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Счетчик</dataPath>
+			<field>Счетчик</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>МаркаПУ</dataPath>
+			<field>МаркаПУ</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ВидПУ</dataPath>
+			<field>ВидПУ</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вид ПУ</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ЗаводскойСерийныйНомерПУ</dataPath>
+			<field>ЗаводскойСерийныйНомерПУ</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>АдресДома</dataPath>
+			<field>АдресДома</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Адрес дома</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>НомерЛС</dataPath>
+			<field>НомерЛС</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Номер ЛС</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ЛицевойСчет</dataPath>
+			<field>ЛицевойСчет</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Лицевой счет</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Услуга</dataPath>
+			<field>Услуга</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ГрупповойСчетчик</dataPath>
+			<field>ГрупповойСчетчик</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>УдалитьПорядковыйНомерСчетчикаПоУслуге</dataPath>
+			<field>УдалитьПорядковыйНомерСчетчикаПоУслуге</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СсылочныйНомерПУ</dataPath>
+			<field>СсылочныйНомерПУ</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ссылочный номер ПУ</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<dataSource>ИсточникДанных1</dataSource>
+		<query>ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	бит_ЛицевыеСчета.Ссылка КАК ЛицевойСчет,
+	ВЫБОР
+		КОГДА бит_ЛицевыеСчета.ИдентификаторЖКУ &lt;&gt; ""
+			ТОГДА бит_ЛицевыеСчета.ИдентификаторЖКУ
+		КОГДА бит_ЛицевыеСчета.ЕЛСГИСЖКХ &lt;&gt; ""
+			ТОГДА бит_ЛицевыеСчета.ЕЛСГИСЖКХ
+		ИНАЧЕ бит_ЛицевыеСчета.Наименование
+	КОНЕЦ КАК НомерЛС,
+	бит_ЛицевыеСчета.Здание КАК Здание,
+	бит_СписокЗданий.ПочтовыйАдрес КАК ПочтовыйАдрес,
+	бит_СписокЗданий.КадастровыйНомер КАК КадастровыйНомер,
+	бит_ЛицевыеСчета.Квартира КАК Квартира
+ПОМЕСТИТЬ ВТ_ЛицевыеСчетаОбщая
+ИЗ
+	Справочник.бит_ЛицевыеСчета КАК бит_ЛицевыеСчета
+		ЛЕВОЕ СОЕДИНЕНИЕ Справочник.бит_СписокЗданий КАК бит_СписокЗданий
+		ПО бит_ЛицевыеСчета.Здание = бит_СписокЗданий.Ссылка
+ГДЕ
+	бит_ЛицевыеСчета.Архивный = ЛОЖЬ
+	И НЕ бит_ЛицевыеСчета.ПометкаУдаления
+	И НЕ бит_СписокЗданий.ПометкаУдаления
+{ГДЕ
+	(бит_ЛицевыеСчета.Ссылка В (&amp;СписокЛС)),
+	(бит_ЛицевыеСчета.Организация = &amp;ОтборОрганизация),
+	(бит_СписокЗданий.Улица В (&amp;СписокУлиц)),
+	(бит_ЛицевыеСчета.Здание В (&amp;СписокЗданий)),
+	(ВЫБОР
+			КОГДА &amp;ТипДомаГИСЖКХ = ЗНАЧЕНИЕ(Перечисление.бит_ТипыДомовГИСЖКХ.МКД)
+				ТОГДА бит_СписокЗданий.ТипыДомовГИСЖКХ = ЗНАЧЕНИЕ(Перечисление.бит_ТипыДомовГИСЖКХ.МКД)
+						ИЛИ бит_СписокЗданий.ТипыДомовГИСЖКХ = ЗНАЧЕНИЕ(Перечисление.бит_ТипыДомовГИСЖКХ.ПустаяСсылка)
+			ИНАЧЕ бит_СписокЗданий.ТипыДомовГИСЖКХ В (&amp;ТипДомаГИСЖКХ)
+		КОНЕЦ)}
+
+ИНДЕКСИРОВАТЬ ПО
+	ЛицевойСчет,
+	Здание,
+	Квартира
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ВТ_ЛицевыеСчетаОбщая.ЛицевойСчет КАК ЛицевойСчет,
+	ВТ_ЛицевыеСчетаОбщая.НомерЛС КАК НомерЛС,
+	ВТ_ЛицевыеСчетаОбщая.Здание КАК Здание,
+	ВТ_ЛицевыеСчетаОбщая.ПочтовыйАдрес + " " КАК ПочтовыйАдрес,
+	ВТ_ЛицевыеСчетаОбщая.КадастровыйНомер КАК КадастровыйНомер,
+	ВТ_ЛицевыеСчетаОбщая.Квартира КАК Квартира,
+	бит_Квартиры.КадастровыйНомер КАК КадастровыйНомерКвартиры
+ПОМЕСТИТЬ ВТ_ЛицевыеСчета
+ИЗ
+	ВТ_ЛицевыеСчетаОбщая КАК ВТ_ЛицевыеСчетаОбщая
+		ЛЕВОЕ СОЕДИНЕНИЕ Справочник.бит_Квартиры КАК бит_Квартиры
+		ПО ВТ_ЛицевыеСчетаОбщая.Квартира = бит_Квартиры.Ссылка
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ РАЗЛИЧНЫЕ
+	ВТ_ЛицевыеСчета.Здание КАК Здание,
+	ВТ_ЛицевыеСчета.ПочтовыйАдрес КАК ПочтовыйАдрес,
+	ВТ_ЛицевыеСчета.КадастровыйНомер КАК КадастровыйНомер
+ПОМЕСТИТЬ ВТ_Здания
+ИЗ
+	ВТ_ЛицевыеСчета КАК ВТ_ЛицевыеСчета
+
+ИНДЕКСИРОВАТЬ ПО
+	Здание
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	бит_ГрупповыеСчетчикиСрезПоследних.Услуга КАК Услуга,
+	бит_ГрупповыеСчетчикиСрезПоследних.ГрупповойСчетчик КАК Счетчик,
+	бит_ГрупповыеСчетчикиСрезПоследних.ЛицевойСчет КАК ЛицевойСчет,
+	"Коллективный (общедомовой)" КАК ВидПУ
+ПОМЕСТИТЬ ВТ_ДанныеУстановкиПУ
+ИЗ
+	РегистрСведений.бит_ГрупповыеСчетчики.СрезПоследних(
+			&amp;Период,
+			ЛицевойСчет В
+				(ВЫБРАТЬ РАЗЛИЧНЫЕ
+					ВТ_ЛицевыеСчета.ЛицевойСчет
+				ИЗ
+					ВТ_ЛицевыеСчета КАК ВТ_ЛицевыеСчета)) КАК бит_ГрупповыеСчетчикиСрезПоследних
+ГДЕ
+	бит_ГрупповыеСчетчикиСрезПоследних.Использовать
+
+ИНДЕКСИРОВАТЬ ПО
+	Счетчик,
+	бит_ГрупповыеСчетчикиСрезПоследних.ЛицевойСчет
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ВТ_ДанныеУстановкиПУ.Услуга КАК Услуга,
+	ВТ_ДанныеУстановкиПУ.Счетчик КАК Счетчик,
+	ВТ_ДанныеУстановкиПУ.ЛицевойСчет КАК ЛицевойСчет,
+	ВТ_ЛицевыеСчета.НомерЛС КАК НомерЛС,
+	ВТ_ЛицевыеСчета.ПочтовыйАдрес КАК ПочтовыйАдрес,
+	ВТ_ДанныеУстановкиПУ.ВидПУ КАК ВидПУ
+ПОМЕСТИТЬ ВТ_ИтоговаяТаблица
+ИЗ
+	ВТ_ДанныеУстановкиПУ КАК ВТ_ДанныеУстановкиПУ
+		ЛЕВОЕ СОЕДИНЕНИЕ ВТ_ЛицевыеСчета КАК ВТ_ЛицевыеСчета
+		ПО ВТ_ДанныеУстановкиПУ.ЛицевойСчет = ВТ_ЛицевыеСчета.ЛицевойСчет
+
+ИНДЕКСИРОВАТЬ ПО
+	Счетчик
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ЕСТЬNULL(ВТ_ИтоговаяТаблица.ЛицевойСчет, "") КАК ЛицевойСчет,
+	ЕСТЬNULL(ВТ_ИтоговаяТаблица.Счетчик, "") КАК Счетчик,
+	ЕСТЬNULL(ВТ_ИтоговаяТаблица.Счетчик.Код, "") КАК СсылочныйНомерПУ,
+	ЕСТЬNULL(ВТ_ИтоговаяТаблица.ПочтовыйАдрес, "") КАК АдресДома,
+	ЕСТЬNULL(бит_Счетчики.ЗаводскойСерийныйНомерПУ, "") КАК ЗаводскойСерийныйНомерПУ,
+	ЕСТЬNULL(ВТ_ИтоговаяТаблица.ВидПУ, "") КАК ВидПУ,
+	ЕСТЬNULL(бит_Счетчики.МаркаПУ, "") КАК МаркаПУ,
+	ЕСТЬNULL(ВТ_ИтоговаяТаблица.НомерЛС, "") КАК НомерЛС
+ИЗ
+	ВТ_ИтоговаяТаблица КАК ВТ_ИтоговаяТаблица
+		ЛЕВОЕ СОЕДИНЕНИЕ Справочник.бит_Счетчики КАК бит_Счетчики
+		ПО ВТ_ИтоговаяТаблица.Счетчик = бит_Счетчики.Ссылка</query>
+	</dataSet>
+	<parameter>
+		<name>Период</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Период</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+		<use>Always</use>
+	</parameter>
+	<parameter>
+		<name>ОтборОрганизация</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Отбор организация</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.Организации</v8:Type>
+		</valueType>
+		<value xsi:nil="true"/>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<parameter>
+		<name>СписокЗданий</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Список зданий</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.бит_СписокЗданий</v8:Type>
+		</valueType>
+		<useRestriction>true</useRestriction>
+		<valueListAllowed>true</valueListAllowed>
+	</parameter>
+	<parameter>
+		<name>СписокЛС</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Список ЛС</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.бит_ЛицевыеСчета</v8:Type>
+		</valueType>
+		<useRestriction>true</useRestriction>
+		<valueListAllowed>true</valueListAllowed>
+	</parameter>
+	<parameter>
+		<name>СписокУлиц</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Список улиц</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.бит_СписокУлиц</v8:Type>
+		</valueType>
+		<useRestriction>true</useRestriction>
+		<valueListAllowed>true</valueListAllowed>
+	</parameter>
+	<parameter>
+		<name>ТипДомаГИСЖКХ</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Тип дома ГИСЖКХ</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:EnumRef.бит_ТипыДомовГИСЖКХ</v8:Type>
+		</valueType>
+		<value xsi:nil="true"/>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<settingsVariant>
+		<dcsset:name>Основной</dcsset:name>
+		<dcsset:presentation xsi:type="xs:string">Основной</dcsset:presentation>
+		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+			<dcsset:selection>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>СсылочныйНомерПУ</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>АдресДома</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ЗаводскойСерийныйНомерПУ</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ВидПУ</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>МаркаПУ</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>НомерЛС</dcsset:field>
+				</dcsset:item>
+			</dcsset:selection>
+			<dcsset:dataParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>СписокЗданий</dcscor:parameter>
+					<dcscor:value xsi:nil="true"/>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>СписокЛС</dcscor:parameter>
+					<dcscor:value xsi:nil="true"/>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>СписокУлиц</dcscor:parameter>
+					<dcscor:value xsi:nil="true"/>
+				</dcscor:item>
+			</dcsset:dataParameters>
+			<dcsset:item xsi:type="dcsset:StructureItemGroup">
+				<dcsset:order>
+					<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+				</dcsset:order>
+				<dcsset:selection>
+					<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+				</dcsset:selection>
+			</dcsset:item>
+		</dcsset:settings>
+	</settingsVariant>
+</DataCompositionSchema>

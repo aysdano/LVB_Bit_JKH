@@ -1,0 +1,185 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.18">
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<Pages name="Настройки" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настройки</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настройки</v8:content>
+				</v8:item>
+			</ToolTip>
+			<HorizontalStretch>true</HorizontalStretch>
+			<VerticalStretch>true</VerticalStretch>
+			<PagesRepresentation>TabsOnLeftHorizontal</PagesRepresentation>
+			<ExtendedTooltip name="НастройкиExtendedTooltip" id="14"/>
+			<ChildItems>
+				<Page name="ПраваДоступа" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Права доступа</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Права доступа</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ПраваДоступаExtendedTooltip" id="15"/>
+					<ChildItems>
+						<LabelDecoration name="НадписьПраваДоступа" id="4">
+							<Height>2</Height>
+							<HorizontalStretch>true</HorizontalStretch>
+							<VerticalStretch>false</VerticalStretch>
+							<Font ref="sys:DefaultGUIFont" height="16" kind="WindowsFont"/>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Права доступа</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="НадписьПраваДоступаКонтекстноеМеню" id="5"/>
+							<ExtendedTooltip name="НадписьПраваДоступаExtendedTooltip" id="16"/>
+						</LabelDecoration>
+						<CheckBoxField name="бит_ИспользоватьОграниченияПравДоступаНаУровнеЗаписей" id="6">
+							<DataPath>КонстантыНабор.бит_ИспользоватьОграниченияПравДоступаНаУровнеЗаписей</DataPath>
+							<TitleLocation>Right</TitleLocation>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="бит_ИспользоватьОграниченияПравДоступаНаУровнеЗаписейКонтекстноеМеню" id="7"/>
+							<ExtendedTooltip name="бит_ИспользоватьОграниченияПравДоступаНаУровнеЗаписейExtendedTooltip" id="17"/>
+						</CheckBoxField>
+						<Button name="НастроитьПрава" id="8">
+							<Type>UsualButton</Type>
+							<CommandName>Form.Command.НастроитьПрава</CommandName>
+							<ExtendedTooltip name="НастроитьПраваExtendedTooltip" id="18"/>
+						</Button>
+					</ChildItems>
+				</Page>
+				<Page name="ЗапретИзмененияДанных" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Запрет изменения данных</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Запрет изменения данных</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ЗапретИзмененияДанныхExtendedTooltip" id="19"/>
+					<ChildItems>
+						<LabelDecoration name="НадписьЗапретИзмененияДанных" id="9">
+							<Height>2</Height>
+							<HorizontalStretch>true</HorizontalStretch>
+							<VerticalStretch>false</VerticalStretch>
+							<Font ref="sys:DefaultGUIFont" height="16" kind="WindowsFont"/>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Запрет изменения данных</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="НадписьЗапретИзмененияДанныхКонтекстноеМеню" id="10"/>
+							<ExtendedTooltip name="НадписьЗапретИзмененияДанныхExtendedTooltip" id="20"/>
+						</LabelDecoration>
+						<Button name="УстановитьДатуЗапрета" id="11">
+							<Type>UsualButton</Type>
+							<CommandName>Form.Command.УстановитьДатуЗапрета</CommandName>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>УстановитьДатуЗапрета ...</v8:content>
+								</v8:item>
+							</Title>
+							<ExtendedTooltip name="УстановитьДатуЗапретаExtendedTooltip" id="21"/>
+						</Button>
+						<LabelDecoration name="ПодсказкаЗапретИзмененияДанных" id="12">
+							<Width>45</Width>
+							<Height>3</Height>
+							<TextColor>style:FieldSelectionBackColor</TextColor>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Используйте дату запрета изменения данных, если требуется ограничить возможность редактирования и ввода новых данных за прошлые периоды.</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="ПодсказкаЗапретИзмененияДанныхКонтекстноеМеню" id="13"/>
+							<ExtendedTooltip name="ПодсказкаЗапретИзмененияДанныхExtendedTooltip" id="22"/>
+						</LabelDecoration>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="КонстантыНабор" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Константы набор</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:ConstantsSet</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<Attribute name="ЭталонныйНабор" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Эталонный набор</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:ConstantsSet</v8:Type>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="НастроитьПрава" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настроить права</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настроить права</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>НастроитьПрава</Action>
+		</Command>
+		<Command name="УстановитьДатуЗапрета" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Установить дату запрета</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Установить дату запрета</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>УстановитьДатуЗапрета</Action>
+		</Command>
+	</Commands>
+</Form>

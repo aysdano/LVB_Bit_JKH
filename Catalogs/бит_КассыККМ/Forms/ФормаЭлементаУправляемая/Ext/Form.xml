@@ -1,0 +1,233 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.18">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<ChildItems>
+		<UsualGroup name="Группа1" id="19">
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="Группа1ExtendedTooltip" id="22"/>
+			<ChildItems>
+				<InputField name="Владелец" id="5">
+					<DataPath>Объект.Owner</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Организация</v8:content>
+						</v8:item>
+					</Title>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ВладелецКонтекстноеМеню" id="6"/>
+					<ExtendedTooltip name="ВладелецExtendedTooltip" id="23"/>
+					<Events>
+						<Event name="ChoiceProcessing">ВладелецОбработкаВыбора</Event>
+					</Events>
+				</InputField>
+				<InputField name="Код" id="1">
+					<DataPath>Объект.Code</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="КодКонтекстноеМеню" id="2"/>
+					<ExtendedTooltip name="КодExtendedTooltip" id="24"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<InputField name="Наименование" id="3">
+			<DataPath>Объект.Description</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="НаименованиеКонтекстноеМеню" id="4"/>
+			<ExtendedTooltip name="НаименованиеExtendedTooltip" id="25"/>
+		</InputField>
+		<UsualGroup name="РеквизитыКассы" id="20">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Реквизиты кассы</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Реквизиты кассы</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Vertical</Group>
+			<ExtendedTooltip name="РеквизитыКассыExtendedTooltip" id="26"/>
+			<ChildItems>
+				<UsualGroup name="Группа2" id="21">
+					<Group>Horizontal</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="Группа2ExtendedTooltip" id="27"/>
+					<ChildItems>
+						<InputField name="ПодразделениеОрганизации" id="15">
+							<DataPath>Объект.ПодразделениеОрганизации</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ПодразделениеОрганизацииКонтекстноеМеню" id="16"/>
+							<ExtendedTooltip name="ПодразделениеОрганизацииExtendedTooltip" id="28"/>
+							<Events>
+								<Event name="StartChoice">ПодразделениеОрганизацииНачалоВыбора</Event>
+							</Events>
+						</InputField>
+						<InputField name="КодКассы" id="7">
+							<DataPath>Объект.КодКассы</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="КодКассыКонтекстноеМеню" id="8"/>
+							<ExtendedTooltip name="КодКассыExtendedTooltip" id="29"/>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+				<InputField name="Контрагент" id="17">
+					<DataPath>Объект.Контрагент</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="КонтрагентКонтекстноеМеню" id="18"/>
+					<ExtendedTooltip name="КонтрагентExtendedTooltip" id="30"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<CheckBoxField name="ФормироватьНефискальныеЧеки" id="9">
+			<DataPath>Объект.ФормироватьНефискальныеЧеки</DataPath>
+			<Visible>false</Visible>
+			<EditMode>EnterOnInput</EditMode>
+			<CheckBoxType>Auto</CheckBoxType>
+			<ContextMenu name="ФормироватьНефискальныеЧекиКонтекстноеМеню" id="10"/>
+			<ExtendedTooltip name="ФормироватьНефискальныеЧекиExtendedTooltip" id="31"/>
+		</CheckBoxField>
+		<InputField name="ШиринаЛенты" id="11">
+			<DataPath>Объект.ШиринаЛенты</DataPath>
+			<Visible>false</Visible>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="ШиринаЛентыКонтекстноеМеню" id="12"/>
+			<ExtendedTooltip name="ШиринаЛентыExtendedTooltip" id="32"/>
+		</InputField>
+		<CheckBoxField name="РучнойРежимФормирования" id="13">
+			<DataPath>Объект.РучнойРежимФормирования</DataPath>
+			<Visible>false</Visible>
+			<EditMode>EnterOnInput</EditMode>
+			<CheckBoxType>Auto</CheckBoxType>
+			<ContextMenu name="РучнойРежимФормированияКонтекстноеМеню" id="14"/>
+			<ExtendedTooltip name="РучнойРежимФормированияExtendedTooltip" id="33"/>
+		</CheckBoxField>
+		<UsualGroup name="ГруппаПодключенноеОборудование" id="53">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подключенное оборудование</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа подключенное оборудование</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Vertical</Group>
+			<ExtendedTooltip name="ГруппаПодключенноеОборудованиеРасширеннаяПодсказка" id="54"/>
+			<ChildItems>
+				<Table name="ПодключенноеОборудование" id="55">
+					<AutoInsertNewRow>true</AutoInsertNewRow>
+					<EnableStartDrag>true</EnableStartDrag>
+					<EnableDrag>true</EnableDrag>
+					<FileDragMode>AsFile</FileDragMode>
+					<DataPath>Объект.ПодключенноеОборудование</DataPath>
+					<RowFilter xsi:nil="true"/>
+					<ContextMenu name="ПодключенноеОборудованиеКонтекстноеМеню" id="56"/>
+					<AutoCommandBar name="ПодключенноеОборудованиеКоманднаяПанель" id="57"/>
+					<ExtendedTooltip name="ПодключенноеОборудованиеРасширеннаяПодсказка" id="58"/>
+					<SearchStringAddition name="ПодключенноеОборудованиеСтрокаПоиска" id="59">
+						<AdditionSource>
+							<Item>ПодключенноеОборудование</Item>
+							<Type>SearchStringRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="ПодключенноеОборудованиеСтрокаПоискаКонтекстноеМеню" id="60"/>
+						<ExtendedTooltip name="ПодключенноеОборудованиеСтрокаПоискаРасширеннаяПодсказка" id="61"/>
+					</SearchStringAddition>
+					<ViewStatusAddition name="ПодключенноеОборудованиеСостояниеПросмотра" id="62">
+						<AdditionSource>
+							<Item>ПодключенноеОборудование</Item>
+							<Type>ViewStatusRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="ПодключенноеОборудованиеСостояниеПросмотраКонтекстноеМеню" id="63"/>
+						<ExtendedTooltip name="ПодключенноеОборудованиеСостояниеПросмотраРасширеннаяПодсказка" id="64"/>
+					</ViewStatusAddition>
+					<SearchControlAddition name="ПодключенноеОборудованиеУправлениеПоиском" id="65">
+						<AdditionSource>
+							<Item>ПодключенноеОборудование</Item>
+							<Type>SearchControl</Type>
+						</AdditionSource>
+						<ContextMenu name="ПодключенноеОборудованиеУправлениеПоискомКонтекстноеМеню" id="66"/>
+						<ExtendedTooltip name="ПодключенноеОборудованиеУправлениеПоискомРасширеннаяПодсказка" id="67"/>
+					</SearchControlAddition>
+					<ChildItems>
+						<LabelField name="ПодключенноеОборудованиеНомерСтроки" id="68">
+							<DataPath>Объект.ПодключенноеОборудование.LineNumber</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ПодключенноеОборудованиеНомерСтрокиКонтекстноеМеню" id="69"/>
+							<ExtendedTooltip name="ПодключенноеОборудованиеНомерСтрокиРасширеннаяПодсказка" id="70"/>
+						</LabelField>
+						<InputField name="ПодключенноеОборудованиеОборудование" id="71">
+							<DataPath>Объект.ПодключенноеОборудование.Оборудование</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<AutoMarkIncomplete>true</AutoMarkIncomplete>
+							<ChoiceParameters>
+								<app:item name="Отбор.ПометкаУдаления">
+									<app:value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation/>
+										<Value xsi:type="xs:boolean">false</Value>
+									</app:value>
+								</app:item>
+								<app:item name="Отбор.УстройствоИспользуется">
+									<app:value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation/>
+										<Value xsi:type="xs:boolean">true</Value>
+									</app:value>
+								</app:item>
+							</ChoiceParameters>
+							<ContextMenu name="ПодключенноеОборудованиеОборудованиеКонтекстноеМеню" id="72"/>
+							<ExtendedTooltip name="ПодключенноеОборудованиеОборудованиеРасширеннаяПодсказка" id="73"/>
+						</InputField>
+					</ChildItems>
+				</Table>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:CatalogObject.бит_КассыККМ</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+	</Attributes>
+	<CommandInterface>
+		<NavigationPanel>
+			<Item>
+				<Command>InformationRegister.бит_си_НастройкиИсточников.StandardCommand.OpenByValue.Объект</Command>
+				<Type>Auto</Type>
+				<DefaultVisible>false</DefaultVisible>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+			<Item>
+				<Command>InformationRegister.бит_icq_Пользователи.StandardCommand.OpenByValue.ОбъектПользователя</Command>
+				<Type>Auto</Type>
+				<DefaultVisible>false</DefaultVisible>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+			<Item>
+				<Command>InformationRegister.бит_си_СвязанныеОбъекты.StandardCommand.OpenByValue.Объект</Command>
+				<Type>Auto</Type>
+				<DefaultVisible>false</DefaultVisible>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+		</NavigationPanel>
+	</CommandInterface>
+</Form>

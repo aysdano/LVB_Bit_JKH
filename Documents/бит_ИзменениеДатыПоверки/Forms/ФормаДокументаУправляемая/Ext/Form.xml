@@ -1,0 +1,369 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.18">
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<AutoTime>CurrentOrLast</AutoTime>
+	<UsePostingMode>Auto</UsePostingMode>
+	<RepostOnWrite>true</RepostOnWrite>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="AfterWrite">ПослеЗаписи</Event>
+		<Event name="ChoiceProcessing">ОбработкаВыбора</Event>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+		<Event name="OnClose">ПриЗакрытии</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="Группа1" id="32">
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="Группа1ExtendedTooltip" id="50"/>
+			<ChildItems>
+				<InputField name="Номер" id="1">
+					<DataPath>Объект.Number</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="НомерКонтекстноеМеню" id="2"/>
+					<ExtendedTooltip name="НомерExtendedTooltip" id="51"/>
+				</InputField>
+				<InputField name="Дата" id="3">
+					<DataPath>Объект.Date</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ДатаКонтекстноеМеню" id="4"/>
+					<ExtendedTooltip name="ДатаExtendedTooltip" id="52"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="Группа3" id="36">
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="Группа3ExtendedTooltip" id="53"/>
+			<ChildItems>
+				<InputField name="Организация" id="15">
+					<DataPath>Объект.Организация</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ОрганизацияКонтекстноеМеню" id="16"/>
+					<ExtendedTooltip name="ОрганизацияExtendedTooltip" id="54"/>
+				</InputField>
+				<InputField name="ВидОперации" id="17">
+					<DataPath>Объект.ВидОперации</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ВидОперацииКонтекстноеМеню" id="18"/>
+					<ExtendedTooltip name="ВидОперацииExtendedTooltip" id="55"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="Группа2" id="33">
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="Группа2ExtendedTooltip" id="56"/>
+			<ChildItems>
+				<InputField name="Улица" id="5">
+					<DataPath>Объект.Улица</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="УлицаКонтекстноеМеню" id="6"/>
+					<ExtendedTooltip name="УлицаExtendedTooltip" id="57"/>
+					<Events>
+						<Event name="OnChange">УлицаПриИзменении</Event>
+					</Events>
+				</InputField>
+				<InputField name="Здание" id="7">
+					<DataPath>Объект.Здание</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<TextEdit>false</TextEdit>
+					<ContextMenu name="ЗданиеКонтекстноеМеню" id="8"/>
+					<ExtendedTooltip name="ЗданиеExtendedTooltip" id="58"/>
+					<Events>
+						<Event name="OnChange">ЗданиеПриИзменении</Event>
+						<Event name="StartChoice">ЗданиеНачалоВыбора</Event>
+					</Events>
+				</InputField>
+				<InputField name="Квартира" id="9">
+					<DataPath>Объект.Квартира</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<TextEdit>false</TextEdit>
+					<ContextMenu name="КвартираКонтекстноеМеню" id="10"/>
+					<ExtendedTooltip name="КвартираExtendedTooltip" id="59"/>
+					<Events>
+						<Event name="OnChange">КвартираПриИзменении</Event>
+						<Event name="StartChoice">КвартираНачалоВыбора</Event>
+					</Events>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<Table name="Счетчики" id="19">
+			<Representation>List</Representation>
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<FileDragMode>AsFile</FileDragMode>
+			<DataPath>Объект.Счетчики</DataPath>
+			<SearchStringLocation>None</SearchStringLocation>
+			<ViewStatusLocation>None</ViewStatusLocation>
+			<SearchControlLocation>None</SearchControlLocation>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="СчетчикиКонтекстноеМеню" id="20"/>
+			<AutoCommandBar name="СчетчикиКоманднаяПанель" id="21">
+				<Autofill>false</Autofill>
+				<ChildItems>
+					<Button name="СчетчикиДобавить" id="37">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Item.Счетчики.StandardCommand.Add</CommandName>
+						<ExtendedTooltip name="СчетчикиДобавитьExtendedTooltip" id="60"/>
+					</Button>
+					<Button name="СчетчикиИзменить" id="38">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Item.Счетчики.StandardCommand.Change</CommandName>
+						<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
+						<ExtendedTooltip name="СчетчикиИзменитьExtendedTooltip" id="61"/>
+					</Button>
+					<Button name="СчетчикиУдалить" id="39">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Item.Счетчики.StandardCommand.Delete</CommandName>
+						<ExtendedTooltip name="СчетчикиУдалитьExtendedTooltip" id="62"/>
+					</Button>
+					<Button name="СчетчикиЗакончитьРедактирование" id="40">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Item.Счетчики.StandardCommand.EndEdit</CommandName>
+						<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
+						<ExtendedTooltip name="СчетчикиЗакончитьРедактированиеExtendedTooltip" id="63"/>
+					</Button>
+					<Button name="СчетчикиНайти" id="41">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Item.Счетчики.StandardCommand.Find</CommandName>
+						<ExtendedTooltip name="СчетчикиНайтиExtendedTooltip" id="64"/>
+					</Button>
+					<Button name="СчетчикиОтменитьПоиск" id="42">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Item.Счетчики.StandardCommand.CancelSearch</CommandName>
+						<ExtendedTooltip name="СчетчикиОтменитьПоискExtendedTooltip" id="65"/>
+					</Button>
+					<Button name="СчетчикиПереместитьВверх" id="43">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Item.Счетчики.StandardCommand.MoveUp</CommandName>
+						<ExtendedTooltip name="СчетчикиПереместитьВверхExtendedTooltip" id="66"/>
+					</Button>
+					<Button name="СчетчикиПереместитьВниз" id="44">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Item.Счетчики.StandardCommand.MoveDown</CommandName>
+						<ExtendedTooltip name="СчетчикиПереместитьВнизExtendedTooltip" id="67"/>
+					</Button>
+					<Button name="СчетчикиСортироватьСписокПоВозрастанию" id="45">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Item.Счетчики.StandardCommand.SortListAsc</CommandName>
+						<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
+						<ExtendedTooltip name="СчетчикиСортироватьСписокПоВозрастаниюExtendedTooltip" id="68"/>
+					</Button>
+					<Button name="СчетчикиСортироватьСписокПоУбыванию" id="46">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Item.Счетчики.StandardCommand.SortListDesc</CommandName>
+						<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
+						<ExtendedTooltip name="СчетчикиСортироватьСписокПоУбываниюExtendedTooltip" id="69"/>
+					</Button>
+					<Button name="СчетчикиВывестиСписок" id="47">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Item.Счетчики.StandardCommand.OutputList</CommandName>
+						<ExtendedTooltip name="СчетчикиВывестиСписокExtendedTooltip" id="70"/>
+					</Button>
+					<Button name="СчетчикиКопироватьВБуферОбмена" id="48">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Item.Счетчики.StandardCommand.CopyToClipboard</CommandName>
+						<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
+						<ExtendedTooltip name="СчетчикиКопироватьВБуферОбменаExtendedTooltip" id="71"/>
+					</Button>
+					<Button name="СчетчикиВыделитьВсе" id="49">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Item.Счетчики.StandardCommand.SelectAll</CommandName>
+						<ExtendedTooltip name="СчетчикиВыделитьВсеExtendedTooltip" id="72"/>
+					</Button>
+					<Button name="СчетчикиЗаполнить" id="34">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.Заполнить</CommandName>
+						<ExtendedTooltip name="СчетчикиЗаполнитьExtendedTooltip" id="73"/>
+					</Button>
+				</ChildItems>
+			</AutoCommandBar>
+			<ExtendedTooltip name="СчетчикиExtendedTooltip" id="74"/>
+			<SearchStringAddition name="СчетчикиСтрокаПоиска" id="83">
+				<AdditionSource>
+					<Item>Счетчики</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="СчетчикиСтрокаПоискаКонтекстноеМеню" id="84"/>
+				<ExtendedTooltip name="СчетчикиСтрокаПоискаРасширеннаяПодсказка" id="85"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="СчетчикиСостояниеПросмотра" id="86">
+				<AdditionSource>
+					<Item>Счетчики</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="СчетчикиСостояниеПросмотраКонтекстноеМеню" id="87"/>
+				<ExtendedTooltip name="СчетчикиСостояниеПросмотраРасширеннаяПодсказка" id="88"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="СчетчикиУправлениеПоиском" id="89">
+				<AdditionSource>
+					<Item>Счетчики</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="СчетчикиУправлениеПоискомКонтекстноеМеню" id="90"/>
+				<ExtendedTooltip name="СчетчикиУправлениеПоискомРасширеннаяПодсказка" id="91"/>
+			</SearchControlAddition>
+			<Events>
+				<Event name="BeforeAddRow">СчетчикиПередНачаломДобавления</Event>
+			</Events>
+			<ChildItems>
+				<LabelField name="СчетчикиНомерСтроки" id="22">
+					<DataPath>Объект.Счетчики.LineNumber</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="СчетчикиНомерСтрокиКонтекстноеМеню" id="23"/>
+					<ExtendedTooltip name="СчетчикиНомерСтрокиExtendedTooltip" id="75"/>
+				</LabelField>
+				<InputField name="СчетчикиСчетчик" id="24">
+					<DataPath>Объект.Счетчики.Счетчик</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<TextEdit>false</TextEdit>
+					<ContextMenu name="СчетчикиСчетчикКонтекстноеМеню" id="25"/>
+					<ExtendedTooltip name="СчетчикиСчетчикExtendedTooltip" id="76"/>
+					<Events>
+						<Event name="StartChoice">СчетчикиСчетчикНачалоВыбора</Event>
+						<Event name="ChoiceProcessing">СчетчикиСчетчикОбработкаВыбора</Event>
+					</Events>
+				</InputField>
+				<InputField name="СчетчикиНоваяДатаПоверки" id="28">
+					<DataPath>Объект.Счетчики.НоваяДатаПоверки</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<Format>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ДЛФ=DD</v8:content>
+						</v8:item>
+					</Format>
+					<EditFormat>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ДЛФ=DD</v8:content>
+						</v8:item>
+					</EditFormat>
+					<ContextMenu name="СчетчикиНоваяДатаПоверкиКонтекстноеМеню" id="29"/>
+					<ExtendedTooltip name="СчетчикиНоваяДатаПоверкиExtendedTooltip" id="77"/>
+				</InputField>
+				<ColumnGroup name="СчетчикиГруппа1" id="35">
+					<ExtendedTooltip name="СчетчикиГруппа1ExtendedTooltip" id="78"/>
+					<ChildItems>
+						<InputField name="СчетчикиВладелецСчетчика" id="30">
+							<DataPath>Объект.Счетчики.ВладелецСчетчика</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="СчетчикиВладелецСчетчикаКонтекстноеМеню" id="31"/>
+							<ExtendedTooltip name="СчетчикиВладелецСчетчикаExtendedTooltip" id="79"/>
+						</InputField>
+						<InputField name="СчетчикиДатаПоверки" id="26">
+							<DataPath>Объект.Счетчики.ДатаПоверки</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Тек. Дата поверки</v8:content>
+								</v8:item>
+							</Title>
+							<EditMode>EnterOnInput</EditMode>
+							<EditFormat>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>ДЛФ=DD</v8:content>
+								</v8:item>
+							</EditFormat>
+							<ContextMenu name="СчетчикиДатаПоверкиКонтекстноеМеню" id="27"/>
+							<ExtendedTooltip name="СчетчикиДатаПоверкиExtendedTooltip" id="80"/>
+						</InputField>
+					</ChildItems>
+				</ColumnGroup>
+			</ChildItems>
+		</Table>
+		<InputField name="Комментарий" id="11">
+			<DataPath>Объект.Комментарий</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="КомментарийКонтекстноеМеню" id="12"/>
+			<ExtendedTooltip name="КомментарийExtendedTooltip" id="81"/>
+		</InputField>
+		<InputField name="Ответственный" id="13">
+			<DataPath>Объект.Ответственный</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="ОтветственныйКонтекстноеМеню" id="14"/>
+			<ExtendedTooltip name="ОтветственныйExtendedTooltip" id="82"/>
+		</InputField>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DocumentObject.бит_ИзменениеДатыПоверки</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+			<UseAlways>
+				<Field>Объект.RegisterRecords</Field>
+			</UseAlways>
+		</Attribute>
+		<Attribute name="мКэшЗначений" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>М кэш значений</v8:content>
+				</v8:item>
+			</Title>
+			<Type/>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="Заполнить" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Заполнить</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+	</Commands>
+	<CommandInterface>
+		<NavigationPanel>
+			<Item>
+				<Command>InformationRegister.бит_ПоверкаСчетчиков.StandardCommand.OpenByRecorder</Command>
+				<Type>Auto</Type>
+				<DefaultVisible>false</DefaultVisible>
+			</Item>
+			<Item>
+				<Command>4:be6441d1-0ad8-4852-806c-533aee06a33f</Command>
+				<Type>Auto</Type>
+				<DefaultVisible>false</DefaultVisible>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+			<Item>
+				<Command>InformationRegister.бит_си_СвязанныеОбъекты.StandardCommand.OpenByValue.Объект</Command>
+				<Type>Auto</Type>
+				<DefaultVisible>false</DefaultVisible>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+			<Item>
+				<Command>CommonCommand.бит_СтруктураПодчиненности</Command>
+				<Type>Auto</Type>
+				<DefaultVisible>false</DefaultVisible>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+		</NavigationPanel>
+	</CommandInterface>
+</Form>

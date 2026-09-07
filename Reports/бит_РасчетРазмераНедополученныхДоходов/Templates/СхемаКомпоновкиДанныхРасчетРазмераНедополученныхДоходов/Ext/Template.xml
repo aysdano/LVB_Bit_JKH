@@ -1,0 +1,682 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<DataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcscom="http://v8.1c.ru/8.1/data-composition-system/common" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataSource>
+		<name>ИсточникДанных1</name>
+		<dataSourceType>Local</dataSourceType>
+	</dataSource>
+	<dataSet xsi:type="DataSetQuery">
+		<name>НаборДанных1</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Активность</dataPath>
+			<field>Активность</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>НомерСтроки</dataPath>
+			<field>НомерСтроки</field>
+			<role>
+				<dcscom:periodNumber>1</dcscom:periodNumber>
+				<dcscom:periodType>Main</dcscom:periodType>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Период</dataPath>
+			<field>Период</field>
+			<role>
+				<dcscom:periodNumber>3</dcscom:periodNumber>
+				<dcscom:periodType>Main</dcscom:periodType>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>МоментВремени</dataPath>
+			<field>МоментВремени</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Регистратор</dataPath>
+			<field>Регистратор</field>
+			<role>
+				<dcscom:periodNumber>2</dcscom:periodNumber>
+				<dcscom:periodType>Main</dcscom:periodType>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ГруппаУслуги</dataPath>
+			<field>ГруппаУслуги</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ЕдиницаИзмерения</dataPath>
+			<field>ЕдиницаИзмерения</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ед. измерения</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Количество</dataPath>
+			<field>Количество</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ЛицевойСчет</dataPath>
+			<field>ЛицевойСчет</field>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>МесячныйОбъемКоммунальныхУслугРассчитанныйПоНормативамВПериодеСравнения</dataPath>
+			<field>МесячныйОбъемКоммунальныхУслугРассчитанныйПоНормативамВПериодеСравнения</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Месячный объем коммунальных услуг, рассчитанный по нормативам в периоде сравнения</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>МесячныйОбъемКоммунальныхУслугРассчитанныйПоНормативамВТекущемПериоде</dataPath>
+			<field>МесячныйОбъемКоммунальныхУслугРассчитанныйПоНормативамВТекущемПериоде</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Месячный объем коммунальных услуг, рассчитанный по нормативам в текущем периоде</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>МесячныйОбъемКоммунальныхУслугРассчитанныйПоПоказаниямПриборовУчетаВТекущемПериоде</dataPath>
+			<field>МесячныйОбъемКоммунальныхУслугРассчитанныйПоПоказаниямПриборовУчетаВТекущемПериоде</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Месячный объем коммунальных услуг, рассчитанный по показаниям приборов учета в текущем периоде</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Норма</dataPath>
+			<field>Норма</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПериодСравнения</dataPath>
+			<field>ПериодСравнения</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПлановаяСтавкаУстановленнаяВПериодеСравнения</dataPath>
+			<field>ПлановаяСтавкаУстановленнаяВПериодеСравнения</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПлановаяСтавкаУстановленнаяВТекущемПериоде</dataPath>
+			<field>ПлановаяСтавкаУстановленнаяВТекущемПериоде</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПлатаГражданЗаКоммунальныеУслугиСУчетомТарифаПрименяемогоВПериодеСравнения</dataPath>
+			<field>ПлатаГражданЗаКоммунальныеУслугиСУчетомТарифаПрименяемогоВПериодеСравнения</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Плата граждан за коммунальные услуги с учетом тарифа, применяемого в периоде сравнения</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПлатаГражданЗаКоммунальныеУслугиСУчетомТарифаПрименяемогоВТекущемПериоде</dataPath>
+			<field>ПлатаГражданЗаКоммунальныеУслугиСУчетомТарифаПрименяемогоВТекущемПериоде</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Плата граждан за коммунальные услуги с учетом тарифа, применяемого в текущем периоде</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПревышениеСовокупнойПлатыГражданЗаКоммунальныеУслугиСУчетомПредельныхИндексов</dataPath>
+			<field>ПревышениеСовокупнойПлатыГражданЗаКоммунальныеУслугиСУчетомПредельныхИндексов</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПредельныйИндекс</dataPath>
+			<field>ПредельныйИндекс</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>РесурсоснабжающаяОрганизация</dataPath>
+			<field>РесурсоснабжающаяОрганизация</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Наименование ресурсоснабжающей организации</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Сверхнорма</dataPath>
+			<field>Сверхнорма</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СверхнормативнаяСтавкаУстановленнаяВПериодеСравнения</dataPath>
+			<field>СверхнормативнаяСтавкаУстановленнаяВПериодеСравнения</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СверхнормативнаяСтавкаУстановленнаяВТекущемПериоде</dataPath>
+			<field>СверхнормативнаяСтавкаУстановленнаяВТекущемПериоде</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СтавкаУстановленнаяВПериодеСравнения</dataPath>
+			<field>СтавкаУстановленнаяВПериодеСравнения</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СтавкаУстановленнаяВТекущемПериоде</dataPath>
+			<field>СтавкаУстановленнаяВТекущемПериоде</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СуммаНедополученныхДоходов</dataPath>
+			<field>СуммаНедополученныхДоходов</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сумма недополученных доходов, руб.</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ТарифУстановленныйВПериодеСравнения</dataPath>
+			<field>ТарифУстановленныйВПериодеСравнения</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Тариф, установленный в периоде сравнения</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ТарифУстановленныйВТекущемПериоде</dataPath>
+			<field>ТарифУстановленныйВТекущемПериоде</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Тариф, установленный в текущем периоде</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>УслугаЖКХ</dataPath>
+			<field>УслугаЖКХ</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Наименование коммунальных услуг</v8:content>
+				</v8:item>
+			</title>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПревышениеВПроцентах</dataPath>
+			<field>ПревышениеВПроцентах</field>
+		</field>
+		<dataSource>ИсточникДанных1</dataSource>
+		<query>ВЫБРАТЬ
+	бит_РасчетПредельногоИндексаПоУслугамЖКХ.Период,
+	бит_РасчетПредельногоИндексаПоУслугамЖКХ.Регистратор,
+	бит_РасчетПредельногоИндексаПоУслугамЖКХ.НомерСтроки,
+	бит_РасчетПредельногоИндексаПоУслугамЖКХ.Активность,
+	бит_РасчетПредельногоИндексаПоУслугамЖКХ.ЛицевойСчет,
+	бит_РасчетПредельногоИндексаПоУслугамЖКХ.УслугаЖКХ,
+	бит_РасчетПредельногоИндексаПоУслугамЖКХ.СуммаНедополученныхДоходов,
+	бит_РасчетПредельногоИндексаПоУслугамЖКХ.РесурсоснабжающаяОрганизация,
+	бит_РасчетПредельногоИндексаПоУслугамЖКХ.ЕдиницаИзмерения,
+	бит_РасчетПредельногоИндексаПоУслугамЖКХ.МесячныйОбъемКоммунальныхУслугРассчитанныйПоНормативамВПериодеСравнения,
+	бит_РасчетПредельногоИндексаПоУслугамЖКХ.МесячныйОбъемКоммунальныхУслугРассчитанныйПоНормативамВТекущемПериоде,
+	бит_РасчетПредельногоИндексаПоУслугамЖКХ.МесячныйОбъемКоммунальныхУслугРассчитанныйПоПоказаниямПриборовУчетаВТекущемПериоде,
+	бит_РасчетПредельногоИндексаПоУслугамЖКХ.ТарифУстановленныйВПериодеСравнения,
+	бит_РасчетПредельногоИндексаПоУслугамЖКХ.ТарифУстановленныйВТекущемПериоде,
+	бит_РасчетПредельногоИндексаПоУслугамЖКХ.ПлатаГражданЗаКоммунальныеУслугиСУчетомТарифаПрименяемогоВПериодеСравнения,
+	бит_РасчетПредельногоИндексаПоУслугамЖКХ.ПлатаГражданЗаКоммунальныеУслугиСУчетомТарифаПрименяемогоВТекущемПериоде,
+	бит_РасчетПредельногоИндексаПоУслугамЖКХ.ПревышениеСовокупнойПлатыГражданЗаКоммунальныеУслугиСУчетомПредельныхИндексов,
+	бит_РасчетПредельногоИндексаПоУслугамЖКХ.ПериодСравнения,
+	бит_РасчетПредельногоИндексаПоУслугамЖКХ.Количество,
+	бит_РасчетПредельногоИндексаПоУслугамЖКХ.СтавкаУстановленнаяВПериодеСравнения,
+	бит_РасчетПредельногоИндексаПоУслугамЖКХ.СтавкаУстановленнаяВТекущемПериоде,
+	бит_РасчетПредельногоИндексаПоУслугамЖКХ.Норма,
+	бит_РасчетПредельногоИндексаПоУслугамЖКХ.СверхнормативнаяСтавкаУстановленнаяВПериодеСравнения,
+	бит_РасчетПредельногоИндексаПоУслугамЖКХ.СверхнормативнаяСтавкаУстановленнаяВТекущемПериоде,
+	бит_РасчетПредельногоИндексаПоУслугамЖКХ.Сверхнорма,
+	бит_РасчетПредельногоИндексаПоУслугамЖКХ.ПлановаяСтавкаУстановленнаяВПериодеСравнения,
+	бит_РасчетПредельногоИндексаПоУслугамЖКХ.ПлановаяСтавкаУстановленнаяВТекущемПериоде,
+	бит_РасчетПредельногоИндексаПоУслугамЖКХ.ПредельныйИндекс,
+	бит_РасчетПредельногоИндексаПоУслугамЖКХ.ГруппаУслуги,
+	бит_РасчетПредельногоИндексаПоУслугамЖКХ.МоментВремени,
+	бит_РасчетПредельногоИндексаПоУслугамЖКХ.ПревышениеВПроцентах
+ИЗ
+	РегистрНакопления.бит_РасчетПредельногоИндексаПоУслугамЖКХ КАК бит_РасчетПредельногоИндексаПоУслугамЖКХ
+ГДЕ
+	бит_РасчетПредельногоИндексаПоУслугамЖКХ.Период МЕЖДУ &amp;НачалоПериода И &amp;КонецПериода
+	И бит_РасчетПредельногоИндексаПоУслугамЖКХ.ЛицевойСчет = &amp;ЛицевойСчет</query>
+	</dataSet>
+	<calculatedField>
+		<dataPath>ПревышениеСовокупнойПлатыГражданЗаКоммунальныеУслугиСУчетомПредельныхИндексов</dataPath>
+		<expression>ВычислитьВыражение("Сумма(ПлатаГражданЗаКоммунальныеУслугиСУчетомТарифаПрименяемогоВТекущемПериоде) * 100 / Выбор Когда Сумма(ПлатаГражданЗаКоммунальныеУслугиСУчетомТарифаПрименяемогоВПериодеСравнения) = 0 Тогда 1 Иначе Сумма(ПлатаГражданЗаКоммунальныеУслугиСУчетомТарифаПрименяемогоВПериодеСравнения) Конец ","ГруппаУслуги","Группировка") </expression>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Превышение совокупной платы граждан за коммунальные услуги с учетом предельных индексов</v8:content>
+			</v8:item>
+		</title>
+		<appearance>
+			<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+				<dcscor:parameter>Формат</dcscor:parameter>
+				<dcscor:value xsi:type="xs:string">ЧДЦ=2</dcscor:value>
+			</dcscor:item>
+		</appearance>
+		<valueType>
+			<v8:Type>xs:decimal</v8:Type>
+			<v8:NumberQualifiers>
+				<v8:Digits>15</v8:Digits>
+				<v8:FractionDigits>2</v8:FractionDigits>
+				<v8:AllowedSign>Any</v8:AllowedSign>
+			</v8:NumberQualifiers>
+		</valueType>
+	</calculatedField>
+	<totalField>
+		<dataPath>МесячныйОбъемКоммунальныхУслугРассчитанныйПоНормативамВПериодеСравнения</dataPath>
+		<expression>Сумма(МесячныйОбъемКоммунальныхУслугРассчитанныйПоНормативамВПериодеСравнения)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>МесячныйОбъемКоммунальныхУслугРассчитанныйПоНормативамВТекущемПериоде</dataPath>
+		<expression>Сумма(МесячныйОбъемКоммунальныхУслугРассчитанныйПоНормативамВТекущемПериоде)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>МесячныйОбъемКоммунальныхУслугРассчитанныйПоПоказаниямПриборовУчетаВТекущемПериоде</dataPath>
+		<expression>Сумма(МесячныйОбъемКоммунальныхУслугРассчитанныйПоПоказаниямПриборовУчетаВТекущемПериоде)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>НомерСтроки</dataPath>
+		<expression>Сумма(НомерСтроки)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>Норма</dataPath>
+		<expression>Сумма(Норма)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ПлановаяСтавкаУстановленнаяВПериодеСравнения</dataPath>
+		<expression>Сумма(ПлановаяСтавкаУстановленнаяВПериодеСравнения)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ПлановаяСтавкаУстановленнаяВТекущемПериоде</dataPath>
+		<expression>Сумма(ПлановаяСтавкаУстановленнаяВТекущемПериоде)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ПлатаГражданЗаКоммунальныеУслугиСУчетомТарифаПрименяемогоВПериодеСравнения</dataPath>
+		<expression>Сумма(ПлатаГражданЗаКоммунальныеУслугиСУчетомТарифаПрименяемогоВПериодеСравнения)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ПлатаГражданЗаКоммунальныеУслугиСУчетомТарифаПрименяемогоВТекущемПериоде</dataPath>
+		<expression>Сумма(ПлатаГражданЗаКоммунальныеУслугиСУчетомТарифаПрименяемогоВТекущемПериоде)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ПревышениеСовокупнойПлатыГражданЗаКоммунальныеУслугиСУчетомПредельныхИндексов</dataPath>
+		<expression>Сумма(ПревышениеСовокупнойПлатыГражданЗаКоммунальныеУслугиСУчетомПредельныхИндексов)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ПредельныйИндекс</dataPath>
+		<expression>Сумма(ПредельныйИндекс)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>Сверхнорма</dataPath>
+		<expression>Сумма(Сверхнорма)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>СверхнормативнаяСтавкаУстановленнаяВПериодеСравнения</dataPath>
+		<expression>Сумма(СверхнормативнаяСтавкаУстановленнаяВПериодеСравнения)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>СверхнормативнаяСтавкаУстановленнаяВТекущемПериоде</dataPath>
+		<expression>Сумма(СверхнормативнаяСтавкаУстановленнаяВТекущемПериоде)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>СтавкаУстановленнаяВПериодеСравнения</dataPath>
+		<expression>Сумма(СтавкаУстановленнаяВПериодеСравнения)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>СтавкаУстановленнаяВТекущемПериоде</dataPath>
+		<expression>Сумма(СтавкаУстановленнаяВТекущемПериоде)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>СуммаНедополученныхДоходов</dataPath>
+		<expression>Сумма(СуммаНедополученныхДоходов)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ТарифУстановленныйВПериодеСравнения</dataPath>
+		<expression>Сумма(ТарифУстановленныйВПериодеСравнения)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ТарифУстановленныйВТекущемПериоде</dataPath>
+		<expression>Сумма(ТарифУстановленныйВТекущемПериоде)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ПериодСравнения</dataPath>
+		<expression>Максимум(ПериодСравнения)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ПревышениеВПроцентах</dataPath>
+		<expression>Сумма(ПревышениеВПроцентах)</expression>
+	</totalField>
+	<parameter>
+		<name>Пусто</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Пусто</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:string</v8:Type>
+			<v8:StringQualifiers>
+				<v8:Length>1</v8:Length>
+				<v8:AllowedLength>Variable</v8:AllowedLength>
+			</v8:StringQualifiers>
+		</valueType>
+		<value xsi:type="xs:string"/>
+		<useRestriction>true</useRestriction>
+		<availableValue>
+			<value xsi:type="xs:string"> </value>
+		</availableValue>
+	</parameter>
+	<parameter>
+		<name>КонецПериода</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Конец периода</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>false</useRestriction>
+	</parameter>
+	<parameter>
+		<name>НачалоПериода</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Начало периода</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>false</useRestriction>
+	</parameter>
+	<parameter>
+		<name>ЛицевойСчет</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Лицевой счет</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.бит_ЛицевыеСчета</v8:Type>
+		</valueType>
+		<value xsi:nil="true"/>
+		<useRestriction>false</useRestriction>
+	</parameter>
+	<settingsVariant>
+		<dcsset:name>Основной</dcsset:name>
+		<dcsset:presentation xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Отчет для города Нижний Новгород</v8:content>
+			</v8:item>
+		</dcsset:presentation>
+		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+			<dcsset:selection>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ГруппаУслуги</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>УслугаЖКХ</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>РесурсоснабжающаяОрганизация</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ЕдиницаИзмерения</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ПериодСравнения</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>МесячныйОбъемКоммунальныхУслугРассчитанныйПоНормативамВПериодеСравнения</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>МесячныйОбъемКоммунальныхУслугРассчитанныйПоНормативамВТекущемПериоде</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>МесячныйОбъемКоммунальныхУслугРассчитанныйПоПоказаниямПриборовУчетаВТекущемПериоде</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ТарифУстановленныйВПериодеСравнения</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ТарифУстановленныйВТекущемПериоде</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ПлатаГражданЗаКоммунальныеУслугиСУчетомТарифаПрименяемогоВПериодеСравнения</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ПлатаГражданЗаКоммунальныеУслугиСУчетомТарифаПрименяемогоВТекущемПериоде</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ПревышениеСовокупнойПлатыГражданЗаКоммунальныеУслугиСУчетомПредельныхИндексов</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>СуммаНедополученныхДоходов</dcsset:field>
+				</dcsset:item>
+				<dcsset:viewMode>Normal</dcsset:viewMode>
+				<dcsset:userSettingID>aeeaf66b-760a-4976-a9d9-e576df11b649</dcsset:userSettingID>
+			</dcsset:selection>
+			<dcsset:filter>
+				<dcsset:viewMode>Normal</dcsset:viewMode>
+				<dcsset:userSettingID>cd8484fc-c5d4-417c-a56b-d1fc097200f1</dcsset:userSettingID>
+			</dcsset:filter>
+			<dcsset:dataParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>КонецПериода</dcscor:parameter>
+					<dcscor:value xsi:type="v8:StandardBeginningDate">
+						<v8:variant xsi:type="v8:StandardBeginningDateVariant">BeginningOfThisMonth</v8:variant>
+					</dcscor:value>
+					<dcsset:userSettingID>d1829e30-1480-4d6d-ba04-018b3f8e78fa</dcsset:userSettingID>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>НачалоПериода</dcscor:parameter>
+					<dcscor:value xsi:type="v8:StandardBeginningDate">
+						<v8:variant xsi:type="v8:StandardBeginningDateVariant">BeginningOfLastMonth</v8:variant>
+					</dcscor:value>
+					<dcsset:userSettingID>3e96d566-100d-4dc9-8254-52585bc7bcb2</dcsset:userSettingID>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ЛицевойСчет</dcscor:parameter>
+					<dcscor:value xsi:nil="true"/>
+					<dcsset:userSettingID>161ddc6f-1cd3-4573-8e11-1019aa537209</dcsset:userSettingID>
+				</dcscor:item>
+			</dcsset:dataParameters>
+			<dcsset:order>
+				<dcsset:viewMode>Normal</dcsset:viewMode>
+			</dcsset:order>
+			<dcsset:conditionalAppearance>
+				<dcsset:item>
+					<dcsset:selection>
+						<dcsset:item>
+							<dcsset:field>МесячныйОбъемКоммунальныхУслугРассчитанныйПоНормативамВПериодеСравнения</dcsset:field>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:field>МесячныйОбъемКоммунальныхУслугРассчитанныйПоНормативамВТекущемПериоде</dcsset:field>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:field>МесячныйОбъемКоммунальныхУслугРассчитанныйПоПоказаниямПриборовУчетаВТекущемПериоде</dcsset:field>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:field>ПлановаяСтавкаУстановленнаяВПериодеСравнения</dcsset:field>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:field>ПлановаяСтавкаУстановленнаяВТекущемПериоде</dcsset:field>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:field>ПлатаГражданЗаКоммунальныеУслугиСУчетомТарифаПрименяемогоВПериодеСравнения</dcsset:field>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:field>ПлатаГражданЗаКоммунальныеУслугиСУчетомТарифаПрименяемогоВТекущемПериоде</dcsset:field>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:field>СверхнормативнаяСтавкаУстановленнаяВПериодеСравнения</dcsset:field>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:field>СверхнормативнаяСтавкаУстановленнаяВТекущемПериоде</dcsset:field>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:field>СтавкаУстановленнаяВПериодеСравнения</dcsset:field>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:field>СтавкаУстановленнаяВТекущемПериоде</dcsset:field>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:field>СуммаНедополученныхДоходов</dcsset:field>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:field>ТарифУстановленныйВПериодеСравнения</dcsset:field>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:field>ТарифУстановленныйВТекущемПериоде</dcsset:field>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:field>ПредельныйИндекс</dcsset:field>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:field>ПревышениеСовокупнойПлатыГражданЗаКоммунальныеУслугиСУчетомПредельныхИндексов</dcsset:field>
+						</dcsset:item>
+					</dcsset:selection>
+					<dcsset:filter/>
+					<dcsset:appearance>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>МаксимальнаяШирина</dcscor:parameter>
+							<dcscor:value xsi:type="xs:decimal">20</dcscor:value>
+						</dcscor:item>
+					</dcsset:appearance>
+				</dcsset:item>
+				<dcsset:viewMode>Normal</dcsset:viewMode>
+				<dcsset:userSettingID>a6954313-a1db-40fc-a45b-7386aabb8340</dcsset:userSettingID>
+			</dcsset:conditionalAppearance>
+			<dcsset:outputParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>МакетОформления</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">бит_ОтчетОДвиженияхНаЛСПомесячно</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>РасположениеИтогов</dcscor:parameter>
+					<dcscor:value xsi:type="dcscor:DataCompositionTotalPlacement">None</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>РасположениеПолейГруппировки</dcscor:parameter>
+					<dcscor:value xsi:type="dcsset:DataCompositionGroupFieldsPlacement">SeparatelyAndInTotalsOnly</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>РасположениеГруппировки</dcscor:parameter>
+					<dcscor:value xsi:type="dcsset:DataCompositionGroupPlacement">End</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ГоризонтальноеРасположениеОбщихИтогов</dcscor:parameter>
+					<dcscor:value xsi:type="dcscor:DataCompositionTotalPlacement">End</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ВертикальноеРасположениеОбщихИтогов</dcscor:parameter>
+					<dcscor:value xsi:type="dcscor:DataCompositionTotalPlacement">None</dcscor:value>
+					<dcsset:viewMode>Normal</dcsset:viewMode>
+					<dcsset:userSettingID>a405a839-aec0-4630-8a1b-08b8a78d74d2</dcsset:userSettingID>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ВыводитьЗаголовок</dcscor:parameter>
+					<dcscor:value xsi:type="dcsset:DataCompositionTextOutputType">Output</dcscor:value>
+					<dcsset:viewMode>Normal</dcsset:viewMode>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Заголовок</dcscor:parameter>
+					<dcscor:value xsi:type="v8:LocalStringType"/>
+					<dcsset:viewMode>Normal</dcsset:viewMode>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ВыводитьПараметрыДанных</dcscor:parameter>
+					<dcscor:value xsi:type="dcsset:DataCompositionTextOutputType">DontOutput</dcscor:value>
+					<dcsset:viewMode>Normal</dcsset:viewMode>
+					<dcsset:userSettingID>198ef204-9ec0-4ded-b271-0f74ce3e4260</dcsset:userSettingID>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ВыводитьОтбор</dcscor:parameter>
+					<dcscor:value xsi:type="dcsset:DataCompositionTextOutputType">DontOutput</dcscor:value>
+					<dcsset:viewMode>Normal</dcsset:viewMode>
+					<dcsset:userSettingID>91edfefe-6997-4f27-88fb-1702839603eb</dcsset:userSettingID>
+				</dcscor:item>
+			</dcsset:outputParameters>
+			<dcsset:item xsi:type="dcsset:StructureItemGroup">
+				<dcsset:groupItems>
+					<dcsset:item xsi:type="dcsset:GroupItemField">
+						<dcsset:field>ГруппаУслуги</dcsset:field>
+						<dcsset:groupType>Items</dcsset:groupType>
+						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+						<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+						<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+					</dcsset:item>
+				</dcsset:groupItems>
+				<dcsset:order>
+					<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+				</dcsset:order>
+				<dcsset:selection>
+					<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+				</dcsset:selection>
+				<dcsset:item xsi:type="dcsset:StructureItemGroup">
+					<dcsset:groupItems>
+						<dcsset:item xsi:type="dcsset:GroupItemField">
+							<dcsset:field>УслугаЖКХ</dcsset:field>
+							<dcsset:groupType>Items</dcsset:groupType>
+							<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+							<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+							<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:GroupItemField">
+							<dcsset:field>РесурсоснабжающаяОрганизация</dcsset:field>
+							<dcsset:groupType>Items</dcsset:groupType>
+							<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+							<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+							<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:GroupItemField">
+							<dcsset:field>ЕдиницаИзмерения</dcsset:field>
+							<dcsset:groupType>Items</dcsset:groupType>
+							<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+							<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+							<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+						</dcsset:item>
+					</dcsset:groupItems>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+					</dcsset:order>
+					<dcsset:selection>
+						<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+					</dcsset:selection>
+				</dcsset:item>
+			</dcsset:item>
+			<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+			<dcsset:itemsUserSettingID>36047b16-30be-4a5e-8afd-99e48d8a3811</dcsset:itemsUserSettingID>
+		</dcsset:settings>
+	</settingsVariant>
+</DataCompositionSchema>

@@ -1,0 +1,476 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.18">
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаДеревоДокументов" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа дерево документов</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа дерево документов</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Vertical</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаДеревоДокументовРасширеннаяПодсказка" id="24"/>
+			<ChildItems>
+				<Table name="ДеревоДокументов" id="3">
+					<Representation>Tree</Representation>
+					<ChangeRowSet>false</ChangeRowSet>
+					<ChangeRowOrder>false</ChangeRowOrder>
+					<SelectionMode>SingleRow</SelectionMode>
+					<HorizontalLines>false</HorizontalLines>
+					<VerticalLines>false</VerticalLines>
+					<AutoInsertNewRow>true</AutoInsertNewRow>
+					<InitialListView>Beginning</InitialListView>
+					<InitialTreeView>ExpandAllLevels</InitialTreeView>
+					<FileDragMode>AsFile</FileDragMode>
+					<DataPath>ДеревоДокументов</DataPath>
+					<RowPictureDataPath>ДеревоДокументов.ИндексПиктограммы</RowPictureDataPath>
+					<RowsPicture>
+						<xr:Ref>CommonPicture.бит_СостоянияДокумента</xr:Ref>
+						<xr:LoadTransparent>false</xr:LoadTransparent>
+					</RowsPicture>
+					<SearchStringLocation>None</SearchStringLocation>
+					<ViewStatusLocation>None</ViewStatusLocation>
+					<SearchControlLocation>None</SearchControlLocation>
+					<ContextMenu name="ДеревоДокументовКонтекстноеМеню" id="4"/>
+					<AutoCommandBar name="ДеревоДокументовКоманднаяПанель" id="5">
+						<ChildItems>
+							<Button name="ДеревоДокументовИзменитьДокумент" id="17">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Command.Изменить</CommandName>
+								<ExtendedTooltip name="ДеревоДокументовИзменитьДокументРасширеннаяПодсказка" id="25"/>
+							</Button>
+							<Button name="ДеревоДокументовИзменитьПометкуУдаления" id="18">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Command.ИзменитьПометкуУдаления</CommandName>
+								<ExtendedTooltip name="ДеревоДокументовИзменитьПометкуУдаленияРасширеннаяПодсказка" id="26"/>
+							</Button>
+							<Button name="ДеревоДокументовПровести" id="19">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Command.Провести</CommandName>
+								<ExtendedTooltip name="ДеревоДокументовПровестиРасширеннаяПодсказка" id="27"/>
+							</Button>
+							<Button name="ДеревоДокументовОтменаПроведения" id="20">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Command.ОтменаПроведения</CommandName>
+								<ExtendedTooltip name="ДеревоДокументовОтменаПроведенияРасширеннаяПодсказка" id="28"/>
+							</Button>
+							<Button name="ДеревоДокументовОбновитьСписок" id="22">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Command.Обновить</CommandName>
+								<ExtendedTooltip name="ДеревоДокументовОбновитьСписокРасширеннаяПодсказка" id="29"/>
+							</Button>
+							<Button name="ДеревоДокументовВывестиДляТекущего" id="23">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Command.ВывестиДляТекущего</CommandName>
+								<ExtendedTooltip name="ДеревоДокументовВывестиДляТекущегоРасширеннаяПодсказка" id="30"/>
+							</Button>
+							<Button name="ДеревоДокументовИзменить" id="12">
+								<Type>CommandBarButton</Type>
+								<Visible>false</Visible>
+								<Enabled>false</Enabled>
+								<CommandName>Form.Item.ДеревоДокументов.StandardCommand.Change</CommandName>
+								<ExtendedTooltip name="ДеревоДокументовИзменитьРасширеннаяПодсказка" id="31"/>
+							</Button>
+							<Button name="ДеревоДокументовЗакончитьРедактирование" id="13">
+								<Type>CommandBarButton</Type>
+								<Visible>false</Visible>
+								<Enabled>false</Enabled>
+								<CommandName>Form.Item.ДеревоДокументов.StandardCommand.EndEdit</CommandName>
+								<ExtendedTooltip name="ДеревоДокументовЗакончитьРедактированиеРасширеннаяПодсказка" id="32"/>
+							</Button>
+							<Button name="ДеревоДокументовСписок" id="14">
+								<Type>CommandBarButton</Type>
+								<Visible>false</Visible>
+								<Enabled>false</Enabled>
+								<CommandName>Form.Item.ДеревоДокументов.StandardCommand.List</CommandName>
+								<ExtendedTooltip name="ДеревоДокументовСписокРасширеннаяПодсказка" id="33"/>
+							</Button>
+							<Button name="ДеревоДокументовИерархическийСписок" id="15">
+								<Type>CommandBarButton</Type>
+								<Visible>false</Visible>
+								<Enabled>false</Enabled>
+								<CommandName>Form.Item.ДеревоДокументов.StandardCommand.HierarchicalList</CommandName>
+								<ExtendedTooltip name="ДеревоДокументовИерархическийСписокРасширеннаяПодсказка" id="34"/>
+							</Button>
+							<Button name="ДеревоДокументовДерево" id="16">
+								<Type>CommandBarButton</Type>
+								<Visible>false</Visible>
+								<Enabled>false</Enabled>
+								<CommandName>Form.Item.ДеревоДокументов.StandardCommand.Tree</CommandName>
+								<ExtendedTooltip name="ДеревоДокументовДеревоРасширеннаяПодсказка" id="35"/>
+							</Button>
+							<Button name="ДеревоДокументовВывестиСписок" id="21">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Item.ДеревоДокументов.StandardCommand.OutputList</CommandName>
+								<ExtendedTooltip name="ДеревоДокументовВывестиСписокРасширеннаяПодсказка" id="36"/>
+							</Button>
+						</ChildItems>
+					</AutoCommandBar>
+					<ExtendedTooltip name="ДеревоДокументовРасширеннаяПодсказка" id="37"/>
+					<SearchStringAddition name="ДеревоДокументовСтрокаПоиска" id="38">
+						<AdditionSource>
+							<Item>ДеревоДокументов</Item>
+							<Type>SearchStringRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="ДеревоДокументовСтрокаПоискаКонтекстноеМеню" id="39"/>
+						<ExtendedTooltip name="ДеревоДокументовСтрокаПоискаРасширеннаяПодсказка" id="40"/>
+					</SearchStringAddition>
+					<ViewStatusAddition name="ДеревоДокументовСостояниеПросмотра" id="41">
+						<AdditionSource>
+							<Item>ДеревоДокументов</Item>
+							<Type>ViewStatusRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="ДеревоДокументовСостояниеПросмотраКонтекстноеМеню" id="42"/>
+						<ExtendedTooltip name="ДеревоДокументовСостояниеПросмотраРасширеннаяПодсказка" id="43"/>
+					</ViewStatusAddition>
+					<SearchControlAddition name="ДеревоДокументовУправлениеПоиском" id="44">
+						<AdditionSource>
+							<Item>ДеревоДокументов</Item>
+							<Type>SearchControl</Type>
+						</AdditionSource>
+						<ContextMenu name="ДеревоДокументовУправлениеПоискомКонтекстноеМеню" id="45"/>
+						<ExtendedTooltip name="ДеревоДокументовУправлениеПоискомРасширеннаяПодсказка" id="46"/>
+					</SearchControlAddition>
+					<Events>
+						<Event name="OnActivateRow">ДеревоДокументовПриАктивизацииСтроки</Event>
+						<Event name="BeforeRowChange">ДеревоДокументовПередНачаломИзменения</Event>
+					</Events>
+					<ChildItems>
+						<InputField name="ДеревоДокументовДокументПредставление" id="6">
+							<DataPath>ДеревоДокументов.ДокументПредставление</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ДеревоДокументовДокументПредставлениеКонтекстноеМеню" id="7"/>
+							<ExtendedTooltip name="ДеревоДокументовДокументПредставлениеРасширеннаяПодсказка" id="47"/>
+						</InputField>
+						<InputField name="ДеревоДокументовСуммаДокумента" id="8">
+							<DataPath>ДеревоДокументов.СуммаДокумента</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Сумма</v8:content>
+								</v8:item>
+							</Title>
+							<EditMode>EnterOnInput</EditMode>
+							<Width>16</Width>
+							<HorizontalStretch>false</HorizontalStretch>
+							<ContextMenu name="ДеревоДокументовСуммаДокументаКонтекстноеМеню" id="9"/>
+							<ExtendedTooltip name="ДеревоДокументовСуммаДокументаРасширеннаяПодсказка" id="48"/>
+						</InputField>
+						<InputField name="ДеревоДокументовВалютаДокумента" id="10">
+							<DataPath>ДеревоДокументов.ВалютаДокумента</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Валюта</v8:content>
+								</v8:item>
+							</Title>
+							<EditMode>EnterOnInput</EditMode>
+							<Width>8</Width>
+							<HorizontalStretch>false</HorizontalStretch>
+							<ContextMenu name="ДеревоДокументовВалютаДокументаКонтекстноеМеню" id="11"/>
+							<ExtendedTooltip name="ДеревоДокументовВалютаДокументаРасширеннаяПодсказка" id="49"/>
+						</InputField>
+					</ChildItems>
+				</Table>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="ДокументСсылка" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Документ ссылка</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:TypeSet>cfg:DocumentRef</v8:TypeSet>
+			</Type>
+		</Attribute>
+		<Attribute name="ДеревоДокументов" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дерево документов</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTree</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="ДокументПредставление" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Документ</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="СуммаДокумента" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Сумма документа</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>15</v8:Digits>
+							<v8:FractionDigits>2</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="ВалютаДокумента" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Валюта документа</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.Валюты</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Ссылка" id="4">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Ссылка</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:TypeSet>cfg:DocumentRef</v8:TypeSet>
+					</Type>
+				</Column>
+				<Column name="Проведен" id="5">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Проведен</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ПометкаУдаления" id="6">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Пометка удаления</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ИндексПиктограммы" id="7">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Индекс пиктограммы</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>1</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="ДокументСсылкаИсточник" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Документ ссылка источник</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:TypeSet>cfg:DocumentRef</v8:TypeSet>
+			</Type>
+		</Attribute>
+		<ConditionalAppearance>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>ДеревоДокументовДокументПредставление</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ДеревоДокументовСуммаДокумента</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ДеревоДокументовВалютаДокумента</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">ДеревоДокументов.ДокументПредставление</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="dcscor:Field">ДокументСсылка</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ЦветФона</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">#E6E6E6</dcscor:value>
+					</dcscor:item>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>Шрифт</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Font" ref="sys:DefaultGUIFont" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+		</ConditionalAppearance>
+	</Attributes>
+	<Commands>
+		<Command name="Изменить" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Изменить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Изменить (или открыть) текущий элемент</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.Change</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>Изменить</Action>
+			<Representation>Picture</Representation>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ИзменитьПометкуУдаления" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Изменить пометку удаления</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Пометить текущий элемент на удаление / Снять пометку</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.MarkToDelete</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ИзменитьПометкуУдаления</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="Провести" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Провести</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Провести</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.Post</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>Провести</Action>
+			<Representation>Picture</Representation>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ОтменаПроведения" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отмена проведения</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отмена проведения</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.UndoPosting</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ОтменаПроведения</Action>
+			<Representation>Picture</Representation>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="Обновить" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обновить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обновить список</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.Refresh</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ОбновитьСписок</Action>
+			<Representation>Picture</Representation>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ВывестиДляТекущего" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вывести для текущего</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вывести для текущего документа</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ВывестиДляТекущего</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+	</Commands>
+</Form>

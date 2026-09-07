@@ -1,0 +1,476 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.18">
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<Pages name="Группа5" id="108">
+			<PagesRepresentation>TabsOnTop</PagesRepresentation>
+			<ExtendedTooltip name="Группа5РасширеннаяПодсказка" id="109"/>
+			<ChildItems>
+				<Page name="ЕЛС" id="110">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ЕЛС</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ЕЛС</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ЕЛСРасширеннаяПодсказка" id="111"/>
+					<ChildItems>
+						<CheckBoxField name="Режим" id="1">
+							<DataPath>Объект.Режим</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Режим загрузки</v8:content>
+								</v8:item>
+							</Title>
+							<TitleLocation>Top</TitleLocation>
+							<CheckBoxType>Tumbler</CheckBoxType>
+							<EditFormat>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>БЛ=Содержание; БИ='Капитальный ремонт'</v8:content>
+								</v8:item>
+							</EditFormat>
+							<ContextMenu name="РежимКонтекстноеМеню" id="2"/>
+							<ExtendedTooltip name="РежимРасширеннаяПодсказка" id="3"/>
+						</CheckBoxField>
+						<InputField name="ПутьКФайлу" id="4">
+							<DataPath>ПутьКФайлу</DataPath>
+							<ChoiceButton>true</ChoiceButton>
+							<ContextMenu name="ПутьКФайлуКонтекстноеМеню" id="5"/>
+							<ExtendedTooltip name="ПутьКФайлуРасширеннаяПодсказка" id="6"/>
+							<Events>
+								<Event name="StartChoice">ПутьКФайлуНачалоВыбора</Event>
+							</Events>
+						</InputField>
+						<UsualGroup name="Группа4" id="67">
+							<Group>Vertical</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="Группа4РасширеннаяПодсказка" id="68"/>
+							<ChildItems>
+								<UsualGroup name="Группа6" id="123">
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="Группа6РасширеннаяПодсказка" id="124"/>
+									<ChildItems>
+										<Button name="Загрузить" id="7">
+											<Type>UsualButton</Type>
+											<CommandName>Form.Command.Загрузить</CommandName>
+											<ExtendedTooltip name="ЗагрузитьРасширеннаяПодсказка" id="8"/>
+										</Button>
+										<LabelDecoration name="Декорация1" id="69">
+											<ContextMenu name="Декорация1КонтекстноеМеню" id="70"/>
+											<ExtendedTooltip name="Декорация1РасширеннаяПодсказка" id="71"/>
+										</LabelDecoration>
+									</ChildItems>
+								</UsualGroup>
+								<UsualGroup name="Группа7" id="125">
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="Группа7РасширеннаяПодсказка" id="126"/>
+									<ChildItems>
+										<Button name="ОчиститьДанныеКапРемонт" id="119">
+											<Type>UsualButton</Type>
+											<CommandName>Form.Command.ОчиститьДанныеКапРемонт</CommandName>
+											<ExtendedTooltip name="ОчиститьДанныеКапРемонтРасширеннаяПодсказка" id="120"/>
+										</Button>
+										<Button name="ОчититьДанныеСодержание" id="121">
+											<Type>UsualButton</Type>
+											<CommandName>Form.Command.ОчититьДанныеСодержание</CommandName>
+											<ExtendedTooltip name="ОчититьДанныеСодержаниеРасширеннаяПодсказка" id="122"/>
+										</Button>
+										<Button name="ОчиститьВсеДанные" id="127">
+											<Type>UsualButton</Type>
+											<CommandName>Form.Command.ОчиститьВсеДанные</CommandName>
+											<ExtendedTooltip name="ОчиститьВсеДанныеРасширеннаяПодсказка" id="128"/>
+										</Button>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</Page>
+				<Page name="ОбъектыЖилищногоФонда" id="112">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Объекты жилищного фонда</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Объекты жилищного фонда</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ОбъектыЖилищногоФондаРасширеннаяПодсказка" id="113"/>
+					<ChildItems>
+						<InputField name="ПутьКФайлуОЖФ" id="114">
+							<DataPath>ПутьКФайлуОЖФ</DataPath>
+							<ChoiceButton>true</ChoiceButton>
+							<ContextMenu name="ПутьКФайлуОЖФКонтекстноеМеню" id="115"/>
+							<ExtendedTooltip name="ПутьКФайлуОЖФРасширеннаяПодсказка" id="116"/>
+							<Events>
+								<Event name="StartChoice">ПутьКФайлуОЖФНачалоВыбора</Event>
+							</Events>
+						</InputField>
+						<Button name="ЗагрузитьОЖФ" id="117">
+							<Type>UsualButton</Type>
+							<CommandName>Form.Command.ЗагрузитьОЖФ</CommandName>
+							<ExtendedTooltip name="ЗагрузитьОЖФРасширеннаяПодсказка" id="118"/>
+						</Button>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+		<UsualGroup name="Группа1" id="34">
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="35"/>
+			<ChildItems>
+				<Pages name="Группа2" id="61">
+					<PagesRepresentation>TabsOnTop</PagesRepresentation>
+					<ExtendedTooltip name="Группа2РасширеннаяПодсказка" id="62"/>
+					<ChildItems>
+						<Page name="НеНайденЛС" id="63">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Не найден ЛС</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Не найден ЛС</v8:content>
+								</v8:item>
+							</ToolTip>
+							<ExtendedTooltip name="НеНайденЛСРасширеннаяПодсказка" id="64"/>
+							<ChildItems>
+								<LabelDecoration name="Декорация2" id="72">
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Данные лицевые счета не были найдены программой, убедитесь в корректности данных и попробуйте загрузить файл снова</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="Декорация2КонтекстноеМеню" id="73"/>
+									<ExtendedTooltip name="Декорация2РасширеннаяПодсказка" id="74"/>
+								</LabelDecoration>
+								<Table name="ЛСНеНайден" id="9">
+									<AutoInsertNewRow>true</AutoInsertNewRow>
+									<EnableStartDrag>true</EnableStartDrag>
+									<EnableDrag>true</EnableDrag>
+									<DataPath>Объект.ЛСНеНайден</DataPath>
+									<RowFilter xsi:nil="true"/>
+									<ContextMenu name="ЛСНеНайденКонтекстноеМеню" id="10"/>
+									<AutoCommandBar name="ЛСНеНайденКоманднаяПанель" id="11"/>
+									<ExtendedTooltip name="ЛСНеНайденРасширеннаяПодсказка" id="12"/>
+									<SearchStringAddition name="ЛСНеНайденСтрокаПоиска" id="13">
+										<AdditionSource>
+											<Item>ЛСНеНайден</Item>
+											<Type>SearchStringRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="ЛСНеНайденСтрокаПоискаКонтекстноеМеню" id="14"/>
+										<ExtendedTooltip name="ЛСНеНайденСтрокаПоискаРасширеннаяПодсказка" id="15"/>
+									</SearchStringAddition>
+									<ViewStatusAddition name="ЛСНеНайденСостояниеПросмотра" id="16">
+										<AdditionSource>
+											<Item>ЛСНеНайден</Item>
+											<Type>ViewStatusRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="ЛСНеНайденСостояниеПросмотраКонтекстноеМеню" id="17"/>
+										<ExtendedTooltip name="ЛСНеНайденСостояниеПросмотраРасширеннаяПодсказка" id="18"/>
+									</ViewStatusAddition>
+									<SearchControlAddition name="ЛСНеНайденУправлениеПоиском" id="19">
+										<AdditionSource>
+											<Item>ЛСНеНайден</Item>
+											<Type>SearchControl</Type>
+										</AdditionSource>
+										<ContextMenu name="ЛСНеНайденУправлениеПоискомКонтекстноеМеню" id="20"/>
+										<ExtendedTooltip name="ЛСНеНайденУправлениеПоискомРасширеннаяПодсказка" id="21"/>
+									</SearchControlAddition>
+									<ChildItems>
+										<LabelField name="ЛСНеНайденНомерСтроки" id="22">
+											<DataPath>Объект.ЛСНеНайден.LineNumber</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ЛСНеНайденНомерСтрокиКонтекстноеМеню" id="23"/>
+											<ExtendedTooltip name="ЛСНеНайденНомерСтрокиРасширеннаяПодсказка" id="24"/>
+										</LabelField>
+										<InputField name="ЛСНеНайденЛицевойСчет" id="25">
+											<DataPath>Объект.ЛСНеНайден.ЛицевойСчет</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ЛСНеНайденЛицевойСчетКонтекстноеМеню" id="26"/>
+											<ExtendedTooltip name="ЛСНеНайденЛицевойСчетРасширеннаяПодсказка" id="27"/>
+										</InputField>
+										<InputField name="ЛСНеНайденНомерЕЛС" id="28">
+											<DataPath>Объект.ЛСНеНайден.НомерЕЛС</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ЛСНеНайденНомерЕЛСКонтекстноеМеню" id="29"/>
+											<ExtendedTooltip name="ЛСНеНайденНомерЕЛСРасширеннаяПодсказка" id="30"/>
+										</InputField>
+										<InputField name="ЛСНеНайденИдентификаторЖКУ" id="31">
+											<DataPath>Объект.ЛСНеНайден.ИдентификаторЖКУ</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ЛСНеНайденИдентификаторЖКУКонтекстноеМеню" id="32"/>
+											<ExtendedTooltip name="ЛСНеНайденИдентификаторЖКУРасширеннаяПодсказка" id="33"/>
+										</InputField>
+										<InputField name="ЛСНеНайденУникальныйНомер" id="90">
+											<DataPath>Объект.ЛСНеНайден.УникальныйНомер</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ЛСНеНайденУникальныйНомерКонтекстноеМеню" id="91"/>
+											<ExtendedTooltip name="ЛСНеНайденУникальныйНомерРасширеннаяПодсказка" id="92"/>
+										</InputField>
+									</ChildItems>
+								</Table>
+							</ChildItems>
+						</Page>
+						<Page name="Группа3" id="65">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>ЛС не изменен</v8:content>
+								</v8:item>
+							</Title>
+							<ExtendedTooltip name="Группа3РасширеннаяПодсказка" id="66"/>
+							<ChildItems>
+								<LabelDecoration name="Декорация3" id="75">
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Данные лицевые счета и так уже содержали текущие данные.</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="Декорация3КонтекстноеМеню" id="76"/>
+									<ExtendedTooltip name="Декорация3РасширеннаяПодсказка" id="77"/>
+								</LabelDecoration>
+								<Table name="ЛСНеИзменен" id="36">
+									<AutoInsertNewRow>true</AutoInsertNewRow>
+									<EnableStartDrag>true</EnableStartDrag>
+									<EnableDrag>true</EnableDrag>
+									<DataPath>Объект.ЛСНеИзменен</DataPath>
+									<RowFilter xsi:nil="true"/>
+									<ContextMenu name="ЛСНеИзмененКонтекстноеМеню" id="37"/>
+									<AutoCommandBar name="ЛСНеИзмененКоманднаяПанель" id="38"/>
+									<ExtendedTooltip name="ЛСНеИзмененРасширеннаяПодсказка" id="39"/>
+									<SearchStringAddition name="ЛСНеИзмененСтрокаПоиска" id="40">
+										<AdditionSource>
+											<Item>ЛСНеИзменен</Item>
+											<Type>SearchStringRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="ЛСНеИзмененСтрокаПоискаКонтекстноеМеню" id="41"/>
+										<ExtendedTooltip name="ЛСНеИзмененСтрокаПоискаРасширеннаяПодсказка" id="42"/>
+									</SearchStringAddition>
+									<ViewStatusAddition name="ЛСНеИзмененСостояниеПросмотра" id="43">
+										<AdditionSource>
+											<Item>ЛСНеИзменен</Item>
+											<Type>ViewStatusRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="ЛСНеИзмененСостояниеПросмотраКонтекстноеМеню" id="44"/>
+										<ExtendedTooltip name="ЛСНеИзмененСостояниеПросмотраРасширеннаяПодсказка" id="45"/>
+									</ViewStatusAddition>
+									<SearchControlAddition name="ЛСНеИзмененУправлениеПоиском" id="46">
+										<AdditionSource>
+											<Item>ЛСНеИзменен</Item>
+											<Type>SearchControl</Type>
+										</AdditionSource>
+										<ContextMenu name="ЛСНеИзмененУправлениеПоискомКонтекстноеМеню" id="47"/>
+										<ExtendedTooltip name="ЛСНеИзмененУправлениеПоискомРасширеннаяПодсказка" id="48"/>
+									</SearchControlAddition>
+									<ChildItems>
+										<LabelField name="ЛСНеИзмененНомерСтроки" id="49">
+											<DataPath>Объект.ЛСНеИзменен.LineNumber</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ЛСНеИзмененНомерСтрокиКонтекстноеМеню" id="50"/>
+											<ExtendedTooltip name="ЛСНеИзмененНомерСтрокиРасширеннаяПодсказка" id="51"/>
+										</LabelField>
+										<InputField name="ЛСНеИзмененЛицевойСчет" id="52">
+											<DataPath>Объект.ЛСНеИзменен.ЛицевойСчет</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ЛСНеИзмененЛицевойСчетКонтекстноеМеню" id="53"/>
+											<ExtendedTooltip name="ЛСНеИзмененЛицевойСчетРасширеннаяПодсказка" id="54"/>
+										</InputField>
+										<InputField name="ЛСНеИзмененНомерЕЛС" id="55">
+											<DataPath>Объект.ЛСНеИзменен.НомерЕЛС</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ЛСНеИзмененНомерЕЛСКонтекстноеМеню" id="56"/>
+											<ExtendedTooltip name="ЛСНеИзмененНомерЕЛСРасширеннаяПодсказка" id="57"/>
+										</InputField>
+										<InputField name="ЛСНеИзмененИдентификаторЖКУ" id="58">
+											<DataPath>Объект.ЛСНеИзменен.ИдентификаторЖКУ</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ЛСНеИзмененИдентификаторЖКУКонтекстноеМеню" id="59"/>
+											<ExtendedTooltip name="ЛСНеИзмененИдентификаторЖКУРасширеннаяПодсказка" id="60"/>
+										</InputField>
+										<InputField name="ЛСНеИзмененУникальныйНомер" id="105">
+											<DataPath>Объект.ЛСНеИзменен.УникальныйНомер</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ЛСНеИзмененУникальныйНомерКонтекстноеМеню" id="106"/>
+											<ExtendedTooltip name="ЛСНеИзмененУникальныйНомерРасширеннаяПодсказка" id="107"/>
+										</InputField>
+									</ChildItems>
+								</Table>
+							</ChildItems>
+						</Page>
+					</ChildItems>
+				</Pages>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.ЗагрузкаДанныхГИСЖКХ</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<Attribute name="ПутьКФайлу" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Путь к файлу</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="Индикатор" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Индикатор</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>10</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ПутьКФайлуОЖФ" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Путь к файлу</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="АдресФайла" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Адрес файла</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="Загрузить" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Загрузить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Загрузить</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Загрузить</Action>
+		</Command>
+		<Command name="ЗагрузитьОЖФ" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Загрузить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Загрузить ОЖФ</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЗагрузитьОЖФ</Action>
+		</Command>
+		<Command name="ОчититьДанныеСодержание" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Очитить данные содержание</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Очитить данные содержание</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОчититьДанныеСодержание</Action>
+		</Command>
+		<Command name="ОчиститьДанныеКапРемонт" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Очистить данные кап. ремонт</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Очистить данные кап ремонт</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОчиститьДанныеКапРемонт</Action>
+		</Command>
+		<Command name="ОчиститьВсеДанные" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Очистить все данные</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Очистить все данные</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОчиститьВсеДанные</Action>
+		</Command>
+	</Commands>
+</Form>
